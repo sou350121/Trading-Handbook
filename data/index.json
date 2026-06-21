@@ -1,0 +1,3593 @@
+[
+  {
+    "pos": 1,
+    "title": "GPT vs BERT 金融工程该选择哪种结构？",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247484541&idx=1&sn=437ed0b400142cc9d23ef1ad28ba1843&chksm=ce7e6363f909ea756dbbb713ddb8195d5bc4b8a3ca426102a05061dddabfb98bd7f5a3a2f742#rd",
+    "msgid": "2247484541",
+    "itemidx": "1",
+    "create_time": 1717339921,
+    "date": "2024-06-02"
+  },
+  {
+    "pos": 2,
+    "title": "基于高频和日频因子的端到端直接排序组合构建模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247484549&idx=1&sn=347c69bb297aef162bb364a1e68e9e72&chksm=ce7e639bf909ea8d632046f8f9acac70209067aa1f4c142f3a26733262d298b097041744f92d#rd",
+    "msgid": "2247484549",
+    "itemidx": "1",
+    "create_time": 1717426554,
+    "date": "2024-06-03"
+  },
+  {
+    "pos": 3,
+    "title": "FinRobot：用于金融领域的大模型AI平台",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247484560&idx=1&sn=689e9b1ec3bf370e7332b538f3060ca1&chksm=ce7e638ef909ea989847e2b1501d17f9524808ad0544ccceaba918b8fda7c13556522b740647#rd",
+    "msgid": "2247484560",
+    "itemidx": "1",
+    "create_time": 1717510501,
+    "date": "2024-06-04"
+  },
+  {
+    "pos": 4,
+    "title": "开源强化学习金融市场元宇宙框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247484644&idx=1&sn=8fbcac50d77955a0b94e9628d1e5aa6d&chksm=ce7e63faf909eaecc4fb63a0b9a57b0fcf8205688b4f8f073bc5b40055dd379ea32f458601cd#rd",
+    "msgid": "2247484644",
+    "itemidx": "1",
+    "create_time": 1717776163,
+    "date": "2024-06-07"
+  },
+  {
+    "pos": 5,
+    "title": "市场微观结构教程：深度订单簿预测",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247484660&idx=1&sn=fc191107da65068ab9a5cd01135a5f1d&chksm=ce7e63eaf909eafcc529fa1a5b07985b5b1e3a548c363134f0cc0ee57a5463ceaf91a2946af0#rd",
+    "msgid": "2247484660",
+    "itemidx": "1",
+    "create_time": 1717943569,
+    "date": "2024-06-09"
+  },
+  {
+    "pos": 6,
+    "title": "综述：深度学习模型在加密货币市场的应用与验证",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247484684&idx=1&sn=0c27a963fce8876794f7391841eef3ea&chksm=ce7e6212f909eb04a4b9a09d1283073ab9e3e88e3a61b63e3359cc87f3265ca99eb51f9f923c#rd",
+    "msgid": "2247484684",
+    "itemidx": "1",
+    "create_time": 1718013600,
+    "date": "2024-06-10"
+  },
+  {
+    "pos": 7,
+    "title": "ViL：通用图像识别框架的xLSTM应用",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247484694&idx=1&sn=749b65c0987fc7f47ec79ec780f4a690&chksm=ce7e6208f909eb1eb8e0719cefa63ea745716a3b5a401f78341eee5ac57ba09118187bf21742#rd",
+    "msgid": "2247484694",
+    "itemidx": "1",
+    "create_time": 1718118596,
+    "date": "2024-06-11"
+  },
+  {
+    "pos": 8,
+    "title": "KDD 23 | DoubleAdapt: 显著提升各类模型表现的元学习模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247484726&idx=1&sn=68a12011fce4197b96d2f67b92f7b5c2&chksm=ce7e6228f909eb3e3ca1504f4b29adc1986cdb1bd451f73049077b864be1999d3b3fdcb860ad#rd",
+    "msgid": "2247484726",
+    "itemidx": "1",
+    "create_time": 1718273970,
+    "date": "2024-06-13"
+  },
+  {
+    "pos": 9,
+    "title": "DeepUnifiedMom: 多任务学习及MoE统一时序动量资产组合构建",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247484736&idx=1&sn=3cde94d9b3c0644d8114bcd5092d0cf8&chksm=ce7e625ef909eb489cca0f1906a260bd34232218da58d78900852cb5cf1fdcb1c49ca2c4e78e#rd",
+    "msgid": "2247484736",
+    "itemidx": "1",
+    "create_time": 1718376191,
+    "date": "2024-06-14"
+  },
+  {
+    "pos": 10,
+    "title": "ICLR 2024 | 通向透明的时间序列预测",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247484754&idx=1&sn=44bcf54c0caa1001ac343648d89a9407&chksm=ce7e624cf909eb5a44ce762087ef23bd8cfeb663aa623f0d729b99d56450abafd525d927bc5e#rd",
+    "msgid": "2247484754",
+    "itemidx": "1",
+    "create_time": 1718547773,
+    "date": "2024-06-16"
+  },
+  {
+    "pos": 11,
+    "title": "使用机器学习方法研究限价委托簿特征对短期价格预测的影响",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247484771&idx=1&sn=52ce2b599bbb5e8a82b3ebf4d909a887&chksm=ce7e627df909eb6b9a923f512dd322c21dc8f41d20c124c7820e994a9dea97831ffbacf83dfc#rd",
+    "msgid": "2247484771",
+    "itemidx": "1",
+    "create_time": 1718632872,
+    "date": "2024-06-17"
+  },
+  {
+    "pos": 12,
+    "title": "信息量极高！StockFormer： 基于多任务目标（回归/分类）及高低频分离的选股模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247484801&idx=1&sn=bb6d765cbd18849b1e1f09f650cbe1e1&chksm=ce7e629ff909eb8976f291cf23e68a0c73c43a628640dcbd21dd06124edead0629deac6d6c5f#rd",
+    "msgid": "2247484801",
+    "itemidx": "1",
+    "create_time": 1718808032,
+    "date": "2024-06-19"
+  },
+  {
+    "pos": 13,
+    "title": "信息量极高！StockFormer： 基于多任务目标（回归/分类）及高低频分离的选股模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247484829&idx=2&sn=dd9bfc57b0d1f213c287d3bbad4fbb56&chksm=ce7e6283f909eb959e8c78d0ca3c3988b2197d38d0d58828fafc2718af840837eaa064a564c4#rd",
+    "msgid": "2247484829",
+    "itemidx": "2",
+    "create_time": 1718960684,
+    "date": "2024-06-21"
+  },
+  {
+    "pos": 14,
+    "title": "KDD 24 | 基于增强记忆的上下文感知强化学习的高频交易框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247484852&idx=1&sn=612490637ac96cfa86d829e9ed665c2b&chksm=ce7e62aaf909ebbc864a29a4af3cc6db60eb2930f7dade6882515a61d46222e8877e8018fd07#rd",
+    "msgid": "2247484852",
+    "itemidx": "1",
+    "create_time": 1719146843,
+    "date": "2024-06-23"
+  },
+  {
+    "pos": 15,
+    "title": "3万个因子，数据挖掘能超越同行审议的因子吗？",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247484872&idx=1&sn=2f420bd9522473ad83dc6f825c421e5c&chksm=ce7e62d6f909ebc05b45a79d8d6e96cac7910b7509ef168a2a7349f29a4c63dbbf7bb9b3ba11#rd",
+    "msgid": "2247484872",
+    "itemidx": "1",
+    "create_time": 1719239600,
+    "date": "2024-06-24"
+  },
+  {
+    "pos": 16,
+    "title": "南京大学LAMDA-强化学习DRL挖掘逻辑公式型Alpha因子",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247484882&idx=1&sn=e4fee58dd1ca85b6469e3803be5e97a5&chksm=ce7e62ccf909ebdaa93ae29cef9c59c7f889d784b1c774014b339dc55a375d03443d61b48037#rd",
+    "msgid": "2247484882",
+    "itemidx": "1",
+    "create_time": 1719307684,
+    "date": "2024-06-25"
+  },
+  {
+    "pos": 17,
+    "title": "普林斯顿&牛津大学 | 大模型在金融领域的应用、前景和挑战",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247484935&idx=1&sn=c04614316ebaaf46fe0ef35b88aba330&chksm=ce7e6119f909e80fcc08f835d91cdddeb1e3dacf3bd924fcd5958381f13eaace114139af909b#rd",
+    "msgid": "2247484935",
+    "itemidx": "1",
+    "create_time": 1719480886,
+    "date": "2024-06-27"
+  },
+  {
+    "pos": 18,
+    "title": "ICML 23 | XTab：基于联邦学习的表格类预训练模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247484944&idx=1&sn=3301b97ec2256efc831967f00019cdfd&chksm=ce7e610ef909e818eefd8da5401d05677c089933abbbdf995c2b9a992fe3395e5ad35d79ca24#rd",
+    "msgid": "2247484944",
+    "itemidx": "1",
+    "create_time": 1719580679,
+    "date": "2024-06-28"
+  },
+  {
+    "pos": 19,
+    "title": "牛津大学：解锁大规模强化学习交易的GPU加速LOB模拟器",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247484978&idx=1&sn=ed321f9103b3d156245934eb49142756&chksm=ce7e612cf909e83aaf17537148f12270c3a1578d255cc814b676cbbdcacb5bf659cc42312d73#rd",
+    "msgid": "2247484978",
+    "itemidx": "1",
+    "create_time": 1719827112,
+    "date": "2024-07-01"
+  },
+  {
+    "pos": 20,
+    "title": "KDD 24 | 基于文本和图像的多模态交易框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485000&idx=1&sn=1b7a7da8050d6448a3f649014f05ce7f&chksm=ce7e6156f909e840df197661d46a28e345f2225da3d6b9b551b041944db276da9240feee0492#rd",
+    "msgid": "2247485000",
+    "itemidx": "1",
+    "create_time": 1719924361,
+    "date": "2024-07-02"
+  },
+  {
+    "pos": 21,
+    "title": "如何使用强化学习筛选因子",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485027&idx=1&sn=fd7db21edfc2eabd5554d08b7fbd9df1&chksm=ce7e617df909e86be3837e0a5236e6e58ff7e195cd6fc15c48edc26a438f6c710044e9e37bc3#rd",
+    "msgid": "2247485027",
+    "itemidx": "1",
+    "create_time": 1720100224,
+    "date": "2024-07-04"
+  },
+  {
+    "pos": 22,
+    "title": "LLMFactor ：大模型结合SKGP提供可解释的股价预测",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485339&idx=1&sn=e4f4f5dceaf6d660628b771ab88f0da5&chksm=ce7e6085f909e993cd16f6c9b7462561271c7b38a96de53e2fda8156ffeff7a698f9a52e4ffc#rd",
+    "msgid": "2247485339",
+    "itemidx": "1",
+    "create_time": 1720356781,
+    "date": "2024-07-07"
+  },
+  {
+    "pos": 23,
+    "title": "美国大选事件驱动研究：2020年美国总统选举的即时金融市场影响分析",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485349&idx=1&sn=6fcffcbea026108317e57e67957ea43e&chksm=ce7e60bbf909e9ad17c1f1b67215c27da1b7be07bfae2eb3e8e8a892fc92d2de3da85780136c#rd",
+    "msgid": "2247485349",
+    "itemidx": "1",
+    "create_time": 1720433066,
+    "date": "2024-07-08"
+  },
+  {
+    "pos": 24,
+    "title": "不再预测收益率！剑桥大学基于CVAE以及提前信息的股票交易量预测模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485365&idx=1&sn=813de33518555f20533e0f50f004300b&chksm=ce7e60abf909e9bd5ac43ef45a35f767c0aae57f7dd2c735a81e684490e662e30a73ef2605bf#rd",
+    "msgid": "2247485365",
+    "itemidx": "1",
+    "create_time": 1720533658,
+    "date": "2024-07-09"
+  },
+  {
+    "pos": 25,
+    "title": "线性模型足矣？传统HAR模型与机器学习在实现波动率预测中的对比",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485388&idx=1&sn=80428bd4ba936be537bc300ab55ef7d5&chksm=ce7e60d2f909e9c46231f77be22b1f6fdb69a5d1d1c0f607ba740b5572eba0f09e79f5fccfbd#rd",
+    "msgid": "2247485388",
+    "itemidx": "1",
+    "create_time": 1720696620,
+    "date": "2024-07-11"
+  },
+  {
+    "pos": 26,
+    "title": "量化交易全攻略：从入门到精通的终极指南",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485434&idx=1&sn=9ea5dd98ac51fa0eb0381d97fa2d2b78&chksm=ce7e60e4f909e9f2621971c60567938c886adcc2f0b37d5c61a0263bf7c1ef4fd2d749b54bc5#rd",
+    "msgid": "2247485434",
+    "itemidx": "1",
+    "create_time": 1720873250,
+    "date": "2024-07-13"
+  },
+  {
+    "pos": 27,
+    "title": "A股投资者情绪与日内过度交易行为的关联性",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485450&idx=1&sn=5cb0b6d902822e2b0d98a483d073d1cb&chksm=ce7e6f14f909e602043777e10e0f2c6a7b93759c931ab82389c507b7819e057cd6806ac6762c#rd",
+    "msgid": "2247485450",
+    "itemidx": "1",
+    "create_time": 1721128768,
+    "date": "2024-07-16"
+  },
+  {
+    "pos": 28,
+    "title": "GraphRAG+Ollama 结合上市公司知识图谱的LLM分析",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485462&idx=1&sn=f308b5a4fae42eb253dfd395e962e8bd&chksm=ce7e6f08f909e61e89949ff044998f5d670b285219fa8a6cf3eab4d4dc2f30f8012a739bf2b0#rd",
+    "msgid": "2247485462",
+    "itemidx": "1",
+    "create_time": 1721278333,
+    "date": "2024-07-18"
+  },
+  {
+    "pos": 29,
+    "title": "多关系图扩散神经网络用于股票趋势预测",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485475&idx=1&sn=3cba1cc18fcc86f7aa5bbde62098be84&chksm=ce7e6f3df909e62b7e88eb2893d2586a45d76de3e7327eb78930a25c99526df2974ea6d32b5a#rd",
+    "msgid": "2247485475",
+    "itemidx": "1",
+    "create_time": 1721399812,
+    "date": "2024-07-19"
+  },
+  {
+    "pos": 30,
+    "title": "斯坦福大学 | 基于高频卫星图像的偏远地区经济监测",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485486&idx=1&sn=a829c83dd5ece8c2b118010a22f5c96c&chksm=ce7e6f30f909e6264ae0b9b734dc031862f3f4ee75821c9e71d019bba1590d2a5b33977b4fb8#rd",
+    "msgid": "2247485486",
+    "itemidx": "1",
+    "create_time": 1721487751,
+    "date": "2024-07-20"
+  },
+  {
+    "pos": 31,
+    "title": "基于图注意力网络GAT的大规模时变投资组合优化",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485526&idx=1&sn=3211acd2ac980511f57652e28edb81e1&chksm=ce7e6f48f909e65e4cd20198214ddd908ebec35be6ce8d459f5a3e7bed613cde680e48eb2487#rd",
+    "msgid": "2247485526",
+    "itemidx": "1",
+    "create_time": 1721747902,
+    "date": "2024-07-23"
+  },
+  {
+    "pos": 32,
+    "title": "强化学习在配对交易中的应用与优化",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485553&idx=1&sn=4d79e9eb0575062d35b264e326088fe2&chksm=ce7e6f6ff909e67929c490004a36087c434b32d9a57bf081180aad117b9dc4cafaccf19435fb#rd",
+    "msgid": "2247485553",
+    "itemidx": "1",
+    "create_time": 1721918882,
+    "date": "2024-07-25"
+  },
+  {
+    "pos": 33,
+    "title": "大语言模型在时间序列预测中真的有效吗？",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485573&idx=1&sn=d524c4a8eba33c7f1e97ace56ab47418&chksm=ce7e6f9bf909e68d339a3dbda80da2b8e225eeb10e02fb917340cb221e8b18e68df6d8cac395#rd",
+    "msgid": "2247485573",
+    "itemidx": "1",
+    "create_time": 1722063221,
+    "date": "2024-07-27"
+  },
+  {
+    "pos": 34,
+    "title": "取代分析师？大模型撰写研究报告的可行性分析",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485593&idx=1&sn=6c83e1490792940bb1529e5ca7772c53&chksm=ce7e6f87f909e691ce498475950e1ef278094a65a6dbc8f611be0cefd648cd8bec3c48827834#rd",
+    "msgid": "2247485593",
+    "itemidx": "1",
+    "create_time": 1722260419,
+    "date": "2024-07-29"
+  },
+  {
+    "pos": 35,
+    "title": "StockAgent：当AI遇见金融",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485618&idx=1&sn=588d737ba96b93309c79604fb1922b87&chksm=ce7e6facf909e6bad9886baa76afeeb3f7f01c5f1c47f30741f1c8a6c4bb8c1abed362351cff#rd",
+    "msgid": "2247485618",
+    "itemidx": "1",
+    "create_time": 1722436713,
+    "date": "2024-07-31"
+  },
+  {
+    "pos": 36,
+    "title": "牛津大学：端到端深度学习在期权交易中的应用",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485626&idx=2&sn=99cdf6c19019388cd4b70f07989d0e05&chksm=ce7e6fa4f909e6b2405a6ed7b76b999e12ebbb99079fb057bf9860bd587148e19a580ab9819d#rd",
+    "msgid": "2247485626",
+    "itemidx": "2",
+    "create_time": 1722525717,
+    "date": "2024-08-01"
+  },
+  {
+    "pos": 37,
+    "title": "Graph Transformer：设计、分类、应用及改进",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485638&idx=1&sn=2e19aec39bca87685d3e9f5d41ebd98e&chksm=ce7e6fd8f909e6cee9e85f381712300dfe7503d377513e14d5eccd4b6782835abe9b82031e09#rd",
+    "msgid": "2247485638",
+    "itemidx": "1",
+    "create_time": 1722610371,
+    "date": "2024-08-02"
+  },
+  {
+    "pos": 38,
+    "title": "如何利用微调LLMs预测股票收益率",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485651&idx=1&sn=8723ff050263f07540d5aa1c0db4671e&chksm=ce7e6fcdf909e6dbd8df87c504e0fc2b46e857b50dc5be5906b665ddb082c7cc57a9a514386a#rd",
+    "msgid": "2247485651",
+    "itemidx": "1",
+    "create_time": 1722780594,
+    "date": "2024-08-04"
+  },
+  {
+    "pos": 39,
+    "title": "NeuralFactors： Bloomberg新型股票深度学习生成模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485681&idx=1&sn=41f393ec549475fc35bff1cc0d9e3304&chksm=ce7e6feff909e6f9017777ce833060055ae4d0d24011ff950fc74cf3383467bdb437112eba1a#rd",
+    "msgid": "2247485681",
+    "itemidx": "1",
+    "create_time": 1722952741,
+    "date": "2024-08-06"
+  },
+  {
+    "pos": 40,
+    "title": "HATS：分层图注意力神经网络用于股票预测",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485716&idx=1&sn=26a6ded18cff3baa95c579c77f069142&chksm=ce7e6e0af909e71c608f96c9c34e1fa86c6aaca491100785ee27c5d4b6d0a2a148923f6dcf25#rd",
+    "msgid": "2247485716",
+    "itemidx": "1",
+    "create_time": 1723201665,
+    "date": "2024-08-09"
+  },
+  {
+    "pos": 41,
+    "title": "RWKV-TS: 超越传统RNN的时序模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485732&idx=1&sn=5e362c713b852da5d597e0acb9e8c745&chksm=ce7e6e3af909e72c557fc9eb6aaf0f222329b727f1d3c28c2ebaf8f75b7fd17719dce26c2bae#rd",
+    "msgid": "2247485732",
+    "itemidx": "1",
+    "create_time": 1723386509,
+    "date": "2024-08-11"
+  },
+  {
+    "pos": 42,
+    "title": "NeuralBeta: 深度学习预测β系数",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485758&idx=1&sn=caa3760dc7a2be287bdee8de4067a7a4&chksm=ce7e6e20f909e736841978af5895aa4f3a893bea742099e088d9bd0f0d81f6afb9973f0eaa90#rd",
+    "msgid": "2247485758",
+    "itemidx": "1",
+    "create_time": 1723468702,
+    "date": "2024-08-12"
+  },
+  {
+    "pos": 43,
+    "title": "基于强化学习的投资组合管理模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485783&idx=1&sn=c5274cb9950b71ee97610bb06e3b7b54&chksm=ce7e6e49f909e75f9c4e6cc3efa92c207e9ed1bdab97802fb3160817f6753bf180eb14928d5a#rd",
+    "msgid": "2247485783",
+    "itemidx": "1",
+    "create_time": 1723641430,
+    "date": "2024-08-14"
+  },
+  {
+    "pos": 44,
+    "title": "贝莱德&英伟达：HybridRAG结合GraphRAG以及VectorRAG的新型RAG系统",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485798&idx=1&sn=04b56d6bd5864325ee5b4195b88007c1&chksm=ce7e6e78f909e76e3ed448882a568bfb2c453d91fa76339713dbf5e89c3d23353107c4b57b34#rd",
+    "msgid": "2247485798",
+    "itemidx": "1",
+    "create_time": 1723726274,
+    "date": "2024-08-15"
+  },
+  {
+    "pos": 45,
+    "title": "AAAI 24 | Market-GAN 金融数据生成器",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485806&idx=1&sn=ac220f85358673a4c26e5c2d7da9aec7&chksm=ce7e6e70f909e766c7b815be2db25d9dee53a22795eb3959e7e8405b0c8221fca36f9b3531ed#rd",
+    "msgid": "2247485806",
+    "itemidx": "1",
+    "create_time": 1723817465,
+    "date": "2024-08-16"
+  },
+  {
+    "pos": 46,
+    "title": "超越Fama-French因子：短期信号的阿尔法机会",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485828&idx=1&sn=c123771eab1457f21a20646b77c16ea3&chksm=ce7e6e9af909e78c2a3b7fb9abe574880c9a432c7afd9a7e4abfbe102ac6782623aa5ea1f945#rd",
+    "msgid": "2247485828",
+    "itemidx": "1",
+    "create_time": 1723981966,
+    "date": "2024-08-18"
+  },
+  {
+    "pos": 47,
+    "title": "AlphaEvolve：基于AutoML的公式型Alpha因子挖掘框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485843&idx=1&sn=06e314197e9e5189ecdfcb1de81def19&chksm=ce7e6e8df909e79b516274d49c1fd1a5c1d1d95fab905c0b2566ec97c20fe5499ec584562923#rd",
+    "msgid": "2247485843",
+    "itemidx": "1",
+    "create_time": 1724048492,
+    "date": "2024-08-19"
+  },
+  {
+    "pos": 48,
+    "title": "图像识别与知识迁移融合的深度学习模型增强趋势交易信号",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485854&idx=1&sn=357ea4d5356e932c7e012127108236df&chksm=ce7e6e80f909e7965b8ee0d52b1ea64d4baa58f67a0a69b34d9844d5e4d62587a271c03fef43#rd",
+    "msgid": "2247485854",
+    "itemidx": "1",
+    "create_time": 1724167673,
+    "date": "2024-08-20"
+  },
+  {
+    "pos": 49,
+    "title": "少即是多：利用动态深度神经网络进行短期股票预测的AI决策",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485953&idx=1&sn=3ebea16c505665f681d6ee32fc73dbb1&chksm=ce7e6d1ff909e409788ae6203992a9facf0bac518fb09ad76f1f00332af159ec5586457f905d#rd",
+    "msgid": "2247485953",
+    "itemidx": "1",
+    "create_time": 1724597154,
+    "date": "2024-08-25"
+  },
+  {
+    "pos": 50,
+    "title": "SAITS: 基于自注意力的时间序列缺失值插补",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485977&idx=1&sn=74941373033095ae7174e95182b3abda&chksm=ce7e6d07f909e4119570fd6a091f3bc68925d180fc58b5182882446bd8b89eb1d4dc2413152a#rd",
+    "msgid": "2247485977",
+    "itemidx": "1",
+    "create_time": 1724678927,
+    "date": "2024-08-26"
+  },
+  {
+    "pos": 51,
+    "title": "股票相似性的时间表示学习及其在投资管理中的应用",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485992&idx=1&sn=9c13d3832825cf98c8b1eb593acf6ce9&chksm=ce7e6d36f909e4203370742f24372136d5bec9d84ccf2044028a2cab8cd7ac3f3a8e7f6fe0aa#rd",
+    "msgid": "2247485992",
+    "itemidx": "1",
+    "create_time": 1724765573,
+    "date": "2024-08-27"
+  },
+  {
+    "pos": 52,
+    "title": "AlphaForge：挖掘和动态组合公式化Alpha因子框架（附有实盘验证结果）",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486006&idx=1&sn=3474fe8c1f4c4b915746910f7f7a3753&chksm=ce7e6d28f909e43e222bc6066cdf1b2824b59c23b45c10a77803bee235d92c41d57b9b8c2a23#rd",
+    "msgid": "2247486006",
+    "itemidx": "1",
+    "create_time": 1724839411,
+    "date": "2024-08-28"
+  },
+  {
+    "pos": 53,
+    "title": "交易与时间序列因果发现",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486034&idx=1&sn=a62d7507e2c0a64755d962a57390eefa&chksm=ce7e6d4cf909e45a0cfd0ed2fb81afbee47add94f74fbebf3dc847083f74b58224f949b1c2f7#rd",
+    "msgid": "2247486034",
+    "itemidx": "1",
+    "create_time": 1725026290,
+    "date": "2024-08-30"
+  },
+  {
+    "pos": 54,
+    "title": "ICML 24 | 将LLM适配于时间序列表示学习",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486045&idx=1&sn=81f477c8b91ec201db5528a9da022f27&chksm=ce7e6d43f909e45525dd8fa38e5b10c6f4a4eedcc30f4e9c6d1a8296a33f5895be6cfe48f6a9#rd",
+    "msgid": "2247486045",
+    "itemidx": "1",
+    "create_time": 1725107463,
+    "date": "2024-08-31"
+  },
+  {
+    "pos": 55,
+    "title": "基于神经网络模型的加密货币交易算法",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486061&idx=1&sn=6aab4b8b0f146334fa9c1ce1f66cf710&chksm=ce7e6d73f909e465f74ab12fc0e712bf370f14bdf2f6a4b7e9120ab2bde1fcdbe215499b6a8d#rd",
+    "msgid": "2247486061",
+    "itemidx": "1",
+    "create_time": 1725279245,
+    "date": "2024-09-02"
+  },
+  {
+    "pos": 56,
+    "title": "基于电话会议的LLMs股票预测框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486072&idx=1&sn=5350f2e4ddae323640bdf9a7bbfdcc01&chksm=ce7e6d66f909e470eff57f1c44952160499b4fca42a294867e4ad9d8b162c2d0894dd299ff5a#rd",
+    "msgid": "2247486072",
+    "itemidx": "1",
+    "create_time": 1725363887,
+    "date": "2024-09-03"
+  },
+  {
+    "pos": 57,
+    "title": "提升金融市场预测：因果驱动的特征选择",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486102&idx=1&sn=d09697a3db74c07bd330e7542c9771b9&chksm=ce7e6d88f909e49e2fc97b17642a1ee67961b3b4c476b081b4c4def8603155cf313b40e522ca#rd",
+    "msgid": "2247486102",
+    "itemidx": "1",
+    "create_time": 1725543647,
+    "date": "2024-09-05"
+  },
+  {
+    "pos": 58,
+    "title": "HLOB：限价订单簿中的信息持久性和结构",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486124&idx=1&sn=5234e96240ce90a76152992af88c59c4&chksm=ce7e6db2f909e4a48e1494a97eaf8e8378d71dabc387c0f7d123e598f923358a207b6af2bda1#rd",
+    "msgid": "2247486124",
+    "itemidx": "1",
+    "create_time": 1725612705,
+    "date": "2024-09-06"
+  },
+  {
+    "pos": 59,
+    "title": "基于两阶段表示学习的元自适应股票运动预测",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486140&idx=1&sn=2a266257084ce5ed2fb2989d38ccb373&chksm=ce7e6da2f909e4b4837666ec0423c36f5f96ce5ae04594f632f20ba33bc3f51e921642efd346#rd",
+    "msgid": "2247486140",
+    "itemidx": "1",
+    "create_time": 1725796789,
+    "date": "2024-09-08"
+  },
+  {
+    "pos": 60,
+    "title": "AAMAS 24 | 基于深度强化学习的多智能体和自适应框架用于动态组合风险管理",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486159&idx=1&sn=7318ee3c693744a664889868fe5e38d8&chksm=ce7e6dd1f909e4c74754306e35f71be1add32c089ab56191731f4f2c1a2b9eaf59e986817af3#rd",
+    "msgid": "2247486159",
+    "itemidx": "1",
+    "create_time": 1725877410,
+    "date": "2024-09-09"
+  },
+  {
+    "pos": 61,
+    "title": "基于方差有界强化学习算法的稳定公式化Alpha因子挖掘",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486244&idx=1&sn=d33fa67f6730fedbec80f8756e443daf&chksm=ce7e6c3af909e52c7fa93bf039d5e40f449e59962e66cdc8501d4b093bc14334dad2d484e149#rd",
+    "msgid": "2247486244",
+    "itemidx": "1",
+    "create_time": 1725965057,
+    "date": "2024-09-10"
+  },
+  {
+    "pos": 62,
+    "title": "利用LLMs自动寻找量化投资策略",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486262&idx=1&sn=617f9f355c97fcd0fd2784d16317e8fa&chksm=ce7e6c28f909e53e96252cecbc203a83978597a8da88a8ee23f19a3bb5de0836fcfdd2f46266#rd",
+    "msgid": "2247486262",
+    "itemidx": "1",
+    "create_time": 1726048729,
+    "date": "2024-09-11"
+  },
+  {
+    "pos": 63,
+    "title": "基于细颗粒度注意力的层次Transformer在表格类时序中的应用",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486273&idx=1&sn=427f4c08734ea738af3e81bcb0802557&chksm=ce7e6c5ff909e549e16aa0fad48b1ec2fc1730cc233696ce7ba948f39f5e09e36a4570bab9a7#rd",
+    "msgid": "2247486273",
+    "itemidx": "1",
+    "create_time": 1726137265,
+    "date": "2024-09-12"
+  },
+  {
+    "pos": 64,
+    "title": "CIKM 22 | 用于金融时间序列预测的异构图神经网络",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486310&idx=1&sn=a5ae3c35d837a3e4b972f306a2609344&chksm=ce7e6c78f909e56ebf3c03b1b40410c4bd52c093ea4dc5db465db7a14aada7d9aca1c49ba600#rd",
+    "msgid": "2247486310",
+    "itemidx": "1",
+    "create_time": 1726321396,
+    "date": "2024-09-14"
+  },
+  {
+    "pos": 65,
+    "title": "Vanguard： MoA is All You Need",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486321&idx=1&sn=ca4686d736d6ec1ed85b977f3976b32c&chksm=ce7e6c6ff909e5791ef9cb844fff76d1b29d909d71df93c9411d1f4c5137605610dcbe154fe1#rd",
+    "msgid": "2247486321",
+    "itemidx": "1",
+    "create_time": 1726408685,
+    "date": "2024-09-15"
+  },
+  {
+    "pos": 66,
+    "title": "用于高频交易预测的最优输出LSTM",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486340&idx=1&sn=083f403c7476644a946a9b1deb93431c&chksm=ce7e6c9af909e58c377a2785005245f9020edc0069877f7749ad8a3fab1d42da56efc2977775#rd",
+    "msgid": "2247486340",
+    "itemidx": "1",
+    "create_time": 1726568153,
+    "date": "2024-09-17"
+  },
+  {
+    "pos": 67,
+    "title": "基于时序关系的股票预测排序方法",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486355&idx=1&sn=eef07cea003919a73e9a4a75ca5c5d33&chksm=ce7e6c8df909e59ba750227d37505ccbea65abf3ad4ab674391a6a7d3cc6cb0ebe8e7fcf31ed#rd",
+    "msgid": "2247486355",
+    "itemidx": "1",
+    "create_time": 1726663214,
+    "date": "2024-09-18"
+  },
+  {
+    "pos": 68,
+    "title": "FinGAT：金融图注意力网络",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486368&idx=1&sn=63d6932b9216c096666e3825ec6a94be&chksm=ce7e6cbef909e5a89a61963e14f6d1df6ca877fce7d444dd812d755e02ba45a7e9eba34a50df#rd",
+    "msgid": "2247486368",
+    "itemidx": "1",
+    "create_time": 1726756700,
+    "date": "2024-09-19"
+  },
+  {
+    "pos": 69,
+    "title": "ADD：增强解耦蒸馏框架用于提升股市趋势预测",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486403&idx=1&sn=2cf81219b0f758017bacd06804bdbb75&chksm=ce7e6cddf909e5cb42ac4a59382d1601b72d99e750789afe69caf08833a3a546c3648bb4b9e6#rd",
+    "msgid": "2247486403",
+    "itemidx": "1",
+    "create_time": 1727013150,
+    "date": "2024-09-22"
+  },
+  {
+    "pos": 70,
+    "title": "ICLR 24 | 基于提示词的生成预训练Transformer时间序列预测框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486820&idx=1&sn=de9fd547b916d5a9341c2baba4525864&chksm=ce7e6a7af909e36cf81eb809d72fd2aabddca22728245f4157443ba9ac983538065985920b4e#rd",
+    "msgid": "2247486820",
+    "itemidx": "1",
+    "create_time": 1727348468,
+    "date": "2024-09-26"
+  },
+  {
+    "pos": 71,
+    "title": "CIKM 24 | MANA-Net：增强市场预测的新闻加权方法",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486835&idx=1&sn=aa1a8076067c8207f522ef7447efe57f&chksm=ce7e6a6df909e37b08a3b028a0ee029efd0a7c97721390e9a11ee699e97dc4ac0395d7acd445#rd",
+    "msgid": "2247486835",
+    "itemidx": "1",
+    "create_time": 1727427280,
+    "date": "2024-09-27"
+  },
+  {
+    "pos": 72,
+    "title": "Time-MoE : 时间序列领域的亿级规模混合专家基础模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486849&idx=1&sn=efaadaee864f1f27cfd75423af258afb&chksm=ce7e6a9ff909e38944e31f2a94ca2427395108db5614572899635ba93e977cd5ba0cb5f763b8#rd",
+    "msgid": "2247486849",
+    "itemidx": "1",
+    "create_time": 1727528529,
+    "date": "2024-09-28"
+  },
+  {
+    "pos": 73,
+    "title": "隐马尔可夫模型在股市预测中的应用",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486864&idx=1&sn=c2f7981b63d6d7712f62e5aeacc625b6&chksm=ce7e6a8ef909e398cde75ad346469d96f6ca8442ff296d974092dc07ce46691f029199c2464d#rd",
+    "msgid": "2247486864",
+    "itemidx": "1",
+    "create_time": 1727617449,
+    "date": "2024-09-29"
+  },
+  {
+    "pos": 74,
+    "title": "TFB：全面与公平的时间序列预测方法基准测试",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486888&idx=1&sn=53c296e3586dcdd37e37d9a97a945fa1&chksm=ce7e6ab6f909e3a0e3f38effb99b0a2e66b2bd4753d3c30f1f6212cfc41171d0965d144f62e8#rd",
+    "msgid": "2247486888",
+    "itemidx": "1",
+    "create_time": 1727794774,
+    "date": "2024-10-01"
+  },
+  {
+    "pos": 75,
+    "title": "用收益对股票估值",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486921&idx=1&sn=0a1e5fcf7210691c8bcd65dbba037275&chksm=ce7e6ad7f909e3c1ba4192b227f6fac30ab714ff4e84bb10058f307fac2fdb14a361f2868559#rd",
+    "msgid": "2247486921",
+    "itemidx": "1",
+    "create_time": 1727969477,
+    "date": "2024-10-03"
+  },
+  {
+    "pos": 76,
+    "title": "使用LLMs和FinBERT对新闻和报告进行金融情绪分析",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486930&idx=1&sn=6e733991443d5f9cf1d3c83424620307&chksm=ce7e6accf909e3dabe5f604aaa6ab70dfed6e0af3faa809bb57dc96d327a8b51e52388f71e3f#rd",
+    "msgid": "2247486930",
+    "itemidx": "1",
+    "create_time": 1728221993,
+    "date": "2024-10-06"
+  },
+  {
+    "pos": 77,
+    "title": "利用基本面分析预测股票趋势",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486942&idx=1&sn=541244bb17cbc2c117b2de7d5fedc18d&chksm=ce7e6ac0f909e3d6cefee5cd69484d2a1958d7cebb7d1ddeb12d6d7563bd791742e367f1bfeb#rd",
+    "msgid": "2247486942",
+    "itemidx": "1",
+    "create_time": 1728392478,
+    "date": "2024-10-08"
+  },
+  {
+    "pos": 78,
+    "title": "排名空间中的统计套利",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486981&idx=1&sn=0760dbd572e74c4238e8755e7dd37910&chksm=ce7e691bf909e00d9fa8160ff6bd8c04a4441cff201cfbdb9282ab767c5443a4fbeb18dde080#rd",
+    "msgid": "2247486981",
+    "itemidx": "1",
+    "create_time": 1728553521,
+    "date": "2024-10-10"
+  },
+  {
+    "pos": 79,
+    "title": "基于自回归移动平均注意力机制的时间序列预测",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487011&idx=1&sn=7cf7b1da0167ee347e1c37d4d0cb9d56&chksm=ce7e693df909e02bcda2d8608138ff45bb8f51fd89e017fcf2867981e9a08e240a4d51d9df77#rd",
+    "msgid": "2247487011",
+    "itemidx": "1",
+    "create_time": 1728740285,
+    "date": "2024-10-12"
+  },
+  {
+    "pos": 80,
+    "title": "频率自适应归一化用于非平稳时间序列预测",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487027&idx=1&sn=5b926cdd42c1bb19e4b6a90fec37b1a2&chksm=ce7e692df909e03bcdb66f737db1b2cea6495bd67904c7c108f91fdb77f797b206a620a3a1bf#rd",
+    "msgid": "2247487027",
+    "itemidx": "1",
+    "create_time": 1728824465,
+    "date": "2024-10-13"
+  },
+  {
+    "pos": 81,
+    "title": "​基于深度Q学习的算法交易策略研究",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487035&idx=1&sn=27c378e2aed7b7fa2d44c0bfcbdeafc6&chksm=ce7e6925f909e033cc9371f275a3bb0661481b481609558811833bcf920fb71f0ac86870bfc1#rd",
+    "msgid": "2247487035",
+    "itemidx": "1",
+    "create_time": 1728913164,
+    "date": "2024-10-14"
+  },
+  {
+    "pos": 82,
+    "title": "从新闻到预测：基于LLM的时间序列预测",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487049&idx=1&sn=7337916648f291ef40e325faa83b0aca&chksm=ce7e6957f909e0414601ededa9a7c3957a1c31f0360a79398c097b4e9db731345fa970f93ea1#rd",
+    "msgid": "2247487049",
+    "itemidx": "1",
+    "create_time": 1728991255,
+    "date": "2024-10-15"
+  },
+  {
+    "pos": 83,
+    "title": "动态知识图谱在金融市场趋势预测中的应用",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487059&idx=1&sn=a8b87a657e567febb5899aef8c7e3f33&chksm=ce7e694df909e05bf466867d9378889f26c8391dac27c2c2133f4579037e3552e42ce6090ac1#rd",
+    "msgid": "2247487059",
+    "itemidx": "1",
+    "create_time": 1729074948,
+    "date": "2024-10-16"
+  },
+  {
+    "pos": 84,
+    "title": "RSAP-DFM：自适应宏观经济信息提取的后验动态因子模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487069&idx=1&sn=74a04dc881688e586d52c53b9d652384&chksm=ce7e6943f909e0558f147ba5cda9ea04fb77d9c20e5a4cb396c2ce27975377dbbf0c580830b9#rd",
+    "msgid": "2247487069",
+    "itemidx": "1",
+    "create_time": 1729165609,
+    "date": "2024-10-17"
+  },
+  {
+    "pos": 85,
+    "title": "基于Conv-LSTM和LLM集成模型用于整体股​票预测",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487110&idx=1&sn=2dfe445f015442c191a99832155afd8d&chksm=ce7e6998f909e08ef46e0254976442c116fa39f48c725accc9f9880255b2b4c28946f0e9c673#rd",
+    "msgid": "2247487110",
+    "itemidx": "1",
+    "create_time": 1729346777,
+    "date": "2024-10-19"
+  },
+  {
+    "pos": 86,
+    "title": "清华大学 Timer：生成式预训练Transformers即大型时间序列模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487139&idx=1&sn=1836c12d302555e59d2fd99176edcaee&chksm=ce7e69bdf909e0ab2b33259d4166f8ab5c0d4e2cfcc07dfa644c43ca9953b5f1354f1067dba8#rd",
+    "msgid": "2247487139",
+    "itemidx": "1",
+    "create_time": 1729432437,
+    "date": "2024-10-20"
+  },
+  {
+    "pos": 87,
+    "title": "MultiRC：突破事后检测局限，预测未来异常的时序异常预测模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487147&idx=1&sn=16ffb61687a4042bc10881f737f454b7&chksm=ce7e69b5f909e0a336e2e1eccedd3938adfd5077e2a315426740a6cf2c043b1e8c14956c16ea#rd",
+    "msgid": "2247487147",
+    "itemidx": "1",
+    "create_time": 1729511198,
+    "date": "2024-10-21"
+  },
+  {
+    "pos": 88,
+    "title": "深度强化学习应对加密货币交易过拟合",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487160&idx=1&sn=ab9cff9cb96cb52967a3770314e552e9&chksm=ce7e69a6f909e0b0cf1158c79fec4e4ed7727bfed3dd786dbfc7f18fd2cca9132e6ea64f87a1#rd",
+    "msgid": "2247487160",
+    "itemidx": "1",
+    "create_time": 1729584470,
+    "date": "2024-10-22"
+  },
+  {
+    "pos": 89,
+    "title": "MIT最新论文，分层强化交易员（HRT）：一种用于优化股票选择和执行的双层方法，附中文播客",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487175&idx=1&sn=77a4312d76c2fbae5f312e7b0189cd99&chksm=ce7e69d9f909e0cfbf3784b9272b3ae98ba4db56f880cd1030d2a6f1d9755c804e8ef9dedecb#rd",
+    "msgid": "2247487175",
+    "itemidx": "1",
+    "create_time": 1729683929,
+    "date": "2024-10-23"
+  },
+  {
+    "pos": 90,
+    "title": "LLMs在股票投资组合崩溃中的时间关系推理",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487194&idx=1&sn=5b871784d4777989432d607b36f6ec2e&chksm=ce7e69c4f909e0d258d6c6f18752d9af9d3694a3121f93ac9066748b694f02c662d98ac5dedd#rd",
+    "msgid": "2247487194",
+    "itemidx": "1",
+    "create_time": 1729767728,
+    "date": "2024-10-24"
+  },
+  {
+    "pos": 91,
+    "title": "xLSTM-Mixer: 混合多变量时间序列预测",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487252&idx=1&sn=68ca2419985077d125f21b31f8bdaab4&chksm=ce7e680af909e11cdff41e48b4015320f3c77fc069f29e08ddec07071aa637661bec3cb6a34c#rd",
+    "msgid": "2247487252",
+    "itemidx": "1",
+    "create_time": 1729948272,
+    "date": "2024-10-26"
+  },
+  {
+    "pos": 92,
+    "title": "（当前）为何你不需要深度学习来进行时间序列预测，以及你需要什么",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487259&idx=1&sn=9a4809588fdafca3ce75d32d669ba189&chksm=ce7e6805f909e11370523cb97a68eb56160279b0ac9640d8ce051bbe2945d75cba10a6943b9c#rd",
+    "msgid": "2247487259",
+    "itemidx": "1",
+    "create_time": 1730030441,
+    "date": "2024-10-27"
+  },
+  {
+    "pos": 93,
+    "title": "深度学习与NLP在加密货币预测中的应用：整合金融、区块链和社交媒体数据",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487281&idx=1&sn=fbb1158612c0505e18358bfbafa3c917&chksm=ce7e682ff909e1390e3dba2af706da884f9f979dd7389477d33b992d8769ff98659888597cb6#rd",
+    "msgid": "2247487281",
+    "itemidx": "1",
+    "create_time": 1730115240,
+    "date": "2024-10-28"
+  },
+  {
+    "pos": 94,
+    "title": "牛津大学：分析师覆盖网络中的Alpha挖掘",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487353&idx=1&sn=f7fa46d5dfc5357d03a72e9a466a2b6e&chksm=ce7e6867f909e17101072fd8a9c384747514b5fd8ce1e3d990397923d2f758d0f15d1df3c3bc#rd",
+    "msgid": "2247487353",
+    "itemidx": "1",
+    "create_time": 1730369320,
+    "date": "2024-10-31"
+  },
+  {
+    "pos": 95,
+    "title": "MCI-GRU：基于多头交叉注意力和改进型GRU的股市预测模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487364&idx=1&sn=b81d90860c1bddb0fb315f60ca89ecf6&chksm=ce7e689af909e18c3ea9672a6e135a6f74345e99c85b64e656b53dfce463d02a154329443f53#rd",
+    "msgid": "2247487364",
+    "itemidx": "1",
+    "create_time": 1730548668,
+    "date": "2024-11-02"
+  },
+  {
+    "pos": 96,
+    "title": "增强深度学习模型评估以进行股市预测--Part I",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487443&idx=1&sn=c6c555e9b90e263f3ed083ba4166ed44&chksm=ce7e68cdf909e1db7adde95df86e8bcd92e30642b492d3f9e4de4267d29ab9027f0de83abcd5#rd",
+    "msgid": "2247487443",
+    "itemidx": "1",
+    "create_time": 1730634912,
+    "date": "2024-11-03"
+  },
+  {
+    "pos": 97,
+    "title": "增强深度学习模型评估以进行股市预测--Part II 模型部分",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487474&idx=1&sn=981e8f941b7347e4917845ba909eaeb6&chksm=ce7e68ecf909e1fa2290fb552cb056f50d2d2325c9253cd27ea409ac292cfab1df11b91b30b8#rd",
+    "msgid": "2247487474",
+    "itemidx": "1",
+    "create_time": 1730716521,
+    "date": "2024-11-04"
+  },
+  {
+    "pos": 98,
+    "title": "基于注意力机制的LOB理解、识别和预测",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487486&idx=1&sn=83a719c37f08db4408a395e1fb236601&chksm=ce7e68e0f909e1f6812de7f1f0f540970db31f42420eb7797f4fc4f434c8e39b4f8303f64b4f#rd",
+    "msgid": "2247487486",
+    "itemidx": "1",
+    "create_time": 1730802023,
+    "date": "2024-11-05"
+  },
+  {
+    "pos": 99,
+    "title": "通过生成对抗网络进行金融时间序列的预测和分类",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487499&idx=1&sn=e8afa3a7405357c3421691ec0f2da867&chksm=ce7e7715f909fe031d9aad4fdd4ef1019ff104f7e419dd880b28fe7713db05a532d449b19ee4#rd",
+    "msgid": "2247487499",
+    "itemidx": "1",
+    "create_time": 1730898403,
+    "date": "2024-11-06"
+  },
+  {
+    "pos": 100,
+    "title": "ICML 24 | 深度函数因子模型：高维函数时间序列预测",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487521&idx=1&sn=1b5ca6309f20f2f933f78fafa28d4ad7&chksm=ce7e773ff909fe295f28e1d134bbff7767256a02987b58539f497031fcf4ac350f34cccf0cce#rd",
+    "msgid": "2247487521",
+    "itemidx": "1",
+    "create_time": 1730987234,
+    "date": "2024-11-07"
+  },
+  {
+    "pos": 101,
+    "title": "AAAI 24 | StockMixer: 一种简单而强大的基于MLP的股价预测架构",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487545&idx=1&sn=c1188efc7ea54fa2c6784bfbb892784c&chksm=ce7e7727f909fe31643dfcef60364bc0aa03d0509ed9edcef76fe1f21863b0ceb6662f728ec8#rd",
+    "msgid": "2247487545",
+    "itemidx": "1",
+    "create_time": 1731071425,
+    "date": "2024-11-08"
+  },
+  {
+    "pos": 102,
+    "title": "Skfolio：最新机器学习组合优化工具",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487574&idx=1&sn=8a881b231f0d74bf155e0def21a5c91b&chksm=ce7e7748f909fe5ed1e67e35d9e079243ae1cd4cd60c7d5def7b5b290d51f7d8fc3d68b22a88#rd",
+    "msgid": "2247487574",
+    "itemidx": "1",
+    "create_time": 1731152680,
+    "date": "2024-11-09"
+  },
+  {
+    "pos": 103,
+    "title": "选择与交易：基于分层强化学习的统一配对交易",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487603&idx=1&sn=948fc01570263aab80b86a1d6475f89c&chksm=ce7e776df909fe7b9c9776a42520a015415ebb27414feef47a757ac4dae4c78cd323653fe43c#rd",
+    "msgid": "2247487603",
+    "itemidx": "1",
+    "create_time": 1731243964,
+    "date": "2024-11-10"
+  },
+  {
+    "pos": 104,
+    "title": "25个鲜为人知的Python编程技巧",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487636&idx=1&sn=992b68d14203e24155790dda3e60653e&chksm=ce7e778af909fe9c8ba3d4d1d8ae91fc9ea61d79fff72700cfc73f5a3a6a8ce217a9c605e0ff#rd",
+    "msgid": "2247487636",
+    "itemidx": "1",
+    "create_time": 1731327464,
+    "date": "2024-11-11"
+  },
+  {
+    "pos": 105,
+    "title": "基于机器学习的公司基本面预测",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487659&idx=1&sn=a5e58be53ad9ded8c2b383712e2a41d5&chksm=ce7e77b5f909fea33898437a56cdedce2d8b6f96b5acc5c258cd153c80b0b86aa4aeff69f255#rd",
+    "msgid": "2247487659",
+    "itemidx": "1",
+    "create_time": 1731412722,
+    "date": "2024-11-12"
+  },
+  {
+    "pos": 106,
+    "title": "FinVision: 基于多模态多智能体框架的股票市场预测系统",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487733&idx=1&sn=e95f5aa14a6e742614f1f3aeba626605&chksm=ce7e77ebf909fefd8a81e646e374c3b12b5a2093bc3b72acbf27353f0c2f502bc885aeef0045#rd",
+    "msgid": "2247487733",
+    "itemidx": "1",
+    "create_time": 1731674202,
+    "date": "2024-11-15"
+  },
+  {
+    "pos": 107,
+    "title": "基于动量与移动平均线的趋势跟踪",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487798&idx=1&sn=8c8688229cd6b4eaa413aa2cde0596a2&chksm=ce7e7628f909ff3e24e22c13ca169c7c242de3fe9ee4e6b009c5794994ba804a4cf72a3ef035#rd",
+    "msgid": "2247487798",
+    "itemidx": "1",
+    "create_time": 1731850885,
+    "date": "2024-11-17"
+  },
+  {
+    "pos": 108,
+    "title": "ICML 2024 顶级论文：机器学习领域的新进展",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487850&idx=1&sn=2a1def2a5e6c95a953df287166d0d5e9&chksm=ce7e7674f909ff62b66e8a5295786eedbcc86f114e54be6d733856156419e440cea2ee4f11e9#rd",
+    "msgid": "2247487850",
+    "itemidx": "1",
+    "create_time": 1732106963,
+    "date": "2024-11-20"
+  },
+  {
+    "pos": 109,
+    "title": "基于预测整合与聚类的股票价格指数样本外预测改进",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487860&idx=1&sn=99347f2131162f021f73b87b514af000&chksm=ce7e766af909ff7c8008ff46bcce9fae4f059e922f12405d0b1ef542466e31c90f3036d133b2#rd",
+    "msgid": "2247487860",
+    "itemidx": "1",
+    "create_time": 1732198928,
+    "date": "2024-11-21"
+  },
+  {
+    "pos": 110,
+    "title": "面向新闻和社交媒体分析的专用大语言模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487892&idx=1&sn=976b8d33fa33aca97f7a2fae300f56bc&chksm=ce7e768af909ff9c67996d1f219fe90438426057692f6ba8b81390641f3a232c1167fb3cbbf1#rd",
+    "msgid": "2247487892",
+    "itemidx": "1",
+    "create_time": 1732366229,
+    "date": "2024-11-23"
+  },
+  {
+    "pos": 111,
+    "title": "Fast ES-RNN: 基于GPU的ES-RNN算法实现",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487904&idx=1&sn=a042e89489254d71b1c712fc86608f59&chksm=ce7e76bef909ffa84564297956fb74331f1e79623435c6360109560f3c2ac15d565120e2cfc2#rd",
+    "msgid": "2247487904",
+    "itemidx": "1",
+    "create_time": 1732452988,
+    "date": "2024-11-24"
+  },
+  {
+    "pos": 112,
+    "title": "NIPS 24 | PGN：RNN 的新继任者",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488128&idx=1&sn=a8287377302d2cdf5d1d6ddc321cdf31&chksm=ce7e759ef909fc88f0bc9ddea5171b4bac84008972a60925fe3fcc4eff005e37503d2ba7525f#rd",
+    "msgid": "2247488128",
+    "itemidx": "1",
+    "create_time": 1733060820,
+    "date": "2024-12-01"
+  },
+  {
+    "pos": 113,
+    "title": "NIPS 24 | 超越CVXPY,新型端到端优化器",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488193&idx=1&sn=a91d10d06dca7a988dda550ccaaa9941&chksm=ce7e75dff909fcc9f9b367702183d9eae5b688123de730a1a5cd0ef5841204c049ee9d7b508a#rd",
+    "msgid": "2247488193",
+    "itemidx": "1",
+    "create_time": 1733311270,
+    "date": "2024-12-04"
+  },
+  {
+    "pos": 114,
+    "title": "NIPS 24 | 改进MLP在表格数据表现",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488210&idx=1&sn=93c8b4dc5f3e9d83523c68020d4ce413&chksm=ce7e75ccf909fcdac25f2712eb57ab2f635c7060a98418abe16643362710f59425da3188ddef#rd",
+    "msgid": "2247488210",
+    "itemidx": "1",
+    "create_time": 1733408055,
+    "date": "2024-12-05"
+  },
+  {
+    "pos": 115,
+    "title": "JFE | ETF日内套利研究",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488257&idx=1&sn=9eb00eade68c4f6816916330b859adb0&chksm=ce7e741ff909fd09702475203a2601518e8fa446241678be96a90cc3724b829c5fae05787d47#rd",
+    "msgid": "2247488257",
+    "itemidx": "1",
+    "create_time": 1733481429,
+    "date": "2024-12-06"
+  },
+  {
+    "pos": 116,
+    "title": "超越传统网格交易：新型网格交易系统",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488269&idx=1&sn=7b9a60116d5c65278e6894ded1ce79aa&chksm=ce7e7413f909fd05d840b9118776487dcac27b82cd6ef3978820bb4ba4480c4d722055b28da2#rd",
+    "msgid": "2247488269",
+    "itemidx": "1",
+    "create_time": 1733573298,
+    "date": "2024-12-07"
+  },
+  {
+    "pos": 117,
+    "title": "JFE | 高效估计买卖价差的模型、实证与应用",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488303&idx=1&sn=60ab39ed1be0a71185396aadfa33aeee&chksm=ce7e7431f909fd2728a183280ad82dff93e81576d33913902d2b842dedfcd87e14b6d87dff60#rd",
+    "msgid": "2247488303",
+    "itemidx": "1",
+    "create_time": 1733803709,
+    "date": "2024-12-10"
+  },
+  {
+    "pos": 118,
+    "title": "揭秘高频交易“军备竞赛”",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488330&idx=1&sn=963b5ac770f2ce7c689f91881da4f2ef&chksm=ce7e7454f909fd428b16bb1711ae1914ef05b782bce9459f375f6e6471c82096267dfb988f70#rd",
+    "msgid": "2247488330",
+    "itemidx": "1",
+    "create_time": 1733905758,
+    "date": "2024-12-11"
+  },
+  {
+    "pos": 119,
+    "title": "NIPS 24 | CausalStock : 基于端到端因果发现的新闻驱动股价预测模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488342&idx=1&sn=4793d31201295e14a5978556f449adca&chksm=ce7e7448f909fd5e6d42f9e9c2c117c8c0b40fedc7d2d0e269118222e65b7dd8b8da2106e233#rd",
+    "msgid": "2247488342",
+    "itemidx": "1",
+    "create_time": 1734008979,
+    "date": "2024-12-12"
+  },
+  {
+    "pos": 120,
+    "title": "NIPS 24 | FinCon: 基于LLM的多智能体交易及组合管理框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488353&idx=1&sn=f6684d1c9788e0f9dcd09b781cbd619a&chksm=ce7e747ff909fd69d6538f30bb681b3e0dba85700479802978c2c883bc93346cfe58bdf6f912#rd",
+    "msgid": "2247488353",
+    "itemidx": "1",
+    "create_time": 1734091282,
+    "date": "2024-12-13"
+  },
+  {
+    "pos": 121,
+    "title": "JFQA | 基于深度学习的排序特征因子模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488380&idx=1&sn=15327d544022028afab9efa2a90a0c36&chksm=ce7e7462f909fd74f9ed45a52fe22b7ba29997bca729fc2666e769040bc0364dd6821df52f9f#rd",
+    "msgid": "2247488380",
+    "itemidx": "1",
+    "create_time": 1734188885,
+    "date": "2024-12-14"
+  },
+  {
+    "pos": 122,
+    "title": "金融领域大规模时间序列模型的微调",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488415&idx=1&sn=f7b1f04a368ffbcd1ae355b0d49c581a&chksm=ce7e7481f909fd97df00e59ed6dd701620ee4ea3352e49ccab92679130652257419f6d15533f#rd",
+    "msgid": "2247488415",
+    "itemidx": "1",
+    "create_time": 1734358015,
+    "date": "2024-12-16"
+  },
+  {
+    "pos": 123,
+    "title": "增强动量策略：动量Transformer模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488434&idx=1&sn=e8431bb689e27562a620cdb6cf3c6d31&chksm=ce7e74acf909fdba23e88cba2b6157174f0d50d61d3fab4ebf305a80c01d90bd43ff6e4d1a33#rd",
+    "msgid": "2247488434",
+    "itemidx": "1",
+    "create_time": 1734528234,
+    "date": "2024-12-18"
+  },
+  {
+    "pos": 124,
+    "title": "SusGen-GPT：大模型生成ESG报告",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488448&idx=1&sn=86125b3ac559b59faff52a751134c2f8&chksm=ce7e74def909fdc8082cd6b688d1687836fa3df6d6544eba26a69b3d57c2e8c3db4fbd6e1af6#rd",
+    "msgid": "2247488448",
+    "itemidx": "1",
+    "create_time": 1734617511,
+    "date": "2024-12-19"
+  },
+  {
+    "pos": 125,
+    "title": "AQR创始人Cliff Asness： 市场效率下降假说",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488456&idx=1&sn=7014a441007cd69045f69cfada3f64fd&chksm=ce7e74d6f909fdc0a0dd6e1db088f6dd03e6156d9b73c2e07b071fb5df8c79df6b3e5043d74e#rd",
+    "msgid": "2247488456",
+    "itemidx": "1",
+    "create_time": 1734689122,
+    "date": "2024-12-20"
+  },
+  {
+    "pos": 126,
+    "title": "Style Miner：基于强化学习算法的风格因子构造",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488487&idx=1&sn=82c708030492662f4bd958c09cd6ad35&chksm=ce7e74f9f909fdefa1c5c79489743562eaa77b54a0a1f41d42e40de5c915b3ef77b94aec06e1#rd",
+    "msgid": "2247488487",
+    "itemidx": "1",
+    "create_time": 1734958200,
+    "date": "2024-12-23"
+  },
+  {
+    "pos": 127,
+    "title": "在线高频交易股票预测",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488504&idx=1&sn=18be32739d0029fdd5a743354ec59430&chksm=ce7e74e6f909fdf0b18b254c7e283c3e6c91be5da516c1b8f1f0f9d8c6a5bc644ce3337dcfb9#rd",
+    "msgid": "2247488504",
+    "itemidx": "1",
+    "create_time": 1735049937,
+    "date": "2024-12-24"
+  },
+  {
+    "pos": 128,
+    "title": "无梯度训练的循环神经网络",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488601&idx=1&sn=50500a955109f984bceb565e8d172333&chksm=ce7e7347f909fa5148d39c306b420d4e696687e31a1194a32aecc9f17c5627deecedfbb7e59e#rd",
+    "msgid": "2247488601",
+    "itemidx": "1",
+    "create_time": 1735558017,
+    "date": "2024-12-30"
+  },
+  {
+    "pos": 129,
+    "title": "彭博2025年全球及主要经济体中期展望",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488624&idx=1&sn=f0597a301b7d3d4f6177873c8798aef6&chksm=ce7e736ef909fa783ab09e678ca921e9e8adfe43723c6fd9075429e8b53db8401c86b0b34b27#rd",
+    "msgid": "2247488624",
+    "itemidx": "1",
+    "create_time": 1735737504,
+    "date": "2025-01-01"
+  },
+  {
+    "pos": 130,
+    "title": "QuantAgent：通过自我完善LLM寻找交易圣杯",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488639&idx=1&sn=7d6dabd0bf6bee6ad93bce61a3c2f39f&chksm=ce7e7361f909fa77ce588612041336f2cfc032687ca94f07da33048b8d6b61b69b5e6b4a820f#rd",
+    "msgid": "2247488639",
+    "itemidx": "1",
+    "create_time": 1735811270,
+    "date": "2025-01-02"
+  },
+  {
+    "pos": 131,
+    "title": "Oxford-Man  | 交易共现性：揭示股票市场微观结构与价格形成的新视角",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488660&idx=1&sn=af147885f3d36f26f5d1cb8414f1e301&chksm=ce7e738af909fa9c64d032ef9c47c93293d03020f25135516c28a8fc8937564ea2a766170e04#rd",
+    "msgid": "2247488660",
+    "itemidx": "1",
+    "create_time": 1735900196,
+    "date": "2025-01-03"
+  },
+  {
+    "pos": 132,
+    "title": "选择投资经理",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488719&idx=1&sn=8ad156b24368e91becfb9ff74a5f9c39&chksm=ce7e73d1f909fac7df50ce4cbdcf486d6a7c0f965949164727f3e9556759f7bf9d920a63821b#rd",
+    "msgid": "2247488719",
+    "itemidx": "1",
+    "create_time": 1736351727,
+    "date": "2025-01-08"
+  },
+  {
+    "pos": 133,
+    "title": "综述：深度学习用于加密货币预测",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488783&idx=1&sn=910e83598beac4313d0da2bbb3e138dc&chksm=ce7e7211f909fb07dc8ebf117e822eb1523c321f411dbf792de82b2f74d5e8cd741587e45174#rd",
+    "msgid": "2247488783",
+    "itemidx": "1",
+    "create_time": 1736570715,
+    "date": "2025-01-11"
+  },
+  {
+    "pos": 134,
+    "title": "Github万星，开源强化学习交易框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488789&idx=1&sn=f7cb099a7020da844ff72a87c2e3a45f&chksm=ce7e720bf909fb1d289c8932ff455b199e2c349a28bb65a167fbf8923bbed182905abce67fe8#rd",
+    "msgid": "2247488789",
+    "itemidx": "1",
+    "create_time": 1736686573,
+    "date": "2025-01-12"
+  },
+  {
+    "pos": 135,
+    "title": "打工人救星，中科院推出PPTAgent框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488795&idx=1&sn=dbc480b1f12428dc3b37e915b2222b4b&chksm=ce7e7205f909fb13f94b136efd578e4e580b0eec61ffd3b3e81cc185b1dc5582aa9024deabf8#rd",
+    "msgid": "2247488795",
+    "itemidx": "1",
+    "create_time": 1736779629,
+    "date": "2025-01-13"
+  },
+  {
+    "pos": 136,
+    "title": "AlphaPy：一站式算法交易机器学习框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488802&idx=1&sn=25878a81a51080f3a1290acd7e1566ba&chksm=ce7e723cf909fb2ad4087b104f9777048d703ef37acba39f84d771016a5c0907c4943950942c#rd",
+    "msgid": "2247488802",
+    "itemidx": "1",
+    "create_time": 1736861595,
+    "date": "2025-01-14"
+  },
+  {
+    "pos": 137,
+    "title": "基于特征工程和转换方法的LightGBM资产预测",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488811&idx=1&sn=990a3fb7f2dfaa030e5b99b615112704&chksm=ce7e7235f909fb233ee0cebc4de5a68a116a59b890298dcf69854010b5a42c69c374c4a30d45#rd",
+    "msgid": "2247488811",
+    "itemidx": "1",
+    "create_time": 1736948095,
+    "date": "2025-01-15"
+  },
+  {
+    "pos": 138,
+    "title": "TrendMaster：基于Transformer的高精度股票趋势预测框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488817&idx=1&sn=0ed644df00c2b8a13bd470a7f63ec82e&chksm=ce7e722ff909fb3958796660ac5a6765d6d1f5c0bb7531d03bc9628c05dfc3c51d8df7f280b9#rd",
+    "msgid": "2247488817",
+    "itemidx": "1",
+    "create_time": 1737037152,
+    "date": "2025-01-16"
+  },
+  {
+    "pos": 139,
+    "title": "sktime：时间序列预测与分类的终极指南",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488839&idx=1&sn=f81466a0b39b0c461b1d81bd4057e2a1&chksm=ce7e7259f909fb4fee0632af227adc3538f52769b586ccddccb33541ef8c8899fbedcb550e63#rd",
+    "msgid": "2247488839",
+    "itemidx": "1",
+    "create_time": 1737122830,
+    "date": "2025-01-17"
+  },
+  {
+    "pos": 140,
+    "title": "TradeMaster ：基于强化学习的开源量化交易平台",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488847&idx=1&sn=3b862d85cb5c108d9f53281c1dc7c5e2&chksm=ce7e7251f909fb479846df7d050061988d87d5c6fb985028514864b644b01fda3e8c2b58a023#rd",
+    "msgid": "2247488847",
+    "itemidx": "1",
+    "create_time": 1737204189,
+    "date": "2025-01-18"
+  },
+  {
+    "pos": 141,
+    "title": "ARMD：基于自回归滑动扩散模型的时间序列预测",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488868&idx=1&sn=aa76019420bf31adc423ce36d629f446&chksm=ce7e727af909fb6c2c4dbd2ecafa9fa814f88e2d24aea841f0aefe17e97fcc0c2145da865294#rd",
+    "msgid": "2247488868",
+    "itemidx": "1",
+    "create_time": 1737377804,
+    "date": "2025-01-20"
+  },
+  {
+    "pos": 142,
+    "title": "LLM在金融时间序列中的应用及对比",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488936&idx=1&sn=6c056b102d118db593532177c2fe8237&chksm=ce7e72b6f909fba0227cd6bb5a696aaea70b9747fe6ef4d70684b75bccdee149a2310a3502d5#rd",
+    "msgid": "2247488936",
+    "itemidx": "1",
+    "create_time": 1737555847,
+    "date": "2025-01-22"
+  },
+  {
+    "pos": 143,
+    "title": "TabPFN-TS： 最强时间序列基础模型之一",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489003&idx=1&sn=e76c9ef1b8db09e3bf61f257dfdaaea1&chksm=ce7e72f5f909fbe3c1378d3b138c2321f525f56fbcaed9a9a69fcc861f490b765fda606de621#rd",
+    "msgid": "2247489003",
+    "itemidx": "1",
+    "create_time": 1737812807,
+    "date": "2025-01-25"
+  },
+  {
+    "pos": 144,
+    "title": "DeepScalper：深度强化学习捕捉日内交易的短暂机会",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489018&idx=1&sn=1ea12b6de5e28e2700b4947081a32b7b&chksm=ce7e72e4f909fbf2e246da142b67e64778c0397d531646856fd60860c4f279b71c8ddb7599da#rd",
+    "msgid": "2247489018",
+    "itemidx": "1",
+    "create_time": 1737902560,
+    "date": "2025-01-26"
+  },
+  {
+    "pos": 145,
+    "title": "基于神经进化拓扑结构(NEAT)算法和多技术指标共振的股票交易策略",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489039&idx=1&sn=effb64c9ad581a0ba67a466758041fa3&chksm=ce7e7111f909f80799c5dde6e626323a715d37a16e9d72bbab4a562209ad121556c8bbbaef98#rd",
+    "msgid": "2247489039",
+    "itemidx": "1",
+    "create_time": 1738332985,
+    "date": "2025-01-31"
+  },
+  {
+    "pos": 146,
+    "title": "从“人机对抗”到“人机协作”：股票分析的技艺与人工智能",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489091&idx=1&sn=fc067e31a14595339523c2a8ebddc903&chksm=ce7e715df909f84b56050d2f993ff4d78c893a1abbecf76e5c6d94fcbbe608569d6f00d41297#rd",
+    "msgid": "2247489091",
+    "itemidx": "1",
+    "create_time": 1738507658,
+    "date": "2025-02-02"
+  },
+  {
+    "pos": 147,
+    "title": "基于分层强化学习的日内风险因子挖掘",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489104&idx=1&sn=c0b6938ebcf0cbd8244f87abe609798e&chksm=ce7e714ef909f858e77e696094826110f4f8941cc429501973a5767d906ab36a2fd0b57c729a#rd",
+    "msgid": "2247489104",
+    "itemidx": "1",
+    "create_time": 1738590951,
+    "date": "2025-02-03"
+  },
+  {
+    "pos": 148,
+    "title": "端到端基于LLM的增强型交易系统",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489113&idx=1&sn=b145d87e23cfa5c9e780099fc7c1136c&chksm=ce7e7147f909f85193f5891ba11288b0e0626206539f4bab6a64daa098938e8ae1ac4621a618#rd",
+    "msgid": "2247489113",
+    "itemidx": "1",
+    "create_time": 1738676529,
+    "date": "2025-02-04"
+  },
+  {
+    "pos": 149,
+    "title": "FinRLlama：基于强化学习和市场反馈的金融情感分析LLM优化方案",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489127&idx=1&sn=faad16c8ac3ca02dcb982837d03b21ab&chksm=ce7e7179f909f86fd40ea777c7598c0d4b013cb2a0c25567248de0748f24453d85e07a4fbe27#rd",
+    "msgid": "2247489127",
+    "itemidx": "1",
+    "create_time": 1738761765,
+    "date": "2025-02-05"
+  },
+  {
+    "pos": 150,
+    "title": "AlphaSharpe：基于LLM的稳健风险调整指标框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489136&idx=1&sn=5fab915a05c0b5371565cc922067be46&chksm=ce7e716ef909f8782eb758f992a0d1548d7423251670df86af0b89800b4f01a466455e614dd2#rd",
+    "msgid": "2247489136",
+    "itemidx": "1",
+    "create_time": 1738839623,
+    "date": "2025-02-06"
+  },
+  {
+    "pos": 151,
+    "title": "FinRL-DeepSeek：基于LLM的强化学习交易代理",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489251&idx=1&sn=a7be7c5be274ad88e6f16c4e4205b86f&chksm=ce7e71fdf909f8eb6e3a9e6f8e1cca7d45f2beec0d957f436532657a06e72a10f4d25fc62f69#rd",
+    "msgid": "2247489251",
+    "itemidx": "1",
+    "create_time": 1739456143,
+    "date": "2025-02-13"
+  },
+  {
+    "pos": 152,
+    "title": "SAMBA：基于Mamba架构与图神经网络的股票价格预测模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489266&idx=1&sn=321d2a1506b2e8e1c867d95c7cf1caf4&chksm=ce7e71ecf909f8fa2932c9ed166e98b841595850fb6bf3256b6e29b953acf4029c6362b0c2e3#rd",
+    "msgid": "2247489266",
+    "itemidx": "1",
+    "create_time": 1739533702,
+    "date": "2025-02-14"
+  },
+  {
+    "pos": 153,
+    "title": "LOB-Bench：应用于LOB的生成式人工智能基准测试",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489285&idx=1&sn=8c9b4ff6c094ced568ec1e1e4953b62a&chksm=ce7e701bf909f90d3151e77ce36f07d226d7364fe5a8dc81c1c70c14e0252730924711b9bc0c#rd",
+    "msgid": "2247489285",
+    "itemidx": "1",
+    "create_time": 1739628701,
+    "date": "2025-02-15"
+  },
+  {
+    "pos": 154,
+    "title": "比IC更好的相关系数？",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489303&idx=1&sn=8a13dd1e0ed87f7b1e1c9dbe4cb17b48&chksm=ce7e7009f909f91f7e423d9b19647178aadb8c095bdace241bd0c3e74a50377e4f2312d82aaa#rd",
+    "msgid": "2247489303",
+    "itemidx": "1",
+    "create_time": 1739714498,
+    "date": "2025-02-16"
+  },
+  {
+    "pos": 155,
+    "title": "Auto.gov：基于强化学习的去中心化金融（DeFi）治理框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489317&idx=1&sn=452e505de9cc3b12be1b561992ba7182&chksm=ce7e703bf909f92d917894b333cf4154dc63ff0ba6680990f6d69d01b614201eead0571fedfd#rd",
+    "msgid": "2247489317",
+    "itemidx": "1",
+    "create_time": 1739798211,
+    "date": "2025-02-17"
+  },
+  {
+    "pos": 156,
+    "title": "Scikit-LLM：让机器学习与大型语言模型无缝集成",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489356&idx=1&sn=391805227546b38cdc8057a8df629bfb&chksm=ce7e7052f909f9443afaee96e879f2e7e72df55e42218da471576f79d540dda64cf7c7707382#rd",
+    "msgid": "2247489356",
+    "itemidx": "1",
+    "create_time": 1739876960,
+    "date": "2025-02-18"
+  },
+  {
+    "pos": 157,
+    "title": "DishFT-GNN: 基于蒸馏的未来感知图神经网络用于股票趋势预测",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489365&idx=1&sn=f993c427c5bb11c30aff2a4e76d25ffd&chksm=ce7e704bf909f95d94bda609a0af05fe9ffab3fbb641d52ad433c2d4756b898100b9ab14fc64#rd",
+    "msgid": "2247489365",
+    "itemidx": "1",
+    "create_time": 1739961217,
+    "date": "2025-02-19"
+  },
+  {
+    "pos": 158,
+    "title": "HedgeAgents：基于对冲策略的多智能体金融交易系统",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489386&idx=1&sn=d7bcfd851bc02128234d2080109c02d5&chksm=ce7e7074f909f962bc54d1576360ca0783d9533f078bbdb32ee23871c3808f36f4fe51394dcb#rd",
+    "msgid": "2247489386",
+    "itemidx": "1",
+    "create_time": 1740135074,
+    "date": "2025-02-21"
+  },
+  {
+    "pos": 159,
+    "title": "基于新闻相互作用与影响力网络的金融市场预测模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489429&idx=1&sn=fee05f3ddc8532e1510cad831ed3ef37&chksm=ce7e708bf909f99de5e49177c659541a7caf115776845a26ec5aedc587140fe5162c54d21dd0#rd",
+    "msgid": "2247489429",
+    "itemidx": "1",
+    "create_time": 1740320537,
+    "date": "2025-02-23"
+  },
+  {
+    "pos": 160,
+    "title": "九坤联手亚研院复现DeepSeek-R1",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489459&idx=1&sn=df1570e67f438ce466244624d44d76a8&chksm=ce7e70adf909f9bbc775acc7525453147ce06b89a3400f7b11f40cc65a09f31ace03109d5b93#rd",
+    "msgid": "2247489459",
+    "itemidx": "1",
+    "create_time": 1740488572,
+    "date": "2025-02-25"
+  },
+  {
+    "pos": 161,
+    "title": "利用LLM重新审视金融情感分析",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489460&idx=1&sn=c9105d66a4bb157ad9376617370bbb1a&chksm=ce7e70aaf909f9bc7a4e15552994a8b76cacccc56a9a883dc20e21c5c0d159c860865bdfc7ae#rd",
+    "msgid": "2247489460",
+    "itemidx": "1",
+    "create_time": 1740573993,
+    "date": "2025-02-26"
+  },
+  {
+    "pos": 162,
+    "title": "FinBloom：基于实时金融数据的知识增强LLM",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489469&idx=1&sn=56d5df9f8418020bc78f825c856cf69a&chksm=ce7e70a3f909f9b5f9f2df1d293c2bbc12d8d43664a642ccc197f0f1fef954bb08011031f6d5#rd",
+    "msgid": "2247489469",
+    "itemidx": "1",
+    "create_time": 1740663940,
+    "date": "2025-02-27"
+  },
+  {
+    "pos": 163,
+    "title": "TLOB：基于双重注意力机制的Transformer模型用于限价订单簿数据预测",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489480&idx=1&sn=9b6b2c91f1b6494ba338b882041715aa&chksm=ce7e70d6f909f9c06e9d43db8bb850d7bcca4e07837eb5087436fd17d424f778f44a28739da9#rd",
+    "msgid": "2247489480",
+    "itemidx": "1",
+    "create_time": 1740750686,
+    "date": "2025-02-28"
+  },
+  {
+    "pos": 164,
+    "title": "CryptoPulse：基于双重预测与跨相关市场指标的短期加密货币预测模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489490&idx=1&sn=9a8a90ea0a1c3a0b7f2f0f03d7eafe40&chksm=ce7e70ccf909f9dabeab4b27b0094b4a13ec43cf20988cc684ad267ae1fe805383fb23413bf5#rd",
+    "msgid": "2247489490",
+    "itemidx": "1",
+    "create_time": 1740832742,
+    "date": "2025-03-01"
+  },
+  {
+    "pos": 165,
+    "title": "TimeKAN：基于KAN的时间序列预测模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489535&idx=1&sn=26594d07909476172bb0fadd3abc344d&chksm=ce7e70e1f909f9f7651af812fd78bbf9d510e345c9dd8804cc9c2b02281ab62261429de0f4b8#rd",
+    "msgid": "2247489535",
+    "itemidx": "1",
+    "create_time": 1741084752,
+    "date": "2025-03-04"
+  },
+  {
+    "pos": 166,
+    "title": "万字长文：深度学习在资产管理中的应用",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489557&idx=1&sn=02a9979585741f71a40c69b3bb4e64ea&chksm=ce7e7f0bf909f61dfb71bed516b8191a9dd7a187b113cfe16fe74c3f7fc02f5af578f92f2b2e#rd",
+    "msgid": "2247489557",
+    "itemidx": "1",
+    "create_time": 1741172486,
+    "date": "2025-03-05"
+  },
+  {
+    "pos": 167,
+    "title": "KAG + 多模态 RAG + LLM Agents：构建强大的AI推理系统",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489565&idx=1&sn=ee48872ce61ab0e5cd53e99dc108c61e&chksm=ce7e7f03f909f61594b7b1b248716b4260b63a81667725a5432961d6f79d998120aabf66b073#rd",
+    "msgid": "2247489565",
+    "itemidx": "1",
+    "create_time": 1741255954,
+    "date": "2025-03-06"
+  },
+  {
+    "pos": 168,
+    "title": "强化学习用于量化交易：技术指标与策略优化研究",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489609&idx=1&sn=cc17e21a1c55244959277ecc770b249d&chksm=ce7e7f57f909f641c15cba5a4b77c3dc5fd0c7c683cfaf71d8c2697b1d3649ed7d34e1b76ec3#rd",
+    "msgid": "2247489609",
+    "itemidx": "1",
+    "create_time": 1741526373,
+    "date": "2025-03-09"
+  },
+  {
+    "pos": 169,
+    "title": "融合前沿深度学习模型的金融时序预测框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489625&idx=1&sn=571070b27861b9058ffc9ee96a6ea4c6&chksm=ce7e7f47f909f6512ec3d1b249e59dcb2cf08bf3ef673c7544294e44ad46a2dfcf86b5d2a961#rd",
+    "msgid": "2247489625",
+    "itemidx": "1",
+    "create_time": 1741703339,
+    "date": "2025-03-11"
+  },
+  {
+    "pos": 170,
+    "title": "桥接学术与落地！同济、清华提出实用的金融时间序列全维度评测系统",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489639&idx=1&sn=c2118a8495c9e0351495f0558a5135e2&chksm=ce7e7f79f909f66f59d5649d6768e0d94ce6fae4e251de52b107c9db7fdedaf8808aa5e49bf6#rd",
+    "msgid": "2247489639",
+    "itemidx": "1",
+    "create_time": 1741782048,
+    "date": "2025-03-12"
+  },
+  {
+    "pos": 171,
+    "title": "高频交易中的标签不平衡问题研究",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489671&idx=1&sn=03d9d0c8e575cc729ed1cf4fc33286f9&chksm=ce7e7f99f909f68f4b4914d35b1ed33c5f266cb862327de8b6b8932f999e4e405a7b3bac4c4a#rd",
+    "msgid": "2247489671",
+    "itemidx": "1",
+    "create_time": 1741965872,
+    "date": "2025-03-14"
+  },
+  {
+    "pos": 172,
+    "title": "ReFocus：强化中频与关键频建模，超越iTransformer",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489684&idx=1&sn=790f97f9b14f64d67a6680a182beb2a2&chksm=ce7e7f8af909f69c3dfe964821badd158d91c014341cb190825224d2abf9c732d34436598d3a#rd",
+    "msgid": "2247489684",
+    "itemidx": "1",
+    "create_time": 1742046240,
+    "date": "2025-03-15"
+  },
+  {
+    "pos": 173,
+    "title": "视觉胜于文本：LLM在交易中更好的应用方式？",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489712&idx=1&sn=2c37c80069f65fae35fd198105c8b7f8&chksm=ce7e7faef909f6b8915ec67acd899e75b43dd8b1058efbc737a1fce250b4f299937c2af0e623#rd",
+    "msgid": "2247489712",
+    "itemidx": "1",
+    "create_time": 1742293379,
+    "date": "2025-03-18"
+  },
+  {
+    "pos": 174,
+    "title": "强化学习新突破：集成方法+GPU并行模拟用于交易",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489723&idx=1&sn=80e924f5fea5b68086822fb354215d57&chksm=ce7e7fa5f909f6b3b2b71fa444d8f126b96dd1caaa793e3181bedb37b4745c7c5d5011fbf0cd#rd",
+    "msgid": "2247489723",
+    "itemidx": "1",
+    "create_time": 1742390173,
+    "date": "2025-03-19"
+  },
+  {
+    "pos": 175,
+    "title": "MSGNet：多尺度融合相关性学习的时间序列预测模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489733&idx=1&sn=ec9f8f489d2b860a990e098a30481e17&chksm=ce7e7fdbf909f6cd89db2aaf46100d9dff132d8fc4d33a832ad705ac2dbe8d1e8e6bc7b9e3b1#rd",
+    "msgid": "2247489733",
+    "itemidx": "1",
+    "create_time": 1742467490,
+    "date": "2025-03-20"
+  },
+  {
+    "pos": 176,
+    "title": "基于LOB的最先进的深度学习模型全面对比",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489748&idx=1&sn=654d7b92a5c67d8a51f3983a213a6941&chksm=ce7e7fcaf909f6dc1de0647024bd92a4e3e786261b0bf6ea0d3abf89c604fc7c21e9d24251f8#rd",
+    "msgid": "2247489748",
+    "itemidx": "1",
+    "create_time": 1742649638,
+    "date": "2025-03-22"
+  },
+  {
+    "pos": 177,
+    "title": "基于新型收益加权损失函数的深度学习模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489759&idx=1&sn=d9ce7e8d5c4df66377f0d3132a10d623&chksm=ce7e7fc1f909f6d754b25830b5dce7d75dfbab61b0f8b674022dc9cfafb69d4845a657f248f5#rd",
+    "msgid": "2247489759",
+    "itemidx": "1",
+    "create_time": 1742727737,
+    "date": "2025-03-23"
+  },
+  {
+    "pos": 178,
+    "title": "AAAI 25 | LSTD: 识别长短期潜在变量，增强时序预测效果",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489769&idx=1&sn=c3928bb79cca917beff2cc2b4ad024d6&chksm=ce7e7ff7f909f6e1a700ecaef0adc955dd3d5ee26a2b428a8b3318a4e1a4e2612c7c5a8a167c#rd",
+    "msgid": "2247489769",
+    "itemidx": "1",
+    "create_time": 1742826073,
+    "date": "2025-03-24"
+  },
+  {
+    "pos": 179,
+    "title": "基于 Informer 结构的高频比特币策略研究",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489777&idx=1&sn=fa21f1ac62aa7e2e2aefc89c4af56128&chksm=ce7e7feff909f6f999ebd2464ee617a84209323139b43d42ac2c36dac709816923569a720a84#rd",
+    "msgid": "2247489777",
+    "itemidx": "1",
+    "create_time": 1742913775,
+    "date": "2025-03-25"
+  },
+  {
+    "pos": 180,
+    "title": "半决策导向学习与深度集成：稳健投资组合优化框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489784&idx=1&sn=88ec66fdda5195f4f4399b3cfbd02b1c&chksm=ce7e7fe6f909f6f05eea22b1475291c853fcdc11999c707f60017bbfc579408b8c99eb759fb9#rd",
+    "msgid": "2247489784",
+    "itemidx": "1",
+    "create_time": 1742996831,
+    "date": "2025-03-26"
+  },
+  {
+    "pos": 181,
+    "title": "从深度学习到大模型：一篇文章搞懂量化投资中的AI应用",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489829&idx=1&sn=08e80b26c57c48417ec075da2cb9caad&chksm=ce7e7e3bf909f72d368907bfd9f3eb1ff69f93580a7c3405591232294ed2e0cf51826d2cc2b8#rd",
+    "msgid": "2247489829",
+    "itemidx": "1",
+    "create_time": 1743343601,
+    "date": "2025-03-30"
+  },
+  {
+    "pos": 182,
+    "title": "基于图神经网络的高频交易系统",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489860&idx=1&sn=889e85801e520d8c5ea1969d0cf25554&chksm=ce7e7e5af909f74cad46f32d419959fa8e312ba1fa4a47166a2ef6ba5756b552a4e433671ae8#rd",
+    "msgid": "2247489860",
+    "itemidx": "1",
+    "create_time": 1743503096,
+    "date": "2025-04-01"
+  },
+  {
+    "pos": 183,
+    "title": "基于宏观经济波动、技术指标的加密货币预测模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489904&idx=1&sn=aca31e8fd4fabd0ff125fe81e9e9c321&chksm=ce7e7e6ef909f778ae97bb4f78adcef4678626b814cfc9d636530a95c172a2220e49848eaddd#rd",
+    "msgid": "2247489904",
+    "itemidx": "1",
+    "create_time": 1743686220,
+    "date": "2025-04-03"
+  },
+  {
+    "pos": 184,
+    "title": "利用LLM进行Alpha挖掘和策略优化",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489924&idx=1&sn=c967717492629872f9a1a50bb6056e7f&chksm=ce7e7e9af909f78c747fc9b93a2d92f8ec7c50d6a9260c66006a25a51b1da71b9b168156aa2c#rd",
+    "msgid": "2247489924",
+    "itemidx": "1",
+    "create_time": 1743776652,
+    "date": "2025-04-04"
+  },
+  {
+    "pos": 185,
+    "title": "基于改进CTGAN与特征融合的资产配置模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489934&idx=1&sn=c34498ea1d6b7669376cea7809d1893b&chksm=ce7e7e90f909f7868bd470af5459bc85644940e6a2a9d937d66a17c531c25ac7032066dca3de#rd",
+    "msgid": "2247489934",
+    "itemidx": "1",
+    "create_time": 1743863221,
+    "date": "2025-04-05"
+  },
+  {
+    "pos": 186,
+    "title": "股票市场宏观特性",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489951&idx=1&sn=62fe7be1d633cd79f8ab1c931f7d8327&chksm=ce7e7e81f909f7974bad93d283d099bd152ee36c3e4a265553a6460708fafc64a289f86be13c#rd",
+    "msgid": "2247489951",
+    "itemidx": "1",
+    "create_time": 1744036957,
+    "date": "2025-04-07"
+  },
+  {
+    "pos": 187,
+    "title": "深度强化学习在期权对冲中的应用",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489985&idx=1&sn=fdc3d66aa8d37ce53c404d0b538d3dc6&chksm=ce7e7edff909f7c9a590bab7caefcfbf23b9ba6f4b637c18d817ed0bd0f4c192b1f3db40fe38#rd",
+    "msgid": "2247489985",
+    "itemidx": "1",
+    "create_time": 1744277826,
+    "date": "2025-04-10"
+  },
+  {
+    "pos": 188,
+    "title": "深度强化学习在多资产交易中的应用",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490029&idx=1&sn=656e50ad82af1509e5b059670eb39129&chksm=ce7e7ef3f909f7e54356c728e2607c19c00c88a7430a890b1742dfa40ebcfff4926f0a565509#rd",
+    "msgid": "2247490029",
+    "itemidx": "1",
+    "create_time": 1744469444,
+    "date": "2025-04-12"
+  },
+  {
+    "pos": 189,
+    "title": "基于深度强化学习的LOB做市策略研究",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490051&idx=1&sn=95f0134d1a0118c1482a676d988c50c7&chksm=ce7e7d1df909f40bf3ebeb6464f877a7bd356f0f96eb03335e0b57e04abd0ad343766019bea8#rd",
+    "msgid": "2247490051",
+    "itemidx": "1",
+    "create_time": 1744638440,
+    "date": "2025-04-14"
+  },
+  {
+    "pos": 190,
+    "title": "JF | 消失的指数效应",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490063&idx=1&sn=0fb66478d0952615feef90c6682f51e6&chksm=ce7e7d11f909f407aa02dbc9edc0701609894f6826623c02921f9ded15d14384d7476c93929e#rd",
+    "msgid": "2247490063",
+    "itemidx": "1",
+    "create_time": 1744726059,
+    "date": "2025-04-15"
+  },
+  {
+    "pos": 191,
+    "title": "基于深度学习的VWAP执行策略",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490093&idx=1&sn=e45a68c581147bf29fa124f06a57c1c8&chksm=ce7e7d33f909f425bad6b0a4cb32f036c69f361d54be658c8dacfe4b86d4cbd290340af89127#rd",
+    "msgid": "2247490093",
+    "itemidx": "1",
+    "create_time": 1744970346,
+    "date": "2025-04-18"
+  },
+  {
+    "pos": 192,
+    "title": "连续值预测：最小时间序列Transformer",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490128&idx=1&sn=aa5df5ea7f3568a8a1a52a2ef9271141&chksm=ce7e7d4ef909f458286d010b50cfb7470fa97cab8ac8e04443b37c79bfda71d0c0a063fb5015#rd",
+    "msgid": "2247490128",
+    "itemidx": "1",
+    "create_time": 1745149737,
+    "date": "2025-04-20"
+  },
+  {
+    "pos": 193,
+    "title": "MCP深入分析：现状、安全与未来",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490139&idx=1&sn=7e8a9563fdb312b04849b57c4055ba61&chksm=ce7e7d45f909f453276382fc71fffa08928ccd957198e8a0bbc1bed9dbf4732a24d13850a0de#rd",
+    "msgid": "2247490139",
+    "itemidx": "1",
+    "create_time": 1745228464,
+    "date": "2025-04-21"
+  },
+  {
+    "pos": 194,
+    "title": "多模态时间序列分析：教程与综述",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490147&idx=1&sn=6ccc3689bd303366f8dad8d458e69bb9&chksm=ce7e7d7df909f46be1bfc905ba103e7181b7b49e7425d8b7f670ca5165f2f6c5b99c5459400d#rd",
+    "msgid": "2247490147",
+    "itemidx": "1",
+    "create_time": 1745315591,
+    "date": "2025-04-22"
+  },
+  {
+    "pos": 195,
+    "title": "融合LLM观点的BL模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490164&idx=1&sn=c0d59c459086d6592c788380db653878&chksm=ce7e7d6af909f47c79623d45235153d3db8fb6c74b1b8fd3fbfbc6e269318472d22bbf868134#rd",
+    "msgid": "2247490164",
+    "itemidx": "1",
+    "create_time": 1745488052,
+    "date": "2025-04-24"
+  },
+  {
+    "pos": 196,
+    "title": "半个世纪以来的宏观动量投资策略",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490198&idx=1&sn=9ce81f87a9c598780bbbd5c4b395e3b0&chksm=ce7e7d88f909f49e729455dea1241c432974a31762ac7f5da8bc0314a541c29d969612071406#rd",
+    "msgid": "2247490198",
+    "itemidx": "1",
+    "create_time": 1745757870,
+    "date": "2025-04-27"
+  },
+  {
+    "pos": 197,
+    "title": "机器学习在金融市场中的应用：何时有效，何时无效",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490203&idx=1&sn=b370c017dbb7566fc071756686afd9d7&chksm=ce7e7d85f909f4932049b06897a09e86b0dcb2e032ebc0330807c3d5c6359e229909c5a0250e#rd",
+    "msgid": "2247490203",
+    "itemidx": "1",
+    "create_time": 1745852244,
+    "date": "2025-04-28"
+  },
+  {
+    "pos": 198,
+    "title": "QuantBench：用于量化投资的AI方法基准测试",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490218&idx=1&sn=e746548ac17a319b2c15d5ee393655fd&chksm=ce7e7db4f909f4a270b2ed924ea845310390fa3f3267fa36e493a90ba4268d873b96551cbd64#rd",
+    "msgid": "2247490218",
+    "itemidx": "1",
+    "create_time": 1745937951,
+    "date": "2025-04-29"
+  },
+  {
+    "pos": 199,
+    "title": "牛津大学 ｜ ClusterLOB：利用限价订单簿中的聚类增强交易策略",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490228&idx=1&sn=482ae83adc11410a7c90cfa3843ae6a7&chksm=ce7e7daaf909f4bc2cdfbceb0ebd726873bbbc57ad1e4e70fc011a43144772bf17c7920aae6c#rd",
+    "msgid": "2247490228",
+    "itemidx": "1",
+    "create_time": 1746018891,
+    "date": "2025-04-30"
+  },
+  {
+    "pos": 200,
+    "title": "DeepVol：基于高频数据的波动率预测模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490274&idx=1&sn=3c9bd18e7590210ddf1f00e54e7fcd15&chksm=ce7e7dfcf909f4eadc57481aa05ba5aa2a47c3f0681bf34088723666686ac36266b8767f84cf#rd",
+    "msgid": "2247490274",
+    "itemidx": "1",
+    "create_time": 1746364853,
+    "date": "2025-05-04"
+  },
+  {
+    "pos": 201,
+    "title": "基于机器学习及宏观经济状态检测的战术资产配置",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490285&idx=1&sn=4e9aa069e5a8cf33d47ee9e3cbdba161&chksm=ce7e7df3f909f4e52ca70e69bbd7623c21ebbfdc717d631bc74663667dcd280dc81bf189b2f7#rd",
+    "msgid": "2247490285",
+    "itemidx": "1",
+    "create_time": 1746452482,
+    "date": "2025-05-05"
+  },
+  {
+    "pos": 202,
+    "title": "Logic-Q：基于程序草图调整的DRL量化交易框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490303&idx=1&sn=4b884db0773a2d16c4b470796ca6bf1e&chksm=ce7e7de1f909f4f7f79b45cb462d4e5289285faa1c587eb3c7da75e1e8860cfbe3ed6786b69b#rd",
+    "msgid": "2247490303",
+    "itemidx": "1",
+    "create_time": 1746541001,
+    "date": "2025-05-06"
+  },
+  {
+    "pos": 203,
+    "title": "基于LLM的混合专家交易框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490326&idx=1&sn=eba0e7fdc14041028a0ecae6c27ca5f5&chksm=ce7e7c08f909f51e23455d9a36e0676ec676577058cb2f7ab5f9151eabbe015237675bb23212#rd",
+    "msgid": "2247490326",
+    "itemidx": "1",
+    "create_time": 1746785839,
+    "date": "2025-05-09"
+  },
+  {
+    "pos": 204,
+    "title": "TLOB：双重注意力机制用于限价订单簿预测",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490337&idx=1&sn=fa4aa7bce7ae1675f5d3d29ea3e5edc7&chksm=ce7e7c3ff909f52974e09a6e1f0afea43c46093f3d3e75b72467643280b5b33ec3bada79a183#rd",
+    "msgid": "2247490337",
+    "itemidx": "1",
+    "create_time": 1746867700,
+    "date": "2025-05-10"
+  },
+  {
+    "pos": 205,
+    "title": "RAG-MCP：解决大语言模型工具选择中的提示膨胀难题",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490346&idx=1&sn=ba403e8a54bac2c75f0556b5a0931d24&chksm=ce7e7c34f909f5229f2bf0f4ca453ab4f0f68075de7a50ee28da835809ca2e28ff1a507c76c6#rd",
+    "msgid": "2247490346",
+    "itemidx": "1",
+    "create_time": 1746973157,
+    "date": "2025-05-11"
+  },
+  {
+    "pos": 206,
+    "title": "高频数据分析中的主要问题：解决方案综述",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490382&idx=1&sn=976b7d2b1712f17ebfc9a59107e2d3c4&chksm=ce7e7c50f909f546844b4d6b2e1044233cbfe5117162d333e475225339019bfefd105dc5db11#rd",
+    "msgid": "2247490382",
+    "itemidx": "1",
+    "create_time": 1747302810,
+    "date": "2025-05-15"
+  },
+  {
+    "pos": 207,
+    "title": "ICML 25 | TimeDART:自监督时间序列预训练框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490397&idx=1&sn=ac9910cc137274b4d4a6070b2437cef9&chksm=ce7e7c43f909f555a9dd8890622d30ea4b3271b7aad65a43d4ca9ecae8f5458390c3dc703e82#rd",
+    "msgid": "2247490397",
+    "itemidx": "1",
+    "create_time": 1747395980,
+    "date": "2025-05-16"
+  },
+  {
+    "pos": 208,
+    "title": "稀疏最小方差投资组合的优化框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490404&idx=1&sn=db245cef504a9906dfe1c4e5503e1521&chksm=ce7e7c7af909f56cd9a4e1c0fa2c18b9713241a52c7660402b0eb9b0833bd561f5233927868c#rd",
+    "msgid": "2247490404",
+    "itemidx": "1",
+    "create_time": 1747485939,
+    "date": "2025-05-17"
+  },
+  {
+    "pos": 209,
+    "title": "FlowHFT：基于模仿学习和网格搜索微调，学习并超越专家策略",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490422&idx=1&sn=6d21b2d94ddf2d0086d63d58ed90c9f3&chksm=ce7e7c68f909f57e79dc6250dc4e8e1bd477b199b3f22ff72cbc441ce0747d4890275b9b66ca#rd",
+    "msgid": "2247490422",
+    "itemidx": "1",
+    "create_time": 1747666984,
+    "date": "2025-05-19"
+  },
+  {
+    "pos": 210,
+    "title": "R&D-Agent-Quant",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490469&idx=1&sn=e4748ff2c1902ab9573e7e9a1addef57&chksm=ce7e7cbbf909f5ad3328d28c271cfed2f1c37fc58a8e4549f2b50085f364a566876bfcbca35f#rd",
+    "msgid": "2247490469",
+    "itemidx": "1",
+    "create_time": 1747908084,
+    "date": "2025-05-22"
+  },
+  {
+    "pos": 211,
+    "title": "基于新闻情绪的可解释机器学习宏观Alpha策略研究",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490475&idx=1&sn=32a368c9ef803775a536b9287c00dadf&chksm=ce7e7cb5f909f5a33ef52a1ca2fbe41d19cb26dbcd58861139fb809b70df838b6d029755dc7f#rd",
+    "msgid": "2247490475",
+    "itemidx": "1",
+    "create_time": 1748007935,
+    "date": "2025-05-23"
+  },
+  {
+    "pos": 212,
+    "title": "九坤团队新作！一条数据训练AI超越上万条数据",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490558&idx=1&sn=71770df7b241030f2bef557a8b891b87&chksm=ce7e7ce0f909f5f68e8deb9e8a4788bc38419281ebeaee579d34670410632c13ac60e329937b#rd",
+    "msgid": "2247490558",
+    "itemidx": "1",
+    "create_time": 1748506170,
+    "date": "2025-05-29"
+  },
+  {
+    "pos": 213,
+    "title": "FreqMoE: 通过频率分解MoE提升时间序列预测性能",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490566&idx=1&sn=5c9eb1d7711e71d8c7c8f571c2c84331&chksm=ce7e7b18f909f20e0b5c809056a137026abbe81512481048c26c3cdff517b1b99a6b36b02bfa#rd",
+    "msgid": "2247490566",
+    "itemidx": "1",
+    "create_time": 1748598038,
+    "date": "2025-05-30"
+  },
+  {
+    "pos": 214,
+    "title": "如何利用加密货币价格相关性网络优化投资组合？",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490592&idx=1&sn=7e19adcb1309012c688efd477d53c891&chksm=ce7e7b3ef909f22881ff3f2d32868bdf5462592f5636d80c3d641573a71c8df9ddffcc1e9c58#rd",
+    "msgid": "2247490592",
+    "itemidx": "1",
+    "create_time": 1748873756,
+    "date": "2025-06-02"
+  },
+  {
+    "pos": 215,
+    "title": "Quantformer：从注意力到利润的量化策略",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490617&idx=1&sn=7f791154239ed54d2ce275fdf769a442&chksm=ce7e7b27f909f2311e57298b20891b79da0c85f55a8dfefdd37e49155403988b9ec61d0327a5#rd",
+    "msgid": "2247490617",
+    "itemidx": "1",
+    "create_time": 1749081600,
+    "date": "2025-06-05"
+  },
+  {
+    "pos": 216,
+    "title": "美联储首席经济学家 |  高通量资产定价",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490632&idx=1&sn=0940ffa72dd3024a3ea2b58503605195&chksm=ce7e7b56f909f2409ab17e2a662d6e379b488f2307292eb66e96653603de125391dc0e31f3be#rd",
+    "msgid": "2247490632",
+    "itemidx": "1",
+    "create_time": 1749166200,
+    "date": "2025-06-05"
+  },
+  {
+    "pos": 217,
+    "title": "清华IIIS学院 | LLM+MCTS驱动的Alpha因子挖掘框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490641&idx=1&sn=88a150a7bb8b2016d3e1c295cda7f9d9&chksm=ce7e7b4ff909f2594700e7ad90ae6ca0f148c6efbb2ccfac783068712f25dfcf8cdfb79f9d13#rd",
+    "msgid": "2247490641",
+    "itemidx": "1",
+    "create_time": 1749299927,
+    "date": "2025-06-07"
+  },
+  {
+    "pos": 218,
+    "title": "QuantML社群最新重磅开源 | TradingAgents：多智能体交易框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490650&idx=1&sn=4d2dfa1b6c9139a38c84122c715fd015&chksm=ce7e7b44f909f25207a85309bbb0066d6d6590a6cdfce20284bb352cba463e638a4985be7274#rd",
+    "msgid": "2247490650",
+    "itemidx": "1",
+    "create_time": 1749395433,
+    "date": "2025-06-08"
+  },
+  {
+    "pos": 219,
+    "title": "CMU & Bloomberg | DELPHYNE：面向通用和金融时间序列的预训练模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490686&idx=1&sn=767e0ed6dd485df41b414e48d1a93caa&chksm=ce7e7b60f909f27687d1b2020d14fcb2d82baaf6c18fd60148189ee967acc3e53c93d8d4ee5b#rd",
+    "msgid": "2247490686",
+    "itemidx": "1",
+    "create_time": 1749551670,
+    "date": "2025-06-10"
+  },
+  {
+    "pos": 220,
+    "title": "Stanford |  NGBoost：用于概率预测的自然梯度提升算法",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490695&idx=1&sn=a13771df190b2b2bfc9db6a5ebdda187&chksm=ce7e7b99f909f28f3c14811d1cc1878d59f82e41b66bcdb5c15529f5ef28ec49e545aadb1aab#rd",
+    "msgid": "2247490695",
+    "itemidx": "1",
+    "create_time": 1749636642,
+    "date": "2025-06-11"
+  },
+  {
+    "pos": 221,
+    "title": "中国的散户交易与收益可预测性",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490700&idx=1&sn=7c9901bfe7c10ea47039f43ecea4f6f8&chksm=ce7e7b92f909f284943f1d6661088e4c7920ed94a219aedb1c1a5a1b786fa046abb856f6a828#rd",
+    "msgid": "2247490700",
+    "itemidx": "1",
+    "create_time": 1749736729,
+    "date": "2025-06-12"
+  },
+  {
+    "pos": 222,
+    "title": "AAAI 25 | 重新审视多元时间序列预测中的注意力机制",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490720&idx=1&sn=9cf34d629bb9318be4cc40dbb78d83e2&chksm=ce7e7bbef909f2a8b3b591ee0d561f3f99d9529152140de31e3b9a2408dc8295ec1c9db25e38#rd",
+    "msgid": "2247490720",
+    "itemidx": "1",
+    "create_time": 1749905893,
+    "date": "2025-06-14"
+  },
+  {
+    "pos": 223,
+    "title": "KDD 25 | 学习通用多层次市场非理性因子以提升股票收益预测",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490730&idx=1&sn=1a80d4c8f3880daec0b07b8c60710c95&chksm=ce7e7bb4f909f2a20ecffa3a88c4251710d72a5ed3e0fe5fbfafdd1fc8c902ebf0a475102b72#rd",
+    "msgid": "2247490730",
+    "itemidx": "1",
+    "create_time": 1749996387,
+    "date": "2025-06-15"
+  },
+  {
+    "pos": 224,
+    "title": "动态网格交易策略：从零期望到超越市场",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490740&idx=1&sn=d1cb157222a1a277b4e2e7c54db2e747&chksm=ce7e7baaf909f2bc09c8fe0ef088ec49125626e8e109e63fbce41cc7ce0d490a5d734c8cfa3d#rd",
+    "msgid": "2247490740",
+    "itemidx": "1",
+    "create_time": 1750067075,
+    "date": "2025-06-16"
+  },
+  {
+    "pos": 225,
+    "title": "基于多源融合的通用化股票选择框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490750&idx=1&sn=4e818ff2679f5960a2ddc264db4d1fc7&chksm=ce7e7ba0f909f2b65e4aa9d4c59a10d6d6d830b97b4b045ef8f44cbfa5d9eba59a568ea9f186#rd",
+    "msgid": "2247490750",
+    "itemidx": "1",
+    "create_time": 1750166943,
+    "date": "2025-06-17"
+  },
+  {
+    "pos": 226,
+    "title": "ICML 25 | 基于分布强化学习的Alpha因子挖掘",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490762&idx=1&sn=e6bd19c7f6fede113ab6f677629b5449&chksm=ce7e7bd4f909f2c275654c6c84008b687585ddddddc51047f4802217a8191326f340f8ea0509#rd",
+    "msgid": "2247490762",
+    "itemidx": "1",
+    "create_time": 1750249006,
+    "date": "2025-06-18"
+  },
+  {
+    "pos": 227,
+    "title": "基于图深度学习的指数预测",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490772&idx=1&sn=a52945b6942c212a3dbfde2278c45cd3&chksm=ce7e7bcaf909f2dc1e0e610d74e953d91414dc98d6802831766404b5ba4451afd725ee54fc2f#rd",
+    "msgid": "2247490772",
+    "itemidx": "1",
+    "create_time": 1750329357,
+    "date": "2025-06-19"
+  },
+  {
+    "pos": 228,
+    "title": "StockAICloud：基于AI和Serverless云计算的股票预测框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490786&idx=1&sn=a4a73a7a22b4f83ce05ea74dee278fb9&chksm=ce7e7bfcf909f2ea766ec4b71c3aea987e1e746bd4f854f7dc5729a47e7be78a872e998a11fd#rd",
+    "msgid": "2247490786",
+    "itemidx": "1",
+    "create_time": 1750427352,
+    "date": "2025-06-20"
+  },
+  {
+    "pos": 229,
+    "title": "深度K线学习器的数据增强",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490798&idx=1&sn=5cc3b0b55f965124e2ee0d36e06f9384&chksm=ce7e7bf0f909f2e6e0cc662abdf6a292c5df7d2555f6f42bbe3f41aad8fcd6566458b7cdb2d1#rd",
+    "msgid": "2247490798",
+    "itemidx": "1",
+    "create_time": 1750508463,
+    "date": "2025-06-21"
+  },
+  {
+    "pos": 230,
+    "title": "周期性数据赋能TabPFN时间序列预测",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490806&idx=1&sn=db9572c81261c17bde2b4de1bd03eca7&chksm=ce7e7be8f909f2fed72170dadf31821122a6d06b2932ad5f27da9f3096ef0bb277f782e563b4#rd",
+    "msgid": "2247490806",
+    "itemidx": "1",
+    "create_time": 1750597080,
+    "date": "2025-06-22"
+  },
+  {
+    "pos": 231,
+    "title": "自适应量化交易：一种模仿深度强化学习方法",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490817&idx=1&sn=9fc46d08b2b3e2a45a4ae7980a3be2aa&chksm=ce7e7a1ff909f30993b56163a0be219dac2bdef34bcf5ea24df0ac33db4bcc4895ad4d0e2716#rd",
+    "msgid": "2247490817",
+    "itemidx": "1",
+    "create_time": 1750687905,
+    "date": "2025-06-23"
+  },
+  {
+    "pos": 232,
+    "title": "基于宏观-板块-微观指标耦合的股票表征学习",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490828&idx=1&sn=810cd3c20031a213d15b0823cff8c414&chksm=ce7e7a12f909f304a17be7f1648fddf95470dab01c2e4d7128ef94f9476e04cf1edf17251360#rd",
+    "msgid": "2247490828",
+    "itemidx": "1",
+    "create_time": 1750770208,
+    "date": "2025-06-24"
+  },
+  {
+    "pos": 233,
+    "title": "意图感知通信：多订单执行的多智能体强化学习",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490838&idx=1&sn=234bb7a5a2193ac66c8214bb8f5574a6&chksm=ce7e7a08f909f31e89d9de1fb200d7d78a692fb857fb00743b5760fd2358630787fca2a3091d#rd",
+    "msgid": "2247490838",
+    "itemidx": "1",
+    "create_time": 1750862014,
+    "date": "2025-06-25"
+  },
+  {
+    "pos": 234,
+    "title": "RobustiPy：下一代多元宇宙样分析与模型稳健性量化框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490847&idx=1&sn=332d69653330fa783346615ddfcaa9a0&chksm=ce7e7a01f909f31739e3ba506f1463ccc2ee244545f00f7687c5de251117b5b21ba6aab43c48#rd",
+    "msgid": "2247490847",
+    "itemidx": "1",
+    "create_time": 1750944089,
+    "date": "2025-06-26"
+  },
+  {
+    "pos": 235,
+    "title": "AAAI 25 | 融合扩散模型与专家混合的层级化股票预测研究",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490858&idx=1&sn=a7ca3ad90535784bf9116af8fb76725c&chksm=ce7e7a34f909f322220426f75e3b3d8fd4739cda8dd1caa240b612ff3fd7ab1e42cab1e4ebec#rd",
+    "msgid": "2247490858",
+    "itemidx": "1",
+    "create_time": 1751019344,
+    "date": "2025-06-27"
+  },
+  {
+    "pos": 236,
+    "title": "量子强化学习在行业轮动中的实践",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490865&idx=1&sn=e3a3aff8a49c219585d24b64344db3fb&chksm=ce7e7a2ff909f339ac3246dbb7f18b58e8d1b094f367b2442caa6b71965251a4c6064643be35#rd",
+    "msgid": "2247490865",
+    "itemidx": "1",
+    "create_time": 1751120565,
+    "date": "2025-06-28"
+  },
+  {
+    "pos": 237,
+    "title": "基于多数据源的加密货币预测",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490876&idx=1&sn=725f4edfb65a648fcdc5397d6b3a43ee&chksm=ce7e7a22f909f33499603147b700f73057d55dc071b0a3e863c64a84ec024c24cf6abccfba7d#rd",
+    "msgid": "2247490876",
+    "itemidx": "1",
+    "create_time": 1751208808,
+    "date": "2025-06-29"
+  },
+  {
+    "pos": 238,
+    "title": "MetaTrader：基于双层强化学习的股票交易策略",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490889&idx=1&sn=3b197d014406e34c17daefad31117ded&chksm=ce7e7a57f909f341f1665775bb8947a3f7a7284510a91861d3ceee1999218b594f1ce250a64f#rd",
+    "msgid": "2247490889",
+    "itemidx": "1",
+    "create_time": 1751279107,
+    "date": "2025-06-30"
+  },
+  {
+    "pos": 239,
+    "title": "利用深度平滑算子计算隐含波动率",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490898&idx=1&sn=1e47306b10916c09ccae44800ec046c7&chksm=ce7e7a4cf909f35a4f1bc84d504473527ca3fe247a71b4178cab6ab36be1ce83667c1cf48c35#rd",
+    "msgid": "2247490898",
+    "itemidx": "1",
+    "create_time": 1751463451,
+    "date": "2025-07-02"
+  },
+  {
+    "pos": 240,
+    "title": "2024 JFQA 夏普奖出炉! 为何1/N分散化组合难以被击败？",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490909&idx=1&sn=4957cf57f02f2fa5852b685624098eac&chksm=ce7e7a43f909f35596a6d86a10ce6ba576f714305d885a11e74a6c2f775a39b3feeb99035a07#rd",
+    "msgid": "2247490909",
+    "itemidx": "1",
+    "create_time": 1751551093,
+    "date": "2025-07-03"
+  },
+  {
+    "pos": 241,
+    "title": "DeepSupp：基于注意力机制的股票支撑位识别",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490917&idx=1&sn=113262ac31a41d2a0928628ed3436c4e&chksm=ce7e7a7bf909f36de23783d524adcb3b20d779f51bbc40397beef630c32bd10b82df94475c91#rd",
+    "msgid": "2247490917",
+    "itemidx": "1",
+    "create_time": 1751634800,
+    "date": "2025-07-04"
+  },
+  {
+    "pos": 242,
+    "title": "北京大学 & 正仁量化 | MASS：基于多智能体规模化模拟投资组合",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490927&idx=1&sn=3720c677c02ccda54e395d650f3c8200&chksm=ce7e7a71f909f3670a54f170ff36e80f5c0c1cb1ea617264ffafbd0772ab44a5ae5d4387326d#rd",
+    "msgid": "2247490927",
+    "itemidx": "1",
+    "create_time": 1751727343,
+    "date": "2025-07-05"
+  },
+  {
+    "pos": 243,
+    "title": "LLM在金融领域的应用综述",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490932&idx=1&sn=7331f264d44b3f24769a56593b52e2e0&chksm=ce7e7a6af909f37cc94f45d48e531843ad71876c00a33bde608bf0eacc6e6a95fd6782822d96#rd",
+    "msgid": "2247490932",
+    "itemidx": "1",
+    "create_time": 1751810687,
+    "date": "2025-07-06"
+  },
+  {
+    "pos": 244,
+    "title": "基于LLM专家混合路由的交易框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490939&idx=1&sn=1b5c16409146876e23c4b9d427ff1069&chksm=ce7e7a65f909f3738e1e83c0a1dc25bce75c3251ab7e64c20b863e21773c45dc1afa2cfa667e#rd",
+    "msgid": "2247490939",
+    "itemidx": "1",
+    "create_time": 1751899330,
+    "date": "2025-07-07"
+  },
+  {
+    "pos": 245,
+    "title": "扩散因子模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490952&idx=1&sn=b254365c1732f4bc7cccd967ea6d8ec7&chksm=ce7e7a96f909f3806a87f451c47eac04fe7cd7e1d0e8729752561e422153701951c888c6dbc0#rd",
+    "msgid": "2247490952",
+    "itemidx": "1",
+    "create_time": 1751986237,
+    "date": "2025-07-08"
+  },
+  {
+    "pos": 246,
+    "title": "量化中神经网络选择何种优化器？",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490959&idx=1&sn=00a05839659e804030192f597d9a8c9c&chksm=ce7e7a91f909f387caa1cb1a7e2f9ed1ea501c3398d9397a9a53cf8e03c8c295447a3d282350#rd",
+    "msgid": "2247490959",
+    "itemidx": "1",
+    "create_time": 1752069644,
+    "date": "2025-07-09"
+  },
+  {
+    "pos": 247,
+    "title": "金融数据API全面指南",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490973&idx=1&sn=3695b4922772d3d47b5771ec4157752b&chksm=ce7e7a83f909f39572848b9f9df98d78f0a2e40ea103f24eff6834b98eb318607cc1cb0112f0#rd",
+    "msgid": "2247490973",
+    "itemidx": "1",
+    "create_time": 1752150116,
+    "date": "2025-07-10"
+  },
+  {
+    "pos": 248,
+    "title": "专业级AI股票分析提示词",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490979&idx=1&sn=36b3068a8f2382ae0514c78c917f86f7&chksm=ce7e7abdf909f3aba6a527d60fbc38532e8621175b27375214445dec4e05bc150fa156f4b0a1#rd",
+    "msgid": "2247490979",
+    "itemidx": "1",
+    "create_time": 1752245531,
+    "date": "2025-07-11"
+  },
+  {
+    "pos": 249,
+    "title": "ML-GAT：用于股票预测的多层图注意力模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490991&idx=1&sn=ad76da6ffa4b4b4568443d0199dd22ed&chksm=ce7e7ab1f909f3a7fe6607bd26225bc207a437167c6c1ede8a963dab02f230bea6358afee06a#rd",
+    "msgid": "2247490991",
+    "itemidx": "1",
+    "create_time": 1752329710,
+    "date": "2025-07-12"
+  },
+  {
+    "pos": 250,
+    "title": "KDD 25 |  时间至关重要：基于风险感知的时序预测与分配框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491002&idx=1&sn=ef72c0d6683b25e8132cdb7512fb8f5b&chksm=ce7e7aa4f909f3b2ab88937ed2014b01a45ad98e4060869f571d473aaf60b829a3dd26d3210b#rd",
+    "msgid": "2247491002",
+    "itemidx": "1",
+    "create_time": 1752417909,
+    "date": "2025-07-13"
+  },
+  {
+    "pos": 251,
+    "title": "清华大学&序明基金 |  MIGA模型：融合MoE与组聚合策略的股票预测模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491048&idx=1&sn=6542a648a9896035e37452aa25b0be65&chksm=ce7e7af6f909f3e02c32c95b37918f826451bae98d91123d563f340b1875686ce0af8fdf796b#rd",
+    "msgid": "2247491048",
+    "itemidx": "1",
+    "create_time": 1752834368,
+    "date": "2025-07-18"
+  },
+  {
+    "pos": 252,
+    "title": "用于关系驱动型股票走势预测的多图卷积网络",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491056&idx=1&sn=c2805a33e178a3c43449c33218817a0a&chksm=ce7e7aeef909f3f8d2d2010fdd45c37a41ad9e969764ab9241e6ce1140d8b15f9a4cce633820#rd",
+    "msgid": "2247491056",
+    "itemidx": "1",
+    "create_time": 1752937910,
+    "date": "2025-07-19"
+  },
+  {
+    "pos": 253,
+    "title": "结合强化学习与LLM的量化模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491063&idx=1&sn=de2d415fa30550d0c606827830db0cdd&chksm=ce7e7ae9f909f3ff02a63977c4f3f6972f4cf4837fb3b858914890f3a4ffc5cfe28bf201991a#rd",
+    "msgid": "2247491063",
+    "itemidx": "1",
+    "create_time": 1753025438,
+    "date": "2025-07-20"
+  },
+  {
+    "pos": 254,
+    "title": "DiT-LSTM-SVAR：消除随机游走噪声的深度学习投资组合",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491088&idx=1&sn=8a90a9e2023935511f54f92c66bcc555&chksm=ce7e790ef909f0184363f9343ab3134abd9c0c0e9f135ea86d30f884c8df1277cd6dcf9f44da#rd",
+    "msgid": "2247491088",
+    "itemidx": "1",
+    "create_time": 1753176252,
+    "date": "2025-07-22"
+  },
+  {
+    "pos": 255,
+    "title": "量化中另类损失函数",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491140&idx=1&sn=301c84cd772237fdccd68a64f22fa606&chksm=ce7e795af909f04c9ae6e049293292fd6a7a1805a8a57ab6db95c8e360e2208bba7622e86aee#rd",
+    "msgid": "2247491140",
+    "itemidx": "1",
+    "create_time": 1753539989,
+    "date": "2025-07-26"
+  },
+  {
+    "pos": 256,
+    "title": "清华大学&易方达基金 | 综述：量化与大模型的融合",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491163&idx=1&sn=b1d6ef9ab082ee138ed19b0ed96183a4&chksm=ce7e7945f909f0531b5009cbf1d8f13c8a61fadec4136bd9c51da45972e02f0efe60b9e23f7f#rd",
+    "msgid": "2247491163",
+    "itemidx": "1",
+    "create_time": 1753694771,
+    "date": "2025-07-28"
+  },
+  {
+    "pos": 257,
+    "title": "从“预测市场”到“学习决策”：基于监督学习决策与集成学习的投资组合优化框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491174&idx=1&sn=e053618eed09e779f2f8ee899845f1a0&chksm=ce7e7978f909f06e78cc6a6a3514babd3873aa69cf98b5f6a75077e7185cc752093eb0ad138b#rd",
+    "msgid": "2247491174",
+    "itemidx": "1",
+    "create_time": 1753783125,
+    "date": "2025-07-29"
+  },
+  {
+    "pos": 258,
+    "title": "HARLF：分层强化学习如何融合数据与情感",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491189&idx=1&sn=19fdc880b5694771c2204e3efcd50162&chksm=ce7e796bf909f07d2dc781152e61af8e8eafc8a17f85514fa131ab416daf1ed103bc4cdaf61c#rd",
+    "msgid": "2247491189",
+    "itemidx": "1",
+    "create_time": 1753953873,
+    "date": "2025-07-31"
+  },
+  {
+    "pos": 259,
+    "title": "达摩院&中科大 | DiffsFormer: 扩散模型助力因子数据增强",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491205&idx=1&sn=f2d331b5c0a60af305086f6c10947919&chksm=ce7e799bf909f08d2089ed64fde3dc2689dd93b762a7b5a8e7f59167ddd2ec44367155f98b04#rd",
+    "msgid": "2247491205",
+    "itemidx": "1",
+    "create_time": 1754048505,
+    "date": "2025-08-01"
+  },
+  {
+    "pos": 260,
+    "title": "先解释，后预测：金融关系图谱的“可解释性”框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491231&idx=1&sn=dc6c45099a79a5052da6f7e150ef7dbe&chksm=ce7e7981f909f097d809be27f59b0cdb85a1f1c5501a99bd20dd4a841616016d01367d9dd279#rd",
+    "msgid": "2247491231",
+    "itemidx": "1",
+    "create_time": 1754227834,
+    "date": "2025-08-03"
+  },
+  {
+    "pos": 261,
+    "title": "AI自我进化：模型架构探索的AlphaGo时刻",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491248&idx=1&sn=d97b2d09033ad0fc38b76018dd01a114&chksm=ce7e79aef909f0b897a2e7f2c165dddf5de7c89ff597c3cf45e99d97269cbfac7290d34ccae9#rd",
+    "msgid": "2247491248",
+    "itemidx": "1",
+    "create_time": 1754303970,
+    "date": "2025-08-04"
+  },
+  {
+    "pos": 262,
+    "title": "KDD 25 | 复旦&蚂蚁：多周期时间序列预测框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491262&idx=1&sn=d941acef9fc21a7161622133f53d2081&chksm=ce7e79a0f909f0b630fb89d694feaf1ac0a4f09a9c99bf334db03b3b9ce75a11e10886b1d3da#rd",
+    "msgid": "2247491262",
+    "itemidx": "1",
+    "create_time": 1754471914,
+    "date": "2025-08-06"
+  },
+  {
+    "pos": 263,
+    "title": "ICML 25 | 华为诺亚方舟：TimePro高效多元时序预测",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491281&idx=2&sn=c431c36f81ccc98cef4112b920e58024&chksm=ce7e79cff909f0d98baef327c37bd6d4d7b10f0ff2e6dd807bb4dfd8eccb427cd91cf8d5a1d4#rd",
+    "msgid": "2247491281",
+    "itemidx": "2",
+    "create_time": 1754560542,
+    "date": "2025-08-07"
+  },
+  {
+    "pos": 264,
+    "title": "KDD 25 北京大学 | Enhancer：具备分布感知的时序预测元学习框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491315&idx=1&sn=aedbf8f931db1cd3bd7f63ef03ae8f82&chksm=ce7e79edf909f0fbfd9d38876af5a17054d4d896744c6390e86419d68b79374295cec992bf56#rd",
+    "msgid": "2247491315",
+    "itemidx": "1",
+    "create_time": 1754832009,
+    "date": "2025-08-10"
+  },
+  {
+    "pos": 265,
+    "title": "清华大学 × 易方达 | MERA：借助“历史经验”与“专家分工”攻克股票模式识别",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491334&idx=1&sn=0f9a3e54bf4f82f2d2bda1df842e7c22&chksm=ce7e7818f909f10e51c5c7197fa5f10f5b570b5821cc8384ede047f600ad4e7f7a8e58f8669e#rd",
+    "msgid": "2247491334",
+    "itemidx": "1",
+    "create_time": 1754988866,
+    "date": "2025-08-12"
+  },
+  {
+    "pos": 266,
+    "title": "清华大学 | Kronos：一个专为量化打造的K线基础模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491353&idx=1&sn=c2a005522c9e224a0aff16de1a353685&chksm=ce7e7807f909f11196dd502b61e8535c5c16fd9a08bfd32ff05d64ff18164a11f000f6db0ff9#rd",
+    "msgid": "2247491353",
+    "itemidx": "1",
+    "create_time": 1755093251,
+    "date": "2025-08-13"
+  },
+  {
+    "pos": 267,
+    "title": "优胜劣汰：ContestTrade多智能体交易架构",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491371&idx=1&sn=b8c61a7ab6841bc05253c301c54f40df&chksm=ce7e7835f909f123b824f84973c88034db152fc8c09276a170a4f84833a67030766e4e49c3a8#rd",
+    "msgid": "2247491371",
+    "itemidx": "1",
+    "create_time": 1755224678,
+    "date": "2025-08-15"
+  },
+  {
+    "pos": 268,
+    "title": "KDD 25 | 基于股票数据定制化预训练模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491386&idx=1&sn=cee770205d698016d6a5a7db359b1fc4&chksm=ce7e7824f909f132674506690f1e7fc07ed9d2b39217f955f3f82c738af477b20cfebb243b63#rd",
+    "msgid": "2247491386",
+    "itemidx": "1",
+    "create_time": 1755341884,
+    "date": "2025-08-16"
+  },
+  {
+    "pos": 269,
+    "title": "KDD 25 | PDU: 如何利用“不确定性对比”发掘稳健超额收益",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491411&idx=1&sn=1645eed1869a707d31f7c3652edaf418&chksm=ce7e784df909f15ba86e3ba2763394d5d9ee0793ecd9e4e2981df2bcb277cc522970a2cec9d1#rd",
+    "msgid": "2247491411",
+    "itemidx": "1",
+    "create_time": 1755596439,
+    "date": "2025-08-19"
+  },
+  {
+    "pos": 270,
+    "title": "AlphaAgent：LLM如何终结Alpha衰减，挖掘持久有效的量化因子",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491423&idx=1&sn=cd28fd7401005a782d146b95a5bb69ce&chksm=ce7e7841f909f15766be17d859aef9e90f2c006800ba728878b99bf69e0b6094ef795ceaab94#rd",
+    "msgid": "2247491423",
+    "itemidx": "1",
+    "create_time": 1755681270,
+    "date": "2025-08-20"
+  },
+  {
+    "pos": 271,
+    "title": "北京大学 × 正仁量化 | AlphaEval：多维度、高效Alpha因子挖掘评价体系",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491434&idx=1&sn=1c69580b04b51aedc2db1532d53a7401&chksm=ce7e7874f909f162065c11f6caa7997d5ba6390d7769e03e1a191f8e20b72afb15e18c2fa6d9#rd",
+    "msgid": "2247491434",
+    "itemidx": "1",
+    "create_time": 1755768743,
+    "date": "2025-08-21"
+  },
+  {
+    "pos": 272,
+    "title": "将利润作为损失函数构造端到端交易模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491450&idx=1&sn=271ee470b5dcf96dd766c2724f4fb927&chksm=ce7e7864f909f172d0c489416c6f3c4c8276368d24b4391763eb60e37239129f9dab018cea47#rd",
+    "msgid": "2247491450",
+    "itemidx": "1",
+    "create_time": 1755954727,
+    "date": "2025-08-23"
+  },
+  {
+    "pos": 273,
+    "title": "JFE | 18,000个信号中挖掘Alpha：从“信号宇宙”看特征工程的重要性",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491456&idx=1&sn=363b33b7cb667a468e10cd9be6ff7d32&chksm=ce7e789ef909f18873274395ae98a2122e8fc3d64e0347a099b5d56371d9888c3e59e7580c9f#rd",
+    "msgid": "2247491456",
+    "itemidx": "1",
+    "create_time": 1756040680,
+    "date": "2025-08-24"
+  },
+  {
+    "pos": 274,
+    "title": "贝莱德 | AlphaAgents: 多智能体在股票投资组合构建中的应用",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491466&idx=1&sn=959e9ec5cdaaa9847a09d2c1ec44bddf&chksm=ce7e7894f909f1822243324de490cb939fe198141ec3aad460c3479433c0cb372a1fd64ba8c6#rd",
+    "msgid": "2247491466",
+    "itemidx": "1",
+    "create_time": 1756114689,
+    "date": "2025-08-25"
+  },
+  {
+    "pos": 275,
+    "title": "克服静态图局限：融合动态时序与静态关系的金融市场预测模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491493&idx=1&sn=95b0ed1bef255a97ff79bd8fd792d819&chksm=ce7e78bbf909f1ad74b0b69d1b05a96c8d47eafe24bad6fbb7f0f602127dfac50ebab9c6d494#rd",
+    "msgid": "2247491493",
+    "itemidx": "1",
+    "create_time": 1756377878,
+    "date": "2025-08-28"
+  },
+  {
+    "pos": 276,
+    "title": "CIKM 25 | FinCast: 首个十亿级参数的金融预测基础模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491504&idx=1&sn=ca7df4b109c9d46627fdecf2b0191d7d&chksm=ce7e78aef909f1b8171fed7dcf05f6d221a37fab5996ac23205e96e2336d4dc79c4434bfc6e2#rd",
+    "msgid": "2247491504",
+    "itemidx": "1",
+    "create_time": 1756460359,
+    "date": "2025-08-29"
+  },
+  {
+    "pos": 277,
+    "title": "QTMRL：融合多维指标与强化学习，提升交易决策稳健性",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491510&idx=1&sn=ae9a8337762d92b235f973f12ad57dd6&chksm=ce7e78a8f909f1be03107af3a5e8ba579f6452221614b4bff784177cdd3f6819e5722f065f30#rd",
+    "msgid": "2247491510",
+    "itemidx": "1",
+    "create_time": 1756555850,
+    "date": "2025-08-30"
+  },
+  {
+    "pos": 278,
+    "title": "同花顺 | R²-SAC: 复杂市场环境下的“松弛-精炼”强化学习交易策略",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491524&idx=1&sn=16f7c9d13b8b232a5ed64e094d8e9f4e&chksm=ce7e78daf909f1ccc3f4db71dbe2be15111aa2b8c729c6991ca43ad4155c48451fe2697bc66f#rd",
+    "msgid": "2247491524",
+    "itemidx": "1",
+    "create_time": 1756720022,
+    "date": "2025-09-01"
+  },
+  {
+    "pos": 279,
+    "title": "JFE ｜ 高夏普的陷阱：多因子模型的样本外表现衰减",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491653&idx=1&sn=5bd1a7093e9c7cde5571a7246ed2db9f&chksm=ce7d875bf90a0e4ddfee28d2d5c85f43e01711ab376bf8cf3a636ec44b4298795446cc996bc3#rd",
+    "msgid": "2247491653",
+    "itemidx": "1",
+    "create_time": 1757854096,
+    "date": "2025-09-14"
+  },
+  {
+    "pos": 280,
+    "title": "Web3 × AI Agents: 生态、集成与挑战",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491664&idx=1&sn=8f89aaf21f5e7508713a756f192e9b27&chksm=ce7d874ef90a0e589071ea18fa08475e561711fe76aa0722eecc2bb5a24a86b7763958fd721e#rd",
+    "msgid": "2247491664",
+    "itemidx": "1",
+    "create_time": 1757940614,
+    "date": "2025-09-15"
+  },
+  {
+    "pos": 281,
+    "title": "技术指标神经网络",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491713&idx=1&sn=4e0ff1e5d0ab191df0c4fa857c4c5b69&chksm=ce7d879ff90a0e891e6fd7275dcd7dec99da4e713af31e84eae32e9ca0e5eed34238a39e7518#rd",
+    "msgid": "2247491713",
+    "itemidx": "1",
+    "create_time": 1758180983,
+    "date": "2025-09-18"
+  },
+  {
+    "pos": 282,
+    "title": "利用自适应时间融合 Transformer 进行加密货币预测",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491714&idx=1&sn=35b8a5616fad711e78a71bd95a920d7b&chksm=ce7d879cf90a0e8a4c9017aa30bcfe0a409ed8366c40fe73b10bfe9a6e2f6704d3afe90d0a4f#rd",
+    "msgid": "2247491714",
+    "itemidx": "1",
+    "create_time": 1758286966,
+    "date": "2025-09-19"
+  },
+  {
+    "pos": 283,
+    "title": "字节出品，马斯克转发，AI离顶级金融分析师还有多远？",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491738&idx=1&sn=2c84ce2e84377d8c50d28a7a00393bf8&chksm=ce7d8784f90a0e928c26a688aba08dddb1621a8621000c06e24a8a4d8b9e5bc15291c1da81f5#rd",
+    "msgid": "2247491738",
+    "itemidx": "1",
+    "create_time": 1758443866,
+    "date": "2025-09-21"
+  },
+  {
+    "pos": 284,
+    "title": "Bloomberg | 如何增强OHLC数据预测效果",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491760&idx=1&sn=95ec26a437f20c42ee34ef7239c50b23&chksm=ce7d87aef90a0eb807224c54a16fc357ec01a24018af288d15d8c3c77124a45e060fdc8e4778#rd",
+    "msgid": "2247491760",
+    "itemidx": "1",
+    "create_time": 1758547025,
+    "date": "2025-09-22"
+  },
+  {
+    "pos": 285,
+    "title": "Alpha-GPT：人机交互实现量化Alpha挖掘",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491770&idx=1&sn=64781b544840f164f565d11b006f0ee3&chksm=ce7d87a4f90a0eb2496b42daf2a9e16fbd20b8540b8ca740c68a498088065db11df12b3c614f#rd",
+    "msgid": "2247491770",
+    "itemidx": "1",
+    "create_time": 1758630970,
+    "date": "2025-09-23"
+  },
+  {
+    "pos": 286,
+    "title": "基于NGAT模型的股票长期趋势与风险建模",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491778&idx=1&sn=fe82ab417ad71f9c3450d2fdf63cd723&chksm=ce7d87dcf90a0eca5ffa0bea6cefc2a4cca8c4a6dcc8148e991c288bb5106dcb74f260f0b005#rd",
+    "msgid": "2247491778",
+    "itemidx": "1",
+    "create_time": 1758709041,
+    "date": "2025-09-24"
+  },
+  {
+    "pos": 287,
+    "title": "面向解释性的金融图谱量化框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491788&idx=1&sn=f808ef78c367f774d0195fc7ec50d7a8&chksm=ce7d87d2f90a0ec448c30728663ec40b3904e83e4859248445e50572367c3a2ab5e3fd669de2#rd",
+    "msgid": "2247491788",
+    "itemidx": "1",
+    "create_time": 1758804384,
+    "date": "2025-09-25"
+  },
+  {
+    "pos": 288,
+    "title": "基于混合专家的深度强化学习端到端投资组合优化",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491804&idx=1&sn=21ddf3dc0c3cb89554c8b1361abe9b26&chksm=ce7d87c2f90a0ed48268e75e9b9ad7bfe1ae34c609d2da265ad193e72d58ff8a0f97250d372e#rd",
+    "msgid": "2247491804",
+    "itemidx": "1",
+    "create_time": 1758893904,
+    "date": "2025-09-26"
+  },
+  {
+    "pos": 289,
+    "title": "美股日内盈利策略",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491825&idx=1&sn=fa812a358f0fc00bd70b0540a3423dda&chksm=ce7d87eff90a0ef904f0cf5803365c087ec7f8dd93ffb93ad72311a6fca23862b0cab2274b1f#rd",
+    "msgid": "2247491825",
+    "itemidx": "1",
+    "create_time": 1759064410,
+    "date": "2025-09-28"
+  },
+  {
+    "pos": 290,
+    "title": "北京大学 × 正仁量化 | ALPHASAGE：融合GFlowNets的结构感知Alpha挖掘",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491844&idx=1&sn=2a6eccf6733fe139a37471e8ed1cac50&chksm=ce7d861af90a0f0c3e11d7aac503d50a1f9424821be3ec5419b49ca381fef5e93d1349e4703c#rd",
+    "msgid": "2247491844",
+    "itemidx": "1",
+    "create_time": 1759228895,
+    "date": "2025-09-30"
+  },
+  {
+    "pos": 291,
+    "title": "贝莱德 | 投资组合相似性度量",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491859&idx=1&sn=90e5163321c80ec813863785419677d1&chksm=ce7d860df90a0f1b89c2e2a9dc125f6e6b7bfcafa0ef17089bf196dc904cabc45d4aef304676#rd",
+    "msgid": "2247491859",
+    "itemidx": "1",
+    "create_time": 1759414231,
+    "date": "2025-10-02"
+  },
+  {
+    "pos": 292,
+    "title": "面向FPGA的通用化LSTM端到端硬件加速框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491869&idx=1&sn=a710e842d97fb7d4b0eaaeb8862c1f45&chksm=ce7d8603f90a0f15cfff5831ddf07697a825b502e40bdd5cb18b59511cd599c07ddcee4c41e1#rd",
+    "msgid": "2247491869",
+    "itemidx": "1",
+    "create_time": 1759582427,
+    "date": "2025-10-04"
+  },
+  {
+    "pos": 293,
+    "title": "Two Sigma | 双向循环神经网络",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491885&idx=1&sn=700f40d72b29e57f0b1b489ded075ec7&chksm=ce7d8633f90a0f250a7f9d6239f6f1910469894bb261a84460d12e7ff9ef855ca5ec96684f97#rd",
+    "msgid": "2247491885",
+    "itemidx": "1",
+    "create_time": 1759755715,
+    "date": "2025-10-06"
+  },
+  {
+    "pos": 294,
+    "title": "Signature-Informed Transformer在端到端资产配置中的应用",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491898&idx=1&sn=d565ad18a491609e89d3cae06b1baa45&chksm=ce7d8624f90a0f3280562268b2b4500447f7d6186026167896bf5dfdad14eed8c7d9dc4146ee#rd",
+    "msgid": "2247491898",
+    "itemidx": "1",
+    "create_time": 1759842864,
+    "date": "2025-10-07"
+  },
+  {
+    "pos": 295,
+    "title": "剑桥 | 从新闻到回报：因果球体超图Transformer",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491913&idx=1&sn=b53dfc83a60ad9c64f7161490835e232&chksm=ce7d8657f90a0f41e6e8cb7ce591d94de01ea63488ff941a54d9622e90a07e3acbe15a9cf38b#rd",
+    "msgid": "2247491913",
+    "itemidx": "1",
+    "create_time": 1760003128,
+    "date": "2025-10-09"
+  },
+  {
+    "pos": 296,
+    "title": "IJCAI 25 | AlphaGAT：结合Alpha 因子挖掘和图注意力网络的自适应投资组合框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491933&idx=1&sn=5545c677db397f6eba97d4f6f735dc06&chksm=ce7d8643f90a0f55ebf89aa99919ce95bfe37d8dcb504ec758605798208dc6d8dff5e4d09cf0#rd",
+    "msgid": "2247491933",
+    "itemidx": "1",
+    "create_time": 1760189631,
+    "date": "2025-10-11"
+  },
+  {
+    "pos": 297,
+    "title": "深度强化学习在期权中的应用",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491949&idx=1&sn=ded6681ca6ac4403805c04d3ae740264&chksm=ce7d8673f90a0f655fe47b31e2c4ef57e6a1933cce9ad25397e431f8949f2db15df8bea0d764#rd",
+    "msgid": "2247491949",
+    "itemidx": "1",
+    "create_time": 1760358382,
+    "date": "2025-10-13"
+  },
+  {
+    "pos": 298,
+    "title": "北大光华 × 清华五道口 ｜ 盈余公告漂移",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491959&idx=1&sn=3470af0028748cd34e33a461598b9617&chksm=ce7d8669f90a0f7f7b617bf16e8eaf4c27d39b2090d066d25a0950cbcbbbcf55b69d590d778c#rd",
+    "msgid": "2247491959",
+    "itemidx": "1",
+    "create_time": 1760441209,
+    "date": "2025-10-14"
+  },
+  {
+    "pos": 299,
+    "title": "Transformer量化选股模型应该使用何种损失函数？",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491994&idx=1&sn=82124365bbed9020cc8b7202e67ea6fc&chksm=ce7d8684f90a0f92c387205d48e30b4a2c87454f6b5062d4b1e0e6c1ba11b6894fac96ea4322#rd",
+    "msgid": "2247491994",
+    "itemidx": "1",
+    "create_time": 1760700100,
+    "date": "2025-10-17"
+  },
+  {
+    "pos": 300,
+    "title": "JFQA｜投资者关注度与内幕交易",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492023&idx=1&sn=ca46c527501e22e28cbf48739f3bdf06&chksm=ce7d86a9f90a0fbfe38ef25810c460bfecd2ffb89327d73fc506c0d4cb832f129ba20e974d14#rd",
+    "msgid": "2247492023",
+    "itemidx": "1",
+    "create_time": 1760798405,
+    "date": "2025-10-18"
+  },
+  {
+    "pos": 301,
+    "title": "AlphaQuanter：端到端Agentic强化学习交易框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492036&idx=1&sn=338b316b4b7fd9a2a1af6b8509124d98&chksm=ce7d86daf90a0fcc0e2762580886e6815807930b82e7ea5f206f6b43a96a496f6a6d12894a55#rd",
+    "msgid": "2247492036",
+    "itemidx": "1",
+    "create_time": 1760882478,
+    "date": "2025-10-19"
+  },
+  {
+    "pos": 302,
+    "title": "别再傻傻地固定周期调仓了！DeepAries教你聪明地选择交易时机",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492044&idx=1&sn=e7275c1c43ae8ea64d48468af48dcbe9&chksm=ce7d86d2f90a0fc4dc19c1d1208359e03fc67d287c443f823f9266289fad3a2d2b686beab992#rd",
+    "msgid": "2247492044",
+    "itemidx": "1",
+    "create_time": 1760964259,
+    "date": "2025-10-20"
+  },
+  {
+    "pos": 303,
+    "title": "LLM增强的BL组合优化框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492053&idx=1&sn=f825980b4cf19dc1408a70f6c8f15071&chksm=ce7d86cbf90a0fdd6a6a722ea1193774cb8bbc6bac1f9c0f966dad2c23e37cc307b64fa693f9#rd",
+    "msgid": "2247492053",
+    "itemidx": "1",
+    "create_time": 1761041708,
+    "date": "2025-10-21"
+  },
+  {
+    "pos": 304,
+    "title": "中国科学院大学 ｜ LLM x 强化学习：从新闻中学习交易",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492102&idx=1&sn=076d68a3ea7a2539b2d619e6beab0093&chksm=ce7d8518f90a0c0eaf16909c48c1aa7f4c44cb3c89b9fc115bf10115a4e2ce0ca7e6e5583bef#rd",
+    "msgid": "2247492102",
+    "itemidx": "1",
+    "create_time": 1761308400,
+    "date": "2025-10-24"
+  },
+  {
+    "pos": 305,
+    "title": "耶鲁 x AQR ｜ 模型越复杂，效果越好？",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492112&idx=1&sn=0755e79d8a46b26e0047db1eb02e49c2&chksm=ce7d850ef90a0c18b98127b41ce5a5f1ab08a594fb7389d9a2a06802d2021ecc5eaf508876a3#rd",
+    "msgid": "2247492112",
+    "itemidx": "1",
+    "create_time": 1761391639,
+    "date": "2025-10-25"
+  },
+  {
+    "pos": 306,
+    "title": "人大高瓴 x 智源 ｜ FinSight：会思考、懂绘图、善写作的专业AI金融分析师",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492124&idx=1&sn=869727f5b39cf4fb2dcca8a421c00c4a&chksm=ce7d8502f90a0c1404fbd70c29fdde699136695eefa6c1c6b77c57e2f7d631f0a1132576c8f7#rd",
+    "msgid": "2247492124",
+    "itemidx": "1",
+    "create_time": 1761487937,
+    "date": "2025-10-26"
+  },
+  {
+    "pos": 307,
+    "title": "告别特征冗余：用量子退火精炼你的Alpha因子",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492132&idx=1&sn=56dccf830fd67aa27a9627ba91a29dbf&chksm=ce7d853af90a0c2cc017ee65c350a4ce77b0f54af5bede5763c17aff59c45cebb786f7b1a54d#rd",
+    "msgid": "2247492132",
+    "itemidx": "1",
+    "create_time": 1761564588,
+    "date": "2025-10-27"
+  },
+  {
+    "pos": 308,
+    "title": "NeurIPS 25 ｜ AI投资：是财富密码，还是回测陷阱？",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492144&idx=1&sn=5f8cd500aef477194ef9912676a6400b&chksm=ce7d852ef90a0c383fa4798ef6b5ed71880d090bac15469c2ac08cb8477412b8e40ffc7dc138#rd",
+    "msgid": "2247492144",
+    "itemidx": "1",
+    "create_time": 1761654737,
+    "date": "2025-10-28"
+  },
+  {
+    "pos": 309,
+    "title": "AI像顶级分析师一样思考：用LLM预测市场“黑天鹅”",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492157&idx=1&sn=0b4645de5f3ae5fcf25e8ffeb05c517c&chksm=ce7d8523f90a0c35fba1844c95d802d65783d7ddab392edcc488202484a36c14f17aa04b75c4#rd",
+    "msgid": "2247492157",
+    "itemidx": "1",
+    "create_time": 1761747166,
+    "date": "2025-10-29"
+  },
+  {
+    "pos": 310,
+    "title": "美联储 ｜ 有形之手：基金经理预期与A股非对称价格效应",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492169&idx=1&sn=6d660c8ea955c296a0ef1f3bb5dd7347&chksm=ce7d8557f90a0c416fb59746b3e1b62392d136797ab64074c44de8a8f5aef34ed49781f5737f#rd",
+    "msgid": "2247492169",
+    "itemidx": "1",
+    "create_time": 1761827702,
+    "date": "2025-10-30"
+  },
+  {
+    "pos": 311,
+    "title": "华尔街遇见大型强子对撞机：一种新的市场微观结构分析范式",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492182&idx=1&sn=c64a9ea7bd6b0f2dd8540c38910795aa&chksm=ce7d8548f90a0c5ec7b0efe7465bbe30e37af49e8e8aacd2e48152cd9f6b97e8c396795a1313#rd",
+    "msgid": "2247492182",
+    "itemidx": "1",
+    "create_time": 1761913798,
+    "date": "2025-10-31"
+  },
+  {
+    "pos": 312,
+    "title": "牛津 x JP Morgan ｜ 告别效用函数：GAN“克隆”基金经理",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492199&idx=1&sn=9edd6a0f9e169948290dfc8160ae754b&chksm=ce7d8579f90a0c6ff5222cd1cc79a208cf8ac6318a2083419ac39d214a367d7459a5a5d67e9c#rd",
+    "msgid": "2247492199",
+    "itemidx": "1",
+    "create_time": 1762085585,
+    "date": "2025-11-02"
+  },
+  {
+    "pos": 313,
+    "title": "UCL x JP Morgan ｜ AI做市商悖论：利润飙升，对手滑点为何反降？",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492212&idx=1&sn=7e6d45682844c8b65bd6c8659315d24d&chksm=ce7d856af90a0c7c488dba97b70cc4696ac4626fe1fb86d84a46aca31a40bb7245e6c0965398#rd",
+    "msgid": "2247492212",
+    "itemidx": "1",
+    "create_time": 1762171647,
+    "date": "2025-11-03"
+  },
+  {
+    "pos": 314,
+    "title": "如何破解传统因子与新闻的融合困境？",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492230&idx=1&sn=312ebe8b991232cc59c42dbbb7a19c75&chksm=ce7d8598f90a0c8ee5fc0dfeeb9114bf022d5c4e1ae57b674ab4b0db8b5730e613d6e81a55ee#rd",
+    "msgid": "2247492230",
+    "itemidx": "1",
+    "create_time": 1762261937,
+    "date": "2025-11-04"
+  },
+  {
+    "pos": 315,
+    "title": "240倍性能飞跃：首个GPU高频交易MARL框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492240&idx=1&sn=f9b15a5c11c4b2a877e033551bb0bdc4&chksm=ce7d858ef90a0c9825b228018974a095c0b3a3527d1227742796efc6254a817e5805573f58c6#rd",
+    "msgid": "2247492240",
+    "itemidx": "1",
+    "create_time": 1762348671,
+    "date": "2025-11-05"
+  },
+  {
+    "pos": 316,
+    "title": "“择时”与“对冲”双管齐下：OPHR强化学习征服波动率交易",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492259&idx=1&sn=5d60b18346f44f0dd92b4cf890518122&chksm=ce7d85bdf90a0cab1ef710b5ee8e461fb3807c3b588685de1a4cf8c6f62251c6f500f2064485#rd",
+    "msgid": "2247492259",
+    "itemidx": "1",
+    "create_time": 1762510007,
+    "date": "2025-11-07"
+  },
+  {
+    "pos": 317,
+    "title": "DeltaLag: 挖掘动态领涨-滞涨Alpha",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492269&idx=1&sn=4b346eb7ffb7b3a16a83071d46edeaa9&chksm=ce7d85b3f90a0ca516be74b6af8f53d6a182d9148265611837a865f965bdae4e2656aa3b1731#rd",
+    "msgid": "2247492269",
+    "itemidx": "1",
+    "create_time": 1762690935,
+    "date": "2025-11-09"
+  },
+  {
+    "pos": 318,
+    "title": "万字长文 | 文本情绪与公告：农产品期货的反事实因果分析",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492286&idx=1&sn=99385ea971d766dca8122dd7ee4cf044&chksm=ce7d85a0f90a0cb6ca83a05d0701a4019d39a674376f88abd3d1c60b465f9734cccd5dcaa930#rd",
+    "msgid": "2247492286",
+    "itemidx": "1",
+    "create_time": 1762783641,
+    "date": "2025-11-10"
+  },
+  {
+    "pos": 319,
+    "title": "寻找顶级回报：新颖损失函数实现61.73%年回报与1.18夏普比率",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492300&idx=1&sn=8438174bc5e4e163c71aedeeea6db5c5&chksm=ce7d85d2f90a0cc4264f61665707a3dc6eeecb2cf764d27e7ed50199218cb3c6270df841436f#rd",
+    "msgid": "2247492300",
+    "itemidx": "1",
+    "create_time": 1762864730,
+    "date": "2025-11-11"
+  },
+  {
+    "pos": 320,
+    "title": "解构市场：基于时间序列对比学习的资产嵌入框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492312&idx=1&sn=16e2080b8a6a7718d466842049c86ad1&chksm=ce7d85c6f90a0cd0f238ebb0c1447559159812d9c3bfc1483ba06d99fc2ee57ddae64888aced#rd",
+    "msgid": "2247492312",
+    "itemidx": "1",
+    "create_time": 1762952481,
+    "date": "2025-11-12"
+  },
+  {
+    "pos": 321,
+    "title": "NeurIPS 25 | DMMV: 多模态视角可以为时间序列预测带来什么？",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492328&idx=1&sn=f5df3bd7d201a491f357dea57f7e5d99&chksm=ce7d85f6f90a0ce096c2a2638d2cb6cfb405a80384d6f0b8e54c6c509d233b88b1e27a998f74#rd",
+    "msgid": "2247492328",
+    "itemidx": "1",
+    "create_time": 1763037211,
+    "date": "2025-11-13"
+  },
+  {
+    "pos": 322,
+    "title": "破译散户抱团密码：基于动态图嵌入与领域知识的Meme股行情预判",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492356&idx=1&sn=b713922421a42075453577614067a078&chksm=ce7d841af90a0d0c415f9a15b91a0f5f2a41fb7214d1dba9e9b48e5018c06802d4162f6688c5#rd",
+    "msgid": "2247492356",
+    "itemidx": "1",
+    "create_time": 1763386394,
+    "date": "2025-11-17"
+  },
+  {
+    "pos": 323,
+    "title": "夏普 13 的“独角兽”策略？",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492362&idx=1&sn=efb4af02a633bf81b8cdda0afdfb3e7b&chksm=ce7d8414f90a0d02d42ebcdb644855ec6e80a69038e952248e3c3d9b68c182c9f5e7f812d36a#rd",
+    "msgid": "2247492362",
+    "itemidx": "1",
+    "create_time": 1763478391,
+    "date": "2025-11-18"
+  },
+  {
+    "pos": 324,
+    "title": "为何因子因果分析是盈利的唯一前提？",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492379&idx=1&sn=19a1d3066f23a61bb3d01fa23b33e13a&chksm=ce7d8405f90a0d13663b96daac9e19e60afaffe98574feb6e65d55c7520c7f1a1b0ceeb8c67b#rd",
+    "msgid": "2247492379",
+    "itemidx": "1",
+    "create_time": 1763560592,
+    "date": "2025-11-19"
+  },
+  {
+    "pos": 325,
+    "title": "基于在线集成学习的行业轮动策略",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492399&idx=1&sn=a78befb22441724f5d36817ca3e585a0&chksm=ce7d8431f90a0d27008cf34b5f770f2d964ff4da2e1cf414ff41794b6f039174fc913df7e98e#rd",
+    "msgid": "2247492399",
+    "itemidx": "1",
+    "create_time": 1763643372,
+    "date": "2025-11-20"
+  },
+  {
+    "pos": 326,
+    "title": "深度均值回归",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492409&idx=1&sn=7ae8bd3fec1bd4f9af56408204e49976&chksm=ce7d8427f90a0d31f5907a89598336961dcea8a67fc6e40138147cc1e7106b25ba6907c16ac1#rd",
+    "msgid": "2247492409",
+    "itemidx": "1",
+    "create_time": 1763731183,
+    "date": "2025-11-21"
+  },
+  {
+    "pos": 327,
+    "title": "FNIRVAR：挖掘高维因子模型下的隐含网络 Alpha",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492428&idx=1&sn=99923d3314b7df0b839fd83de9bfb56a&chksm=ce7d8452f90a0d4421a6830d098fd3f77b8f6efb4c9f9b123ca5dedc73facaa20888dfcda3c0#rd",
+    "msgid": "2247492428",
+    "itemidx": "1",
+    "create_time": 1763809551,
+    "date": "2025-11-22"
+  },
+  {
+    "pos": 328,
+    "title": "基于注意力机制的端到端统计套利模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492450&idx=1&sn=3562d1a8f8e92570ccd1948331cff8ac&chksm=ce7d847cf90a0d6a5470907fc9b0ec1953c101479832e3a620b613d153ea24cd853c74ce2cf4#rd",
+    "msgid": "2247492450",
+    "itemidx": "1",
+    "create_time": 1763905931,
+    "date": "2025-11-23"
+  },
+  {
+    "pos": 329,
+    "title": "基于图像的配对交易框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492463&idx=1&sn=eff946db3dd23827d1a41b6a7ded0c97&chksm=ce7d8471f90a0d67f7218e814e1c77ae8c34c4f9046a89cdc52f470fb9390427497a2e0b38e0#rd",
+    "msgid": "2247492463",
+    "itemidx": "1",
+    "create_time": 1763985600,
+    "date": "2025-11-24"
+  },
+  {
+    "pos": 330,
+    "title": "牛津大学 | 做市商的终极困境：如何破解“成交即亏损”的微观魔咒？",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492484&idx=1&sn=8a5463bc3477f44631fdf1fc45ca99dd&chksm=ce7d849af90a0d8c16eee07d836d8fff239e45f927ccf645115f812b4aa2c9df32f028502609#rd",
+    "msgid": "2247492484",
+    "itemidx": "1",
+    "create_time": 1764075987,
+    "date": "2025-11-25"
+  },
+  {
+    "pos": 331,
+    "title": "为什么你的策略回测完美，实盘腰斩？",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492494&idx=1&sn=b5155a10aaed7ac0da3c0a4d4238e695&chksm=ce7d8490f90a0d86404ce8d6dd31f1b36f97dd83da4d8d88b303f8b1a35511de12e23c540543#rd",
+    "msgid": "2247492494",
+    "itemidx": "1",
+    "create_time": 1764164537,
+    "date": "2025-11-26"
+  },
+  {
+    "pos": 332,
+    "title": "解码高频算法交易的周期密码与隐藏Alpha",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492506&idx=1&sn=6391b947ce71a5611760663cfd3ffc91&chksm=ce7d8484f90a0d92d28f5a774a289a159ddaa2a06d1b905f30c34e9ff2ce03480605fd278e34#rd",
+    "msgid": "2247492506",
+    "itemidx": "1",
+    "create_time": 1764246131,
+    "date": "2025-11-27"
+  },
+  {
+    "pos": 333,
+    "title": "解码动量溢出：日内-隔夜收益的非对称结构",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492523&idx=1&sn=421d4ab5766e62a516cf7f72f95bf077&chksm=ce7d84b5f90a0da38a476367d693f494af752d1989b8ccc2c778b302c72cf6d7e06fb5bb91e7#rd",
+    "msgid": "2247492523",
+    "itemidx": "1",
+    "create_time": 1764327600,
+    "date": "2025-11-28"
+  },
+  {
+    "pos": 334,
+    "title": "寻找“丑陋的优势”：在加密市场的混乱中收割超额Alpha",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492528&idx=1&sn=685b03c39275c8a64e4ae38ddfb52886&chksm=ce7d84aef90a0db8a3bc4a5bb8cd4927a101e711263987598e7438b399503da0adbe9531b314#rd",
+    "msgid": "2247492528",
+    "itemidx": "1",
+    "create_time": 1764417650,
+    "date": "2025-11-29"
+  },
+  {
+    "pos": 335,
+    "title": "像交易员一样思考：ProtoHedge可解释性对冲模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492539&idx=1&sn=f0ff7b790857b7433e58356b748c10f4&chksm=ce7d84a5f90a0db3ce97497f616ca4a0e6ec9cfd122e5516c8218ad52bc16a0822a51ad0b7a9#rd",
+    "msgid": "2247492539",
+    "itemidx": "1",
+    "create_time": 1764507239,
+    "date": "2025-11-30"
+  },
+  {
+    "pos": 336,
+    "title": "挖掘隐性 Alpha：基于动态共现图的股价预测模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492550&idx=1&sn=add3ebaa7db3a3f39dc455e3ee0e8155&chksm=ce7d84d8f90a0dce63e07152a998dec8d64bf43202a174e3dfd14ea8704e0ecd9545e6c3f67d#rd",
+    "msgid": "2247492550",
+    "itemidx": "1",
+    "create_time": 1764593564,
+    "date": "2025-12-01"
+  },
+  {
+    "pos": 337,
+    "title": "深度优于广度：线性模型样本外衰减",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492562&idx=1&sn=85e5b2720526ec723739b3e94a35b1a9&chksm=ce7d84ccf90a0ddafd7357cb7c49acb9b791a5f305f7019dc2f479893662e9a078188065e6f8#rd",
+    "msgid": "2247492562",
+    "itemidx": "1",
+    "create_time": 1764675657,
+    "date": "2025-12-02"
+  },
+  {
+    "pos": 338,
+    "title": "小数点后的Alpha：限价单堆积如何预测股价走势",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492603&idx=1&sn=d11f867b634c96cbc9f7043910788373&chksm=ce7d84e5f90a0df3d13f3b4e8d138b92c0b9de6aa8594bab36472d7b4727aaac85d15bfb1a89#rd",
+    "msgid": "2247492603",
+    "itemidx": "1",
+    "create_time": 1764985699,
+    "date": "2025-12-06"
+  },
+  {
+    "pos": 339,
+    "title": "2025Q3最佳AI量化论文",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492615&idx=1&sn=5e21092ea5cf8b372bb2a6d19372c8e3&chksm=ce7d8319f90a0a0fd803fb09da904815af277e8d0ac91acf3d8b36b54c70606814e4cfe2faa2#rd",
+    "msgid": "2247492615",
+    "itemidx": "1",
+    "create_time": 1765200003,
+    "date": "2025-12-08"
+  },
+  {
+    "pos": 340,
+    "title": "AI重塑因子挖掘：基于LLM文本嵌入的盈余溢出分析",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492625&idx=1&sn=5659688e055dde9c44119ed6e4a5330a&chksm=ce7d830ff90a0a19c73b7edf5f9b30fd59fafe2ffb55c847278640b5c657d5f0cb7ad188eb06#rd",
+    "msgid": "2247492625",
+    "itemidx": "1",
+    "create_time": 1765276994,
+    "date": "2025-12-09"
+  },
+  {
+    "pos": 341,
+    "title": "通过构建稀疏资产关系图提升夏普比率",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492635&idx=1&sn=5dde2449b5632ccb3ee4aa48b1237bca&chksm=ce7d8305f90a0a13bc9aecb39362dcb6fe700109af2fa3204be1fb47bb84662a3ceb4c63074b#rd",
+    "msgid": "2247492635",
+    "itemidx": "1",
+    "create_time": 1765361371,
+    "date": "2025-12-10"
+  },
+  {
+    "pos": 342,
+    "title": "市场风格切换下的元学习预测框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492645&idx=1&sn=a2f50ee9cbb86b08d2e02a064a3ea782&chksm=ce7d833bf90a0a2d47f001586abf8a758e9cf68f6cb9c3d8185f41527b14b232155181681f4f#rd",
+    "msgid": "2247492645",
+    "itemidx": "1",
+    "create_time": 1765451124,
+    "date": "2025-12-11"
+  },
+  {
+    "pos": 343,
+    "title": "从做市到资管：金融强化学习落地全景",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492662&idx=1&sn=336e897015743a422cc4aa77c803ce39&chksm=ce7d8328f90a0a3e0eb55c54d0de33c952cf02a1e6387fd15bddccdeb05d0f90d00d440438b7#rd",
+    "msgid": "2247492662",
+    "itemidx": "1",
+    "create_time": 1765631866,
+    "date": "2025-12-13"
+  },
+  {
+    "pos": 344,
+    "title": "因子拥挤度启示录：Alpha 衰减机制",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492697&idx=1&sn=8ac0e4b0c82cb3b2c6bdcdd944cc9663&chksm=ce7d8347f90a0a51083f013f288ccf33a3894773c26e295ef59afe2ba88b532338bfbe8603e7#rd",
+    "msgid": "2247492697",
+    "itemidx": "1",
+    "create_time": 1765979188,
+    "date": "2025-12-17"
+  },
+  {
+    "pos": 345,
+    "title": "人大 x 清华 | DeepAnalyze：如何打造数据分析的“Agentic AI”？",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492708&idx=1&sn=0e0779d59cb678a7f04e26a39b6c4955&chksm=ce7d837af90a0a6cb65250264b8148b6b984a5f843c363cce4e79302ea3aeb5e1d3c68ab62d7#rd",
+    "msgid": "2247492708",
+    "itemidx": "1",
+    "create_time": 1766050774,
+    "date": "2025-12-18"
+  },
+  {
+    "pos": 346,
+    "title": "JP Morgan | 融合NLP情绪与LLM洞察的配对交易策略",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492744&idx=1&sn=baa6d786bba61e1fe46580d0101b788a&chksm=ce7d8396f90a0a80ef6258181dbb6cc758ff1c6f43431182c417e00d899c96049bb1768c3e2a#rd",
+    "msgid": "2247492744",
+    "itemidx": "1",
+    "create_time": 1766313067,
+    "date": "2025-12-21"
+  },
+  {
+    "pos": 347,
+    "title": "Yale | 非线性时间序列动量",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492760&idx=1&sn=b7410ec02ca0cfb93f8d12de61301bf5&chksm=ce7d8386f90a0a908cb22a43896ed0a23e79df67d447e61b8f53f941f24453d4b1f6c1379e64#rd",
+    "msgid": "2247492760",
+    "itemidx": "1",
+    "create_time": 1766409087,
+    "date": "2025-12-22"
+  },
+  {
+    "pos": 348,
+    "title": "CIKM 25 | “3D状态空间+演化超图”挖掘Alpha",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492772&idx=1&sn=93f437ede205d1cdec4c1cf1041d7b8f&chksm=ce7d83baf90a0aac8624b62823c70355545d105681478b3aca007a29c218ada48534b5a8f778#rd",
+    "msgid": "2247492772",
+    "itemidx": "1",
+    "create_time": 1766499372,
+    "date": "2025-12-23"
+  },
+  {
+    "pos": 349,
+    "title": "CogAlpha: 基于七层认知架构的可解释性 Alpha 挖掘框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492815&idx=1&sn=b33179d315097cbb1e21bf0c24b055b5&chksm=ce7d83d1f90a0ac7420676237c46b04154d808a10b8664b70cd78ac8e0d5d2bab163f3c2612c#rd",
+    "msgid": "2247492815",
+    "itemidx": "1",
+    "create_time": 1766567083,
+    "date": "2025-12-24"
+  },
+  {
+    "pos": 350,
+    "title": "你的 Alpha 只是异象？如何甄别真正的基金管理能力",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492824&idx=1&sn=d0cc6705d6e52177c99c5806127e7f1c&chksm=ce7d83c6f90a0ad06364ae203210d2c399c97478cec1ec4a6208a80687efd46e8b0907011db3#rd",
+    "msgid": "2247492824",
+    "itemidx": "1",
+    "create_time": 1766659029,
+    "date": "2025-12-25"
+  },
+  {
+    "pos": 351,
+    "title": "如何结合人类观点与量化模型以提高Alpha？",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492835&idx=1&sn=11191c27f54680989a3d8e3ddb0c3547&chksm=ce7d83fdf90a0aeb6e04cb06cf3f197cf159aab5f527a98058de03b417e43c07fb53150a04e6#rd",
+    "msgid": "2247492835",
+    "itemidx": "1",
+    "create_time": 1766755195,
+    "date": "2025-12-26"
+  },
+  {
+    "pos": 352,
+    "title": "一个简单的调整，如何让订单流信号解释度暴增482%？",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492840&idx=1&sn=8d011917b37afb879e723c6f3b11196c&chksm=ce7d83f6f90a0ae0bdaf99e9b15e75b56adb9747b306be6798f95aa6272f87c0513b5517e8b1#rd",
+    "msgid": "2247492840",
+    "itemidx": "1",
+    "create_time": 1766929062,
+    "date": "2025-12-28"
+  },
+  {
+    "pos": 353,
+    "title": "交大 x 跃阶AI | Alpha-R1： 首个面向Alpha因子筛选的LLM推理模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492859&idx=1&sn=e63a9a823aa0ee2f7be4cb154a9f3bee&chksm=ce7d83e5f90a0af32a3025fb55340075ecb9e3dde750e9244e5304f2cd5514f2f53a7fb6487d#rd",
+    "msgid": "2247492859",
+    "itemidx": "1",
+    "create_time": 1767086403,
+    "date": "2025-12-30"
+  },
+  {
+    "pos": 354,
+    "title": "择时因子动物园",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492879&idx=1&sn=6801534b197c8b91aa44536f296270bc&chksm=ce7d8211f90a0b07e9e878d1b881bb9586f50102ee94b656b67f8b5cf32390a1fcfbf21aa36c#rd",
+    "msgid": "2247492879",
+    "itemidx": "1",
+    "create_time": 1767359494,
+    "date": "2026-01-02"
+  },
+  {
+    "pos": 355,
+    "title": "QuantPedia CEO教你如何设计多时间框架趋势策略",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492969&idx=1&sn=6417263c82b8a536ea07b923f5c1b2d3&chksm=ce7d8277f90a0b618a0c7a09fed2aca5ea01efe64ea47cc901af7e9058c98548d2a64ffdfa6a#rd",
+    "msgid": "2247492969",
+    "itemidx": "1",
+    "create_time": 1768132931,
+    "date": "2026-01-11"
+  },
+  {
+    "pos": 356,
+    "title": "动态行业融合Transformer用于指数预测",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492996&idx=1&sn=d9bdee39404b728ea957726d4230c891&chksm=ce7d829af90a0b8cbc3d72ee62c51eba9ed06d652ab070221caff484b49f7e7cc3aa7366e637#rd",
+    "msgid": "2247492996",
+    "itemidx": "1",
+    "create_time": 1768390770,
+    "date": "2026-01-14"
+  },
+  {
+    "pos": 357,
+    "title": "TwinFormer：双层注意力+GRU时间序列预测SOTA模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492929&idx=1&sn=bfc00e0abde9b6612002422bced5e4d2&chksm=ce7d825ff90a0b496f865264a3f244c0b5cc7c600f63d5c6891baaa18f92d10cfa4d071785dc#rd",
+    "msgid": "2247492929",
+    "itemidx": "1",
+    "create_time": 1767704251,
+    "date": "2026-01-06"
+  },
+  {
+    "pos": 358,
+    "title": "逆向选择与隔夜负收益：为何“T+1”导致开盘折价？",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492937&idx=1&sn=146cdcbc250963c3cb4beab84cd5e280&chksm=ce7d8257f90a0b4171a45c69168dfa1e9afa1a73ef0a076ab3c14ede6a8facbcbb1e588bf0b9#rd",
+    "msgid": "2247492937",
+    "itemidx": "1",
+    "create_time": 1767794179,
+    "date": "2026-01-07"
+  },
+  {
+    "pos": 359,
+    "title": "贝莱德 ｜ 深度强化学习在最优订单执行中的应用",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492961&idx=1&sn=fb126fff74306061ed8631ef23e3293d&chksm=ce7d827ff90a0b691f0d4864658839c26efc7c7b5c692e550ec3585fb03b6d5803ebfb255e3e#rd",
+    "msgid": "2247492961",
+    "itemidx": "1",
+    "create_time": 1767960423,
+    "date": "2026-01-09"
+  },
+  {
+    "pos": 360,
+    "title": "Oxford-Man ｜ 端到端深度学习宏观量化交易框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492979&idx=1&sn=0750044bd65444f2fca58dcf237caeee&chksm=ce7d826df90a0b7b322e5c0de1cd731cbcded9d67301ea5c4ae3b61d82a7e342307141ad1025#rd",
+    "msgid": "2247492979",
+    "itemidx": "1",
+    "create_time": 1768222771,
+    "date": "2026-01-12"
+  },
+  {
+    "pos": 361,
+    "title": "史上最佳防御性策略",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492988&idx=1&sn=5984057d11eb003cc2dae925d9cfc054&chksm=ce7d8262f90a0b7479d5c5c9e992e13672a72d9b2f2950a798bed8e2f79679d1706e6d2f611a#rd",
+    "msgid": "2247492988",
+    "itemidx": "1",
+    "create_time": 1768307576,
+    "date": "2026-01-13"
+  },
+  {
+    "pos": 362,
+    "title": "CSMD多模态数据+LightQuant框架，一站式A股量化分析框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493010&idx=1&sn=998a16328f34904a1edd1c5bf734d825&chksm=ce7d828cf90a0b9a9aedb1b48e19bc78a93de8ced8d3cd4945b1aed872310acfe20af0133b3b#rd",
+    "msgid": "2247493010",
+    "itemidx": "1",
+    "create_time": 1768557709,
+    "date": "2026-01-16"
+  },
+  {
+    "pos": 363,
+    "title": "HRT | 金融基础模型与 Scaling Laws",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493015&idx=1&sn=2d3cc7061cbc6dbd68ad98d7913fbc13&chksm=ce7d8289f90a0b9f6c89714d728a1a581b7f6c8fc6f77b9fe70fbdd1258702ce8429c70a6fd1#rd",
+    "msgid": "2247493015",
+    "itemidx": "1",
+    "create_time": 1768650545,
+    "date": "2026-01-17"
+  },
+  {
+    "pos": 364,
+    "title": "让数据随市场自我进化，破解非平稳性难题",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493026&idx=1&sn=b2a3ed686754d92238973184021746b1&chksm=ce7d82bcf90a0baa74a5c373145baa6b5eb0321c88854b957d6e98da491f719dbbd106ef7e1a#rd",
+    "msgid": "2247493026",
+    "itemidx": "1",
+    "create_time": 1768732062,
+    "date": "2026-01-18"
+  },
+  {
+    "pos": 365,
+    "title": "UBS | 拥挤度拐点后的非对称 Alpha",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493037&idx=1&sn=8b87b953f5320ed69900f208fe321580&chksm=ce7d82b3f90a0ba5366a86a750d46defd20ea89b2884985357f4abbc6bba10d31b93fea71655#rd",
+    "msgid": "2247493037",
+    "itemidx": "1",
+    "create_time": 1768828226,
+    "date": "2026-01-19"
+  },
+  {
+    "pos": 366,
+    "title": "Man Group | 2026Q1对冲基金展望：难以定价的市场与Alpha的黄金窗口",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493042&idx=1&sn=97cdfb4501f96935a71f7671df6780e8&chksm=ce7d82acf90a0bba93771c9aa88bfaeb016534ae3d900d4fdb861a6527781aecde0ce7ec2f3a#rd",
+    "msgid": "2247493042",
+    "itemidx": "1",
+    "create_time": 1768911774,
+    "date": "2026-01-20"
+  },
+  {
+    "pos": 367,
+    "title": "北大光华 | 年化夏普比率2.43！基于自主市场分析的实时AI投资代理",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493050&idx=1&sn=cc702cfc18745d618873b45ca17d7b41&chksm=ce7d82a4f90a0bb2bad1dada27c74e76ba2fac034bbd893f9c66492ab9989e3550121e7fcf79#rd",
+    "msgid": "2247493050",
+    "itemidx": "1",
+    "create_time": 1769001087,
+    "date": "2026-01-21"
+  },
+  {
+    "pos": 368,
+    "title": "从噪声中挖掘Alpha：专为金融时序定制的预训练框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493062&idx=1&sn=f198bbc9f5682578335c909083119359&chksm=ce7d82d8f90a0bcefa36a9bdd995d24b115c6935be3df5a666de5a75b9c016f40cf3dd2a1d15#rd",
+    "msgid": "2247493062",
+    "itemidx": "1",
+    "create_time": 1769087467,
+    "date": "2026-01-22"
+  },
+  {
+    "pos": 369,
+    "title": "基于“基本面筛选+DRL动态调仓”的端到端量化交易系统",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493072&idx=1&sn=74a101095cbabbee30cc57b739db21ba&chksm=ce7d82cef90a0bd88ae17960eda986156f600a5479a76f0006b62486c045178ca14bfb3a406c#rd",
+    "msgid": "2247493072",
+    "itemidx": "1",
+    "create_time": 1769175474,
+    "date": "2026-01-23"
+  },
+  {
+    "pos": 370,
+    "title": "诺贝尔物理学，居然能用来预测市场？—— 一个多时间框架量化交易系统的真实构建过程",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493087&idx=1&sn=59fc2a946f4ccefc1c39c5b99986da3e&chksm=ce7d82c1f90a0bd72d18b0da54e892a134419589398d81cd736962cec168615019922227192d#rd",
+    "msgid": "2247493087",
+    "itemidx": "1",
+    "create_time": 1769339725,
+    "date": "2026-01-25"
+  },
+  {
+    "pos": 371,
+    "title": "基于PPO算法的对冲基金策略自适应选择框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493096&idx=1&sn=939664093306b4f499d76a90b0927389&chksm=ce7d82f6f90a0be0f56c8f514b65835eead10238c56ba53ac471068105e05ccdca2a6ea32ea7#rd",
+    "msgid": "2247493096",
+    "itemidx": "1",
+    "create_time": 1769419200,
+    "date": "2026-01-26"
+  },
+  {
+    "pos": 372,
+    "title": "融合动量因子与Adaptive-k的股票排序框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493106&idx=1&sn=b2d5dce5e8c62e64c7ccd720efb6bce4&chksm=ce7d82ecf90a0bfa6b54bfbb354f1f44e1bba36a1f0e797eef6745cdcea85fe7d8099f6745ff#rd",
+    "msgid": "2247493106",
+    "itemidx": "1",
+    "create_time": 1769520773,
+    "date": "2026-01-27"
+  },
+  {
+    "pos": 373,
+    "title": "非μ之错，P之罪 ：Beta 异象背后的机制转换定价逻辑",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493116&idx=1&sn=5f68e985c6320b8ac1a8c55af6b2f6c7&chksm=ce7d82e2f90a0bf4c67338107ecd4d7826a32c248d90b1bbeb274864e26e9e5a27f6f5939546#rd",
+    "msgid": "2247493116",
+    "itemidx": "1",
+    "create_time": 1769694310,
+    "date": "2026-01-29"
+  },
+  {
+    "pos": 374,
+    "title": "像生成语言一样生成Alpha：基于语法引导学习的因子挖掘",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493133&idx=1&sn=78703e80386fcdb1701a9814bb7b229e&chksm=ce7d8113f90a0805b14c85996ea267931312471a4e6dd4eb7476c57aa3a5b3c9a1c6c6cda038#rd",
+    "msgid": "2247493133",
+    "itemidx": "1",
+    "create_time": 1769866008,
+    "date": "2026-01-31"
+  },
+  {
+    "pos": 375,
+    "title": "丘成桐入局量化：当菲尔兹奖得主用微分几何重构组合优化",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493812&idx=1&sn=6da55eefa905e0c22f19f27f7d0e1df4&chksm=ce7d8faaf90a06bcb86fe4204d0af29f465d3004cc43a4114534e27437fb9fbe0dfd282ff6bd#rd",
+    "msgid": "2247493812",
+    "itemidx": "1",
+    "create_time": 1777435200,
+    "date": "2026-04-29"
+  },
+  {
+    "pos": 376,
+    "title": "Alpha挖掘vs深度学习：量化中的争议性困境",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493864&idx=1&sn=ef86150a60af0341f27d43d68a14b5f5&chksm=ce7d8ff6f90a06e0a48ac4530b9ffcf64c56aea48e0b998530094b5f7709c1e1d74fea51901d#rd",
+    "msgid": "2247493864",
+    "itemidx": "1",
+    "create_time": 1778664182,
+    "date": "2026-05-13"
+  },
+  {
+    "pos": 377,
+    "title": "抛弃高频数据低频化：别让粗暴降维毁了你的微观 Alpha",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493887&idx=1&sn=f824e6ba0d1aad1f8c43039bc296a486&chksm=ce7d8fe1f90a06f7ef5c9844912d62d27824fe6bc550fe31c3764df01b40a43f8ffa10ab954c#rd",
+    "msgid": "2247493887",
+    "itemidx": "1",
+    "create_time": 1779105454,
+    "date": "2026-05-18"
+  },
+  {
+    "pos": 378,
+    "title": "小样本时序预测等于抛硬币？",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493892&idx=1&sn=f55369b67a684ef2e0b0176ed5681425&chksm=ce7d8e1af90a070c139e18611ae370beaf69ddd8cee5dfdc3b48762715a7923b98f7d42ba367#rd",
+    "msgid": "2247493892",
+    "itemidx": "1",
+    "create_time": 1779193686,
+    "date": "2026-05-19"
+  },
+  {
+    "pos": 379,
+    "title": "Zookeeper：CTA 统一因子框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493897&idx=1&sn=0b2fc47a22541864e2f0d49f974d0c94&chksm=ce7d8e17f90a0701f1a6c466a7a2dfcecf185bc3286daccb0efc840f75fdcee92e2369df811f#rd",
+    "msgid": "2247493897",
+    "itemidx": "1",
+    "create_time": 1779280383,
+    "date": "2026-05-20"
+  },
+  {
+    "pos": 380,
+    "title": "ICLR 26 ｜ TiMi：多智能体也能做高频交易？",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493914&idx=1&sn=cd3ca82daf18a737664500331b4b7985&chksm=ce7d8e04f90a07125346094f5d2693270bcddb0f065b74b9c78ad8d6c1abae76aa6a830b560d#rd",
+    "msgid": "2247493914",
+    "itemidx": "1",
+    "create_time": 1779448652,
+    "date": "2026-05-22"
+  },
+  {
+    "pos": 381,
+    "title": "ICML 2026 量化论文合集",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493920&idx=1&sn=7caf149fcc088dea17d956c8788e9aec&chksm=ce7d8e3ef90a07283011074146038e7d735d1cba24527a3b9d315a53122fa577fce3340f61e4#rd",
+    "msgid": "2247493920",
+    "itemidx": "1",
+    "create_time": 1779539695,
+    "date": "2026-05-23"
+  },
+  {
+    "pos": 382,
+    "title": "AlphaAgentEvo:基于GRPO与AST邻域约束的因子挖掘",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493926&idx=1&sn=e5b8154a5d19bf00e5d03c261ddf977d&chksm=ce7d8e38f90a072eaabd0bde0f4a26d673b38172b689315449707a53302c02488e401d266b78#rd",
+    "msgid": "2247493926",
+    "itemidx": "1",
+    "create_time": 1779622224,
+    "date": "2026-05-24"
+  },
+  {
+    "pos": 383,
+    "title": "哪款大模型更适合因子挖掘？",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493934&idx=1&sn=6dbb6e8846d1cf5186b7a52de93f783d&chksm=ce7d8e30f90a07262bcece160866ce33dbf9fde5066d2e6e2908bfc17e05b7299219ab1d3b00#rd",
+    "msgid": "2247493934",
+    "itemidx": "1",
+    "create_time": 1779711726,
+    "date": "2026-05-25"
+  },
+  {
+    "pos": 384,
+    "title": "4032 块 GPU、56 套液冷机柜、$70 亿赌注：Jane Street 的算力帝国",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493939&idx=1&sn=345ab6d43d463170563e7e81cf67c524&chksm=ce7d8e2df90a073b02c5e62c720c6a05c9c9bd3039242193fe9fa988d86765c684532b80e277#rd",
+    "msgid": "2247493939",
+    "itemidx": "1",
+    "create_time": 1779788115,
+    "date": "2026-05-26"
+  },
+  {
+    "pos": 385,
+    "title": "ICLR 26 ｜ 用生成式扩散模型做 Black-Litterman 观点输入？",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493944&idx=1&sn=b166aef6d15c2030108dab66e1816074&chksm=ce7d8e26f90a0730c70fd499bc2a2b48954da748ccd530ef7ccfd0ae3100e25bc62ee0620d50#rd",
+    "msgid": "2247493944",
+    "itemidx": "1",
+    "create_time": 1779937321,
+    "date": "2026-05-28"
+  },
+  {
+    "pos": 386,
+    "title": "如何捕捉市场的“领先-滞后”效应？融合时滞图与几何SDE的选股模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493952&idx=1&sn=e38563c8c9bb2e8ea84ab58bcf8d3077&chksm=ce7d8e5ef90a07482dfd143d7bdba42a6ecbb9d899217cdb55c49ebc2e51e3962a96d67fd356#rd",
+    "msgid": "2247493952",
+    "itemidx": "1",
+    "create_time": 1780051054,
+    "date": "2026-05-29"
+  },
+  {
+    "pos": 387,
+    "title": "拒绝先预测再优化：将 Sharpe/Omega/CVaR塞入损失函数，端到端真的有效吗？",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493957&idx=1&sn=092cd4fd43c47537d39be2320fcdf4c7&chksm=ce7d8e5bf90a074d3983db53beb29df242a8cd98bf3f258fef5be9347da64daa5744e235995a#rd",
+    "msgid": "2247493957",
+    "itemidx": "1",
+    "create_time": 1780142966,
+    "date": "2026-05-30"
+  },
+  {
+    "pos": 388,
+    "title": "从年化 129% 到巨亏 -83.9% 仅需 10bps 成本？",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493963&idx=1&sn=9e239a51619ce3ed480a3c9b71d18894&chksm=ce7d8e55f90a07434f83e370e9208c2c3be0ac1d2cfcb28d927375c119a05b3676cb7020d5a0#rd",
+    "msgid": "2247493963",
+    "itemidx": "1",
+    "create_time": 1780225777,
+    "date": "2026-05-31"
+  },
+  {
+    "pos": 389,
+    "title": "清华 x 港大 ｜ 给LLM套上脚手架，不用 Solver 也能打败德扑专家",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493971&idx=1&sn=06773e730b532eedbd4f5c06800c1382&chksm=ce7d8e4df90a075b7500af462ebdee472a331e69981194501df5b56df1a8af83819acc97cb05#rd",
+    "msgid": "2247493971",
+    "itemidx": "1",
+    "create_time": 1780314037,
+    "date": "2026-06-01"
+  },
+  {
+    "pos": 390,
+    "title": "SkillOpt：微软提出自进化 Agent Skill",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493979&idx=1&sn=8c5b1fd448a186f6725e95e1abdc1b51&chksm=ce7d8e45f90a0753098c5465ec706f706fd885494ff4cc285470d6dc2721f189c7b8a656fb56#rd",
+    "msgid": "2247493979",
+    "itemidx": "1",
+    "create_time": 1780400776,
+    "date": "2026-06-02"
+  },
+  {
+    "pos": 391,
+    "title": "时序深度模型输给经典模型？",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493984&idx=1&sn=00097a4ce221e0b69bbef3b9556d8727&chksm=ce7d8e7ef90a0768d9b15ff99604657b71ed653c32e8acfd84f1b5eb77df81c4f1009739fcf4#rd",
+    "msgid": "2247493984",
+    "itemidx": "1",
+    "create_time": 1780485188,
+    "date": "2026-06-03"
+  },
+  {
+    "pos": 392,
+    "title": "KDD 26 | 如何防止Alpha衰减？",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493992&idx=1&sn=82cc32596c1d6b1477dde774721cbbad&chksm=ce7d8e76f90a0760cca490400d5b700c4299df78572c3aaff44493649cc91722a4ac35a94cec#rd",
+    "msgid": "2247493992",
+    "itemidx": "1",
+    "create_time": 1780574997,
+    "date": "2026-06-04"
+  },
+  {
+    "pos": 393,
+    "title": "用条件概率重塑Alpha：指数择时的一种低成本改进路径",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247494002&idx=1&sn=d9b318f7af6e19b2bda9badd465301f3&chksm=ce7d8e6cf90a077adf225ebf3340eb851c3ee4cf351b302b7d9f2a352a967ec80c2f76179985#rd",
+    "msgid": "2247494002",
+    "itemidx": "1",
+    "create_time": 1780744352,
+    "date": "2026-06-06"
+  },
+  {
+    "pos": 394,
+    "title": "行为因子统治A股？如何对收益系统性归因",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247494071&idx=1&sn=de7802d35f245a7a497924708f1d8faf&chksm=ce7d8ea9f90a07bf872f78993ba35151efc728293811a17030e029055a2079a993bbb4d4380d#rd",
+    "msgid": "2247494071",
+    "itemidx": "1",
+    "create_time": 1781434677,
+    "date": "2026-06-14"
+  },
+  {
+    "pos": 395,
+    "title": "最危险的量化论文？内幕交易如何悄然建仓",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247494079&idx=1&sn=346e16b86a0afca283d1d7820ea1d904&chksm=ce7d8ea1f90a07b727ca71d27597f909ef85b5d7cdbf6fb569b9324f883166420475931e7dab#rd",
+    "msgid": "2247494079",
+    "itemidx": "1",
+    "create_time": 1781524344,
+    "date": "2026-06-15"
+  },
+  {
+    "pos": 396,
+    "title": "同一策略跑出两种结果？如何兼顾极致效率与确定性",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247494084&idx=1&sn=5f139ec502af4e5eaa9a1c38a93ba483&chksm=ce7d8edaf90a07cc5ace36a2ac0e74ed58a8139ab5a9673d0e8fc4c3dea63b6553220d3e8874#rd",
+    "msgid": "2247494084",
+    "itemidx": "1",
+    "create_time": 1781611843,
+    "date": "2026-06-16"
+  },
+  {
+    "pos": 397,
+    "title": "因子的非对称性：为什么Alpha在熊市反而更强？",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247494088&idx=1&sn=37f916eca3f4d220bdd0f8d7f3589210&chksm=ce7d8ed6f90a07c0ccc07f6a75044cb63559afb98139925600b2587f435a44eebf7399614a84#rd",
+    "msgid": "2247494088",
+    "itemidx": "1",
+    "create_time": 1781691184,
+    "date": "2026-06-17"
+  },
+  {
+    "pos": 398,
+    "title": "清华 X 阶跃星辰 ｜ 剥离风格和记忆，LLM还剩下多少Alpha？",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247494094&idx=1&sn=f04a150a17f3b98c4d7b4a8fc22ae31f&chksm=ce7d8ed0f90a07c69e5e37ecb5129b007cc84ae3cfd3214dd13f8ff576a3734a20494d6d9284#rd",
+    "msgid": "2247494094",
+    "itemidx": "1",
+    "create_time": 1781784615,
+    "date": "2026-06-18"
+  },
+  {
+    "pos": 399,
+    "title": "机构与散户70年的分歧：究竟谁在真正预测未来？",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247494100&idx=1&sn=90b45dee66ba61308cb3614ce56c64ea&chksm=ce7d8ecaf90a07dc95e667b9aec015d3973248659b736d16a8cd2999aaaee0d23e742b2023bf#rd",
+    "msgid": "2247494100",
+    "itemidx": "1",
+    "create_time": 1781950452,
+    "date": "2026-06-20"
+  }
+]

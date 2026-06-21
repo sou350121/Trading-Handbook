@@ -1,0 +1,309 @@
+{
+  "ontology": {
+    "name": "量化方法五轴本体",
+    "rationale": "五轴覆盖语料中方法演进的核心方差来源，使任意模型可在同一坐标系下定位其信号源、时间尺度、学习范式、Alpha生成路径与人机协作边界，支撑Pareto前沿对比与失效归因。",
+    "axes": [
+      {
+        "id": "data-modality",
+        "name": "数据模态",
+        "poles": "量价/表格 ↔ 另类/文本/图结构/微观盘口",
+        "what_it_discriminates": "区分模型对输入表征的依赖程度与特征工程深度，决定跨市场泛化能力与数据清洗成本"
+      },
+      {
+        "id": "time-horizon",
+        "name": "时间尺度",
+        "poles": "高频/日内 ↔ 日频/波段 ↔ 宏观/长周期",
+        "what_it_discriminates": "区分信号衰减速率、交易成本敏感度与模型复杂度上限，决定策略容量与实盘滑点容忍度"
+      },
+      {
+        "id": "learning-paradigm",
+        "name": "学习范式",
+        "poles": "监督/回归分类 ↔ 强化学习/策略搜索 ↔ 生成式/大模型 ↔ 因果/结构推断",
+        "what_it_discriminates": "区分优化目标与训练循环设计，决定模型是直接拟合收益率、内化交易成本，还是探索策略空间与因果机制"
+      },
+      {
+        "id": "alpha-mechanism",
+        "name": "Alpha生成机制",
+        "poles": "显式因子挖掘 ↔ 端到端表征 ↔ 组合/执行优化 ↔ 多智能体博弈",
+        "what_it_discriminates": "区分超额收益的提取位置与部署方式，决定策略的可解释性、模块化解耦程度与全局最优风险"
+      },
+      {
+        "id": "human-agency",
+        "name": "人机协作度",
+        "poles": "全自动黑盒 ↔ 人机协同/可解释 ↔ Agent/自主演进",
+        "what_it_discriminates": "区分运营风控边界、监管合规要求与策略迭代速度，决定实盘部署的维护成本与极端行情兜底能力"
+      }
+    ]
+  },
+  "foundations_zones": [
+    {
+      "slug": "time-series-forecasting",
+      "name": "时序预测基础",
+      "scope": "面向价格/收益率/波动率的序列建模，涵盖Transformer变体、RNN/LSTM、MLP/Mixer、状态空间模型及频率自适应架构",
+      "est_articles": 60,
+      "sample_pos": [
+        41,
+        63,
+        80,
+        101,
+        143,
+        175
+      ]
+    },
+    {
+      "slug": "graph-networks",
+      "name": "图网络与关系建模",
+      "scope": "利用股票间相关性、产业链、分析师覆盖或动态共现关系构建异构图/动态图，进行趋势预测、风格挖掘与组合构建",
+      "est_articles": 35,
+      "sample_pos": [
+        29,
+        31,
+        37,
+        64,
+        68,
+        157
+      ]
+    },
+    {
+      "slug": "reinforcement-learning",
+      "name": "强化学习与策略搜索",
+      "scope": "DRL/MARL在选股、调仓、做市、执行与对冲中的应用，涵盖PPO/SAC/分布RL、奖励函数设计与环境模拟",
+      "est_articles": 55,
+      "sample_pos": [
+        4,
+        14,
+        21,
+        43,
+        88,
+        144
+      ]
+    },
+    {
+      "slug": "llm-agentic",
+      "name": "大模型与智能体",
+      "scope": "LLM在因子挖掘、情绪分析、研报生成、RAG增强及多智能体交易工作流中的适配、微调与推理架构",
+      "est_articles": 50,
+      "sample_pos": [
+        3,
+        17,
+        22,
+        38,
+        62,
+        130
+      ]
+    },
+    {
+      "slug": "market-microstructure",
+      "name": "微观结构与高频",
+      "scope": "限价订单簿(LOB)建模、订单流信号、做市策略、高频套利、微观流动性与价格形成机制",
+      "est_articles": 40,
+      "sample_pos": [
+        5,
+        11,
+        19,
+        58,
+        98,
+        153
+      ]
+    },
+    {
+      "slug": "factor-mining",
+      "name": "因子挖掘与特征工程",
+      "scope": "公式型Alpha生成、AutoML/遗传编程挖掘、特征选择、风格因子构造、信号衰减与拥挤度分析",
+      "est_articles": 45,
+      "sample_pos": [
+        15,
+        16,
+        47,
+        52,
+        126,
+        273
+      ]
+    },
+    {
+      "slug": "portfolio-optimization",
+      "name": "组合优化与资产配置",
+      "scope": "均值方差/风险平价/Black-Litterman、稀疏优化、执行算法(VWAP/冲击成本)、多资产轮动与战术配置",
+      "est_articles": 40,
+      "sample_pos": [
+        32,
+        102,
+        180,
+        195,
+        208,
+        257
+      ]
+    },
+    {
+      "slug": "causal-structural",
+      "name": "因果推断与结构建模",
+      "scope": "因果发现、反事实推理、结构VAR、因果特征选择、新闻/公告对价格的因果路径建模",
+      "est_articles": 25,
+      "sample_pos": [
+        53,
+        57,
+        119,
+        260,
+        324
+      ]
+    },
+    {
+      "slug": "evaluation-benchmarks",
+      "name": "评测基准与失效分析",
+      "scope": "回测防穿越、样本外稳定性、过拟合检测、鲁棒性量化、公开基准(TFB/QuantBench)与模型衰减归因",
+      "est_articles": 25,
+      "sample_pos": [
+        74,
+        96,
+        170,
+        198,
+        234,
+        308
+      ]
+    },
+    {
+      "slug": "data-generation-augmentation",
+      "name": "数据生成与增强",
+      "scope": "GAN/扩散模型合成金融时序、缺失值插补、数据增强、分布外泛化与对抗样本防御",
+      "est_articles": 24,
+      "sample_pos": [
+        45,
+        50,
+        185,
+        229,
+        259
+      ]
+    }
+  ],
+  "crossing_atlases": [
+    {
+      "slug": "supervised-vs-rl",
+      "name": "预测驱动 vs 策略驱动",
+      "tension": "监督学习追求信号准确性但忽略交易成本与滑点；强化学习直接优化交易策略但易受环境模拟偏差与奖励稀疏性影响，组合时需以预测置信度约束RL探索边界"
+    },
+    {
+      "slug": "explicit-factors-vs-e2e",
+      "name": "可解释因子 vs 端到端黑盒",
+      "tension": "显式因子依赖金融先验与线性/树模型，实盘稳定但拟合上限低；端到端表征非线性强但易过拟合且难归因，落地常采用因子作为RL状态先验或损失正则项"
+    },
+    {
+      "slug": "llm-reasoning-vs-ts-baselines",
+      "name": "大模型逻辑 vs 专用时序基座",
+      "tension": "LLM擅长跨模态知识检索与宏观叙事推理，但数值模式捕捉与高频推理效率不足；专用TS基础模型在序列拟合上占优，融合路径为LLM做特征路由/观点注入，TS模型做数值预测"
+    },
+    {
+      "slug": "static-graph-vs-dynamic-flow",
+      "name": "静态关联 vs 动态微观流",
+      "tension": "静态图捕获中长期资金流与产业逻辑，但无法响应瞬时流动性冲击；动态LOB/订单流捕捉微观博弈但噪声极高，组合策略常以静态图定权重、动态流定时机"
+    },
+    {
+      "slug": "predict-then-optimize-vs-end-to-end",
+      "name": "两步法 vs 联合优化",
+      "tension": "先预测后优化模块解耦、风控清晰，但预测误差会放大至组合层；端到端将夏普/CVaR嵌入损失函数可全局最优，但梯度不稳定且实盘难调试，需以预测置信区间做动态权重约束"
+    },
+    {
+      "slug": "human-in-loop-vs-autonomous-agent",
+      "name": "人机协同 vs 全自动智能体",
+      "tension": "Co-pilot模式保留人类风控兜底与监管合规，但迭代慢；多智能体自主博弈速度快、可挖掘微观套利，但易陷入策略同质化与流动性枯竭，实盘需设置硬止损与策略多样性正则"
+    }
+  ],
+  "benchmarks_categories": [
+    {
+      "slug": "ts-benchmarks",
+      "name": "时间序列预测基准",
+      "scope": "覆盖TFB、QuantBench、LOB-Bench等，对比不同频率/资产/缺失率下的SOTA表现，聚焦样本外IC/IR衰减与计算开销"
+    },
+    {
+      "slug": "factor-evaluation",
+      "name": "因子挖掘评测体系",
+      "scope": "覆盖IC衰减、拥挤度拐点、样本外稳定性、AlphaEval等，提供因子生命周期监控与伪Alpha甄别标准"
+    },
+    {
+      "slug": "rl-simulators",
+      "name": "强化学习交易环境",
+      "scope": "覆盖GPU加速LOB模拟器、TradeMaster、CryptoPulse等，对比环境真实性、并行效率与奖励函数设计陷阱"
+    },
+    {
+      "slug": "portfolio-metrics",
+      "name": "组合与执行评测指标",
+      "scope": "覆盖夏普/卡玛/滑点/冲击成本/换手率，对比不同优化目标下的实盘表现与极端行情回撤特征"
+    }
+  ],
+  "deployment_topics": [
+    {
+      "slug": "hardware-acceleration",
+      "name": "硬件与底层加速",
+      "scope": "FPGA/GPU并行推理、量化模型低延迟架构、高频Tick处理流水线与内存优化"
+    },
+    {
+      "slug": "data-pipelines",
+      "name": "数据工程与流处理",
+      "scope": "高频/LOB清洗、另类数据接入、实时特征计算、缺失值插补与数据版本控制"
+    },
+    {
+      "slug": "risk-management",
+      "name": "风控与合规部署",
+      "scope": "仓位限制、止损机制、极端行情熔断、监管报送、审计追踪与模型漂移监控"
+    },
+    {
+      "slug": "mlops-quant",
+      "name": "量化MLOps与迭代",
+      "scope": "回测防穿越、样本外监控、模型衰减预警、自动化因子/策略版本管理与灰度发布"
+    }
+  ],
+  "use_cases": [
+    {
+      "slug": "alpha-mining",
+      "name": "Alpha因子挖掘与信号生成",
+      "scope": "公式挖掘、文本情绪、图关系、多模态融合与动态特征选择，覆盖日频至中频选股"
+    },
+    {
+      "slug": "execution-trading",
+      "name": "算法交易与订单执行",
+      "scope": "VWAP/TWAP、做市策略、高频套利、冲击成本优化与订单路由决策"
+    },
+    {
+      "slug": "portfolio-asset-allocation",
+      "name": "组合构建与资产配置",
+      "scope": "多因子选股、风险平价、宏观对冲、CTA策略与战术资产配置"
+    },
+    {
+      "slug": "derivatives-hedging",
+      "name": "衍生品定价与对冲",
+      "scope": "期权波动率预测、Delta对冲、波动率交易、统计套利与风险因子暴露管理"
+    },
+    {
+      "slug": "crypto-alternatives",
+      "name": "加密货币与另类资产",
+      "scope": "链上数据、DeFi治理、跨市场套利、高波动率环境下的策略适配与流动性建模"
+    }
+  ],
+  "frontier_themes": [
+    {
+      "slug": "foundation-models-quant",
+      "name": "金融基础模型与Scaling Laws",
+      "scope": "千亿参数时序/多模态预训练、领域适配、提示工程、参数高效微调与算力-收益权衡"
+    },
+    {
+      "slug": "agentic-quant-workflows",
+      "name": "自主智能体与多智能体博弈",
+      "scope": "LLM Agent工作流、自我进化、对抗训练、市场模拟生态与策略多样性涌现"
+    },
+    {
+      "slug": "causal-geometric-quant",
+      "name": "因果几何与物理启发方法",
+      "scope": "微分几何组合优化、SDE/物理先验、反事实推理、结构因果模型与流形学习"
+    },
+    {
+      "slug": "quantum-annealing",
+      "name": "量子计算与启发式优化",
+      "scope": "量子退火因子筛选、组合优化加速、量子强化学习与经典-量子混合架构"
+    },
+    {
+      "slug": "regulation-ethics-ai",
+      "name": "AI监管、伦理与黑天鹅防御",
+      "scope": "内幕交易检测、模型可解释性强制要求、极端行情鲁棒性、对齐人类交易员与合规审计"
+    }
+  ],
+  "notes": "1. 每篇文章入库必须打满五轴标签，轴值采用离散区间（如高频/日频/宏观）而非连续值，便于Mintlify侧边栏过滤与Pareto散点图渲染。\n2. Foundations Zones严格按方法族切分，资产类别（A股/美股/加密/期货）仅在Use-cases与Benchmarks中作为正交维度出现，避免方法重复归类。\n3. Crossing Atlases的张力描述需明确失效模式与组合路径，禁止仅罗列优缺点；每条张力必须附带至少一篇正例与一篇反例文章pos。\n4. Benchmarks与Deployment需保持季度更新，优先链接开源仓库与实盘验证报告，学术SOTA需标注样本外衰减系数。\n5. Frontier Themes标注置信度（Alpha/Beta/Gamma）与资金门槛，仅收录具备可复现代码或机构实盘披露的方法，防止概念炒作污染本体。"
+}

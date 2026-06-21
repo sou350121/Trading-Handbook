@@ -1,0 +1,207 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Trading Handbook",
+  "description": "ML-for-Quant 方法解構 · 量化方法五轴本体 · 照見四冊之四（Trading 端）· 語料 QuantML 399 篇",
+  "colors": {
+    "primary": "#0E7C66",
+    "light": "#34D399",
+    "dark": "#065F46"
+  },
+  "favicon": "/favicon.svg",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Get Started",
+        "icon": "rocket",
+        "groups": [
+          {
+            "group": "Start here",
+            "pages": [
+              "ONBOARDING.md",
+              "AGENTS.md",
+              "CONTRIBUTING.md",
+              "MAINTAINER.md"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Cheat Sheet",
+        "icon": "map",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "cheat-sheet/overview.md",
+              "cheat-sheet/ontology.md",
+              "cheat-sheet/timeline.md"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Foundations",
+        "icon": "layer-group",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "foundations/overview.md"
+            ]
+          },
+          {
+            "group": "时序预测基础",
+            "pages": [
+              "foundations/time-series-forecasting/overview.md"
+            ]
+          },
+          {
+            "group": "图网络与关系建模",
+            "pages": [
+              "foundations/graph-networks/overview.md"
+            ]
+          },
+          {
+            "group": "强化学习与策略搜索",
+            "pages": [
+              "foundations/reinforcement-learning/overview.md"
+            ]
+          },
+          {
+            "group": "大模型与智能体",
+            "pages": [
+              "foundations/llm-agentic/overview.md"
+            ]
+          },
+          {
+            "group": "微观结构与高频",
+            "pages": [
+              "foundations/market-microstructure/overview.md"
+            ]
+          },
+          {
+            "group": "因子挖掘与特征工程",
+            "pages": [
+              "foundations/factor-mining/overview.md"
+            ]
+          },
+          {
+            "group": "组合优化与资产配置",
+            "pages": [
+              "foundations/portfolio-optimization/overview.md"
+            ]
+          },
+          {
+            "group": "因果推断与结构建模",
+            "pages": [
+              "foundations/causal-structural/overview.md"
+            ]
+          },
+          {
+            "group": "评测基准与失效分析",
+            "pages": [
+              "foundations/evaluation-benchmarks/overview.md"
+            ]
+          },
+          {
+            "group": "数据生成与增强",
+            "pages": [
+              "foundations/data-generation-augmentation/overview.md"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Crossing",
+        "icon": "shuffle",
+        "groups": [
+          {
+            "group": "Atlases",
+            "pages": [
+              "crossing/overview.md",
+              "crossing/supervised-vs-rl/overview.md",
+              "crossing/explicit-factors-vs-e2e/overview.md",
+              "crossing/llm-reasoning-vs-ts-baselines/overview.md",
+              "crossing/static-graph-vs-dynamic-flow/overview.md",
+              "crossing/predict-then-optimize-vs-end-to-end/overview.md",
+              "crossing/human-in-loop-vs-autonomous-agent/overview.md"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Benchmarks",
+        "icon": "gauge",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "benchmarks/overview.md"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Deployment",
+        "icon": "server",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "deployment/overview.md"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Use Cases",
+        "icon": "briefcase",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "use-cases/overview.md"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Companies",
+        "icon": "building",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "companies/overview.md"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Frontier",
+        "icon": "telescope",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "frontier/overview.md"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Reports",
+        "icon": "newspaper",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "reports/overview.md"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

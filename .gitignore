@@ -1,0 +1,7 @@
+data/raw/
+data/distill/
+data/*.log
+data/*.txt
+__pycache__/
+*.pyc
+.DS_Store
