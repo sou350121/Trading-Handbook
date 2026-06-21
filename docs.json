@@ -53,61 +53,105 @@
           {
             "group": "时序预测基础",
             "pages": [
-              "foundations/time-series-forecasting/overview.md"
+              "foundations/time-series-forecasting/overview.md",
+              "foundations/time-series-forecasting/add.md",
+              "foundations/time-series-forecasting/allm4ts.md",
+              "foundations/time-series-forecasting/arma-attention.md",
+              "foundations/time-series-forecasting/doubleadapt.md",
+              "foundations/time-series-forecasting/fan.md",
+              "foundations/time-series-forecasting/fieldy.md",
+              "foundations/time-series-forecasting/mana-net.md",
+              "foundations/time-series-forecasting/multirc.md",
+              "foundations/time-series-forecasting/simstock.md",
+              "foundations/time-series-forecasting/stockformer.md",
+              "foundations/time-series-forecasting/tempo.md",
+              "foundations/time-series-forecasting/time-moe.md",
+              "foundations/time-series-forecasting/timer.md",
+              "foundations/time-series-forecasting/timeview.md",
+              "foundations/time-series-forecasting/xlstm-mixer.md"
             ]
           },
           {
             "group": "图网络与关系建模",
             "pages": [
-              "foundations/graph-networks/overview.md"
+              "foundations/graph-networks/overview.md",
+              "foundations/graph-networks/fingat.md",
+              "foundations/graph-networks/gatanalysts.md",
+              "foundations/graph-networks/kgtransformer.md",
+              "foundations/graph-networks/rsr.md",
+              "foundations/graph-networks/thgnn.md"
             ]
           },
           {
             "group": "强化学习与策略搜索",
             "pages": [
-              "foundations/reinforcement-learning/overview.md"
+              "foundations/reinforcement-learning/overview.md",
+              "foundations/reinforcement-learning/art-88.md",
+              "foundations/reinforcement-learning/macrohft.md",
+              "foundations/reinforcement-learning/model-a.md",
+              "foundations/reinforcement-learning/tf-agents.md"
             ]
           },
           {
             "group": "大模型与智能体",
             "pages": [
-              "foundations/llm-agentic/overview.md"
+              "foundations/llm-agentic/overview.md",
+              "foundations/llm-agentic/ecc-analyzer.md",
+              "foundations/llm-agentic/finbert-llm-prompting.md",
+              "foundations/llm-agentic/finrobot.md",
+              "foundations/llm-agentic/llm.md",
+              "foundations/llm-agentic/trr.md"
             ]
           },
           {
             "group": "微观结构与高频",
             "pages": [
-              "foundations/market-microstructure/overview.md"
+              "foundations/market-microstructure/overview.md",
+              "foundations/market-microstructure/art-11.md",
+              "foundations/market-microstructure/hlob.md"
             ]
           },
           {
             "group": "因子挖掘与特征工程",
             "pages": [
-              "foundations/factor-mining/overview.md"
+              "foundations/factor-mining/overview.md",
+              "foundations/factor-mining/3.md",
+              "foundations/factor-mining/alpha.md",
+              "foundations/factor-mining/alpha2.md",
+              "foundations/factor-mining/alphaforge.md",
+              "foundations/factor-mining/mlp.md",
+              "foundations/factor-mining/street-pe.md",
+              "foundations/factor-mining/xtab.md"
             ]
           },
           {
             "group": "组合优化与资产配置",
             "pages": [
-              "foundations/portfolio-optimization/overview.md"
+              "foundations/portfolio-optimization/overview.md",
+              "foundations/portfolio-optimization/art-78.md",
+              "foundations/portfolio-optimization/deepunifiedmom.md",
+              "foundations/portfolio-optimization/masa.md"
             ]
           },
           {
             "group": "因果推断与结构建模",
             "pages": [
-              "foundations/causal-structural/overview.md"
+              "foundations/causal-structural/overview.md",
+              "foundations/causal-structural/varlingam.md"
             ]
           },
           {
             "group": "评测基准与失效分析",
             "pages": [
-              "foundations/evaluation-benchmarks/overview.md"
+              "foundations/evaluation-benchmarks/overview.md",
+              "foundations/evaluation-benchmarks/tfb.md"
             ]
           },
           {
             "group": "数据生成与增强",
             "pages": [
-              "foundations/data-generation-augmentation/overview.md"
+              "foundations/data-generation-augmentation/overview.md",
+              "foundations/data-generation-augmentation/saits.md"
             ]
           }
         ]
