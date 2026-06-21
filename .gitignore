@@ -5,3 +5,4 @@ data/*.txt
 __pycache__/
 *.pyc
 .DS_Store
+data/album_index.json
