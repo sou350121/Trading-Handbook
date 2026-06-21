@@ -1,3 +1,5 @@
+<!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
 # Fieldy 解構（Fieldy）
 
 > **發布**：2024-09-12 · （無 venue）

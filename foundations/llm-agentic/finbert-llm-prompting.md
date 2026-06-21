@@ -54,7 +54,7 @@
 | Financial PhraseBank | Precision/Recall/F1 | 未披露 | 未披露 | 未披露 |
 | Financial PhraseBank | Zero-shot vs Few-shot | 未披露 | Few-shot 顯著優於 Zero-shot | 定性提升 |
 
-**解讀**: Δ 主要來自上下文學習對金融歧義的消解，屬真實 capability 提升；但樣本僅 4.8k 且為靜態分類，未計入 LLM API 延遲與成本，實盤 Sharpe/IR 無法從該表推斷。存在樣本選擇偏差（僅高共識句子）與前瞻偏差風險（若示例庫含未來信息）。
+**解讀**: Δ 主要來自上下文學習對金融歧義的消解，屬真實 capability 提升；但樣本量未披露且為靜態分類，未計入 LLM API 延遲與成本，實盤 Sharpe/IR 無法從該表推斷。存在樣本選擇偏差（僅高共識句子）與前瞻偏差風險（若示例庫含未來信息）。
 
 ## §6 · 失效與隱含假設
 **6.1 論文自述 limitations**: 依賴特定提示設計；LLM 版本更新會導致結果波動；零樣本缺乏上下文導致精度不足；FinBERT 仍為精度上限。

@@ -110,10 +110,14 @@ def main():
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--start", type=int, default=0, help="min pos")
     ap.add_argument("--only", type=str, default="")
+    ap.add_argument("--poslist", type=str, default="", help="comma-separated pos list (disjoint shard)")
     ap.add_argument("--workers", type=int, default=4)
     args = ap.parse_args()
     idx = json.loads(INDEX.read_text())
     todo = [a for a in idx if a["pos"] >= args.start]
+    if args.poslist:
+        want = {int(x) for x in args.poslist.split(",") if x.strip()}
+        todo = [a for a in idx if a["pos"] in want]
     if args.only:
         todo = [a for a in idx if a["msgid"] == args.only]
     if args.limit:
