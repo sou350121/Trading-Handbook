@@ -27,14 +27,14 @@
 ⚡ **Eureka:** 用 LLM 的 `Next-Token` 目標直接對齊時間序列的 `Next-Patch` 預測，以「預測」替代「重建/對比」，天然保留因果時間依賴。
 
 **信息流 ASCII:**
-```
-[Raw Multivariate TS] → [Patchify & Channel-Independent]
-        ↓
-[Causal LLM Backbone (fθ)] → [Position-Aware Attention Mask]
-        ↓
-[Anchor Patches + History Patches] → [Patch-Level Decoder (Wp)]
-        ↓
-[Forecast / Anomaly Score] (Length-Agnostic)
+```mermaid
+flowchart TD
+    A["Raw Multivariate TS"] --> B["Patchify & Channel-Independent"]
+    A --> C["Causal LLM Backbone (fθ)"]
+    C --> D["Position-Aware Attention Mask"]
+    C --> E["Anchor Patches + History Patches"]
+    E --> F["Patch-Level Decoder (Wp)"]
+    E --> G["Forecast / Anomaly Score (Length-Agnostic)"]
 ```
 
 ## §2 · 數學層
