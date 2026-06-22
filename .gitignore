@@ -1,8 +1,8 @@
-data/raw/
-data/distill/
-data/*.log
-data/*.txt
+# Ignore ALL of data/ (scraped bodies, distill, state, sentinels) EXCEPT the two
+# public-metadata files that the handbook legitimately ships. Bulletproof copyright guard.
+data/*
+!data/index.json
+!data/taxonomy.json
 __pycache__/
 *.pyc
 .DS_Store
-data/album_index.json
