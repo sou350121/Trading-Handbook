@@ -25,6 +25,9 @@ TEMPLATE = """請依下面骨架，把這篇方法寫成一頁解構 markdown。
 4. **指標標籤不可混淆**：若導讀對「回撤深度」與「回撤持續期占比」等兩個不同量用了相近詞，拆成兩列、各自標清楚；**不可**塞進一列再補一個缺失值。
 5. **保留導讀的原始精度**：正文寫「7%」就寫「7%」，不要補成「7.00%」假裝有更高精度。
 6. 第一行的 `<!-- ontology-5axis ... -->` 註解**必填**，依五軸逐字輸出，置於 H1 之前。
+7. **空白/缺失值不得補預設**：若導讀提到某指標/超參/解析度/基線「名稱」但**數值缺失**（空括號「（）」、空白、或被剝掉的圖片/公式留白），一律寫「未披露」。**絕不**用慣例預設值（影像 224×224、RL 折扣 0.99、動量 0.9 之類）填補，也**不內插**空白的基線格。
+8. **禁止用日期反算時長**：別把起訖日期算成「X 年/月」當來源數字（且常算錯/重複），直接照抄日期區間。
+9. **§5 欄位語義固定**：前SOTA 欄填**基線本身的數值**（逐字），本方法欄填本法數值；**絕不**只放模型名而不放其數值，**絕不**把 Δ 塞進前SOTA/本方法格（Δ 只進 Δ 欄）；百分點差用 `pp`（如 30.5% − (−5.09%) = +35.59pp）。
 
 骨架（嚴格按此順序與標題）：
 
@@ -84,6 +87,7 @@ QuantML 導讀正文（你的主要事實來源，截斷 8000 字）：
 """
 
 def slugify(d):
+    if d.get("slug_override"): return d["slug_override"]
     fw = (d.get("source",{}) or {}).get("framework")
     base = fw if fw and fw.lower() not in ("null","none","") else d["title"]
     s = re.sub(r'[^a-zA-Z0-9]+','-', (base or "")).strip('-').lower()
@@ -134,12 +138,15 @@ def main():
     ap=argparse.ArgumentParser()
     ap.add_argument("--only-pos",type=int,default=0)
     ap.add_argument("--limit",type=int,default=0)
+    ap.add_argument("--shard",type=str,default="",help="i/m disjoint slice for parallel runs")
     ap.add_argument("--workers",type=int,default=2)
     args=ap.parse_args()
     ds=[json.loads(f.read_text()) for f in DIS.glob("*.json")]
     sel=[d for d in ds if d.get("page_worthy") and d.get("rating") in ("⚡","🔧") and not d.get("dup_of")]
     if args.only_pos: sel=[d for d in ds if d["pos"]==args.only_pos]
     sel.sort(key=lambda d:-d["pos"])
+    if args.shard:
+        i,m=(int(x) for x in args.shard.split("/")); sel=sel[i::m]
     if args.limit: sel=sel[:args.limit]
     print(f"Pass B on {len(sel)} pages, workers={args.workers}",flush=True)
     with ThreadPoolExecutor(max_workers=args.workers) as ex:

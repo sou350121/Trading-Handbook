@@ -2,7 +2,7 @@
 
 > **本質衝突**：Co-pilot 模式保留人类风控兜底与监管合规，但迭代慢、受人带宽限制；多智能体自主博弈迭代快、能挖微观套利，但易陷策略同质化、流动性枯竭与失控。实盘需设硬止损与策略多样性正则。
 
-**Status:** v0.5 — Opus 手寫綜合，非摘要。代表方法隨 Pass A 語料增長補全。
+**Status:** v0.6 — Opus 手寫綜合，非摘要。autonomous/multi-agent 极已随语料增长大幅补实（llm-agentic 入库 ~46 篇，多智能体框架成主流）。
 
 ## 中心张力
 
@@ -47,24 +47,38 @@
 
 **组合路线**（唯一务实的部署形态）：**autonomous 探索 + human 闸门 + 硬护栏兜底**——让 agent 在沙盒里自主生成策略/因子/假设（速度和广度），人只在「上实盘」这道闸门做批准和归因审查（合规和兜底），再叠一层与模型无关的硬止损/仓位熔断/策略多样性正则（系统性风险护栏）。自治度往上调一格，护栏强度必须同步往上调一格。语料里 FinRobot/FinAgent 这些「自主但分层」的框架，价值正在于把自治和兜底拆成可独立调的旋钮。
 
+> **v0.6 语料复核——一个被本张力框架低估的细节**：随着 multi-agent 框架成为 llm-agentic 的主流，语料里浮现一条「**护栏内生化**」的趋势，比纯外挂护栏更微妙。FinCon 把 CVaR 风控写进 agent 的剧内/剧外信念更新、ContestTrade 用「内部竞赛」直接把多样性逼成机制（而非外加正则）、MASA 内建风险 agent——它们不是「自主 + 外部闸门」，而是把闸门和多样性正则**烤进了 agent 系统本身**。更反直觉的是两个对「multi-agent 必然趋同」的反向投票：AlphaQuanter 明确放弃多 agent 辩论、回到单 agent + RL 以**规避辩论噪声**；贝莱德 AlphaAgents 虽是多 agent，定位却是给人看的可追溯辩论日志（co-pilot）。所以这条张力里「multi-agent = autonomous」的隐含等式其实不成立——**agent 数量不决定自治度，决策权和护栏的位置才决定**。同质化/反身性的实证反例（多个真实部署的 agent 一起踩踏）在公开语料里仍几乎为零，这是 v0.6 仍然存在的结构性缺口，因为它本质上需要实盘事故数据而非论文。
+
 ## 代表方法
 
-**人机协同（co-pilot）一极：**
-- [FinRobot 金融 AI 平台](/foundations/llm-agentic/finrobot)（llm-agentic · 2247484560）— 感知-大脑-行动分层，可插拔可解释
-- [FinBERT & LLM 情绪分析](/foundations/llm-agentic/finbert-llm-prompting)（llm-agentic · 2247486930）— AI 给情绪分，人做决策
-- [ECC Analyzer](/foundations/llm-agentic/ecc-analyzer)（llm-agentic · 2247486072）— 抽信号供人用
-- LLMFactor 可解释股价预测（llm-agentic · 2247485339）— 输出可读因子给人审 (待补)
-- LLM 撰写研究报告可行性（llm-agentic · 2247485593）— AI 草稿 + 人审，co-pilot 原型 (待补)
+**人机协同（co-pilot）一极**（AI 放大研究产能、人守决策闸门、可问责）：
+- [FinRobot 金融 AI 平台](/foundations/llm-agentic/finrobot)（llm-agentic · 2247484560）— 感知-大脑-行动分层，自治和兜底拆成可独立调的旋钮，co-pilot 框架范本
+- [FinBERT & LLM 情绪分析](/foundations/llm-agentic/finbert-llm-prompting)（llm-agentic · 2247486930）— AI 给情绪分、人做决策，最纯的「AI 是输入、人是决策」
+- [ECC Analyzer 电话会议框架](/foundations/llm-agentic/ecc-analyzer)（llm-agentic · 2247486072）— 从电话会议抽结构化信号供人用
+- [LLMFactor 可解释股价预测](/foundations/llm-agentic/llmfactor)（llm-agentic · 2247485339）— 输出人能读的因子给风控审，可问责端的样本
+- [LLM 撰写研究报告可行性](/foundations/llm-agentic/art-34)（llm-agentic · 2247485593）— 实测「研报哪些可自动、哪些需人判断」，直接量化人机分工边界，co-pilot 原型
+- [AlphaAgents 多智能体辩论](/foundations/llm-agentic/alphaagents)（llm-agentic · 2247491466）— 贝莱德，多 agent 但用群聊辩论+可追溯决策日志压幻觉，**形式多 agent、定位仍 co-pilot**
+- [LLMoE 专家路由交易框架](/foundations/llm-agentic/llmoe)（llm-agentic · 2247490939）— LLM 当路由器做可解释分类，人在环
 
-**全自动智能体（autonomous）一极：**
-- FinAgent 多模态自主交易框架（llm-agentic · 2247485000）— KDD 24，自主感知决策 (待补)
-- StockAgent 模拟交易者博弈（llm-agentic · 2247485618）— 多 agent 自主博弈，同质化风险样本 (待补)
-- AlphaQuanter 端到端 Agentic RL（reinforcement-learning · 2247492036）— 自主演进交易 (待补)
-- FinSight 自主金融分析师（llm-agentic · 2247492124）— 会思考/绘图/写作的自主 agent (待补)
-- 从新闻到预测：LLM 时序预测（llm-agentic · 2247487049）— Agent 自主演进端 (待补)
+**全自动智能体（autonomous / multi-agent）一极**（自主感知-决策-执行-反思、自我进化、速度广度碾压）：
+- [MASS 多智能体规模化模拟组合](/foundations/llm-agentic/mass)（llm-agentic · 2247490927）— ⚡ 北大×正仁，端到端反向优化动态调整 agent 分布，**首次验证多智能体规模定律**，自主端最前沿
+- [ContestTrade 内部竞赛架构](/foundations/llm-agentic/contesttrade)（llm-agentic · 2247491371）— ⚡ 数据/研究双团队「优胜劣汰」内部竞赛筛信号——注意这正是**同质化的内生对策**（用竞赛逼出多样性）
+- [FinCon 经理-分析师层级框架](/foundations/llm-agentic/fincon)（llm-agentic · 2247488353）— ⚡ NIPS 24，分层通信+双层 CVaR 风控，自主但**自带风险护栏**，是「自治与兜底同步」的样本
+- [实时自主 AI 投资代理](/foundations/llm-agentic/2-43-ai)（llm-agentic · 2247493050）— ⚡ 北大光华，LLM 每日自主联网搜索合成异构信息生成评分；信号高度集中头部赢家——**自主 agent 趋同的实证苗头**
+- [R&D-Agent-Quant 自动化研发](/foundations/llm-agentic/rd-agent-q)（llm-agentic · 2247490469）— ⚡ 因子-模型协同自动迭代闭环，7×24 自我研发的纯例
+- [TiMi 多智能体高频](/foundations/llm-agentic/timi)（llm-agentic · 2247493914）— ⚡ ICLR 26，离线 LLM 生成策略代码/约束、在线轻量 CPU 执行，把延迟关在离线层，自主下探高频的务实解
+- [HedgeAgents 多智能体对冲系统](/foundations/llm-agentic/hedgeagents)（llm-agentic · 2247489386）— ⚡ 把对冲基金架构映射成 LLM 多 agent，设三类会议机制
+- [QuantAgent 自我完善 LLM](/foundations/llm-agentic/quantagent)（llm-agentic · 2247488639）— ⚡ 内层模拟推理+外层实盘反馈双层闭环，知识库自主演进
+- [FinAgent 多模态自主交易](/foundations/llm-agentic/finagent)（llm-agentic · 2247485000）— ⚡ KDD 24，自主感知-决策
+- [AlphaQuanter 端到端 Agentic RL](/foundations/reinforcement-learning/alphaquanter)（reinforcement-learning · 2247492036）— ⚡ 单 agent + RL 端到端优化 LLM 工具调用，作者明确**规避多 agent 辩论噪声**——对「multi-agent 同质化」的反向投票
+- [StockAgent 模拟交易者博弈](/foundations/llm-agentic/stockagent)（llm-agentic · 2247485618）— 多 agent 自主博弈仿真，同质化/反身性的研究载体
+- [FinSight 自主金融分析师](/foundations/llm-agentic/finsight)（llm-agentic · 2247492124）— 会思考/绘图/写作的自主 agent
+- [FinVision 多模态多智能体](/foundations/llm-agentic/finvision)（llm-agentic · 2247487733）— 摘要/技术/反思三 agent 协同，含风险管理
+- [TradingAgents 多智能体框架](/foundations/llm-agentic/tradingagents)（llm-agentic · 2247490650）— QuantML 社群开源多 agent 交易框架
+- 从新闻到预测：LLM 时序预测（llm-agentic · 2247487049）— Agent 自主端（注册行，解构页待建）
 
-**组合带（自主探索 × 人闸门 × 护栏）：**
-- [MASA 多智能体自适应风险管理](/foundations/portfolio-optimization/masa)（portfolio-optimization · 2247486159）— 多 agent 但内建风险护栏
-- JAX-LOB GPU 加速 LOB 模拟器（reinforcement-learning · 2247484978）— autonomous 训练需要的高保真沙盒 (待补)
-
-<!-- TODO: enrich examples when full corpus distilled — co-pilot 端 llm-agentic 14 篇较充实；autonomous/multi-agent 正例多为 (待补)，且策略同质化/反身性的实证反例几乎缺失，是六张图里 autonomous 极最需要语料增长来补的一张 -->
+**组合带（自主探索 × 人闸门 × 护栏——唯一务实部署形态）：**
+- [MASA 多智能体自适应风险管理](/foundations/portfolio-optimization/masa)（portfolio-optimization · 2247486159）— AAMAS 24，多 agent 但**内建风险护栏**，自治与兜底同调的标杆
+- [FinCon 双层 CVaR 风控](/foundations/llm-agentic/fincon)（llm-agentic · 2247488353）— 自主决策但风控写进剧内/剧外双层，护栏与自治同步上调的样本
+- [PPO 对冲基金策略自适应选择](/foundations/reinforcement-learning/ppo-hedge-fund-strategy-selection)（reinforcement-learning · 2247493096）— RL 自主选策略，但选择空间被人设的策略池框住（闸门在策略池层）
+- [JAX-LOB GPU 加速 LOB 模拟器](/foundations/reinforcement-learning/jax-lob)（reinforcement-learning · 2247484978）— autonomous 训练需要的高保真沙盒，把自主探索关在 sim 里

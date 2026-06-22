@@ -2,7 +2,7 @@
 
 > **本質衝突**：LLM 擅长跨模态知识检索与宏观叙事推理，但数值模式捕捉弱、高频推理慢、成本高；专用 TS 基础模型在序列拟合上占优却读不懂新闻语义。融合路径：LLM 做特征路由/观点注入，TS 模型做数值预测。
 
-**Status:** v0.5 — Opus 手寫綜合，非摘要。代表方法隨 Pass A 語料增長補全。
+**Status:** v0.6 — Opus 手寫綜合，非摘要。TS 基座极已随语料增长补实（多个十亿级金融基础模型入库：Kronos/FinCast/ARMD 等）。
 
 ## 中心张力
 
@@ -45,24 +45,27 @@
 
 ## 代表方法
 
-**大模型逻辑一极：**
+**大模型逻辑一极**（吃语义/叙事、读财报新闻电话会议、推理慢成本高、会幻觉数字）：
 - [ECC Analyzer 电话会议 LLM 框架](/foundations/llm-agentic/ecc-analyzer)（llm-agentic · 2247486072）— 从语音/文本抽信号
-- [TRR 组合崩溃时间关系推理](/foundations/llm-agentic/trr)（llm-agentic · 2247487194）— LLM 做风险择时推理
-- [FinBERT & LLM 情绪分析](/foundations/llm-agentic/finbert-llm-prompting)（llm-agentic · 2247486930）
-- LLMFactor + SKGP 可解释股价预测（llm-agentic · 2247485339）— LLM 生成可读因子 (待补)
-- GraphRAG + Ollama 知识图谱分析（llm-agentic · 2247485462）— 检索增强的逻辑推理 (待补)
+- [TRR 组合崩溃时间关系推理](/foundations/llm-agentic/trr)（llm-agentic · 2247487194）— LLM 做风险择时/黑天鹅推理
+- [FinBERT & LLM 情绪分析](/foundations/llm-agentic/finbert-llm-prompting)（llm-agentic · 2247486930）— 语义压成情绪先验
+- [LLMFactor + SKGP 可解释股价预测](/foundations/llm-agentic/llmfactor)（llm-agentic · 2247485339）— LLM 从文本生成可读因子
+- [GraphRAG + Ollama 知识图谱分析](/foundations/llm-agentic/graphrag)（llm-agentic · 2247485462）— 检索增强的逻辑推理
+- [微调 LLM 预测股票收益率](/foundations/llm-agentic/llms)（llm-agentic · 2247485651）— **让 LLM 直接吐数值信号**，正是本张力警告的「拿语义模型做回归」，缝合的反面教材
 
-**专用 TS 基座一极：**
-- [Time-MoE 亿级 MoE 时序基础模型](/foundations/time-series-forecasting/time-moe)（time-series-forecasting · 2247486849）
-- [Timer 生成式预训练时序大模型](/foundations/time-series-forecasting/timer)（time-series-forecasting · 2247487139）
-- [TEMPO 提示词驱动的预训练 TS](/foundations/time-series-forecasting/tempo)（time-series-forecasting · 2247486820）
-- [aLLM4TS 把 LLM 适配于时序表征](/foundations/time-series-forecasting/allm4ts)（time-series-forecasting · 2247486045）— 正好骑在缝上
-- [FAN 频率自适应归一化](/foundations/time-series-forecasting/fan)（time-series-forecasting · 2247487027）— TS 侧治非平稳
+**专用 TS 基座一极**（吃数值/序列、序列拟合是主业、推理快、对语义瞎）：
+- [Time-MoE 亿级 MoE 时序基础模型](/foundations/time-series-forecasting/time-moe)（time-series-forecasting · 2247486849）— ⚡ 稀疏 MoE 时序基座
+- [Kronos K线基础模型](/foundations/time-series-forecasting/kronos)（time-series-forecasting · 2247491353）— ⚡ 清华，**专为量化 K 线设计**的基础模型，二元球面量化标记器，金融原生 TS 基座的代表
+- [FinCast 十亿级金融预测基座](/foundations/time-series-forecasting/fincast)（time-series-forecasting · 2247491504）— ⚡ CIKM 25，首个十亿参数金融时序基座，PQ-loss 防坍塌、令牌级 MoE 隔离领域噪声
+- [Timer 生成式预训练时序大模型](/foundations/time-series-forecasting/timer)（time-series-forecasting · 2247487139）— ⚡ 复用 LLM Transformer 骨架做时序预训练，印证「不是架构之争是输入之争」
+- [ARMD 自回归滑动扩散](/foundations/time-series-forecasting/armd)（time-series-forecasting · 2247488868）— ⚡ 确定性滑动替代加噪，纯数值时序生成
+- [TimeDART 自监督时序预训练](/foundations/time-series-forecasting/timedart)（time-series-forecasting · 2247490397）— ⚡ ICML 25，自回归 + 扩散去噪自监督
+- [TEMPO 提示词驱动的预训练 TS](/foundations/time-series-forecasting/tempo)（time-series-forecasting · 2247486820）— ⚡ prompt 驱动但本质数值
+- [aLLM4TS 把 LLM 适配于时序表征](/foundations/time-series-forecasting/allm4ts)（time-series-forecasting · 2247486045）— ⚡ **正好骑在缝上**：用 LLM 权重做 TS 表征
+- [FAN 频率自适应归一化](/foundations/time-series-forecasting/fan)（time-series-forecasting · 2247487027）— TS 侧治非平稳，防「沉默外推到 OOD」
 
-**缝合带（LLM 观点 × TS 数值）：**
-- [MANA-Net 新闻加权市场预测](/foundations/time-series-forecasting/mana-net)（time-series-forecasting · 2247486835）— 文本信号融入 TS
-- 从新闻到预测：LLM 驱动的时序预测（llm-agentic · 2247487049）— 直接缝合 (待补)
-- Conv-LSTM + LLM 集成股票预测（llm-agentic · 2247487110）— 数值模型 + LLM (待补)
-- 微调 LLM 预测股票收益率（llm-agentic · 2247485651）— LLM 直接做数值（缝合的反面教材）(待补)
-
-<!-- TODO: enrich examples when full corpus distilled — TS 基座端 5+ 篇充实；LLM 逻辑端 14 篇但多偏情绪/研报，纯「数值幻觉」反例与高频延迟实证偏薄 -->
+**缝合带（LLM 观点 × TS 数值——把幻觉/延迟关在观点层）：**
+- [MANA-Net 新闻加权市场预测](/foundations/time-series-forecasting/mana-net)（time-series-forecasting · 2247486835）— 文本信号加权融入 TS forecast
+- [LLM x 强化学习：从新闻中学习交易](/foundations/reinforcement-learning/llm-x)（reinforcement-learning · 2247492102）— 中科院，LLM 把新闻语义喂给 RL 决策，跨层缝合的现代样本
+- 从新闻到预测：LLM 驱动的时序预测（llm-agentic · 2247487049）— 直接缝合（注册行，解构页待建）
+- Conv-LSTM + LLM 集成股票预测（llm-agentic · 2247487110）— 数值模型 + LLM（注册行，解构页待建）

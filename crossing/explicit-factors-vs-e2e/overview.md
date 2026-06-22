@@ -2,7 +2,7 @@
 
 > **本質衝突**：显式因子有公式、有金融先验、能向风控解释，但拟合上限被人类想象力封顶；端到端表征非线性强、能榨干量价里的弱信号，但归因失败、过拟合难防。落地常把因子当 RL 状态先验或损失正则项。
 
-**Status:** v0.5 — Opus 手寫綜合，非摘要。代表方法隨 Pass A 語料增長補全。
+**Status:** v0.6 — Opus 手寫綜合，非摘要。「可解释的端到端」缝合带已随语料增长补实（factor-mining 入库 ~56 篇，LLM 驱动的公式因子挖掘成显学）。
 
 ## 中心张力
 
@@ -37,7 +37,7 @@
 
 ## 何时选哪边 / 何时崩
 
-**选显式因子，当**：合规/风控要求可解释（受监管资金、对外发产品）、需要长期可维护的因子库、或 alpha 来自有清晰经济直觉的来源（动量/估值/流动性）。**崩点**：人类先验耗尽——市场里剩下的 alpha 越来越多是非线性/高阶的，纯公式因子的边际新增 IC 趋零；且公式因子最容易被同行复现 → 拥挤 → 被套利（[因子的非对称性](/foundations/factor-mining/alpha)讨论的「为什么熊市 alpha 反而强」本质就是拥挤度的反面）。
+**选显式因子，当**：合规/风控要求可解释（受监管资金、对外发产品）、需要长期可维护的因子库、或 alpha 来自有清晰经济直觉的来源（动量/估值/流动性）。**崩点**：人类先验耗尽——市场里剩下的 alpha 越来越多是非线性/高阶的，纯公式因子的边际新增 IC 趋零；且公式因子最容易被同行复现 → 拥挤 → 被套利（[因子的非对称性](/foundations/factor-mining/factor-asymmetry-bear-market)讨论的「为什么熊市 alpha 反而强」本质就是拥挤度的反面）。
 
 **选端到端，当**：你有足够样本外验证预算、目标市场流动性深（容量不是一阶约束）、且能接受「不可解释但有效」的 overlay 角色。**崩点**：样本外验证不充分时，端到端的高 IC 极可能是过拟合幻觉；换 regime 时它衰减又快又哑（不报警）；以及落不了主仓——很多实盘里端到端模型最终只能贡献几个 bp 的 overlay，因为风控不批它当核心。
 
@@ -45,27 +45,28 @@
 
 ## 代表方法
 
-**可解释因子一极：**
-- [3万个因子能否超越同行评议因子](/foundations/factor-mining/3)（factor-mining · 2247484872）— 直接拷问暴力挖掘 vs 先验因子
+**可解释因子一极**（公式可读、可证伪、暴露可拆、合规友好）：
+- [3万个因子能否超越同行评议因子](/foundations/factor-mining/3)（factor-mining · 2247484872）— 直接拷问暴力挖掘 vs 先验因子，本张力的实证
 - [Street PE 用收益估值](/foundations/factor-mining/street-pe)（factor-mining · 2247486921）— 经典可解释估值因子
-- [因子的非对称性](/foundations/factor-mining/alpha)（factor-mining · 2247494088）— 拥挤度/regime 视角
+- [因子的非对称性](/foundations/factor-mining/factor-asymmetry-bear-market)（factor-mining · 2247494088）— 拥挤度/regime 视角，公式因子失效逻辑可归因
+- [UBS 拥挤度拐点后的非对称 Alpha](/foundations/factor-mining/comprehensive-crowded-factor)（factor-mining · 2247493037）— 拥挤度可监控、可算拐点，正是因子端独有的「可见性」优势
 - [VarLiNGAM 时序因果发现](/foundations/causal-structural/varlingam)（causal-structural · 2247486034）— 因果可解释的极端
-- AlphaEvolve（factor-mining · 2247485843）— AutoML 挖公式因子，产物可读 (待补)
+- [AlphaEvolve AutoML 公式因子](/foundations/factor-mining/alphaevolve)（factor-mining · 2247485843）— AutoML 挖公式因子，产物可读
 
-**端到端黑盒一极：**
+**端到端黑盒一极**（因子溶进隐层、拟合上限高、归因失败、过拟合隐蔽）：
 - [StockFormer](/foundations/time-series-forecasting/stockformer)（time-series-forecasting · 2247484801）— 多任务深度选股
-- [Fieldy 细颗粒度层次 Transformer](/foundations/time-series-forecasting/fieldy)（time-series-forecasting · 2247486273）
-- [THGNN 异构图神经网络](/foundations/graph-networks/thgnn)（graph-networks · 2247486310）
-- [FinGAT 金融图注意力](/foundations/graph-networks/fingat)（graph-networks · 2247486368）
-- [RSR 时序关系排序](/foundations/graph-networks/rsr)（graph-networks · 2247486355）
+- [Fieldy 细颗粒度层次 Transformer](/foundations/time-series-forecasting/fieldy)（time-series-forecasting · 2247486273）— 隐层吃量价微结构
+- [THGNN 异构图神经网络](/foundations/graph-networks/thgnn)（graph-networks · 2247486310）— 关系表征藏隐层
+- [FinGAT 金融图注意力](/foundations/graph-networks/fingat)（graph-networks · 2247486368）/ [RSR 时序关系排序](/foundations/graph-networks/rsr)（graph-networks · 2247486355）— 图端到端，暴露不可读
 
-**缝合带（可解释的端到端 / 因子 × 深度）：**
+**缝合带（可解释的端到端 / 因子 × 深度——手册最有价值区）：**
 - [TIMEVIEW 通向透明的时序预测](/foundations/time-series-forecasting/timeview)（time-series-forecasting · 2247484754）— 端到端但强行可解释
 - [AlphaForge](/foundations/factor-mining/alphaforge)（factor-mining · 2247486006）— 公式因子 + 动态加权，附实盘验证
+- [AlphaAgent LLM 挖持久因子](/foundations/factor-mining/alphaagent)（factor-mining · 2247491423）— ⚡ LLM + AST 正则挖**抗衰减**公式因子，产物可读且专门压拥挤/过拟合，缝合带新主力
+- [CogAlpha 七层认知架构](/foundations/factor-mining/cogalpha)（factor-mining · 2247492815）— ⚡ LLM 在代码空间做遗传式变异/交叉进化，产物是逻辑可解释的 Alpha，鱼与熊掌兼得的样板
+- [AlphaSharpe LLM 进化指标](/foundations/factor-mining/alphasharpe)（factor-mining · 2247489136）— ⚡ LLM 当创造引擎嵌进化循环，自动生成对异常值不敏感的可读指标
+- [AlphaSAGE GFlowNets 结构感知挖掘](/foundations/factor-mining/alphasage)（factor-mining · 2247491844）— ⚡ RGCN 编 AST + GFlowNets 采样多样高奖励因子，搜索范式产可读公式
 - [Alpha2 DRL 挖逻辑公式因子](/foundations/factor-mining/alpha2)（factor-mining · 2247484882）— 搜索产出可读公式
+- [NeuralFactors 生成式因子模型](/foundations/factor-mining/neuralfactors)（factor-mining · 2247485681）— Bloomberg CIWAE，联合学因子暴露与收益，结构比纯黑盒可读
 - [XTab 表格预训练](/foundations/factor-mining/xtab)（factor-mining · 2247484944）— 表征学习 + 表格先验
-- NeuralFactors（factor-mining · 2247485681）— Bloomberg 生成模型，因子结构可读 (待补)
-- AlphaSAGE GFlowNets 结构感知挖掘（factor-mining · 2247491844）— 搜索范式，产物可读 (待补)
-- FRI 面向解释性的金融图谱量化框架（graph-networks · 2247491788）— 图端到端但强可解释 (待补)
-
-<!-- TODO: enrich examples when full corpus distilled — 因子端 16 篇、端到端散落 TS/graph 较充实；「可解释的端到端」缝合带是手册最有价值区，待语料增长后单独成节 -->
+- [FRI 面向解释性的金融图谱框架](/foundations/graph-networks/fri)（graph-networks · 2247491788）— 图端到端但强可解释

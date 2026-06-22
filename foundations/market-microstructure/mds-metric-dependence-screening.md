@@ -1,0 +1,87 @@
+<!-- ontology-5axis data=量价表格 horizon=高频日内 paradigm=监督回归 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# MDS (Metric Dependence Screening) 解構（MDS (Metric Dependence Screening)）
+
+> **發布**：2026-05-18 · （無 venue）
+> **QuantML 導讀**：[抛弃高频数据低频化：别让粗暴降维毁了你的微观 Alpha](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493887&idx=1&sn=f824e6ba0d1aad1f8c43039bc296a486&chksm=ce7d8fe1f90a06f7ef5c9844912d62d27824fe6bc550fe31c3764df01b40a43f8ffa10ab954c#rd)
+> **核心定位**：落點於量價表格與高頻日內的監督回歸因子挖掘框架。解決了傳統截面初篩因標量降頻導致的微觀結構信息損耗，以及均值-方差優化器在超高維度下的誤差放大問題。
+
+**Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
+**TL;DR:** ① 提出基於 Fréchet 變差的度量依賴篩選（MDS），將資產表徵為「日度收益-日內波動曲線」複合對象。② 核心 trick 是揚棄標量降頻，在非歐度量空間中計算條件/無條件變差比，實現高保真橫截面初篩。③ 對因子挖掘軸★：提供了一套處理非結構化泛函數據（如 LOB 形態）的理論嚴謹 Baseline，繞過了線性相關系數的失效陷阱。④ 導讀未給量化結果（僅提及全面壓制 D-SEVIS 與純動量策略，未披露具體 Sharpe/IR 數值）。
+
+**X-Ray.** MDS 的本質是將截面篩選從「線性投影」遷移至「度量空間依賴性測算」。傳統兩階段流程的第一階段依賴日度標量或低維彙總，必然抹平盤中流動性脈衝與微觀結構衝擊的異質性，導致優化器在樣本外遭遇協方差估計誤差放大。MDS 透過 Point-Curve 複合表徵與 Fréchet 變差分解，直接對齊高頻夏普驅動的目標狀態，使篩選邏輯與風險調整後的 Alpha 生成機制同構。這在因子挖掘軸上切中了一個長期被忽略的工程坑：非歐特徵的降維必須保留其幾何結構，而非強制歐氏投影。然而，該框架的計算複雜度隨網格密度與分位切片數呈多項式增長，且 Fréchet 均值在極端行情下的收斂穩定性依賴歷史窗口長度。它打不開的 Envelope 在於：未處理訂單簿深度（LOB Depth）的動態跳價與隱形流動性，且長週期回測（2023-2025）未披露交易成本與滑點假設，實盤容量可能受限於高頻數據採集與實時距離矩陣計算的延遲。對量化讀者而言，其價值不在於直接替代現有多因子模型，而在於提供了一個可插拔的非參數依賴性打分器，可將 LOB 演化面或盤中訂單流不平衡直接映射為篩選權重。
+
+## §1 · 架構 / Core Mechanism
+| 模組 | 傳統標量篩選 (如 D-SEVIS) | MDS 框架 | 工程意義 |
+|---|---|---|---|
+| 資產表徵 | 日度收益率/波動率標量 | 點-曲線複合對象 (日度收益 + 5分鐘網格即期波動率) | 保留盤中微觀動態異質性，避免信息壓縮 |
+| 距離度量 | 歐氏距離/皮爾遜相關 | 分離式乘積度量 (Product Metric) | 兼容非歐幾何空間，解耦收益與波動量級 |
+| 依賴打分 | 線性相關係數 | Fréchet 條件/無條件變差比 (Explained Variation Ratio) | 捕捉非線性曲線響應，對齊高頻夏普目標狀態 |
+
+⚡ **Eureka:** 揚棄標量降頻，將資產映射為「日度收益-日內波動曲線」複合對象，在非歐度量空間中利用 Fréchet 條件/無條件變差比計算依賴得分，實現高保真篩選。
+
+**信息流:**
+```
+[1-min Returns] -> [5-min Grid Smoothing] -> [Spot Vol Curve]
+      |
+[Daily Return] + [Vol Curve] -> [Point-Curve Object] -> [Product Metric Dist]
+      |
+[High-Freq Sharpe Rank] -> [Top 10% Cap-Weighted] -> [Target Sequence Y]
+      |
+[Fréchet Variance Decomposition] -> [MDS Score] -> [Cross-sectional Filter]
+```
+
+## §2 · 數學層
+📌 **Napkin Formula:**
+`MDS_Score = 1 - (Σ Conditional Fréchet Variance / Unconditional Fréchet Variance)`
+**複雜度:** 未披露（依賴歷史窗口長度、網格節點數與分位切片數的矩陣運算）
+**直覺:** 衡量給定市場狀態切片後，資產曲線發散度的縮減比例。分數越接近 1，代表該資產的日內微觀形態對高頻夏普目標狀態的解釋力越強。
+**Loss/訓練細節:** 非參數打分器，無梯度下降或損失函數。依賴歷史回溯窗口內的統計分位重算與局部平滑估計。
+
+## §3 · 數據層
+- **資料規模/頻率/市場/時段:** A 股 2938 只股票，1 分鐘 Return 網格化，5 分鐘節點平滑。
+- **來源:** 未披露具體數據供應商。
+- **樣本外與容量假設:** 2023 年至 2025 年樣本外回測；Long-only 約束與權重上限模擬 A 股受限環境；實盤容量與滑點假設未披露。
+
+## §4 · 代碼層
+| Repo | Checkpoint | License | 複現難度 | 數據可得性 |
+|---|---|---|---|---|
+| TBD | TBD | TBD | TBD | TBD |
+
+## §5 · 評測 / Benchmark
+| 數據集/市場 | Metric(IR/Sharpe/AR/MDD) | 前SOTA | 本方法 | Δ |
+|---|---|---|---|---|
+| A 股 | IR/Sharpe/AR/MDD | D-SEVIS 未披露 / 純動量未披露 | MDS 未披露 | 未披露 |
+
+**解讀:** 導讀僅定性描述「全面壓制」，未提供具體數值。Δ 解讀需謹慎：在 2938 只股票的超高維池中，任何標量篩選的優化器誤差放大效應都會被放大，MDS 的優勢可能部分來自於更穩定的協方差矩陣輸入（維度降低後的 GOC 優化），而非單純的 Alpha 預測力提升。未計入交易成本與滑點前，樣本外表現的實盤可執行性存疑。
+
+## §6 · 失效與隱含假設
+**6.1 論文自述 limitations:** 導讀未明確列出論文自述限制，僅提及該框架為處理 LOB 等複雜泛函數據提供潛力，暗示當前實證僅限於波動率曲線表徵。
+**6.2 推斷的隱含假設:** 
+- **Regime 依賴:** 分位切片假設市場狀態可離散劃分，極端跳空行情可能破壞 Fréchet 均值的收斂穩定性。
+- **容量/成本:** 未披露交易成本與滑點假設；高頻數據採集與實時距離矩陣計算的延遲可能限制實盤規模。
+- **數據泄漏:** 5 分鐘網格平滑若使用對稱局部時間窗口，實盤需嚴格區分前視/後視窗口，否則產生前瞻偏差。
+- **Survivorship:** 未說明是否處理退市股票，長週期回測需警惕生存者偏差。
+
+## §7 · 對比 & 面試 Tip
+| 同軸對手 | 關鍵差異軸 | Open? | Status |
+|---|---|---|---|
+| D-SEVIS / 傳統多因子篩選 | 標量投影 vs 非歐度量依賴 / 線性相關 vs Fréchet 變差比 | TBD | TBD |
+
+🎤 **Interview Tip:** 
+- **正確答:** MDS 不依賴歐氏空間的內積運算，而是透過 Fréchet 變差分解測算非線性曲線特徵對目標狀態的解釋變差比例，解決了標量降頻導致的微觀結構信息損耗。
+- **錯答:** MDS 是用深度學習預測日內波動率曲線，然後用相關係數篩選股票。
+
+**7.1 可證偽預測帶日期:** 若 2026-Q3 前無開源實現代碼或詳細成本調整回測報告發布，則該框架僅限於學術理論驗證，實盤落地價值降級為 TBD。
+
+## §8 · For the Reader
+- **因子研究員:** 將 LOB 訂單流不平衡或盤中價格衝擊直接替換為曲線組件，測試 Fréchet 依賴打分的截面排序能力。
+- **高頻執行:** 關注 5 分鐘網格平滑的實時計算延遲，評估在低延遲架構下動態更新距離矩陣的可行性。
+- **組合配置:** 在協方差矩陣估計極不穩定的超高維池（>2000 只）中，將 MDS 作為第一階段過濾條線，觀察 GOC 優化器的權重穩定性與换手率變化。
+- **LLM-agent/RL 策略:** 將 MDS 得分作為環境狀態的特徵輸入，訓練 RL Agent 動態調整分位切片數與權重上限。
+- **研究學生:** 復現 Fréchet 均值與變差的計算邏輯，對比 DTW 距離與 Product Metric 在極端行情下的收斂差異。
+
+## References
+- 原論文: 《Large-Scale Asset Selection via Metric Dependence with Enriched High Frequency Information》（無 venue）
+- Lineage: D-SEVIS, Markowitz Mean-Variance Optimization, Fréchet Mean/Variance in Metric Spaces
+- QuantML 導讀鏈接: [抛弃高频数据低频化：别让粗暴降维毁了你的微观 Alpha](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493887&idx=1&sn=f824e6ba0d1aad1f8c43039bc296a486&chksm=ce7d8fe1f90a06f7ef5c9844912d62d27824fe6bc550fe31c3764df01b40a43f8ffa10ab954c#rd)

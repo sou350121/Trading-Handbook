@@ -1,0 +1,95 @@
+<!-- ontology-5axis data=文本另类 horizon=日频波段 paradigm=生成式大模型 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# LLMFactor 解構（LLMFactor）
+
+> **發布**：2024-07-07 · （無 venue）
+> **QuantML 導讀**：[LLMFactor ：大模型结合SKGP提供可解释的股价预测](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485339&idx=1&sn=e4f4f5dceaf6d660628b771ab88f0da5&chksm=ce7e6085f909e993cd16f6c9b7462561271c7b38a96de53e2fda8156ffeff7a698f9a52e4ffc#rd)
+> **核心定位**：落點於「文本另类×日频波段×生成式大模型」，解決傳統NLP因子挖掘僅依賴情感/關鍵詞、缺乏市場驅動邏輯與可解釋性的 prior gap，將非結構化新聞轉為結構化因子並聯合量價進行二分類預測。
+
+**Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
+**TL;DR:** ① 提出 LLMFactor 框架，透過 SKGP 三階段提示從新聞中提取可解釋因子並預測股價漲跌。② 核心 trick 為「填空補全背景 → 定向抽取驅動因子 → 時序轉文本聯合推理」，突破傳統情感/關鍵詞提取局限。③ 對「因子挖掘」軸★意義在於將 LLM 的語義理解轉化為可審計的結構化因子，而非黑盒端到端預測。④ 導讀未給量化結果。
+
+**X-Ray.** 放回五軸 Pareto，LLMFactor 刻意避開高頻與端到端黑盒，選擇日频波段與因子挖掘的「灰盒」路徑。它解決的舊工程坑是：傳統文本因子（情感得分/TF-IDF）與市場微結構脫節，且無法捕捉公司間關係與事件傳導。SKGP 的本質是將 LLM 降維為「結構化因子生成器」，而非直接預測器，這大幅降低了模型對歷史量價的過擬合風險，並提供審計軌跡。然而，其 envelope 受限於 LLM 的推理延遲與 API 成本，無法擴展至全市場實時掃描；且「時序轉文本」的離散化必然損失連續價格動能。對量化讀者而言，此法的價值不在於直接替代傳統因子模型，而在於提供一套可插拔的「事件驅動因子工廠」，適合與動量/逆轉因子正交組合，或用於長週期組合的風險預警。
+
+## §1 · 架構 / Core Mechanism
+**1.1 三大改動 vs 前作**
+| 維度 | 傳統文本因子 (情感/關鍵詞) | 端到端 LLM 預測 | LLMFactor (SKGP) |
+|---|---|---|---|
+| 輸入處理 | 靜態詞袋/情感分類器 | 原始文本+量價直接拼接 | 三階段遞進提示（背景→因子→預測） |
+| 輸出形式 | 單一情感得分/關鍵詞權重 | 黑盒漲跌概率 | 可解釋結構化因子 + 預測理由 |
+| 時序融合 | 獨立於文本特徵 | 隱式注意力融合 | 顯式將時序轉文本後聯合推理 |
+
+**1.2 ⚡ Eureka 一句話 trick + 直覺**
+Trick：「將連續價格動能離散化為文本敘事，強制 LLM 在語義空間內完成因子與時序的邏輯對齊。」
+直覺：LLM 不擅長直接回歸數值，但極擅長因果敘事。SKGP 透過填空與定向抽取，把市場驅動邏輯「翻譯」成 LLM 的強項領域，再用文本化時序作為上下文，讓預測變成「閱讀理解+邏輯推演」而非「數值拟合」。
+
+**1.3 信息流 ASCII 圖**
+```
+News + Stock Target
+          │
+          ▼
+[Stage 1: Fill-in-the-blank] → Company/Industry Background Knowledge
+          │
+          ▼
+[Stage 2: Directed Extraction] → Market-Driving Factors (Structured)
+          │
+          ▼
+[Stage 3: Seq-to-Text + Joint Reasoning] → Historical Price Sequence (Text) + Factors → Predict ↑/↓ + Rationale
+```
+
+## §2 · 數學層
+📌 **Napkin Formula**：
+$P(\hat{y}=1 \mid \text{News}, P_{\text{hist}}) = \text{LLM}_{\text{SKGP}}(\text{Prompt}_{\text{bg}} \oplus \text{Prompt}_{\text{factor}} \oplus \text{Text}(P_{\text{hist}}))$
+複雜度：$O(T \cdot N_{\text{tokens}})$ 推理成本，無梯度更新（In-context Learning）。
+直覺：跳過傳統 loss 優化，改用提示工程構建條件概率空間。訓練細節實為 Prompt 設計與 Few-shot 樣本篩選，依賴預訓練權重進行條件生成。
+
+## §3 · 數據層
+資料規模/頻率/市場/時段：涵蓋美股 (StockNet：87个美国股市股票，2014年至2016年；CMIN-US：110支股票，2018年至2021年；EDT：54,080篇新闻文章，2020年至2021年) 與 A股 (CMIN-CN：300支股票，同期)。頻率為日频。資料來源為新聞/推文與歷史收盤價。樣本外假設依賴標準時間序列劃分，但導讀未披露具體劃分比例與冷啟動處理。容量假設受限於 LLM API 限流與上下文窗口，難以支撐全市場實時運算。
+
+## §4 · 代碼層
+| 項目 | 狀態/細節 |
+|---|---|
+| Repo | TBD |
+| Checkpoint | 依賴 GPT-3.5-turbo / GPT-4 API |
+| License | 未披露 |
+| 複現難度 | 中（Prompt 設計與 Few-shot 樣本選擇為核心，無開源權重） |
+| 數據可得性 | 高（StockNet/CMIN/EDT 為公開基準集，但需自行清洗對齊） |
+
+## §5 · 評測 / Benchmark
+| 數據集/市場 | Metric (ACC) | Metric (MCC) | 前SOTA | 本方法 | Δ |
+|---|---|---|---|---|---|
+| StockNet (US) | 未披露 | 未披露 | 未披露 | 未披露 | 未披露 |
+| CMIN-US (US) | 未披露 | 未披露 | 未披露 | 未披露 | 未披露 |
+| CMIN-CN (CN) | 未披露 | 未披露 | 未披露 | 未披露 | 未披露 |
+| EDT (US) | 未披露 | 未披露 | 未披露 | 未披露 | 未披露 |
+
+**解讀**：導讀僅定性聲明「全指標領先」與「MCC 優勢顯著」，未提供數值。MCC 對不平衡樣本更敏感，其優勢暗示傳統情感模型在漲跌分佈不均時易產生虛高 ACC，而 LLMFactor 的因子抽取可能改善了邊界樣本的分類邊界。然而，缺乏交易成本與滑點調整的 ACC/MCC 僅反映信息提取能力，不等同於實盤 Alpha。過擬合風險存在於 Prompt 對特定新聞語境的過度適配，且未驗證跨市場/跨週期遷移。
+
+## §6 · 失效與隱含假設
+**6.1 論文自述 limitations**：① 時序轉文本格式轉換方法需改進；② 實驗結果可複製性待提高；③ 不同長度/類型文本中提取因子質量需評估。
+**6.2 推斷的隱含假設**：Regime 依賴強（LLM 預訓練數據截止日後的突發事件可能失效）；容量受限（API 成本與延遲不適合高頻/全市場）；數據泄漏風險（背景知識填空可能無意中引入未來信息或公開財報數據）；假設新聞與股價存在即時因果傳導，忽略流動性/宏觀因子干擾。
+
+## §7 · 對比 & 面試 Tip
+| 同軸對手 | 關鍵差異軸 | Open? | Status |
+|---|---|---|---|
+| FinGPT / EDT | 端到端情感/趨勢預測 vs 結構化因子生成 | 開源 | 成熟 |
+| StockNet / CMIN | 隱式時序-文本融合 vs 顯式 SKGP 遞進推理 | 開源 | 成熟 |
+| 傳統量價因子 | 數學統計驅動 vs 語義邏輯驅動 | 開源 | 成熟 |
+
+🎤 **Interview Tip**
+正確答：「LLMFactor 的核心價值不在於替代預測模型，而在於將非結構化文本轉為可審計的結構化因子。SKGP 透過遞進提示降低 LLM 幻覺，MCC 領先說明其對不平衡樣本的邊界劃分更穩健，但需警惕 Prompt 過擬合與 API 成本對實盤容量的限制。」
+錯答：「LLM 直接預測股價漲跌準確率很高，可以替代傳統因子模型做高頻交易。」（混淆了文本因子挖掘與端到端預測，忽略成本與過擬合）
+
+**7.1 可證偽預測帶日期**：若短期內無開源實現能將 SKGP 因子與傳統動量因子正交化，則該框架僅停留於學術演示，無法進入實盤因子庫。
+
+## §8 · For the Reader
+- **因子研究員**：將 SKGP 視為「事件驅動因子生成器」，提取的因子可與價值/動量因子做正交性檢驗，避免信息重疊。
+- **高頻執行**：不適用。LLM 推理延遲與 API 成本遠超日频波段容忍度，僅適合盤後因子計算。
+- **組合配置**：可用於長週期組合的風險預警與持倉解釋，MCC 優勢可轉化為尾部風險過濾信號。
+- **LLM-agent**：參考其三階段提示架構，將複雜金融任務拆解為「知識檢索→邏輯抽取→決策輸出」的 Chain-of-Thought 範式。
+- **研究學生**：重點復現「時序轉文本」的離散化策略，對比不同 Tokenization 對 LLM 數值理解能力的影響。
+
+## References
+- LLMFactor 原論文（2024-07-07, 無 venue）
+- QuantML 導讀：[LLMFactor ：大模型结合SKGP提供可解释的股价预测](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485339&idx=1&sn=e4f4f5dceaf6d660628b771ab88f0da5&chksm=ce7e6085f909e993cd16f6c9b7462561271c7b38a96de53e2fda8156ffeff7a698f9a52e4ffc#rd)
+- Lineage: StockNet (2019) → CMIN (2021) → EDT/FinGPT → LLMFactor (2024)

@@ -2,7 +2,7 @@
 
 > **本質衝突**：监督学习把「预测收益率」当目标，信号准但不知道怎么交易；强化学习把「最大化回报」当目标，会交易但不知道为什么。两条路在**优化目标与交易成本的内化位置**上分叉。
 
-**Status:** v0.5 — Opus 手寫綜合，非摘要。代表方法隨 Pass A 語料增長補全。
+**Status:** v0.6 — Opus 手寫綜合，非摘要。RL 极已随语料增长大幅补实（reinforcement-learning 入库 ~39 篇，含做市/执行/对冲/持续学习等正例）。
 
 ## 中心张力
 
@@ -45,23 +45,32 @@
 
 ## 代表方法
 
-**预测驱动（监督）一极：**
+**预测驱动（监督）一极**（损失钉在收益率点估计/截面排序、成本推到外部转换层、可热插拔）：
 - [StockFormer](/foundations/time-series-forecasting/stockformer)（time-series-forecasting · 2247484801）— 多任务回归/分类 + 高低频分离，典型「信号为输出」
-- [xLSTM-Mixer](/foundations/time-series-forecasting/xlstm-mixer)（time-series-forecasting · 2247487252）— 纯预测，混合多变量
-- [ARMA-Attention](/foundations/time-series-forecasting/arma-attention)（time-series-forecasting · 2247487011）
+- [xLSTM-Mixer](/foundations/time-series-forecasting/xlstm-mixer)（time-series-forecasting · 2247487252）— 纯预测，混合多变量，「换头不换身」的预测器
+- [ARMA-Attention](/foundations/time-series-forecasting/arma-attention)（time-series-forecasting · 2247487011）— 监督序列拟合
 - [DoubleAdapt](/foundations/time-series-forecasting/doubleadapt)（time-series-forecasting · 2247484726）— 元学习提升预测，仍是预测范式
-- PortfolioMASTER 选股损失函数（time-series-forecasting · 2247491994）— 直击「选股该用什么 loss」，监督路线试图把成本缝进 loss (待补)
+- [PortfolioMASTER 选股损失函数](/foundations/time-series-forecasting/portfoliomaster)（time-series-forecasting · 2247491994）— 直击「选股该用什么 loss」，监督路线试图把成本缝进 loss 的代表
+- [成本感知执行过滤器](/foundations/evaluation-benchmarks/cost-aware-execution-filter)（evaluation-benchmarks · 2247493963）— **监督路线的痛点实证**：高预测精度在加成本后净收益翻负，正是「forecaster 看不到成本、转换层成过拟合温床」的活体反例
 
-**策略驱动（RL）一极：**
-- [MacroHFT](/foundations/reinforcement-learning/macrohft)（reinforcement-learning · 2247484852）— 记忆增强上下文感知 HFT，成本内化的标杆
+**策略驱动（RL）一极**（仓位/调仓时点/成本吞进 reward、原生内化成本、依赖模拟器保真）：
+- [MacroHFT](/foundations/reinforcement-learning/macrohft)（reinforcement-learning · 2247484852）— ⚡ 记忆增强上下文感知 HFT，成本内化的标杆
+- [MetaTrader 双层 RL](/foundations/reinforcement-learning/metatrader)（reinforcement-learning · 2247490889）— ⚡ 用时序变换构 OOD 子集做双层元学习、保守 TD 抑制价值高估，**正面治 RL 的非平稳/价值高估病**
+- [OPHR 波动率交易 RL](/foundations/reinforcement-learning/ophr)（reinforcement-learning · 2247492259）— ⚡ 择时 + 对冲双 agent，离线神谕初始化解延迟奖励，成本/时机耦合强、监督拆不开的纯例
+- [ReCAP 防 Alpha 衰减](/foundations/reinforcement-learning/recap)（reinforcement-learning · 2247493992）— ⚡ KDD 26，CUSUM 检测 regime 切换 + 轻量策略库动态融合，**直面「RL 换 regime 可能直接发散」**这条崩点
+- [DeepAries 智能调仓时机](/foundations/reinforcement-learning/deeparies)（reinforcement-learning · 2247492044）— 学「何时调仓」而非固定周期，RL 内化时机的纯例
+- [DeepScalper 日内短暂机会](/foundations/reinforcement-learning/deepscalper)（reinforcement-learning · 2247489018）— Hindsight 奖励 + 微观/宏观多模态，高频侧 RL 价值最大的甜区
+- [HRT 分层强化交易员](/foundations/reinforcement-learning/hrt)（reinforcement-learning · 2247487175）— MIT，双层 RL 拆选股与执行，决策序列耦合的样本
+- [R²-SAC 松弛-精炼策略](/foundations/reinforcement-learning/r-sac)（reinforcement-learning · 2247491524）— 同花顺，SAC 输出粗动作再精炼，对「RL 直接输出权重不稳」的工程修补
+- [贝莱德 DRL 最优订单执行](/foundations/reinforcement-learning/art-359)（reinforcement-learning · 2247492961）— reward 含收益+冲击二次惩罚，成本内化在执行层
 - [深度强化学习应对加密货币过拟合](/foundations/reinforcement-learning/art-88)（reinforcement-learning · 2247487160）— 直面 RL 在交易里的过拟合
-- [Model A 动态深度网络决策](/foundations/reinforcement-learning/model-a)（reinforcement-learning · 2247485953）
-- [TF-Agents 深度Q学习交易](/foundations/reinforcement-learning/tf-agents)（reinforcement-learning · 2247487035）
-- DeepAries（reinforcement-learning · 2247492044）— 学「何时调仓」而非固定周期，RL 内化时机的纯例 (待补)
-- AlphaQuanter（reinforcement-learning · 2247492036）— 端到端 Agentic RL，跨向 Agent 自主演进 (待补)
+- [AlphaQuanter 端到端 Agentic RL](/foundations/reinforcement-learning/alphaquanter)（reinforcement-learning · 2247492036）— ⚡ 端到端，跨向[Agent 自主演进](/crossing/human-in-loop-vs-autonomous-agent/overview)
+- [TF-Agents 深度 Q 学习交易](/foundations/reinforcement-learning/tf-agents)（reinforcement-learning · 2247487035）/ [Model A 动态深度网络决策](/foundations/reinforcement-learning/model-a)（reinforcement-learning · 2247485953）— RL 交易基础样本
 
-**缝合带（预测约束 RL / RL 当搜索器）：**
-- [Alpha2 用 DRL 挖逻辑公式因子](/foundations/factor-mining/alpha2)（factor-mining · 2247484882）— RL 收缩到因子搜索，规避 sim-to-real
-- 用强化学习筛选因子（factor-mining · 2247485027）— 同上思路 (待补)
-
-<!-- TODO: enrich examples when full corpus distilled — RL zone 目前仅 9 篇入库，做市/执行类正例偏薄；监督端 24 篇较充实 -->
+**缝合带（监督先验约束 RL / RL 收缩为搜索器，规避 sim-to-real）：**
+- [Alpha2 用 DRL 挖逻辑公式因子](/foundations/factor-mining/alpha2)（factor-mining · 2247484882）— RL 收缩到因子搜索而非交易员，规避 sim-to-real gap
+- [用强化学习筛选因子](/foundations/factor-mining/art-21)（factor-mining · 2247485027）— 同思路，RL 当筛选器
+- [AlphaSAGE GFlowNets 结构感知挖掘](/foundations/factor-mining/alphasage)（factor-mining · 2247491844）— ⚡ 用 GFlowNets 替代传统 RL 采样多样高奖励因子，「把 RL 关进搜索」的进阶
+- [Alpha-R1 因子筛选推理模型](/foundations/factor-mining/alpha-r1)（factor-mining · 2247492859）— ⚡ GRPO 以客观市场回报当奖励训 LLM 做动态因子门控，RL 当搜索/选择器
+- [AlphaQCM 分布强化学习挖因子](/foundations/factor-mining/alphaqcm)（factor-mining · 2247490762）— ⚡ ICML 25，分布 RL 搜因子
+- [QFR 方差有界 RL 挖因子](/foundations/factor-mining/qfr)（factor-mining · 2247486244）/ [Style-Miner 风格因子构造](/foundations/factor-mining/style-miner)（factor-mining · 2247488487）— RL 在搜索而非执行侧的稳健化
