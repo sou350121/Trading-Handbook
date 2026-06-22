@@ -1,0 +1,8002 @@
+[
+  {
+    "pos": 1,
+    "msgid": "2247484541",
+    "title": "GPT vs BERT 金融工程该选择哪种结构？",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "copbert-copgpt",
+    "dup_of": null,
+    "framework": "CopBERT/CopGPT",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 2,
+    "msgid": "2247484549",
+    "title": "基于高频和日频因子的端到端直接排序组合构建模型",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "dspo",
+    "dup_of": null,
+    "framework": "DSPO",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 3,
+    "msgid": "2247484560",
+    "title": "FinRobot：用于金融领域的大模型AI平台",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "finrobot",
+    "dup_of": null,
+    "framework": "FinRobot",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "多智能体博弈",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 4,
+    "msgid": "2247484644",
+    "title": "开源强化学习金融市场元宇宙框架",
+    "zone": "reinforcement-learning",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "finrl-meta",
+    "dup_of": null,
+    "framework": "FinRL-Meta",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "日频波段",
+      "paradigm": "强化学习",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 5,
+    "msgid": "2247484660",
+    "title": "市场微观结构教程：深度订单簿预测",
+    "zone": "market-microstructure",
+    "rating": "📖",
+    "page_worthy": false,
+    "slug": "deeplob",
+    "dup_of": null,
+    "framework": "DeepLOB",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 6,
+    "msgid": "2247484684",
+    "title": "综述：深度学习模型在加密货币市场的应用与验证",
+    "zone": "time-series-forecasting",
+    "rating": "📖",
+    "page_worthy": false,
+    "slug": "art-6",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 7,
+    "msgid": "2247484694",
+    "title": "ViL：通用图像识别框架的xLSTM应用",
+    "zone": "unsorted",
+    "rating": "🔧",
+    "page_worthy": false,
+    "slug": "vil-vision-lstm",
+    "dup_of": null,
+    "framework": "ViL (Vision-LSTM)",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "跨周期",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 8,
+    "msgid": "2247484726",
+    "title": "KDD 23 | DoubleAdapt: 显著提升各类模型表现的元学习模型",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "doubleadapt",
+    "dup_of": null,
+    "framework": "DoubleAdapt",
+    "venue": "KDD",
+    "arxiv": "2306.09862",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "元学习搜索",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 9,
+    "msgid": "2247484736",
+    "title": "DeepUnifiedMom: 多任务学习及MoE统一时序动量资产组合构建",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "deepunifiedmom",
+    "dup_of": null,
+    "framework": "DeepUnifiedMom",
+    "venue": null,
+    "arxiv": "2406.08742",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "监督回归",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 10,
+    "msgid": "2247484754",
+    "title": "ICLR 2024 | 通向透明的时间序列预测",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "timeview",
+    "dup_of": null,
+    "framework": "TIMEVIEW",
+    "venue": "ICLR 2024",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 11,
+    "msgid": "2247484771",
+    "title": "使用机器学习方法研究限价委托簿特征对短期价格预测的影响",
+    "zone": "market-microstructure",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "art-11",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 12,
+    "msgid": "2247484801",
+    "title": "信息量极高！StockFormer： 基于多任务目标（回归/分类）及高低频分离的选股模型",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "stockformer",
+    "dup_of": "2247484829",
+    "framework": "StockFormer",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 13,
+    "msgid": "2247484829",
+    "title": "信息量极高！StockFormer： 基于多任务目标（回归/分类）及高低频分离的选股模型",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "stockformer",
+    "dup_of": null,
+    "framework": "Stockformer",
+    "venue": null,
+    "arxiv": "2401.06139",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 14,
+    "msgid": "2247484852",
+    "title": "KDD 24 | 基于增强记忆的上下文感知强化学习的高频交易框架",
+    "zone": "reinforcement-learning",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "macrohft",
+    "dup_of": null,
+    "framework": "MacroHFT",
+    "venue": "KDD'24",
+    "arxiv": null,
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "强化学习",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 15,
+    "msgid": "2247484872",
+    "title": "3万个因子，数据挖掘能超越同行审议的因子吗？",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "3",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 16,
+    "msgid": "2247484882",
+    "title": "南京大学LAMDA-强化学习DRL挖掘逻辑公式型Alpha因子",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "alpha2",
+    "dup_of": null,
+    "framework": "Alpha2",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "强化学习",
+      "alpha": "因子挖掘",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 17,
+    "msgid": "2247484935",
+    "title": "普林斯顿&牛津大学 | 大模型在金融领域的应用、前景和挑战",
+    "zone": "llm-agentic",
+    "rating": "📖",
+    "page_worthy": false,
+    "slug": "art-17",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": "2406.11903",
+    "axes": {
+      "data": "文本另类",
+      "horizon": "跨周期",
+      "paradigm": "生成式大模型",
+      "alpha": "端到端表征",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 18,
+    "msgid": "2247484944",
+    "title": "ICML 23 | XTab：基于联邦学习的表格类预训练模型",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "xtab",
+    "dup_of": null,
+    "framework": "XTab",
+    "venue": "ICML23",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 19,
+    "msgid": "2247484978",
+    "title": "牛津大学：解锁大规模强化学习交易的GPU加速LOB模拟器",
+    "zone": "reinforcement-learning",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "jax-lob",
+    "dup_of": null,
+    "framework": "JAX-LOB",
+    "venue": null,
+    "arxiv": "2308.13289",
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "强化学习",
+      "alpha": "组合执行优化",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 20,
+    "msgid": "2247485000",
+    "title": "KDD 24 | 基于文本和图像的多模态交易框架",
+    "zone": "llm-agentic",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "finagent",
+    "dup_of": null,
+    "framework": "FinAgent",
+    "venue": "KDD 2024",
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "端到端表征",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 21,
+    "msgid": "2247485027",
+    "title": "如何使用强化学习筛选因子",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "art-21",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": "2101.09460",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "强化学习",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 22,
+    "msgid": "2247485339",
+    "title": "LLMFactor ：大模型结合SKGP提供可解释的股价预测",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "llmfactor",
+    "dup_of": null,
+    "framework": "LLMFactor",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 23,
+    "msgid": "2247485349",
+    "title": "美国大选事件驱动研究：2020年美国总统选举的即时金融市场影响分析",
+    "zone": "causal-structural",
+    "rating": "📖",
+    "page_worthy": false,
+    "slug": "2020",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "高频日内",
+      "paradigm": "因果结构",
+      "alpha": "风险择时",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 24,
+    "msgid": "2247485365",
+    "title": "不再预测收益率！剑桥大学基于CVAE以及提前信息的股票交易量预测模型",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "cvae",
+    "dup_of": null,
+    "framework": "CVAE",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 25,
+    "msgid": "2247485388",
+    "title": "线性模型足矣？传统HAR模型与机器学习在实现波动率预测中的对比",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "har-vix",
+    "dup_of": null,
+    "framework": "HAR-VIX",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "风险择时",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 26,
+    "msgid": "2247485434",
+    "title": "量化交易全攻略：从入门到精通的终极指南",
+    "zone": "unsorted",
+    "rating": "📖",
+    "page_worthy": false,
+    "slug": "art-26",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 27,
+    "msgid": "2247485450",
+    "title": "A股投资者情绪与日内过度交易行为的关联性",
+    "zone": "factor-mining",
+    "rating": "📖",
+    "page_worthy": false,
+    "slug": "a",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 28,
+    "msgid": "2247485462",
+    "title": "GraphRAG+Ollama 结合上市公司知识图谱的LLM分析",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "graphrag",
+    "dup_of": null,
+    "framework": "GraphRAG",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "中长周期",
+      "paradigm": "生成式大模型",
+      "alpha": "端到端表征",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 29,
+    "msgid": "2247485475",
+    "title": "多关系图扩散神经网络用于股票趋势预测",
+    "zone": "graph-networks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "mgdpr",
+    "dup_of": null,
+    "framework": "MGDPR",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "图关系",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 30,
+    "msgid": "2247485486",
+    "title": "斯坦福大学 | 基于高频卫星图像的偏远地区经济监测",
+    "zone": "unsorted",
+    "rating": "🔧",
+    "page_worthy": false,
+    "slug": "art-30",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 31,
+    "msgid": "2247485526",
+    "title": "基于图注意力网络GAT的大规模时变投资组合优化",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "gat",
+    "dup_of": null,
+    "framework": "GAT",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "图关系",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 32,
+    "msgid": "2247485553",
+    "title": "强化学习在配对交易中的应用与优化",
+    "zone": "reinforcement-learning",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "art-32",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "高频日内",
+      "paradigm": "强化学习",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 33,
+    "msgid": "2247485573",
+    "title": "大语言模型在时间序列预测中真的有效吗？",
+    "zone": "evaluation-benchmarks",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "art-33",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "生成式大模型",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 34,
+    "msgid": "2247485593",
+    "title": "取代分析师？大模型撰写研究报告的可行性分析",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "art-34",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "中长周期",
+      "paradigm": "生成式大模型",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 35,
+    "msgid": "2247485618",
+    "title": "StockAgent：当AI遇见金融",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "stockagent",
+    "dup_of": null,
+    "framework": "StockAgent",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "多智能体博弈",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 36,
+    "msgid": "2247485626",
+    "title": "牛津大学：端到端深度学习在期权交易中的应用",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "art-36",
+    "dup_of": null,
+    "framework": "端到端期权交易深度学习框架",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 37,
+    "msgid": "2247485638",
+    "title": "Graph Transformer：设计、分类、应用及改进",
+    "zone": "graph-networks",
+    "rating": "📖",
+    "page_worthy": false,
+    "slug": "graph-transformer",
+    "dup_of": null,
+    "framework": "Graph Transformer",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "图关系",
+      "horizon": "跨周期",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 38,
+    "msgid": "2247485651",
+    "title": "如何利用微调LLMs预测股票收益率",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "llms",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 39,
+    "msgid": "2247485681",
+    "title": "NeuralFactors： Bloomberg新型股票深度学习生成模型",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "neuralfactors",
+    "dup_of": null,
+    "framework": "NeuralFactors",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 40,
+    "msgid": "2247485716",
+    "title": "HATS：分层图注意力神经网络用于股票预测",
+    "zone": "graph-networks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "hats",
+    "dup_of": null,
+    "framework": "HATS",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "图关系",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 41,
+    "msgid": "2247485732",
+    "title": "RWKV-TS: 超越传统RNN的时序模型",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "rwkv-ts",
+    "dup_of": null,
+    "framework": "RWKV-TS",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 42,
+    "msgid": "2247485758",
+    "title": "NeuralBeta: 深度学习预测β系数",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "neuralbeta",
+    "dup_of": null,
+    "framework": "NeuralBeta",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 43,
+    "msgid": "2247485783",
+    "title": "基于强化学习的投资组合管理模型",
+    "zone": "reinforcement-learning",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "sac-cnn-mha",
+    "dup_of": null,
+    "framework": "SAC-CNN-MHA",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "强化学习",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 44,
+    "msgid": "2247485798",
+    "title": "贝莱德&英伟达：HybridRAG结合GraphRAG以及VectorRAG的新型RAG系统",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "hybridrag",
+    "dup_of": null,
+    "framework": "HybridRAG",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "跨周期",
+      "paradigm": "生成式大模型",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 45,
+    "msgid": "2247485806",
+    "title": "AAAI 24 | Market-GAN 金融数据生成器",
+    "zone": "data-generation-augmentation",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "market-gan",
+    "dup_of": null,
+    "framework": "Market-GAN",
+    "venue": "AAAI24",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 46,
+    "msgid": "2247485828",
+    "title": "超越Fama-French因子：短期信号的阿尔法机会",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "fama-french",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 47,
+    "msgid": "2247485843",
+    "title": "AlphaEvolve：基于AutoML的公式型Alpha因子挖掘框架",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "alphaevolve",
+    "dup_of": null,
+    "framework": "AlphaEvolve",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "元学习搜索",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 48,
+    "msgid": "2247485854",
+    "title": "图像识别与知识迁移融合的深度学习模型增强趋势交易信号",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "twma-resnet-trader",
+    "dup_of": null,
+    "framework": "TWMA/ResNet Trader",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 49,
+    "msgid": "2247485953",
+    "title": "少即是多：利用动态深度神经网络进行短期股票预测的AI决策",
+    "zone": "reinforcement-learning",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "model-a",
+    "dup_of": null,
+    "framework": "Model A",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "强化学习",
+      "alpha": "风险择时",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 50,
+    "msgid": "2247485977",
+    "title": "SAITS: 基于自注意力的时间序列缺失值插补",
+    "zone": "data-generation-augmentation",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "saits",
+    "dup_of": null,
+    "framework": "SAITS",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 51,
+    "msgid": "2247485992",
+    "title": "股票相似性的时间表示学习及其在投资管理中的应用",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "simstock",
+    "dup_of": null,
+    "framework": "SimStock",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 52,
+    "msgid": "2247486006",
+    "title": "AlphaForge：挖掘和动态组合公式化Alpha因子框架（附有实盘验证结果）",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "alphaforge",
+    "dup_of": null,
+    "framework": "AlphaForge",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "元学习搜索",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 53,
+    "msgid": "2247486034",
+    "title": "交易与时间序列因果发现",
+    "zone": "causal-structural",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "varlingam",
+    "dup_of": null,
+    "framework": "VarLiNGAM",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "因果结构",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 54,
+    "msgid": "2247486045",
+    "title": "ICML 24 | 将LLM适配于时间序列表示学习",
+    "zone": "time-series-forecasting",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "allm4ts",
+    "dup_of": null,
+    "framework": "aLLM4TS",
+    "venue": "ICML24",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "生成式大模型",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 55,
+    "msgid": "2247486061",
+    "title": "基于神经网络模型的加密货币交易算法",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "mlp",
+    "dup_of": null,
+    "framework": "MLP",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 56,
+    "msgid": "2247486072",
+    "title": "基于电话会议的LLMs股票预测框架",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "ecc-analyzer",
+    "dup_of": null,
+    "framework": "ECC Analyzer",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "风险择时",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 57,
+    "msgid": "2247486102",
+    "title": "提升金融市场预测：因果驱动的特征选择",
+    "zone": "causal-structural",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "art-57",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "日频波段",
+      "paradigm": "因果结构",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 58,
+    "msgid": "2247486124",
+    "title": "HLOB：限价订单簿中的信息持久性和结构",
+    "zone": "market-microstructure",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "hlob",
+    "dup_of": null,
+    "framework": "HLOB",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 59,
+    "msgid": "2247486140",
+    "title": "基于两阶段表示学习的元自适应股票运动预测",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "masser",
+    "dup_of": null,
+    "framework": "MASSER",
+    "venue": "NeurIPS22 Workshop",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "元学习搜索",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 60,
+    "msgid": "2247486159",
+    "title": "AAMAS 24 | 基于深度强化学习的多智能体和自适应框架用于动态组合风险管理",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "masa",
+    "dup_of": null,
+    "framework": "MASA",
+    "venue": "AAMAS 24",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "强化学习",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 61,
+    "msgid": "2247486244",
+    "title": "基于方差有界强化学习算法的稳定公式化Alpha因子挖掘",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "qfr",
+    "dup_of": null,
+    "framework": "QFR",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "强化学习",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 62,
+    "msgid": "2247486262",
+    "title": "利用LLMs自动寻找量化投资策略",
+    "zone": "llm-agentic",
+    "rating": "📖",
+    "page_worthy": true,
+    "slug": "alpha-grail",
+    "dup_of": null,
+    "framework": "Alpha Grail多智能体框架",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "因子挖掘",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 63,
+    "msgid": "2247486273",
+    "title": "基于细颗粒度注意力的层次Transformer在表格类时序中的应用",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "fieldy",
+    "dup_of": null,
+    "framework": "Fieldy",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 64,
+    "msgid": "2247486310",
+    "title": "CIKM 22 | 用于金融时间序列预测的异构图神经网络",
+    "zone": "graph-networks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "thgnn",
+    "dup_of": null,
+    "framework": "THGNN",
+    "venue": "CIKM22",
+    "arxiv": null,
+    "axes": {
+      "data": "图关系",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 65,
+    "msgid": "2247486321",
+    "title": "Vanguard： MoA is All You Need",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "moa",
+    "dup_of": null,
+    "framework": "MoA",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "跨周期",
+      "paradigm": "生成式大模型",
+      "alpha": "多智能体博弈",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 66,
+    "msgid": "2247486340",
+    "title": "用于高频交易预测的最优输出LSTM",
+    "zone": "market-microstructure",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "optm-lstm",
+    "dup_of": null,
+    "framework": "OPTM-LSTM",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 67,
+    "msgid": "2247486355",
+    "title": "基于时序关系的股票预测排序方法",
+    "zone": "graph-networks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "rsr",
+    "dup_of": null,
+    "framework": "RSR",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "图关系",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 68,
+    "msgid": "2247486368",
+    "title": "FinGAT：金融图注意力网络",
+    "zone": "graph-networks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "fingat",
+    "dup_of": null,
+    "framework": "FinGAT",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "图关系",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 69,
+    "msgid": "2247486403",
+    "title": "ADD：增强解耦蒸馏框架用于提升股市趋势预测",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "add",
+    "dup_of": null,
+    "framework": "ADD",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 70,
+    "msgid": "2247486820",
+    "title": "ICLR 24 | 基于提示词的生成预训练Transformer时间序列预测框架",
+    "zone": "time-series-forecasting",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "tempo",
+    "dup_of": null,
+    "framework": "TEMPO",
+    "venue": "ICLR 2024",
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "跨周期",
+      "paradigm": "生成式大模型",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 71,
+    "msgid": "2247486835",
+    "title": "CIKM 24 | MANA-Net：增强市场预测的新闻加权方法",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "mana-net",
+    "dup_of": null,
+    "framework": "MANA-Net",
+    "venue": "CIKM 2024",
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 72,
+    "msgid": "2247486849",
+    "title": "Time-MoE : 时间序列领域的亿级规模混合专家基础模型",
+    "zone": "time-series-forecasting",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "time-moe",
+    "dup_of": null,
+    "framework": "Time-MoE",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 73,
+    "msgid": "2247486864",
+    "title": "隐马尔可夫模型在股市预测中的应用",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "gmm-hmm",
+    "dup_of": null,
+    "framework": "GMM-HMM",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 74,
+    "msgid": "2247486888",
+    "title": "TFB：全面与公平的时间序列预测方法基准测试",
+    "zone": "evaluation-benchmarks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "tfb",
+    "dup_of": null,
+    "framework": "TFB",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 75,
+    "msgid": "2247486921",
+    "title": "用收益对股票估值",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "street-pe",
+    "dup_of": null,
+    "framework": "Street PE",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 76,
+    "msgid": "2247486930",
+    "title": "使用LLMs和FinBERT对新闻和报告进行金融情绪分析",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "finbert-llm-prompting",
+    "dup_of": null,
+    "framework": "FinBERT & LLM Prompting",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 77,
+    "msgid": "2247486942",
+    "title": "利用基本面分析预测股票趋势",
+    "zone": "factor-mining",
+    "rating": "📖",
+    "page_worthy": false,
+    "slug": "art-77",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 78,
+    "msgid": "2247486981",
+    "title": "排名空间中的统计套利",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "art-78",
+    "dup_of": null,
+    "framework": "排名空间统计套利",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 79,
+    "msgid": "2247487011",
+    "title": "基于自回归移动平均注意力机制的时间序列预测",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "arma-attention",
+    "dup_of": null,
+    "framework": "ARMA Attention",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 80,
+    "msgid": "2247487027",
+    "title": "频率自适应归一化用于非平稳时间序列预测",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "fan",
+    "dup_of": null,
+    "framework": "FAN",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 81,
+    "msgid": "2247487035",
+    "title": "​基于深度Q学习的算法交易策略研究",
+    "zone": "reinforcement-learning",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "tf-agents",
+    "dup_of": null,
+    "framework": "TF-Agents",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "强化学习",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 82,
+    "msgid": "2247487049",
+    "title": "从新闻到预测：基于LLM的时间序列预测",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "llm-news-to-forecast",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "端到端表征",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 83,
+    "msgid": "2247487059",
+    "title": "动态知识图谱在金融市场趋势预测中的应用",
+    "zone": "graph-networks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "kgtransformer",
+    "dup_of": null,
+    "framework": "KGTransformer",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "图关系",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 84,
+    "msgid": "2247487069",
+    "title": "RSAP-DFM：自适应宏观经济信息提取的后验动态因子模型",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "rsap-dfm",
+    "dup_of": null,
+    "framework": "RSAP-DFM",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 85,
+    "msgid": "2247487110",
+    "title": "基于Conv-LSTM和LLM集成模型用于整体股​票预测",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": false,
+    "slug": "conv-lstm-llm",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 86,
+    "msgid": "2247487139",
+    "title": "清华大学 Timer：生成式预训练Transformers即大型时间序列模型",
+    "zone": "time-series-forecasting",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "timer",
+    "dup_of": null,
+    "framework": "Timer",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "生成式大模型",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 87,
+    "msgid": "2247487147",
+    "title": "MultiRC：突破事后检测局限，预测未来异常的时序异常预测模型",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "multirc",
+    "dup_of": null,
+    "framework": "MultiRC",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 88,
+    "msgid": "2247487160",
+    "title": "深度强化学习应对加密货币交易过拟合",
+    "zone": "reinforcement-learning",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "art-88",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "高频日内",
+      "paradigm": "强化学习",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 89,
+    "msgid": "2247487175",
+    "title": "MIT最新论文，分层强化交易员（HRT）：一种用于优化股票选择和执行的双层方法，附中文播客",
+    "zone": "reinforcement-learning",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "hrt",
+    "dup_of": null,
+    "framework": "HRT",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "强化学习",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 90,
+    "msgid": "2247487194",
+    "title": "LLMs在股票投资组合崩溃中的时间关系推理",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "trr",
+    "dup_of": "2247492157",
+    "framework": "TRR",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "风险择时",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 91,
+    "msgid": "2247487252",
+    "title": "xLSTM-Mixer: 混合多变量时间序列预测",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "xlstm-mixer",
+    "dup_of": null,
+    "framework": "xLSTM-Mixer",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 92,
+    "msgid": "2247487259",
+    "title": "（当前）为何你不需要深度学习来进行时间序列预测，以及你需要什么",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": false,
+    "slug": "art-92",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 93,
+    "msgid": "2247487281",
+    "title": "深度学习与NLP在加密货币预测中的应用：整合金融、区块链和社交媒体数据",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "nlp",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 94,
+    "msgid": "2247487353",
+    "title": "牛津大学：分析师覆盖网络中的Alpha挖掘",
+    "zone": "graph-networks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "gatanalysts",
+    "dup_of": null,
+    "framework": "GATanalysts",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "图关系",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 95,
+    "msgid": "2247487364",
+    "title": "MCI-GRU：基于多头交叉注意力和改进型GRU的股市预测模型",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "mci-gru",
+    "dup_of": null,
+    "framework": "MCI-GRU",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 96,
+    "msgid": "2247487443",
+    "title": "增强深度学习模型评估以进行股市预测--Part I",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "neuralforecast-tft",
+    "dup_of": null,
+    "framework": "NeuralForecast/TFT",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "风险择时",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 97,
+    "msgid": "2247487474",
+    "title": "增强深度学习模型评估以进行股市预测--Part II 模型部分",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "neuralforecast-tft",
+    "dup_of": "2247487443",
+    "framework": "NeuralForecast/TFT",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "风险择时",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 98,
+    "msgid": "2247487486",
+    "title": "基于注意力机制的LOB理解、识别和预测",
+    "zone": "market-microstructure",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "lob",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 99,
+    "msgid": "2247487499",
+    "title": "通过生成对抗网络进行金融时间序列的预测和分类",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "fin-gan",
+    "dup_of": null,
+    "framework": "Fin-GAN",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "风险择时",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 100,
+    "msgid": "2247487521",
+    "title": "ICML 24 | 深度函数因子模型：高维函数时间序列预测",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "df-m",
+    "dup_of": null,
+    "framework": "DF²M",
+    "venue": "ICML 2024",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 101,
+    "msgid": "2247487545",
+    "title": "AAAI 24 | StockMixer: 一种简单而强大的基于MLP的股价预测架构",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "stockmixer",
+    "dup_of": null,
+    "framework": "StockMixer",
+    "venue": "AAAI24",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 102,
+    "msgid": "2247487574",
+    "title": "Skfolio：最新机器学习组合优化工具",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": false,
+    "slug": "skfolio",
+    "dup_of": null,
+    "framework": "skfolio",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 103,
+    "msgid": "2247487603",
+    "title": "选择与交易：基于分层强化学习的统一配对交易",
+    "zone": "reinforcement-learning",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "trials",
+    "dup_of": null,
+    "framework": "TRIALS",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "强化学习",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 104,
+    "msgid": "2247487636",
+    "title": "25个鲜为人知的Python编程技巧",
+    "zone": "unsorted",
+    "rating": "📖",
+    "page_worthy": false,
+    "slug": "25-python",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 105,
+    "msgid": "2247487659",
+    "title": "基于机器学习的公司基本面预测",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "art-105",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 106,
+    "msgid": "2247487733",
+    "title": "FinVision: 基于多模态多智能体框架的股票市场预测系统",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "finvision",
+    "dup_of": null,
+    "framework": "FinVision",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "多智能体博弈",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 107,
+    "msgid": "2247487798",
+    "title": "基于动量与移动平均线的趋势跟踪",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "art-107",
+    "dup_of": null,
+    "framework": null,
+    "venue": "Quantitative Finance",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 108,
+    "msgid": "2247487850",
+    "title": "ICML 2024 顶级论文：机器学习领域的新进展",
+    "zone": "unsorted",
+    "rating": "📖",
+    "page_worthy": false,
+    "slug": "icml-2024",
+    "dup_of": null,
+    "framework": null,
+    "venue": "ICML24",
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "跨周期",
+      "paradigm": "生成式大模型",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 109,
+    "msgid": "2247487860",
+    "title": "基于预测整合与聚类的股票价格指数样本外预测改进",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "mint",
+    "dup_of": null,
+    "framework": "MinT预测整合框架",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 110,
+    "msgid": "2247487892",
+    "title": "面向新闻和社交媒体分析的专用大语言模型",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "llamalens",
+    "dup_of": null,
+    "framework": "LlamaLens",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 111,
+    "msgid": "2247487904",
+    "title": "Fast ES-RNN: 基于GPU的ES-RNN算法实现",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "es-rnn",
+    "dup_of": null,
+    "framework": "ES-RNN",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 112,
+    "msgid": "2247488128",
+    "title": "NIPS 24 | PGN：RNN 的新继任者",
+    "zone": "time-series-forecasting",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "tpgn",
+    "dup_of": null,
+    "framework": "TPGN",
+    "venue": "NeurIPS 2024",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 113,
+    "msgid": "2247488193",
+    "title": "NIPS 24 | 超越CVXPY,新型端到端优化器",
+    "zone": "portfolio-optimization",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "bpqp",
+    "dup_of": null,
+    "framework": "BPQP",
+    "venue": "NeurIPS24",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 114,
+    "msgid": "2247488210",
+    "title": "NIPS 24 | 改进MLP在表格数据表现",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "realmlp",
+    "dup_of": null,
+    "framework": "RealMLP",
+    "venue": "NeurIPS24",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "元学习搜索",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 115,
+    "msgid": "2247488257",
+    "title": "JFE | ETF日内套利研究",
+    "zone": "market-microstructure",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "pvar",
+    "dup_of": null,
+    "framework": "PVAR",
+    "venue": "JFE",
+    "arxiv": null,
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "因果结构",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 116,
+    "msgid": "2247488269",
+    "title": "超越传统网格交易：新型网格交易系统",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "gtsbot",
+    "dup_of": null,
+    "framework": "GTSbot",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "风险择时",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 117,
+    "msgid": "2247488303",
+    "title": "JFE | 高效估计买卖价差的模型、实证与应用",
+    "zone": "market-microstructure",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "edge",
+    "dup_of": null,
+    "framework": "EDGE",
+    "venue": "JFE",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 118,
+    "msgid": "2247488330",
+    "title": "揭秘高频交易“军备竞赛”",
+    "zone": "market-microstructure",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "art-118",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 119,
+    "msgid": "2247488342",
+    "title": "NIPS 24 | CausalStock : 基于端到端因果发现的新闻驱动股价预测模型",
+    "zone": "causal-structural",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "causalstock",
+    "dup_of": null,
+    "framework": "CausalStock",
+    "venue": "NeurIPS24",
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "日频波段",
+      "paradigm": "因果结构",
+      "alpha": "端到端表征",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 120,
+    "msgid": "2247488353",
+    "title": "NIPS 24 | FinCon: 基于LLM的多智能体交易及组合管理框架",
+    "zone": "llm-agentic",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "fincon",
+    "dup_of": null,
+    "framework": "FINCON",
+    "venue": "NeurIPS 2024",
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "多智能体博弈",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 121,
+    "msgid": "2247488380",
+    "title": "JFQA | 基于深度学习的排序特征因子模型",
+    "zone": "factor-mining",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "art-121",
+    "dup_of": null,
+    "framework": "结构化深度排序因子模型",
+    "venue": "JFQA",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 122,
+    "msgid": "2247488415",
+    "title": "金融领域大规模时间序列模型的微调",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "timesfm",
+    "dup_of": null,
+    "framework": "TimesFM",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 123,
+    "msgid": "2247488434",
+    "title": "增强动量策略：动量Transformer模型",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "momentum-transformer-tft",
+    "dup_of": null,
+    "framework": "Momentum Transformer (TFT)",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 124,
+    "msgid": "2247488448",
+    "title": "SusGen-GPT：大模型生成ESG报告",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "susgen-gpt",
+    "dup_of": null,
+    "framework": "SusGen-GPT",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "跨周期",
+      "paradigm": "生成式大模型",
+      "alpha": "端到端表征",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 125,
+    "msgid": "2247488456",
+    "title": "AQR创始人Cliff Asness： 市场效率下降假说",
+    "zone": "unsorted",
+    "rating": "📖",
+    "page_worthy": false,
+    "slug": "aqr-cliff-asness",
+    "dup_of": null,
+    "framework": null,
+    "venue": "JPM 50周年期刊",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 126,
+    "msgid": "2247488487",
+    "title": "Style Miner：基于强化学习算法的风格因子构造",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "style-miner",
+    "dup_of": null,
+    "framework": "Style Miner",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "强化学习",
+      "alpha": "因子挖掘",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 127,
+    "msgid": "2247488504",
+    "title": "在线高频交易股票预测",
+    "zone": "market-microstructure",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "mdi-gd-rbfnn",
+    "dup_of": null,
+    "framework": "MDI-GD竞争聚类RBFNN框架",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 128,
+    "msgid": "2247488601",
+    "title": "无梯度训练的循环神经网络",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "sampled-rnn",
+    "dup_of": null,
+    "framework": "Sampled RNN",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 129,
+    "msgid": "2247488624",
+    "title": "彭博2025年全球及主要经济体中期展望",
+    "zone": "unsorted",
+    "rating": "📖",
+    "page_worthy": false,
+    "slug": "2025",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "风险择时",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 130,
+    "msgid": "2247488639",
+    "title": "QuantAgent：通过自我完善LLM寻找交易圣杯",
+    "zone": "llm-agentic",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "quantagent",
+    "dup_of": null,
+    "framework": "QuantAgent",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "因子挖掘",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 131,
+    "msgid": "2247488660",
+    "title": "Oxford-Man  | 交易共现性：揭示股票市场微观结构与价格形成的新视角",
+    "zone": "market-microstructure",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "coi",
+    "dup_of": null,
+    "framework": "COI",
+    "venue": "Oxford-Man Institute",
+    "arxiv": null,
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 132,
+    "msgid": "2247488719",
+    "title": "选择投资经理",
+    "zone": "unsorted",
+    "rating": "📖",
+    "page_worthy": false,
+    "slug": "art-132",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "图关系",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 133,
+    "msgid": "2247488783",
+    "title": "综述：深度学习用于加密货币预测",
+    "zone": "time-series-forecasting",
+    "rating": "📖",
+    "page_worthy": false,
+    "slug": "art-133",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 134,
+    "msgid": "2247488789",
+    "title": "Github万星，开源强化学习交易框架",
+    "zone": "reinforcement-learning",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "finrl",
+    "dup_of": null,
+    "framework": "FinRL",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "强化学习",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 135,
+    "msgid": "2247488795",
+    "title": "打工人救星，中科院推出PPTAgent框架",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "pptagent",
+    "dup_of": null,
+    "framework": "PPTAgent",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "跨周期",
+      "paradigm": "生成式大模型",
+      "alpha": "端到端表征",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 136,
+    "msgid": "2247488802",
+    "title": "AlphaPy：一站式算法交易机器学习框架",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": false,
+    "slug": "alphapy",
+    "dup_of": null,
+    "framework": "AlphaPy",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 137,
+    "msgid": "2247488811",
+    "title": "基于特征工程和转换方法的LightGBM资产预测",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "lightgbm",
+    "dup_of": null,
+    "framework": "LightGBM",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 138,
+    "msgid": "2247488817",
+    "title": "TrendMaster：基于Transformer的高精度股票趋势预测框架",
+    "zone": "time-series-forecasting",
+    "rating": "📖",
+    "page_worthy": false,
+    "slug": "trendmaster",
+    "dup_of": null,
+    "framework": "TrendMaster",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 139,
+    "msgid": "2247488839",
+    "title": "sktime：时间序列预测与分类的终极指南",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": false,
+    "slug": "sktime",
+    "dup_of": null,
+    "framework": "sktime",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 140,
+    "msgid": "2247488847",
+    "title": "TradeMaster ：基于强化学习的开源量化交易平台",
+    "zone": "reinforcement-learning",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "trademaster",
+    "dup_of": null,
+    "framework": "TradeMaster",
+    "venue": "NeurIPS22",
+    "arxiv": "2201.01901",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "强化学习",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 141,
+    "msgid": "2247488868",
+    "title": "ARMD：基于自回归滑动扩散模型的时间序列预测",
+    "zone": "time-series-forecasting",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "armd",
+    "dup_of": null,
+    "framework": "ARMD",
+    "venue": "AAAI 2025",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "生成式大模型",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 142,
+    "msgid": "2247488936",
+    "title": "LLM在金融时间序列中的应用及对比",
+    "zone": "time-series-forecasting",
+    "rating": "📖",
+    "page_worthy": true,
+    "slug": "llm",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": "2410.19025",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 143,
+    "msgid": "2247489003",
+    "title": "TabPFN-TS： 最强时间序列基础模型之一",
+    "zone": "time-series-forecasting",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "tabpfn-ts",
+    "dup_of": null,
+    "framework": "TabPFN-TS",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 144,
+    "msgid": "2247489018",
+    "title": "DeepScalper：深度强化学习捕捉日内交易的短暂机会",
+    "zone": "reinforcement-learning",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "deepscalper",
+    "dup_of": null,
+    "framework": "DeepScalper",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "高频日内",
+      "paradigm": "强化学习",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 145,
+    "msgid": "2247489039",
+    "title": "基于神经进化拓扑结构(NEAT)算法和多技术指标共振的股票交易策略",
+    "zone": "reinforcement-learning",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "neat-python",
+    "dup_of": null,
+    "framework": "NEAT-Python",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "元学习搜索",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 146,
+    "msgid": "2247489091",
+    "title": "从“人机对抗”到“人机协作”：股票分析的技艺与人工智能",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "art-146",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 147,
+    "msgid": "2247489104",
+    "title": "基于分层强化学习的日内风险因子挖掘",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "hppo-to",
+    "dup_of": null,
+    "framework": "HPPO-TO",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "高频日内",
+      "paradigm": "强化学习",
+      "alpha": "因子挖掘",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 148,
+    "msgid": "2247489113",
+    "title": "端到端基于LLM的增强型交易系统",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "llm-end-to-end-trading",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "高频日内",
+      "paradigm": "生成式大模型",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 149,
+    "msgid": "2247489127",
+    "title": "FinRLlama：基于强化学习和市场反馈的金融情感分析LLM优化方案",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "finrllama",
+    "dup_of": null,
+    "framework": "FinRLlama",
+    "venue": "ICAIF24",
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "日频波段",
+      "paradigm": "强化学习",
+      "alpha": "端到端表征",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 150,
+    "msgid": "2247489136",
+    "title": "AlphaSharpe：基于LLM的稳健风险调整指标框架",
+    "zone": "factor-mining",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "alphasharpe",
+    "dup_of": null,
+    "framework": "AlphaSharpe",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "因子挖掘",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 151,
+    "msgid": "2247489251",
+    "title": "FinRL-DeepSeek：基于LLM的强化学习交易代理",
+    "zone": "reinforcement-learning",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "finrl-deepseek",
+    "dup_of": null,
+    "framework": "FinRL-DeepSeek",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "日频波段",
+      "paradigm": "强化学习",
+      "alpha": "风险择时",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 152,
+    "msgid": "2247489266",
+    "title": "SAMBA：基于Mamba架构与图神经网络的股票价格预测模型",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "samba",
+    "dup_of": null,
+    "framework": "SAMBA",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 153,
+    "msgid": "2247489285",
+    "title": "LOB-Bench：应用于LOB的生成式人工智能基准测试",
+    "zone": "evaluation-benchmarks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "lob-bench",
+    "dup_of": null,
+    "framework": "LOB-Bench",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "生成式大模型",
+      "alpha": "端到端表征",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 154,
+    "msgid": "2247489303",
+    "title": "比IC更好的相关系数？",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "chatterjee",
+    "dup_of": null,
+    "framework": "Chatterjee ξ",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 155,
+    "msgid": "2247489317",
+    "title": "Auto.gov：基于强化学习的去中心化金融（DeFi）治理框架",
+    "zone": "reinforcement-learning",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "auto-gov",
+    "dup_of": null,
+    "framework": "Auto.gov",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "强化学习",
+      "alpha": "风险择时",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 156,
+    "msgid": "2247489356",
+    "title": "Scikit-LLM：让机器学习与大型语言模型无缝集成",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": false,
+    "slug": "scikit-llm",
+    "dup_of": null,
+    "framework": "scikit-llm",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "跨周期",
+      "paradigm": "生成式大模型",
+      "alpha": "端到端表征",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 157,
+    "msgid": "2247489365",
+    "title": "DishFT-GNN: 基于蒸馏的未来感知图神经网络用于股票趋势预测",
+    "zone": "graph-networks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "dishft-gnn",
+    "dup_of": null,
+    "framework": "DishFT-GNN",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "图关系",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 158,
+    "msgid": "2247489386",
+    "title": "HedgeAgents：基于对冲策略的多智能体金融交易系统",
+    "zone": "llm-agentic",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "hedgeagents",
+    "dup_of": null,
+    "framework": "HedgeAgents",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "多智能体博弈",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 159,
+    "msgid": "2247489429",
+    "title": "基于新闻相互作用与影响力网络的金融市场预测模型",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "finin",
+    "dup_of": null,
+    "framework": "FININ",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 160,
+    "msgid": "2247489459",
+    "title": "九坤联手亚研院复现DeepSeek-R1",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "logic-rl",
+    "dup_of": null,
+    "framework": "Logic-RL",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "跨周期",
+      "paradigm": "强化学习",
+      "alpha": "端到端表征",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 161,
+    "msgid": "2247489460",
+    "title": "利用LLM重新审视金融情感分析",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "llm-financial-sentiment",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 162,
+    "msgid": "2247489469",
+    "title": "FinBloom：基于实时金融数据的知识增强LLM",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "finbloom",
+    "dup_of": null,
+    "framework": "FinBloom",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "跨周期",
+      "paradigm": "生成式大模型",
+      "alpha": "端到端表征",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 163,
+    "msgid": "2247489480",
+    "title": "TLOB：基于双重注意力机制的Transformer模型用于限价订单簿数据预测",
+    "zone": "market-microstructure",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "tlob",
+    "dup_of": "2247490337",
+    "framework": "TLOB",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 164,
+    "msgid": "2247489490",
+    "title": "CryptoPulse：基于双重预测与跨相关市场指标的短期加密货币预测模型",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "cryptopulse",
+    "dup_of": null,
+    "framework": "CryptoPulse",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 165,
+    "msgid": "2247489535",
+    "title": "TimeKAN：基于KAN的时间序列预测模型",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "timekan",
+    "dup_of": null,
+    "framework": "TimeKAN",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 166,
+    "msgid": "2247489557",
+    "title": "万字长文：深度学习在资产管理中的应用",
+    "zone": "unsorted",
+    "rating": "📖",
+    "page_worthy": false,
+    "slug": "art-166",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 167,
+    "msgid": "2247489565",
+    "title": "KAG + 多模态 RAG + LLM Agents：构建强大的AI推理系统",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "kag",
+    "dup_of": null,
+    "framework": "KAG",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "跨周期",
+      "paradigm": "生成式大模型",
+      "alpha": "端到端表征",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 168,
+    "msgid": "2247489609",
+    "title": "强化学习用于量化交易：技术指标与策略优化研究",
+    "zone": "reinforcement-learning",
+    "rating": "📖",
+    "page_worthy": true,
+    "slug": "gym-anytrading",
+    "dup_of": null,
+    "framework": "gym-anytrading",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "强化学习",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 169,
+    "msgid": "2247489625",
+    "title": "融合前沿深度学习模型的金融时序预测框架",
+    "zone": "evaluation-benchmarks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "fintsbridge",
+    "dup_of": null,
+    "framework": "FinTSBridge",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 170,
+    "msgid": "2247489639",
+    "title": "桥接学术与落地！同济、清华提出实用的金融时间序列全维度评测系统",
+    "zone": "evaluation-benchmarks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "fintsb",
+    "dup_of": null,
+    "framework": "FinTSB",
+    "venue": null,
+    "arxiv": "2502.18834",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 171,
+    "msgid": "2247489671",
+    "title": "高频交易中的标签不平衡问题研究",
+    "zone": "market-microstructure",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "art-171",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 172,
+    "msgid": "2247489684",
+    "title": "ReFocus：强化中频与关键频建模，超越iTransformer",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "refocus",
+    "dup_of": null,
+    "framework": "ReFocus",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 173,
+    "msgid": "2247489712",
+    "title": "视觉胜于文本：LLM在交易中更好的应用方式？",
+    "zone": "llm-agentic",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "agent-trading-arena",
+    "dup_of": null,
+    "framework": "Agent Trading Arena",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "多智能体博弈",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 174,
+    "msgid": "2247489723",
+    "title": "强化学习新突破：集成方法+GPU并行模拟用于交易",
+    "zone": "reinforcement-learning",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "gpu",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "强化学习",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 175,
+    "msgid": "2247489733",
+    "title": "MSGNet：多尺度融合相关性学习的时间序列预测模型",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "msgnet",
+    "dup_of": null,
+    "framework": "MSGNet",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 176,
+    "msgid": "2247489748",
+    "title": "基于LOB的最先进的深度学习模型全面对比",
+    "zone": "evaluation-benchmarks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "lobcast",
+    "dup_of": null,
+    "framework": "LOBCAST",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 177,
+    "msgid": "2247489759",
+    "title": "基于新型收益加权损失函数的深度学习模型",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "art-177",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 178,
+    "msgid": "2247489769",
+    "title": "AAAI 25 | LSTD: 识别长短期潜在变量，增强时序预测效果",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "lstd",
+    "dup_of": null,
+    "framework": "LSTD",
+    "venue": "AAAI25",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "因果结构",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 179,
+    "msgid": "2247489777",
+    "title": "基于 Informer 结构的高频比特币策略研究",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "informer",
+    "dup_of": null,
+    "framework": "Informer",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 180,
+    "msgid": "2247489784",
+    "title": "半决策导向学习与深度集成：稳健投资组合优化框架",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "sdfl",
+    "dup_of": null,
+    "framework": "SDFL",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 181,
+    "msgid": "2247489829",
+    "title": "从深度学习到大模型：一篇文章搞懂量化投资中的AI应用",
+    "zone": "llm-agentic",
+    "rating": "📖",
+    "page_worthy": false,
+    "slug": "ai",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "跨周期",
+      "paradigm": "生成式大模型",
+      "alpha": "因子挖掘",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 182,
+    "msgid": "2247489860",
+    "title": "基于图神经网络的高频交易系统",
+    "zone": "graph-networks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "galstm",
+    "dup_of": null,
+    "framework": "GALSTM",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "图关系",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 183,
+    "msgid": "2247489904",
+    "title": "基于宏观经济波动、技术指标的加密货币预测模型",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "cryptopulse",
+    "dup_of": "2247489490",
+    "framework": "CryptoPulse",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 184,
+    "msgid": "2247489924",
+    "title": "利用LLM进行Alpha挖掘和策略优化",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "alpha-grail",
+    "dup_of": null,
+    "framework": "Alpha Grail",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "因子挖掘",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 185,
+    "msgid": "2247489934",
+    "title": "基于改进CTGAN与特征融合的资产配置模型",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "ctgan-cvar",
+    "dup_of": null,
+    "framework": "改进CTGAN与CVaR组合优化",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "生成式大模型",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 186,
+    "msgid": "2247489951",
+    "title": "股票市场宏观特性",
+    "zone": "portfolio-optimization",
+    "rating": "📖",
+    "page_worthy": false,
+    "slug": "spt",
+    "dup_of": null,
+    "framework": "随机投资组合理论(SPT)",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "风险择时",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 187,
+    "msgid": "2247489985",
+    "title": "深度强化学习在期权对冲中的应用",
+    "zone": "reinforcement-learning",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "art-187",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "强化学习",
+      "alpha": "风险择时",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 188,
+    "msgid": "2247490029",
+    "title": "深度强化学习在多资产交易中的应用",
+    "zone": "reinforcement-learning",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "dqn",
+    "dup_of": null,
+    "framework": "DQN",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "强化学习",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 189,
+    "msgid": "2247490051",
+    "title": "基于深度强化学习的LOB做市策略研究",
+    "zone": "market-microstructure",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "attn-lob",
+    "dup_of": null,
+    "framework": "Attn-LOB",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "强化学习",
+      "alpha": "端到端表征",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 190,
+    "msgid": "2247490063",
+    "title": "JF | 消失的指数效应",
+    "zone": "market-microstructure",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "jf",
+    "dup_of": null,
+    "framework": null,
+    "venue": "JF",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 191,
+    "msgid": "2247490093",
+    "title": "基于深度学习的VWAP执行策略",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "tln-vwap",
+    "dup_of": null,
+    "framework": "TLN-VWAP",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 192,
+    "msgid": "2247490128",
+    "title": "连续值预测：最小时间序列Transformer",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "mits-transformer",
+    "dup_of": null,
+    "framework": "MiTS-Transformer",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 193,
+    "msgid": "2247490139",
+    "title": "MCP深入分析：现状、安全与未来",
+    "zone": "llm-agentic",
+    "rating": "📖",
+    "page_worthy": false,
+    "slug": "mcp",
+    "dup_of": null,
+    "framework": "MCP",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "跨周期",
+      "paradigm": "生成式大模型",
+      "alpha": "端到端表征",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 194,
+    "msgid": "2247490147",
+    "title": "多模态时间序列分析：教程与综述",
+    "zone": "time-series-forecasting",
+    "rating": "📖",
+    "page_worthy": false,
+    "slug": "art-194",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "跨周期",
+      "paradigm": "生成式大模型",
+      "alpha": "端到端表征",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 195,
+    "msgid": "2247490164",
+    "title": "融合LLM观点的BL模型",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "llm-bl",
+    "dup_of": null,
+    "framework": "LLM-BL",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 196,
+    "msgid": "2247490198",
+    "title": "半个世纪以来的宏观动量投资策略",
+    "zone": "portfolio-optimization",
+    "rating": "📖",
+    "page_worthy": false,
+    "slug": "art-196",
+    "dup_of": null,
+    "framework": "宏观动量策略",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "风险择时",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 197,
+    "msgid": "2247490203",
+    "title": "机器学习在金融市场中的应用：何时有效，何时无效",
+    "zone": "evaluation-benchmarks",
+    "rating": "📖",
+    "page_worthy": false,
+    "slug": "art-197",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 198,
+    "msgid": "2247490218",
+    "title": "QuantBench：用于量化投资的AI方法基准测试",
+    "zone": "evaluation-benchmarks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "quantbench",
+    "dup_of": null,
+    "framework": "QuantBench",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "跨周期",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 199,
+    "msgid": "2247490228",
+    "title": "牛津大学 ｜ ClusterLOB：利用限价订单簿中的聚类增强交易策略",
+    "zone": "market-microstructure",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "clusterlob",
+    "dup_of": null,
+    "framework": "ClusterLOB",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 200,
+    "msgid": "2247490274",
+    "title": "DeepVol：基于高频数据的波动率预测模型",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "deepvol",
+    "dup_of": null,
+    "framework": "DeepVol",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "风险择时",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 201,
+    "msgid": "2247490285",
+    "title": "基于机器学习及宏观经济状态检测的战术资产配置",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "art-201",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "风险择时",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 202,
+    "msgid": "2247490303",
+    "title": "Logic-Q：基于程序草图调整的DRL量化交易框架",
+    "zone": "reinforcement-learning",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "logic-q",
+    "dup_of": null,
+    "framework": "Logic-Q",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "强化学习",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 203,
+    "msgid": "2247490326",
+    "title": "基于LLM的混合专家交易框架",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "llmoe",
+    "dup_of": "2247490939",
+    "framework": "LLMoE",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "风险择时",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 204,
+    "msgid": "2247490337",
+    "title": "TLOB：双重注意力机制用于限价订单簿预测",
+    "zone": "market-microstructure",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "tlob",
+    "dup_of": null,
+    "framework": "TLOB",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 205,
+    "msgid": "2247490346",
+    "title": "RAG-MCP：解决大语言模型工具选择中的提示膨胀难题",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "rag-mcp",
+    "dup_of": null,
+    "framework": "RAG-MCP",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "跨周期",
+      "paradigm": "生成式大模型",
+      "alpha": "端到端表征",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 206,
+    "msgid": "2247490382",
+    "title": "高频数据分析中的主要问题：解决方案综述",
+    "zone": "market-microstructure",
+    "rating": "📖",
+    "page_worthy": false,
+    "slug": "art-206",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 207,
+    "msgid": "2247490397",
+    "title": "ICML 25 | TimeDART:自监督时间序列预训练框架",
+    "zone": "time-series-forecasting",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "timedart",
+    "dup_of": null,
+    "framework": "TimeDART",
+    "venue": "ICML25",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "生成式大模型",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 208,
+    "msgid": "2247490404",
+    "title": "稀疏最小方差投资组合的优化框架",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "grid-fw",
+    "dup_of": null,
+    "framework": "Grid-FW",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "元学习搜索",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 209,
+    "msgid": "2247490422",
+    "title": "FlowHFT：基于模仿学习和网格搜索微调，学习并超越专家策略",
+    "zone": "market-microstructure",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "flowhft",
+    "dup_of": null,
+    "framework": "FlowHFT",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "强化学习",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 210,
+    "msgid": "2247490469",
+    "title": "R&D-Agent-Quant",
+    "zone": "llm-agentic",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "rd-agent-q",
+    "dup_of": null,
+    "framework": "RD-Agent(Q)",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "因子挖掘",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 211,
+    "msgid": "2247490475",
+    "title": "基于新闻情绪的可解释机器学习宏观Alpha策略研究",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "finbert-xgboost-shap",
+    "dup_of": null,
+    "framework": "FinBERT+XGBoost+SHAP",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 212,
+    "msgid": "2247490558",
+    "title": "九坤团队新作！一条数据训练AI超越上万条数据",
+    "zone": "llm-agentic",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "one-shot-em",
+    "dup_of": null,
+    "framework": "One-shot EM",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "跨周期",
+      "paradigm": "生成式大模型",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 213,
+    "msgid": "2247490566",
+    "title": "FreqMoE: 通过频率分解MoE提升时间序列预测性能",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "freqmoe",
+    "dup_of": null,
+    "framework": "FreqMoE",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 214,
+    "msgid": "2247490592",
+    "title": "如何利用加密货币价格相关性网络优化投资组合？",
+    "zone": "graph-networks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "art-214",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 215,
+    "msgid": "2247490617",
+    "title": "Quantformer：从注意力到利润的量化策略",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "quantformer",
+    "dup_of": null,
+    "framework": "Quantformer",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 216,
+    "msgid": "2247490632",
+    "title": "美联储首席经济学家 |  高通量资产定价",
+    "zone": "factor-mining",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "eb",
+    "dup_of": null,
+    "framework": "经验贝叶斯(EB)",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "元学习搜索",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 217,
+    "msgid": "2247490641",
+    "title": "清华IIIS学院 | LLM+MCTS驱动的Alpha因子挖掘框架",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "llm-mcts-alpha-mining",
+    "dup_of": null,
+    "framework": "LLM+MCTS Alpha Mining",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 218,
+    "msgid": "2247490650",
+    "title": "QuantML社群最新重磅开源 | TradingAgents：多智能体交易框架",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "tradingagents",
+    "dup_of": null,
+    "framework": "TradingAgents",
+    "venue": null,
+    "arxiv": "2412.20138",
+    "axes": {
+      "data": "文本另类",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "多智能体博弈",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 219,
+    "msgid": "2247490686",
+    "title": "CMU & Bloomberg | DELPHYNE：面向通用和金融时间序列的预训练模型",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "delphyne",
+    "dup_of": null,
+    "framework": "Delphyne",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 220,
+    "msgid": "2247490695",
+    "title": "Stanford |  NGBoost：用于概率预测的自然梯度提升算法",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "ngboost",
+    "dup_of": null,
+    "framework": "NGBoost",
+    "venue": "ICML19",
+    "arxiv": "1910.03225",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 221,
+    "msgid": "2247490700",
+    "title": "中国的散户交易与收益可预测性",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "fama-macbeth",
+    "dup_of": null,
+    "framework": "Fama-MacBeth回归",
+    "venue": "JFQA",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 222,
+    "msgid": "2247490720",
+    "title": "AAAI 25 | 重新审视多元时间序列预测中的注意力机制",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "fsatten-soatten",
+    "dup_of": null,
+    "framework": "FSatten / SOatten",
+    "venue": "AAAI 25",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 223,
+    "msgid": "2247490730",
+    "title": "KDD 25 | 学习通用多层次市场非理性因子以提升股票收益预测",
+    "zone": "factor-mining",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "umi",
+    "dup_of": null,
+    "framework": "UMI",
+    "venue": "KDD 2025",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 224,
+    "msgid": "2247490740",
+    "title": "动态网格交易策略：从零期望到超越市场",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "dgt",
+    "dup_of": null,
+    "framework": "DGT",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 225,
+    "msgid": "2247490750",
+    "title": "基于多源融合的通用化股票选择框架",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "art-225",
+    "dup_of": null,
+    "framework": "多源融合通用选股框架",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 226,
+    "msgid": "2247490762",
+    "title": "ICML 25 | 基于分布强化学习的Alpha因子挖掘",
+    "zone": "factor-mining",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "alphaqcm",
+    "dup_of": null,
+    "framework": "AlphaQCM",
+    "venue": "ICML25",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "强化学习",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 227,
+    "msgid": "2247490772",
+    "title": "基于图深度学习的指数预测",
+    "zone": "graph-networks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "gat-cnnpred",
+    "dup_of": null,
+    "framework": "GAT-CNNpred",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 228,
+    "msgid": "2247490786",
+    "title": "StockAICloud：基于AI和Serverless云计算的股票预测框架",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "stockaicloud",
+    "dup_of": null,
+    "framework": "StockAICloud",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 229,
+    "msgid": "2247490798",
+    "title": "深度K线学习器的数据增强",
+    "zone": "data-generation-augmentation",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "gaf-cnn",
+    "dup_of": null,
+    "framework": "改进局部搜索攻击采样/GAF-CNN",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 230,
+    "msgid": "2247490806",
+    "title": "周期性数据赋能TabPFN时间序列预测",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "tabpfn",
+    "dup_of": null,
+    "framework": "TabPFN",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 231,
+    "msgid": "2247490817",
+    "title": "自适应量化交易：一种模仿深度强化学习方法",
+    "zone": "reinforcement-learning",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "irdpg",
+    "dup_of": null,
+    "framework": "iRDPG",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "高频日内",
+      "paradigm": "强化学习",
+      "alpha": "端到端表征",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 232,
+    "msgid": "2247490828",
+    "title": "基于宏观-板块-微观指标耦合的股票表征学习",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "co-cpc",
+    "dup_of": null,
+    "framework": "Co-CPC",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 233,
+    "msgid": "2247490838",
+    "title": "意图感知通信：多订单执行的多智能体强化学习",
+    "zone": "reinforcement-learning",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "iac-marl",
+    "dup_of": null,
+    "framework": "IaC-MARL",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "高频日内",
+      "paradigm": "强化学习",
+      "alpha": "组合执行优化",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 234,
+    "msgid": "2247490847",
+    "title": "RobustiPy：下一代多元宇宙样分析与模型稳健性量化框架",
+    "zone": "evaluation-benchmarks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "robustipy",
+    "dup_of": null,
+    "framework": "RobustiPy",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 235,
+    "msgid": "2247490858",
+    "title": "AAAI 25 | 融合扩散模型与专家混合的层级化股票预测研究",
+    "zone": "time-series-forecasting",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "dhmoe",
+    "dup_of": null,
+    "framework": "DHMOE",
+    "venue": "AAAI25",
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 236,
+    "msgid": "2247490865",
+    "title": "量子强化学习在行业轮动中的实践",
+    "zone": "reinforcement-learning",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "quantum-ppo-sector-rotation",
+    "dup_of": null,
+    "framework": "混合量子-经典PPO框架",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "强化学习",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 237,
+    "msgid": "2247490876",
+    "title": "基于多数据源的加密货币预测",
+    "zone": "factor-mining",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "fra",
+    "dup_of": null,
+    "framework": "FRA特征筛选算法",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "跨周期",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 238,
+    "msgid": "2247490889",
+    "title": "MetaTrader：基于双层强化学习的股票交易策略",
+    "zone": "reinforcement-learning",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "metatrader",
+    "dup_of": null,
+    "framework": "MetaTrader",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "强化学习",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 239,
+    "msgid": "2247490898",
+    "title": "利用深度平滑算子计算隐含波动率",
+    "zone": "time-series-forecasting",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "opds",
+    "dup_of": null,
+    "framework": "OpDS",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 240,
+    "msgid": "2247490909",
+    "title": "2024 JFQA 夏普奖出炉! 为何1/N分散化组合难以被击败？",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "2024-jfqa-1-n",
+    "dup_of": null,
+    "framework": null,
+    "venue": "JFQA",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 241,
+    "msgid": "2247490917",
+    "title": "DeepSupp：基于注意力机制的股票支撑位识别",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "deepsupp",
+    "dup_of": null,
+    "framework": "DeepSupp",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 242,
+    "msgid": "2247490927",
+    "title": "北京大学 & 正仁量化 | MASS：基于多智能体规模化模拟投资组合",
+    "zone": "llm-agentic",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "mass",
+    "dup_of": null,
+    "framework": "MASS",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "多智能体博弈",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 243,
+    "msgid": "2247490932",
+    "title": "LLM在金融领域的应用综述",
+    "zone": "llm-agentic",
+    "rating": "📖",
+    "page_worthy": false,
+    "slug": "llm",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 244,
+    "msgid": "2247490939",
+    "title": "基于LLM专家混合路由的交易框架",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "llmoe",
+    "dup_of": null,
+    "framework": "LLMOE",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "端到端表征",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 245,
+    "msgid": "2247490952",
+    "title": "扩散因子模型",
+    "zone": "data-generation-augmentation",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "art-245",
+    "dup_of": null,
+    "framework": "扩散因子模型",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 246,
+    "msgid": "2247490959",
+    "title": "量化中神经网络选择何种优化器？",
+    "zone": "time-series-forecasting",
+    "rating": "📖",
+    "page_worthy": false,
+    "slug": "art-246",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 247,
+    "msgid": "2247490973",
+    "title": "金融数据API全面指南",
+    "zone": "unsorted",
+    "rating": "📖",
+    "page_worthy": false,
+    "slug": "api",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 248,
+    "msgid": "2247490979",
+    "title": "专业级AI股票分析提示词",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": false,
+    "slug": "ai",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "中长周期",
+      "paradigm": "生成式大模型",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 249,
+    "msgid": "2247490991",
+    "title": "ML-GAT：用于股票预测的多层图注意力模型",
+    "zone": "graph-networks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "ml-gat",
+    "dup_of": null,
+    "framework": "ML-GAT",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 250,
+    "msgid": "2247491002",
+    "title": "KDD 25 |  时间至关重要：基于风险感知的时序预测与分配框架",
+    "zone": "portfolio-optimization",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "rts-pno",
+    "dup_of": null,
+    "framework": "RTS-PnO",
+    "venue": "KDD25",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 251,
+    "msgid": "2247491048",
+    "title": "清华大学&序明基金 |  MIGA模型：融合MoE与组聚合策略的股票预测模型",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "miga",
+    "dup_of": null,
+    "framework": "MIGA",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 252,
+    "msgid": "2247491056",
+    "title": "用于关系驱动型股票走势预测的多图卷积网络",
+    "zone": "graph-networks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "multi-gcgru",
+    "dup_of": null,
+    "framework": "Multi-GCGRU",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "图关系",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 253,
+    "msgid": "2247491063",
+    "title": "结合强化学习与LLM的量化模型",
+    "zone": "reinforcement-learning",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "stock-evol-instruct",
+    "dup_of": null,
+    "framework": "Stock-Evol-Instruct",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "日频波段",
+      "paradigm": "强化学习",
+      "alpha": "端到端表征",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 254,
+    "msgid": "2247491088",
+    "title": "DiT-LSTM-SVAR：消除随机游走噪声的深度学习投资组合",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "dit-lstm-svar",
+    "dup_of": null,
+    "framework": "DiT-LSTM-SVAR",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 255,
+    "msgid": "2247491140",
+    "title": "量化中另类损失函数",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "transformer-madl",
+    "dup_of": null,
+    "framework": "Transformer+MADL",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 256,
+    "msgid": "2247491163",
+    "title": "清华大学&易方达基金 | 综述：量化与大模型的融合",
+    "zone": "llm-agentic",
+    "rating": "📖",
+    "page_worthy": false,
+    "slug": "art-256",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "跨周期",
+      "paradigm": "生成式大模型",
+      "alpha": "端到端表征",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 257,
+    "msgid": "2247491174",
+    "title": "从“预测市场”到“学习决策”：基于监督学习决策与集成学习的投资组合优化框架",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "dsl",
+    "dup_of": null,
+    "framework": "DSL",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 258,
+    "msgid": "2247491189",
+    "title": "HARLF：分层强化学习如何融合数据与情感",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "harlf",
+    "dup_of": null,
+    "framework": "HARLF",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "中长周期",
+      "paradigm": "强化学习",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 259,
+    "msgid": "2247491205",
+    "title": "达摩院&中科大 | DiffsFormer: 扩散模型助力因子数据增强",
+    "zone": "data-generation-augmentation",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "diffsformer",
+    "dup_of": null,
+    "framework": "DiffsFormer",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "因子挖掘",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 260,
+    "msgid": "2247491231",
+    "title": "先解释，后预测：金融关系图谱的“可解释性”框架",
+    "zone": "graph-networks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "fri",
+    "dup_of": "2247491788",
+    "framework": "FRI",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "图关系",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 261,
+    "msgid": "2247491248",
+    "title": "AI自我进化：模型架构探索的AlphaGo时刻",
+    "zone": "llm-agentic",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "asi-arch",
+    "dup_of": null,
+    "framework": "ASI-ARCH",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "跨周期",
+      "paradigm": "元学习搜索",
+      "alpha": "端到端表征",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 262,
+    "msgid": "2247491262",
+    "title": "KDD 25 | 复旦&蚂蚁：多周期时间序列预测框架",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "mlf",
+    "dup_of": null,
+    "framework": "MLF",
+    "venue": "KDD 2025",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 263,
+    "msgid": "2247491281",
+    "title": "ICML 25 | 华为诺亚方舟：TimePro高效多元时序预测",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "timepro",
+    "dup_of": null,
+    "framework": "TimePro",
+    "venue": "ICML 25",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 264,
+    "msgid": "2247491315",
+    "title": "KDD 25 北京大学 | Enhancer：具备分布感知的时序预测元学习框架",
+    "zone": "time-series-forecasting",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "enhancer",
+    "dup_of": null,
+    "framework": "Enhancer",
+    "venue": "KDD 2025",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "元学习搜索",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 265,
+    "msgid": "2247491334",
+    "title": "清华大学 × 易方达 | MERA：借助“历史经验”与“专家分工”攻克股票模式识别",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "mera",
+    "dup_of": null,
+    "framework": "MERA",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 266,
+    "msgid": "2247491353",
+    "title": "清华大学 | Kronos：一个专为量化打造的K线基础模型",
+    "zone": "time-series-forecasting",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "kronos",
+    "dup_of": null,
+    "framework": "Kronos",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "生成式大模型",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 267,
+    "msgid": "2247491371",
+    "title": "优胜劣汰：ContestTrade多智能体交易架构",
+    "zone": "llm-agentic",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "contesttrade",
+    "dup_of": null,
+    "framework": "ContestTrade",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "多智能体博弈",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 268,
+    "msgid": "2247491386",
+    "title": "KDD 25 | 基于股票数据定制化预训练模型",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "sspt",
+    "dup_of": null,
+    "framework": "SSPT",
+    "venue": "KDD 2025",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 269,
+    "msgid": "2247491411",
+    "title": "KDD 25 | PDU: 如何利用“不确定性对比”发掘稳健超额收益",
+    "zone": "graph-networks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "pdu",
+    "dup_of": null,
+    "framework": "PDU",
+    "venue": "KDD 2025",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 270,
+    "msgid": "2247491423",
+    "title": "AlphaAgent：LLM如何终结Alpha衰减，挖掘持久有效的量化因子",
+    "zone": "factor-mining",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "alphaagent",
+    "dup_of": null,
+    "framework": "AlphaAgent",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "因子挖掘",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 271,
+    "msgid": "2247491434",
+    "title": "北京大学 × 正仁量化 | AlphaEval：多维度、高效Alpha因子挖掘评价体系",
+    "zone": "evaluation-benchmarks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "alphaeval",
+    "dup_of": null,
+    "framework": "AlphaEval",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "元学习搜索",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 272,
+    "msgid": "2247491450",
+    "title": "将利润作为损失函数构造端到端交易模型",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "art-272",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 273,
+    "msgid": "2247491456",
+    "title": "JFE | 18,000个信号中挖掘Alpha：从“信号宇宙”看特征工程的重要性",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "brt-nn",
+    "dup_of": null,
+    "framework": "BRT/NN+递归排序",
+    "venue": "JFE",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 274,
+    "msgid": "2247491466",
+    "title": "贝莱德 | AlphaAgents: 多智能体在股票投资组合构建中的应用",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "alphaagents",
+    "dup_of": null,
+    "framework": "AlphaAgents",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "多智能体博弈",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 275,
+    "msgid": "2247491493",
+    "title": "克服静态图局限：融合动态时序与静态关系的金融市场预测模型",
+    "zone": "graph-networks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "dgrcl",
+    "dup_of": null,
+    "framework": "DGRCL",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "图关系",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 276,
+    "msgid": "2247491504",
+    "title": "CIKM 25 | FinCast: 首个十亿级参数的金融预测基础模型",
+    "zone": "time-series-forecasting",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "fincast",
+    "dup_of": null,
+    "framework": "FinCast",
+    "venue": "CIKM 2025",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "生成式大模型",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 277,
+    "msgid": "2247491510",
+    "title": "QTMRL：融合多维指标与强化学习，提升交易决策稳健性",
+    "zone": "reinforcement-learning",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "qtmrl",
+    "dup_of": null,
+    "framework": "QTMRL",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "强化学习",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 278,
+    "msgid": "2247491524",
+    "title": "同花顺 | R²-SAC: 复杂市场环境下的“松弛-精炼”强化学习交易策略",
+    "zone": "reinforcement-learning",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "r-sac",
+    "dup_of": null,
+    "framework": "R²-SAC",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "强化学习",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 279,
+    "msgid": "2247491653",
+    "title": "JFE ｜ 高夏普的陷阱：多因子模型的样本外表现衰减",
+    "zone": "evaluation-benchmarks",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "art-279",
+    "dup_of": null,
+    "framework": "盈亏平衡夏普比率",
+    "venue": "JFE",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 280,
+    "msgid": "2247491664",
+    "title": "Web3 × AI Agents: 生态、集成与挑战",
+    "zone": "llm-agentic",
+    "rating": "📖",
+    "page_worthy": false,
+    "slug": "web3-ai-agents",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "跨周期",
+      "paradigm": "生成式大模型",
+      "alpha": "多智能体博弈",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 281,
+    "msgid": "2247491713",
+    "title": "技术指标神经网络",
+    "zone": "reinforcement-learning",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "tins",
+    "dup_of": null,
+    "framework": "TINs",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "强化学习",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 282,
+    "msgid": "2247491714",
+    "title": "利用自适应时间融合 Transformer 进行加密货币预测",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "tft",
+    "dup_of": null,
+    "framework": "自适应TFT建模",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 283,
+    "msgid": "2247491738",
+    "title": "字节出品，马斯克转发，AI离顶级金融分析师还有多远？",
+    "zone": "evaluation-benchmarks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "finsearchcomp",
+    "dup_of": null,
+    "framework": "FinSearchComp",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "跨周期",
+      "paradigm": "生成式大模型",
+      "alpha": "因子挖掘",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 284,
+    "msgid": "2247491760",
+    "title": "Bloomberg | 如何增强OHLC数据预测效果",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "bloomberg-ohlc",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 285,
+    "msgid": "2247491770",
+    "title": "Alpha-GPT：人机交互实现量化Alpha挖掘",
+    "zone": "factor-mining",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "alpha-gpt",
+    "dup_of": null,
+    "framework": "Alpha-GPT",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "高频日内",
+      "paradigm": "生成式大模型",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 286,
+    "msgid": "2247491778",
+    "title": "基于NGAT模型的股票长期趋势与风险建模",
+    "zone": "graph-networks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "ngat",
+    "dup_of": null,
+    "framework": "NGAT",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "图关系",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 287,
+    "msgid": "2247491788",
+    "title": "面向解释性的金融图谱量化框架",
+    "zone": "graph-networks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "fri",
+    "dup_of": null,
+    "framework": "FRI框架",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "图关系",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 288,
+    "msgid": "2247491804",
+    "title": "基于混合专家的深度强化学习端到端投资组合优化",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "moedrlpm",
+    "dup_of": null,
+    "framework": "MoEDRLPM",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "强化学习",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 289,
+    "msgid": "2247491825",
+    "title": "美股日内盈利策略",
+    "zone": "factor-mining",
+    "rating": "📖",
+    "page_worthy": false,
+    "slug": "orb-relvol",
+    "dup_of": null,
+    "framework": "ORB+RelVol",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 290,
+    "msgid": "2247491844",
+    "title": "北京大学 × 正仁量化 | ALPHASAGE：融合GFlowNets的结构感知Alpha挖掘",
+    "zone": "factor-mining",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "alphasage",
+    "dup_of": null,
+    "framework": "AlphaSAGE",
+    "venue": null,
+    "arxiv": "2509.25055",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "强化学习",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 291,
+    "msgid": "2247491859",
+    "title": "贝莱德 | 投资组合相似性度量",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "strapsim",
+    "dup_of": null,
+    "framework": "STRAPSim",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 292,
+    "msgid": "2247491869",
+    "title": "面向FPGA的通用化LSTM端到端硬件加速框架",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "finn",
+    "dup_of": null,
+    "framework": "FINN扩展框架",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 293,
+    "msgid": "2247491885",
+    "title": "Two Sigma | 双向循环神经网络",
+    "zone": "time-series-forecasting",
+    "rating": "📖",
+    "page_worthy": true,
+    "slug": "brnn",
+    "dup_of": null,
+    "framework": "BRNN",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 294,
+    "msgid": "2247491898",
+    "title": "Signature-Informed Transformer在端到端资产配置中的应用",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "signature-informed-transformer-sit",
+    "dup_of": null,
+    "framework": "Signature-Informed Transformer (SIT)",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 295,
+    "msgid": "2247491913",
+    "title": "剑桥 | 从新闻到回报：因果球体超图Transformer",
+    "zone": "causal-structural",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "csht",
+    "dup_of": null,
+    "framework": "CSHT",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "日频波段",
+      "paradigm": "因果结构",
+      "alpha": "端到端表征",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 296,
+    "msgid": "2247491933",
+    "title": "IJCAI 25 | AlphaGAT：结合Alpha 因子挖掘和图注意力网络的自适应投资组合框架",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "alphagat",
+    "dup_of": null,
+    "framework": "AlphaGAT",
+    "venue": "IJCAI 25",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "强化学习",
+      "alpha": "因子挖掘",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 297,
+    "msgid": "2247491949",
+    "title": "深度强化学习在期权中的应用",
+    "zone": "reinforcement-learning",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "td3",
+    "dup_of": null,
+    "framework": "TD3",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "高频日内",
+      "paradigm": "强化学习",
+      "alpha": "风险择时",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 298,
+    "msgid": "2247491959",
+    "title": "北大光华 × 清华五道口 ｜ 盈余公告漂移",
+    "zone": "causal-structural",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "art-298",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "因果结构",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 299,
+    "msgid": "2247491994",
+    "title": "Transformer量化选股模型应该使用何种损失函数？",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "portfoliomaster",
+    "dup_of": null,
+    "framework": "PortfolioMASTER",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 300,
+    "msgid": "2247492023",
+    "title": "JFQA｜投资者关注度与内幕交易",
+    "zone": "factor-mining",
+    "rating": "📖",
+    "page_worthy": true,
+    "slug": "jfqa",
+    "dup_of": null,
+    "framework": null,
+    "venue": "JFQA",
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 301,
+    "msgid": "2247492036",
+    "title": "AlphaQuanter：端到端Agentic强化学习交易框架",
+    "zone": "reinforcement-learning",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "alphaquanter",
+    "dup_of": null,
+    "framework": "AlphaQuanter",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "日频波段",
+      "paradigm": "强化学习",
+      "alpha": "端到端表征",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 302,
+    "msgid": "2247492044",
+    "title": "别再傻傻地固定周期调仓了！DeepAries教你聪明地选择交易时机",
+    "zone": "reinforcement-learning",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "deeparies",
+    "dup_of": null,
+    "framework": "DeepAries",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "强化学习",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 303,
+    "msgid": "2247492053",
+    "title": "LLM增强的BL组合优化框架",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "llm-blm",
+    "dup_of": null,
+    "framework": "LLM-BLM框架",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 304,
+    "msgid": "2247492102",
+    "title": "中国科学院大学 ｜ LLM x 强化学习：从新闻中学习交易",
+    "zone": "reinforcement-learning",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "llm-x",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "高频日内",
+      "paradigm": "强化学习",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 305,
+    "msgid": "2247492112",
+    "title": "耶鲁 x AQR ｜ 模型越复杂，效果越好？",
+    "zone": "time-series-forecasting",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "rff",
+    "dup_of": null,
+    "framework": "RFF+岭回归",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "风险择时",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 306,
+    "msgid": "2247492124",
+    "title": "人大高瓴 x 智源 ｜ FinSight：会思考、懂绘图、善写作的专业AI金融分析师",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "finsight",
+    "dup_of": null,
+    "framework": "FinSight",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "中长周期",
+      "paradigm": "生成式大模型",
+      "alpha": "多智能体博弈",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 307,
+    "msgid": "2247492132",
+    "title": "告别特征冗余：用量子退火精炼你的Alpha因子",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "miqubo",
+    "dup_of": null,
+    "framework": "MIQUBO",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "元学习搜索",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 308,
+    "msgid": "2247492144",
+    "title": "NeurIPS 25 ｜ AI投资：是财富密码，还是回测陷阱？",
+    "zone": "llm-agentic",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "deepfund",
+    "dup_of": null,
+    "framework": "DeepFund",
+    "venue": "NeurIPS25",
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "组合执行优化",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 309,
+    "msgid": "2247492157",
+    "title": "AI像顶级分析师一样思考：用LLM预测市场“黑天鹅”",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "trr",
+    "dup_of": null,
+    "framework": "TRR",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "风险择时",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 310,
+    "msgid": "2247492169",
+    "title": "美联储 ｜ 有形之手：基金经理预期与A股非对称价格效应",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "fund-manager-expectation-asymmetry",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 311,
+    "msgid": "2247492182",
+    "title": "华尔街遇见大型强子对撞机：一种新的市场微观结构分析范式",
+    "zone": "market-microstructure",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "art-311",
+    "dup_of": null,
+    "framework": "基于事件的冲击剖面",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "因果结构",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 312,
+    "msgid": "2247492199",
+    "title": "牛津 x JP Morgan ｜ 告别效用函数：GAN“克隆”基金经理",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "cgan",
+    "dup_of": null,
+    "framework": "cGAN策略克隆框架",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "生成式大模型",
+      "alpha": "端到端表征",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 313,
+    "msgid": "2247492212",
+    "title": "UCL x JP Morgan ｜ AI做市商悖论：利润飙升，对手滑点为何反降？",
+    "zone": "market-microstructure",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "hawkes-lob-ppo-sil",
+    "dup_of": null,
+    "framework": "Hawkes LOB + PPO/SIL",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "强化学习",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 314,
+    "msgid": "2247492230",
+    "title": "如何破解传统因子与新闻的融合困境？",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "mixture-decoupled",
+    "dup_of": null,
+    "framework": "Mixture Decoupled",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 315,
+    "msgid": "2247492240",
+    "title": "240倍性能飞跃：首个GPU高频交易MARL框架",
+    "zone": "reinforcement-learning",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "jaxmarl-hft",
+    "dup_of": null,
+    "framework": "JaxMARL-HFT",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "强化学习",
+      "alpha": "多智能体博弈",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 316,
+    "msgid": "2247492259",
+    "title": "“择时”与“对冲”双管齐下：OPHR强化学习征服波动率交易",
+    "zone": "reinforcement-learning",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "ophr",
+    "dup_of": null,
+    "framework": "OPHR",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "强化学习",
+      "alpha": "风险择时",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 317,
+    "msgid": "2247492269",
+    "title": "DeltaLag: 挖掘动态领涨-滞涨Alpha",
+    "zone": "graph-networks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "deltalag",
+    "dup_of": null,
+    "framework": "DeltaLag",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 318,
+    "msgid": "2247492286",
+    "title": "万字长文 | 文本情绪与公告：农产品期货的反事实因果分析",
+    "zone": "causal-structural",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "art-318",
+    "dup_of": null,
+    "framework": "高斯过程因果检验框架",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "日频波段",
+      "paradigm": "因果结构",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 319,
+    "msgid": "2247492300",
+    "title": "寻找顶级回报：新颖损失函数实现61.73%年回报与1.18夏普比率",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "art-319",
+    "dup_of": null,
+    "framework": "收益加权损失函数",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 320,
+    "msgid": "2247492312",
+    "title": "解构市场：基于时间序列对比学习的资产嵌入框架",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "art-320",
+    "dup_of": null,
+    "framework": "对比资产嵌入框架",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 321,
+    "msgid": "2247492328",
+    "title": "NeurIPS 25 | DMMV: 多模态视角可以为时间序列预测带来什么？",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "dmmv",
+    "dup_of": null,
+    "framework": "DMMV",
+    "venue": "NeurIPS25",
+    "arxiv": "2505.24003",
+    "axes": {
+      "data": "多模态",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 322,
+    "msgid": "2247492356",
+    "title": "破译散户抱团密码：基于动态图嵌入与领域知识的Meme股行情预判",
+    "zone": "graph-networks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "dins",
+    "dup_of": null,
+    "framework": "DINS",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "图关系",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 323,
+    "msgid": "2247492362",
+    "title": "夏普 13 的“独角兽”策略？",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "unicorn-edge",
+    "dup_of": null,
+    "framework": "Unicorn Edge",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 324,
+    "msgid": "2247492379",
+    "title": "为何因子因果分析是盈利的唯一前提？",
+    "zone": "causal-structural",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "art-324",
+    "dup_of": null,
+    "framework": "因果因子投资",
+    "venue": "JPM",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "因果结构",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 325,
+    "msgid": "2247492399",
+    "title": "基于在线集成学习的行业轮动策略",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "mwum",
+    "dup_of": null,
+    "framework": "MWUM在线集成框架",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 326,
+    "msgid": "2247492409",
+    "title": "深度均值回归",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "orca",
+    "dup_of": null,
+    "framework": "ORCA",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 327,
+    "msgid": "2247492428",
+    "title": "FNIRVAR：挖掘高维因子模型下的隐含网络 Alpha",
+    "zone": "graph-networks",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "fnirvar",
+    "dup_of": null,
+    "framework": "FNIRVAR",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 328,
+    "msgid": "2247492450",
+    "title": "基于注意力机制的端到端统计套利模型",
+    "zone": "factor-mining",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "attention-factor-model",
+    "dup_of": null,
+    "framework": "Attention Factor Model",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 329,
+    "msgid": "2247492463",
+    "title": "基于图像的配对交易框架",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "isept",
+    "dup_of": null,
+    "framework": "ISEPT",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 330,
+    "msgid": "2247492484",
+    "title": "牛津大学 | 做市商的终极困境：如何破解“成交即亏损”的微观魔咒？",
+    "zone": "market-microstructure",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "art-330",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 331,
+    "msgid": "2247492494",
+    "title": "为什么你的策略回测完美，实盘腰斩？",
+    "zone": "evaluation-benchmarks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "walk-forward-analysis",
+    "dup_of": null,
+    "framework": "Walk-Forward Analysis / 分层验证框架",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 332,
+    "msgid": "2247492506",
+    "title": "解码高频算法交易的周期密码与隐藏Alpha",
+    "zone": "market-microstructure",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "art-332",
+    "dup_of": null,
+    "framework": "谱交易量模型",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 333,
+    "msgid": "2247492523",
+    "title": "解码动量溢出：日内-隔夜收益的非对称结构",
+    "zone": "market-microstructure",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "art-333",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 334,
+    "msgid": "2247492528",
+    "title": "寻找“丑陋的优势”：在加密市场的混乱中收割超额Alpha",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "crypto-ugly-edge-alpha",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 335,
+    "msgid": "2247492539",
+    "title": "像交易员一样思考：ProtoHedge可解释性对冲模型",
+    "zone": "reinforcement-learning",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "protohedge",
+    "dup_of": null,
+    "framework": "ProtoHedge",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "强化学习",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 336,
+    "msgid": "2247492550",
+    "title": "挖掘隐性 Alpha：基于动态共现图的股价预测模型",
+    "zone": "graph-networks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "cograsp",
+    "dup_of": null,
+    "framework": "COGRASP",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "图关系",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 337,
+    "msgid": "2247492562",
+    "title": "深度优于广度：线性模型样本外衰减",
+    "zone": "evaluation-benchmarks",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "art-337",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 338,
+    "msgid": "2247492603",
+    "title": "小数点后的Alpha：限价单堆积如何预测股价走势",
+    "zone": "market-microstructure",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "alpha",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "因果结构",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 339,
+    "msgid": "2247492615",
+    "title": "2025Q3最佳AI量化论文",
+    "zone": "llm-agentic",
+    "rating": "📖",
+    "page_worthy": false,
+    "slug": "2025q3-ai",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 340,
+    "msgid": "2247492625",
+    "title": "AI重塑因子挖掘：基于LLM文本嵌入的盈余溢出分析",
+    "zone": "factor-mining",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "proj-sue",
+    "dup_of": null,
+    "framework": "Proj SUE",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 341,
+    "msgid": "2247492635",
+    "title": "通过构建稀疏资产关系图提升夏普比率",
+    "zone": "graph-networks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "grafin-gen",
+    "dup_of": null,
+    "framework": "GraFiN-Gen",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "端到端表征",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 342,
+    "msgid": "2247492645",
+    "title": "市场风格切换下的元学习预测框架",
+    "zone": "time-series-forecasting",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "finpfn",
+    "dup_of": null,
+    "framework": "FinPFN",
+    "venue": "Journal of Financial Markets",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "元学习搜索",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 343,
+    "msgid": "2247492662",
+    "title": "从做市到资管：金融强化学习落地全景",
+    "zone": "reinforcement-learning",
+    "rating": "📖",
+    "page_worthy": false,
+    "slug": "art-343",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "强化学习",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 344,
+    "msgid": "2247492697",
+    "title": "因子拥挤度启示录：Alpha 衰减机制",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "art-344",
+    "dup_of": null,
+    "framework": "双曲线衰减模型",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "因果结构",
+      "alpha": "风险择时",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 345,
+    "msgid": "2247492708",
+    "title": "人大 x 清华 | DeepAnalyze：如何打造数据分析的“Agentic AI”？",
+    "zone": "llm-agentic",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "deepanalyze",
+    "dup_of": null,
+    "framework": "DeepAnalyze",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "生成式大模型",
+      "alpha": "因子挖掘",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 346,
+    "msgid": "2247492744",
+    "title": "JP Morgan | 融合NLP情绪与LLM洞察的配对交易策略",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "ou-llm",
+    "dup_of": null,
+    "framework": "OU-LLM配对交易框架",
+    "venue": "JP Morgan",
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 347,
+    "msgid": "2247492760",
+    "title": "Yale | 非线性时间序列动量",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "yale",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "风险择时",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 348,
+    "msgid": "2247492772",
+    "title": "CIKM 25 | “3D状态空间+演化超图”挖掘Alpha",
+    "zone": "graph-networks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "find",
+    "dup_of": null,
+    "framework": "FinD³",
+    "venue": "CIKM 2025",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 349,
+    "msgid": "2247492815",
+    "title": "CogAlpha: 基于七层认知架构的可解释性 Alpha 挖掘框架",
+    "zone": "factor-mining",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "cogalpha",
+    "dup_of": null,
+    "framework": "CogAlpha",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "因子挖掘",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 350,
+    "msgid": "2247492824",
+    "title": "你的 Alpha 只是异象？如何甄别真正的基金管理能力",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "hf9-post-adaptive-lasso",
+    "dup_of": null,
+    "framework": "HF9模型/Post-Adaptive-LASSO",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 351,
+    "msgid": "2247492835",
+    "title": "如何结合人类观点与量化模型以提高Alpha？",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "art-351",
+    "dup_of": null,
+    "framework": "协同智能",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 352,
+    "msgid": "2247492840",
+    "title": "一个简单的调整，如何让订单流信号解释度暴增482%？",
+    "zone": "market-microstructure",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "482",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 353,
+    "msgid": "2247492859",
+    "title": "交大 x 跃阶AI | Alpha-R1： 首个面向Alpha因子筛选的LLM推理模型",
+    "zone": "factor-mining",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "alpha-r1",
+    "dup_of": null,
+    "framework": "Alpha-R1",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "日频波段",
+      "paradigm": "强化学习",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 354,
+    "msgid": "2247492879",
+    "title": "择时因子动物园",
+    "zone": "factor-mining",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "art-354",
+    "dup_of": null,
+    "framework": "深度可视化因子择时框架",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "风险择时",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 355,
+    "msgid": "2247492969",
+    "title": "QuantPedia CEO教你如何设计多时间框架趋势策略",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "quantpedia-ceo",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 356,
+    "msgid": "2247492996",
+    "title": "动态行业融合Transformer用于指数预测",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "tisfm",
+    "dup_of": null,
+    "framework": "TISFM",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 357,
+    "msgid": "2247492929",
+    "title": "TwinFormer：双层注意力+GRU时间序列预测SOTA模型",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "twinformer",
+    "dup_of": null,
+    "framework": "TwinFormer",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 358,
+    "msgid": "2247492937",
+    "title": "逆向选择与隔夜负收益：为何“T+1”导致开盘折价？",
+    "zone": "market-microstructure",
+    "rating": "📖",
+    "page_worthy": true,
+    "slug": "t-1",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "高频日内",
+      "paradigm": "因果结构",
+      "alpha": "风险择时",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 359,
+    "msgid": "2247492961",
+    "title": "贝莱德 ｜ 深度强化学习在最优订单执行中的应用",
+    "zone": "reinforcement-learning",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "art-359",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "高频日内",
+      "paradigm": "强化学习",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 360,
+    "msgid": "2247492979",
+    "title": "Oxford-Man ｜ 端到端深度学习宏观量化交易框架",
+    "zone": "portfolio-optimization",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "deepm",
+    "dup_of": null,
+    "framework": "DeePM",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 361,
+    "msgid": "2247492988",
+    "title": "史上最佳防御性策略",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "dar4020",
+    "dup_of": null,
+    "framework": "DAR4020",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 362,
+    "msgid": "2247493010",
+    "title": "CSMD多模态数据+LightQuant框架，一站式A股量化分析框架",
+    "zone": "evaluation-benchmarks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "lightquant",
+    "dup_of": null,
+    "framework": "LightQuant",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 363,
+    "msgid": "2247493015",
+    "title": "HRT | 金融基础模型与 Scaling Laws",
+    "zone": "market-microstructure",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "art-363",
+    "dup_of": null,
+    "framework": "金融基础模型",
+    "venue": "ICML25",
+    "arxiv": null,
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "生成式大模型",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 364,
+    "msgid": "2247493026",
+    "title": "让数据随市场自我进化，破解非平稳性难题",
+    "zone": "data-generation-augmentation",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "art-364",
+    "dup_of": null,
+    "framework": "自适应数据流系统",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "元学习搜索",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 365,
+    "msgid": "2247493037",
+    "title": "UBS | 拥挤度拐点后的非对称 Alpha",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "comprehensive-crowded-factor",
+    "dup_of": null,
+    "framework": "Comprehensive Crowded Factor",
+    "venue": "UBS Research",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 366,
+    "msgid": "2247493042",
+    "title": "Man Group | 2026Q1对冲基金展望：难以定价的市场与Alpha的黄金窗口",
+    "zone": "unsorted",
+    "rating": "📖",
+    "page_worthy": false,
+    "slug": "man-group-2026q1-alpha",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "中长周期",
+      "paradigm": "因果结构",
+      "alpha": "风险择时",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 367,
+    "msgid": "2247493050",
+    "title": "北大光华 | 年化夏普比率2.43！基于自主市场分析的实时AI投资代理",
+    "zone": "llm-agentic",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "2-43-ai",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "因子挖掘",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 368,
+    "msgid": "2247493062",
+    "title": "从噪声中挖掘Alpha：专为金融时序定制的预训练框架",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "sspt",
+    "dup_of": "2247491386",
+    "framework": "SSPT",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 369,
+    "msgid": "2247493072",
+    "title": "基于“基本面筛选+DRL动态调仓”的端到端量化交易系统",
+    "zone": "reinforcement-learning",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "fnn-drl",
+    "dup_of": null,
+    "framework": "FNN+DRL组合框架",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "强化学习",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 370,
+    "msgid": "2247493087",
+    "title": "诺贝尔物理学，居然能用来预测市场？—— 一个多时间框架量化交易系统的真实构建过程",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "art-370",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "监督回归",
+      "alpha": "风险择时",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 371,
+    "msgid": "2247493096",
+    "title": "基于PPO算法的对冲基金策略自适应选择框架",
+    "zone": "reinforcement-learning",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "ppo-hedge-fund-strategy-selection",
+    "dup_of": null,
+    "framework": "PPO策略自适应选择框架",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "高频日内",
+      "paradigm": "强化学习",
+      "alpha": "风险择时",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 372,
+    "msgid": "2247493106",
+    "title": "融合动量因子与Adaptive-k的股票排序框架",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "mim-stocr",
+    "dup_of": null,
+    "framework": "MiM-StocR",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 373,
+    "msgid": "2247493116",
+    "title": "非μ之错，P之罪 ：Beta 异象背后的机制转换定价逻辑",
+    "zone": "causal-structural",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "regime-switching-pricing-kernel",
+    "dup_of": null,
+    "framework": "Regime-Switching Pricing Kernel",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "因果结构",
+      "alpha": "风险择时",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 374,
+    "msgid": "2247493133",
+    "title": "像生成语言一样生成Alpha：基于语法引导学习的因子挖掘",
+    "zone": "factor-mining",
+    "rating": "❌",
+    "page_worthy": false,
+    "slug": "alpha",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "因子挖掘",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 375,
+    "msgid": "2247493812",
+    "title": "丘成桐入局量化：当菲尔兹奖得主用微分几何重构组合优化",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "yand",
+    "dup_of": null,
+    "framework": "YAND",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "元学习搜索",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 376,
+    "msgid": "2247493864",
+    "title": "Alpha挖掘vs深度学习：量化中的争议性困境",
+    "zone": "factor-mining",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "alpha-vs",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "跨周期",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 377,
+    "msgid": "2247493887",
+    "title": "抛弃高频数据低频化：别让粗暴降维毁了你的微观 Alpha",
+    "zone": "market-microstructure",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "mds-metric-dependence-screening",
+    "dup_of": null,
+    "framework": "MDS (Metric Dependence Screening)",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 378,
+    "msgid": "2247493892",
+    "title": "小样本时序预测等于抛硬币？",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "lstm-gbm",
+    "dup_of": null,
+    "framework": "LSTM/GBM对比与置换检验",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 379,
+    "msgid": "2247493897",
+    "title": "Zookeeper：CTA 统一因子框架",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "zookeeper",
+    "dup_of": null,
+    "framework": "Zookeeper",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 380,
+    "msgid": "2247493914",
+    "title": "ICLR 26 ｜ TiMi：多智能体也能做高频交易？",
+    "zone": "llm-agentic",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "timi",
+    "dup_of": null,
+    "framework": "TiMi",
+    "venue": "ICLR26",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "高频日内",
+      "paradigm": "生成式大模型",
+      "alpha": "组合执行优化",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 381,
+    "msgid": "2247493920",
+    "title": "ICML 2026 量化论文合集",
+    "zone": "unsorted",
+    "rating": "📖",
+    "page_worthy": false,
+    "slug": "icml-2026",
+    "dup_of": null,
+    "framework": null,
+    "venue": "ICML 2026",
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "跨周期",
+      "paradigm": "生成式大模型",
+      "alpha": "端到端表征",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 382,
+    "msgid": "2247493926",
+    "title": "AlphaAgentEvo:基于GRPO与AST邻域约束的因子挖掘",
+    "zone": "factor-mining",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "alphaagentevo",
+    "dup_of": null,
+    "framework": "AlphaAgentEvo",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "强化学习",
+      "alpha": "因子挖掘",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 383,
+    "msgid": "2247493934",
+    "title": "哪款大模型更适合因子挖掘？",
+    "zone": "llm-agentic",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "alphabench",
+    "dup_of": null,
+    "framework": "AlphaBench",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "因子挖掘",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 384,
+    "msgid": "2247493939",
+    "title": "4032 块 GPU、56 套液冷机柜、$70 亿赌注：Jane Street 的算力帝国",
+    "zone": "unsorted",
+    "rating": "📖",
+    "page_worthy": false,
+    "slug": "4032-gpu-56-70-jane-street",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 385,
+    "msgid": "2247493944",
+    "title": "ICLR 26 ｜ 用生成式扩散模型做 Black-Litterman 观点输入？",
+    "zone": "portfolio-optimization",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "stable",
+    "dup_of": null,
+    "framework": "STABLE",
+    "venue": "ICLR26",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 386,
+    "msgid": "2247493952",
+    "title": "如何捕捉市场的“领先-滞后”效应？融合时滞图与几何SDE的选股模型",
+    "zone": "graph-networks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "dgnsde",
+    "dup_of": null,
+    "framework": "DGNSDE",
+    "venue": "WWW26",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 387,
+    "msgid": "2247493957",
+    "title": "拒绝先预测再优化：将 Sharpe/Omega/CVaR塞入损失函数，端到端真的有效吗？",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "sharpe-omega-cvar",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 388,
+    "msgid": "2247493963",
+    "title": "从年化 129% 到巨亏 -83.9% 仅需 10bps 成本？",
+    "zone": "evaluation-benchmarks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "cost-aware-execution-filter",
+    "dup_of": null,
+    "framework": "Cost-Aware Execution Filter",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 389,
+    "msgid": "2247493971",
+    "title": "清华 x 港大 ｜ 给LLM套上脚手架，不用 Solver 也能打败德扑专家",
+    "zone": "llm-agentic",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "pokerskill",
+    "dup_of": null,
+    "framework": "PokerSkill",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "高频日内",
+      "paradigm": "生成式大模型",
+      "alpha": "多智能体博弈",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 390,
+    "msgid": "2247493979",
+    "title": "SkillOpt：微软提出自进化 Agent Skill",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "skillopt",
+    "dup_of": null,
+    "framework": "SkillOpt",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "跨周期",
+      "paradigm": "生成式大模型",
+      "alpha": "端到端表征",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 391,
+    "msgid": "2247493984",
+    "title": "时序深度模型输给经典模型？",
+    "zone": "evaluation-benchmarks",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "finstressts",
+    "dup_of": null,
+    "framework": "FinStressTS",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 392,
+    "msgid": "2247493992",
+    "title": "KDD 26 | 如何防止Alpha衰减？",
+    "zone": "reinforcement-learning",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "recap",
+    "dup_of": null,
+    "framework": "ReCAP",
+    "venue": "KDD26",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "强化学习",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 393,
+    "msgid": "2247494002",
+    "title": "用条件概率重塑Alpha：指数择时的一种低成本改进路径",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "csm",
+    "dup_of": null,
+    "framework": "CSM",
+    "venue": "JBF",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "风险择时",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 394,
+    "msgid": "2247494071",
+    "title": "行为因子统治A股？如何对收益系统性归因",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "behavioral-factors-a-share",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 395,
+    "msgid": "2247494079",
+    "title": "最危险的量化论文？内幕交易如何悄然建仓",
+    "zone": "market-microstructure",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "art-395",
+    "dup_of": null,
+    "framework": "影响中性测度变换",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "强化学习",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 396,
+    "msgid": "2247494084",
+    "title": "同一策略跑出两种结果？如何兼顾极致效率与确定性",
+    "zone": "unsorted",
+    "rating": "🔧",
+    "page_worthy": false,
+    "slug": "mojo",
+    "dup_of": null,
+    "framework": "Mojo",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 397,
+    "msgid": "2247494088",
+    "title": "因子的非对称性：为什么Alpha在熊市反而更强？",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "factor-asymmetry-bear-market",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "风险择时",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 398,
+    "msgid": "2247494094",
+    "title": "清华 X 阶跃星辰 ｜ 剥离风格和记忆，LLM还剩下多少Alpha？",
+    "zone": "evaluation-benchmarks",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "ktd-fin",
+    "dup_of": null,
+    "framework": "KTD-FIN",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "因子挖掘",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 399,
+    "msgid": "2247494100",
+    "title": "机构与散户70年的分歧：究竟谁在真正预测未来？",
+    "zone": "portfolio-optimization",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "art-399",
+    "dup_of": null,
+    "framework": "异质性信念均衡模型",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "风险择时",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 400,
+    "msgid": "2247494106",
+    "title": "周五潜伏？知情交易周内择时的非线性 Alpha",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "alpha",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  }
+]
