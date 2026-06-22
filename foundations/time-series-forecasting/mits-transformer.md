@@ -1,8 +1,6 @@
----
-title: "MiTS-Transformer"
-description: "落點於「監督回歸 × 端到端表徵」軸，解決原始 Transformer 離散嵌入層與連續時間序列的 prior gap，以最小改動重構 Seq2Seq 架構。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# MiTS-Transformer 解構
 
 > **發布**：2025-04-20 · （無 venue）
 > **QuantML 導讀**：[连续值预测：最小时间序列Transformer](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490128&idx=1&sn=aa5df5ea7f3568a8a1a52a2ef9271141&chksm=ce7e7d4ef909f458286d010b50cfb7470fa97cab8ac8e04443b37c79bfda71d0c0a063fb5015#rd)

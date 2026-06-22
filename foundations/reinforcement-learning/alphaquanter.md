@@ -1,8 +1,6 @@
----
-title: "AlphaQuanter"
-description: "落點於「單Agent RL 端到端優化 LLM 工具調用與交易決策」，解決了多Agent辯論信號不一致與Prompt方法缺乏前瞻回報優化的Prior Gap。"
----
 <!-- ontology-5axis data=多模态 horizon=日频波段 paradigm=强化学习 alpha=端到端表征 autonomy=Agent自主演进 -->
+
+# AlphaQuanter 解構
 
 > **發布**：2025-10-19 · （無 venue）
 > **QuantML 導讀**：[AlphaQuanter：端到端Agentic强化学习交易框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492036&idx=1&sn=338b316b4b7fd9a2a1af6b8509124d98&chksm=ce7d86daf90a0fcc0e2762580886e6815807930b82e7ea5f206f6b43a96a496f6a6d12894a55#rd)

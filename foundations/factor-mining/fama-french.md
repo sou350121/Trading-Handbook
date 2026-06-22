@@ -1,8 +1,6 @@
----
-title: "超越Fama-French因子：短期信号的阿尔法"
-description: "落點於量價表格與日頻波段的監督回歸因子挖掘。解決了傳統資產定價文獻因擔憂交易成本而系統性忽略短期高換手信號的 Prior Gap，證明透過門檻替換規則與截面合成，可提取獨立於 Fama-French 六因子的淨 Alpha。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# 超越Fama-French因子：短期信号的阿尔法 解構
 
 > **發布**：2024-08-18 · （無 venue）
 > **QuantML 導讀**：[超越Fama-French因子：短期信号的阿尔法机会](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485828&idx=1&sn=c123771eab1457f21a20646b77c16ea3&chksm=ce7e6e9af909e78c2a3b7fb9abe574880c9a432c7afd9a7e4abfbe102ac6782623aa5ea1f945#rd)

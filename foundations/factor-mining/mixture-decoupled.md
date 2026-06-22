@@ -1,8 +1,6 @@
----
-title: "Mixture Decoupled"
-description: "落點於多模態日頻波段監督回歸，解決傳統融合學習中結構化因子與非結構化新聞在梯度更新時的方差纏結與訓練不穩定問題，實現模態預測能力的解耦與動態加權。"
----
 <!-- ontology-5axis data=多模态 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# Mixture Decoupled 解構
 
 > **發布**：2025-11-04 · （無 venue）
 > **QuantML 導讀**：[如何破解传统因子与新闻的融合困境？](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492230&idx=1&sn=312ebe8b991232cc59c42dbbb7a19c75&chksm=ce7d8598f90a0c8ee5fc0dfeeb9114bf022d5c4e1ae57b674ab4b0db8b5730e613d6e81a55ee#rd)

@@ -1,8 +1,6 @@
----
-title: "Fin-GAN"
-description: "將條件 GAN置於監督學習框架，以經濟學驅動損失函數取代傳統交叉熵，直接對齊交易端夏普比率與方向分類置信度，彌補點估計無法捕捉尾部不確定性的 prior gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=风险择时 autonomy=全自动黑盒 -->
+
+# Fin-GAN 解構
 
 > **發布**：2024-11-06 · （無 venue）
 > **QuantML 導讀**：[通过生成对抗网络进行金融时间序列的预测和分类](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487499&idx=1&sn=e8afa3a7405357c3421691ec0f2da867&chksm=ce7e7715f909fe031d9aad4fdd4ef1019ff104f7e419dd880b28fe7713db05a532d449b19ee4#rd)

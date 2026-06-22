@@ -1,8 +1,6 @@
----
-title: "MoEDRLPM"
-description: "落點於「量價表格 × 日頻波段 × 強化學習」軸，解了傳統 DRL 組合優化中「忽略股間時空相關性」與「單一策略無法適應動態市場」的 prior gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=强化学习 alpha=组合执行优化 autonomy=全自动黑盒 -->
+
+# MoEDRLPM 解構
 
 > **發布**：2025-09-26 · （無 venue）
 > **QuantML 導讀**：[基于混合专家的深度强化学习端到端投资组合优化](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491804&idx=1&sn=21ddf3dc0c3cb89554c8b1361abe9b26&chksm=ce7d87c2f90a0ed48268e75e9b9ad7bfe1ae34c609d2da265ad193e72d58ff8a0f97250d372e#rd)

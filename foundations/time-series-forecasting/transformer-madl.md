@@ -1,8 +1,6 @@
----
-title: "Transformer+MADL"
-description: "落點於「監督回歸 × 端到端表徵」軸，直擊傳統 MSE/MAE 損失與交易 PnL 方向錯配的 Prior Gap。以 MADL 將回歸目標重定向為「方向正確性 × 實際波動幅度」，使模型輸出直接對應做多/空倉/做空的信號生成。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# Transformer+MADL 解構
 
 > **發布**：2025-07-26 · （無 venue）
 > **QuantML 導讀**：[量化中另类损失函数](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491140&idx=1&sn=301c84cd772237fdccd68a64f22fa606&chksm=ce7e795af909f04c9ae6e049293292fd6a7a1805a8a57ab6db95c8e360e2208bba7622e86aee#rd)

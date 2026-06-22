@@ -1,8 +1,6 @@
----
-title: "Logic-RL"
-description: "落點於「文本另类×強化學習×Agent自主演進」軸。解了 DeepSeek-R1 開源權重但封閉訓練鏈路的 prior gap，用可控邏輯謎題隔離變量，證明 RL 能在 7B 規模下湧現可遷移推理，而非依賴大規模 SFT 的表面對齊。"
----
 <!-- ontology-5axis data=文本另类 horizon=跨周期 paradigm=强化学习 alpha=端到端表征 autonomy=Agent自主演进 -->
+
+# Logic-RL 解構
 
 > **發布**：2025-02-25 · （無 venue）
 > **QuantML 導讀**：[九坤联手亚研院复现DeepSeek-R1](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489459&idx=1&sn=df1570e67f438ce466244624d44d76a8&chksm=ce7e70adf909f9bbc775acc7525453147ce06b89a3400f7b11f40cc65a09f31ace03109d5b93#rd)

@@ -1,8 +1,6 @@
----
-title: "COGRASP"
-description: "落點於「圖關係×日頻波段×端到端表征」，解決傳統 GNN 依賴靜態行業/倉位圖導致的關係滯後與權重缺失 Gap，將社交媒體共現頻率轉化為動態圖邊權，並透過多尺度 ALSTM 並行捕捉長中短期疊加效應。"
----
 <!-- ontology-5axis data=图关系 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# COGRASP 解構
 
 > **發布**：2025-12-01 · （無 venue）
 > **QuantML 導讀**：[挖掘隐性 Alpha：基于动态共现图的股价预测模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492550&idx=1&sn=add3ebaa7db3a3f39dc455e3ee0e8155&chksm=ce7d84d8f90a0dce63e07152a998dec8d64bf43202a174e3dfd14ea8704e0ecd9545e6c3f67d#rd)

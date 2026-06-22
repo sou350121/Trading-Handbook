@@ -1,8 +1,6 @@
----
-title: "FinRobot"
-description: "落點於「生成式大模型 × 多智能體博弈 × 人機協同可解釋」軸，解決傳統量化因子挖掘與研報生成中「非結構化數據處理成本高」與「邏輯鏈路黑盒化」的工程斷層。"
----
 <!-- ontology-5axis data=多模态 horizon=日频波段 paradigm=生成式大模型 alpha=多智能体博弈 autonomy=人机协同可解释 -->
+
+# FinRobot 解構
 
 > **發布**：2024-06-04 · （無 venue）
 > **QuantML 導讀**：[FinRobot：用于金融领域的大模型AI平台](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247484560&idx=1&sn=689e9b1ec3bf370e7332b538f3060ca1&chksm=ce7e638ef909ea989847e2b1501d17f9524808ad0544ccceaba918b8fda7c13556522b740647#rd)

@@ -1,8 +1,6 @@
----
-title: "DiffsFormer"
-description: "落點於「生成式大模型 × 因子挖掘」軸，直擊量化研究長期面臨的「低信噪比與數據同質性」Prior Gap。以擴散模型替代傳統統計增強，將因子數據視為可編輯的潛在分佈，而非靜態特徵矩陣。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=生成式大模型 alpha=因子挖掘 autonomy=全自动黑盒 -->
+
+# DiffsFormer 解構
 
 > **發布**：2025-08-01 · （無 venue）
 > **QuantML 導讀**：[达摩院&中科大 | DiffsFormer: 扩散模型助力因子数据增强](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491205&idx=1&sn=f2d331b5c0a60af305086f6c10947919&chksm=ce7e799bf909f08d2089ed64fde3dc2689dd93b762a7b5a8e7f59167ddd2ec44367155f98b04#rd)

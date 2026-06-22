@@ -1,8 +1,6 @@
----
-title: "QuantBench"
-description: "落點於「全流程自動化基準測試」軸，解決學術模型與實盤工程間的評估斷層。透過統一資料格式與分層指標，將因子挖掘至訂單執行的 Pipeline 標準化，填補量化領域缺乏工業級對齊基準的 Prior Gap。"
----
 <!-- ontology-5axis data=多模态 horizon=跨周期 paradigm=监督回归 alpha=因子挖掘 autonomy=全自动黑盒 -->
+
+# QuantBench 解構
 
 > **發布**：2025-04-29 · （無 venue）
 > **QuantML 導讀**：[QuantBench：用于量化投资的AI方法基准测试](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490218&idx=1&sn=e746548ac17a319b2c15d5ee393655fd&chksm=ce7e7db4f909f4a270b2ed924ea845310390fa3f3267fa36e493a90ba4268d873b96551cbd64#rd)

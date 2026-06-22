@@ -1,8 +1,6 @@
----
-title: "TRIALS"
-description: "落點於日频波段與組合執行優化，以分層強化學習解耦傳統配對交易中「選擇-執行」的資訊斷層，將統計套利從兩階段硬編碼轉為端到端聯合策略搜索。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=强化学习 alpha=组合执行优化 autonomy=全自动黑盒 -->
+
+# TRIALS 解構
 
 > **發布**：2024-11-10 · （無 venue）
 > **QuantML 導讀**：[选择与交易：基于分层强化学习的统一配对交易](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487603&idx=1&sn=948fc01570263aab80b86a1d6475f89c&chksm=ce7e776df909fe7b9c9776a42520a015415ebb27414feef47a757ac4dae4c78cd323653fe43c#rd)

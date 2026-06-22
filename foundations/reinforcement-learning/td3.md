@@ -1,8 +1,6 @@
----
-title: "TD3"
-description: "將 TD3 落地於標普 500 平價期權的 30 分鐘級動態對沖，以風險懲罰獎勵函數與前向滾動訓練，填補了傳統 Delta 對沖在離散交易與高摩擦環境下的策略失效 Gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=高频日内 paradigm=强化学习 alpha=风险择时 autonomy=全自动黑盒 -->
+
+# TD3 解構
 
 > **發布**：2025-10-13 · （無 venue）
 > **QuantML 導讀**：[深度强化学习在期权中的应用](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491949&idx=1&sn=ded6681ca6ac4403805c04d3ae740264&chksm=ce7d8673f90a0f655fe47b31e2c4ef57e6a1933cce9ad25397e431f8949f2db15df8bea0d764#rd)

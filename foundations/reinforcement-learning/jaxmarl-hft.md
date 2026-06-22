@@ -1,8 +1,6 @@
----
-title: "JaxMARL-HFT"
-description: "落點於「高頻日內 × 多智能體博弈」軸，解決傳統 HFT MARL 因 CPU-GPU 傳輸瓶頸與同構限制導致的算力不可擴展問題，將並行訓練從單智能體/預定義對手升級為全鏈路 GPU 異構並發。"
----
 <!-- ontology-5axis data=微观盘口 horizon=高频日内 paradigm=强化学习 alpha=多智能体博弈 autonomy=全自动黑盒 -->
+
+# JaxMARL-HFT 解構
 
 > **發布**：2025-11-05 · （無 venue）
 > **QuantML 導讀**：[240倍性能飞跃：首个GPU高频交易MARL框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492240&idx=1&sn=f9b15a5c11c4b2a877e033551bb0bdc4&chksm=ce7d858ef90a0c9825b228018974a095c0b3a3527d1227742796efc6254a817e5805573f58c6#rd)

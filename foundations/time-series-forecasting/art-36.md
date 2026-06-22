@@ -1,8 +1,6 @@
----
-title: "端到端期权交易深度学习框架"
-description: "落點於「監督回歸 + 端到端表徵」軸，解了傳統期權定價模型對市場動態與波動率曲面強假設的prior gap，將交易信號生成直接對齊風險調整收益目標，跳過定價與預測兩階段。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# 端到端期权交易深度学习框架 解構
 
 > **發布**：2024-08-01 · （無 venue）
 > **QuantML 導讀**：[牛津大学：端到端深度学习在期权交易中的应用](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485626&idx=2&sn=99cdf6c19019388cd4b70f07989d0e05&chksm=ce7e6fa4f909e6b2405a6ed7b76b999e12ebbb99079fb057bf9860bd587148e19a580ab9819d#rd)

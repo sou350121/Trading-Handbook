@@ -1,8 +1,6 @@
----
-title: "QTMRL"
-description: "落點於日频波段與組合執行優化的全自動黑盒 RL 框架。試圖解決傳統監督式量價模型在跨資產動態決策時面臨的過擬合與剛性假設問題，透過將多維技術指標直接映射為 MDP 狀態空間，以 A2C 實現端到端的策略-價值聯合優化。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=强化学习 alpha=组合执行优化 autonomy=全自动黑盒 -->
+
+# QTMRL 解構
 
 > **發布**：2025-08-30 · （無 venue）
 > **QuantML 導讀**：[QTMRL：融合多维指标与强化学习，提升交易决策稳健性](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491510&idx=1&sn=ae9a8337762d92b235f973f12ad57dd6&chksm=ce7e78a8f909f1be03107af3a5e8ba579f6452221614b4bff784177cdd3f6819e5722f065f30#rd)

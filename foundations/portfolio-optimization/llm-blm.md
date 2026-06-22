@@ -1,8 +1,6 @@
----
-title: "LLM-BLM框架"
-description: "將生成式LLM的點狀預測與內在方差對齊至Black-Litterman貝葉斯框架，解了「觀點生成不可擴展且主觀」的prior gap，落點於組合執行優化軸。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=生成式大模型 alpha=组合执行优化 autonomy=全自动黑盒 -->
+
+# LLM-BLM框架 解構
 
 > **發布**：2025-10-21 · （無 venue）
 > **QuantML 導讀**：[LLM增强的BL组合优化框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492053&idx=1&sn=f825980b4cf19dc1408a70f6c8f15071&chksm=ce7d86cbf90a0fdd6a6a722ea1193774cb8bbc6bac1f9c0f966dad2c23e37cc307b64fa693f9#rd)

@@ -1,8 +1,6 @@
----
-title: "Timer"
-description: "將時間序列從「判別式任務拼裝」遷移至「生成式基礎模型」，以解碼器僅架構+ 自回歸預訓練打通預測/填補/異常檢測。解了傳統 LTSM 在數據稀缺場景下泛化斷崖與多任務頭部工程冗餘的 Prior Gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=跨周期 paradigm=生成式大模型 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# Timer 解構
 
 > **發布**：2024-10-20 · （無 venue）
 > **QuantML 導讀**：[清华大学 Timer：生成式预训练Transformers即大型时间序列模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487139&idx=1&sn=1836c12d302555e59d2fd99176edcaee&chksm=ce7e69bdf909e0ab2b33259d4166f8ab5c0d4e2cfcc07dfa644c43ca9953b5f1354f1067dba8#rd)

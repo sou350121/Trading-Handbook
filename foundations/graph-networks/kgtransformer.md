@@ -1,8 +1,6 @@
----
-title: "KGTransformer"
-description: "落點於「圖關係 × 中長週期 × 監督回歸 × 端到端表徵 × 全自動黑盒」。解了 prior gap：傳統金融NLP僅做情緒打分或靜態共現，缺乏將非結構化新聞轉化為可追蹤時變因果鏈的結構化表徵，導致因子挖掘停留在單維度語義層，無法捕捉跨資產的隱性傳導路徑。"
----
 <!-- ontology-5axis data=图关系 horizon=中长周期 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# KGTransformer 解構
 
 > **發布**：2024-10-16 · （無 venue）
 > **QuantML 導讀**：[动态知识图谱在金融市场趋势预测中的应用](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487059&idx=1&sn=a8b87a617febb5899aef8c7e3f33&chksm=ce7e694df909e05bf466867d9378889f26c8391dac27c2c2133f4579037e3552e42ce6090ac1#rd)

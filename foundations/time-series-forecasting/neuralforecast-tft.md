@@ -1,8 +1,6 @@
----
-title: "NeuralForecast/TFT"
-description: "聚焦日頻波段的風險擇時，以監督回歸範式處理量價表格。解決了傳統深度學習以 MSE/RMSE 為驗證指標時，與實際交易風險收益結構脫節的 prior gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=风险择时 autonomy=人机协同可解释 -->
+
+# NeuralForecast/TFT 解構
 
 > **發布**：2024-11-03 · （無 venue）
 > **QuantML 導讀**：[增强深度学习模型评估以进行股市预测--Part I](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487443&idx=1&sn=c6c555e9b90e263f3ed083ba4166ed44&chksm=ce7e68cdf909e1db7adde95df86e8bcd92e30642b492d3f9e4de4267d29ab9027f0de83abcd5#rd)

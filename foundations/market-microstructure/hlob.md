@@ -1,8 +1,6 @@
----
-title: "HLOB"
-description: "落點於「微觀盤口×高頻日內」的端到端監督回歸黑盒。解了傳統 CNN/LSTM 將 LOB 視為規則網格、忽略價格層級間非線性耦合的 prior gap，用 TMFG 拓撲先驗將非歐空間結構轉化為可卷積的高階同調特徵。"
----
 <!-- ontology-5axis data=微观盘口 horizon=高频日内 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# HLOB 解構
 
 > **發布**：2024-09-06 · （無 venue）
 > **QuantML 導讀**：[HLOB：限价订单簿中的信息持久性和结构](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486124&idx=1&sn=5234e96240ce90a76152992af88c59c4&chksm=ce7e6db2f909e4a48e1494a97eaf8e8378d71dabc387c0f7d123e598f923358a207b6af2bda1#rd)

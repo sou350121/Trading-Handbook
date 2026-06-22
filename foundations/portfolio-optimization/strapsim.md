@@ -1,8 +1,6 @@
----
-title: "STRAPSim"
-description: "落點於「組合執行優化」與「人機協同可解釋」軸，解決傳統Jaccard/收益率相關性無法捕捉異質成分語義重疊與權重動態遷移的Prior Gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=中长周期 paradigm=监督回归 alpha=组合执行优化 autonomy=人机协同可解释 -->
+
+# STRAPSim 解構
 
 > **發布**：2025-10-02 · （無 venue）
 > **QuantML 導讀**：[贝莱德 | 投资组合相似性度量](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491859&idx=1&sn=90e5163321c80ec813863785419677d1&chksm=ce7d860df90a0f1b89c2e2a9dc125f6e6b7bfcafa0ef17089bf196dc904cabc45d4aef304676#rd)

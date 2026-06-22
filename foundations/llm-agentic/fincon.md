@@ -1,8 +1,6 @@
----
-title: "FINCON"
-description: "落點於「多智能体博弈 × Agent自主演进」軸，解了單智能體 LLM 在金融決策中的認知過載與長期風險失控 gap，透過經理-分析師分層與雙層風控實現自動化組合管理。"
----
 <!-- ontology-5axis data=多模态 horizon=日频波段 paradigm=生成式大模型 alpha=多智能体博弈 autonomy=Agent自主演进 -->
+
+# FINCON 解構
 
 > **發布**：2024-12-13 · NeurIPS 2024
 > **QuantML 導讀**：[NIPS 24 | FinCon: 基于LLM的多智能体交易及组合管理框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488353&idx=1&sn=f6684d1c9788e0f9dcd09b781cbd619a&chksm=ce7e747ff909fd69d6538f30bb681b3e0dba85700479802978c2c883bc93346cfe58bdf6f912#rd)

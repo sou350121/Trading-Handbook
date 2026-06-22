@@ -1,8 +1,6 @@
----
-title: "拒绝先预测再优化：将 Sharpe/Omega/"
-description: "落點於「組合執行優化」軸，直擊傳統「先預測後優化」二階段流程中 MSE/IC 目標與風險調整收益目標錯配的 prior gap。以可微損失函數取代靜態求解器，將組合構建轉為端到端梯度下降問題。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=组合执行优化 autonomy=全自动黑盒 -->
+
+# 拒绝先预测再优化：将 Sharpe/Omega/ 解構
 
 > **發布**：2026-05-30 · （無 venue）
 > **QuantML 導讀**：[拒绝先预测再优化：将 Sharpe/Omega/CVaR塞入损失函数，端到端真的有效吗？](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493957&idx=1&sn=092cd4fd43c47537d39be2320fcdf4c7&chksm=ce7d8e5bf90a074d3983db53beb29df242a8cd98bf3f258fef5be9347da64daa5744e235995a#rd)

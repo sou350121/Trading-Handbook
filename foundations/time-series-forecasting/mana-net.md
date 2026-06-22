@@ -1,8 +1,6 @@
----
-title: "MANA-Net"
-description: "落點於「文本另类 × 日频波段 × 端到端表征」。解決傳統新聞情感聚合中「等權/靜態加總導致的情感均質化」痛點，將注意力機制內嵌至預測迴路實現可微分權重分配。"
----
 <!-- ontology-5axis data=文本另类 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# MANA-Net 解構
 
 > **發布**：2024-09-27 · CIKM 2024
 > **QuantML 導讀**：[CIKM 24 | MANA-Net：增强市场预测的新闻加权方法](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486835&idx=1&sn=aa1a8076067c8207f522ef7447efe57f&chksm=ce7e6a6df909e37b08a3b028a0ee029efd0a7c97721390e9a11ee699e97dc4ac0395d7acd445#rd)

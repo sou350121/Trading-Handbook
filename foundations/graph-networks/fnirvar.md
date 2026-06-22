@@ -1,8 +1,6 @@
----
-title: "FNIRVAR"
-description: "落點於「監督回歸 × 因子挖掘」軸，解決高維時間序列中「稠密共同因子」與「稀疏局部依賴」難以兼顧的建模斷層。透過 SBM 網絡 VAR 與譜聚類，將傳統因子模型的殘差轉譯為可計算的資產群落結構，實現無先驗網絡知識的隱含 Alpha 提取。"
----
 <!-- ontology-5axis data=量价表格 horizon=跨周期 paradigm=监督回归 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# FNIRVAR 解構
 
 > **發布**：2025-11-22 · （無 venue）
 > **QuantML 導讀**：[FNIRVAR：挖掘高维因子模型下的隐含网络 Alpha](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492428&idx=1&sn=99923d3314b7df0b839fd83de9bfb56a&chksm=ce7d8452f90a0d4421a6830d098fd3f77b8f6efb4c9f9b123ca5dedc73facaa20888dfcda3c0#rd)

@@ -1,8 +1,6 @@
----
-title: "大语言模型在时间序列预测中真的有效吗？"
-description: "五軸落點於「生成式大模型 × 端到端表征」，解了量化圈盲目堆疊 LLM 架構卻忽略時序本質的 Prior Gap。指出預訓練語言先驗對純數值序列依賴無效，回歸簡單注意力機制的性價比。"
----
 <!-- ontology-5axis data=量价表格 horizon=跨周期 paradigm=生成式大模型 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# 大语言模型在时间序列预测中真的有效吗？ 解構
 
 > **發布**：2024-07-27 · （無 venue）
 > **QuantML 導讀**：[大语言模型在时间序列预测中真的有效吗？](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485573&idx=1&sn=d524c4a8eba33c7f1e97ace56ab47418&chksm=ce7e6f9bf909e68d339a3dbda80da2b8e225eeb10e02fb917340cb221e8b18e68df6d8cac395#rd)

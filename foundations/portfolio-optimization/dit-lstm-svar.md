@@ -1,8 +1,6 @@
----
-title: "DiT-LSTM-SVAR"
-description: "落點於「監督回歸 × 端到端表征」軸，解決高頻量價數據中「隨機游走標的污染預測信號」的 prior gap，將市場微觀結構理論嵌入深度學習特徵工程。"
----
 <!-- ontology-5axis data=量价表格 horizon=高频日内 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# DiT-LSTM-SVAR 解構
 
 > **發布**：2025-07-22 · （無 venue）
 > **QuantML 導讀**：[DiT-LSTM-SVAR：消除随机游走噪声的深度学习投资组合](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491088&idx=1&sn=8a90a9e2023935511f54f92c66bcc555&chksm=ce7e790ef909f0184363f9343ab3134abd9c0c0e9f135ea86d30f884c8df1277cd6dcf9f44da#rd)

@@ -1,8 +1,6 @@
----
-title: "FNN+DRL组合框架"
-description: "落點於「量价表格 × 中长周期 × 强化学习 × 组合执行优化 × 人机协同可解释」。解了傳統DRL直接在全樣本上優化權重時遭遇的維度災難與價格噪聲過擬合，以及傳統MV模型對參數估計過度敏感的Prior Gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=中长周期 paradigm=强化学习 alpha=组合执行优化 autonomy=人机协同可解释 -->
+
+# FNN+DRL组合框架 解構
 
 > **發布**：2026-01-23 · （無 venue）
 > **QuantML 導讀**：[基于“基本面筛选+DRL动态调仓”的端到端量化交易系统](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493072&idx=1&sn=74a101095cbabbee30cc57b739db21ba&chksm=ce7d82cef90a0bd88ae17960eda986156f600a5479a76f0006b62486c045178ca14bfb3a406c#rd)

@@ -1,8 +1,6 @@
----
-title: "QuantPedia CEO教你如何设计多时间框"
-description: "落點於「跨周期結構過濾 × 邏輯驅動因子挖掘」。解了單一時間框架動量指標在加密資產高頻震盪中的假信號問題，以高層級趨勢確認替代參數擬合，提供白箱趨勢跟蹤的工程範本。"
----
 <!-- ontology-5axis data=量价表格 horizon=跨周期 paradigm=监督回归 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# QuantPedia CEO教你如何设计多时间框 解構
 
 > **發布**：2026-01-11 · （無 venue）
 > **QuantML 導讀**：[QuantPedia CEO教你如何设计多时间框架趋势策略](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492969&idx=1&sn=6417263c82b8a536ea07b923f5c1b2d3&chksm=ce7d8277f90a0b618a0c7a09fed2aca5ea01efe64ea47cc901af7e9058c98548d2a64ffdfa6a#rd)

@@ -1,8 +1,6 @@
----
-title: "OU-LLM配对交易框架"
-description: "落點於日频波段與生成式大模型的交叉軸，解構傳統Z-score對均值回歸速度與波動率恆定的錯誤假設，以OU過程重構統計套利基線，並透過LLM語義分類剝離永久性結構衝擊。"
----
 <!-- ontology-5axis data=文本另类 horizon=日频波段 paradigm=生成式大模型 alpha=组合执行优化 autonomy=人机协同可解释 -->
+
+# OU-LLM配对交易框架 解構
 
 > **發布**：2025-12-21 · JP Morgan
 > **QuantML 導讀**：[JP Morgan | 融合NLP情绪与LLM洞察的配对交易策略](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492744&idx=1&sn=baa6d786bba61e1fe46580d0101b788a&chksm=ce7d8396f90a0a80ef6258181dbb6cc758ff1c6f43431182c417e00d899c96049bb1768c3e2a#rd)

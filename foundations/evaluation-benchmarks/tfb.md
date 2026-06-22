@@ -1,8 +1,6 @@
----
-title: "TFB"
-description: "落點於「跨周期量價表格監督回歸」軸，解決了 TSF 領域長期存在的「數據集碎片化、方法比較偏見、評估流程不一致」三大工程斷層，提供跨統計/ML/DL 的標準化公平評測基準。"
----
 <!-- ontology-5axis data=量价表格 horizon=跨周期 paradigm=监督回归 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# TFB 解構
 
 > **發布**：2024-10-01 · （無 venue）
 > **QuantML 導讀**：[TFB：全面与公平的时间序列预测方法基准测试](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486888&idx=1&sn=53c296e3586dcdd37e37d9a97a945fa1&chksm=ce7e6ab6f909e3a0e3f38effb99b0a2e66b2bd4753d3c30f1f6212cfc41171d0965d144f62e8#rd)

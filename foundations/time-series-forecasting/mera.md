@@ -1,8 +1,6 @@
----
-title: "MERA"
-description: "落點於「端到端表征 × 監督回歸」軸，解決單分支模型「一刀切」擬合導致的模式混疊問題。以自監督檢索替代人工因子劃分，實現隱式 Regime 路由。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# MERA 解構
 
 > **發布**：2025-08-12 · （無 venue）
 > **QuantML 導讀**：[清华大学 × 易方达 | MERA：借助“历史经验”与“专家分工”攻克股票模式识别](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491334&idx=1&sn=0f9a3e54bf4f82f2d2bda1df842e7c22&chksm=ce7e7818f909f10e51c5c7197fa5f10f5b570b5821cc8384ede047f600ad4e7f7a8e58f8669e#rd)

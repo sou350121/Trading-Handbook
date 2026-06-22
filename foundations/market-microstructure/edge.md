@@ -1,8 +1,6 @@
----
-title: "EDGE"
-description: "落點於量價表格與日頻波段軸，以監督回歸/矩估計框架解構傳統低頻價差估計的「連續交易假設」與「非負截斷偏差」Prior Gap。提供漸近無偏且方差最小的解析修正項，使日頻 OHLC 數據的估計精度逼近高頻報價基準。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# EDGE 解構
 
 > **發布**：2024-12-10 · JFE
 > **QuantML 導讀**：[JFE | 高效估计买卖价差的模型、实证与应用](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488303&idx=1&sn=60ab39ed1be0a71185396aadfa33aeee&chksm=ce7e7431f909fd2728a183280ad82dff93e81576d33913902d2b842dedfcd87e14b6d87dff60#rd)

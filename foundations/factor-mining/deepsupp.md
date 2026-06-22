@@ -1,8 +1,6 @@
----
-title: "DeepSupp"
-description: "落點於「量价表格×监督回归×因子挖掘」軸。解了傳統 SR 識別依賴靜態圖表或線性統計、無法捕捉動態價量微觀結構的 prior gap，將技術分析的經驗錨點轉化為可微的結構特徵。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# DeepSupp 解構
 
 > **發布**：2025-07-04 · （無 venue）
 > **QuantML 導讀**：[DeepSupp：基于注意力机制的股票支撑位识别](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490917&idx=1&sn=113262ac31a41d2a0928628ed3436c4e&chksm=ce7e7a7bf909f36de23783d524adcb3b20d779f51bbc40397beef630c32bd10b82df94475c91#rd)

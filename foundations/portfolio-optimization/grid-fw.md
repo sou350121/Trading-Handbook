@@ -1,8 +1,6 @@
----
-title: "Grid-FW"
-description: "針對稀疏最小方差組合優化中的NP難組合爆炸問題，以布爾鬆弛與連續輔助目標函數替代傳統混合整數規劃，在量價表格數據上實現中長週期維度的元搜索與組合執行優化，並透過參數連續調節提供可解釋的人機協作路徑。"
----
 <!-- ontology-5axis data=量价表格 horizon=中长周期 paradigm=元学习搜索 alpha=组合执行优化 autonomy=人机协同可解释 -->
+
+# Grid-FW 解構
 
 > **發布**：2025-05-17 · （無 venue）
 > **QuantML 導讀**：[稀疏最小方差投资组合的优化框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490404&idx=1&sn=db245cef504a9906dfe1c4e5503e1521&chksm=ce7e7c7af909f56cd9a4e1c0fa2c18b9713241a52c7660402b0eb9b0833bd561f5233927868c#rd)

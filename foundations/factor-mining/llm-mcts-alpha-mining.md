@@ -1,8 +1,6 @@
----
-title: "LLM+MCTS Alpha Mining"
-description: "落點於「生成式大模型×因子挖掘×人機協同可解釋」軸，解決傳統 GP/RL 自動化挖掘中「搜索效率低」與「公式黑箱/晦澀」的 Prior Gap，將 Alpha 發現建模為帶金融回測即時反饋的樹搜索過程。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=生成式大模型 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# LLM+MCTS Alpha Mining 解構
 
 > **發布**：2025-06-07 · （無 venue）
 > **QuantML 導讀**：[清华IIIS学院 | LLM+MCTS驱动的Alpha因子挖掘框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490641&idx=1&sn=88a150a7bb8b2016d3e1c295cda7f9d9&chksm=ce7e7b4ff909f2594700e7ad90ae6ca0f148c6efbb2ccfac783068712f25dfcf8cdfb79f9d13#rd)

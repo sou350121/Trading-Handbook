@@ -1,8 +1,6 @@
----
-title: "FinRL-Meta"
-description: "落點於「數據工程自動化 × RL環境標準化」，解決FinRL領域長期存在的數據管線碎片化與Gym環境難以復現的Prior Gap，將多源金融數據轉為即插即用的訓練沙盒。"
----
 <!-- ontology-5axis data=多模态 horizon=日频波段 paradigm=强化学习 alpha=组合执行优化 autonomy=人机协同可解释 -->
+
+# FinRL-Meta 解構
 
 > **發布**：2024-06-07 · （無 venue）
 > **QuantML 導讀**：[开源强化学习金融市场元宇宙框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247484644&idx=1&sn=8fbcac50d77955a0b94e9628d1e5aa6d&chksm=ce7e63faf909eaecc4fb63a0b9a57b0fcf8205688b4f8f073bc5b40055dd379ea32f458601cd#rd)

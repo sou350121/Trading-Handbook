@@ -1,8 +1,6 @@
----
-title: "Regime-Switching Pricing Kernel"
-description: "將資產定價的誤差源從狀態條件風險溢價轉移至機制轉換概率，解構了傳統因子模型在群集回撤期失效的結構性盲區。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=因果结构 alpha=风险择时 autonomy=人机协同可解释 -->
+
+# Regime-Switching Pricing Kernel 解構
 
 > **發布**：2026-01-29 · （無 venue）
 > **QuantML 導讀**：[非μ之错，P之罪 ：Beta 异象背后的机制转换定价逻辑](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493116&idx=1&sn=5f68e985c6320b8ac1a8c55af6b2f6c7&chksm=ce7d82e2f90a0bf4c67338107ecd4d7826a32c248d90b1bbeb274864e26e9e5a27f6f5939546#rd)

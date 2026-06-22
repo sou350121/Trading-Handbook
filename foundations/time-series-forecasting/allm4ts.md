@@ -1,8 +1,6 @@
----
-title: "aLLM4TS"
-description: "落點於「跨周期 × 生成式大模型」軸，解決傳統時間序列表示學習與 LLM 因果預訓練目標錯配、且破壞時間依賴性的 Prior Gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=跨周期 paradigm=生成式大模型 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# aLLM4TS 解構
 
 > **發布**：2024-08-31 · ICML24
 > **QuantML 導讀**：[ICML 24 | 将LLM适配于时间序列表示学习](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486045&idx=1&sn=81f477c8b91ec201db5528a9da022f27&chksm=ce7e6d43f909e45525dd8fa38e5b10c6f4a4eedcc30f4e9c6d1a8296a33f5895be6cfe48f6a9#rd)

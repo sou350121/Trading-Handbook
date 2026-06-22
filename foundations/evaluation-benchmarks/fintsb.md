@@ -1,8 +1,6 @@
----
-title: "FinTSB"
-description: "以「多樣性覆蓋 + 統一維度指標 + 實盤交易約束」為核心，解決金融時間序列預測領域長期存在的 Diversity Gap、Standardization Deficit 與 Real-World Mismatch 三大評測斷層。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=因子挖掘 autonomy=全自动黑盒 -->
+
+# FinTSB 解構
 
 > **發布**：2025-03-12 · （無 venue） · arXiv [2502.18834](https://arxiv.org/abs/2502.18834)
 > **QuantML 導讀**：[桥接学术与落地！同济、清华提出实用的金融时间序列全维度评测系统](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489639&idx=1&sn=c2118a8495c9e0351495f0558a5135e2&chksm=ce7e7f79f909f66f5649d6768e0d94ce6fae4e251de52b107c9db7fdedaf8808aa5e49bf6#rd)

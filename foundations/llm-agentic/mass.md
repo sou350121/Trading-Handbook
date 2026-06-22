@@ -1,8 +1,6 @@
----
-title: "MASS"
-description: "落點於「生成式大模型 × 多智能体博弈」軸，將 LLM 從「預設流程預測器」重構為「端到端分佈優化器」，解決了傳統智能體模擬無法直接對接組合決策與動態適配市場風格切換的 Prior Gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=生成式大模型 alpha=多智能体博弈 autonomy=Agent自主演进 -->
+
+# MASS 解構
 
 > **發布**：2025-07-05 · （無 venue）
 > **QuantML 導讀**：[北京大学 & 正仁量化 | MASS：基于多智能体规模化模拟投资组合](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490927&idx=1&sn=3720c677c02ccda54e395d650f3c8200&chksm=ce7e7a71f909f3670a54f170ff36e80f5c0c1cb1ea617264ffafbd0772ab44a5ae5d4387326d#rd)

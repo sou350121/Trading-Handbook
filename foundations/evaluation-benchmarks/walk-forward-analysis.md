@@ -1,8 +1,6 @@
----
-title: "Walk-Forward Analysis / 分层验证框架"
-description: "落點於日频波段监督回归的因子挖掘流程，解決傳統靜態回測因全樣本參數優化導致的隱式/顯式過擬合與實盤崩塌 gap，提供可審計的動態驗證路徑。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# Walk-Forward Analysis / 分层验证框架 解構
 
 > **發布**：2025-11-26 · （無 venue）
 > **QuantML 導讀**：[为什么你的策略回测完美，实盘腰斩？](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492494&idx=1&sn=b5155a10aaed7ac0da3c0a4d4238e695&chksm=ce7d8490f90a0d86404ce8d6dd31f1b36f97dd83da4d8d88b303f8b1a35511de12e23c540543#rd)

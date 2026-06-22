@@ -1,8 +1,6 @@
----
-title: "Kronos"
-description: "落點於量價表格與生成式大模型軸，解決通用 TSFM 在金融 K 線低信噪比/非平穩數據上表現不及專用模型、且忽略波動率與合成任務的 prior gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=跨周期 paradigm=生成式大模型 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# Kronos 解構
 
 > **發布**：2025-08-13 · （無 venue）
 > **QuantML 導讀**：[清华大学 | Kronos：一个专为量化打造的K线基础模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491353&idx=1&sn=c2a005522c9e224a0aff16de1a353685&chksm=ce7e7807f909f11196dd502b61e8535c5c16fd9a08bfd32ff05d64ff18164a11f000f6db0ff9#rd)

@@ -1,8 +1,6 @@
----
-title: "AlphaEval"
-description: "將Alpha評估從「序列化回測模擬」解耦為「並行信號診斷」，補齊傳統IC篩選在穩定性、魯棒性與邏輯自洽上的Pareto缺口。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=元学习搜索 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# AlphaEval 解構
 
 > **發布**：2025-08-21 · （無 venue）
 > **QuantML 導讀**：[北京大学 × 正仁量化 | AlphaEval：多维度、高效Alpha因子挖掘评价体系](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491434&idx=1&sn=1c69580b04b51aedc2db1532d53a7401&chksm=ce7e7874f909f162065c11f6caa7997d5ba6390d7769e03e1a191f8e20b72afb15e18c2fa6d9#rd)

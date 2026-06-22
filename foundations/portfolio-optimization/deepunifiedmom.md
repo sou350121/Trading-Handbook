@@ -1,8 +1,6 @@
----
-title: "DeepUnifiedMom"
-description: "落點於「監督回歸 × 組合執行優化」軸，以 Multi-Task MoE 解構傳統 TSMOM 單週期/等權分配的結構性缺陷，將動量訊號生成與資本配置統一於端到端訓練迴圈。"
----
 <!-- ontology-5axis data=量价表格 horizon=跨周期 paradigm=监督回归 alpha=组合执行优化 autonomy=全自动黑盒 -->
+
+# DeepUnifiedMom 解構
 
 > **發布**：2024-06-14 · （無 venue） · arXiv [2406.08742](https://arxiv.org/abs/2406.08742)
 > **QuantML 導讀**：[DeepUnifiedMom: 多任务学习及MoE统一时序动量资产组合构建](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247484736&idx=1&sn=3cde94d9b3c0644d8114bcd5092d0cf8&chksm=ce7e625ef909eb489cca0f1906a260bd34232218da58d78900852cb5cf1fdcb1c49ca2c4e78e#rd)

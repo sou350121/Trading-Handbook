@@ -1,8 +1,6 @@
----
-title: "FININ"
-description: "落點於多模態日頻監督回歸，以端到端表征解構新聞擴散過程中的交互效應，填補了傳統情緒指標將新聞視為同質化總量的工程坑。"
----
 <!-- ontology-5axis data=多模态 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=人机协同可解释 -->
+
+# FININ 解構
 
 > **發布**：2025-02-23 · （無 venue）
 > **QuantML 導讀**：[基于新闻相互作用与影响力网络的金融市场预测模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489429&idx=1&sn=fee05f3ddc8532e1510cad831ed3ef37&chksm=ce7e708bf909f99de5e49177c659541a7caf115776845a26ec5aedc587140fe5162c54d21dd0#rd)

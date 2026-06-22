@@ -1,8 +1,6 @@
----
-title: "OpDS"
-description: "落點於量價表格/高頻日內/監督回歸/端到端表征/全自動黑盒。解了傳統 SVI 逐例優化在動態稀疏期權報價下的計算延遲與初始值敏感痛點，將波動率曲面重建從「離散優化問題」降維為「算子前向傳播」。"
----
 <!-- ontology-5axis data=量价表格 horizon=高频日内 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# OpDS 解構
 
 > **發布**：2025-07-02 · （無 venue）
 > **QuantML 導讀**：[利用深度平滑算子计算隐含波动率](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490898&idx=1&sn=1e47306b10916c09ccae44800ec046c7&chksm=ce7e7a4cf909f35a4f1bc84d504473527ca3fe247a71b4178cab6ab36be1ce83667c1cf48c35#rd)

@@ -1,8 +1,6 @@
----
-title: "RAG-MCP"
-description: "五軸落點於「文本另类 × 生成式大模型 × Agent自主演进」，解決 MCP 工具生態爆發下的提示膨脹與決策開銷 prior gap，將工具發現正交解耦為獨立檢索子問題。"
----
 <!-- ontology-5axis data=文本另类 horizon=跨周期 paradigm=生成式大模型 alpha=端到端表征 autonomy=Agent自主演进 -->
+
+# RAG-MCP 解構
 
 > **發布**：2025-05-11 · （無 venue）
 > **QuantML 導讀**：[RAG-MCP：解决大语言模型工具选择中的提示膨胀难题](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490346&idx=1&sn=ba403e8a54bac2c75f0556b5a0931d24&chksm=ce7e7c34f909f5229f2bf0f4ca453ab4f0f68075de7a50ee28da835809ca2e28ff1a507c76c6#rd)

@@ -1,8 +1,6 @@
----
-title: "YAND"
-description: "落點於 `元学习搜索` × `组合执行优化` 軸，解了高階矩進入大規模組合優化的計算瓶頸。將金融優化從統計估計轉向幾何導航。"
----
 <!-- ontology-5axis data=量价表格 horizon=中长周期 paradigm=元学习搜索 alpha=组合执行优化 autonomy=人机协同可解释 -->
+
+# YAND 解構
 
 > **發布**：2026-04-29 · （無 venue）
 > **QuantML 導讀**：[丘成桐入局量化：当菲尔兹奖得主用微分几何重构组合优化](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493812&idx=1&sn=6da55eefa905e0c22f19f27f7d0e1df4&chksm=ce7d8faaf90a06bcb86fe4204d0af29f465d3004cc43a4114534e27437fb9fbe0dfd282ff6bd#rd)

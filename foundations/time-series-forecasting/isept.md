@@ -1,8 +1,6 @@
----
-title: "ISEPT"
-description: "將傳統割裂的「資產對選擇」與「交易執行」統一為端到端監督回歸框架；透過 CAE 提取 K 線圖視覺特徵並預測下月 Sharpe Ratio，以實盤績效閉環抵抗市場漂移，解決了統計套利在 regime shift 下的靜態過擬合與執行反饋斷裂問題。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# ISEPT 解構
 
 > **發布**：2025-11-24 · （無 venue）
 > **QuantML 導讀**：[基于图像的配对交易框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492463&idx=1&sn=eff946db3dd23827d1a41b6a7ded0c97&chksm=ce7d8471f90a0d67f7218e814e1c77ae8c34c4f9046a89cdc52f470fb9390427497a2e0b38e0#rd)

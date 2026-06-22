@@ -1,8 +1,6 @@
----
-title: "Style Miner"
-description: "落點於「量价表格 × 日频波段 × 强化学习 × 因子挖掘 × 全自动黑盒」。解決了傳統深度監督模型依賴可微損失導致反饋稀疏、以及無監督方法忽略時間動態與解釋力不足的 prior gap，將因子構造明確建模為 CMDP 以權衡解釋力與自相關穩定性。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=强化学习 alpha=因子挖掘 autonomy=全自动黑盒 -->
+
+# Style Miner 解構
 
 > **發布**：2024-12-23 · （無 venue）
 > **QuantML 導讀**：[Style Miner：基于强化学习算法的风格因子构造](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488487&idx=1&sn=82c708030492662f4bd958c09cd6ad35&chksm=ce7e74f9f909fdefa1c5c79489743562eaa77b54a0a1f41d42e40de5c915b3ef77b94aec06e1#rd)

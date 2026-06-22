@@ -1,8 +1,6 @@
----
-title: "排名空间统计套利"
-description: "將截面索引從名稱空間強制映射至市值排名空間，利用離散排序過濾微結構噪聲，強化殘差收益的均值回歸信號。解了傳統兩階段的誤差累積坑，將執行成本與信號純度重新定價。"
----
 <!-- ontology-5axis data=量价表格 horizon=高频日内 paradigm=监督回归 alpha=组合执行优化 autonomy=全自动黑盒 -->
+
+# 排名空间统计套利 解構
 
 > **發布**：2024-10-10 · （無 venue）
 > **QuantML 導讀**：[排名空间中的统计套利](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486981&idx=1&sn=0760dbd572e74c4238e8755e7dd37910&chksm=ce7e691bf909e00d9fa8160ff6bd8c04a4441cff201cfbdb9282ab767c5443a4fbeb18dde080#rd)

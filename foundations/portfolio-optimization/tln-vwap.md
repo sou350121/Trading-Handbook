@@ -1,8 +1,6 @@
----
-title: "TLN-VWAP"
-description: "落點於「組合執行優化」軸，解構傳統 VWAP 執行中「預測成交量曲線→分配訂單」的兩步法斷裂，將執行目標直接嵌入監督回歸的損失函數。"
----
 <!-- ontology-5axis data=量价表格 horizon=高频日内 paradigm=监督回归 alpha=组合执行优化 autonomy=全自动黑盒 -->
+
+# TLN-VWAP 解構
 
 > **發布**：2025-04-18 · （無 venue）
 > **QuantML 導讀**：[基于深度学习的VWAP执行策略](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490093&idx=1&sn=e45a68c581147bf29fa124f06a57c1c8&chksm=ce7e7d33f909f425bad6b0a4cb32f036c69f361d54be658c8dacfe4b86d4cbd290340af89127#rd)

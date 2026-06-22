@@ -1,8 +1,6 @@
----
-title: "经验贝叶斯(EB)"
-description: "落點於「元学习搜索 × 因子挖掘」軸，以經驗貝葉斯收縮校正替換傳統多重檢驗閾值，解了高通量因子挖掘中「前視偏差 vs 過度保守FDR」的 prior gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=元学习搜索 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# 经验贝叶斯(EB) 解構
 
 > **發布**：2025-06-05 · （無 venue）
 > **QuantML 導讀**：[美联储首席经济学家 |  高通量资产定价](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490632&idx=1&sn=0940ffa72dd3024a3ea2b58503605195&chksm=ce7e7b56f909f2409ab17e2a662d6e379b488f2307292eb66e96653603de125391dc0e31f3be#rd)

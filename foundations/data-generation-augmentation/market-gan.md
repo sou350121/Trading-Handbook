@@ -1,8 +1,6 @@
----
-title: "Market-GAN"
-description: "落點於「生成式大模型 × 端到端表征」，解決金融量價數據缺乏語義標籤與非平穩性導致的生成失真，將上下文控制嵌入時序生成器以服務下游預測。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=生成式大模型 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# Market-GAN 解構
 
 > **發布**：AAAI24
 > **QuantML 導讀**：[AAAI 24 | Market-GAN 金融数据生成器](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485806&idx=1&sn=ac220f85358673a4c26e5c2d7da9aec7&chksm=ce7e6e70f909e766c7b815be2db25d9dee53a22795eb3959e7e8405b0c8221fca36f9b3531ed#rd)

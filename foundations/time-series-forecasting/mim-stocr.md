@@ -1,8 +1,6 @@
----
-title: "MiM-StocR"
-description: "在量价表格與日频波段軸上，以監督回歸預測收益率並透過排序損失對齊 Top-k 資金配置；解決了傳統深度模型在金融非平穩序列中梯度衝突與過擬合的 prior gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=因子挖掘 autonomy=全自动黑盒 -->
+
+# MiM-StocR 解構
 
 > **發布**：2026-01-27 · （無 venue）
 > **QuantML 導讀**：[融合动量因子与Adaptive-k的股票排序框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493106&idx=1&sn=b2d5dce5e8c62e64c7ccd720efb6bce4&chksm=ce7d82ecf90a0bfa6b54bfbb354f1f44e1bba36a1f0e797eef6745cdcea85fe7d8099f6745ff#rd)

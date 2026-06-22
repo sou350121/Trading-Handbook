@@ -1,8 +1,6 @@
----
-title: "ReFocus"
-description: "五軸落點於「量價表格 × 中長週期 × 監督回歸 × 端到端表徵 × 全自動黑盒」。解了頻域時序預測中「低頻能量壟斷導致中頻結構缺失」與「跨變量共享頻譜模式未被顯式建模」的 Prior Gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=中长周期 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# ReFocus 解構
 
 > **發布**：2025-03-15 · （無 venue）
 > **QuantML 導讀**：[ReFocus：强化中频与关键频建模，超越iTransformer](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489684&idx=1&sn=790f97f9b14f64d67a6680a182beb2a2&chksm=ce7e7f8af909f69c3dfe964821badd158d91c014341cb190825224d2abf9c732d34436598d3a#rd)

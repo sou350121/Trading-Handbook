@@ -1,8 +1,6 @@
----
-title: "COI"
-description: "以 1ms 時間鄰近性為錨點，將無條件訂單流拓撲分解為五類條件訂單失衡，填補了傳統單筆分類在電子化高頻環境下預測力衰減的 prior gap。"
----
 <!-- ontology-5axis data=微观盘口 horizon=高频日内 paradigm=监督回归 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# COI 解構
 
 > **發布**：2025-01-03 · Oxford-Man Institute
 > **QuantML 導讀**：[Oxford-Man  | 交易共现性：揭示股票市场微观结构与价格形成的新视角](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488660&idx=1&sn=af147885f3d36f26f5d1cb8414f1e301&chksm=ce7e738af909fa9c64d032ef9c47c93293d03020f25135516c28a8fc8937564ea2a766170e04#rd)

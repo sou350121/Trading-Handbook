@@ -1,8 +1,6 @@
----
-title: "LOB-Bench"
-description: "落點於「生成式大模型 × 微观盘口」軸，解了高頻序列生成中「交叉熵訓練損失與開環採樣分佈脫鉤」的 prior gap，提供可量化的分佈偏移與市場影響響應評分。"
----
 <!-- ontology-5axis data=微观盘口 horizon=高频日内 paradigm=生成式大模型 alpha=端到端表征 autonomy=人机协同可解释 -->
+
+# LOB-Bench 解構
 
 > **發布**：2025-02-15 · （無 venue）
 > **QuantML 導讀**：[LOB-Bench：应用于LOB的生成式人工智能基准测试](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489285&idx=1&sn=8c9b4ff6c094ced568ec1e1e4953b62a&chksm=ce7e701bf909f90d3151e77ce36f07d226d7364fe5a8dc81c1c70c14e0252730924711b9bc0c#rd)

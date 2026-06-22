@@ -1,8 +1,6 @@
----
-title: "DoubleAdapt"
-description: "落點於「日頻波段 × 元學習搜索 × 端到端表徵」軸。解決增量學習中因市場 regime shift 導致的協變量與條件分佈漂移，透過「數據-模型」雙適配器協同，將非平穩流數據對齊至局部平穩分佈並提供穩健初始化，彌補靜態回測與線上實盤的 prior gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=元学习搜索 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# DoubleAdapt 解構
 
 > **發布**：2024-06-13 · KDD · arXiv [2306.09862](https://arxiv.org/abs/2306.09862)
 > **QuantML 導讀**：[KDD 23 | DoubleAdapt: 显著提升各类模型表现的元学习模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247484726&idx=1&sn=68a12011fce4197b96d2f67b92f7b5c2&chksm=ce7e6228f909eb3e3ca1504f4b29adc1986cdb1bd451f73049077b864be1999d3b3fdcb860ad#rd)

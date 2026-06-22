@@ -1,8 +1,6 @@
----
-title: "HATS"
-description: "落點於「圖關係 × 日頻波段 × 監督回歸」軸，解決傳統 GNN 在異構公司關係網絡中「關係類型權重均等化」與「狀態-關係特徵耦合不足」的 prior gap，提供端到端的黑盒表徵學習框架。"
----
 <!-- ontology-5axis data=图关系 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# HATS 解構
 
 > **發布**：2024-08-09 · （無 venue）
 > **QuantML 導讀**：[HATS：分层图注意力神经网络用于股票预测](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485716&idx=1&sn=26a6ded18cff3baa95c579c77f069142&chksm=ce7e6e0af909e71c608f96c9c34e1fa86c6aaca491100785ee27c5d4b6d0a2a148923f6dcf25#rd)

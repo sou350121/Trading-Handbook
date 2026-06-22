@@ -1,8 +1,6 @@
----
-title: "FinBERT & LLM Prompting"
-description: "落點於「文本另类 × 生成式大模型 × 人机协同可解释」。解了 prior gap：傳統金融 NLP 依賴高昂的領域微調或脆弱的詞典規則，本文驗證了透過精心設計的少樣本提示，通用 LLM 在金融情緒分類上可逼近領域專用模型，將垂直領域的 Alpha 挖掘從「重微調」轉向「輕提示」"
----
 <!-- ontology-5axis data=文本另类 horizon=日频波段 paradigm=生成式大模型 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# FinBERT & LLM Prompting 解構
 
 > **發布**：2024-10-06 · （無 venue）
 > **QuantML 導讀**：[使用LLMs和FinBERT对新闻和报告进行金融情绪分析](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486930&idx=1&sn=6e733991443d5f9cf1d3c83424620307&chksm=ce7e6accf909e3dabe5f604aaa6ab70dfed6e0af3faa809bb57dc96d327a8b51e52388f71e3f#rd)

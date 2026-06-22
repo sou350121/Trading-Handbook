@@ -1,8 +1,6 @@
----
-title: "LOBCAST"
-description: "五軸落點於「微觀盤口×高頻日內×監督回歸」，解了過去 LOB 預測文獻缺乏標準化壓力測試與跨市場泛化驗證的 prior gap，將分散的 15 個 DL 模型納入統一框架進行實戰級失效分析。"
----
 <!-- ontology-5axis data=微观盘口 horizon=高频日内 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# LOBCAST 解構
 
 > **發布**：2025-03-22 · （無 venue）
 > **QuantML 導讀**：[基于LOB的最先进的深度学习模型全面对比](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489748&idx=1&sn=654d7b92a5c67d8a51f3983a213a6941&chksm=ce7e7fcaf909f6dc1de0647024bd92a4e3e786261b0bf6ea0d3abf89c604fc7c21e9d24251f8#rd)

@@ -1,8 +1,6 @@
----
-title: "DeepScalper"
-description: "五軸落點於「高頻日內 × 強化學習 × 端到端黑盒」。解了傳統日內 RL 代理在「高維細粒度動作空間」與「多模態市場表徵」上的 prior gap，繞過價格預測瓶頸，直接以 RL 閉環優化執行利潤。"
----
 <!-- ontology-5axis data=多模态 horizon=高频日内 paradigm=强化学习 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# DeepScalper 解構
 
 > **發布**：2025-01-26 · （無 venue）
 > **QuantML 導讀**：[DeepScalper：深度强化学习捕捉日内交易的短暂机会](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489018&idx=1&sn=1ea12b6de5e28e2700b4947081a32b7b&chksm=ce7e72e4f909fbf2e246da142b67e64778c0397d531646856fd60860c4f279b71c8ddb7599da#rd)

@@ -1,8 +1,6 @@
----
-title: "NEAT-Python"
-description: "落點於「元學習搜索」與「端到端表征」軸，以 NEAT 演化算法替代梯度下降，直接搜尋 RNN 拓撲與交易邏輯的聯合結構。解了傳統因子挖掘中「特徵工程與交易決策脫節」的 prior gap，讓適應度函數直接錨定交易行為學而非預測精度。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=元学习搜索 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# NEAT-Python 解構
 
 > **發布**：2025-01-31 · （無 venue）
 > **QuantML 導讀**：[基于神经进化拓扑结构(NEAT)算法和多技术指标共振的股票交易策略](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489039&idx=1&sn=effb64c9ad581a0ba67a466758041fa3&chksm=ce7e7111f909f80799c5dde6e626323a715d37a16e9d72bbab4a562209ad121556c8bbbaef98#rd)

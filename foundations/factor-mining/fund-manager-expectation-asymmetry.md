@@ -1,8 +1,6 @@
----
-title: "美联储 ｜ 有形之手：基金经理预期与A股非对称价"
-description: "落點於文本另类 × 中长周期 × 监督回归。解了傳統宏觀因子滯後且無法區分「預期」與「交易行為」的 prior gap，直接將基金經理的宏觀增長預期轉化為可驗證的資金流向與價格衝擊指標。"
----
 <!-- ontology-5axis data=文本另类 horizon=中长周期 paradigm=监督回归 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# 美联储 ｜ 有形之手：基金经理预期与A股非对称价 解構
 
 > **發布**：2025-10-30 · （無 venue）
 > **QuantML 導讀**：[美联储 ｜ 有形之手：基金经理预期与A股非对称价格效应](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492169&idx=1&sn=6d660c8ea955c296a0ef1f3bb5dd7347&chksm=ce7d8557f90a0c416fb59746b3e1b62392d136797ab64074c44de8a8f5aef34ed49781f5737f#rd)

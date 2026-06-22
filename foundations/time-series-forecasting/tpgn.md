@@ -1,8 +1,6 @@
----
-title: "TPGN"
-description: "落點於量價表格與中長週期監督回歸，以端到端表徵取代傳統 RNN/Transformer 的遞歸或注意力機制，解決長程依賴捕捉與順序計算瓶頸的 prior gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=中长周期 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# TPGN 解構
 
 > **發布**：2024-12-01 · NeurIPS 2024
 > **QuantML 導讀**：[NIPS 24 | PGN：RNN 的新继任者](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488128&idx=1&sn=a8287377302d2cdf5d1d6ddc321cdf31&chksm=ce7e759ef909fc88f0bc9ddea5171b4bac84008972a60925fe3fcc4eff005e37503d2ba7525f#rd)

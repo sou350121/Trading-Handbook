@@ -1,8 +1,6 @@
----
-title: "改进局部搜索攻击采样/GAF-CNN"
-description: "落點於「生成式大模型 × 端到端表征」軸，針對金融量價數據稀缺與分佈漂移的 prior gap，以對抗擾動替代生成式先驗，提供低假設依賴的 K 線數據增強路徑。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=生成式大模型 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# 改进局部搜索攻击采样/GAF-CNN 解構
 
 > **發布**：2025-06-21 · （無 venue）
 > **QuantML 導讀**：[深度K线学习器的数据增强](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490798&idx=1&sn=5cc3b0b55f965124e2ee0d36e06f9384&chksm=ce7e7bf0f909f2e6e0cc662abdf6a292c5df7d2555f6f42bbe3f41aad8fcd6566458b7cdb2d1#rd)

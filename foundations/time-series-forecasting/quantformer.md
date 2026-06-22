@@ -1,8 +1,6 @@
----
-title: "Quantformer"
-description: "將 NLP Transformer 的編碼器結構遷移至量價表格，以線性層替換詞嵌入並移除解碼器，專為單期收益分位數預測重構注意力機制，填補了傳統序列模型處理純數值金融數據時的嵌入失配與自回歸冗餘。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=因子挖掘 autonomy=全自动黑盒 -->
+
+# Quantformer 解構
 
 > **發布**：2025-06-05 · （無 venue）
 > **QuantML 導讀**：[Quantformer：从注意力到利润的量化策略](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490617&idx=1&sn=7f791154239ed54d2ce275fdf769a442&chksm=ce7e7b27f909f2311e57298b20891b79da0c85f55a8dfefdd37e49155403988b9ec61d0327a5#rd)

@@ -1,8 +1,6 @@
----
-title: "MIQUBO"
-description: "落點於因子挖掘與元搜索軸，解決傳統單變量MI篩選在高維分散信息場景下的組合冗餘與協同效應缺失問題。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=元学习搜索 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# MIQUBO 解構
 
 > **發布**：2025-10-27 · （無 venue）
 > **QuantML 導讀**：[告别特征冗余：用量子退火精炼你的Alpha因子](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492132&idx=1&sn=56dccf830fd67aa27a9627ba91a29dbf&chksm=ce7d853af90a0c2cc017ee65c350a4ce77b0f54af5bede5763c17aff59c45cebb786f7b1a54d#rd)

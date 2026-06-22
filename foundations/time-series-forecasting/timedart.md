@@ -1,8 +1,6 @@
----
-title: "TimeDART"
-description: "落點於自監督時間序列表徵學習，解決了傳統掩碼自編碼器、對比學習與純自回歸的 prior gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=跨周期 paradigm=生成式大模型 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# TimeDART 解構
 
 > **發布**：2025-05-16 · ICML25
 > **QuantML 導讀**：[ICML 25 | TimeDART:自监督时间序列预训练框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490397&idx=1&sn=ac9910cc137274b4d4a6070b2437cef9&chksm=ce7e7c43f909f555a9dd8890622d30ea4b3271b7aad65a43d4ca9ecae8f5458390c3dc703e82#rd)

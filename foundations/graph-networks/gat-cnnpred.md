@@ -1,8 +1,6 @@
----
-title: "GAT-CNNpred"
-description: "以特徵相關性閾值硬編碼圖拓撲，用 GAT/GCN 取代傳統 CNNpred 的 1×f 卷積核提取橫截面每日特徵，再與多尺度 CNN 時序層交叉融合。解了「卷積無法建模特徵間依賴」與「RNN/LSTM 過平滑/梯度消失」的 prior gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# GAT-CNNpred 解構
 
 > **發布**：2025-06-19 · （無 venue）
 > **QuantML 導讀**：[基于图深度学习的指数预测](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490772&idx=1&sn=a52945b6942c212a3dbfde2278c45cd3&chksm=ce7e7bcaf909f2dc1e0e610d74e953d91414dc98d6802831766404b5ba4451afd725ee54fc2f#rd)

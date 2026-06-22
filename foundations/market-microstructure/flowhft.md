@@ -1,8 +1,6 @@
----
-title: "FlowHFT"
-description: "落點於「微觀盤口 × 高頻日內」的自動化黑盒執行框架。解了傳統HFT模型對嚴格假設的依賴與RL單步誤差累積的工程坑，將多場景專家策略統一為單一條件流匹配模型，並透過線上網格搜索微調實現動態適應。"
----
 <!-- ontology-5axis data=微观盘口 horizon=高频日内 paradigm=强化学习 alpha=组合执行优化 autonomy=全自动黑盒 -->
+
+# FlowHFT 解構
 
 > **發布**：2025-05-19 · （無 venue）
 > **QuantML 導讀**：[FlowHFT：基于模仿学习和网格搜索微调，学习并超越专家策略](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490422&idx=1&sn=6d21b2d94ddf2d0086d63d58ed90c9f3&chksm=ce7e7c68f909f57e79dc6250dc4e8e1bd477b199b3f22ff72cbc441ce0747d4890275b9b66ca#rd)

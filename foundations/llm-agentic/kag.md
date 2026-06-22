@@ -1,8 +1,6 @@
----
-title: "KAG"
-description: "落點於「生成式大模型 × Agent自主演进」軸，解了傳統 RAG 依賴向量相似度導致邏輯鏈断裂與幻覺放大的 prior gap。將符號邏輯與神經生成透過互索引與混合算子鏈硬編碼，提供可追蹤的推理路徑而非黑盒機率輸出。"
----
 <!-- ontology-5axis data=多模态 horizon=跨周期 paradigm=生成式大模型 alpha=端到端表征 autonomy=Agent自主演进 -->
+
+# KAG 解構
 
 > **發布**：2025-03-06 · （無 venue）
 > **QuantML 導讀**：[KAG + 多模态 RAG + LLM Agents：构建强大的AI推理系统](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489565&idx=1&sn=ee48872ce61ab0e5cd53e99dc108c61e&chksm=ce7e7f03f909f61594b7b1b248716b4260b63a81667725a5432961d6f79d998120aabf66b073#rd)

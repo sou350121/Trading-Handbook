@@ -1,8 +1,6 @@
----
-title: "Agent Trading Arena"
-description: "將 LLM 決策輸入從「文本代數」強行切換至「視覺幾何」，在五軸中佔據生成式大模型與多智能體博弈交叉點。解了 prior gap：純文本表格輸入導致 LLM 過擬合局部數值、喪失趨勢感知與跨期關聯提取能力。"
----
 <!-- ontology-5axis data=多模态 horizon=日频波段 paradigm=生成式大模型 alpha=多智能体博弈 autonomy=Agent自主演进 -->
+
+# Agent Trading Arena 解構
 
 > **發布**：2025-03-18 · （無 venue）
 > **QuantML 導讀**：[视觉胜于文本：LLM在交易中更好的应用方式？](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489712&idx=1&sn=2c37c80069f65fae35fd198105c8b7f8&chksm=ce7e7faef909f6b8915ec67acd899e75b43dd8b1058efbc737a1fce250b4f299937c2af0e623#rd)

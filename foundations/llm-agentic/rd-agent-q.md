@@ -1,8 +1,6 @@
----
-title: "RD-Agent(Q)"
-description: "五軸落點於「生成式大模型 × Agent自主演进 × 因子挖掘」，解了量化研發中「因子與模型優化碎片化」及「LLM 生成信號缺乏因子邏輯基礎」的 prior gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=生成式大模型 alpha=因子挖掘 autonomy=Agent自主演进 -->
+
+# RD-Agent(Q) 解構
 
 > **發布**：2025-05-22 · （無 venue）
 > **QuantML 導讀**：[R&D-Agent-Quant](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490469&idx=1&sn=e4748ff2c1902ab9573e7e9a1addef57&chksm=ce7e7cbbf909f5ad3328d28c271cfed2f1c37fc58a8e4549f2b50085f364a566876bfcbca35f#rd)

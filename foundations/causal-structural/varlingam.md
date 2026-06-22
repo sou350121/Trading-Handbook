@@ -1,8 +1,6 @@
----
-title: "VarLiNGAM"
-description: "落點於「因果結構×因子挖掘」軸，將時序因果圖的父節點直接映射為預測自變量，解了傳統量價因子依賴統計相關性、缺乏跨資產傳導路徑解釋的 prior gap。在日頻波段尺度上提供可追溯、可實盤的動量信號生成流水線。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=因果结构 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# VarLiNGAM 解構
 
 > **發布**：2024-08-30 · （無 venue）
 > **QuantML 導讀**：[交易与时间序列因果发现](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486034&idx=1&sn=a62d7507e2c0a64755d962a57390eefa&chksm=ce7e6d4cf909e45a0cfd0ed2fb81afbee47add94f74fbebf3dc847083f74b58224f949b1c2f7#rd)

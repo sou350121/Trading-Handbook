@@ -1,8 +1,6 @@
----
-title: "OPHR"
-description: "落點於「量價表格 × 日頻波段 × 強化學習 × 風險擇時 × 全自動黑盒」。解決了傳統波動率交易中「擇時信號延遲」與「動態對沖路徑依賴損益優化」難以 jointly 建模的工程斷層，將非線性期權 PnL 轉化為可微序列決策。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=强化学习 alpha=风险择时 autonomy=全自动黑盒 -->
+
+# OPHR 解構
 
 > **發布**：2025-11-07 · （無 venue）
 > **QuantML 導讀**：[“择时”与“对冲”双管齐下：OPHR强化学习征服波动率交易](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492259&idx=1&sn=5d60b18346f44f0dd92b4cf890518122&chksm=ce7d85bdf90a0cab1ef710b5ee8e461fb3807c3b588685de1a4cf8c6f62251c6f500f2064485#rd)

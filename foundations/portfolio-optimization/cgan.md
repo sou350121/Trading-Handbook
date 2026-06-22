@@ -1,8 +1,6 @@
----
-title: "cGAN策略克隆框架"
-description: "落點於生成式大模型與端到端表征軸，以條件GAN直接建模投資組合權重的條件分佈，解決傳統多目標效用函數參數化困難與經理人行為異質性無法規模化捕捉的Prior Gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=中长周期 paradigm=生成式大模型 alpha=端到端表征 autonomy=人机协同可解释 -->
+
+# cGAN策略克隆框架 解構
 
 > **發布**：2025-11-02 · （無 venue）
 > **QuantML 導讀**：[牛津 x JP Morgan ｜ 告别效用函数：GAN“克隆”基金经理](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492199&idx=1&sn=9edd6a0f9e169948290dfc8160ae754b&chksm=ce7d8579f90a0c6ff5222cd1cc79a208cf8ac6318a2083419ac39d214a367d7459a5a5d67e9c#rd)

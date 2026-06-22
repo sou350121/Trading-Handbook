@@ -1,8 +1,6 @@
----
-title: "混合量子-经典PPO框架"
-description: "落點於「日频波段 + 强化学习」軸，試圖以 VQC 擴展策略網絡表達力，解了傳統規則型行業輪動無法動態適應結構性變化的 prior gap，但實證揭示代理獎勵與真實投資目標的錯位是核心瓶頸。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=强化学习 alpha=组合执行优化 autonomy=全自动黑盒 -->
+
+# 混合量子-经典PPO框架 解構
 
 > **發布**：2025-06-28 · （無 venue）
 > **QuantML 導讀**：[量子强化学习在行业轮动中的实践](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490865&idx=1&sn=e3a3aff8a49c219585d24b64344db3fb&chksm=ce7e7a2ff909f339ac3246dbb7f18b58e8d1b094f367b2442caa6b71965251a4c6064643be35#rd)

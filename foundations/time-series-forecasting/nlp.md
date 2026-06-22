@@ -1,8 +1,6 @@
----
-title: "深度学习与NLP在加密货币预测中的应用：整合金融"
-description: "聚焦日频波段，以监督回归/分类范式挖掘文本另类因子。解了傳統詞典情感在加密市場高噪聲下的失效問題，並用局部極值目標替代日收益率，降低交易頻率與滑點敏感度。"
----
 <!-- ontology-5axis data=文本另类 horizon=日频波段 paradigm=监督回归 alpha=因子挖掘 autonomy=全自动黑盒 -->
+
+# 深度学习与NLP在加密货币预测中的应用：整合金融 解構
 
 > **發布**：2024-10-28 · （無 venue）
 > **QuantML 導讀**：[深度学习与NLP在加密货币预测中的应用：整合金融、区块链和社交媒体数据](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487281&idx=1&sn=fbb1158612c0505e18358bfbafa3c917&chksm=ce7e682ff909e1390e3dba2af706da884f9f979dd7389477d33b992d8769ff98659888597cb6#rd)

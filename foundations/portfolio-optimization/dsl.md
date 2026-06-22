@@ -1,8 +1,6 @@
----
-title: "DSL"
-description: "將非凸的組合優化目標轉化為凸代理損失監督學習任務，並透過 Deep Ensemble 收斂配置方差，填補 E2E 訓練不穩定與 PFL 預測-決策脫節的工程鴻溝。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=组合执行优化 autonomy=全自动黑盒 -->
+
+# DSL 解構
 
 > **發布**：2025-07-29 · （無 venue）
 > **QuantML 導讀**：[从“预测市场”到“学习决策”：基于监督学习决策与集成学习的投资组合优化框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491174&idx=1&sn=e053618eed09e779f2f8ee899845f1a0&chksm=ce7e7978f909f06e78cc6a6a3514babd3873aa69cf98b5f6a75077e7185cc752093eb0ad138b#rd)

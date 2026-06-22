@@ -1,8 +1,6 @@
----
-title: "AlphaEvolve"
-description: "落點於元學習搜索與因子挖掘的交叉帶，解決傳統遺傳算法搜索空間狹窄與機器學習因子難以組合成低相關性池的工程痛點。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=元学习搜索 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# AlphaEvolve 解構
 
 > **發布**：2024-08-19 · （無 venue）
 > **QuantML 導讀**：[AlphaEvolve：基于AutoML的公式型Alpha因子挖掘框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485843&idx=1&sn=06e314197e9e5189ecdfcb1de81def19&chksm=ce7e6e8df909e79b516274d49c1fd1a5c1d1d95fab905c0b2566ec97c20fe5499ec584562923#rd)

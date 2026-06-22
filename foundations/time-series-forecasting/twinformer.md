@@ -1,8 +1,6 @@
----
-title: "TwinFormer"
-description: "五軸落點於「量價表格 × 日频波段 × 监督回归」，解決標準 Transformer $O$ 二次複雜度在極長序列上的算力瓶頸，並透過雙層稀疏注意力+GRU聚合器補足扁平 Patch-based 模型對「局部動力學與長程依賴分離建模」的結構性缺失。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# TwinFormer 解構
 
 > **發布**：2026-01-06 · （無 venue）
 > **QuantML 導讀**：[TwinFormer：双层注意力+GRU时间序列预测SOTA模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492929&idx=1&sn=bfc00e0abde9b6612002422bced5e4d2&chksm=ce7d825ff90a0b496f865264a3f244c0b5cc7c600f63d5c6891baaa18f92d10cfa4d071785dc#rd)

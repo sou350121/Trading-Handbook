@@ -1,8 +1,6 @@
----
-title: "PVAR"
-description: "落點於「高頻日内×因果結構」軸，解決了傳統日度折溢價分析無法識別一級/二級市場真實傳導路徑的 prior gap，以分鐘級訂單流與收益率的動態脈衝響應，證偽了ETF流動性引入非基本面衝擊的假說。"
----
 <!-- ontology-5axis data=微观盘口 horizon=高频日内 paradigm=因果结构 alpha=组合执行优化 autonomy=人机协同可解释 -->
+
+# PVAR 解構
 
 > **發布**：2024-12-06 · JFE
 > **QuantML 導讀**：[JFE | ETF日内套利研究](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488257&idx=1&sn=9eb00eade68c4f6816916330b859adb0&chksm=ce7e741ff909fd09702475203a2601518e8fa446241678be96a90cc3724b829c5fae05787d47#rd)

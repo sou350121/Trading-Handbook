@@ -1,8 +1,6 @@
----
-title: "RobustiPy"
-description: "落點於 `alpha=因子挖掘` 與 `autonomy=人机协同可解释` 軸。解了量化研究中「單一回測曲線掩蓋設定自由度」的 prior gap，將隱性的 p-hacking 轉為可視化的設定曲線分佈與樣本外穩健性剖面。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# RobustiPy 解構
 
 > **發布**：2025-06-26 · （無 venue）
 > **QuantML 導讀**：[RobustiPy：下一代多元宇宙样分析与模型稳健性量化框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490847&idx=1&sn=332d69653330fa783346615ddfcaa9a0&chksm=ce7e7a01f909f31739e3ba506f1463ccc2ee244545f00f7687c5de251117b5b21ba6aab43c48#rd)

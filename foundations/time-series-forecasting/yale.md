@@ -1,8 +1,6 @@
----
-title: "Yale | 非线性时间序列动量"
-description: "落點於量價表格與中長週期監督回歸，以風險擇時為核心，透過人機協作可解釋的S型加權機制，解決傳統線性TSMOM在極端行情下風險暴露過高與Sharpe受限的Prior Gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=中长周期 paradigm=监督回归 alpha=风险择时 autonomy=人机协同可解释 -->
+
+# Yale | 非线性时间序列动量 解構
 
 > **發布**：2025-12-22 · （無 venue）
 > **QuantML 導讀**：[Yale | 非线性时间序列动量](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492760&idx=1&sn=b7410ec02ca0cfb93f8d12de61301bf5&chksm=ce7d8386f90a0a908cb22a43896ed0a23e79df67d447e61b8f53f941f24453d4b1f6c1379e64#rd)

@@ -1,8 +1,6 @@
----
-title: "FinRL"
-description: "落點於「端到端表征 × 全自动黑盒」軸的基礎設施層。解了通用 DRL 庫與金融實盤之間的環境工程斷層，將交易成本、流動性約束與組合權重限制硬編碼進 Gym step 函數，使研究者能跳過環境擬真調參直接對齊策略邏輯。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=强化学习 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# FinRL 解構
 
 > **發布**：2025-01-12 · （無 venue）
 > **QuantML 導讀**：[Github万星，开源强化学习交易框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488789&idx=1&sn=f7cb099a7020da844ff72a87c2e3a45f&chksm=ce7e720bf909fb1d289c8932ff455b199e2c349a28bb65a167fbf8923bbed182905abce67fe8#rd)

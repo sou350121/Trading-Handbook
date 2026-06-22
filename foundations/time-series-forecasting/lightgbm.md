@@ -1,8 +1,6 @@
----
-title: "LightGBM"
-description: "落點於日频波段與因子挖掘軸，解決個人算力無法負擔 DL 架構時的訓練效率瓶頸，並填補樹模型特徵轉換缺乏系統性評估的 prior gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# LightGBM 解構
 
 > **發布**：2025-01-15 · （無 venue）
 > **QuantML 導讀**：[基于特征工程和转换方法的LightGBM资产预测](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488811&idx=1&sn=990a3fb7f2dfaa030e5b99b615112704&chksm=ce7e7235f909fb233ee0cebc4de5a68a116a59b890298dcf69854010b5a42c69c374c4a30d45#rd)

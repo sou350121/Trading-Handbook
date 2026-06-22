@@ -1,8 +1,6 @@
----
-title: "TiMi"
-description: "五軸落點於量價表格 × 高頻日內 × 生成式大模型 × 組合執行優化 × Agent自主演進。解了 prior gap：傳統 LLM 智能體在線推理延遲與擬人化對話鏈路導致滑點吞噬利潤，以及 RL 策略在 Regime Shift 下缺乏機械理性的工程落地路徑。"
----
 <!-- ontology-5axis data=量价表格 horizon=高频日内 paradigm=生成式大模型 alpha=组合执行优化 autonomy=Agent自主演进 -->
+
+# TiMi 解構
 
 > **發布**：2026-05-22 · ICLR26
 > **QuantML 導讀**：[ICLR 26 ｜ TiMi：多智能体也能做高频交易？](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493914&idx=1&sn=cd3ca82daf18a737664500331b4b7985&chksm=ce7d8e04f90a07125346094f5d2693270bcddb0f065b74b9c78ad8d6c1abae76aa6a830b560d#rd)

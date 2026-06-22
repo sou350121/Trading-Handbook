@@ -1,8 +1,6 @@
----
-title: "MDS (Metric Dependence Screening)"
-description: "落點於量價表格與高頻日內的監督回歸因子挖掘框架。解決了傳統截面初篩因標量降頻導致的微觀結構信息損耗，以及均值-方差優化器在超高維度下的誤差放大問題。"
----
 <!-- ontology-5axis data=量价表格 horizon=高频日内 paradigm=监督回归 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# MDS (Metric Dependence Screening) 解構
 
 > **發布**：2026-05-18 · （無 venue）
 > **QuantML 導讀**：[抛弃高频数据低频化：别让粗暴降维毁了你的微观 Alpha](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493887&idx=1&sn=f824e6ba0d1aad1f8c43039bc296a486&chksm=ce7d8fe1f90a06f7ef5c9844912d62d27824fe6bc550fe31c3764df01b40a43f8ffa10ab954c#rd)

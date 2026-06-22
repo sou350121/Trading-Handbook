@@ -1,8 +1,6 @@
----
-title: "Attn-LOB"
-description: "落點於「微观盘口 × 强化学习 × 端到端表征」。解決了傳統 DRL 做市依賴手工 LOB 特徵導致狀態空間表達力不足，以及離散動作空間無法精細控制庫存與價差的 prior gap。"
----
 <!-- ontology-5axis data=微观盘口 horizon=高频日内 paradigm=强化学习 alpha=端到端表征 autonomy=Agent自主演进 -->
+
+# Attn-LOB 解構
 
 > **發布**：2025-04-14 · （無 venue）
 > **QuantML 導讀**：[基于深度强化学习的LOB做市策略研究](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490051&idx=1&sn=95f0134d1a0118c1482a676d988c50c7&chksm=ce7e7d1df909f40bf3ebeb6464f877a7bd356f0f96eb03335e0b57e04abd0ad343766019bea8#rd)

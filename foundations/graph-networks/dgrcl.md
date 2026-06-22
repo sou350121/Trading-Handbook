@@ -1,8 +1,6 @@
----
-title: "DGRCL"
-description: "落點於「圖關係×日頻波段」軸，解決傳統 GNN 依賴靜態行業先驗與硬閾值建圖的泛化瓶頸，透過 Zipf 定律自適應邊數與對比學習約束，實現動靜特徵聯合表徵。"
----
 <!-- ontology-5axis data=图关系 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# DGRCL 解構
 
 > **發布**：2025-08-28 · （無 venue）
 > **QuantML 導讀**：[克服静态图局限：融合动态时序与静态关系的金融市场预测模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491493&idx=1&sn=95b0ed1bef255a97ff79bd8fd792d819&chksm=ce7e78bbf909f1ad74b0b69d1b05a96c8d47eafe24bad6fbb7f0f602127dfac50ebab9c6d494#rd)

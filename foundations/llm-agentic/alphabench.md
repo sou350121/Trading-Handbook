@@ -1,8 +1,6 @@
----
-title: "AlphaBench"
-description: "首個嵌入 Qlib 回測引擎的 LLM 因子挖掘系統性基準。解決了「純文本公式無法承載執行上下文」的評估斷層，將 LLM 從不可靠的零樣本裁判重構為 SFT 成對比較器與 EA 變異算子。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=生成式大模型 alpha=因子挖掘 autonomy=Agent自主演进 -->
+
+# AlphaBench 解構
 
 > **發布**：2026-05-25 · （無 venue）
 > **QuantML 導讀**：[哪款大模型更适合因子挖掘？](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493934&idx=1&sn=6dbb6e8846d1cf5186b7a52de93f783d&chksm=ce7d8e30f90a07262bcece160866ce33dbf9fde5066d2e6e2908bfc17e05b7299219ab1d3b00#rd)

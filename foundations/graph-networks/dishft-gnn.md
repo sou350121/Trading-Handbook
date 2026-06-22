@@ -1,8 +1,6 @@
----
-title: "DishFT-GNN"
-description: "落點於「圖關係 × 監督回歸」軸，解決傳統 GNN 僅依賴歷史時空依賴而忽略歷史-未來分佈突變的 prior gap。透過教師-學生蒸餾架構，將非平穩市場中的分佈漂移內生化為可學習的隱式關聯。"
----
 <!-- ontology-5axis data=图关系 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# DishFT-GNN 解構
 
 > **發布**：2025-02-19 · （無 venue）
 > **QuantML 導讀**：[DishFT-GNN: 基于蒸馏的未来感知图神经网络用于股票趋势预测](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489365&idx=1&sn=f993c427c5bb11c30aff2a4e76d25ffd&chksm=ce7e704bf909f95d94bda609a0af05fe9ffab3fbb641d52ad433c2d4756b898100b9ab14fc64#rd)

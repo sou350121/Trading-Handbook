@@ -1,8 +1,6 @@
----
-title: "DHMOE"
-description: "落點於「多模態 × 監督回歸 × 全自動黑盒」軸，解決傳統單一黑箱預測器無法模擬機構「自上而下教學／自下而上決策」協作流程的 prior gap，將異構信號轉化為可微的條件參數生成任務。"
----
 <!-- ontology-5axis data=多模态 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# DHMOE 解構
 
 > **發布**：2025-06-27 · AAAI25
 > **QuantML 導讀**：[AAAI 25 | 融合扩散模型与专家混合的层级化股票预测研究](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490858&idx=1&sn=a7ca3ad90535784bf9116af8fb76725c&chksm=ce7e7a34f909f322220426f75e3b3d8fd4739cda8dd1caa240b612ff3fd7ab1e42cab1e4ebec#rd)

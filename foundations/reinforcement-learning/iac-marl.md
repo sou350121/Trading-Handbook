@@ -1,8 +1,6 @@
----
-title: "IaC-MARL"
-description: "將多訂單執行建模為 MARL 協作問題，以 IaC 協議與行動價值歸因解耦「現金共享約束」與「單訂單執行目標」，填補傳統單智能體 TWAP/VWAP 與現存 MARL 僅交換觀測值的協作效率缺口。"
----
 <!-- ontology-5axis data=量价表格 horizon=高频日内 paradigm=强化学习 alpha=组合执行优化 autonomy=Agent自主演进 -->
+
+# IaC-MARL 解構
 
 > **發布**：2025-06-25 · （無 venue）
 > **QuantML 導讀**：[意图感知通信：多订单执行的多智能体强化学习](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490838&idx=1&sn=234bb7a5a2193ac66c8214bb8f5574a6&chksm=ce7e7a08f909f31e89d9de1fb200d7d78a692fb857fb00743b5760fd2358630787fca2a3091d#rd)

@@ -1,8 +1,6 @@
----
-title: "RSR"
-description: "將日頻波段的 Alpha 生成從「單標的點預測」推向「橫截面關係排序」，在五軸座標中精準卡位 `图关系` × `监督回归` 的交叉帶。解了傳統 DL 忽略個體與集體動態耦合、且 MSE 擬合對量級漂移極度敏感的工程坑。"
----
 <!-- ontology-5axis data=图关系 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# RSR 解構
 
 > **發布**：2024-09-18 · （無 venue）
 > **QuantML 導讀**：[基于时序关系的股票预测排序方法](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486355&idx=1&sn=eef07cea003919a73e9a4a75ca5c5d33&chksm=ce7e6c8df909e59ba750227d37505ccbea65abf3ad4ab674391a6a7d3cc6cb0ebe8e7fcf31ed#rd)

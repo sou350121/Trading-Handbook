@@ -1,8 +1,6 @@
----
-title: "使用机器学习方法研究限价委托簿特征对短期价格预测"
-description: "落點於「微觀盤口 × 高頻日內 × 監督分類/回歸 × 因子挖掘 × 人機協同」。解了 LOB 特徵工程中「類別極端不平衡與淺層資訊衰減」的 prior gap，證明輕量級樹模型配合標籤平滑與不平衡特徵提煉，能在無深度網絡的情況下穩健捕獲短期方向性。"
----
 <!-- ontology-5axis data=微观盘口 horizon=高频日内 paradigm=监督回归 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# 使用机器学习方法研究限价委托簿特征对短期价格预测 解構
 
 > **發布**：2024-06-17 · （無 venue）
 > **QuantML 導讀**：[使用机器学习方法研究限价委托簿特征对短期价格预测的影响](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247484771&idx=1&sn=52ce2b599bbb5e8a82b3ebf4d909a887&chksm=ce7e627df909eb6b9a923f512dd322c21dc8f41d20c124c7820e994a9dea97831ffbacf83dfc#rd)

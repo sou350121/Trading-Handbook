@@ -1,8 +1,6 @@
----
-title: "FinRLlama"
-description: "落點於「文本另类×强化学习」軸，解決傳統金融情感分析 LLM 缺乏市場特定知識與時間動態對齊的 prior gap，將靜態語義評分轉化為可執行的多空信號。"
----
 <!-- ontology-5axis data=文本另类 horizon=日频波段 paradigm=强化学习 alpha=端到端表征 autonomy=人机协同可解释 -->
+
+# FinRLlama 解構
 
 > **發布**：2025-02-05 · ICAIF24
 > **QuantML 導讀**：[FinRLlama：基于强化学习和市场反馈的金融情感分析LLM优化方案](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489127&idx=1&sn=faad16c8ac3ca02dcb982837d03b21ab&chksm=ce7e7179f909f86fd40ea777c7598c0d4b013cb2a0c25567248de0748f24453d85e07a4fbe27#rd)

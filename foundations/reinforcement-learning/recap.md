@@ -1,8 +1,6 @@
----
-title: "ReCAP"
-description: "落點於「日频波段 × 强化学习 × 组合执行优化」軸，解了傳統 CRL 在金融非平穩環境下面臨的固定窗口切分失真與參數覆蓋遺忘兩大工程坑。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=强化学习 alpha=组合执行优化 autonomy=全自动黑盒 -->
+
+# ReCAP 解構
 
 > **發布**：2026-06-04 · KDD26
 > **QuantML 導讀**：[KDD 26 | 如何防止Alpha衰减？](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493992&idx=1&sn=82cc32596c1d6b1477dde774721cbbad&chksm=ce7d8e76f90a0760cca490400d5b700c4299df78572c3aaff44493649cc91722a4ac35a94cec#rd)

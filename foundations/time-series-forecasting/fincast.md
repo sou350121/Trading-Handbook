@@ -1,8 +1,6 @@
----
-title: "FinCast"
-description: "落點於「生成式大模型 × 全自動黑盒」軸，以預訓練基礎模型取代領域專屬監督學習，解決金融時間序列跨領域/跨頻率泛化差與預測坍塌的 prior gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=跨周期 paradigm=生成式大模型 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# FinCast 解構
 
 > **發布**：2025-08-29 · CIKM 2025
 > **QuantML 導讀**：[CIKM 25 | FinCast: 首个十亿级参数的金融预测基础模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491504&idx=1&sn=ca7df4b109c9d46627fdecf2b0191d7d&chksm=ce7e78aef909f1b8171fed7dcf05f6d221a37fab5996ac23205e96e2336d4dc79c4434bfc6e2#rd)

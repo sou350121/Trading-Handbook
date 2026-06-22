@@ -1,8 +1,6 @@
----
-title: "MASA"
-description: "落點於「日頻波段 × 強化學習 × 組合執行優化」軸，解決傳統單智能體 RL 將收益與風險混合編碼於單一 Reward 所導致的約束越界與策略漂移問題，以鬆耦合流水線重構動態調倉的風控錨點。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=强化学习 alpha=组合执行优化 autonomy=全自动黑盒 -->
+
+# MASA 解構
 
 > **發布**：2024-09-09 · AAMAS 24
 > **QuantML 導讀**：[AAMAS 24 | 基于深度强化学习的多智能体和自适应框架用于动态组合风险管理](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486159&idx=1&sn=7318ee3c693744a664889868fe5e38d8&chksm=ce7e6dd1f909e4c74754306e35f71be1add32c089ab56191731f4f2c1a2b9eaf59e986817af3#rd)

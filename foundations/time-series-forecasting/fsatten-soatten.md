@@ -1,8 +1,6 @@
----
-title: "FSatten / SOatten"
-description: "落點於「端到端表征 × 監督回歸」軸，直擊傳統 Transformer 在多元時間序列預測中盲目依賴數據驅動隱空間的 Prior Gap。以確定性頻域/正交映射取代學習式投影，為量價表格的週期性與鄰近相似性提供可解釋的注意力先驗。"
----
 <!-- ontology-5axis data=量价表格 horizon=跨周期 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# FSatten / SOatten 解構
 
 > **發布**：2025-06-14 · AAAI 25
 > **QuantML 導讀**：[AAAI 25 | 重新审视多元时间序列预测中的注意力机制](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490720&idx=1&sn=9cf34d629bb9318be4cc40dbb78d83e2&chksm=ce7e7bbef909f2a8b3b591ee0d561f3f99d9529152140de31e3b9a2408dc8295ec1c9db25e38#rd)

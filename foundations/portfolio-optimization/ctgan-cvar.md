@@ -1,8 +1,6 @@
----
-title: "改进CTGAN与CVaR组合优化"
-description: "落點於「生成式大模型 × 組合執行優化」軸，解了傳統CVaR對歷史路徑依賴過強、無法外推極端行情的工程坑，將狀態依賴的尾部風險約束內生化為可求解的線性規劃。"
----
 <!-- ontology-5axis data=量价表格 horizon=中长周期 paradigm=生成式大模型 alpha=组合执行优化 autonomy=人机协同可解释 -->
+
+# 改进CTGAN与CVaR组合优化 解構
 
 > **發布**：2025-04-05 · （無 venue）
 > **QuantML 導讀**：[基于改进CTGAN与特征融合的资产配置模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489934&idx=1&sn=c34498ea1d6b7669376cea7809d1893b&chksm=ce7e7e90f909f7868bd470af5459bc85644940e6a2a9d937d66a17c531c25ac7032066dca3de#rd)

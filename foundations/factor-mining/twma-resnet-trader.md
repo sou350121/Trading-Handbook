@@ -1,8 +1,6 @@
----
-title: "TWMA/ResNet Trader"
-description: "落點於「監督回歸 × 因子挖掘」軸，以 Smooth Grad-CAM 壓縮出的時域重要性權重動態注入傳統 WMA，解了純黑盒 CNN 預測無法與經典技術指標對齊的工程斷層。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# TWMA/ResNet Trader 解構
 
 > **發布**：2024-08-20 · （無 venue）
 > **QuantML 導讀**：[图像识别与知识迁移融合的深度学习模型增强趋势交易信号](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485854&idx=1&sn=357ea4d5356e932c7e012127108236df&chksm=ce7e6e80f909e7965b8ee0d52b1ea64d4baa58f67a0a69b34d9844d5e4d62587a271c03fef43#rd)

@@ -1,8 +1,6 @@
----
-title: "MetaTrader"
-description: "落點於「量價表格×日頻波段」軸，解離線RL在金融非平穩環境下的分佈偏移與價值高估Prior Gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=强化学习 alpha=组合执行优化 autonomy=全自动黑盒 -->
+
+# MetaTrader 解構
 
 > **發布**：2025-06-30 · （無 venue）
 > **QuantML 導讀**：[MetaTrader：基于双层强化学习的股票交易策略](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490889&idx=1&sn=3b197d014406e34c17daefad31117ded&chksm=ce7e7a57f909f341f1665775bb8947a3f7a7284510a91861d3ceee1999218b594f1ce250a64f#rd)

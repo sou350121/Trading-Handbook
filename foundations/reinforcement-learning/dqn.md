@@ -1,8 +1,6 @@
----
-title: "DQN"
-description: "落點於「端到端表征 × 全自动黑盒」軸，試圖繞過傳統因子工程的特徵稀疏性與滯後性。解了 RL 在金融實盤中常見的「真實數據樣本不足導致探索崩潰」與「波動率 regime 切換使固定閾值失效」兩個 prior gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=强化学习 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# DQN 解構
 
 > **發布**：2025-04-12 · （無 venue）
 > **QuantML 導讀**：[深度强化学习在多资产交易中的应用](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490029&idx=1&sn=656e50ad82af1509e5b059670eb39129&chksm=ce7e7ef3f909f7e54356c728e2607c19c00c88a7430a890b1742dfa40ebcfff4926f0a565509#rd)

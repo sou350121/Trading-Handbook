@@ -1,8 +1,6 @@
----
-title: "AlphaSharpe"
-description: "將 LLM 嵌入進化循環，自動化生成與迭代風險調整指標。解了傳統夏普/PSR 對極端值敏感、靜態假設失效的工程坑，同時避開 DNN/RL 因子挖掘的黑盒過擬合。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=生成式大模型 alpha=因子挖掘 autonomy=Agent自主演进 -->
+
+# AlphaSharpe 解構
 
 > **發布**：2025-02-06 · （無 venue）
 > **QuantML 導讀**：[AlphaSharpe：基于LLM的稳健风险调整指标框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489136&idx=1&sn=5fab915a05c0b5371565cc922067be46&chksm=ce7e716ef909f8782eb758f992a0d1548d7423251670df86af0b89800b4f01a466455e614dd2#rd)

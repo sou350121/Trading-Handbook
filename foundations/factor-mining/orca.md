@@ -1,8 +1,6 @@
----
-title: "ORCA"
-description: "五軸落點於「量價表格 × 監督回歸 × 端到端表徵」，解了傳統配對交易依賴線性相關性與靜態特徵相似性的 prior gap，將 OU 過程動力學直接嵌入對比學習的簇形成目標。"
----
 <!-- ontology-5axis data=量价表格 horizon=中长周期 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# ORCA 解構
 
 > **發布**：2025-11-21 · （無 venue）
 > **QuantML 導讀**：[深度均值回归](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492409&idx=1&sn=7ae8bd3fec1bd4f9af56408204e49976&chksm=ce7d8427f90a0d31f5907a89598336961dcea8a67fc6e40138147cc1e7106b25ba6907c16ac1#rd)

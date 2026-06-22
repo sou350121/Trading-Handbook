@@ -1,8 +1,6 @@
----
-title: "DeepAries"
-description: "落點於「日频波段」與「组合执行优化」軸，解決了傳統RL組合管理「固定頻率再平衡」在交易成本與風險響應間的Pareto劣勢，將調倉間隔內生化為可學習的離散動作。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=强化学习 alpha=组合执行优化 autonomy=全自动黑盒 -->
+
+# DeepAries 解構
 
 > **發布**：2025-10-20 · （無 venue）
 > **QuantML 導讀**：[别再傻傻地固定周期调仓了！DeepAries教你聪明地选择交易时机](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492044&idx=1&sn=e7275c1c43ae8ea64d48468af48dcbe9&chksm=ce7d86d2f90a0fc4dc19c1d1208359e03fc67d287c443f823f9266289fad3a2d2b686beab992#rd)

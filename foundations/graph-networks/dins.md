@@ -1,8 +1,6 @@
----
-title: "DINS"
-description: "落點於「圖關係」與「監督回歸」軸，解了 DGE 模型在金融社交網絡中因負樣本過於簡單導致的訓練目標錯位與評估虛高問題。"
----
 <!-- ontology-5axis data=图关系 horizon=高频日内 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# DINS 解構
 
 > **發布**：2025-11-17 · （無 venue）
 > **QuantML 導讀**：[破译散户抱团密码：基于动态图嵌入与领域知识的Meme股行情预判](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492356&idx=1&sn=b713922421a42075453577614067a078&chksm=ce7d841af90a0d0c415f9a15b91a0f5f2a41fb7214d1dba9e9b48e5018c06802d4162f6688c5#rd)

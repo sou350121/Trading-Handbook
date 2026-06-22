@@ -1,8 +1,6 @@
----
-title: "HPPO-TO"
-description: "五軸落點為量價表格×高頻日內×強化學習×因子挖掘×全自動黑盒。解了 prior gap：傳統手動/線性因子滯後且缺乏內在評估，GP/深度模型要麼公式冗長不可解釋，要麼陷入局部最優且無質量內建機制。本法用分層RL+遷移選項，將因子構造與質量評估閉環，實現可解釋公式的自動生成與跨市場"
----
 <!-- ontology-5axis data=量价表格 horizon=高频日内 paradigm=强化学习 alpha=因子挖掘 autonomy=全自动黑盒 -->
+
+# HPPO-TO 解構
 
 > **發布**：2025-02-03 · （無 venue）
 > **QuantML 導讀**：[基于分层强化学习的日内风险因子挖掘](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489104&idx=1&sn=c0b6938ebcf0cbd8244f87abe609798e&chksm=ce7e714ef909f858e77e696094826110f4f8941cc429501973a5767d906ab36a2fd0b57c729a#rd)

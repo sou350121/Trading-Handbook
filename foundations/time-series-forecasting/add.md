@@ -1,8 +1,6 @@
----
-title: "ADD"
-description: "落點於「量價表格×日頻波段×端到端表征」軸，解了傳統兩步解耦中梯度斷裂與靜態蒸餾過平滑的 prior gap，將市場β與個股α的纏繞特徵轉為可微分離的表征空間。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# ADD 解構
 
 > **發布**：2024-09-22 · （無 venue）
 > **QuantML 導讀**：[ADD：增强解耦蒸馏框架用于提升股市趋势预测](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486403&idx=1&sn=2cf81219b0f758017bacd06804bdbb75&chksm=ce7e6cddf909e5cb42ac4a59382d1601b72d99e750789afe69caf08833a3a546c3648bb4b9e6#rd)

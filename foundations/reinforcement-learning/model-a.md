@@ -1,8 +1,6 @@
----
-title: "Model A"
-description: "五軸落點於「量价表格 × 日频波段 × 强化学习 × 风险择时 × Agent自主演进」。解了傳統二元分類器強制 100% 暴露、忽略交易成本與 regime 切換的工程坑，將「預測準確率」轉化為「暴露控制下的風險調整收益」。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=强化学习 alpha=风险择时 autonomy=Agent自主演进 -->
+
+# Model A 解構
 
 > **發布**：2024-08-25 · （無 venue）
 > **QuantML 導讀**：[少即是多：利用动态深度神经网络进行短期股票预测的AI决策](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485953&idx=1&sn=3ebea16c505665f681d6ee32fc73dbb1&chksm=ce7e6d1ff909e409788ae6203992a9facf0bac518fb09ad76f1f00332af159ec5586457f905d#rd)

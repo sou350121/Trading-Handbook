@@ -1,8 +1,6 @@
----
-title: "Delphyne"
-description: "五軸落點於「跨周期量價表格 × 監督回歸 × 端到端黑盒」。解了傳統 TS 基礎模型在跨域預訓練時因分佈差異導致的負遷移工程坑，將預訓練價值從「零樣本泛化」重定向至「低數據量微調適應」。"
----
 <!-- ontology-5axis data=量价表格 horizon=跨周期 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# Delphyne 解構
 
 > **發布**：2025-06-10 · （無 venue）
 > **QuantML 導讀**：[CMU & Bloomberg | DELPHYNE：面向通用和金融时间序列的预训练模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490686&idx=1&sn=767e0ed6dd485df41b414e48d1a93caa&chksm=ce7e7b60f909f27687d1b2020d14fcb2d82baaf6c18fd60148189ee967acc3e53c93d8d4ee5b#rd)

@@ -1,8 +1,6 @@
----
-title: "PDU"
-description: "落點於「端到端表征 × 監督回歸」軸，解決了傳統量價模型在「時間-關係依賴緊耦合」與「市場不確定性風險」之間的 Prior Gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# PDU 解構
 
 > **發布**：2025-08-19 · KDD 2025
 > **QuantML 導讀**：[KDD 25 | PDU: 如何利用“不确定性对比”发掘稳健超额收益](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491411&idx=1&sn=1645eed1869a707d31f7c3652edaf418&chksm=ce7e784df909f15ba86e3ba2763394d5d9ee0793ecd9e4e2981df2bcb277cc522970a2cec9d1#rd)

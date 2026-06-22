@@ -1,8 +1,6 @@
----
-title: "因子的非对称性：为什么Alpha在熊市反而更强？"
-description: "落點於風險擇時與監督回歸軸，解了經典風險溢價假說與實證非對稱性的 prior gap，將市場狀態從滯後宏觀指標轉為無前瞻偏差的技術複合指標，並透過雙步回歸隔離時變 Beta 干擾。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=风险择时 autonomy=人机协同可解释 -->
+
+# 因子的非对称性：为什么Alpha在熊市反而更强？ 解構
 
 > **發布**：2026-06-17 · （無 venue）
 > **QuantML 導讀**：[因子的非对称性：为什么Alpha在熊市反而更强？](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247494088&idx=1&sn=37f916eca3f4d220bdd0f8d7f3589210&chksm=ce7d8ed6f90a07c0ccc07f6a75044cb63559afb98139925600b2587f435a44eebf7399614a84#rd)

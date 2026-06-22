@@ -1,8 +1,6 @@
----
-title: "HRT"
-description: "落點於「日频波段 × 强化学习 × 组合执行优化」軸，解決傳統單層 DRL 在高維股票池下面臨的維度災難、動作慣性與組合集中問題，將選股與執行解耦為分層決策。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=强化学习 alpha=组合执行优化 autonomy=全自动黑盒 -->
+
+# HRT 解構
 
 > **發布**：2024-10-23 · （無 venue）
 > **QuantML 導讀**：[MIT最新论文，分层强化交易员（HRT）：一种用于优化股票选择和执行的双层方法，附中文播客](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487175&idx=1&sn=77a4312d76c2fbae5f312e7b0189cd99&chksm=ce7e69d9f909e0cfbf3784b9272b3ae98ba4db56f880cd1030d2a6f1d9755c804e8ef9dedecb#rd)

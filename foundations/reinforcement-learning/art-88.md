@@ -1,8 +1,6 @@
----
-title: "深度强化学习应对加密货币交易过拟合"
-description: "落點於【量價表格 × 高頻日內 × 強化學習 × 組合執行優化 × 全自動黑盒】軸。解決 DRL 在加密貨幣回測中因低信噪比與高波動導致的「幸運過擬合」誤報問題，將過擬合檢測形式化為假設檢驗，提供可量化的代理篩選機制。"
----
 <!-- ontology-5axis data=量价表格 horizon=高频日内 paradigm=强化学习 alpha=组合执行优化 autonomy=全自动黑盒 -->
+
+# 深度强化学习应对加密货币交易过拟合 解構
 
 > **發布**：2024-10-22 · （無 venue）
 > **QuantML 導讀**：[深度强化学习应对加密货币交易过拟合](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487160&idx=1&sn=ab9cff9cb96cb52967a3770314e552e9&chksm=ce7e69a6f909e0b0cf1158c79fec4e4ed7727bfed3dd786dbfc7f18fd2cca9132e6ea64f87a1#rd)

@@ -1,8 +1,6 @@
----
-title: "提升金融市场预测：因果驱动的特征选择"
-description: "落點於「文本另类 × 因果结构 × 因子挖掘」交叉帶。解決了傳統情緒因子直接輸入黑盒模型時缺乏因果驗證與概率校準的 prior gap，將新聞情緒從「相關性特徵」轉化為「可解釋的因果驅動因子」，並透過損失函數設計修復預測概率的可靠性。"
----
 <!-- ontology-5axis data=文本另类 horizon=日频波段 paradigm=因果结构 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# 提升金融市场预测：因果驱动的特征选择 解構
 
 > **發布**：2024-09-05 · （無 venue）
 > **QuantML 導讀**：[提升金融市场预测：因果驱动的特征选择](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486102&idx=1&sn=d09697a3db74c07bd330e7542c9771b9&chksm=ce7e6d88f909e49e2fc97b17642a1ee67961b3b4c476b081b4c4def8603155cf313b40e522ca#rd)

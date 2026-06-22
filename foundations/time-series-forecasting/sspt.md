@@ -1,8 +1,6 @@
----
-title: "SSPT"
-description: "落點於「端到端表征」軸，將預訓練重心從架構堆疊轉向目標函數設計。解了金融時間序列預訓練的 prior gap：通用掩碼預測與對比學習忽略股價非平穩性與截面身份異質性，導致表征停留在記憶隨機漫步而非提取底層統計特徵。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# SSPT 解構
 
 > **發布**：2025-08-16 · KDD 2025
 > **QuantML 導讀**：[KDD 25 | 基于股票数据定制化预训练模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491386&idx=1&sn=cee770205d698016d6a5a7db359b1fc4&chksm=ce7e7824f909f132674506690f1e7fc07ed9d2b39217f955f3f82c738af477b20cfebb243b63#rd)

@@ -1,8 +1,6 @@
----
-title: "LLM-BL"
-description: "落點於「生成式大模型 × 組合執行優化」軸。解了傳統 Black-Litterman 模型中「觀點來源高度依賴主觀判斷」且難以系統化、自動化擴展的工程痛點，將觀點生成轉為數據驅動的閉環。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=生成式大模型 alpha=组合执行优化 autonomy=全自动黑盒 -->
+
+# LLM-BL 解構
 
 > **發布**：2025-04-24 · （無 venue）
 > **QuantML 導讀**：[融合LLM观点的BL模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490164&idx=1&sn=c0d59c459086d6592c788380db653878&chksm=ce7e7d6af909f47c79623d45235153d3db8fb6c74b1b8fd3fbfbc6e269318472d22bbf868134#rd)

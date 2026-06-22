@@ -1,8 +1,6 @@
----
-title: "Fieldy"
-description: "落點於「量價表格 × 監督回歸 × 全自動黑盒」軸。解了傳統表格 Transformer只能單向建模結構依賴的 prior gap，首次以並行雙路徑顯式對齊表格時序的雙維交互。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# Fieldy 解構
 
 > **發布**：2024-09-12 · （無 venue）
 > **QuantML 導讀**：[基于细颗粒度注意力的层次Transformer在表格类时序中的应用](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486273&idx=1&sn=427f4c08734ea738af3e81bcb0802557&chksm=ce7e6c5ff909e549e16aa0fad48b1ec2fc1730cc233696ce7ba948f39f5e09e36a4570bab9a7#rd)

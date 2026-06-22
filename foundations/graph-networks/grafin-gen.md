@@ -1,8 +1,6 @@
----
-title: "GraFiN-Gen"
-description: "落點於日频波段量价表格的生成式大模型端到端表征框架。解決了傳統多資產聯合預測的維度災難與通用模型忽略截面異質性的 prior gap，透過圖結構概率集成與 LASSO 稀疏權重學習，實現跨資產遷移與不確定性保留。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=生成式大模型 alpha=端到端表征 autonomy=人机协同可解释 -->
+
+# GraFiN-Gen 解構
 
 > **發布**：2025-12-10 · （無 venue）
 > **QuantML 導讀**：[通过构建稀疏资产关系图提升夏普比率](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492635&idx=1&sn=5dde2449b5632ccb3ee4aa48b1237bca&chksm=ce7d8305f90a0a13bc9aecb39362dcb6fe700109af2fa3204be1fb47bb84662a3ceb4c63074b#rd)

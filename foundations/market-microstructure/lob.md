@@ -1,8 +1,6 @@
----
-title: "基于注意力机制的LOB理解、识别和预测"
-description: "落點於「微观盘口 × 高频日内 × 监督回归」軸，解決傳統單點預測忽略 LOB 多維度序數結構與跨屬性時空耦合的 prior gap，以端到端黑盒架構直接輸出完整多級帳本。"
----
 <!-- ontology-5axis data=微观盘口 horizon=高频日内 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# 基于注意力机制的LOB理解、识别和预测 解構
 
 > **發布**：2024-11-05 · （無 venue）
 > **QuantML 導讀**：[基于注意力机制的LOB理解、识别和预测](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487486&idx=1&sn=83a719c37f08db4408a395e1fb236601&chksm=ce7e68e0f909e1f6812de7f1f0f540970db31f42420eb7797f4fc4f434c8e39b4f8303f64b4f#rd)

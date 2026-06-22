@@ -1,8 +1,6 @@
----
-title: "PokerSkill"
-description: "落點於「生成式大模型 × 多智能體博弈」的決策約束範式。解決 LLM 在隱含信息與高維狀態空間中的「決策綁定問題」，以確定性腳手架替代高昂的 CFR 求解器與黑盒 RL 訓練。"
----
 <!-- ontology-5axis data=文本另类 horizon=高频日内 paradigm=生成式大模型 alpha=多智能体博弈 autonomy=人机协同可解释 -->
+
+# PokerSkill 解構
 
 > **發布**：2026-06-01 · （無 venue）
 > **QuantML 導讀**：[清华 x 港大 ｜ 给LLM套上脚手架，不用 Solver 也能打败德扑专家](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493971&idx=1&sn=06773e730b532eedbd4f5c06800c1382&chksm=ce7d8e4df90a075b7500af462ebdee472a331e69981194501df5b56df1a8af83819acc97cb05#rd)

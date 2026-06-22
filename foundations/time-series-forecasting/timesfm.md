@@ -1,8 +1,6 @@
----
-title: "TimesFM"
-description: "將通用時間序列基礎模型透過持續預訓練與對數損失/掩碼策略，遷移至金融價格預測。解了「通用時序模型直接套用價格數據會因尺度差異與崩盤事件導致 NaN 與失效」的 prior gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# TimesFM 解構
 
 > **發布**：2024-12-16 · （無 venue）
 > **QuantML 導讀**：[金融领域大规模时间序列模型的微调](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488415&idx=1&sn=f7b1f04a368ffbcd1ae355b0d49c581a&chksm=ce7e7481f909fd97df00e59ed6dd701620ee4ea3352e49ccab92679130652257419f6d15533f#rd)

@@ -1,8 +1,6 @@
----
-title: "取代分析师？大模型撰写研究报告的可行性分析"
-description: "落點於「文本另类 × 生成式大模型 × 人机协同可解释」軸，解了金融NLP領域長期缺乏的「研報自動化邊界量化」prior gap，將定性討論轉為可驗證的問題原型分類框架。"
----
 <!-- ontology-5axis data=文本另类 horizon=中长周期 paradigm=生成式大模型 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# 取代分析师？大模型撰写研究报告的可行性分析 解構
 
 > **發布**：2024-07-29 · （無 venue）
 > **QuantML 導讀**：[取代分析师？大模型撰写研究报告的可行性分析](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485593&idx=1&sn=6c83e1490792940bb1529e5ca7772c53&chksm=ce7e6f87f909e691ce498475950e1ef278094a65a6dbc8f611be0cefd648cd8bec3c48827834#rd)

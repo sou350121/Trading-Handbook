@@ -1,8 +1,6 @@
----
-title: "GALSTM"
-description: "落點於「图关系 × 高频日内 × 监督回归」軸，解決 A 股 T+1 與做空工具稀缺下的單票預測與動態對沖脫節問題，將離散價格事件轉化為連續圖權重，實現端到端黑盒調倉。"
----
 <!-- ontology-5axis data=图关系 horizon=高频日内 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# GALSTM 解構
 
 > **發布**：2025-04-01 · （無 venue）
 > **QuantML 導讀**：[基于图神经网络的高频交易系统](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489860&idx=1&sn=889e85801e520d8c5ea1969d0cf25554&chksm=ce7e7e5af909f74cad46f32d419959fa8e312ba1fa4a47166a2ef6ba5756b552a4e433671ae8#rd)

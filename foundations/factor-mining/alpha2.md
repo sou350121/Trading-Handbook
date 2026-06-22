@@ -1,8 +1,6 @@
----
-title: "Alpha2"
-description: "落點於「因子挖掘 × 強化學習 × 全自動黑盒」軸，將傳統符號回歸/遺傳編程的隨機搜索轉為結構化程序生成，解決了公式型 Alpha 在維度一致性與低相關性探索上的工程斷層。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=强化学习 alpha=因子挖掘 autonomy=全自动黑盒 -->
+
+# Alpha2 解構
 
 > **發布**：2024-06-25 · （無 venue）
 > **QuantML 導讀**：[南京大学LAMDA-强化学习DRL挖掘逻辑公式型Alpha因子](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247484882&idx=1&sn=e4fee58dd1ca85b6469e3803be5e97a5&chksm=ce7e62ccf909ebdaa93ae29cef9c59c7f889d784b1c774014b339dc55a375d03443d61b48037#rd)

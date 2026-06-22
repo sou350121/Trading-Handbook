@@ -1,8 +1,6 @@
----
-title: "TEMPO"
-description: "五軸落點於「生成式大模型 × 端到端表征 × 全自动黑盒」，解了傳統時序模型對趨勢/季節性/殘差交互建模的歸納偏置缺失，以及跨域分佈漂移時的提示適配痛點。"
----
 <!-- ontology-5axis data=多模态 horizon=跨周期 paradigm=生成式大模型 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# TEMPO 解構
 
 > **發布**：2024-09-26 · ICLR 2024
 > **QuantML 導讀**：[ICLR 24 | 基于提示词的生成预训练Transformer时间序列预测框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486820&idx=1&sn=de9fd547b916d5a9341c2baba4525864&chksm=ce7e6a7af909e36cf81eb809d72fd2aabddca22728245f4157443ba9ac983538065985920b4e#rd)

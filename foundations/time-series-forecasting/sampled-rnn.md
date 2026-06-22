@@ -1,8 +1,6 @@
----
-title: "Sampled RNN"
-description: "落點於「監督回歸 × 全自動黑盒」軸，以數據依賴型隨機特徵對映結合 EDMD 線性求解，解構 RNN 長期依賴訓練中的梯度爆炸/消失與分岔陷阱，將非線性動態推演轉譯為高維空間的線性 Koopman 近似。"
----
 <!-- ontology-5axis data=量价表格 horizon=跨周期 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# Sampled RNN 解構
 
 > **發布**：2024-12-30 · （無 venue）
 > **QuantML 導讀**：[无梯度训练的循环神经网络](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488601&idx=1&sn=50500a955109f984bceb565e8d172333&chksm=ce7e7347f909fa5148d39c306b420d4e696687e31a1194a32aecc9f17c5627deecedfbb7e59e#rd)

@@ -1,8 +1,6 @@
----
-title: "RFF+岭回归"
-description: "落點於長週期量價監督回歸，解決傳統金融「奧卡姆剃刀」偏好低維線性模型導致的設定偏誤與經濟價值低估問題。"
----
 <!-- ontology-5axis data=量价表格 horizon=中长周期 paradigm=监督回归 alpha=风险择时 autonomy=人机协同可解释 -->
+
+# RFF+岭回归 解構
 
 > **發布**：2025-10-25 · （無 venue）
 > **QuantML 導讀**：[耶鲁 x AQR ｜ 模型越复杂，效果越好？](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492112&idx=1&sn=0755e79d8a46b26e0047db1eb02e49c2&chksm=ce7d850ef90a0c18b98127b41ce5a5f1ab08a594fb7389d9a2a06802d2021ecc5eaf508876a3#rd)

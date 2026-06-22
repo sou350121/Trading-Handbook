@@ -1,8 +1,6 @@
----
-title: "FinStressTS"
-description: "落點於端到端表徵與監督回歸軸，解決歷史單軌回測的「歸因黑洞」。透過參數可控的綠盒數據生成過程，將波動率聚集、機制跳變與厚尾衝擊解耦，使量化團隊能針對特定失效模式進行反事實壓力測試，而非依賴不可觀測的真實條件分佈。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=人机协同可解释 -->
+
+# FinStressTS 解構
 
 > **發布**：2026-06-03 · （無 venue）
 > **QuantML 導讀**：[时序深度模型输给经典模型？](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493984&idx=1&sn=00097a4ce221e0b69bbef3b9556d8727&chksm=ce7d8e7ef90a0768d9b15ff99604657b71ed653c32e8acfd84f1b5eb77df81c4f1009739fcf4#rd)

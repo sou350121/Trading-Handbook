@@ -1,8 +1,6 @@
----
-title: "TRR"
-description: "將 LLM 零樣本推理與動態關係圖結合，解決傳統靜態知識圖譜無法捕捉「黑天鵝」事件下跨資產傳染路徑的 prior gap。落點於「文本另类 × 日频波段 × 生成式大模型」軸，以人機協作可解釋架構重構風險擇時信號。"
----
 <!-- ontology-5axis data=文本另类 horizon=日频波段 paradigm=生成式大模型 alpha=风险择时 autonomy=人机协同可解释 -->
+
+# TRR 解構
 
 > **發布**：2024-10-24 · （無 venue）
 > **QuantML 導讀**：[LLMs在股票投资组合崩溃中的时间关系推理](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487194&idx=1&sn=5b871784d4777989432d607b36f6ec2e&chksm=ce7e69c4f909e0d258d6c6f18752d9af9d3694a3121f93ac9066748b694f02c662d98ac5dedd#rd)

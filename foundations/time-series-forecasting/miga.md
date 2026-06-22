@@ -1,8 +1,6 @@
----
-title: "MIGA"
-description: "落點於「端到端表征 × 監督回歸」軸，解決單一深度模型在A股風格切換時泛化崩潰的 prior gap。以 MoE 動態路由取代靜態因子加權，將風格異質性內生化為可微路由概率。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# MIGA 解構
 
 > **發布**：2025-07-18 · （無 venue）
 > **QuantML 導讀**：[清华大学&序明基金 |  MIGA模型：融合MoE与组聚合策略的股票预测模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491048&idx=1&sn=6542a648a9896035e37452aa25b0be65&chksm=ce7e7af6f909f3e02c32c95b37918f826451bae98d91123d563f340b1875686ce0af8fdf796b#rd)

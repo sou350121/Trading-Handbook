@@ -1,8 +1,6 @@
----
-title: "Alpha挖掘vs深度学习：量化中的争议性困境"
-description: "落點於監督回歸與因子挖掘的交叉軸，解構了「線性因子枯竭 vs 黑盒不可審計」的偽命題，將範式選擇錨定於市場微觀結構與組織算力稟賦。"
----
 <!-- ontology-5axis data=多模态 horizon=跨周期 paradigm=监督回归 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# Alpha挖掘vs深度学习：量化中的争议性困境 解構
 
 > **發布**：2026-05-13 · （無 venue）
 > **QuantML 導讀**：[Alpha挖掘vs深度学习：量化中的争议性困境](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493864&idx=1&sn=ef86150a60af0341f27d43d68a14b5f5&chksm=ce7d8ff6f90a06e0a48ac4530b9ffcf64c56aea48e0b998530094b5f7709c1e1d74fea51901d#rd)

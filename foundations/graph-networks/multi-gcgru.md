@@ -1,8 +1,6 @@
----
-title: "Multi-GCGRU"
-description: "落點於「圖關係 × 監督回歸」軸，解決傳統日頻模型將個股視為獨立同分佈的先驗缺口。透過多圖卷積聚合橫截面交叉影響，再以 GRU 壓縮時間依賴，將資訊擴散路徑顯式編碼為可學習的圖拉普拉斯矩陣。"
----
 <!-- ontology-5axis data=图关系 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# Multi-GCGRU 解構
 
 > **發布**：2025-07-19 · （無 venue）
 > **QuantML 導讀**：[用于关系驱动型股票走势预测的多图卷积网络](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491056&idx=1&sn=c2805a33e178a3c43449c33218817a0a&chksm=ce7e7aeef909f3f8d2d2010fdd45c37a41ad9e969764ab9241e6ce1140d8b15f9a4cce633820#rd)

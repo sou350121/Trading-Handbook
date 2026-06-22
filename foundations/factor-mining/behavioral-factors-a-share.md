@@ -1,8 +1,6 @@
----
-title: "行为因子统治A股？如何对收益系统性归因"
-description: "落點於監督回歸與因子挖掘軸，以 TreeSHAP 加性歸因與消融實驗解構樹模型黑箱，填補傳統特徵重要性在共線性下的歸因失真與替代效應盲區。"
----
 <!-- ontology-5axis data=量价表格 horizon=中长周期 paradigm=监督回归 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# 行为因子统治A股？如何对收益系统性归因 解構
 
 > **發布**：2026-06-14 · （無 venue）
 > **QuantML 導讀**：[行为因子统治A股？如何对收益系统性归因](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247494071&idx=1&sn=de7802d35f245a7a497924708f1d8faf&chksm=ce7d8ea9f90a07bf872f78993ba35151efc728293811a17030e029055a2079a993bbb4d4380d#rd)

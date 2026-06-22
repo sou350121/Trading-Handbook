@@ -1,8 +1,6 @@
----
-title: "STABLE"
-description: "落點於「生成式大模型預測 + 經典約束優化」的混合架構，解決傳統MVO對輸入誤差極度敏感及端到端RL直接輸出權重的過擬合痛點。將AI能力嚴格限定於「不確定性分佈估計」，交由BL框架執行約束可控的資產配置。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=生成式大模型 alpha=组合执行优化 autonomy=人机协同可解释 -->
+
+# STABLE 解構
 
 > **發布**：2026-05-28 · ICLR26
 > **QuantML 導讀**：[ICLR 26 ｜ 用生成式扩散模型做 Black-Litterman 观点输入？](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493944&idx=1&sn=b166aef6d15c2030108dab66e1816074&chksm=ce7d8e26f90a0730c70fd499bc2a2b48954da748ccd530ef7ccfd0ae3100e25bc62ee0620d50#rd)

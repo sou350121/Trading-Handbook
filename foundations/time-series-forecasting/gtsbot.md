@@ -1,8 +1,6 @@
----
-title: "GTSbot"
-description: "將傳統靜態網格升級為「預測-導數-動態調整」閉環，以監督回歸填補量價表格在趨勢市中的失效空白，透過一階/二階差分實現風險擇時的人機協同可解釋框架。"
----
 <!-- ontology-5axis data=量价表格 horizon=高频日内 paradigm=监督回归 alpha=风险择时 autonomy=人机协同可解释 -->
+
+# GTSbot 解構
 
 > **發布**：2024-12-07 · （無 venue）
 > **QuantML 導讀**：[超越传统网格交易：新型网格交易系统](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488269&idx=1&sn=7b9a60116d5c65278e6894ded1ce79aa&chksm=ce7e7413f909fd05d840b9118776487dcac27b82cd6ef3978820bb4ba4480c4d722055b28da2#rd)

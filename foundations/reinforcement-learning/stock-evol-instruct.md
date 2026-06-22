@@ -1,8 +1,6 @@
----
-title: "Stock-Evol-Instruct"
-description: "落點於日頻波段與Agent自主演進，解決純DRL對非結構化新聞語義的鈍感，以及純LLM缺乏動態市場反饋閉環的prior gap。"
----
 <!-- ontology-5axis data=多模态 horizon=日频波段 paradigm=强化学习 alpha=端到端表征 autonomy=Agent自主演进 -->
+
+# Stock-Evol-Instruct 解構
 
 > **發布**：2025-07-20 · （無 venue）
 > **QuantML 導讀**：[结合强化学习与LLM的量化模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491063&idx=1&sn=de2d415fa30550d0c606827830db0cdd&chksm=ce7e7ae9f909f3ff02a63977c4f3f6972f4cf4837fb3b858914890f3a4ffc5cfe28bf201991a#rd)

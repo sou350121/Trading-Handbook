@@ -1,8 +1,6 @@
----
-title: "Alpha-GPT"
-description: "落點於「生成式大模型 × 因子挖掘 × 人機協同」的 Pareto 前沿，解決了傳統遺傳規劃暴力搜索空間過大與手工因子「想法→公式」轉譯效率低下的 prior gap。透過 Agentic Workflow 將自然語言交易直覺對齊至可執行運算子，實現語義先驗引導的組合優化。"
----
 <!-- ontology-5axis data=量价表格 horizon=高频日内 paradigm=生成式大模型 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# Alpha-GPT 解構
 
 > **發布**：2025-09-23 · （無 venue）
 > **QuantML 導讀**：[Alpha-GPT：人机交互实现量化Alpha挖掘](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491770&idx=1&sn=64781b544840f164f565d11b006f0ee3&chksm=ce7d87a4f90a0eb2496b42daf2a9e16fbd20b8540b8ca740c68a498088065db11df12b3c614f#rd)

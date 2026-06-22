@@ -1,8 +1,6 @@
----
-title: "AlphaQCM"
-description: "落點於「強化學習 × 因子挖掘」軸，將公式化 Alpha 搜尋重構為序列決策 MDP，解了傳統 GP 指數爆炸與 AlphaGen 在非平穩/稀疏獎勵環境下的探索失效 gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=强化学习 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# AlphaQCM 解構
 
 > **發布**：2025-06-18 · ICML25
 > **QuantML 導讀**：[ICML 25 | 基于分布强化学习的Alpha因子挖掘](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490762&idx=1&sn=e6bd19c7f6fede113ab6f677629b5449&chksm=ce7e7bd4f909f2c275654c6c84008b687585ddddddc51047f4802217a8191326f340f8ea0509#rd)

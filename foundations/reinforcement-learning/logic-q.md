@@ -1,8 +1,6 @@
----
-title: "Logic-Q"
-description: "落點於「人机协同可解释」與「强化学习」交叉軸。解了 DRL 在極端行情下無法識別趨勢、導致大幅回撤的 prior gap，用符號化程序草圖後驗微調神經策略動作分佈，避免端到端重訓帶來的災難性遺忘。"
----
 <!-- ontology-5axis data=量价表格 horizon=跨周期 paradigm=强化学习 alpha=组合执行优化 autonomy=人机协同可解释 -->
+
+# Logic-Q 解構
 
 > **發布**：2025-05-06 · （無 venue）
 > **QuantML 導讀**：[Logic-Q：基于程序草图调整的DRL量化交易框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490303&idx=1&sn=4b884db0773a2d16c4b470796ca6bf1e&chksm=ce7e7de1f909f4f7f79b45cb462d4e5289285faa1c587eb3c7da75e1e8860cfbe3ed6786b69b#rd)

@@ -1,8 +1,6 @@
----
-title: "寻找“丑陋的优势”：在加密市场的混乱中收割超额A"
-description: "落點於日频波段與因子挖掘軸，解決 TradFi 趨勢策略在低效市場中因過度平滑與特徵膨脹導致的 Alpha 衰減。以 Vol-normalization 替代複雜 ML 特徵，將市場微觀結構缺陷轉化為可組合的截面信號。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# 寻找“丑陋的优势”：在加密市场的混乱中收割超额A 解構
 
 > **發布**：2025-11-29 · （無 venue）
 > **QuantML 導讀**：[寻找“丑陋的优势”：在加密市场的混乱中收割超额Alpha](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492528&idx=1&sn=685b03c39275c8a64e4ae38ddfb52886&chksm=ce7d84aef90a0db8a3bc4a5bb8cd4927a101e711263987598e7438b399503da0adbe9531b314#rd)

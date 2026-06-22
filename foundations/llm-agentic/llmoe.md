@@ -1,8 +1,6 @@
----
-title: "LLMOE"
-description: "以LLM取代傳統靜態門控，作為情境感知路由器動態分配至樂觀/悲觀專家，解決單模態MoE在金融市場中路由僵化與情緒特徵解耦的Prior Gap。"
----
 <!-- ontology-5axis data=多模态 horizon=日频波段 paradigm=生成式大模型 alpha=端到端表征 autonomy=人机协同可解释 -->
+
+# LLMOE 解構
 
 > **發布**：2025-07-07 · （無 venue）
 > **QuantML 導讀**：[基于LLM专家混合路由的交易框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490939&idx=1&sn=1b5c16409146876e23c4b9d427ff1069&chksm=ce7e7a65f909f3738e1e83c0a1dc25bce75c3251ab7e64c20b863e21773c45dc1afa2cfa667e#rd)

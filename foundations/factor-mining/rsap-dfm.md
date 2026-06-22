@@ -1,8 +1,6 @@
----
-title: "RSAP-DFM"
-description: "落在「監督回歸 × 因子挖掘」交叉帶，試圖用雙態轉換與對抗後驗解構傳統動態因子模型中宏觀狀態與個股異質性的混疊問題，提供一條顯式可解釋的非線性因子構造路徑。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# RSAP-DFM 解構
 
 > **發布**：2024-10-17 · （無 venue）
 > **QuantML 導讀**：[RSAP-DFM：自适应宏观经济信息提取的后验动态因子模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487069&idx=1&sn=74a04dc881688e586d52c53b9d652384&chksm=ce7e6943f909e0558f147ba5cda9ea04fb77d9c20e5a4cb396c2ce27975377dbbf0c580830b9#rd)

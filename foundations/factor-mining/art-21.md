@@ -1,8 +1,6 @@
----
-title: "如何使用强化学习筛选因子"
-description: "落點於因子挖掘與人機協作軸，將離散的特徵子集搜索映射為連續的 MDP 決策路徑，解了高維因子庫中 Wrapper 方法交叉驗證成本高與過濾方法忽略非線性交互的 prior gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=强化学习 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# 如何使用强化学习筛选因子 解構
 
 > **發布**：2024-07-04 · （無 venue） · arXiv [2101.09460](https://arxiv.org/abs/2101.09460)
 > **QuantML 導讀**：[如何使用强化学习筛选因子](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485027&idx=1&sn=fd7db21edfc2eabd5554d08b7fbd9df1&chksm=ce7e617df909e86be3837e0a5236e6e58ff7e195cd6fc15c48edc26a438f6c710044e9e37bc3#rd)

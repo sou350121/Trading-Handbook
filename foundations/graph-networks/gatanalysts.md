@@ -1,8 +1,6 @@
----
-title: "GATanalysts"
-description: "落點於「图关系×监督回归×端到端表征」軸，解決傳統分析師覆蓋動量策略依賴靜態加權與單跳聚合的工程坑，將多跳圖拓撲與非線性注意力機制引入日頻波段選股，證明結構先驗可顯著提煉領先-滯後溢出信號。"
----
 <!-- ontology-5axis data=图关系 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# GATanalysts 解構
 
 > **發布**：2024-10-31 · （無 venue）
 > **QuantML 導讀**：[牛津大学：分析师覆盖网络中的Alpha挖掘](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487353&idx=1&sn=f7fa46d5dfc5357d03a72e9a466a2b6e&chksm=ce7e6867f909e17101072fd8a9c384747514b5fd8ce1e3d990397923d2f758d0f15d1df3c3bc#rd)

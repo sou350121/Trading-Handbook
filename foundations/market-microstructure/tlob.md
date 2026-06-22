@@ -1,8 +1,6 @@
----
-title: "TLOB"
-description: "落點於高頻微觀結構的端到端監督回歸。解了傳統序列模型在 LOB 數據上無法同時解耦時間依賴與特徵交互的結構性瓶頸，並透過雙線性歸一化對沖金融序列的非平穩性。"
----
 <!-- ontology-5axis data=微观盘口 horizon=高频日内 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# TLOB 解構
 
 > **發布**：2025-05-10 · （無 venue）
 > **QuantML 導讀**：[TLOB：双重注意力机制用于限价订单簿预测](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490337&idx=1&sn=fa4aa7bce7ae1675f5d3d29ea3e5edc7&chksm=ce7e7c3ff909f52974e09a6e1f0afea43c46093f3d3e75b72467643280b5b33ec3bada79a183#rd)

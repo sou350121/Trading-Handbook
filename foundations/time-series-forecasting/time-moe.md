@@ -1,8 +1,6 @@
----
-title: "Time-MoE"
-description: "落點於「跨周期監督回歸」與「端到端黑盒」軸。解了傳統時間序列基礎模型在「推理延遲 vs 參數規模」的 Pareto 瓶頸，透過稀疏 MoE 路由機制，在固定 FLOPs 預算下將容量推至 2.4B，實現跨領域/多步長的統一表征。"
----
 <!-- ontology-5axis data=量价表格 horizon=跨周期 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# Time-MoE 解構
 
 > **發布**：2024-09-28 · （無 venue）
 > **QuantML 導讀**：[Time-MoE : 时间序列领域的亿级规模混合专家基础模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486849&idx=1&sn=efaadaee864f1f27cfd75423af258afb&chksm=ce7e6a9ff909e38944e31f2a94ca2427395108db5614572899635ba93e977cd5ba0cb5f763b8#rd)

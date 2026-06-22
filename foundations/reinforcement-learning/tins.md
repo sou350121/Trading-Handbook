@@ -1,8 +1,6 @@
----
-title: "TINs"
-description: "落點於「量價表格 × 日频波段 × 强化学习」軸，解決了傳統技術指標參數剛性與黑箱 DNN 缺乏金融語義的 prior gap。將靜態公式轉譯為固定拓撲的線性神經層，並引入 RL 動態尋優，實現可解釋性與適應性的 Pareto 平衡。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=强化学习 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# TINs 解構
 
 > **發布**：2025-09-18 · （無 venue）
 > **QuantML 導讀**：[技术指标神经网络](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491713&idx=1&sn=4e0ff1e5d0ab191df0c4fa857c4c5b69&chksm=ce7d879ff90a0e891e6fd7275dcd7dec99da4e713af31e84eae32e9ca0e5eed34238a39e7518#rd)

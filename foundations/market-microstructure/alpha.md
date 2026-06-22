@@ -1,8 +1,6 @@
----
-title: "小数点后的Alpha：限价单堆积如何预测股价走势"
-description: "落點於微觀流動性摩擦與資產定價的交叉軸，解決了傳統因子模型忽略「價格最小變動單位與心理整數關口」所導致的短期定價效率損耗 prior gap。"
----
 <!-- ontology-5axis data=微观盘口 horizon=高频日内 paradigm=因果结构 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# 小数点后的Alpha：限价单堆积如何预测股价走势 解構
 
 > **發布**：2025-12-06 · （無 venue）
 > **QuantML 導讀**：[小数点后的Alpha：限价单堆积如何预测股价走势](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492603&idx=1&sn=d11f867b634c96cbc9f7043910788373&chksm=ce7d84e5f90a0df3d13f3b4e8d138b92c0b9de6aa8594bab36472d7b4727aaac85d15bfb1a89#rd)

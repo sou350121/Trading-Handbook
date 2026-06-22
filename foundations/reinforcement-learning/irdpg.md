@@ -1,8 +1,6 @@
----
-title: "iRDPG"
-description: "將交易重構為 POMDP，以 RDPG 為引擎、模仿學習為導航，破解高摩擦環境下 RL 的探索-利用困境。落點於 Agent 自主演進軸，補齊了傳統 TA 泛化差與純 RL 實盤損耗高的 prior gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=高频日内 paradigm=强化学习 alpha=端到端表征 autonomy=Agent自主演进 -->
+
+# iRDPG 解構
 
 > **發布**：2025-06-23 · （無 venue）
 > **QuantML 導讀**：[自适应量化交易：一种模仿深度强化学习方法](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490817&idx=1&sn=9fc46d08b2b3e2a45a4ae7980a3be2aa&chksm=ce7e7a1ff909f30993b56163a0be219dac2bdef34bcf5ea24df0ac33db4bcc4895ad4d0e2716#rd)

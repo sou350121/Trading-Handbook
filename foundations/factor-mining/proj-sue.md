@@ -1,8 +1,6 @@
----
-title: "Proj SUE"
-description: "落點於「文本另类 × 日频波段 × 因子挖掘」軸。解了傳統 SIC/供應鏈分類無法捕捉業務重心轉移與技術變革導致的靜態同業定義偏差，將單公司 SUE 轉化為圖加權的跨公司溢出因子。"
----
 <!-- ontology-5axis data=文本另类 horizon=日频波段 paradigm=生成式大模型 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# Proj SUE 解構
 
 > **發布**：2025-12-09 · （無 venue）
 > **QuantML 導讀**：[AI重塑因子挖掘：基于LLM文本嵌入的盈余溢出分析](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492625&idx=1&sn=5659688e055dde9c44119ed6e4a5330a&chksm=ce7d830ff90a0a19c73b7edf5f9b30fd59fafe2ffb55c847278640b5c657d5f0cb7ad188eb06#rd)

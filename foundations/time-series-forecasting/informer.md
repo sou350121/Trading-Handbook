@@ -1,8 +1,6 @@
----
-title: "Informer"
-description: "將 Informer 架構引入 BTC 高頻量價預測，透過客製化損失函數與滾動窗口評估，解決傳統 Transformer 在金融時間序列中對極端回報與交易成本敏感的 prior gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=高频日内 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# Informer 解構
 
 > **發布**：2025-03-25 · （無 venue）
 > **QuantML 導讀**：[基于 Informer 结构的高频比特币策略研究](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489777&idx=1&sn=fa21f1ac62aa7e2e2aefc89c4af56128&chksm=ce7e7feff909f6f999ebd2464ee617a84209323139b43d42ac2c36dac709816923569a720a84#rd)

@@ -1,8 +1,6 @@
----
-title: "SAC-CNN-MHA"
-description: "落點於「强化学习 × 组合执行优化」軸，解決傳統 RL 環境缺乏雙向交易/借貸機制且獎勵函數僅依賴原始回報的 prior gap，將策略目標直接對齊真實 PnL 與下行風險控制。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=强化学习 alpha=组合执行优化 autonomy=全自动黑盒 -->
+
+# SAC-CNN-MHA 解構
 
 > **發布**：2024-08-14 · （無 venue）
 > **QuantML 導讀**：[基于强化学习的投资组合管理模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485783&idx=1&sn=c5274cb9950b71ee97610bb06e3b7b54&chksm=ce7e6e49f909e75f9c4e6cc3efa92c207e9ed1bdab97802fb3160817f6753bf180eb14928d5a#rd)

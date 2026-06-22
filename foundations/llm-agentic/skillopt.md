@@ -1,8 +1,6 @@
----
-title: "SkillOpt"
-description: "將 Agent 技能文檔視為外部可訓練狀態，引入類深度學習優化器實現技能自進化。破解了閉源模型權重不可微時的過程性適應黑盒，提供高度規範化的基礎設施範式。"
----
 <!-- ontology-5axis data=文本另类 horizon=跨周期 paradigm=生成式大模型 alpha=端到端表征 autonomy=Agent自主演进 -->
+
+# SkillOpt 解構
 
 > **發布**：2026-06-02 · （無 venue）
 > **QuantML 導讀**：[SkillOpt：微软提出自进化 Agent Skill](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493979&idx=1&sn=8c5b1fd448a186f6725e95e1abdc1b51&chksm=ce7d8e45f90a0753098c5465ec706f706fd885494ff4cc285470d6dc2721f189c7b8a656fb56#rd)

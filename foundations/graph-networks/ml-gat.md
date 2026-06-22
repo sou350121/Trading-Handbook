@@ -1,8 +1,6 @@
----
-title: "ML-GAT"
-description: "落點於多模態與結構化注意力的交叉軸，解了傳統金融圖模型「關係雜訊淹沒信號」與「人工構圖滯後」的 prior gap。"
----
 <!-- ontology-5axis data=多模态 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=人机协同可解释 -->
+
+# ML-GAT 解構
 
 > **發布**：2025-07-12 · （無 venue）
 > **QuantML 導讀**：[ML-GAT：用于股票预测的多层图注意力模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490991&idx=1&sn=ad76da6ffa4b4b4568443d0199dd22ed&chksm=ce7e7ab1f909f3a7fe6607bd26225bc207a437167c6c1ede8a963dab02f230bea6358afee06a#rd)

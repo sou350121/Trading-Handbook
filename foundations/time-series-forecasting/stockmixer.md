@@ -1,8 +1,6 @@
----
-title: "StockMixer"
-description: "落點於「端到端表征 × 全自动黑盒」軸，以純 MLP 架構替代 RNN/GNN 處理多變量時間序列。解了圖結構先驗依賴與遞歸梯度瓶頸的 prior gap，將截面交互降維為可並行的超圖式線性操作。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# StockMixer 解構
 
 > **發布**：2024-11-08 · AAAI24
 > **QuantML 導讀**：[AAAI 24 | StockMixer: 一种简单而强大的基于MLP的股价预测架构](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487545&idx=1&sn=c1188efc7ea54fa2c6784bfbb892784c&chksm=ce7e7727f909fe31643dfcef60364bc0aa03d0509ed9edcef76fe1f21863b0ceb6662f728ec8#rd)

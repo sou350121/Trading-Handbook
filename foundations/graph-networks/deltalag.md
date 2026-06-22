@@ -1,8 +1,6 @@
----
-title: "DeltaLag"
-description: "落點於「日频波段 × 监督回归 × 端到端表征」。解決傳統領漲-滯漲檢測依賴靜態線性相關圖譜的 prior gap，將「動態關係發現」與「橫截面收益預測」統一至可微框架。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=人机协同可解释 -->
+
+# DeltaLag 解構
 
 > **發布**：2025-11-09 · （無 venue）
 > **QuantML 導讀**：[DeltaLag: 挖掘动态领涨-滞涨Alpha](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492269&idx=1&sn=4b346eb7ffb7b3a16a83071d46edeaa9&chksm=ce7d85b3f90a0ca516be74b6af8f53d6a182d9148265611837a865f965bdae4e2656aa3b1731#rd)

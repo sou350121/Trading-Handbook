@@ -1,8 +1,6 @@
----
-title: "FinTSBridge"
-description: "落點於「量价表格 × 跨周期 × 監督回歸 × 端到端表徵 × 全自動黑盒」軸心，解決傳統時間序列預測在金融場景中「誤差指標與實盤信號穩定性脫鉤」的 prior gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=跨周期 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# FinTSBridge 解構
 
 > **發布**：2025-03-11 · （無 venue）
 > **QuantML 導讀**：[融合前沿深度学习模型的金融时序预测框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489625&idx=1&sn=571070b27861b9058ffc9ee96a6ea4c6&chksm=ce7e7f47f909f6512ec3d1b249e59dcb2cf08bf3ef673c7544294e44ad46a2dfcf86b5d2a961#rd)

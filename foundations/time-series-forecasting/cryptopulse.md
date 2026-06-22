@@ -1,8 +1,6 @@
----
-title: "CryptoPulse"
-description: "多模态监督回归框架，解決傳統量價模型在加密貨幣市場中忽略宏觀代理與新聞情緒的 prior gap，以雙路預測解耦系統性波動與個體價格動態。"
----
 <!-- ontology-5axis data=多模态 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# CryptoPulse 解構
 
 > **發布**：2025-03-01 · （無 venue）
 > **QuantML 導讀**：[CryptoPulse：基于双重预测与跨相关市场指标的短期加密货币预测模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489490&idx=1&sn=9a8a90ea0a1c3a0b7f2f0f03d7eafe40&chksm=ce7e70ccf909f9dabeab4b27b0094b4a13ec43cf20988cc684ad267ae1fe805383fb23413bf5#rd)

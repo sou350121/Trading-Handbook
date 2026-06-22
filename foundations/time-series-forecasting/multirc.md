@@ -1,8 +1,6 @@
----
-title: "MultiRC"
-description: "落點於「無標簽前瞻預測」，將傳統事後異常檢測轉為基於頻域主導週期估算的異常預測，解決了異質性反應時間與標簽稀缺的 prior gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=高频日内 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# MultiRC 解構
 
 > **發布**：2024-10-21 · （無 venue）
 > **QuantML 導讀**：[MultiRC：突破事后检测局限，预测未来异常的时序异常预测模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487147&idx=1&sn=16ffb61687a4042bc10881f737f454b7&chksm=ce7e69b5f909e0a336e2e1eccedd3938adfd5077e2a315426740a6cf2c043b1e8c14956c16ea#rd)

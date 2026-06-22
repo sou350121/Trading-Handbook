@@ -1,8 +1,6 @@
----
-title: "AlphaAgentEvo"
-description: "將 GRPO 延伸至多輪 Agent 交互，以 AST 結構相似度硬約束錨定因子局部鄰域，解決傳統 GP/LLM 在低信噪比環境下的獎勵稀疏與全局漂移問題。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=强化学习 alpha=因子挖掘 autonomy=Agent自主演进 -->
+
+# AlphaAgentEvo 解構
 
 > **發布**：2026-05-24 · （無 venue）
 > **QuantML 導讀**：[AlphaAgentEvo:基于GRPO与AST邻域约束的因子挖掘](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493926&idx=1&sn=e5b8154a5d19bf00e5d03c261ddf977d&chksm=ce7d8e38f90a072eaabd0bde0f4a26d673b38172b689315449707a53302c02488e401d266b78#rd)

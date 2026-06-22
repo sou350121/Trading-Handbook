@@ -1,8 +1,6 @@
----
-title: "One-shot EM"
-description: "落點於 `生成式大模型 × 端到端表征` 軸，解構了 RL 後訓練對「海量標註數據 + 複雜獎勵函數 + 數千步迭代」的工程依賴。以單樣本無監督條件熵最小化，直接重塑 logits 分佈，釋放預訓練隱式推理能力。"
----
 <!-- ontology-5axis data=文本另类 horizon=跨周期 paradigm=生成式大模型 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# One-shot EM 解構
 
 > **發布**：2025-05-29 · （無 venue）
 > **QuantML 導讀**：[九坤团队新作！一条数据训练AI超越上万条数据](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490558&idx=1&sn=71770df7b241030f2bef557a8b891b87&chksm=ce7e7ce0f909f5f68e8deb9e8a4788bc38419281ebeaee579d34670410632c13ac60e329937b#rd)

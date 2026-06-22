@@ -1,8 +1,6 @@
----
-title: "PPO策略自适应选择框架"
-description: "落點於 `强化学习` × `风险择时` 軸，將高頻日內的策略切換建模為 POMDP，解決了傳統 DRL 直接預測價格時缺乏風險溢價結構先驗、易收斂至尾部風險的 prior gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=高频日内 paradigm=强化学习 alpha=风险择时 autonomy=Agent自主演进 -->
+
+# PPO策略自适应选择框架 解構
 
 > **發布**：2026-01-26 · （無 venue）
 > **QuantML 導讀**：[基于PPO算法的对冲基金策略自适应选择框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493096&idx=1&sn=939664093306b4f499d76a90b0927389&chksm=ce7d82f6f90a0be0f56c8f514b65835eead10238c56ba53ac471068105e05ccdca2a6ea32ea7#rd)

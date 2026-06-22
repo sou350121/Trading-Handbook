@@ -1,8 +1,6 @@
----
-title: "CVAE"
-description: "落點於日频波段量价表格的监督回归，解了傳統線性模型無法有效注入「已知未來事件」並建模非平穩序列非線性交互的 prior gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# CVAE 解構
 
 > **發布**：2024-07-09 · （無 venue）
 > **QuantML 導讀**：[不再预测收益率！剑桥大学基于CVAE以及提前信息的股票交易量预测模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485365&idx=1&sn=813de33518555f20533e0f50f004300b&chksm=ce7e60abf909e9bd5ac43ef45a35f767c0aae57f7dd2c735a81e684490e662e30a73ef2605bf#rd)

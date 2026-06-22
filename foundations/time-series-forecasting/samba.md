@@ -1,8 +1,6 @@
----
-title: "SAMBA"
-description: "落點於「日频波段 × 監督回歸 × 端到端表徵」軸，以雙向 Mamba 線性複雜度替代 Transformer 二次瓶頸，並透過自適應圖卷積動態建模特徵交互，解決長序列依賴與跨股票關聯算力的 prior gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# SAMBA 解構
 
 > **發布**：2025-02-14 · （無 venue）
 > **QuantML 導讀**：[SAMBA：基于Mamba架构与图神经网络的股票价格预测模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489266&idx=1&sn=321d2a1506b2e8e1c867d95c7cf1caf4&chksm=ce7e71ecf909f8fa2932c9ed166e98b841595850fb6bf3256b6e29b953acf4029c6362b0c2e3#rd)

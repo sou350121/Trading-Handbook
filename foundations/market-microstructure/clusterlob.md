@@ -1,8 +1,6 @@
----
-title: "ClusterLOB"
-description: "將無監督聚類與經濟可解釋性錨定結合，解決高頻因子挖掘中「黑盒信號與微結構行為脫節」的 prior gap。在微观盘口 × 高频日内軸上，提供一套可追蹤訂單流異質性的因子生成框架。"
----
 <!-- ontology-5axis data=微观盘口 horizon=高频日内 paradigm=监督回归 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# ClusterLOB 解構
 
 > **發布**：2025-04-30 · （無 venue）
 > **QuantML 導讀**：[牛津大学 ｜ ClusterLOB：利用限价订单簿中的聚类增强交易策略](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490228&idx=1&sn=482ae83adc11410a7c90cfa3843ae6a7&chksm=ce7e7daaf909f4bc2cdfbceb0ebd726873bbbc57ad1e4e70fc011a43144772bf17c7920aae6c#rd)

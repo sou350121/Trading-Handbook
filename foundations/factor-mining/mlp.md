@@ -1,8 +1,6 @@
----
-title: "MLP"
-description: "將傳統價格回歸任務透過雙閾值標記重構為三分類問題，結合技術指標與蠟燭圖特徵，在日頻波段尺度下實現全自動黑盒因子挖掘。解決了回歸模型在加密貨幣高波動環境中預測分佈偏移與交易信號稀疏的工程痛點。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=因子挖掘 autonomy=全自动黑盒 -->
+
+# MLP 解構
 
 > **發布**：2024-09-02 · （無 venue）
 > **QuantML 導讀**：[基于神经网络模型的加密货币交易算法](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486061&idx=1&sn=6aab4b8c1ce1f66cf710&chksm=ce7e6d73f909e465f74ab12fc0e712bf370f14bdf2f6a4b7e9120ab2bde1fcdbe215499b6a8d#rd)

@@ -1,8 +1,6 @@
----
-title: "Alpha Grail"
-description: "將 Alpha 挖掘從「靜態規則庫」推向「動態生成式 Agent」軸。解了傳統因子工廠在 regime shift 下的維護成本與過擬合坑，透過 LLM 多模態輸入與置信度閾值過濾，實現 Alpha 池的自動迭代與權重動態分配。"
----
 <!-- ontology-5axis data=多模态 horizon=日频波段 paradigm=生成式大模型 alpha=因子挖掘 autonomy=Agent自主演进 -->
+
+# Alpha Grail 解構
 
 > **發布**：2025-04-04 · （無 venue）
 > **QuantML 導讀**：[利用LLM进行Alpha挖掘和策略优化](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489924&idx=1&sn=c967717492629872f9a1a50bb6056e7f&chksm=ce7e7e9af909f78c747fc9b93a2d92f8ec7c50d6a9260c66006a25a51b1da71b9b168156aa2c#rd)

@@ -1,8 +1,6 @@
----
-title: "从新闻到预测：基于LLM的时间序列预测"
-description: "落點於「文本另类 × 生成式大模型」軸，解了傳統TS模型無法系統性內化非結構化社會事件的Prior Gap，將新聞過濾與序列預測耦合為可迭代的Agent閉環。"
----
 <!-- ontology-5axis data=文本另类 horizon=日频波段 paradigm=生成式大模型 alpha=端到端表征 autonomy=Agent自主演进 -->
+
+# 从新闻到预测：基于LLM的时间序列预测 解構
 
 > **發布**：2024-10-15 · （無 venue）
 > **QuantML 導讀**：[从新闻到预测：基于LLM的时间序列预测](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487049&idx=1&sn=7337916648f291ef40e325faa83b0aca&chksm=ce7e6957f909e0414601ededa9a7c3957a1c31f0360a79398c097b4e9db731345fa970f93ea1#rd)

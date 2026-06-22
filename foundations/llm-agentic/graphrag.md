@@ -1,8 +1,6 @@
----
-title: "GraphRAG"
-description: "落點於文本另类與生成式大模型軸，以圖拓撲結構替代純向量檢索，解決傳統 RAG 在處理跨文檔全局語義與隱含關係時的召回瓶頸。為長週期基本面研究提供可解釋的端到端知識萃取代價。"
----
 <!-- ontology-5axis data=文本另类 horizon=中长周期 paradigm=生成式大模型 alpha=端到端表征 autonomy=人机协同可解释 -->
+
+# GraphRAG 解構
 
 > **發布**：2024-07-18 · （無 venue）
 > **QuantML 導讀**：[GraphRAG+Ollama 结合上市公司知识图谱的LLM分析](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485462&idx=1&sn=f308b5a4fae42eb253dfd395e962e8bd&chksm=ce7e6f08f909e61e89949ff044998f5d670b285219fa8a6cf3eab4d4dc2f30f8012a739bf2b0#rd)

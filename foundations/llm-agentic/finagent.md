@@ -1,8 +1,6 @@
----
-title: "FinAgent"
-description: "落點於「多模態感知 × Agent自主演進」軸，解決傳統規則系統缺乏動態適應性、純RL系統決策黑盒且數據需求過高的 prior gap。以多模態LLM為決策核心，將市場情報、K線視覺、新聞文本與向量記憶閉環，實現可解釋的端到端波段交易。"
----
 <!-- ontology-5axis data=多模态 horizon=日频波段 paradigm=生成式大模型 alpha=端到端表征 autonomy=Agent自主演进 -->
+
+# FinAgent 解構
 
 > **發布**：2024-07-02 · KDD 2024
 > **QuantML 導讀**：[KDD 24 | 基于文本和图像的多模态交易框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485000&idx=1&sn=1b7a7da8050d6448a3f649014f05ce7f&chksm=ce7e6156f909e840df197661d46a28e345f2225da3d6b9b551b041944db276da9240feee0492#rd)

@@ -1,8 +1,6 @@
----
-title: "FinSearchComp"
-description: "落點於「文本另类 × Agent自主演进」軸，填補了開放領域金融代理缺乏端到端時效性搜索與多步推理評估基準的 prior gap。"
----
 <!-- ontology-5axis data=文本另类 horizon=跨周期 paradigm=生成式大模型 alpha=因子挖掘 autonomy=Agent自主演进 -->
+
+# FinSearchComp 解構
 
 > **發布**：2025-09-21 · （無 venue）
 > **QuantML 導讀**：[字节出品，马斯克转发，AI离顶级金融分析师还有多远？](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491738&idx=1&sn=2c84ce2e84377d8c50d28a7a00393bf8&chksm=ce7d8784f90a0e928c26a688aba08dddb1621a8621000c06e24a8a4d8b9e5bc15291c1da81f5#rd)

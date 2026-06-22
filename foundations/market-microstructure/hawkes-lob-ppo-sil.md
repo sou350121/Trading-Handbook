@@ -1,8 +1,6 @@
----
-title: "Hawkes LOB + PPO/SIL"
-description: "落點於「高頻日內 × 組合執行優化」軸，解決傳統做市商依賴逆向選擇與RL代理利潤/對手滑點零和博弈的Prior Gap。"
----
 <!-- ontology-5axis data=微观盘口 horizon=高频日内 paradigm=强化学习 alpha=组合执行优化 autonomy=全自动黑盒 -->
+
+# Hawkes LOB + PPO/SIL 解構
 
 > **發布**：2025-11-03 · （無 venue）
 > **QuantML 導讀**：[UCL x JP Morgan ｜ AI做市商悖论：利润飙升，对手滑点为何反降？](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492212&idx=1&sn=7e6d45682844c8b65bd6c8659315d24d&chksm=ce7d856af90a0c7c488dba97b70cc4696ac4626fe1fb86d84a46aca31a40bb7245e6c0965398#rd)

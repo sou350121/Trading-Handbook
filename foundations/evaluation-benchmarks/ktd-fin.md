@@ -1,8 +1,6 @@
----
-title: "KTD-FIN"
-description: "落點於「生成式大模型 × 因子挖掘 × Agent自主演进」軸，解決 LLM 交易評測中預訓練記憶洩漏與風格暴露混淆選股能力的 prior gap，將評測標準從「淨值神話」強制拉回「殘差歸因」。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=生成式大模型 alpha=因子挖掘 autonomy=Agent自主演进 -->
+
+# KTD-FIN 解構
 
 > **發布**：2026-06-18 · （無 venue）
 > **QuantML 導讀**：[清华 X 阶跃星辰 ｜ 剥离风格和记忆，LLM还剩下多少Alpha？](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247494094&idx=1&sn=f04a150a17f3b98c4d7b4a8fc22ae31f&chksm=ce7d8ed0f90a07c69e5e37ecb5129b007cc84ae3cfd3214dd13f8ff576a3734a20494d6d9284#rd)

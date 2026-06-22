@@ -1,8 +1,6 @@
----
-title: "中国科学院大学 ｜ LLM x 强化学习：从新闻"
-description: "落點於「端到端表征 × 全自动黑盒」軸，解決了傳統NLP+RL pipeline中手工特徵工程與新聞信號降維的Prior Gap。將非結構化文本直接投影為低維數值張量，與原始量價序列正交拼接，驗證了「LLM作為特徵投影器」在離散動作空間中的可行性。"
----
 <!-- ontology-5axis data=文本另类 horizon=高频日内 paradigm=强化学习 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# 中国科学院大学 ｜ LLM x 强化学习：从新闻 解構
 
 > **發布**：2025-10-24 · （無 venue）
 > **QuantML 導讀**：[中国科学院大学 ｜ LLM x 强化学习：从新闻中学习交易](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492102&idx=1&sn=076d68a3ea7a2539b2d619e6beab0093&chksm=ce7d8518f90a0c0eaf16909c48c1aa7f4c44cb3c89b9fc115bf10115a4e2ce0ca7e6e5583bef#rd)

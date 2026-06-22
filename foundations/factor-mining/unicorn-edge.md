@@ -1,8 +1,6 @@
----
-title: "Unicorn Edge"
-description: "落點於「因子挖掘×監督回歸」軸，解決傳統價值/反轉因子在無差別全市場加權時的信號稀釋問題，透過「漂移狀態」條件激活實現極端樣本外夏普。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# Unicorn Edge 解構
 
 > **發布**：2025-11-18 · （無 venue）
 > **QuantML 導讀**：[夏普 13 的“独角兽”策略？](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492362&idx=1&sn=efb4af02a633bf81b8cdda0afdfb3e7b&chksm=ce7d8414f90a0d02d42ebcdb644855ec6e80a69038e952248e3c3d9b68c182c9f5e7f812d36a#rd)

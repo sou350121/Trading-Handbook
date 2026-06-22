@@ -1,8 +1,6 @@
----
-title: "MASSER"
-description: "落點於「元學習搜索 × 端到端表征」軸，試圖以兩階段表示學習解決量價表格在日頻波段下的非平穩領域偏移與樣本短缺過擬合問題。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=元学习搜索 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# MASSER 解構
 
 > **發布**：2024-09-08 · NeurIPS22 Workshop
 > **QuantML 導讀**：[基于两阶段表示学习的元自适应股票运动预测](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486140&idx=1&sn=2a266257084ce5ed2fb2989d38ccb373&chksm=ce7e6da2f909e4b4837666ec0423c36f5f96ce5ae04594f632f20ba33bc3f51e921642efd346#rd)

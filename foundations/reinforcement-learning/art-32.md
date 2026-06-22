@@ -1,8 +1,6 @@
----
-title: "强化学习在配对交易中的应用与优化"
-description: "落點於「量价表格 × 高频日内 × 强化学习」軸，針對傳統統計套利在加密貨幣高波動環境下參數僵化、倉位控制粗糙的prior gap，以動態閾值與連續動作空間重構開平倉與倉位比例決策。"
----
 <!-- ontology-5axis data=量价表格 horizon=高频日内 paradigm=强化学习 alpha=组合执行优化 autonomy=全自动黑盒 -->
+
+# 强化学习在配对交易中的应用与优化 解構
 
 > **發布**：2024-07-25 · （無 venue）
 > **QuantML 導讀**：[强化学习在配对交易中的应用与优化](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485553&idx=1&sn=4d79e9eb0575062d35b264e326088fe2&chksm=ce7e6f6ff909e67929c490004a36087c434b32d9a57bf081180aad117b9dc4cafaccf19435fb#rd)

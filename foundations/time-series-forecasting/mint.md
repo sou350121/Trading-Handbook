@@ -1,8 +1,6 @@
----
-title: "MinT预测整合框架"
-description: "落點於「監督回歸 × 因子挖掘」軸，解決傳統單一路徑預測忽略市場分層結構的先驗缺口。透過多源聚類矩陣與 MinT 相干整合，將離散個股預測強制收斂至指數總和約束，避免單一特徵空間的過擬合偏差。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# MinT预测整合框架 解構
 
 > **發布**：2024-11-21 · （無 venue）
 > **QuantML 導讀**：[基于预测整合与聚类的股票价格指数样本外预测改进](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487860&idx=1&sn=99347f2131162f021f73b87b514af000&chksm=ce7e766af909ff7c8008ff46bcce9fae4f059e922f12405d0b1ef542466e31c90f3036d133b2#rd)

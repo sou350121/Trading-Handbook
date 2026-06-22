@@ -1,8 +1,6 @@
----
-title: "DMMV"
-description: "落點於多模態×監督回歸，解了 LVM 在 LTSF 上「周期強、趨勢弱」的 inductive bias gap，將視覺模態的局部結構捕獲能力與數值模態的全局趨勢建模能力解耦協同。"
----
 <!-- ontology-5axis data=多模态 horizon=中长周期 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# DMMV 解構
 
 > **發布**：2025-11-13 · NeurIPS25 · arXiv [2505.24003](https://arxiv.org/abs/2505.24003)
 > **QuantML 導讀**：[NeurIPS 25 | DMMV: 多模态视角可以为时间序列预测带来什么？](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492328&idx=1&sn=f5df3bd7d201a491f357dea57f7e5d99&chksm=ce7d85f6f90a0ce096c2a2638d2cb6cfb405a80384d6f0b8e54c6c509d233b88b1e27a998f74#rd)

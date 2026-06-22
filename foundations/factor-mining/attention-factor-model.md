@@ -1,8 +1,6 @@
----
-title: "Attention Factor Model"
-description: "落點於「端到端表征 × 全自动黑盒」軸，將傳統統計套利的「因子提取→殘差建模」兩步解耦流程，重構為以淨夏普比率為唯一目標函數的單圖可微優化，解決了高解釋方差因子在扣除摩擦成本後策略失效的 prior gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# Attention Factor Model 解構
 
 > **發布**：2025-11-23 · （無 venue）
 > **QuantML 導讀**：[基于注意力机制的端到端统计套利模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492450&idx=1&sn=3562d1a8f8e92570ccd1948331cff8ac&chksm=ce7d847cf90a0d6a5470907fc9b0ec1953c101479832e3a620b613d153ea24cd853c74ce2cf4#rd)

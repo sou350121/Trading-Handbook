@@ -1,8 +1,6 @@
----
-title: "BRT/NN+递归排序"
-description: "落點於「因子挖掘 × 人機協作」軸，直擊實盤部署時「信號宇宙」維度災難與特徵選擇滯後的 Prior Gap。證明實時 Alpha 的邊界不取決於模型容量，而取決於歸納偏置的結構化注入。"
----
 <!-- ontology-5axis data=量价表格 horizon=中长周期 paradigm=监督回归 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# BRT/NN+递归排序 解構
 
 > **發布**：2025-08-24 · JFE
 > **QuantML 導讀**：[JFE | 18,000个信号中挖掘Alpha：从“信号宇宙”看特征工程的重要性](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491456&idx=1&sn=363b33b7cb667a468e10cd9be6ff7d32&chksm=ce7e789ef909f18873274395ae98a2122e8fc3d64e0347a099b5d56371d9888c3e59e7580c9f#rd)

@@ -1,8 +1,6 @@
----
-title: "TF-Agents"
-description: "落點於「端到端表征 × 全自动黑盒」軸，以 DQN 將日頻量價技術面與宏觀因子直接映射為離散動作空間。解了傳統因子組合需手動權重加權的 Gap，但將風險管理完全外包給 Reward 設計，屬典型 RL 交易入門範式。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=强化学习 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# TF-Agents 解構
 
 > **發布**：2024-10-14 · （無 venue）
 > **QuantML 導讀**：[基于深度Q学习的算法交易策略研究](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487035&idx=1&sn=27c378e2aed7b7fa2d44c0bfcbdeafc6&chksm=ce7e6925f909e033cc9371f275a3bb0661481b481609558811833bcf920fb71f0ac86870bfc1#rd)

@@ -1,8 +1,6 @@
----
-title: "OPTM-LSTM"
-description: "落點於「端到端表征 × 全自动黑盒」軸，將 LSTM 內部門控與狀態從隱藏計算節點轉為可微特徵，透過線上非預測性回歸動態路由輸出，解決傳統 RNN 單元結構靜態化與預測目標脫節的 prior gap。"
----
 <!-- ontology-5axis data=微观盘口 horizon=高频日内 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# OPTM-LSTM 解構
 
 > **發布**：2024-09-17 · （無 venue）
 > **QuantML 導讀**：[用于高频交易预测的最优输出LSTM](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486340&idx=1&sn=083f403c74644a946a9b1deb93431c&chksm=ce7e6c9af909e58c377a2785005245f9020edc0069877f7749ad8a3fab1d42da56efc2977775#rd)

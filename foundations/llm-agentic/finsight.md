@@ -1,8 +1,6 @@
----
-title: "FinSight"
-description: "落點於「多模態 × 中長週期 × 生成式大模型 × 多智能體博弈 × Agent自主演進」軸心，解決了傳統 LLM+Search 單次生成導致的分析鏈斷裂與多模態幻覺問題，將金融研報生產從「靜態文本拼裝」推向「代碼驅動的動態變數空間」。"
----
 <!-- ontology-5axis data=多模态 horizon=中长周期 paradigm=生成式大模型 alpha=多智能体博弈 autonomy=Agent自主演进 -->
+
+# FinSight 解構
 
 > **發布**：2025-10-26 · （無 venue）
 > **QuantML 導讀**：[人大高瓴 x 智源 ｜ FinSight：会思考、懂绘图、善写作的专业AI金融分析师](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492124&idx=1&sn=869727f5b39cf4fb2dcca8a421c00c4a&chksm=ce7d8502f90a0c1404fbd70c29fdde699136695eefa6c1c6b77c57e2f7d631f0a1132576c8f7#rd)

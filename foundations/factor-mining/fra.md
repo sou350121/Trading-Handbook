@@ -1,8 +1,6 @@
----
-title: "FRA特征筛选算法"
-description: "落點於「多模態×跨周期」的因子挖掘與可解釋性交叉帶。解決了加密預測長期依賴單一技術指標/情緒指標、缺乏系統性跨源驗證與動態特徵降維的工程痛點。"
----
 <!-- ontology-5axis data=多模态 horizon=跨周期 paradigm=监督回归 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# FRA特征筛选算法 解構
 
 > **發布**：2025-06-29 · （無 venue）
 > **QuantML 導讀**：[基于多数据源的加密货币预测](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490876&idx=1&sn=725f4edfb65a648fcdc5397d6b3a43ee&chksm=ce7e7a22f909f33499603147b700f73057d55dc071b0a3e863c64a84ec024c24cf6abccfba7d#rd)

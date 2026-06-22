@@ -1,8 +1,6 @@
----
-title: "DeepVol"
-description: "落點於「量價表格→日頻波段」的監督回歸，解了傳統波動率模型需手動構建已實現指標的預處理瓶頸，直接以擴張因果卷積對齊高頻原始收益與日度波動率標籤。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=风险择时 autonomy=全自动黑盒 -->
+
+# DeepVol 解構
 
 > **發布**：2025-05-04 · （無 venue）
 > **QuantML 導讀**：[DeepVol：基于高频数据的波动率预测模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490274&idx=1&sn=3c9bd18e7590210ddf1f00e54e7fcd15&chksm=ce7e7dfcf909f4eadc57481aa05ba5aa2a47c3f0681bf340887236666686ac36266b8767f84cf#rd)

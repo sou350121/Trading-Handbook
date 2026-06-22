@@ -1,8 +1,6 @@
----
-title: "LightQuant"
-description: "將多模態股價預測的瓶頸從模型架構轉移至數據質量與因子可解釋性，以 LLM 序列提示構建結構化因子錨點，配合輕量級三層框架降低 A 股多模態研發門檻。"
----
 <!-- ontology-5axis data=多模态 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=人机协同可解释 -->
+
+# LightQuant 解構
 
 > **發布**：2026-01-16 · （無 venue）
 > **QuantML 導讀**：[CSMD多模态数据+LightQuant框架，一站式A股量化分析框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493010&idx=1&sn=998a16328f34904a1edd1c5bf734d825&chksm=ce7d828cf90a0b9a9aedb1b48e19bc78a93de8ced8d3cd4945b1aed872310acfe20af0133b3b#rd)

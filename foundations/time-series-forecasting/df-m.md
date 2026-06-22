@@ -1,8 +1,6 @@
----
-title: "DF²M"
-description: "落點於「高維函數時間序列」的監督回歸與因子挖掘交叉帶。解決了傳統深度序列模型在曲線預測中黑箱化且難以捕捉非馬爾可夫動態的 Prior Gap，以貝葉斯非參數框架重構可解釋因子結構。"
----
 <!-- ontology-5axis data=量价表格 horizon=高频日内 paradigm=监督回归 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# DF²M 解構
 
 > **發布**：2024-11-07 · ICML 2024
 > **QuantML 導讀**：[ICML 24 | 深度函数因子模型：高维函数时间序列预测](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487521&idx=1&sn=1b5ca6309f20f2f933f78fafa28d4ad7&chksm=ce7e773ff909fe295f28e1d134bbff7767256a02987b58539f497031fcf4ac350f34cccf0cce#rd)

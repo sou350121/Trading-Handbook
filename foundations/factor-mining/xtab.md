@@ -1,8 +1,6 @@
----
-title: "XTab"
-description: "落點於「跨周期量價表格」與「端到端表征」軸，解決傳統 Tabular Transformer 因列結構異質性導致的跨數據集泛化失效問題，透過 FedAvg 聯邦預訓練實現權重初始化遷移。"
----
 <!-- ontology-5axis data=量价表格 horizon=跨周期 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# XTab 解構
 
 > **發布**：2024-06-28 · ICML23
 > **QuantML 導讀**：[ICML 23 | XTab：基于联邦学习的表格类预训练模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247484944&idx=1&sn=3301b97ec2256efc831967f00019cdfd&chksm=ce7e610ef909e818eefd8da5401d05677c089933abbbdf995c2b9a992fe3395e5ad35d79ca24#rd)

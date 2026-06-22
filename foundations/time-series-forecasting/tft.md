@@ -1,8 +1,6 @@
----
-title: "自适应TFT建模"
-description: "落點於量價表格與高頻日內，以監督回歸范式實現端到端表征，並透過模式條件化維持人機協同可解釋性。解決了傳統定長滑動窗口武斷截斷市場自然階段、無法適應非平穩性的 prior gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=高频日内 paradigm=监督回归 alpha=端到端表征 autonomy=人机协同可解释 -->
+
+# 自适应TFT建模 解構
 
 > **發布**：2025-09-19 · （無 venue）
 > **QuantML 導讀**：[利用自适应时间融合 Transformer 进行加密货币预测](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491714&idx=1&sn=35b8a5616fad711e78a71bd95a920d7b&chksm=ce7d879cf90a0e8a4c9017aa30bcfe0a409ed8366c40fe73b10bfe9a6e2f6704d3afe90d0a4f#rd)

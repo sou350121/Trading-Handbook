@@ -1,8 +1,6 @@
----
-title: "Auto.gov"
-description: "將 DeFi 借貸協議的風險參數調整建模為 MDP，以 DQN 替代人工治理投票。解決了傳統鏈上治理滯後、靜態閾值無法抵禦閃電貸預言機攻擊的 Prior Gap，將被動防禦轉為動態參數閉環。"
----
 <!-- ontology-5axis data=量价表格 horizon=跨周期 paradigm=强化学习 alpha=风险择时 autonomy=Agent自主演进 -->
+
+# Auto.gov 解構
 
 > **發布**：2025-02-17 · （無 venue）
 > **QuantML 導讀**：[Auto.gov：基于强化学习的去中心化金融（DeFi）治理框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489317&idx=1&sn=452e505de9cc3b12be1b561992ba7182&chksm=ce7e703bf909f92d917894b333cf4154dc63ff0ba6680990f6d69d01b614201eead0571fedfd#rd)

@@ -1,8 +1,6 @@
----
-title: "MDI-GD竞争聚类RBFNN框架"
-description: "落點於「自動黑盒」與「因子挖掘」軸，解決 HFT 場景下人工特徵選擇與拓撲搜尋的延遲瓶頸。以線上競爭機制取代靜態超參數調優，將決策鏈路壓縮至事件級響應。"
----
 <!-- ontology-5axis data=微观盘口 horizon=高频日内 paradigm=监督回归 alpha=因子挖掘 autonomy=全自动黑盒 -->
+
+# MDI-GD竞争聚类RBFNN框架 解構
 
 > **發布**：2024-12-24 · （無 venue）
 > **QuantML 導讀**：[在线高频交易股票预测](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488504&idx=1&sn=18be32739d0029fdd5a743354ec59430&chksm=ce7e74e6f909fdf0b18b254c7e283c3e6c91be5da516c1b8f1f0f9d8c6a5bc644ce3337dcfb9#rd)

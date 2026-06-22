@@ -1,8 +1,6 @@
----
-title: "TIMEVIEW"
-description: "將時間序列XAI從「逐點歸因」轉向「趨勢組合映射」，解決黑盒模型在長週期預測中無法直觀對齊人類趨勢認知與反事實推演的Prior Gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=人机协同可解释 -->
+
+# TIMEVIEW 解構
 
 > **發布**：2024-06-16 · ICLR 2024
 > **QuantML 導讀**：[ICLR 2024 | 通向透明的时间序列预测](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247484754&idx=1&sn=44bcf54c0caa1001ac343648d89a9407&chksm=ce7e624cf909eb5a44ce762087ef23bd8cfeb663aa623f0d729b99d56450abafd525d927bc5e#rd)

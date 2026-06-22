@@ -1,8 +1,6 @@
----
-title: "THGNN"
-description: "落點於「图关系 × 日频波段 × 监督回归 × 端到端表征 × 全自动黑盒」。解了傳統 GNN 依賴靜態/手工知識圖譜的 prior gap，將股價相關性直接轉化為時態異構邊，實現圖拓撲與價格動態的聯合端到端學習。"
----
 <!-- ontology-5axis data=图关系 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# THGNN 解構
 
 > **發布**：2024-09-14 · CIKM22
 > **QuantML 導讀**：[CIKM 22 | 用于金融时间序列预测的异构图神经网络](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486310&idx=1&sn=a5ae3c35d837a3e4b972f306a2609344&chksm=ce7e6c78f909e56ebf3c03b1b40410c4bd52c093ea4dc5db465db7a14aada7d9aca1c49ba600#rd)

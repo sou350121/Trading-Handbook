@@ -1,8 +1,6 @@
----
-title: "ContestTrade"
-description: "落點於「多智能體博弈 × Agent自主演進」軸，針對單一LLM Agent在日頻波段交易中對市場噪聲敏感、決策不穩定且缺乏量化推理能力的Prior Gap，以企業內部競賽架構實現信號動態篩選與資金分配。"
----
 <!-- ontology-5axis data=文本另类 horizon=日频波段 paradigm=生成式大模型 alpha=多智能体博弈 autonomy=Agent自主演进 -->
+
+# ContestTrade 解構
 
 > **發布**：2025-08-15 · （無 venue）
 > **QuantML 導讀**：[优胜劣汰：ContestTrade多智能体交易架构](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491371&idx=1&sn=b8c61a7ab6841bc05253c301c54f40df&chksm=ce7e7835f909f123b824f84973c88034db152fc8c09276a170a4f84833a67030766e4e49c3a8#rd)

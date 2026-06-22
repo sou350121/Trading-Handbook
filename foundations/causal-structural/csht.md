@@ -1,8 +1,6 @@
----
-title: "CSHT"
-description: "落點於「因果結構×端到端表徵」的日頻波段框架。解決傳統多模態模型將新聞/情緒視為靜態黑箱輸入的 prior gap，透過格蘭傑因果超圖與測地線掩碼，強制注意力沿經濟學邏輯路徑流動。"
----
 <!-- ontology-5axis data=多模态 horizon=日频波段 paradigm=因果结构 alpha=端到端表征 autonomy=人机协同可解释 -->
+
+# CSHT 解構
 
 > **發布**：2025-10-09 · （無 venue）
 > **QuantML 導讀**：[剑桥 | 从新闻到回报：因果球体超图Transformer](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491913&idx=1&sn=b53dfc83a60ad9c64f7161490835e232&chksm=ce7d8657f90a0f41e6e8cb7ce591d94de01ea63488ff941a54d9622e90a07e3acbe15a9cf38b#rd)

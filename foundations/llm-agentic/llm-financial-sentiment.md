@@ -1,8 +1,6 @@
----
-title: "利用LLM重新审视金融情感分析"
-description: "落點於文本另类×日频波段，以生成式大模型驅動因子挖掘。解決傳統 FSA 人工標籤主觀模糊、無法直接對接交易屏障的 prior gap，將情緒分類轉為市場驅動的可執行信號。"
----
 <!-- ontology-5axis data=文本另类 horizon=日频波段 paradigm=生成式大模型 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# 利用LLM重新审视金融情感分析 解構
 
 > **發布**：2025-02-26 · （無 venue）
 > **QuantML 導讀**：[利用LLM重新审视金融情感分析](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489460&idx=1&sn=c9105d66a4bb157ad9376617370bbb1a&chksm=ce7e70aaf909f9bc7a4e15552994a8b76cacccc56a9a883dc20e21c5c0d159c860865bdfc7ae#rd)

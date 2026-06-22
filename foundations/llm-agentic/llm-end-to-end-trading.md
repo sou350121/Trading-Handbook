@@ -1,8 +1,6 @@
----
-title: "端到端基于LLM的增强型交易系统"
-description: "落點於「文本另类×生成式大模型」軸，試圖以 FinGPT logits 動態融合技術指標，解決傳統情緒模型批處理延遲與單一數據源局限，將非結構化語義轉為可執行的頻內交易信號。"
----
 <!-- ontology-5axis data=文本另类 horizon=高频日内 paradigm=生成式大模型 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# 端到端基于LLM的增强型交易系统 解構
 
 > **發布**：2025-02-04 · （無 venue）
 > **QuantML 導讀**：[端到端基于LLM的增强型交易系统](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489113&idx=1&sn=b145d87e23cfa5c9e780099fc7c1136c&chksm=ce7e7147f909f85193f5891ba11288b0e0626206539f4bab6a64daa098938e8ae1ac4621a618#rd)

@@ -1,8 +1,6 @@
----
-title: "MWUM在线集成框架"
-description: "針對金融時間序列非平穩性，以無梯度 MWUM 動態加權異構模型，解決傳統離線集成無法快速適應結構性突變且易喪失多樣性的 prior gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=中长周期 paradigm=监督回归 alpha=因子挖掘 autonomy=全自动黑盒 -->
+
+# MWUM在线集成框架 解構
 
 > **發布**：2025-11-20 · （無 venue）
 > **QuantML 導讀**：[基于在线集成学习的行业轮动策略](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492399&idx=1&sn=a78befb22441724f5d36817ca3e585a0&chksm=ce7d8431f90a0d27008cf34b5f770f2d964ff4da2e1cf414ff41794b6f039174fc913df7e98e#rd)

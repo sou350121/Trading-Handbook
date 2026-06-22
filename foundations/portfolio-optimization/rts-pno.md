@@ -1,8 +1,6 @@
----
-title: "RTS-PnO"
-description: "落點於「監督回歸 × 組合執行優化」軸，解決傳統 PtO 架構中預測目標與決策目標的結構性錯配。透過端到端 PnO 範式與動態保形風險約束，將不確定性內生化為執行預算，而非事後過濾。"
----
 <!-- ontology-5axis data=量价表格 horizon=高频日内 paradigm=监督回归 alpha=组合执行优化 autonomy=全自动黑盒 -->
+
+# RTS-PnO 解構
 
 > **發布**：2025-07-13 · KDD25
 > **QuantML 導讀**：[KDD 25 |  时间至关重要：基于风险感知的时序预测与分配框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491002&idx=1&sn=ef72c0d6683b25e8132cdb7512fb8f5b&chksm=ce7e7aa4f909f3b2ab88937ed2014b01a45ad98e4060869f571d473aaf60b829a3dd26d3210b#rd)

@@ -1,8 +1,6 @@
----
-title: "FinRL-DeepSeek"
-description: "落點於「文本另类 × 强化学习 × 风险择时」軸。解了傳統 RL 交易代理忽略非結構化新聞資訊與尾部風險管理的 prior gap，以極簡的 LLM 評分擾動機制替代複雜的多代理或特徵工程。"
----
 <!-- ontology-5axis data=文本另类 horizon=日频波段 paradigm=强化学习 alpha=风险择时 autonomy=全自动黑盒 -->
+
+# FinRL-DeepSeek 解構
 
 > **發布**：2025-02-13 · （無 venue）
 > **QuantML 導讀**：[FinRL-DeepSeek：基于LLM的强化学习交易代理](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489251&idx=1&sn=a7be7c5be274ad88e6f16c4e4205b86f&chksm=ce7e71fdf909f8eb6e3a9e6f8e1cca7d45f2beec0d957f436532657a06e72a10f4d25fc62f69#rd)

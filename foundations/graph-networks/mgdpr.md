@@ -1,8 +1,6 @@
----
-title: "MGDPR"
-description: "落點於「圖關係 × 日頻波段 × 端到端表征」，解決傳統 GNN 依賴靜態/手動建圖與注意力機制在多變量情境下無法明確捕捉非對稱動態關聯的 prior gap。"
----
 <!-- ontology-5axis data=图关系 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# MGDPR 解構
 
 > **發布**：2024-07-19 · （無 venue）
 > **QuantML 導讀**：[多关系图扩散神经网络用于股票趋势预测](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485475&idx=1&sn=3cba1cc18fcc86f7aa5bbde62098be84&chksm=ce7e6f3df909e62b7e88eb2893d2586a45d76de3e7327eb78930a25c99526df2974ea6d32b5a#rd)

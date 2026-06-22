@@ -1,8 +1,6 @@
----
-title: "xLSTM-Mixer"
-description: "落點於「監督回歸 × 端到端表征 × 全自動黑盒」軸，針對長序列多變量預測中 Transformer 的 $O$ 計算瓶頸與傳統 RNN 容量不足 prior gap，以線性基線+權重共享 sLSTM 堆疊重構特徵提取路徑。"
----
 <!-- ontology-5axis data=量价表格 horizon=中长周期 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# xLSTM-Mixer 解構
 
 > **發布**：2024-10-26 · （無 venue）
 > **QuantML 導讀**：[xLSTM-Mixer: 混合多变量时间序列预测](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487252&idx=1&sn=68ca2419985077d125f21b31f8bdaab4&chksm=ce7e680af909e11cdff41e48b4015320f3c77fc069f29e08ddec07071aa637661bec3cb6a34c#rd)

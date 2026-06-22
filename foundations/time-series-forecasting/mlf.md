@@ -1,8 +1,6 @@
----
-title: "MLF"
-description: "落點於「跨周期監督回歸」與「端到端黑盒」軸；解決了金融時序中單一視窗無法兼顧短波長動盪與長週期趨勢的結構性割裂，同時規避了多週期粗暴拼接導致的注意力冗餘與計算膨脹。"
----
 <!-- ontology-5axis data=量价表格 horizon=跨周期 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# MLF 解構
 
 > **發布**：2025-08-06 · KDD 2025
 > **QuantML 導讀**：[KDD 25 | 复旦&蚂蚁：多周期时间序列预测框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491262&idx=1&sn=d941acef9fc21a7161622133f53d2081&chksm=ce7e79a0f909f0b630fb89d694feaf1ac0a4f09a9c99bf334db03b3b9ce75a11e10886b1d3da#rd)

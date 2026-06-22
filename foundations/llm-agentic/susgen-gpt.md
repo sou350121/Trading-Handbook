@@ -1,8 +1,6 @@
----
-title: "SusGen-GPT"
-description: "落點於「文本另类 × 生成式大模型」軸，解決金融/ESG領域開源模型缺乏領域知識與數據類別不平衡的 prior gap，以數據中心策略實現 7-8B 模型逼近閉源 1,700B 模型效能。"
----
 <!-- ontology-5axis data=文本另类 horizon=跨周期 paradigm=生成式大模型 alpha=端到端表征 autonomy=人机协同可解释 -->
+
+# SusGen-GPT 解構
 
 > **發布**：2024-12-19 · （無 venue）
 > **QuantML 導讀**：[SusGen-GPT：大模型生成ESG报告](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488448&idx=1&sn=86125b3ac559b59faff52a751134c2f8&chksm=ce7e74def909fdc8082cd6b688d1687836fa3df6d6544eba26a69b3d57c2e8c3db4fbd6e1af6#rd)

@@ -1,8 +1,6 @@
----
-title: "TISFM"
-description: "落點於「中觀行業指數動態融合」的監督回歸黑盒。解決了傳統 SIP 模型在跨市場環境下，靜態拼接宏觀與微觀數據導致的異質性干擾與 regime 切換遲滯問題。"
----
 <!-- ontology-5axis data=量价表格 horizon=中长周期 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# TISFM 解構
 
 > **發布**：2026-01-14 · （無 venue）
 > **QuantML 導讀**：[动态行业融合Transformer用于指数预测](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492996&idx=1&sn=d9bdee39404b728ea957726d4230c891&chksm=ce7d829af90a0b8cbc3d72ee62c51eba9ed06d652ab070221caff484b49f7e7cc3aa7366e637#rd)

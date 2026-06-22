@@ -1,8 +1,6 @@
----
-title: "SAITS"
-description: "五軸落點於「監督回歸 × 端到端表征 × 全自動黑盒」。解了傳統 RNN/GAN 插補在長序列下的累積誤差與訓練不穩定問題，將缺失值還原轉化為自注意力架構下的掩碼預測與觀測重建聯合優化任務，為下游量價因子挖掘提供高保真特徵基底。"
----
 <!-- ontology-5axis data=量价表格 horizon=跨周期 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# SAITS 解構
 
 > **發布**：2024-08-26 · （無 venue）
 > **QuantML 導讀**：[SAITS: 基于自注意力的时间序列缺失值插补](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485977&idx=1&sn=74941373033095ae7174e95182b3abda&chksm=ce7e6d07f909e4119570fd6a091f3bc68925d180fc58b5182882446bd8b89eb1d4dc2413152a#rd)

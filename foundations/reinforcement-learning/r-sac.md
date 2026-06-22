@@ -1,8 +1,6 @@
----
-title: "R²-SAC"
-description: "將 SAC 從端到端權重優化強制解耦為「探索-執行」兩階段，命中組合管理軸上的信用分配瓶頸。以鬆弛動作空間降低策略梯度方差，再以決策邏輯注入宏觀擇時與微觀關聯完成閉環。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=强化学习 alpha=组合执行优化 autonomy=全自动黑盒 -->
+
+# R²-SAC 解構
 
 > **發布**：2025-09-01 · （無 venue）
 > **QuantML 導讀**：[同花顺 | R²-SAC: 复杂市场环境下的“松弛-精炼”强化学习交易策略](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491524&idx=1&sn=16f7c9d13b8b232a5ed64e094d8e9f4e&chksm=ce7e78daf909f1ccc3f4db71dbe2be15111aa2b8c729c6991ca43ad4155c48451fe2697bc66f#rd)

@@ -1,8 +1,6 @@
----
-title: "FinBERT+XGBoost+SHAP"
-description: "落點於「文本另类×日频波段×监督回归」，以 FinBERT 提取宏觀新聞極性，透過 XGBoost 捕捉非線性交互，並用 SHAP 解構決策路徑。解決了傳統詞典情緒模型在宏觀資產上的語境誤判與黑箱合規痛點。"
----
 <!-- ontology-5axis data=文本另类 horizon=日频波段 paradigm=监督回归 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# FinBERT+XGBoost+SHAP 解構
 
 > **發布**：2025-05-23 · （無 venue）
 > **QuantML 導讀**：[基于新闻情绪的可解释机器学习宏观Alpha策略研究](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490475&idx=1&sn=32a368c9ef803775a536b9287c00dadf&chksm=ce7e7cb5f909f5a33ef52a1ca2fbe41d19cb26dbcd58861139fb809b70df838b6d029755dc7f#rd)

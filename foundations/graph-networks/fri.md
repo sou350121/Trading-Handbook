@@ -1,8 +1,6 @@
----
-title: "FRI框架"
-description: "落點於「图关系」與「人机协同可解释」軸，解決了傳統 GNN 因子研究將「圖結構質量」與「下游預測指標」深度綁定所導致的評估混淆與過擬合先驗缺口。"
----
 <!-- ontology-5axis data=图关系 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=人机协同可解释 -->
+
+# FRI框架 解構
 
 > **發布**：2025-09-25 · （無 venue）
 > **QuantML 導讀**：[面向解释性的金融图谱量化框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491788&idx=1&sn=f808ef78c367f774d0195fc7ec50d7a8&chksm=ce7d87d2f90a0ec448c30728663ec40b3904e83e4859248445e50572367c3a2ab5e3fd669de2#rd)

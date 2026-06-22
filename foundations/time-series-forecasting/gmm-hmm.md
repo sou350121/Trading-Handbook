@@ -1,8 +1,6 @@
----
-title: "GMM-HMM"
-description: "落點於「日频波段」與「端到端表征」軸，以 GMM-HMM 將隱含市場狀態與連續量價序列對齊，試圖解決傳統 HMM 在高維連續觀測下發射分佈假設過強的 prior gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=人机协同可解释 -->
+
+# GMM-HMM 解構
 
 > **發布**：2024-09-29 · （無 venue）
 > **QuantML 導讀**：[隐马尔可夫模型在股市预测中的应用](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486864&idx=1&sn=c2f7981b63d6d7712f62e5aeacc625b6&chksm=ce7e6a8ef909e398cde75ad346469d96f6ca8442ff296d974092dc07ce46691f029199c2464d#rd)

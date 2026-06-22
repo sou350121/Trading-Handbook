@@ -1,8 +1,6 @@
----
-title: "JF | 消失的指数效应"
-description: "落點於「組合執行優化 × 日频波段」軸，解構了傳統 Alpha 研究中將「指數納入/剔除」視為穩定需求衝擊的 prior gap，揭示該異象已因指數遷移與流動性提供機制演化而趨零。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=组合执行优化 autonomy=人机协同可解释 -->
+
+# JF | 消失的指数效应 解構
 
 > **發布**：2025-04-15 · JF
 > **QuantML 導讀**：[JF | 消失的指数效应](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490063&idx=1&sn=0fb66478d0952615feef90c6682f51e6&chksm=ce7e7d11f909f407aa02dbc9edc0701609894f6826623c02921f9ded15d14384d7476c93929e#rd)

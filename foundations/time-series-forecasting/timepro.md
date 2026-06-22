@@ -1,8 +1,6 @@
----
-title: "TimePro"
-description: "落點於「端到端表征 × 监督回归」軸，針對多元長序列預測中「不同變數對目標影響存在時間滯後差異」的 prior gap，以硬體感知的線性複雜度架構取代 Transformer 的二次方瓶頸。"
----
 <!-- ontology-5axis data=量价表格 horizon=中长周期 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# TimePro 解構
 
 > **發布**：2025-08-07 · ICML 25
 > **QuantML 導讀**：[ICML 25 | 华为诺亚方舟：TimePro高效多元时序预测](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491281&idx=2&sn=c431c36f81ccc98cef4112b920e58024&chksm=ce7e79cff909f0d98baef327c37bd6d4d7b10f0ff2e6dd807bb4dfd8eccb427cd91cf8d5a1d4#rd)

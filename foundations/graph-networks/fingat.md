@@ -1,8 +1,6 @@
----
-title: "FinGAT"
-description: "落點於「圖關係 × 日頻波段 × 監督回歸 × 端到端表徵 × 全自動黑盒」。解了傳統金融GNN依賴靜態先驗圖的 prior gap，將圖拓撲學習與 Top-K 組合構建目標直接對齊。"
----
 <!-- ontology-5axis data=图关系 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# FinGAT 解構
 
 > **發布**：2024-09-19 · （無 venue）
 > **QuantML 導讀**：[FinGAT：金融图注意力网络](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486368&idx=1&sn=63d6932b9216c096666e3825ec6a94be&chksm=ce7e6cbef909e5a89a61963e14f6d1df6ca877fce7d444dd812d755e02ba45a7e9eba34a50df#rd)

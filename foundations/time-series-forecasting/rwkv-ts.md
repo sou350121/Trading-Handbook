@@ -1,8 +1,6 @@
----
-title: "RWKV-TS"
-description: "將線性RNN遷移至時間序列，以O複雜度與分塊技術切掉Transformer的二次方算力瓶頸，解決長序列依賴捕捉與推理延遲的Prior Gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=跨周期 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# RWKV-TS 解構
 
 > **發布**：2024-08-11 · （無 venue）
 > **QuantML 導讀**：[RWKV-TS: 超越传统RNN的时序模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485732&idx=1&sn=5e362c713b852da5d597e0acb9e8c745&chksm=ce7e6e3af909e72c557fc9eb6aaf0f222329b727f1d3c28c2ebaf8f75b7fd17719dce26c2bae#rd)

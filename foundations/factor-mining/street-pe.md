@@ -1,8 +1,6 @@
----
-title: "Street PE"
-description: "落點於「量價表格 × 中長週期 × 因子挖掘」。解了傳統價值因子因 GAAP 盈餘過渡性波動導致估值比率方差分解錯配、樣本外預測力崩潰的 prior gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=中长周期 paradigm=监督回归 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# Street PE 解構
 
 > **發布**：2024-10-03 · （無 venue）
 > **QuantML 導讀**：[用收益对股票估值](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486921&idx=1&sn=0a1e5fcf7210691c8bcd65dbba037275&chksm=ce7e6ad7f909e3c1ba4192b227f6fac30ab714ff4e84bb10058f307fac2fdb14a361f286859#rd)

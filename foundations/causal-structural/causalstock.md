@@ -1,8 +1,6 @@
----
-title: "CausalStock"
-description: "落點於「文本另类 × 因果結構」軸，解決傳統新聞驅動模型將股票互動簡化為對稱相關性的工程坑，並透過 LLM 維度評分過濾資訊過載與來源歧義，將非結構化文本轉為可微因果權重。"
----
 <!-- ontology-5axis data=文本另类 horizon=日频波段 paradigm=因果结构 alpha=端到端表征 autonomy=人机协同可解释 -->
+
+# CausalStock 解構
 
 > **發布**：2024-12-12 · NeurIPS24
 > **QuantML 導讀**：[NIPS 24 | CausalStock : 基于端到端因果发现的新闻驱动股价预测模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488342&idx=1&sn=4793d31201295e14a5978556f449adca&chksm=ce7e7448f909fd5e6d42f9e9c2c117c8c0b40fedc7d2d0e269118222e65b7dd8b8da2106e233#rd)

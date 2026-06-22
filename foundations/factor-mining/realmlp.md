@@ -1,8 +1,6 @@
----
-title: "RealMLP"
-description: "落點於「元學習搜索」與「端到端表徵」軸，解決表格數據中 NN 對 GBDT 的「超參數敏感與默認性能劣勢」prior gap。透過元訓練基準固化強默認參數，使 MLP 在免調參下逼近樹模型的時間-精度 Pareto 前沿。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=元学习搜索 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# RealMLP 解構
 
 > **發布**：2024-12-05 · NeurIPS24
 > **QuantML 導讀**：[NIPS 24 | 改进MLP在表格数据表现](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488210&idx=1&sn=93c8b4dc5f3e9d83523c68020d4ce413&chksm=ce7e75ccf909fcdac25f2712eb57ab2f635c7060a98418abe16643362710f59425da3188ddef#rd)

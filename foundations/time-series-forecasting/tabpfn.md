@@ -1,8 +1,6 @@
----
-title: "TabPFN"
-description: "落點於量價表格與跨周期監督回歸，解決了 TabPFN-TS 過度依賴外部時間戳日曆特徵而無法捕獲數據內在複雜/非標準週期的 Prior Gap。"
----
 <!-- ontology-5axis data=量价表格 horizon=跨周期 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# TabPFN 解構
 
 > **發布**：2025-06-22 · （無 venue）
 > **QuantML 導讀**：[周期性数据赋能TabPFN时间序列预测](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490806&idx=1&sn=db9572c81261c17bde2b4de1bd03eca7&chksm=ce7e7be8f909f2fed72170dadf31821122a6d06b2932ad5f27da9f3096ef0bb277f782e563b4#rd)

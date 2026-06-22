@@ -1,8 +1,6 @@
----
-title: "Fama-MacBeth回归"
-description: "落點於「因子挖掘 × 監督回歸」軸，解構傳統將散戶視為同質噪音的 prior gap，透過帳戶分層與訂單失衡捕捉行為異質性帶來的跨期可預測性。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# Fama-MacBeth回归 解構
 
 > **發布**：2025-06-12 · JFQA
 > **QuantML 導讀**：[中国的散户交易与收益可预测性](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490700&idx=1&sn=7c9901bfe7c10ea47039f43ecea4f6f8&chksm=ce7e7b92f909f284943f1d6661088e4c7920ed94a219aedb1c1a5a1b786fa046abb856f6a828#rd)

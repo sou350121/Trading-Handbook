@@ -1,8 +1,6 @@
----
-title: "Chatterjee ξ"
-description: "落點於「因子挖掘 × 人機協同可解釋」軸，針對傳統皮爾遜/斯皮爾曼相關係數在捕捉非單調/非線性因子-收益關係時失效的 prior gap，提供一種無分佈假設的非參數依賴度量。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# Chatterjee ξ 解構
 
 > **發布**：2025-02-16 · （無 venue）
 > **QuantML 導讀**：[比IC更好的相关系数？](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489303&idx=1&sn=8a13dd1e0ed87f7b1e1c9dbe4cb17b48&chksm=ce7e7009f909f91f7e423d9b19647178aadb8c095bdace241bd0c3e74a50377e4f2312d82aaa#rd)

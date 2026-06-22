@@ -1,8 +1,6 @@
----
-title: "AlphaAgents"
-description: "落點於「生成式大模型 × 多智能体博弈」軸，解決傳統 LLM 單點決策的幻覺與認知偏見 gap，透過結構化群聊辯論與風險偏好提示工程，將非結構化文本轉化為可追溯的日頻波段信號。"
----
 <!-- ontology-5axis data=文本另类 horizon=日频波段 paradigm=生成式大模型 alpha=多智能体博弈 autonomy=人机协同可解释 -->
+
+# AlphaAgents 解構
 
 > **發布**：2025-08-25 · （無 venue）
 > **QuantML 導讀**：[贝莱德 | AlphaAgents: 多智能体在股票投资组合构建中的应用](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491466&idx=1&sn=959e9ec5cdaaa9847a09d2c1ec44bddf&chksm=ce7e7894f909f1822243324de490cb939fe198141ec3aad460c3479433c0cb372a1fd64ba8c6#rd)

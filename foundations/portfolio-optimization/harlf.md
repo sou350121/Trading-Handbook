@@ -1,8 +1,6 @@
----
-title: "HARLF"
-description: "多模態融合的中長週期HRL組合優化框架，解決扁平化DRL在跨資產配置時的可擴展性差與策略不穩定問題。"
----
 <!-- ontology-5axis data=多模态 horizon=中长周期 paradigm=强化学习 alpha=组合执行优化 autonomy=全自动黑盒 -->
+
+# HARLF 解構
 
 > **發布**：2025-07-31 · （無 venue）
 > **QuantML 導讀**：[HARLF：分层强化学习如何融合数据与情感](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491189&idx=1&sn=19fdc880b5694771c2204e3efcd50162&chksm=ce7e796bf909f07d2dc781152e61af8e8eafc8a17f85514fa131ab416daf1ed103bc4cdaf61c#rd)

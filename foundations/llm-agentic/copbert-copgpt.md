@@ -1,8 +1,6 @@
----
-title: "CopBERT/CopGPT"
-description: "落點於「文本另类×日频波段」軸，針對商品新聞情感因子挖掘的 Prior Gap：傳統單向生成模型在金融場景的幻觉風險與黑盒決策不可審計，雙向編碼模型雖可解釋但語義捕捉受限。本法透過領域微調與注意力可視化，提供一條「預測力-可解釋性」的 Pareto 權衡路徑。"
----
 <!-- ontology-5axis data=文本另类 horizon=日频波段 paradigm=生成式大模型 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# CopBERT/CopGPT 解構
 
 > **發布**：2024-06-02 · （無 venue）
 > **QuantML 導讀**：[GPT vs BERT 金融工程该选择哪种结构？](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247484541&idx=1&sn=437ed0b400142cc9d23ef1ad28ba1843&chksm=ce7e6363f909ea756dbbb713ddb8195d5bc4b8a3ca426102a05061dddabfb98bd7f5a3a2f742#rd)

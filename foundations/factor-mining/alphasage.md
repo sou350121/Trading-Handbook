@@ -1,8 +1,6 @@
----
-title: "AlphaSAGE"
-description: "落點於「結構感知因子挖掘 × 多樣性探索」。解了傳統序列RL在公式化Alpha挖掘中「獎勵稀疏、語義扁平、收斂單一」的 prior gap，將離散符號搜索重構為流形生成問題。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=强化学习 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# AlphaSAGE 解構
 
 > **發布**：2025-09-30 · （無 venue） · arXiv [2509.25055](https://arxiv.org/abs/2509.25055)
 > **QuantML 導讀**：[北京大学 × 正仁量化 | ALPHASAGE：融合GFlowNets的结构感知Alpha挖掘](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491844&idx=1&sn=2a6eccf6733fe139a37471e8ed1cac50&chksm=ce7d861af90a0f0c3e11d7aac503d50a1f9424821be3ec5419b49ca381fef5e93d1349e4703c#rd)

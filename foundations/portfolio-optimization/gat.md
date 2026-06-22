@@ -1,8 +1,6 @@
----
-title: "GAT"
-description: "落點於「圖關係 × 監督回歸 × 組合執行優化」軸，直擊傳統均值-方差優化在高維非線性相關結構下的計算瓶頸與樣本外不穩定問題。以可微負對數夏普比率為錨，將圖注意力網絡的動態鄰域加權與 TMFG 稀疏濾波結合，實現端到端的時變權重分配。"
----
 <!-- ontology-5axis data=图关系 horizon=日频波段 paradigm=监督回归 alpha=组合执行优化 autonomy=全自动黑盒 -->
+
+# GAT 解構
 
 > **發布**：2024-07-23 · （無 venue）
 > **QuantML 導讀**：[基于图注意力网络GAT的大规模时变投资组合优化](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485526&idx=1&sn=3211acd2ac980511f57652e28edb81e1&chksm=ce7e6f48f909e65e4cd20198214ddd908ebec35be6ce8d459f5a3e7bed613cde680e48eb2487#rd)

@@ -1,8 +1,6 @@
----
-title: "Co-CPC"
-description: "落點於「端到端表征 × 監督回歸」軸，直面實戰中「宏觀異構數據拼接失效」與「端到端訓練過擬合」的雙重 prior gap，以 Copula 解耦依賴結構、CPC 分離編解碼，將市場隨機性轉化為可優化的互信息目標。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# Co-CPC 解構
 
 > **發布**：2025-06-24 · （無 venue）
 > **QuantML 導讀**：[基于宏观-板块-微观指标耦合的股票表征学习](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490828&idx=1&sn=810cd3c20031a213d15b0823cff8c414&chksm=ce7e7a12f909f304a17be7f1648fddf95470dab01c2e4d7128ef94f9476e04cf1edf17251360#rd)

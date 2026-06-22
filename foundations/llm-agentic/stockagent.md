@@ -1,8 +1,6 @@
----
-title: "StockAgent"
-description: "以生成式大模型驅動異質性多智能體，在注入真實宏觀/財報事件的合成市場中進行日頻波段博弈。解決了傳統回測框架無法捕捉「投資者行為偏差與信息傳播動態」的 Prior Gap，將 Alpha 生成從「歷史價量擬合」轉向「行為機制模擬」。"
----
 <!-- ontology-5axis data=文本另类 horizon=日频波段 paradigm=生成式大模型 alpha=多智能体博弈 autonomy=Agent自主演进 -->
+
+# StockAgent 解構
 
 > **發布**：2024-07-31 · （無 venue）
 > **QuantML 導讀**：[StockAgent：当AI遇见金融](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485618&idx=1&sn=588d737ba96b93309c79604fb1922b87&chksm=ce7e6facf909e6bad9886baa76afeeb3f7f01c5f1c47f30741f1c8a6c4bb8c1abed362351cff#rd)

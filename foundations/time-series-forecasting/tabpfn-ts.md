@@ -1,8 +1,6 @@
----
-title: "TabPFN-TS"
-description: "落點於「端到端表徵 × 全自動黑盒」軸，將表格基礎模型 TabPFN 透過純時間戳特徵工程遷移至時間序列預測，解決了傳統深度時序模型對海量歷史數據與自回歸結構的過度依賴。"
----
 <!-- ontology-5axis data=量价表格 horizon=跨周期 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
+
+# TabPFN-TS 解構
 
 > **發布**：2025-01-25 · （無 venue）
 > **QuantML 導讀**：[TabPFN-TS： 最强时间序列基础模型之一](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489003&idx=1&sn=e76c9ef1b8db09e3bf61f257dfdaaea1&chksm=ce7e72f5f909fbe3c1378d3b138c2321f525f56fbcaed9a9a69fcc861f490b765fda606de621#rd)

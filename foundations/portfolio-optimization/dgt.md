@@ -1,8 +1,6 @@
----
-title: "DGT"
-description: "落點於「組合執行優化」軸的規則型動態倉管框架。解了傳統幾何網格在有限資本下「觸界即終止」導致的零期望/負期望工程坑，將離散邊界觸發轉為連續狀態重置。"
----
 <!-- ontology-5axis data=量价表格 horizon=高频日内 paradigm=监督回归 alpha=组合执行优化 autonomy=全自动黑盒 -->
+
+# DGT 解構
 
 > **發布**：2025-06-16 · （無 venue）
 > **QuantML 導讀**：[动态网格交易策略：从零期望到超越市场](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490740&idx=1&sn=d1cb157222a1a277b4e2e7c54db2e747&chksm=ce7e7baaf909f2bc09c8fe0ef088ec49125626e8e109e63fbce41cc7ce0d490a5d734c8cfa3d#rd)

@@ -1,8 +1,6 @@
----
-title: "强化学习新突破：集成方法+GPU并行模拟用于交易"
-description: "落點於「組合執行優化」與「強化學習」軸，解了 FinRL 長期存在的策略不穩定與採樣瓶頸。透過 GPU 向量化環境與 KL 散度內生多樣性約束，將集成從後驗統計升級為訓練期並行探索。"
----
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=强化学习 alpha=组合执行优化 autonomy=全自动黑盒 -->
+
+# 强化学习新突破：集成方法+GPU并行模拟用于交易 解構
 
 > **發布**：2025-03-19 · （無 venue）
 > **QuantML 導讀**：[强化学习新突破：集成方法+GPU并行模拟用于交易](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489723&idx=1&sn=80e924f5fea5b68086822fb354215d57&chksm=ce7e7fa5f909f6b3b2b71fa444d8f126b96dd1caaa793e3181bedb37b4745c7c5d5011fbf0cd#rd)

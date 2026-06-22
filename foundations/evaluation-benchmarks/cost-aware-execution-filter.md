@@ -1,8 +1,6 @@
----
-title: "Cost-Aware Execution Filter"
-description: "落點於「組合執行優化」與「監督回歸」的交叉軸，解決了高頻預測中「統計誤差最小化」與「實盤淨值最大化」的 Prediction-to-Trading Gap。將優化重心從預測端架構複雜度後移至執行端摩擦覆蓋邏輯。"
----
 <!-- ontology-5axis data=量价表格 horizon=高频日内 paradigm=监督回归 alpha=组合执行优化 autonomy=人机协同可解释 -->
+
+# Cost-Aware Execution Filter 解構
 
 > **發布**：2026-05-31 · （無 venue）
 > **QuantML 導讀**：[从年化 129% 到巨亏 -83.9% 仅需 10bps 成本？](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493963&idx=1&sn=9e239a51619ce3ed480a3c9b71d18894&chksm=ce7d8e55f90a07434f83e370e9208c2c3be0ac1d2cfcb28d927375c119a05b3676cb7020d5a0#rd)

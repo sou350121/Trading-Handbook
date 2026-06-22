@@ -1,8 +1,6 @@
----
-title: "LlamaLens"
-description: "落點於「文本另类數據處理」與「生成式大模型」軸，解決傳統 NLP 模型在多語言新聞/社媒情緒與事實核查任務中指令對齊差、低資源語言表現崩潰的 prior gap，為日頻波段因子挖掘提供可解釋的語義標籤生成器。"
----
 <!-- ontology-5axis data=文本另类 horizon=日频波段 paradigm=生成式大模型 alpha=因子挖掘 autonomy=人机协同可解释 -->
+
+# LlamaLens 解構
 
 > **發布**：2024-11-23 · （無 venue）
 > **QuantML 導讀**：[面向新闻和社交媒体分析的专用大语言模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487892&idx=1&sn=976b8d33fa33aca97f7a2fae300f56bc&chksm=ce7e768af909ff9c67996d1f219fe90438426057692f6ba8b81390641f3a232c1167fb3cbbf1#rd)
