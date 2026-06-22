@@ -1,10 +1,18 @@
+---
+title: "FinBERT & LLM Prompting"
+description: "落點於「文本另类 × 生成式大模型 × 人机协同可解释」。解了 prior gap：傳統金融 NLP 依賴高昂的領域微調或脆弱的詞典規則，本文驗證了透過精心設計的少樣本提示，通用 LLM 在金融情緒分類上可逼近領域專用模型，將垂直領域的 Alpha 挖掘從「重微調」轉向「輕提示」"
+---
 <!-- ontology-5axis data=文本另类 horizon=日频波段 paradigm=生成式大模型 alpha=因子挖掘 autonomy=人机协同可解释 -->
-
-# FinBERT & LLM Prompting 解構（FinBERT & LLM Prompting）
 
 > **發布**：2024-10-06 · （無 venue）
 > **QuantML 導讀**：[使用LLMs和FinBERT对新闻和报告进行金融情绪分析](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486930&idx=1&sn=6e733991443d5f9cf1d3c83424620307&chksm=ce7e6accf909e3dabe5f604aaa6ab70dfed6e0af3faa809bb57dc96d327a8b51e52388f71e3f#rd)
 > **核心定位**：落點於「文本另类 × 生成式大模型 × 人机协同可解释」。解了 prior gap：傳統金融 NLP 依賴高昂的領域微調（如 FinBERT）或脆弱的詞典規則，本文驗證了透過精心設計的少樣本提示（Few-shot Prompting），通用 LLM 在金融情緒分類上可逼近領域專用模型，將垂直領域的 Alpha 挖掘從「重微調」轉向「輕提示」。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `文本另类` | `日频波段` | `生成式大模型` | `因子挖掘` | `人机协同可解释` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 驗證 Few-shot Prompting 能否讓通用 LLM（GPT-4o/3.5）在金融新聞情緒分類上媲美領域微調的 FinBERT。② 核心 trick 是注入 9 條高質量金融語境示例（3正/3負/3中）的結構化提示模板。③ 對「生成式大模型」軸★ 意義在於證明垂直領域的 Alpha 挖掘可從「重微調」轉向「輕提示」，大幅降低部署與維護成本。④ 關鍵實證：微調版 FinBERT 準確率達 0.88，GPT-4o Few-shot 性能逼近該基準。

@@ -1,10 +1,18 @@
+---
+title: "FinBERT+XGBoost+SHAP"
+description: "落點於「文本另类×日频波段×监督回归」，以 FinBERT 提取宏觀新聞極性，透過 XGBoost 捕捉非線性交互，並用 SHAP 解構決策路徑。解決了傳統詞典情緒模型在宏觀資產上的語境誤判與黑箱合規痛點。"
+---
 <!-- ontology-5axis data=文本另类 horizon=日频波段 paradigm=监督回归 alpha=因子挖掘 autonomy=人机协同可解释 -->
-
-# FinBERT+XGBoost+SHAP 解構（FinBERT+XGBoost+SHAP）
 
 > **發布**：2025-05-23 · （無 venue）
 > **QuantML 導讀**：[基于新闻情绪的可解释机器学习宏观Alpha策略研究](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490475&idx=1&sn=32a368c9ef803775a536b9287c00dadf&chksm=ce7e7cb5f909f5a33ef52a1ca2fbe41d19cb26dbcd58861139fb809b70df838b6d029755dc7f#rd)
 > **核心定位**：落點於「文本另类×日频波段×监督回归」，以 FinBERT 提取宏觀新聞極性，透過 XGBoost 捕捉非線性交互，並用 SHAP 解構決策路徑。解決了傳統詞典情緒模型在宏觀資產（FX/債券）上的語境誤判與黑箱合規痛點。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `文本另类` | `日频波段` | `监督回归` | `因子挖掘` | `人机协同可解释` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 將 GDELT 宏觀新聞流經 FinBERT 轉為極性分數，構建日頻情緒特徵集。② 核心 trick 在於結合情緒分散度（sentiment_std）與文章影響（article_impact）等時序衍生特徵，以 XGBoost 擬合次日方向，並用 SHAP 實現特徵歸因透明化。③ 對「因子挖掘×可解釋性」軸★，提供了一套開源、可復現且合規友好的宏觀 Alpha 生成範式。④ 樣本外夏普比率達 EUR/USD 5.87 / USD/JPY 4.65 / ZN 4.65（已扣成本）。

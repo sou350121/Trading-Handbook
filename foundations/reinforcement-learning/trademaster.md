@@ -1,10 +1,18 @@
+---
+title: "TradeMaster"
+description: "落點於「端到端表徵 × 全自動黑盒」軸，解了 RLFT 研究長期存在的數據格式割裂、環境約束不一致、評估維度碎片化等工程坑。提供標準化 Gym 環境與 PRUDEX-Compass 評測基準，使跨算法比較具備統計意義。"
+---
 <!-- ontology-5axis data=量价表格 horizon=跨周期 paradigm=强化学习 alpha=端到端表征 autonomy=全自动黑盒 -->
-
-# TradeMaster 解構（TradeMaster）
 
 > **發布**：2025-01-18 · NeurIPS22 · arXiv [2201.01901](https://arxiv.org/abs/2201.01901)
 > **QuantML 導讀**：[TradeMaster ：基于强化学习的开源量化交易平台](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488847&idx=1&sn=3b862d85cb5c108d9f53281c1dc7c5e2&chksm=ce7e7251f909fb479846df7d050061988d87d5c6fb985028514864b644b01fda3e8c2b58a023#rd)
 > **核心定位**：落點於「端到端表徵 × 全自動黑盒」軸，解了 RLFT 研究長期存在的數據格式割裂、環境約束不一致、評估維度碎片化等工程坑。提供標準化 Gym 環境與 PRUDEX-Compass 評測基準，使跨算法比較具備統計意義。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `跨周期` | `强化学习` | `端到端表征` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** 南洋理工開源的強化學習量化交易平台，統一數據預處理、Gym 環境、主流 RL 算法與多維評估流水線。核心 trick 在於將真實交易約束（滑點、成本、槓桿、止損）硬編入環境 step 邏輯，並內建 13+ 數據集與多任務支援。這對「端到端表徵」軸極具價值，因它強制模型在帶摩擦的市場中學習表徵，而非純預測。導讀未給量化結果。

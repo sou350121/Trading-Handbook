@@ -1,10 +1,18 @@
+---
+title: "NGAT"
+description: "落點於「圖關係×中長週期×監督回歸」軸，解構傳統 GNN 假設節點特徵同質且過度聚焦次日收益率的 prior gap。透過節點級獨立注意力參數，聯合建模長期動量溢出與波動率，提供具備風險意識的週期性 Alpha 生成路徑。"
+---
 <!-- ontology-5axis data=图关系 horizon=中长周期 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
-
-# NGAT 解構（NGAT）
 
 > **發布**：2025-09-24 · （無 venue）
 > **QuantML 導讀**：[基于NGAT模型的股票长期趋势与风险建模](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491778&idx=1&sn=fe82ab417ad71f9c3450d2fdf63cd723&chksm=ce7d87dcf90a0eca5ffa0bea6cefc2a4cca8c4a6dcc8148e991c288bb5106dcb74f260f0b005#rd)
 > **核心定位**：落點於「圖關係×中長週期×監督回歸」軸，解構傳統 GNN 假設節點特徵同質且過度聚焦次日收益率的 prior gap。透過節點級獨立注意力參數，聯合建模長期動量溢出與波動率，提供具備風險意識的週期性 Alpha 生成路徑。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `图关系` | `中长周期` | `监督回归` | `端到端表征` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 聯合預測未來 T 日收益率趨勢（分類）與波動率（回歸）。② 為每個公司節點分配獨立注意力參數，取代全局共享機制。③ 突破 GAT 在異質企業關係圖上的過平滑瓶頸，對中長週期 Alpha 生成至關重要。④ SPNews 數據集 T=10 時，ACC/MCC/AUC 相對 GAT 分別提升 2.08%/8.12%/1.41%。

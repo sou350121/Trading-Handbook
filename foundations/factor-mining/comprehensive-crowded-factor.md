@@ -1,10 +1,18 @@
+---
+title: "Comprehensive Crowded Factor"
+description: "落點於「因子挖掘 × 日频波段」軸，解決傳統拥挤度指標僅依賴靜態分位的 prior gap，將訊號從「水平觀測」升級為「動態跳變捕捉」，透過資金流入的非對稱推升效應構建多空 Alpha。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=因子挖掘 autonomy=人机协同可解释 -->
-
-# Comprehensive Crowded Factor 解構（Comprehensive Crowded Factor）
 
 > **發布**：2026-01-19 · UBS Research
 > **QuantML 導讀**：[UBS | 拥挤度拐点后的非对称 Alpha](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493037&idx=1&sn=8b87b953f5320ed69900f208fe321580&chksm=ce7d82b3f90a0ba5366a86a750d46defd20ea89b2884985357f4abbc6bba10d31b93fea71655#rd)
 > **核心定位**：落點於「因子挖掘 × 日频波段」軸，解決傳統拥挤度指標僅依賴靜態分位的 prior gap，將訊號從「水平觀測」升級為「動態跳變捕捉」，透過資金流入的非對稱推升效應構建多空 Alpha。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `监督回归` | `因子挖掘` | `人机协同可解释` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 將 UBS 專有綜合拥挤因子（-30 至 +30）從靜態分位轉為動態拐點訊號。② 核心 trick 是過濾單一分位緩慢漂移，僅捕捉 ≥2 或 ≥3 個五分位的劇烈跳變，利用資金流入推升效應的非對稱性構建多空。③ 對「因子挖掘」軸而言，它提供了一個高勝率、低相關度的條件化增強模組，可直接疊加於傳統風格因子。④ 導讀給出 ≥3 個五分位跳變策略年化收益 10.1%、IR 0.90、月度勝率 56%。

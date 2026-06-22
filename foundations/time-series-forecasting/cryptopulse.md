@@ -1,10 +1,18 @@
+---
+title: "CryptoPulse"
+description: "多模态监督回归框架，解決傳統量價模型在加密貨幣市場中忽略宏觀代理與新聞情緒的 prior gap，以雙路預測解耦系統性波動與個體價格動態。"
+---
 <!-- ontology-5axis data=多模态 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
-
-# CryptoPulse 解構（CryptoPulse）
 
 > **發布**：2025-03-01 · （無 venue）
 > **QuantML 導讀**：[CryptoPulse：基于双重预测与跨相关市场指标的短期加密货币预测模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489490&idx=1&sn=9a8a90ea0a1c3a0b7f2f0f03d7eafe40&chksm=ce7e70ccf909f9dabeab4b27b0094b4a13ec43cf20988cc684ad267ae1fe805383fb23413bf5#rd)
 > **核心定位**：多模态监督回归框架，解決傳統量價模型在加密貨幣市場中忽略宏觀代理與新聞情緒的 prior gap，以雙路預測解耦系統性波動與個體價格動態。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `多模态` | `日频波段` | `监督回归` | `端到端表征` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 提出 CryptoPulse 框架，融合 LLM 情緒、宏觀代理指標與技術指標預測次日收盤價。② 核心 trick 為雙路預測解耦（宏觀波動 vs 個體動態），並透過 LLM 少樣本一致性校準提取情緒向量，重標定與融合兩路輸出。③ 對「端到端表徵」軸★，它繞過傳統因子工程，直接將非結構化新聞與多維量價序列映射為預測張量。④ 導讀給出在排名前 5 加密貨幣上 MAE 降低 10.4% 到 63.8%、MSE 降低 17.2% 到 69.0%。

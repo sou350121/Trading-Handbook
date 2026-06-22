@@ -1,10 +1,18 @@
+---
+title: "RobustiPy"
+description: "落點於 `alpha=因子挖掘` 與 `autonomy=人机协同可解释` 軸。解了量化研究中「單一回測曲線掩蓋設定自由度」的 prior gap，將隱性的 p-hacking 轉為可視化的設定曲線分佈與樣本外穩健性剖面。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=因子挖掘 autonomy=人机协同可解释 -->
-
-# RobustiPy 解構（RobustiPy）
 
 > **發布**：2025-06-26 · （無 venue）
 > **QuantML 導讀**：[RobustiPy：下一代多元宇宙样分析与模型稳健性量化框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490847&idx=1&sn=332d69653330fa783346615ddfcaa9a0&chksm=ce7e7a01f909f31739e3ba506f1463ccc2ee244545f00f7687c5de251117b5b21ba6aab43c48#rd)
 > **核心定位**：落點於 `alpha=因子挖掘` 與 `autonomy=人机协同可解释` 軸。解了量化研究中「單一回測曲線掩蓋設定自由度」的 prior gap，將隱性的 p-hacking 轉為可視化的設定曲線分佈與樣本外穩健性剖面。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `监督回归` | `因子挖掘` | `人机协同可解释` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 提供 Python 原生的一站式多元宇宙樣分析與設定曲線框架。② 核心 trick 是透過固定協變量/效應降維、多因變量組合與聯合推斷，結合 Bootstrap/BMA/SHAP 輸出樣本外穩健性剖面。③ 對 `alpha=因子挖掘` 軸至關重要，因它強制將 Alpha 驗證從「最佳情況回測」轉向「合理設定分佈的壓力測試」。④ 導讀未給量化結果。

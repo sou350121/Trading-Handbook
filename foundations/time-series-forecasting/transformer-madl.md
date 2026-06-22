@@ -1,10 +1,18 @@
+---
+title: "Transformer+MADL"
+description: "落點於「監督回歸 × 端到端表徵」軸，直擊傳統 MSE/MAE 損失與交易 PnL 方向錯配的 Prior Gap。以 MADL 將回歸目標重定向為「方向正確性 × 實際波動幅度」，使模型輸出直接對應做多/空倉/做空的信號生成。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
-
-# Transformer+MADL 解構（Transformer+MADL）
 
 > **發布**：2025-07-26 · （無 venue）
 > **QuantML 導讀**：[量化中另类损失函数](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491140&idx=1&sn=301c84cd772237fdccd68a64f22fa606&chksm=ce7e795af909f04c9ae6e049293292fd6a7a1805a8a57ab6db95c8e360e2208bba7622e86aee#rd)
 > **核心定位**：落點於「監督回歸 × 端到端表徵」軸，直擊傳統 MSE/MAE 損失與交易 PnL 方向錯配的 Prior Gap。以 MADL 將回歸目標重定向為「方向正確性 × 實際波動幅度」，使模型輸出直接對應做多/空倉/做空的信號生成。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `监督回归` | `端到端表征` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 將 MADL（平均絕對方向損失）引入 Transformer 日收益率預測，取代傳統數值誤差損失。② 核心 Trick 為 Loss = sign(pred) × abs(actual)，使梯度直接優化交易盈虧方向而非點位精度。③ 對「端到端表徵」軸★ 意義在於打破特徵工程依賴，讓架構自適應捕捉依賴並輸出可交易信號。④ 實證顯示 BTC 策略 IR_3 達 5.301，顯著壓制 LSTM（1.939）與 B&H（1.287）。

@@ -1,10 +1,18 @@
+---
+title: "GAT-CNNpred"
+description: "以特徵相關性閾值硬編碼圖拓撲，用 GAT/GCN 取代傳統 CNNpred 的 1×f 卷積核提取橫截面每日特徵，再與多尺度 CNN 時序層交叉融合。解了「卷積無法建模特徵間依賴」與「RNN/LSTM 過平滑/梯度消失」的 prior gap。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
-
-# GAT-CNNpred 解構（GAT-CNNpred）
 
 > **發布**：2025-06-19 · （無 venue）
 > **QuantML 導讀**：[基于图深度学习的指数预测](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490772&idx=1&sn=a52945b6942c212a3dbfde2278c45cd3&chksm=ce7e7bcaf909f2dc1e0e610d74e953d91414dc98d6802831766404b5ba4451afd725ee54fc2f#rd)
 > **核心定位**：以特徵相關性閾值（>0.7）硬編碼圖拓撲，用 GAT/GCN 取代傳統 CNNpred 的 1×f 卷積核提取橫截面每日特徵，再與多尺度 CNN 時序層交叉融合。解了「卷積無法建模特徵間依賴」與「RNN/LSTM 過平滑/梯度消失」的 prior gap。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `监督回归` | `端到端表征` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** 將 82/138 維量價與宏觀特徵視為圖節點，依相關性 >0.7 建邊，以 GAT 聚合鄰域信息提取每日特徵，再與 CNN 時序層交叉提取長短週期模式。核心 trick 在於「圖池化（Mean/Max/FC）降維後接 CNN」的混合拓撲，避免純 GNN 的過平滑與純 CNN 的橫截面信息丟失。這對日頻波段軸★的意義在於：用可解釋的相關性閾值替代黑盒注意力，提升特徵交互的穩定性。導讀未給量化結果。

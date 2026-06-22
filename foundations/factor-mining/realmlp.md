@@ -1,10 +1,18 @@
+---
+title: "RealMLP"
+description: "落點於「元學習搜索」與「端到端表徵」軸，解決表格數據中 NN 對 GBDT 的「超參數敏感與默認性能劣勢」prior gap。透過元訓練基準固化強默認參數，使 MLP 在免調參下逼近樹模型的時間-精度 Pareto 前沿。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=元学习搜索 alpha=端到端表征 autonomy=全自动黑盒 -->
-
-# RealMLP 解構（RealMLP）
 
 > **發布**：2024-12-05 · NeurIPS24
 > **QuantML 導讀**：[NIPS 24 | 改进MLP在表格数据表现](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488210&idx=1&sn=93c8b4dc5f3e9d83523c68020d4ce413&chksm=ce7e75ccf909fcdac25f2712eb57ab2f635c7060a98418abe16643362710f59425da3188ddef#rd)
 > **核心定位**：落點於「元學習搜索」與「端到端表徵」軸，解決表格數據中 NN 對 GBDT 的「超參數敏感與默認性能劣勢」prior gap。透過元訓練基準固化強默認參數，使 MLP 在免調參下逼近樹模型的時間-精度 Pareto 前沿。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `元学习搜索` | `端到端表征` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 提出 RealMLP 改進表格數據建模，結合 PBLD 嵌入、可訓練激活與元學習調參。② 核心 trick 為神經切線參數化（NTP）與週期性學習率調度，配合數據驅動初始化。③ 對「元學習搜索」軸★，將 NN 從「高方差調參遊戲」轉為「即插即用的強默認基線」。④ 導讀未給量化結果。

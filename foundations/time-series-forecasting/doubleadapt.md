@@ -1,10 +1,18 @@
+---
+title: "DoubleAdapt"
+description: "落點於「日頻波段 × 元學習搜索 × 端到端表徵」軸。解決增量學習中因市場 regime shift 導致的協變量與條件分佈漂移，透過「數據-模型」雙適配器協同，將非平穩流數據對齊至局部平穩分佈並提供穩健初始化，彌補靜態回測與線上實盤的 prior gap。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=元学习搜索 alpha=端到端表征 autonomy=全自动黑盒 -->
-
-# DoubleAdapt 解構（DoubleAdapt）
 
 > **發布**：2024-06-13 · KDD · arXiv [2306.09862](https://arxiv.org/abs/2306.09862)
 > **QuantML 導讀**：[KDD 23 | DoubleAdapt: 显著提升各类模型表现的元学习模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247484726&idx=1&sn=68a12011fce4197b96d2f67b92f7b5c2&chksm=ce7e6228f909eb3e3ca1504f4b29adc1986cdb1bd451f73049077b864be1999d3b3fdcb860ad#rd)
 > **核心定位**：落點於「日頻波段 × 元學習搜索 × 端到端表徵」軸。解決增量學習中因市場 regime shift 導致的協變量與條件分佈漂移（Concept Drift），透過「數據-模型」雙適配器協同，將非平穩流數據對齊至局部平穩分佈並提供穩健初始化，彌補靜態回測與線上實盤的 prior gap。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `元学习搜索` | `端到端表征` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 將股票趨勢預測建模為增量學習任務，引入數據適配器(DA)與模型適配器(MA)雙軌機制。② 核心 trick 是聯合優化：DA 將增量特徵/標籤映射至局部平穩空間，MA 以前序任務參數為先驗進行快速微調，元學習器僅用單個查詢集更新以聚焦當前 regime。③ 對「元學習搜索」軸★，它跳脫了傳統 MAML 的多任務採樣，改為線上單步測試誤差驅動，更貼合實盤流式更新場景。④ 關鍵實證：在 CSI 300/500 上 ICIR 與 IR 全面超越前 SOTA，且線上推理延遲未披露具體毫秒數但宣稱顯著低於全量重訓。

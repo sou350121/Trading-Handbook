@@ -1,10 +1,18 @@
+---
+title: "Street PE"
+description: "落點於「量價表格 × 中長週期 × 因子挖掘」。解了傳統價值因子因 GAAP 盈餘過渡性波動導致估值比率方差分解錯配、樣本外預測力崩潰的 prior gap。"
+---
 <!-- ontology-5axis data=量价表格 horizon=中长周期 paradigm=监督回归 alpha=因子挖掘 autonomy=人机协同可解释 -->
-
-# Street PE 解構（Street PE）
 
 > **發布**：2024-10-03 · （無 venue）
 > **QuantML 導讀**：[用收益对股票估值](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486921&idx=1&sn=0a1e5fcf7210691c8bcd65dbba037275&chksm=ce7e6ad7f909e3c1ba4192b227f6fac30ab714ff4e84bb10058f307fac2fdb14a361f286859#rd)
 > **核心定位**：落點於「量價表格 × 中長週期 × 因子挖掘」。解了傳統價值因子因 GAAP 盈餘過渡性波動（transitory volatility）導致估值比率方差分解錯配、樣本外預測力崩潰的 prior gap。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `中长周期` | `监督回归` | `因子挖掘` | `人机协同可解释` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 用剔除一次性項目的擬制性盈餘（Street earnings）替代 GAAP 收益構建估值比率。② 核心 trick 是透過分析師口徑過濾高過渡性波動，使 Street PE 的變動真正反映未來回報預期而非盈餘雜訊。③ 對「因子挖掘 × 中長週期」軸★，提供了一個具備強經濟直覺且抗週期雜訊的定價錨。④ 樣本外預測 R² 顯著為正，且 Street PE 上升 1 單位預測未來五年回報下降近 5%（未驗證）。

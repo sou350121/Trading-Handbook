@@ -1,10 +1,18 @@
+---
+title: "AlphaBench"
+description: "首個嵌入 Qlib 回測引擎的 LLM 因子挖掘系統性基準。解決了「純文本公式無法承載執行上下文」的評估斷層，將 LLM 從不可靠的零樣本裁判重構為 SFT 成對比較器與 EA 變異算子。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=生成式大模型 alpha=因子挖掘 autonomy=Agent自主演进 -->
-
-# AlphaBench 解構（AlphaBench）
 
 > **發布**：2026-05-25 · （無 venue）
 > **QuantML 導讀**：[哪款大模型更适合因子挖掘？](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493934&idx=1&sn=6dbb6e8846d1cf5186b7a52de93f783d&chksm=ce7d8e30f90a07262bcece160866ce33dbf9fde5066d2e6e2908bfc17e05b7299219ab1d3b00#rd)
 > **核心定位**：首個嵌入 Qlib 回測引擎的 LLM 因子挖掘系統性基準。解決了「純文本公式無法承載執行上下文」的評估斷層，將 LLM 從不可靠的零樣本裁判重構為 SFT 成對比較器與 EA 變異算子。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `生成式大模型` | `因子挖掘` | `Agent自主演进` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 建立 Text2Alpha/評估/搜索三維基準，驗證零樣本因子評分在數學上屬欠定問題。② 核心 trick 為放棄絕對打分，改用 SFT 微調成對比較器，並強制輸入 AST 結構與執行元數據。③ 對「Agent自主演进」軸★：將 LLM 降維為可控的符號變異/雜交生成器，回測引擎接管物理約束。④ 導讀給出關鍵實證：GPT-4.1-Mini 成對選擇準確率從 0.44 提升至 0.83，且跨市場 SP500 維持 0.64。

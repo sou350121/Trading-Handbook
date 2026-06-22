@@ -1,10 +1,18 @@
+---
+title: "Auto.gov"
+description: "將 DeFi 借貸協議的風險參數調整建模為 MDP，以 DQN 替代人工治理投票。解決了傳統鏈上治理滯後、靜態閾值無法抵禦閃電貸預言機攻擊的 Prior Gap，將被動防禦轉為動態參數閉環。"
+---
 <!-- ontology-5axis data=量价表格 horizon=跨周期 paradigm=强化学习 alpha=风险择时 autonomy=Agent自主演进 -->
-
-# Auto.gov 解構（Auto.gov）
 
 > **發布**：2025-02-17 · （無 venue）
 > **QuantML 導讀**：[Auto.gov：基于强化学习的去中心化金融（DeFi）治理框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489317&idx=1&sn=452e505de9cc3b12be1b561992ba7182&chksm=ce7e703bf909f92d917894b333cf4154dc63ff0ba6680990f6d69d01b614201eead0571fedfd#rd)
 > **核心定位**：將 DeFi 借貸協議的風險參數（抵押因子）調整建模為 MDP，以 DQN 替代人工治理投票。解決了傳統鏈上治理滯後、靜態閾值無法抵禦閃電貸預言機攻擊的 Prior Gap，將被動防禦轉為動態參數閉環。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `跨周期` | `强化学习` | `风险择时` | `Agent自主演进` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 用 DQN 動態調整 DeFi 借貸協議抵押因子，實現半自動化風險參數優化。② 核心 trick 是將動作幅度限制在 2.5% 防黑天鵝，並結合 Target Network + Prioritized Replay 穩定訓練。③ 對「Agent自主演进」軸而言，它展示了 RL 在參數閉環中如何替代靜態規則與人工投票。④ 導讀未給量化結果。

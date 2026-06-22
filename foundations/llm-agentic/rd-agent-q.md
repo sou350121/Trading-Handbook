@@ -1,10 +1,18 @@
+---
+title: "RD-Agent(Q)"
+description: "五軸落點於「生成式大模型 × Agent自主演进 × 因子挖掘」，解了量化研發中「因子與模型優化碎片化」及「LLM 生成信號缺乏因子邏輯基礎」的 prior gap。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=生成式大模型 alpha=因子挖掘 autonomy=Agent自主演进 -->
-
-# RD-Agent(Q) 解構（RD-Agent(Q)）
 
 > **發布**：2025-05-22 · （無 venue）
 > **QuantML 導讀**：[R&D-Agent-Quant](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490469&idx=1&sn=e4748ff2c1902ab9573e7e9a1addef57&chksm=ce7e7cbbf909f5ad3328d28c271cfed2f1c37fc58a8e4549f2b50085f364a566876bfcbca35f#rd)
 > **核心定位**：五軸落點於「生成式大模型 × Agent自主演进 × 因子挖掘」，解了量化研發中「因子與模型優化碎片化」及「LLM 生成信號缺乏因子邏輯基礎」的 prior gap。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `生成式大模型` | `因子挖掘` | `Agent自主演进` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 提出基於 LLM 的多智能體框架，將量化研發拆解為五模塊閉環，實現因子與模型的協同自動化迭代。② 核心 trick 為 Co-STEER 代碼生成智能體（DAG 依賴調度 + 知識庫檢索）與上下文湯普森採樣調度器（動態分配因子/模型優化權重）。③ 對「Agent自主演进」軸★，它將離散的代碼生成升級為帶反饋閉環的結構化搜索，避免 LLM 直接輸出交易信號的幻覺。④ 導讀給出聯合優化配置下 IC 0.0532、ARR 14.21%、IR 1.74，但未提供基線精確數值對照。

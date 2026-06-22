@@ -1,10 +1,18 @@
+---
+title: "xLSTM-Mixer"
+description: "落點於「監督回歸 × 端到端表征 × 全自動黑盒」軸，針對長序列多變量預測中 Transformer 的 $O$ 計算瓶頸與傳統 RNN 容量不足 prior gap，以線性基線+權重共享 sLSTM 堆疊重構特徵提取路徑。"
+---
 <!-- ontology-5axis data=量价表格 horizon=中长周期 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
-
-# xLSTM-Mixer 解構（xLSTM-Mixer）
 
 > **發布**：2024-10-26 · （無 venue）
 > **QuantML 導讀**：[xLSTM-Mixer: 混合多变量时间序列预测](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487252&idx=1&sn=68ca2419985077d125f21b31f8bdaab4&chksm=ce7e680af909e11cdff41e48b4015320f3c77fc069f29e08ddec07071aa637661bec3cb6a34c#rd)
 > **核心定位**：落點於「監督回歸 × 端到端表征 × 全自動黑盒」軸，針對長序列多變量預測中 Transformer 的 $O(T^2)$ 計算瓶頸與傳統 RNN 容量不足 prior gap，以線性基線+權重共享 sLSTM 堆疊重構特徵提取路徑。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `中长周期` | `监督回归` | `端到端表征` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 提出 xLSTM-Mixer，以 RevIN+NLinear 打底，堆疊 sLSTM 塊捕獲非線性依賴。② 核心 trick 在於跨變量權重共享、正反向多視圖混合正則化，徹底避開自注意力機制的平方複雜度。③ 對「端到端表征」軸★，它證明在長週期量價/宏觀數據上，線性+遞歸的混合架構能以更低參數量實現比 Transformer 更穩健的長期外推。④ 關鍵實證：在 56 個預測情境中取得 41 個 SOTA（未披露具體 IR/Sharpe，僅報告 MSE/MAE 領先）。

@@ -1,10 +1,18 @@
+---
+title: "AlphaGAT"
+description: "落點於「因子挖掘 → 強化學習組合」的自動化黑盒鏈路。解決傳統端到端 RL 在低信噪比原始量價數據上難以收斂、且無法動態適應分佈偏移的 prior gap，透過兩階段解耦將特徵提取與權重分配分離。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=强化学习 alpha=因子挖掘 autonomy=全自动黑盒 -->
-
-# AlphaGAT 解構（AlphaGAT）
 
 > **發布**：2025-10-11 · IJCAI 25
 > **QuantML 導讀**：[IJCAI 25 | AlphaGAT：结合Alpha 因子挖掘和图注意力网络的自适应投资组合框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491933&idx=1&sn=5545c677db397f6eba97d4f6f735dc06&chksm=ce7d8643f90a0f55ebf89aa99919ce95bfe37d8dcb504ec758605798208dc6d8dff5e4d09cf0#rd)
 > **核心定位**：落點於「因子挖掘 → 強化學習組合」的自動化黑盒鏈路。解決傳統端到端 RL 在低信噪比原始量價數據上難以收斂、且無法動態適應分佈偏移的 prior gap，透過兩階段解耦將特徵提取與權重分配分離。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `强化学习` | `因子挖掘` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** 提出兩階段 AlphaGAT 框架：Stage 1 以 CATimeMixer（多尺度 Conv1D + 跨資產注意力 + 協方差正則）挖掘低相關 Alpha 因子；Stage 2 以 PPO + GAT 將因子視為圖節點動態調權。對「因子挖掘」軸★，將傳統監督式因子生成與 RL 組合解耦，降低狀態空間雜訊並提升分佈偏移下的自適應性。導讀未給量化結果。

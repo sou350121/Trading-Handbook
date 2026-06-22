@@ -1,10 +1,18 @@
+---
+title: "HARLF"
+description: "多模態融合的中長週期HRL組合優化框架，解決扁平化DRL在跨資產配置時的可擴展性差與策略不穩定問題。"
+---
 <!-- ontology-5axis data=多模态 horizon=中长周期 paradigm=强化学习 alpha=组合执行优化 autonomy=全自动黑盒 -->
-
-# HARLF 解構（HARLF）
 
 > **發布**：2025-07-31 · （無 venue）
 > **QuantML 導讀**：[HARLF：分层强化学习如何融合数据与情感](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491189&idx=1&sn=19fdc880b5694771c2204e3efcd50162&chksm=ce7e796bf909f07d2dc781152e61af8e8eafc8a17f85514fa131ab416daf1ed103bc4cdaf61c#rd)
 > **核心定位**：多模態（量價+FinBERT情感）融合的中長週期（月度）HRL組合優化框架，解決扁平化DRL在跨資產配置時的可擴展性差與策略不穩定問題。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `多模态` | `中长周期` | `强化学习` | `组合执行优化` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 提出HARLF三層HRL架構，將FinBERT情感信號與傳統量價指標解耦處理後再動態聚合。② 核心trick是底層分離模態、中層元智能體動態加權、頂層超級智能體以前瞻性獎勵監督學習融合雙視角。③ 對「alpha=组合执行优化」軸★，將非結構化文本轉化為可追溯的月度權重調整信號。④ 導讀給出2018-2024測試期年化回報26.0%、夏普1.2。

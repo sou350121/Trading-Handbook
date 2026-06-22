@@ -1,10 +1,18 @@
+---
+title: "FSatten / SOatten"
+description: "落點於「端到端表征 × 監督回歸」軸，直擊傳統 Transformer 在多元時間序列預測中盲目依賴數據驅動隱空間的 Prior Gap。以確定性頻域/正交映射取代學習式投影，為量價表格的週期性與鄰近相似性提供可解釋的注意力先驗。"
+---
 <!-- ontology-5axis data=量价表格 horizon=跨周期 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
-
-# FSatten / SOatten 解構（FSatten / SOatten）
 
 > **發布**：2025-06-14 · AAAI 25
 > **QuantML 導讀**：[AAAI 25 | 重新审视多元时间序列预测中的注意力机制](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490720&idx=1&sn=9cf34d629bb9318be4cc40dbb78d83e2&chksm=ce7e7bbef909f2a8b3b591ee0d561f3f99d9529152140de31e3b9a2408dc8295ec1c9db25e38#rd)
 > **核心定位**：落點於「端到端表征 × 監督回歸」軸，直擊傳統 Transformer 在多元時間序列預測（MTSF）中盲目依賴數據驅動隱空間的 Prior Gap。以確定性頻域/正交映射取代學習式投影，為量價表格的週期性與鄰近相似性提供可解釋的注意力先驗。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `跨周期` | `监督回归` | `端到端表征` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 提出 FSatten（頻譜注意力）與 SOatten（縮放正交注意力），用 FFT 與可學習正交映射替換傳統 Q/K 線性投影。② 核心 Trick 是 MSS（多頭譜縮放）自適應放大關鍵頻率分量，並引入 HCC（頭耦合卷積）利用「鄰近相似性」約束注意力權重學習。③ 對「端到端表征」軸★ 的關鍵意義在於：將黑盒隱空間降維為具物理先驗的頻域/正交域，顯著降低條件數並提升滿秩率。④ 導讀未給 Sharpe/IR 等交易指標，僅披露在 ECL 數據集上 MSE 總體改善 9.0%。

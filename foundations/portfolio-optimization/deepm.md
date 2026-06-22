@@ -1,10 +1,18 @@
+---
+title: "DeePM"
+description: "落點於端到端表征與全自動黑盒軸，解決傳統兩階段宏觀配置中 MSE 損失與最終效用錯配、以及異步市場閉盤導致的前視偏差問題。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
-
-# DeePM 解構（DeePM）
 
 > **發布**：2026-01-12 · （無 venue）
 > **QuantML 導讀**：[Oxford-Man ｜ 端到端深度学习宏观量化交易框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492979&idx=1&sn=0750044bd65444f2fca58dcf237caeee&chksm=ce7d826df90a0b7b322e5c0de1cd731cbcded9d67301ea5c4ae3b61d82a7e342307141ad1025#rd)
 > **核心定位**：落點於端到端表征與全自動黑盒軸，解決傳統兩階段宏觀配置中 MSE 損失與最終效用錯配、以及異步市場閉盤導致的前視偏差（Look-ahead Bias）問題。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `监督回归` | `端到端表征` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 端到端學習宏觀資產配置，跳過獨立預測階段直接優化淨夏普。② 核心 trick 為 Directed Delay 強制因果過濾、Macro Graph Prior 正則化截面依賴、SoftMin 代理 EVaR 目標。③ 對端到端表征軸★，將經濟學第一性原理硬編碼進注意力機制，打破純數據驅動在低信噪比下的過擬合。④ 導讀給出 OOS 2010-2025 淨夏普 0.93，較 Momentum Transformer 基線提升 0.27。

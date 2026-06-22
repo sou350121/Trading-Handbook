@@ -1,10 +1,18 @@
+---
+title: "PokerSkill"
+description: "落點於「生成式大模型 × 多智能體博弈」的決策約束範式。解決 LLM 在隱含信息與高維狀態空間中的「決策綁定問題」，以確定性腳手架替代高昂的 CFR 求解器與黑盒 RL 訓練。"
+---
 <!-- ontology-5axis data=文本另类 horizon=高频日内 paradigm=生成式大模型 alpha=多智能体博弈 autonomy=人机协同可解释 -->
-
-# PokerSkill 解構（PokerSkill）
 
 > **發布**：2026-06-01 · （無 venue）
 > **QuantML 導讀**：[清华 x 港大 ｜ 给LLM套上脚手架，不用 Solver 也能打败德扑专家](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493971&idx=1&sn=06773e730b532eedbd4f5c06800c1382&chksm=ce7d8e4df90a075b7500af462ebdee472a331e69981194501df5b56df1a8af83819acc97cb05#rd)
 > **核心定位**：落點於「生成式大模型 × 多智能體博弈」的決策約束範式。解決 LLM 在隱含信息與高維狀態空間中的「決策綁定問題」（Decision-Binding Problem），以確定性腳手架替代高昂的 CFR 求解器與黑盒 RL 訓練。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `文本另类` | `高频日内` | `生成式大模型` | `多智能体博弈` | `人机协同可解释` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** 提出 PokerSkill 框架，用確定性規則與預算系統約束 LLM，無需訓練或求解器即可在無限注德撲中擊敗專家級 AI。核心 trick 將複雜牌局狀態轉化為確定性標籤，結合專家規則檢索與攻防預算剪枝，限制 LLM 動作空間以解決決策綁定問題。這對「生成式大模型」軸★ 意味著：LLM 的語義推理能力可透過硬約束腳手架轉化為高頻博弈策略，無需代價高昂的對齊或求解。導讀給出 Claude Opus 4.6 虧損從 204 mbb/hand 縮至 80 mbb/hand。

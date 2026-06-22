@@ -1,10 +1,18 @@
+---
+title: "MetaTrader"
+description: "落點於「量價表格×日頻波段」軸，解離線RL在金融非平穩環境下的分佈偏移與價值高估Prior Gap。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=强化学习 alpha=组合执行优化 autonomy=全自动黑盒 -->
-
-# MetaTrader 解構（MetaTrader）
 
 > **發布**：2025-06-30 · （無 venue）
 > **QuantML 導讀**：[MetaTrader：基于双层强化学习的股票交易策略](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490889&idx=1&sn=3b197d014406e34c17daefad31117ded&chksm=ce7e7a57f909f341f1665775bb8947a3f7a7284510a91861d3ceee1999218b594f1ce250a64f#rd)
 > **核心定位**：落點於「量價表格×日頻波段」軸，解離線RL在金融非平穩環境下的分佈偏移與價值高估Prior Gap。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `强化学习` | `组合执行优化` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** 提出MetaTrader雙層強化學習框架，通過時間序列變換構建OOD子集進行雙層元學習優化，並基於數據多樣性集成保守TD目標抑制價值高估。該設計直擊日頻波段軸上RL策略的過擬合與泛化失效痛點。在CSI-300在線自適應設置下，累計回報較StockFormer-Finetune提升26%（1.46增至1.84）。

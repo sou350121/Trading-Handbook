@@ -1,10 +1,18 @@
+---
+title: "Zookeeper"
+description: "落點於「量价表格 × 中长周期 × 监督回归 × 因子挖掘 × 人机协同可解释」五軸。解了 CTA 截面極窄與低信噪比下，傳統單因子理論各自為戰且非線性 ML 易過擬合的 prior gap。"
+---
 <!-- ontology-5axis data=量价表格 horizon=中长周期 paradigm=监督回归 alpha=因子挖掘 autonomy=人机协同可解释 -->
-
-# Zookeeper 解構（Zookeeper）
 
 > **發布**：2026-05-20 · （無 venue）
 > **QuantML 導讀**：[Zookeeper：CTA 统一因子框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493897&idx=1&sn=0b2fc47a22541864e2f0d49f974d0c94&chksm=ce7d8e17f90a0701f1a6c466a7a2dfcecf185bc3286daccb0efc840f75fdcee92e2369df811f#rd)
 > **核心定位**：落點於「量价表格 × 中长周期 × 监督回归 × 因子挖掘 × 人机协同可解释」五軸。解了 CTA 截面極窄與低信噪比下，傳統單因子理論各自為戰且非線性 ML 易過擬合的 prior gap。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `中长周期` | `监督回归` | `因子挖掘` | `人机协同可解释` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 用等權線性集成（L-En）統一三大商品風險溢價理論，構建抗過擬合的 Zookeeper 因子。② 核心 trick 是棄用非線性 ML，改用 120 個月滾動窗口防穿越，並結合 SHAP 實現理論歸因。③ 對「因子挖掘 × 人機協作」軸★，將黑盒預測轉譯為清晰經濟學解釋，解決實盤因子維護冗餘問題。④ 導讀給出樣本外（2005-2022）年化收益率 5.8%，Sharpe 比率 0.64。

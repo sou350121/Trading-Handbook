@@ -1,10 +1,18 @@
+---
+title: "FinSearchComp"
+description: "落點於「文本另类 × Agent自主演进」軸，填補了開放領域金融代理缺乏端到端時效性搜索與多步推理評估基準的 prior gap。"
+---
 <!-- ontology-5axis data=文本另类 horizon=跨周期 paradigm=生成式大模型 alpha=因子挖掘 autonomy=Agent自主演进 -->
-
-# FinSearchComp 解構（FinSearchComp）
 
 > **發布**：2025-09-21 · （無 venue）
 > **QuantML 導讀**：[字节出品，马斯克转发，AI离顶级金融分析师还有多远？](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491738&idx=1&sn=2c84ce2e84377d8c50d28a7a00393bf8&chksm=ce7d8784f90a0e928c26a688aba08dddb1621a8621000c06e24a8a4d8b9e5bc15291c1da81f5#rd)
 > **核心定位**：落點於「文本另类 × Agent自主演进」軸，填補了開放領域金融代理缺乏端到端時效性搜索與多步推理評估基準的 prior gap。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `文本另类` | `跨周期` | `生成式大模型` | `因子挖掘` | `Agent自主演进` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ①首個完全開源的金融搜索推理基準，涵蓋635題三檔任務，系統評測21款LLM代理的時效檢索與多步推理能力。②核心trick在於摒棄預置上下文，構建需調用搜索/API/SQL的端到端代理任務，並引入70位專家標注與多階段質檢。③這對「Agent自主演进」軸的意義在於，將評估從靜態RAG拉升至動態工具調度與證據調和，直接對齊高頻/事件驅動分析的工作流。④導讀給出Grok 4 (web)在全球子集得分68.9，逼近人類專家75.0基準。

@@ -1,10 +1,18 @@
+---
+title: "AlphaQCM"
+description: "落點於「強化學習 × 因子挖掘」軸，將公式化 Alpha 搜尋重構為序列決策 MDP，解了傳統 GP 指數爆炸與 AlphaGen 在非平穩/稀疏獎勵環境下的探索失效 gap。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=强化学习 alpha=因子挖掘 autonomy=人机协同可解释 -->
-
-# AlphaQCM 解構（AlphaQCM）
 
 > **發布**：2025-06-18 · ICML25
 > **QuantML 導讀**：[ICML 25 | 基于分布强化学习的Alpha因子挖掘](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490762&idx=1&sn=e6bd19c7f6fede113ab6f677629b5449&chksm=ce7e7bd4f909f2c275654c6c84008b687585ddddddc51047f4802217a8191326f340f8ea0509#rd)
 > **核心定位**：落點於「強化學習 × 因子挖掘」軸，將公式化 Alpha 搜尋重構為序列決策 MDP，解了傳統 GP 指數爆炸與 AlphaGen 在非平穩/稀疏獎勵環境下的探索失效 gap。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `强化学习` | `因子挖掘` | `人机协同可解释` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 將協同公式化 Alpha 挖掘建模為 MDP 序列決策問題。② 核心 trick 為 QCM（Quantiled Conditional Moment），從有偏分位數估計中提取無偏方差作為探索獎勵。③ 對「因子挖掘」軸★，以無偏不確定性驅動探索，破解非平穩與獎勵稀疏雙重瓶頸。④ 導讀給出全市場測試集 IC 達 9.16%，較 AlphaGen 的 6.04% 領先 3.12pp。

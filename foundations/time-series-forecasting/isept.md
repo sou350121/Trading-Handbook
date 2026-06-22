@@ -1,10 +1,18 @@
+---
+title: "ISEPT"
+description: "將傳統割裂的「資產對選擇」與「交易執行」統一為端到端監督回歸框架；透過 CAE 提取 K 線圖視覺特徵並預測下月 Sharpe Ratio，以實盤績效閉環抵抗市場漂移，解決了統計套利在 regime shift 下的靜態過擬合與執行反饋斷裂問題。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
-
-# ISEPT 解構（ISEPT）
 
 > **發布**：2025-11-24 · （無 venue）
 > **QuantML 導讀**：[基于图像的配对交易框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492463&idx=1&sn=eff946db3dd23827d1a41b6a7ded0c97&chksm=ce7d8471f90a0d67f7218e814e1c77ae8c34c4f9046a89cdc52f470fb9390427497a2e0b38e0#rd)
 > **核心定位**：將傳統割裂的「資產對選擇」與「交易執行」統一為端到端監督回歸框架；透過 CAE 提取 K 線圖視覺特徵並預測下月 Sharpe Ratio，以實盤績效閉環抵抗市場漂移，解決了統計套利在 regime shift 下的靜態過擬合與執行反饋斷裂問題。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `监督回归` | `端到端表征` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 將 OHLC 渲染為 RGB K 線圖（解析度未披露），經 CAE 編碼後由 MLP 直接回歸預測下月 Sharpe Ratio。② 核心 trick 是建立「交易績效→Sharpe 標籤→模型再訓練」的閉環反饋，強制模型學習真實盈利模式而非歷史價格相似性。③ 這對「端到端表征」與「全自动黑盒」軸具指標意義，將 CV 視覺先驗與量化風險調整目標直接綁定。④ 導讀給出 2004-2024 全樣本 ISEPT+GATEV 年化 ROI 18.97%、Sharpe 0.6837，Calmar 3.1572。

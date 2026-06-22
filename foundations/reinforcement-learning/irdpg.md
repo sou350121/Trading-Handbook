@@ -1,10 +1,18 @@
+---
+title: "iRDPG"
+description: "將交易重構為 POMDP，以 RDPG 為引擎、模仿學習為導航，破解高摩擦環境下 RL 的探索-利用困境。落點於 Agent 自主演進軸，補齊了傳統 TA 泛化差與純 RL 實盤損耗高的 prior gap。"
+---
 <!-- ontology-5axis data=量价表格 horizon=高频日内 paradigm=强化学习 alpha=端到端表征 autonomy=Agent自主演进 -->
-
-# iRDPG 解構（iRDPG）
 
 > **發布**：2025-06-23 · （無 venue）
 > **QuantML 導讀**：[自适应量化交易：一种模仿深度强化学习方法](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490817&idx=1&sn=9fc46d08b2b3e2a45a4ae7980a3be2aa&chksm=ce7e7a1ff909f30993b56163a0be219dac2bdef34bcf5ea24df0ac33db4bcc4895ad4d0e2716#rd)
 > **核心定位**：將交易重構為 POMDP，以 RDPG 為引擎、模仿學習為導航，破解高摩擦環境下 RL 的探索-利用困境。落點於 Agent 自主演進軸，補齊了傳統 TA 泛化差與純 RL 實盤損耗高的 prior gap。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `高频日内` | `强化学习` | `端到端表征` | `Agent自主演进` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 將序貫交易建模為 POMDP，結合 RDPG 與雙軌模仿學習（示範回放+行為克隆）。② 核心 trick 為 Q-Filter 控制 BC Loss 激活條件，避免盲目模仿理想化目標。③ 對 Agent 自主演進軸★：把 RL 從「無頭蒼蠅式隨機探索」轉為「站在經典策略肩膀上的定向進化」。④ 導讀未給量化結果。

@@ -1,10 +1,18 @@
+---
+title: "AlphaForge"
+description: "落點於「元學習搜索×因子挖掘」軸，以 Generator-Predictor 代理優化迴路替代傳統符號回歸的低效變異，並透過滾動 IC/ICIR 動態線性加權，解了「單因子過擬合」與「靜態權重無法適應 Regime 切換」的 Prior Gap。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=元学习搜索 alpha=因子挖掘 autonomy=人机协同可解释 -->
-
-# AlphaForge 解構（AlphaForge）
 
 > **發布**：2024-08-28 · （無 venue）
 > **QuantML 導讀**：[AlphaForge：挖掘和动态组合公式化Alpha因子框架（附有实盘验证结果）](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486006&idx=1&sn=3474fe8c1f4c4b915746910f7f7a3753&chksm=ce7e6d28f909e43e222bc6066cdf1b2824b59c23b45c10a77803bee235d92c41d57b9b8c2a23#rd)
 > **核心定位**：落點於「元學習搜索×因子挖掘」軸，以 Generator-Predictor 代理優化迴路替代傳統符號回歸的低效變異，並透過滾動 IC/ICIR 動態線性加權，解了「單因子過擬合」與「靜態權重無法適應 Regime 切換」的 Prior Gap。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `元学习搜索` | `因子挖掘` | `人机协同可解释` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 兩階段架構：生成器探索公式空間，預測器代理評估適應度。② 核心 trick：以預測器為 Proxy Optimizer 配合多樣性損失，避開傳統 GP 的離散變異瓶頸；交易期按滾動 IC/ICIR 動態線性加權成 Mega-Alpha。③ 對「元學習搜索×因子挖掘」軸★ 提供可解釋的自動化因子發現路徑。④ 關鍵實證：在 A 股 CSI300/500 實盤驗證超額收益，因子池大小 10 時表現最佳（具體數值未披露）。

@@ -1,10 +1,18 @@
+---
+title: "FINCON"
+description: "落點於「多智能体博弈 × Agent自主演进」軸，解了單智能體 LLM 在金融決策中的認知過載與長期風險失控 gap，透過經理-分析師分層與雙層風控實現自動化組合管理。"
+---
 <!-- ontology-5axis data=多模态 horizon=日频波段 paradigm=生成式大模型 alpha=多智能体博弈 autonomy=Agent自主演进 -->
-
-# FINCON 解構（FINCON）
 
 > **發布**：2024-12-13 · NeurIPS 2024
 > **QuantML 導讀**：[NIPS 24 | FinCon: 基于LLM的多智能体交易及组合管理框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488353&idx=1&sn=f6684d1c9788e0f9dcd09b781cbd619a&chksm=ce7e747ff909fd69d6538f30bb681b3e0dba85700479802978c2c883bc93346cfe58bdf6f912#rd)
 > **核心定位**：落點於「多智能体博弈 × Agent自主演进」軸，解了單智能體 LLM 在金融決策中的認知過載與長期風險失控 gap，透過經理-分析師分層與雙層風控（劇內 CVaR / 劇外 CVRF）實現自動化組合管理。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `多模态` | `日频波段` | `生成式大模型` | `多智能体博弈` | `Agent自主演进` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 提出基於 LLM 的多智能體框架，以經理-分析師層級架構處理單股與組合決策。② 核心 trick 為劇內 CVaR 觸發避險與劇外 CVRF 信念更新，解耦資訊提煉與風險控制。③ 對「多智能体博弈」軸★，將人類交易員組織結構映射為 AI Agent 協作，降低單體上下文壓力。④ 導讀未給量化結果，僅披露消融實驗中 CVaR 開關在 GOOG 牛市 CR 從 -1.461% 提升至 25.077%。

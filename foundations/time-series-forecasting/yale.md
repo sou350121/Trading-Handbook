@@ -1,10 +1,18 @@
+---
+title: "Yale | 非线性时间序列动量"
+description: "落點於量價表格與中長週期監督回歸，以風險擇時為核心，透過人機協作可解釋的S型加權機制，解決傳統線性TSMOM在極端行情下風險暴露過高與Sharpe受限的Prior Gap。"
+---
 <!-- ontology-5axis data=量价表格 horizon=中长周期 paradigm=监督回归 alpha=风险择时 autonomy=人机协同可解释 -->
-
-# Yale | 非线性时间序列动量 解構（Yale | 非线性时间序列动量）
 
 > **發布**：2025-12-22 · （無 venue）
 > **QuantML 導讀**：[Yale | 非线性时间序列动量](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492760&idx=1&sn=b7410ec02ca0cfb93f8d12de61301bf5&chksm=ce7d8386f90a0a908cb22a43896ed0a23e79df67d447e61b8f53f941f24453d4b1f6c1379e64#rd)
 > **核心定位**：落點於量價表格與中長週期監督回歸，以風險擇時為核心，透過人機協作可解釋的S型加權機制，解決傳統線性TSMOM在極端行情下風險暴露過高與Sharpe受限的Prior Gap。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `中长周期` | `监督回归` | `风险择时` | `人机协同可解释` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 突破線性動量假設，以ANN學習S型映射函數；② 核心trick是將目標函數設為最大化Sharpe而非MSE，使極端信號自動回撤；③ 對「風險擇時」軸★，因其在市場低迷期提供顯著凸性對沖，平衡收益預測與方差控制；④ 12個月回看週期下實證NLTSMOM Sharpe達0.84（日度），顯著優於線性模型。

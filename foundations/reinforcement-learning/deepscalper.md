@@ -1,10 +1,18 @@
+---
+title: "DeepScalper"
+description: "五軸落點於「高頻日內 × 強化學習 × 端到端黑盒」。解了傳統日內 RL 代理在「高維細粒度動作空間」與「多模態市場表徵」上的 prior gap，繞過價格預測瓶頸，直接以 RL 閉環優化執行利潤。"
+---
 <!-- ontology-5axis data=多模态 horizon=高频日内 paradigm=强化学习 alpha=端到端表征 autonomy=全自动黑盒 -->
-
-# DeepScalper 解構（DeepScalper）
 
 > **發布**：2025-01-26 · （無 venue）
 > **QuantML 導讀**：[DeepScalper：深度强化学习捕捉日内交易的短暂机会](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489018&idx=1&sn=1ea12b6de5e28e2700b4947081a32b7b&chksm=ce7e72e4f909fbf2e246da142b67e64778c0397d531646856fd60860c4f279b71c8ddb7599da#rd)
 > **核心定位**：五軸落點於「高頻日內 × 強化學習 × 端到端黑盒」。解了傳統日內 RL 代理在「高維細粒度動作空間」與「多模態市場表徵」上的 prior gap，繞過價格預測瓶頸，直接以 RL 閉環優化執行利潤。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `多模态` | `高频日内` | `强化学习` | `端到端表征` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** 提出融合分支對抗Q網絡(BDQ)、Hindsight獎勵與多模態嵌入的日內RL框架。核心trick是透過Hindsight獎勵注入日內長期視野，並用波動率預測輔助任務穩定訓練。對RL軸★意義在於將微觀LOB與宏觀指標直接映射為交易動作，消除預測-執行gap。關鍵實證：在股指期貨上總回報(TR)與夏普比率(SR)較第二名分別高出30.80%與33.33%。

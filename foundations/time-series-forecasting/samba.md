@@ -1,10 +1,18 @@
+---
+title: "SAMBA"
+description: "落點於「日频波段 × 監督回歸 × 端到端表徵」軸，以雙向 Mamba 線性複雜度替代 Transformer 二次瓶頸，並透過自適應圖卷積動態建模特徵交互，解決長序列依賴與跨股票關聯算力的 prior gap。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
-
-# SAMBA 解構（SAMBA）
 
 > **發布**：2025-02-14 · （無 venue）
 > **QuantML 導讀**：[SAMBA：基于Mamba架构与图神经网络的股票价格预测模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489266&idx=1&sn=321d2a1506b2e8e1c867d95c7cf1caf4&chksm=ce7e71ecf909f8fa2932c9ed166e98b841595850fb6bf3256b6e29b953acf4029c6362b0c2e3#rd)
 > **核心定位**：落點於「日频波段 × 監督回歸 × 端到端表徵」軸，以雙向 Mamba 線性複雜度替代 Transformer 二次瓶頸，並透過自適應圖卷積動態建模特徵交互，解決長序列依賴與跨股票關聯算力的 prior gap。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `监督回归` | `端到端表征` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 以雙向 Mamba 塊處理長序列時間依賴，結合自適應圖卷積塊建模每日特徵交互，輸出 1 日收益率回歸預測。② 核心 trick 為高斯核動態建圖 + 矩陣分解降參 + 雙向掃描過濾無關數據。③ 對「全自動黑盒」軸★，將計算複雜度壓至線性級別，使長窗口日頻預測具備實盤推理可行性。④ 導讀未給量化結果。

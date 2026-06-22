@@ -1,10 +1,18 @@
+---
+title: "DeepAnalyze"
+description: "五軸落點於「量價表格 × 跨周期 × 生成式大模型 × 因子挖掘 × Agent自主演进」。解了 LLM 處理長鏈路結構化數據時易於「邏輯斷層/卡殼」的 prior gap，將數據科學流程從靜態 Prompt 堆疊轉為自主編排閉環。"
+---
 <!-- ontology-5axis data=量价表格 horizon=跨周期 paradigm=生成式大模型 alpha=因子挖掘 autonomy=Agent自主演进 -->
-
-# DeepAnalyze 解構（DeepAnalyze）
 
 > **發布**：2025-12-18 · （無 venue）
 > **QuantML 導讀**：[人大 x 清华 | DeepAnalyze：如何打造数据分析的“Agentic AI”？](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492708&idx=1&sn=0e0779d59cb678a7f04e26a39b6c4955&chksm=ce7d837af90a0a6cb65250264b8148b6b984a5f843c363cce4e79302ea3aeb5e1d3c68ab62d7#rd)
 > **核心定位**：五軸落點於「量價表格 × 跨周期 × 生成式大模型 × 因子挖掘 × Agent自主演进」。解了 LLM 處理長鏈路結構化數據時易於「邏輯斷層/卡殼」的 prior gap，將數據科學流程從靜態 Prompt 堆疊轉為自主編排閉環。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `跨周期` | `生成式大模型` | `因子挖掘` | `Agent自主演进` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 提出 8B 參數 Agentic LLM，實現全自動數據科學分析與報告生成。② 核心 trick 在於設計 5 種專用 Action Tokens 模擬人類分析師閉環，結合關鍵詞引導 CoT 微調與 GRPO 強化學習。③ 這對「Agent自主演进」軸具指標意義，因它證明小模型可透過專用工具鏈與環境反饋取代巨型模型的通用推理。④ 關鍵實證：DataSciBench 綜合得分 61.11%。

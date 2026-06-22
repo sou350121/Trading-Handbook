@@ -1,10 +1,18 @@
+---
+title: "RWKV-TS"
+description: "將線性RNN遷移至時間序列，以O複雜度與分塊技術切掉Transformer的二次方算力瓶頸，解決長序列依賴捕捉與推理延遲的Prior Gap。"
+---
 <!-- ontology-5axis data=量价表格 horizon=跨周期 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
-
-# RWKV-TS 解構（RWKV-TS）
 
 > **發布**：2024-08-11 · （無 venue）
 > **QuantML 導讀**：[RWKV-TS: 超越传统RNN的时序模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485732&idx=1&sn=5e362c713b852da5d597e0acb9e8c745&chksm=ce7e6e3af909e72c557fc9eb6aaf0f222329b727f1d3c28c2ebaf8f75b7fd17719dce26c2bae#rd)
 > **核心定位**：將線性RNN（RWKV）遷移至時間序列，以O(L)複雜度與分塊技術切掉Transformer的二次方算力瓶頸，解決長序列依賴捕捉與推理延遲的Prior Gap。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `跨周期` | `监督回归` | `端到端表征` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 將RWKV線性RNN架構引入時間序列預測/分類/檢測任務。② 核心Trick為實例歸一化+分塊（Patching）+可訓練WKV向量替代自注意力。③ 對「跨周期」與「自動黑盒」軸★，以O(L)複雜度實現並行計算，大幅壓降延遲與內存。④ 導讀未給量化結果。

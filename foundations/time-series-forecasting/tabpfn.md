@@ -1,10 +1,18 @@
+---
+title: "TabPFN"
+description: "落點於量價表格與跨周期監督回歸，解決了 TabPFN-TS 過度依賴外部時間戳日曆特徵而無法捕獲數據內在複雜/非標準週期的 Prior Gap。"
+---
 <!-- ontology-5axis data=量价表格 horizon=跨周期 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
-
-# TabPFN 解構（TabPFN）
 
 > **發布**：2025-06-22 · （無 venue）
 > **QuantML 導讀**：[周期性数据赋能TabPFN时间序列预测](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490806&idx=1&sn=db9572c81261c17bde2b4de1bd03eca7&chksm=ce7e7be8f909f2fed72170dadf31821122a6d06b2932ad5f27da9f3096ef0bb277f782e563b4#rd)
 > **核心定位**：落點於量價表格與跨周期監督回歸，解決了 TabPFN-TS 過度依賴外部時間戳日曆特徵而無法捕獲數據內在複雜/非標準週期的 Prior Gap。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `跨周期` | `监督回归` | `端到端表征` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 將時間序列預測轉化為表格回歸，透過 FFT 提取主導週期並按週期間隔回溯構建特徵矩陣，實現零樣本預測。② 核心 Trick 是徹底摒棄外部日曆特徵，改以數據內在頻譜週期驅動特徵工程。③ 這對「端到端表徵」軸★ 意味著模型不再依賴人工時間編碼，直接從頻域對齊歷史分佈，提升泛化邊界。④ 導讀未給量化結果，僅定性指出多數情境下 MAE 優於 TabPFN-TS。

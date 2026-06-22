@@ -1,10 +1,18 @@
+---
+title: "PPTAgent"
+description: "落點於「多模態解析 + Agent自主演進」軸，解決傳統端到端生成模型在複雜版面控制與樣式漂移上的 prior gap，將不可控的文本擴散轉為確定性的程式化編輯迴路。"
+---
 <!-- ontology-5axis data=多模态 horizon=跨周期 paradigm=生成式大模型 alpha=端到端表征 autonomy=Agent自主演进 -->
-
-# PPTAgent 解構（PPTAgent）
 
 > **發布**：2025-01-13 · （無 venue）
 > **QuantML 導讀**：[打工人救星，中科院推出PPTAgent框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488795&idx=1&sn=dbc480b1f12428dc3b37e915b2222b4b&chksm=ce7e7205f909fb13f94b136efd578e4e580b0eec61ffd3b3e81cc185b1dc5582aa9024deabf8#rd)
 > **核心定位**：落點於「多模態解析 + Agent自主演進」軸，解決傳統端到端生成模型在複雜版面控制與樣式漂移上的 prior gap，將不可控的文本擴散轉為確定性的程式化編輯迴路。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `多模态` | `跨周期` | `生成式大模型` | `端到端表征` | `Agent自主演进` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 以「分析-生成」兩階段編輯範式取代端到端生成，專為演示文稿自動化設計。② 核心 trick 為將 PPT 轉 HTML 供 LLM 解析，並透過 5 個專用 API 與 REPL 環境實現迭代編輯與即時自我修正。③ 此架構對 Agent 自主演進軸具指標意義：將黑箱採樣轉為可追蹤的程式執行流，大幅降低多模態輸出的結構性幻覺。④ 導讀未給量化結果，僅提及 Qwen2.5 性能可與 GPT-4o 相媲美。

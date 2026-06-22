@@ -1,10 +1,18 @@
+---
+title: "AlphaEval"
+description: "將Alpha評估從「序列化回測模擬」解耦為「並行信號診斷」，補齊傳統IC篩選在穩定性、魯棒性與邏輯自洽上的Pareto缺口。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=元学习搜索 alpha=因子挖掘 autonomy=人机协同可解释 -->
-
-# AlphaEval 解構（AlphaEval）
 
 > **發布**：2025-08-21 · （無 venue）
 > **QuantML 導讀**：[北京大学 × 正仁量化 | AlphaEval：多维度、高效Alpha因子挖掘评价体系](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491434&idx=1&sn=1c69580b04b51aedc2db1532d53a7401&chksm=ce7e7874f909f162065c11f6caa7997d5ba6390d7769e03e1a191f8e20b72afb15e18c2fa6d9#rd)
 > **核心定位**：將Alpha評估從「序列化回測模擬」解耦為「並行信號診斷」，補齊傳統IC篩選在穩定性、魯棒性與邏輯自洽上的Pareto缺口。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `元学习搜索` | `因子挖掘` | `人机协同可解释` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ①提出免回測的模型級Alpha評估框架，將單點預測指標升級為五維集合診斷 ②核心trick是用相對排序熵(RRE)、擾動保真度(PFS)與LLM邏輯評分替代序列化回測，實現全指標並行計算 ③對「因子挖掘」與「人機協作可解釋」軸★，提供可解釋的組合預篩機制 ④導讀指出評估效率提升25%，但實盤收益/回撤等量化結果未披露。

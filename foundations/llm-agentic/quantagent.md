@@ -1,10 +1,18 @@
+---
+title: "QuantAgent"
+description: "落點於「生成式大模型 × Agent自主演进 × 因子挖掘」軸，解決傳統量化中領域知識庫構建成本高、靜態RAG/微調無法隨市場微調的 prior gap。透過雙層閉環將因子生成轉化為序貫決策問題，以隱式貝葉斯推斷與悲觀離線RL實現知識庫自主演進。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=生成式大模型 alpha=因子挖掘 autonomy=Agent自主演进 -->
-
-# QuantAgent 解構（QuantAgent）
 
 > **發布**：2025-01-02 · （無 venue）
 > **QuantML 導讀**：[QuantAgent：通过自我完善LLM寻找交易圣杯](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488639&idx=1&sn=7d6dabd0bf6bee6ad93bce61a3c2f39f&chksm=ce7e7361f909fa77ce588612041336f2cfc032687ca94f07da33048b8d6b61b69b5e6b4a820f#rd)
 > **核心定位**：落點於「生成式大模型 × Agent自主演进 × 因子挖掘」軸，解決傳統量化中領域知識庫（KB）構建成本高、靜態RAG/微調無法隨市場微調的 prior gap。透過雙層閉環將因子生成轉化為序貫決策問題，以隱式貝葉斯推斷與悲觀離線RL實現知識庫自主演進。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `生成式大模型` | `因子挖掘` | `Agent自主演进` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 提出 QuantAgent 雙層循環框架，以 LLM 自主迭代與實盤反饋自我完善，實現金融 Alpha 信號挖掘。② 核心 trick 為「內層模擬推理（Writer/Judge/KB）+ 外層實盤反饋（環境評分 → KB 更新）」閉環，結合隱式貝葉斯推斷與悲觀離線 RL 理論。③ 對 Autonomy 軸的關鍵突破：將因子庫從靜態檢索轉為動態收斂的離線數據集，降低人工特徵工程依賴。④ 導讀未給量化結果（僅提及圖表顯示 IC 與勝率隨迭代提升，無具體數值）。

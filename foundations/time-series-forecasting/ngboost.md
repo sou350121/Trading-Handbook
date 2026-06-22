@@ -1,10 +1,18 @@
+---
+title: "NGBoost"
+description: "落點於「監督回歸」與「端到端表征」軸。解決傳統 GBM 僅輸出點預測或強加同方差假設的 prior gap，將提升樹擴展至條件概率分佈的聯合估計，提供模塊化、可微的不確定性量化層。"
+---
 <!-- ontology-5axis data=量价表格 horizon=跨周期 paradigm=监督回归 alpha=端到端表征 autonomy=人机协同可解释 -->
-
-# NGBoost 解構（NGBoost）
 
 > **發布**：2025-06-11 · ICML19 · arXiv [1910.03225](https://arxiv.org/abs/1910.03225)
 > **QuantML 導讀**：[Stanford |  NGBoost：用于概率预测的自然梯度提升算法](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490695&idx=1&sn=a13771df190b2b2bfc9db6a5ebdda187&chksm=ce7e7b99f909f28f3c14811d1cc1878d59f82e41b66bcdb5c15529f5ef28ec49e545aadb1aab#rd)
 > **核心定位**：落點於「監督回歸」與「端到端表征」軸。解決傳統 GBM 僅輸出點預測或強加同方差假設的 prior gap，將提升樹擴展至條件概率分佈的聯合估計，提供模塊化、可微的不確定性量化層。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `跨周期` | `监督回归` | `端到端表征` | `人机协同可解释` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ①將傳統梯度提升機從點預測擴展至多參數概率分佈預測。②核心 trick 是引入自然梯度替代普通梯度，解決分佈參數化不變性問題，並結合任意基學習器與評分規則（如 NLL/CRPS）。③對「監督回歸」軸★：提供無需 MCMC 的條件分佈估計，直接輸出可解釋的預測區間與異方差性。④導讀未給量化結果。

@@ -1,10 +1,18 @@
+---
+title: "Regime-Switching Pricing Kernel"
+description: "將資產定價的誤差源從狀態條件風險溢價轉移至機制轉換概率，解構了傳統因子模型在群集回撤期失效的結構性盲區。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=因果结构 alpha=风险择时 autonomy=人机协同可解释 -->
-
-# Regime-Switching Pricing Kernel 解構（Regime-Switching Pricing Kernel）
 
 > **發布**：2026-01-29 · （無 venue）
 > **QuantML 導讀**：[非μ之错，P之罪 ：Beta 异象背后的机制转换定价逻辑](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493116&idx=1&sn=5f68e985c6320b8ac1a8c55af6b2f6c7&chksm=ce7d82e2f90a0bf4c67338107ecd4d7826a32c248d90b1bbeb274864e26e9e5a27f6f5939546#rd)
 > **核心定位**：將資產定價的誤差源從狀態條件風險溢價（μ）轉移至機制轉換概率（P），解構了傳統因子模型在群集回撤期失效的結構性盲區。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `因果结构` | `风险择时` | `人机协同可解释` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 將定價核錯配錨定於轉移矩陣而非狀態內矩，解釋 Beta 異象與群集回撤。② 核心 trick 是將滾動 Beta 拆解為相關性與相對波動率分量，識別三種機制並對經驗轉移矩陣進行定向擾動。③ 對「風險擇時」軸提供可解釋的轉換概率對沖路徑，將 Alpha 從靜態暴露轉向動態轉換定價。④ 導讀未給量化結果。

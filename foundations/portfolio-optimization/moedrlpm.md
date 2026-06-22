@@ -1,10 +1,18 @@
+---
+title: "MoEDRLPM"
+description: "落點於「量價表格 × 日頻波段 × 強化學習」軸，解了傳統 DRL 組合優化中「忽略股間時空相關性」與「單一策略無法適應動態市場」的 prior gap。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=强化学习 alpha=组合执行优化 autonomy=全自动黑盒 -->
-
-# MoEDRLPM 解構（MoEDRLPM）
 
 > **發布**：2025-09-26 · （無 venue）
 > **QuantML 導讀**：[基于混合专家的深度强化学习端到端投资组合优化](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491804&idx=1&sn=21ddf3dc0c3cb89554c8b1361abe9b26&chksm=ce7d87c2f90a0ed48268e75e9b9ad7bfe1ae34c609d2da265ad193e72d58ff8a0f97250d372e#rd)
 > **核心定位**：落點於「量價表格 × 日頻波段 × 強化學習」軸，解了傳統 DRL 組合優化中「忽略股間時空相關性」與「單一策略無法適應動態市場」的 prior gap。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `强化学习` | `组合执行优化` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 將組合優化建模為 MDP，聯合輸出資產權重與資金配置比例。② 核心 trick 是時空自適應嵌入矩陣解耦特徵，MoE 路由器動態切換交易專家，資本管理模塊（LSTM+Attention）驅動風險敞口。③ 對「組合執行優化」軸★，將宏觀擇時與微觀選股解耦訓練，避免單一 agent 在 regime shift 時梯度衝突。④ 導讀給出在 SSE50 與 CS1300 測試集上，總回報率分別提升 11% 與 8%，夏普比率分別提高 64% 與 51%。

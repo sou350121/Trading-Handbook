@@ -1,10 +1,18 @@
+---
+title: "FinRL-Meta"
+description: "落點於「數據工程自動化 × RL環境標準化」，解決FinRL領域長期存在的數據管線碎片化與Gym環境難以復現的Prior Gap，將多源金融數據轉為即插即用的訓練沙盒。"
+---
 <!-- ontology-5axis data=多模态 horizon=日频波段 paradigm=强化学习 alpha=组合执行优化 autonomy=人机协同可解释 -->
-
-# FinRL-Meta 解構（FinRL-Meta）
 
 > **發布**：2024-06-07 · （無 venue）
 > **QuantML 導讀**：[开源强化学习金融市场元宇宙框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247484644&idx=1&sn=8fbcac50d77955a0b94e9628d1e5aa6d&chksm=ce7e63faf909eaecc4fb63a0b9a57b0fcf8205688b4f8f073bc5b40055dd379ea32f458601cd#rd)
 > **核心定位**：落點於「數據工程自動化 × RL環境標準化」，解決FinRL領域長期存在的數據管線碎片化與Gym環境難以復現的Prior Gap，將多源金融數據轉為即插即用的訓練沙盒。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `多模态` | `日频波段` | `强化学习` | `组合执行优化` | `人机协同可解释` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 提供DataOps驅動的自動化數據管線與分層架構，將非結構化金融數據轉為標準化OpenAI Gym環境。② 核心Trick是「數據-環境-代理」解耦與多目標獎勵函數的模塊化設計，支持DRL算法即插即用與多進程向量化訓練。③ 對「數據模態」與「人機協作」軸★意義在於：將因子研究員從ETL泥沼中解放，直接對接RL實驗，同時保留可解釋的清算/執行模塊供人工覆核。④ 導讀未給量化結果。

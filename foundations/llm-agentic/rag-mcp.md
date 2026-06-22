@@ -1,10 +1,18 @@
+---
+title: "RAG-MCP"
+description: "五軸落點於「文本另类 × 生成式大模型 × Agent自主演进」，解決 MCP 工具生態爆發下的提示膨脹與決策開銷 prior gap，將工具發現正交解耦為獨立檢索子問題。"
+---
 <!-- ontology-5axis data=文本另类 horizon=跨周期 paradigm=生成式大模型 alpha=端到端表征 autonomy=Agent自主演进 -->
-
-# RAG-MCP 解構（RAG-MCP）
 
 > **發布**：2025-05-11 · （無 venue）
 > **QuantML 導讀**：[RAG-MCP：解决大语言模型工具选择中的提示膨胀难题](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490346&idx=1&sn=ba403e8a54bac2c75f0556b5a0931d24&chksm=ce7e7c34f909f5229f2bf0f4ca453ab4f0f68075de7a50ee28da835809ca2e28ff1a507c76c6#rd)
 > **核心定位**：五軸落點於「文本另类 × 生成式大模型 × Agent自主演进」，解決 MCP 工具生態爆發下的提示膨脹與決策開銷 prior gap，將工具發現正交解耦為獨立檢索子問題。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `文本另类` | `跨周期` | `生成式大模型` | `端到端表征` | `Agent自主演进` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 提出 RAG-MCP 框架，將 LLM 工具選擇從「全量提示注入」轉為「外部向量索引檢索+單一最佳注入」。② 核心 trick 是維護 MCP 元數據向量索引，按需語義檢索並驗證，僅注入單一最佳模式至提示，避免上下文過載。③ 對「Agent自主演进」軸★，使 Agent 可動態擴展至數千工具而不觸發 NIAH 式召回崩潰。④ 導讀未給量化結果（僅述「標記使用量減少了一半以上」「成功率提高了三倍多」，無精確基線數值）。

@@ -1,10 +1,18 @@
+---
+title: "DSL"
+description: "將非凸的組合優化目標轉化為凸代理損失監督學習任務，並透過 Deep Ensemble 收斂配置方差，填補 E2E 訓練不穩定與 PFL 預測-決策脫節的工程鴻溝。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=组合执行优化 autonomy=全自动黑盒 -->
-
-# DSL 解構（DSL）
 
 > **發布**：2025-07-29 · （無 venue）
 > **QuantML 導讀**：[从“预测市场”到“学习决策”：基于监督学习决策与集成学习的投资组合优化框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491174&idx=1&sn=e053618eed09e779f2f8ee899845f1a0&chksm=ce7e7978f909f06e78cc6a6a3514babd3873aa69cf98b5f6a75077e7185cc752093eb0ad138b#rd)
 > **核心定位**：將非凸的組合優化目標（Sharpe/Sortino）轉化為凸代理損失（Cross-Entropy）監督學習任務，並透過 Deep Ensemble 收斂配置方差，填補 E2E 訓練不穩定與 PFL 預測-決策脫節的工程鴻溝。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `监督回归` | `组合执行优化` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 將組合權重預測重構為監督學習任務，繞開直接優化 Sharpe/Sortino 的非凸陷阱。② 核心 trick 是用 Cross-Entropy 擬合預計算的理論最優權重，並用 Deep Ensemble 聚合 100 個獨立模型輸出。③ 對「組合執行優化」軸★，解決了 E2E 梯度場崎嶇導致崩盤與 PFL 誤差經優化器放大的工程痛點。④ 導讀未給量化結果，僅定性指出集成規模擴大可提升中位數回報並收窄四分位距。

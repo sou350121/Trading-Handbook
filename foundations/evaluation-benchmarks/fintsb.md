@@ -1,10 +1,18 @@
+---
+title: "FinTSB"
+description: "以「多樣性覆蓋 + 統一維度指標 + 實盤交易約束」為核心，解決金融時間序列預測領域長期存在的 Diversity Gap、Standardization Deficit 與 Real-World Mismatch 三大評測斷層。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=因子挖掘 autonomy=全自动黑盒 -->
-
-# FinTSB 解構（FinTSB）
 
 > **發布**：2025-03-12 · （無 venue） · arXiv [2502.18834](https://arxiv.org/abs/2502.18834)
 > **QuantML 導讀**：[桥接学术与落地！同济、清华提出实用的金融时间序列全维度评测系统](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489639&idx=1&sn=c2118a8495c9e0351495f0558a5135e2&chksm=ce7e7f79f909f66f5649d6768e0d94ce6fae4e251de52b107c9db7fdedaf8808aa5e49bf6#rd)
 > **核心定位**：以「多樣性覆蓋 + 統一維度指標 + 實盤交易約束」為核心，解決金融時間序列預測領域長期存在的 Diversity Gap、Standardization Deficit 與 Real-World Mismatch 三大評測斷層。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `监督回归` | `因子挖掘` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 建構涵蓋上升/下降/波動/極端事件四類波動模式的細粒度股票數據集；② 基於 Qlib 搭建統一評測框架，強制要求模型同時優化回歸誤差與排名損失，並引入 TopK-Drop 與 0.1% 手續費約束；③ 對「因子挖掘/監督回歸」軸而言，將學術指標直接錨定實盤組合收益與換手率，打破純 MSE 優化導致的過擬合幻覺；④ 導讀未給量化結果。

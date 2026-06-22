@@ -1,10 +1,18 @@
+---
+title: "DMMV"
+description: "落點於多模態×監督回歸，解了 LVM 在 LTSF 上「周期強、趨勢弱」的 inductive bias gap，將視覺模態的局部結構捕獲能力與數值模態的全局趨勢建模能力解耦協同。"
+---
 <!-- ontology-5axis data=多模态 horizon=中长周期 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
-
-# DMMV 解構（DMMV）
 
 > **發布**：2025-11-13 · NeurIPS25 · arXiv [2505.24003](https://arxiv.org/abs/2505.24003)
 > **QuantML 導讀**：[NeurIPS 25 | DMMV: 多模态视角可以为时间序列预测带来什么？](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492328&idx=1&sn=f5df3bd7d201a491f357dea57f7e5d99&chksm=ce7d85f6f90a0ce096c2a2638d2cb6cfb405a80384d6f0b8e54c6c509d233b88b1e27a998f74#rd)
 > **核心定位**：落點於多模態×監督回歸，解了 LVM 在 LTSF 上「周期強、趨勢弱」的 inductive bias gap，將視覺模態的局部結構捕獲能力與數值模態的全局趨勢建模能力解耦協同。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `多模态` | `中长周期` | `监督回归` | `端到端表征` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 首個將視覺與數值模態解耦融合的長時序預測框架，分別建模周期與趨勢。② 核心 trick 為 DMMV-A 的反向預測-殘差（Backcast-Residual）機制與 BCMASK 策略，自動學習分解權重。③ 對「端到端表征」軸而言，它證明了視覺歸納偏置可被定向引導而非盲目堆疊，降低純 LLM/LVM 的算力浪費。④ 導讀未給量化結果，僅指出在 8 個數據集中 6 個取得最優 MSE 表現，且計算負擔顯著低於 LLM 系模型。

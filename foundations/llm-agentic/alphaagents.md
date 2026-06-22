@@ -1,10 +1,18 @@
+---
+title: "AlphaAgents"
+description: "落點於「生成式大模型 × 多智能体博弈」軸，解決傳統 LLM 單點決策的幻覺與認知偏見 gap，透過結構化群聊辯論與風險偏好提示工程，將非結構化文本轉化為可追溯的日頻波段信號。"
+---
 <!-- ontology-5axis data=文本另类 horizon=日频波段 paradigm=生成式大模型 alpha=多智能体博弈 autonomy=人机协同可解释 -->
-
-# AlphaAgents 解構（AlphaAgents）
 
 > **發布**：2025-08-25 · （無 venue）
 > **QuantML 導讀**：[贝莱德 | AlphaAgents: 多智能体在股票投资组合构建中的应用](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491466&idx=1&sn=959e9ec5cdaaa9847a09d2c1ec44bddf&chksm=ce7e7894f909f1822243324de490cb939fe198141ec3aad460c3479433c0cb372a1fd64ba8c6#rd)
 > **核心定位**：落點於「生成式大模型 × 多智能体博弈」軸，解決傳統 LLM 單點決策的幻覺與認知偏見 gap，透過結構化群聊辯論與風險偏好提示工程，將非結構化文本轉化為可追溯的日頻波段信號。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `文本另类` | `日频波段` | `生成式大模型` | `多智能体博弈` | `人机协同可解释` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 構建基於 LLM 的多智能體辯論框架，模擬投資委員會流程生成買賣信號。② 核心 trick 為 AutoGen 群聊 Round Robin 機制與風險偏好 Prompt 工程，強制跨模態交叉驗證。③ 對「人机协同可解释」軸★，將黑箱決策拆解為可審計的討論日誌與共識路徑。④ 導讀未給量化結果（回測夏普與累計回報僅定性描述優劣，無具體數值）。

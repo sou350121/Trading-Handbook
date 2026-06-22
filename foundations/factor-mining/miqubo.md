@@ -1,10 +1,18 @@
+---
+title: "MIQUBO"
+description: "落點於因子挖掘與元搜索軸，解決傳統單變量MI篩選在高維分散信息場景下的組合冗餘與協同效應缺失問題。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=元学习搜索 alpha=因子挖掘 autonomy=人机协同可解释 -->
-
-# MIQUBO 解構（MIQUBO）
 
 > **發布**：2025-10-27 · （無 venue）
 > **QuantML 導讀**：[告别特征冗余：用量子退火精炼你的Alpha因子](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492132&idx=1&sn=56dccf830fd67aa27a9627ba91a29dbf&chksm=ce7d853af90a0c2cc017ee65c350a4ce77b0f54af5bede5763c17aff59c45cebb786f7b1a54d#rd)
 > **核心定位**：落點於因子挖掘與元搜索軸，解決傳統單變量MI篩選在高維分散信息場景下的組合冗餘與協同效應缺失問題。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `元学习搜索` | `因子挖掘` | `人机协同可解释` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 將特徵選擇映射為MIQUBO問題，利用量子退火聯合優化單特徵互信息(MI)與特徵間條件互信息(CMI)。② 核心trick是透過CMI項捕捉特徵協同與冗餘，以負號映射至QUBO能量函數求解。③ 對因子挖掘軸★，提供可解釋的組合優化路徑，避開黑盒嵌入。④ 導讀未給量化結果（僅定性描述R2在k≤5時顯著高於基線）。

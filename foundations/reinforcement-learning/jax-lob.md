@@ -1,10 +1,18 @@
+---
+title: "JAX-LOB"
+description: "落點於「高頻日內 × 強化學習 × 組合執行優化」軸。解決了傳統 Python/C++ LOB 模擬器在 RL 大規模並行採樣時的 I/O 與控制流瓶頸，使 Agent 能在 GPU 上實現萬級環境 Rollout。"
+---
 <!-- ontology-5axis data=微观盘口 horizon=高频日内 paradigm=强化学习 alpha=组合执行优化 autonomy=Agent自主演进 -->
-
-# JAX-LOB 解構（JAX-LOB）
 
 > **發布**：2024-07-01 · （無 venue） · arXiv [2308.13289](https://arxiv.org/abs/2308.13289)
 > **QuantML 導讀**：[牛津大学：解锁大规模强化学习交易的GPU加速LOB模拟器](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247484978&idx=1&sn=ed321f9103b3d156245934eb49142756&chksm=ce7e612cf909e83aaf17537148f12270c3a1578d255cc814b676cbbdcacb5bf659cc42312d73#rd)
 > **核心定位**：落點於「高頻日內 × 強化學習 × 組合執行優化」軸。解決了傳統 Python/C++ LOB 模擬器在 RL 大規模並行採樣時的 I/O 與控制流瓶頸，使 Agent 能在 GPU 上實現萬級環境 Rollout。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `微观盘口` | `高频日内` | `强化学习` | `组合执行优化` | `Agent自主演进` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 首個基於 JAX 的 GPU 加速 LOB 模擬器，內嵌 GYMNAX 框架。② 核心 trick 是用 `vmap` 將 LOB 訂單匹配/撤單邏輯完全向量化，消除 CPU 條件分支。③ 對「Agent自主演进」軸★：將 RL 訓練步進時間壓縮至 CPU 實現的 1/5~1/7，使高頻執行策略的超參搜索與在線微調具備工程可行性。④ 導讀明確給出訓練速度提升「5倍」至「7倍」，交易績效指標導讀未給量化結果。

@@ -1,10 +1,18 @@
+---
+title: "Signature-Informed Transformer (SIT)"
+description: "落點於「監督回歸 × 組合執行優化」軸，解構傳統「預測-優化」兩階段範式中的目標錯配與誤差放大痛點，以路徑特徵幾何先驗驅動端到端 CVaR 直接優化。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=组合执行优化 autonomy=全自动黑盒 -->
-
-# Signature-Informed Transformer (SIT) 解構（Signature-Informed Transformer (SIT)）
 
 > **發布**：2025-10-07 · （無 venue）
 > **QuantML 導讀**：[Signature-Informed Transformer在端到端资产配置中的应用](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491898&idx=1&sn=d565ad18a491609e89d3cae06b1baa45&chksm=ce7d8624f90a0f3280562268b2b4500447f7d6186026167896bf5dfdad14eed8c7d9dc4146ee#rd)
 > **核心定位**：落點於「監督回歸 × 組合執行優化」軸，解構傳統「預測-優化」兩階段範式中的目標錯配與誤差放大痛點，以路徑特徵幾何先驗驅動端到端 CVaR 直接優化。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `监督回归` | `组合执行优化` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 提出 SIT 框架，將資產價格路徑特徵直接注入 Transformer 注意力機制，繞過收益率預測階段。② 核心 trick 是在資產間注意力中引入跨資產路徑特徵偏差項，並結合 CVaR 進行端到端權重生成。③ 這直接對齊了「決策為核心」的組合優化軸，消除預測誤差向配置端的非線性放大。④ 導讀給出40資產組合夏普比率0.6717。

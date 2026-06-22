@@ -1,10 +1,18 @@
+---
+title: "PortfolioMASTER"
+description: "落點於「端到端表徵 × 監督回歸」軸，解了 Transformer 在量化選股中過度依賴點態回歸導致 Top-k 組合排序失真與風控失效的 prior gap。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
-
-# PortfolioMASTER 解構（PortfolioMASTER）
 
 > **發布**：2025-10-17 · （無 venue）
 > **QuantML 導讀**：[Transformer量化选股模型应该使用何种损失函数？](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491994&idx=1&sn=82124365bbed9020cc8b7202e67ea6fc&chksm=ce7d8684f90a0f92c387205d48e30b4a2c87454f6b5062d4b1e0e6c1ba11b6894fac96ea4322#rd)
 > **核心定位**：落點於「端到端表徵 × 監督回歸」軸，解了 Transformer 在量化選股中過度依賴點態回歸（MSE）導致 Top-k 組合排序失真與風控失效的 prior gap。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `监督回归` | `端到端表征` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 系統對比點態、對偶與列表損失對 Transformer 選股排序與組合業績的影響。② 核心 trick 是將 IR 領域的 Pairwise/Listwise 排序損失引入訓練，直接優化排序分佈而非絕對收益預測。③ 這對「端到端表徵」軸★ 意味著模型從「猜價格」轉向「學相對順序」，更貼合組合構建邏輯。④ Margin 損失取得 AR 16.23% 與 SR 0.7529，BPR 實現 MDD -15.77%。

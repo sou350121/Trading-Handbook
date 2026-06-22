@@ -1,10 +1,18 @@
+---
+title: "FinRLlama"
+description: "落點於「文本另类×强化学习」軸，解決傳統金融情感分析 LLM 缺乏市場特定知識與時間動態對齊的 prior gap，將靜態語義評分轉化為可執行的多空信號。"
+---
 <!-- ontology-5axis data=文本另类 horizon=日频波段 paradigm=强化学习 alpha=端到端表征 autonomy=人机协同可解释 -->
-
-# FinRLlama 解構（FinRLlama）
 
 > **發布**：2025-02-05 · ICAIF24
 > **QuantML 導讀**：[FinRLlama：基于强化学习和市场反馈的金融情感分析LLM优化方案](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489127&idx=1&sn=faad16c8ac3ca02dcb982837d03b21ab&chksm=ce7e7179f909f86fd40ea777c7598c0d4b013cb2a0c25567248de0748f24453d85e07a4fbe27#rd)
 > **核心定位**：落點於「文本另类×强化学习」軸，解決傳統金融情感分析 LLM 缺乏市場特定知識與時間動態對齊的 prior gap，將靜態語義評分轉化為可執行的多空信號。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `文本另类` | `日频波段` | `强化学习` | `端到端表征` | `人机协同可解释` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 提出 RLMF 框架，以市場反饋強化學習微調 LLaMA，將新聞情感與價格動態結合生成交易信號。② 核心 trick 是將市場收益與方向作為動態獎勵函數，同步優化提示詞與模型參數。③ 對「端到端表征」軸的關鍵意義在於：讓語義空間直接錨定 PnL 空間，而非依賴人工因子對接。④ 導讀未給量化結果（僅提及 NVDA 累計回報達到1.5以上，MSFT 和 GOOG 接近0.5，XOM 暫時跌入負回報）。

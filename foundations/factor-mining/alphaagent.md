@@ -1,10 +1,18 @@
+---
+title: "AlphaAgent"
+description: "落點於「生成式大模型 × Agent自主演進」軸，解決了傳統LLM挖因子時缺乏結構化約束導致信號同質化與Alpha快速衰减的Prior Gap。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=生成式大模型 alpha=因子挖掘 autonomy=Agent自主演进 -->
-
-# AlphaAgent 解構（AlphaAgent）
 
 > **發布**：2025-08-20 · （無 venue）
 > **QuantML 導讀**：[AlphaAgent：LLM如何终结Alpha衰减，挖掘持久有效的量化因子](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491423&idx=1&sn=cd28fd7401005a782d146b95a5bb69ce&chksm=ce7e7841f909f15766be17d859aef9e90f2c006800ba728878b99bf69e0b6094ef795ceaab94#rd)
 > **核心定位**：落點於「生成式大模型 × Agent自主演進」軸，解決了傳統LLM挖因子時缺乏結構化約束導致信號同質化與Alpha快速衰减的Prior Gap。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `生成式大模型` | `因子挖掘` | `Agent自主演进` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 提出LLM驅動的三智能體閉環框架，將市場假設轉化為抗衰减的因子表達式。② 核心trick是基於AST的相似度懲罰與假設語義對齊，強制探索非擁擠因子空間。③ 對「Agent自主演進」軸的關鍵意義在於將因子挖掘從靜態搜索升級為帶反饋的動態演化。④ 導讀給出CSI 500年化超額收益11.00%、IR 1.488，且IC穩定在0.02至0.025區間。

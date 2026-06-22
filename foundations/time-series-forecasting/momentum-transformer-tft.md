@@ -1,10 +1,18 @@
+---
+title: "Momentum Transformer (TFT)"
+description: "將僅解碼器 TFT 架構從低協方差期貨場域硬遷至股票日頻波段，以負 Sharpe Ratio 為損失端到端輸出權重。解了傳統 MACD 動量無法適應 regime shift 與 LSTM 對長週期非平穩性敏感的 prior gap。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
-
-# Momentum Transformer (TFT) 解構（Momentum Transformer (TFT)）
 
 > **發布**：2024-12-18 · （無 venue）
 > **QuantML 導讀**：[增强动量策略：动量Transformer模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488434&idx=1&sn=e8431bb689e27562a620cdb6cf3c6d31&chksm=ce7e74acf909fdba23e88cba2b6157174f0d50d61d3fab4ebf305a80c01d90bd43ff6e4d1a33#rd)
 > **核心定位**：將僅解碼器 TFT 架構從低協方差期貨場域硬遷至股票日頻波段，以負 Sharpe Ratio 為損失端到端輸出權重。解了傳統 MACD 動量無法適應 regime shift 與 LSTM 對長週期非平穩性敏感的 prior gap。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `监督回归` | `端到端表征` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** 將 TFT 遷移至股票日頻交易，以負 Sharpe Ratio 為損失端到端輸出頭寸。核心 trick 為融合 Changepoint Detection 與多頭注意力，並透過擴展時間窗口與增加注意力頭數捕捉長短週期依賴。此設計直接對齊日頻波段軸的動態再平衡需求，以模型內生風險調整取代傳統因子疊加。導讀給出四年期平均年回報率 4.14% 與平均 Sharpe Ratio 1.12，但明確指出未超越同期僅多頭策略的 4.04% 回報。

@@ -1,10 +1,18 @@
+---
+title: "ARMA Attention"
+description: "在 `监督回归` × `端到端表征` 軸上，將 ARMA 的短期衝擊吸收能力注入 `线性注意力`，解決純 AR Decoder 在跨周期預測時的誤差累積與短週期特徵丟失問題。以 O 代價換取長短期依賴解耦，填補了高效序列模型在金融量價表格中對局部波動率結構建模的 Prior Ga"
+---
 <!-- ontology-5axis data=量价表格 horizon=跨周期 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
-
-# ARMA Attention 解構（ARMA Attention）
 
 > **發布**：2024-10-12 · （無 venue）
 > **QuantML 導讀**：[基于自回归移动平均注意力机制的时间序列预测](https://mp.weixin.qq.com/s?__biz=Mzg6MzAwNzM0NQ==&mid=2247487011&idx=1&sn=7cf7b1da0167ee347e1c37d4d0cb9d56&chksm=ce7e693df909e02bcda2d8608138ff45bb8f51fd89e017fcf2867981e9a08e240a4d51d9df77#rd)
 > **核心定位**：在 `监督回归` × `端到端表征` 軸上，將 ARMA 的短期衝擊吸收能力注入 `线性注意力`，解決純 AR Decoder 在跨周期預測時的誤差累積與短週期特徵丟失問題。以 O(N) 代價換取長短期依賴解耦，填補了高效序列模型在金融量價表格中對局部波動率結構建模的 Prior Gap。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `跨周期` | `监督回归` | `端到端表征` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 提出 ARMA Attention，將移動平均項隱式嵌入線性注意力狀態更新。② 核心 trick 為「間接 MA 權重生成」，透過 Linear RNN 一次性收集 K/V 並隱式計算 MA 權重，避免顯式構建 O(N²) 矩陣。③ 對 `跨周期` 預測軸★：在維持 O(N) 計算與參數規模的前提下，強制模型將短期噪聲/衝擊交由 MA 項吸收，AR 項專注長期趨勢，打破線性注意力「長記憶強但短週期鈍化」的工程瓶頸。④ 關鍵實證：在 12 個公開 TSF 數據集上顯著優於 AR 基線（具體數值未披露）。

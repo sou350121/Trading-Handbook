@@ -1,10 +1,18 @@
+---
+title: "KGTransformer"
+description: "落點於「圖關係 × 中長週期 × 監督回歸 × 端到端表徵 × 全自動黑盒」。解了 prior gap：傳統金融NLP僅做情緒打分或靜態共現，缺乏將非結構化新聞轉化為可追蹤時變因果鏈的結構化表徵，導致因子挖掘停留在單維度語義層，無法捕捉跨資產的隱性傳導路徑。"
+---
 <!-- ontology-5axis data=图关系 horizon=中长周期 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
-
-# KGTransformer 解構（KGTransformer）
 
 > **發布**：2024-10-16 · （無 venue）
 > **QuantML 導讀**：[动态知识图谱在金融市场趋势预测中的应用](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487059&idx=1&sn=a8b87a617febb5899aef8c7e3f33&chksm=ce7e694df909e05bf466867d9378889f26c8391dac27c2c2133f4579037e3552e42ce6090ac1#rd)
 > **核心定位**：落點於「圖關係 × 中長週期 × 監督回歸 × 端到端表徵 × 全自動黑盒」。解了 prior gap：傳統金融NLP僅做情緒打分或靜態共現，缺乏將非結構化新聞轉化為可追蹤時變因果鏈（Dynamic KG）的結構化表徵，導致因子挖掘停留在單維度語義層，無法捕捉跨資產的隱性傳導路徑。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `图关系` | `中长周期` | `监督回归` | `端到端表征` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 將微調LLM（ICKG）與動態知識圖譜（FinDKG）結合，實現從新聞到時變實體關係的端到端抽取。② 核心 trick 是引入元實體（Meta-entity）與時間嵌入的注意力GNN（KGTransformer），在鏈接預測中動態加權鄰居重要性。③ 對「圖關係」軸★：把離散新聞流轉為連續演化的圖拓撲，使監督回歸能直接學習實體間的條件依賴。④ 關鍵實證：在 FinDKG 鏈接預測任務上 MRR 與 Hits@n 顯著優於 RE-Net/EvoKG（具體數值未披露）。

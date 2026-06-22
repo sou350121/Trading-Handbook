@@ -1,10 +1,18 @@
+---
+title: "Fieldy"
+description: "落點於「量價表格 × 監督回歸 × 全自動黑盒」軸。解了傳統表格 Transformer只能單向建模結構依賴的 prior gap，首次以並行雙路徑顯式對齊表格時序的雙維交互。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
-
-# Fieldy 解構（Fieldy）
 
 > **發布**：2024-09-12 · （無 venue）
 > **QuantML 導讀**：[基于细颗粒度注意力的层次Transformer在表格类时序中的应用](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486273&idx=1&sn=427f4c08734ea738af3e81bcb0802557&chksm=ce7e6c5ff909e549e16aa0fad48b1ec2fc1730cc233696ce7ba948f39f5e09e36a4570bab9a7#rd)
 > **核心定位**：落點於「量價表格 × 監督回歸 × 全自動黑盒」軸。解了傳統表格 Transformer（FT/Tabbie/TabBERT）只能單向（行或列）建模結構依賴的 prior gap，首次以並行雙路徑顯式對齊表格時序的雙維交互。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `监督回归` | `端到端表征` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 提出 Fieldy，首個同時並行編碼行/列字段的兩階段層次 Transformer，專攻表格時序數據。② 核心 trick 是 Stage-1 雙路 Field Transformer 提取細粒度上下文，Stage-2 融合後注入行列位置嵌入，顯式恢復表格拓撲。③ 對「端到端表徵」軸★：打破單維注意力瓶頸，讓模型真正「看懂」表格的行列交叉依賴，而非僅將表格展平或單向聚合。④ 關鍵實證：在 Pollution 回歸任務上顯著降低 RMSE（具體數值未披露），Loan Default 分類任務微幅領先（未披露），整體 Transformer 基線優於 XGBoost/Linear。

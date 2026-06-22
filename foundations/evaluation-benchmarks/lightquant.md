@@ -1,10 +1,18 @@
+---
+title: "LightQuant"
+description: "將多模態股價預測的瓶頸從模型架構轉移至數據質量與因子可解釋性，以 LLM 序列提示構建結構化因子錨點，配合輕量級三層框架降低 A 股多模態研發門檻。"
+---
 <!-- ontology-5axis data=多模态 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=人机协同可解释 -->
-
-# LightQuant 解構（LightQuant）
 
 > **發布**：2026-01-16 · （無 venue）
 > **QuantML 導讀**：[CSMD多模态数据+LightQuant框架，一站式A股量化分析框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493010&idx=1&sn=998a16328f34904a1edd1c5bf734d825&chksm=ce7d828cf90a0b9a9aedb1b48e19bc78a93de8ced8d3cd4945b1aed872310acfe20af0133b3b#rd)
 > **核心定位**：將多模態股價預測的瓶頸從模型架構轉移至數據質量與因子可解釋性，以 LLM 序列提示構建結構化因子錨點，配合輕量級三層框架降低 A 股多模態研發門檻。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `多模态` | `日频波段` | `监督回归` | `端到端表征` | `人机协同可解释` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 構建中國股市多模態數據集 CSMD 與輕量級回測框架 LightQuant。② 核心 trick 為基於 LLM 序列提示從財經新聞中提取可解釋金融因子，配合三層模塊化架構實現數據清洗、建模與回測一站式流程。③ 對「端到端表徵」與「人機協同可解釋」軸★：將黑盒文本轉化為結構化、可驗證的因子，兼顧模型表現與風控審查需求。④ 導讀未給完整量化結果，僅披露 StockNet 在 CSMD 300 預測 ACC 為 55.47，回測 ARR 為 0.1301。

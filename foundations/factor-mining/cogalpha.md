@@ -1,10 +1,18 @@
+---
+title: "CogAlpha"
+description: "落點於「生成式大模型 × Agent自主演进」軸，將 LLM 的邏輯推理與遺傳演算法的代碼級變異結合，解決傳統 GP/深度學習在因子挖掘中「黑箱化」與「搜索空間狹窄」的 prior gap。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=生成式大模型 alpha=因子挖掘 autonomy=Agent自主演进 -->
-
-# CogAlpha 解構（CogAlpha）
 
 > **發布**：2025-12-24 · （無 venue）
 > **QuantML 導讀**：[CogAlpha: 基于七层认知架构的可解释性 Alpha 挖掘框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492815&idx=1&sn=b33179d315097cbb1e21bf0c24b055b5&chksm=ce7d83d1f90a0ac7420676237c46b04154d808a10b8664b70cd78ac8e0d5d2bab163f3c2612c#rd)
 > **核心定位**：落點於「生成式大模型 × Agent自主演进」軸，將 LLM 的邏輯推理與遺傳演算法的代碼級變異結合，解決傳統 GP/深度學習在因子挖掘中「黑箱化」與「搜索空間狹窄」的 prior gap。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `生成式大模型` | `因子挖掘` | `Agent自主演进` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 以七層 Agent 階層拆解 Alpha 挖掘任務，結合 LLM 認知推理與代碼級遺傳變異/交叉。② 核心 trick 是將 LLM 置於代碼空間執行類遺傳演算法優化，並由多 Agent 質量守門人過濾偽相關與前瞻偏差。③ 對「因子挖掘」軸而言，它將符號表達的解釋性與神經網路的非線性捕捉力統一，避免傳統 GP 的冗餘公式。④ 導讀給出完整架構在 CSI300 測試集上達成 IC 0.0591 與 RankIC 0.0814。

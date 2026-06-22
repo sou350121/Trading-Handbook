@@ -1,10 +1,18 @@
+---
+title: "如何利用微调LLMs预测股票收益率"
+description: "五軸落點於文本另类/日频波段/监督回归/端到端表征/全自动黑盒。解了傳統NLP因子需多步特徵工程與情感打分的割裂問題，直接將財務新聞流映射為數值回報預測，驗證了聚合Token表征在組合構建中的Alpha生成效率。"
+---
 <!-- ontology-5axis data=文本另类 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
-
-# 如何利用微调LLMs预测股票收益率 解構（如何利用微调LLMs预测股票收益率）
 
 > **發布**：2024-08-04 · （無 venue）
 > **QuantML 導讀**：[如何利用微调LLMs预测股票收益率](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485651&idx=1&sn=8723ff050263f07540d5aa1c0db4671e&chksm=ce7e6fcdf909e6dbd8df87c504e0fc2b46e857b50dc5be5906b665ddb082c7cc57a9a514386a#rd)
 > **核心定位**：五軸落點於文本另类/日频波段/监督回归/端到端表征/全自动黑盒。解了傳統NLP因子需多步特徵工程與情感打分（Sentiment Scoring）的割裂問題，直接將財務新聞流映射為數值回報預測，驗證了聚合Token表征在組合構建中的Alpha生成效率。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `文本另类` | `日频波段` | `监督回归` | `端到端表征` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 微調編碼器/解碼器LLM，將財務新聞直接映射為股票回報預測信號。② 核心 trick 為對比瓶頸（Bottleneck）與聚合（Aggregate）Token表征，採用LoRA高效微調。③ 對端到端表征軸★：證明解碼器（如Mistral）的聚合表征能直接生成強Alpha，跳過傳統情感分析的中間特徵提取。④ 導讀給出北美市場Mistral聚合表征long-only年化回報27.00%、夏普1.32，超越傳統情感基線。

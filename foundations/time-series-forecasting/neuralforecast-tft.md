@@ -1,10 +1,18 @@
+---
+title: "NeuralForecast/TFT"
+description: "聚焦日頻波段的風險擇時，以監督回歸範式處理量價表格。解決了傳統深度學習以 MSE/RMSE 為驗證指標時，與實際交易風險收益結構脫節的 prior gap。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=风险择时 autonomy=人机协同可解释 -->
-
-# NeuralForecast/TFT 解構（NeuralForecast/TFT）
 
 > **發布**：2024-11-03 · （無 venue）
 > **QuantML 導讀**：[增强深度学习模型评估以进行股市预测--Part I](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487443&idx=1&sn=c6c555e9b90e263f3ed083ba4166ed44&chksm=ce7e68cdf909e1db7adde95df86e8bcd92e30642b492d3f9e4de4267d29ab9027f0de83abcd5#rd)
 > **核心定位**：聚焦日頻波段的風險擇時，以監督回歸範式處理量價表格。解決了傳統深度學習以 MSE/RMSE 為驗證指標時，與實際交易風險收益結構脫節的 prior gap。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `监督回归` | `风险择时` | `人机协同可解释` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ①將不可微的商業交易指標（如 Sharpe/Sortino）直接嵌入 TFT 驗證循環。②核心 trick 是利用分位數損失輸出概率分佈，並透過置信閾值過濾低質量信號。③這對「風險擇時」軸★至關重要，因為它強制模型優化目標與實際交易的風險調整回報對齊，而非單純最小化點預測誤差。④導讀未給量化結果。

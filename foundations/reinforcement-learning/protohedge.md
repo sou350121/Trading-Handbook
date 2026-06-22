@@ -1,10 +1,18 @@
+---
+title: "ProtoHedge"
+description: "以「原型相似度加權」替換黑箱神經網路，將 Deep Hedging 的序列決策重構為可審計的案例推理架構。解決了業內對 RL 對沖策略合規性與歸因穩定性的 prior gap，在內在可解釋性與對沖效用之間切出新的 Pareto 前沿。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=强化学习 alpha=组合执行优化 autonomy=人机协同可解释 -->
-
-# ProtoHedge 解構（ProtoHedge）
 
 > **發布**：2025-11-30 · （無 venue）
 > **QuantML 導讀**：[像交易员一样思考：ProtoHedge可解释性对冲模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492539&idx=1&sn=f0ff7b790857b7433e58356b748c10f4&chksm=ce7d84a5f90a0db3ce97497f616ca4a0e6ec9cfd122e5516c8218ad52bc16a0822a51ad0b7a9#rd)
 > **核心定位**：以「原型相似度加權」替換黑箱神經網路，將 Deep Hedging 的序列決策重構為可審計的案例推理架構。解決了業內對 RL 對沖策略合規性與歸因穩定性的 prior gap，在內在可解釋性與對沖效用之間切出新的 Pareto 前沿。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `强化学习` | `组合执行优化` | `人机协同可解释` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 提出內在可解釋的對沖框架，用固定原型庫與相似度加權生成決策。② 核心 trick 為兩階段訓練：先聚類選取真實歷史狀態作為原型，再端到端優化各原型的行動參數。③ 對「人机协同可解释」軸★：決策可追溯至具體歷史場景，滿足金融審計與合規要求。④ 關鍵實證數字：在 Black-Scholes 與隨機波動率環境中，相對於黑箱 Deep Hedging 的效用差異分別為 -0.40% 與 -0.33%。

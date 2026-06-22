@@ -1,10 +1,18 @@
+---
+title: "MiM-StocR"
+description: "在量价表格與日频波段軸上，以監督回歸預測收益率並透過排序損失對齊 Top-k 資金配置；解決了傳統深度模型在金融非平穩序列中梯度衝突與過擬合的 prior gap。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=因子挖掘 autonomy=全自动黑盒 -->
-
-# MiM-StocR 解構（MiM-StocR）
 
 > **發布**：2026-01-27 · （無 venue）
 > **QuantML 導讀**：[融合动量因子与Adaptive-k的股票排序框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493106&idx=1&sn=b2d5dce5e8c62e64c7ccd720efb6bce4&chksm=ce7d82ecf90a0bfa6b54bfbb354f1f44e1bba36a1f0e797eef6745cdcea85fe7d8099f6745ff#rd)
 > **核心定位**：在量价表格與日频波段軸上，以監督回歸預測收益率並透過排序損失對齊 Top-k 資金配置；解決了傳統深度模型在金融非平穩序列中梯度衝突與過擬合的 prior gap。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `监督回归` | `因子挖掘` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 將股票推薦重構為多任務學習（回歸收益率 + 分類動量線），並用 Adaptive-k ApproxNDCG 損失顯式優化 Top-tier 排名。② 核心 trick 是 CQB 優化策略，利用訓練/驗證損失的相對收斂比率動態調節 EMA 梯度平滑與權重衰減。③ 這在「因子挖掘」與「自動黑盒」軸上提供了可解釋的梯度控制機制，避免深度模型在金融數據上盲目擬合噪聲。④ 導讀未給量化結果。

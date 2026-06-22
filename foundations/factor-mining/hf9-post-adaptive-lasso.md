@@ -1,10 +1,18 @@
+---
+title: "HF9模型/Post-Adaptive-LASSO"
+description: "落點於「量價表格 × 中長週期 × 監督回歸」軸，以 Post-Adaptive-LASSO 正則化流水線解構傳統線性因子模型的異象風險剝離失效問題，將對沖基金績效評估從「技能誤判」轉向「Exotic Beta 定價」。"
+---
 <!-- ontology-5axis data=量价表格 horizon=中长周期 paradigm=监督回归 alpha=因子挖掘 autonomy=人机协同可解释 -->
-
-# HF9模型/Post-Adaptive-LASSO 解構（HF9模型/Post-Adaptive-LASSO）
 
 > **發布**：2025-12-25 · （無 venue）
 > **QuantML 導讀**：[你的 Alpha 只是异象？如何甄别真正的基金管理能力](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492824&idx=1&sn=d0cc6705d6e52177c99c5806127e7f1c&chksm=ce7d83c6f90a0ad06364ae203210d2c399c97478cec1ec4a6208a80687efd46e8b0907011db3#rd)
 > **核心定位**：落點於「量價表格 × 中長週期 × 監督回歸」軸，以 Post-Adaptive-LASSO 正則化流水線解構傳統線性因子模型（CAPM/FF5/FH7）的異象風險剝離失效問題，將對沖基金績效評估從「技能誤判」轉向「Exotic Beta 定價」。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `中长周期` | `监督回归` | `因子挖掘` | `人机协同可解释` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 用 Post-Adaptive-LASSO 從 44 個因子池中篩出 9 個核心因子構建 HF9 模型。② 核心 trick 是「Adaptive LASSO 頻率篩選 + OLS/AIC/BIC 終選」，利用 Oracle 屬性減少大係數偏差。③ 對因子挖掘軸★ 意義在於提供可解釋的稀疏因子結構，直接剝離偽 Alpha。④ 導讀給出樣本內 $R^2$ 達 85.34% (EW)，且將行業組合 Alpha 降至統計不顯著。

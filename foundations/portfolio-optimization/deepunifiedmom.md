@@ -1,10 +1,18 @@
+---
+title: "DeepUnifiedMom"
+description: "落點於「監督回歸 × 組合執行優化」軸，以 Multi-Task MoE 解構傳統 TSMOM 單週期/等權分配的結構性缺陷，將動量訊號生成與資本配置統一於端到端訓練迴圈。"
+---
 <!-- ontology-5axis data=量价表格 horizon=跨周期 paradigm=监督回归 alpha=组合执行优化 autonomy=全自动黑盒 -->
-
-# DeepUnifiedMom 解構（DeepUnifiedMom）
 
 > **發布**：2024-06-14 · （無 venue） · arXiv [2406.08742](https://arxiv.org/abs/2406.08742)
 > **QuantML 導讀**：[DeepUnifiedMom: 多任务学习及MoE统一时序动量资产组合构建](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247484736&idx=1&sn=3cde94d9b3c0644d8114bcd5092d0cf8&chksm=ce7e625ef909eb489cca0f1906a260bd34232218da58d78900852cb5cf1fdcb1c49ca2c4e78e#rd)
 > **核心定位**：落點於「監督回歸 × 組合執行優化」軸，以 Multi-Task MoE 解構傳統 TSMOM 單週期/等權分配的結構性缺陷，將動量訊號生成與資本配置統一於端到端訓練迴圈。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `跨周期` | `监督回归` | `组合执行优化` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 將快/中/慢速動量訊號預測與組合權重分配統一為多任務學習架構；② 核心 trick 為 Multi-gate MoE 分離週期依賴特徵，並引入 soft-capped Sharpe 損失直接優化資本分配網絡（CAN）；③ 對「組合執行優化」軸★，跳過傳統兩階段（先預測後優化）的誤差累積，以風險調整回報為錨點進行端到端梯度更新；④ 關鍵實證數字：測試期 Sharpe 2.33 / Sortino 3.88 / MDD -1.02%（未披露交易成本與滑點調整）。

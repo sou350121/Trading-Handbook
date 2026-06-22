@@ -1,10 +1,18 @@
+---
+title: "Attn-LOB"
+description: "落點於「微观盘口 × 强化学习 × 端到端表征」。解決了傳統 DRL 做市依賴手工 LOB 特徵導致狀態空間表達力不足，以及離散動作空間無法精細控制庫存與價差的 prior gap。"
+---
 <!-- ontology-5axis data=微观盘口 horizon=高频日内 paradigm=强化学习 alpha=端到端表征 autonomy=Agent自主演进 -->
-
-# Attn-LOB 解構（Attn-LOB）
 
 > **發布**：2025-04-14 · （無 venue）
 > **QuantML 導讀**：[基于深度强化学习的LOB做市策略研究](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490051&idx=1&sn=95f0134d1a0118c1482a676d988c50c7&chksm=ce7e7d1df909f40bf3ebeb6464f877a7bd356f0f96eb03335e0b57e04abd0ad343766019bea8#rd)
 > **核心定位**：落點於「微观盘口 × 强化学习 × 端到端表征」。解決了傳統 DRL 做市依賴手工 LOB 特徵（如 MLP/手工價差）導致狀態空間表達力不足，以及離散動作空間無法精細控制庫存與價差的 prior gap。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `微观盘口` | `高频日内` | `强化学习` | `端到端表征` | `Agent自主演进` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 以 Attn-LOB 網絡自動提取 LOB 時空特徵並預訓練，替代手工特徵工程。② 核心 trick 為結合 CNN-Inception-Attention 的混合架構與自定義混合獎勵函數（DP/TP/IP），並引入連續動作空間。③ 這對「端到端表征」軸★ 關鍵，因為它將 LOB 矩陣直接映射為策略隱狀態，繞過特徵降維的信息損耗。④ 導讀未給量化結果。

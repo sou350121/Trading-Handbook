@@ -1,10 +1,18 @@
+---
+title: "TPGN"
+description: "落點於量價表格與中長週期監督回歸，以端到端表徵取代傳統 RNN/Transformer 的遞歸或注意力機制，解決長程依賴捕捉與順序計算瓶頸的 prior gap。"
+---
 <!-- ontology-5axis data=量价表格 horizon=中长周期 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
-
-# TPGN 解構（TPGN）
 
 > **發布**：2024-12-01 · NeurIPS 2024
 > **QuantML 導讀**：[NIPS 24 | PGN：RNN 的新继任者](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488128&idx=1&sn=a8287377302d2cdf5d1d6ddc321cdf31&chksm=ce7e759ef909fc88f0bc9ddea5171b4bac84008972a60925fe3fcc4eff005e37503d2ba7525f#rd)
 > **核心定位**：落點於量價表格與中長週期監督回歸，以端到端表徵取代傳統 RNN/Transformer 的遞歸或注意力機制，解決長程依賴捕捉與順序計算瓶頸的 prior gap。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `中长周期` | `监督回归` | `端到端表征` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 提出 PGN 作為 RNN 繼任者，並擴展為 TPGN 框架處理長程時序預測。② 核心 trick 為一維序列二維重塑 + 雙分支並行提取長短期特徵 + 單門控全局融合，將信息傳播路徑縮短至 O(1)。③ 對「端到端表徵」軸★ 意義在於以並行計算與單門控機制徹底繞過 RNN 的梯度消失/順序計算瓶頸，同時保留語義捕捉能力。④ 導讀給出平均 MSE 降低 12.35%、MAE 降低 7.25%，且為單層架構。

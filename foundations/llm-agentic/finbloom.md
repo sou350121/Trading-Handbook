@@ -1,10 +1,18 @@
+---
+title: "FinBloom"
+description: "落點於「文本另类 × 生成式大模型 × Agent自主演进」。解了傳統 RAG 在金融場景的 prior gap：表格數據缺乏自然語言內在關係難以向量化，且靜態檢索無法匹配高頻動態數據流。FinBloom 透過 Agent 將 NL 轉為結構化請求函數，打通動態檢索瓶頸。"
+---
 <!-- ontology-5axis data=文本另类 horizon=跨周期 paradigm=生成式大模型 alpha=端到端表征 autonomy=Agent自主演进 -->
-
-# FinBloom 解構（FinBloom）
 
 > **發布**：2025-02-27 · （無 venue）
 > **QuantML 導讀**：[FinBloom：基于实时金融数据的知识增强LLM](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489469&idx=1&sn=56d5df9f8418020bc78f825c856cf69a&chksm=ce7e70a3f909f9b5f9f2df1d293c2bbc12d8d43664a642ccc197f0f1fef954bb08011031f6d5#rd)
 > **核心定位**：落點於「文本另类 × 生成式大模型 × Agent自主演进」。解了傳統 RAG 在金融場景的 prior gap：表格數據缺乏自然語言內在關係難以向量化，且靜態檢索無法匹配高頻動態數據流。FinBloom 透過 Agent 將 NL 轉為結構化請求函數，打通動態檢索瓶頸。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `文本另类` | `跨周期` | `生成式大模型` | `端到端表征` | `Agent自主演进` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 提出 FinBloom 框架，將 7B 模型微調為金融 Agent，自動生成結構化數據請求。② 核心 trick 為 NL-to-Function 映射結合參數高效微調與語義搜索，實現表格財務數據與實時新聞的動態檢索。③ 對「端到端表征」軸具突破意義，將靜態 RAG 升級為可解釋的結構化數據路由。④ 導讀未給量化結果。

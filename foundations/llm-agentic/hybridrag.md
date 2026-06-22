@@ -1,10 +1,18 @@
+---
+title: "HybridRAG"
+description: "落點於文本另类與生成式大模型軸，解決單一檢索在金融非結構化文本中「廣度與深度不可兼得」的 prior gap，透過雙路上下文拼接提升 LLM 財務問答的結構化推理與語義覆蓋。"
+---
 <!-- ontology-5axis data=文本另类 horizon=跨周期 paradigm=生成式大模型 alpha=因子挖掘 autonomy=人机协同可解释 -->
-
-# HybridRAG 解構（HybridRAG）
 
 > **發布**：2024-08-15 · （無 venue）
 > **QuantML 導讀**：[贝莱德&英伟达：HybridRAG结合GraphRAG以及VectorRAG的新型RAG系统](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485798&idx=1&sn=04b56d6bd5864325ee5b4195b88007c1&chksm=ce7e6e78f909e76e3ed448882a568bfb2c453d91fa76339713dbf5e89c3d23353107c4b57b34#rd)
 > **核心定位**：落點於文本另类與生成式大模型軸，解決單一檢索在金融非結構化文本中「廣度與深度不可兼得」的 prior gap，透過雙路上下文拼接提升 LLM 財務問答的結構化推理與語義覆蓋。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `文本另类` | `跨周期` | `生成式大模型` | `因子挖掘` | `人机协同可解释` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 融合 GraphRAG 與 VectorRAG 構建雙路檢索管道，專攻金融財報與電話會議問答。② 核心 trick 為「向量語義抓廣度、圖譜結構抓深度」，按序拼接上下文後輸入 LLM 生成。③ 對「因子挖掘」軸的價值在於將非結構化管理層語氣與關聯實體轉化為可程式化提取的結構化特徵。④ 導讀給出 HybridRAG 在忠實度與答案相關性均達 0.96，上下文召回率達 1。

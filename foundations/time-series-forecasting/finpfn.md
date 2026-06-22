@@ -1,10 +1,18 @@
+---
+title: "FinPFN"
+description: "落點於「元學習搜索 × 端到端表徵」，解決傳統靜態映射在機制轉換下的樣本外失效問題，將橫截面收益預測重構為條件於近期市場狀態的序列元任務。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=元学习搜索 alpha=端到端表征 autonomy=全自动黑盒 -->
-
-# FinPFN 解構（FinPFN）
 
 > **發布**：2025-12-11 · Journal of Financial Markets
 > **QuantML 導讀**：[市场风格切换下的元学习预测框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492645&idx=1&sn=a2f50ee9cbb86b08d2e02a064a3ea782&chksm=ce7d833bf90a0a2d47f001586abf8a758e9cf68f6cb9c3d8185f41527b14b232155181681f4f#rd)
 > **核心定位**：落點於「元學習搜索 × 端到端表徵」，解決傳統靜態映射在機制轉換（Regime Shift）下的樣本外失效問題，將橫截面收益預測重構為條件於近期市場狀態的序列元任務。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `元学习搜索` | `端到端表征` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 將靜態特徵到收益映射重構為序列元任務，直接在真實金融數據上訓練 Transformer 元學習模型。② 核心 trick 是構建「金融先驗（Financial Prior）」，以最近一期的特徵-收益關係為條件，實現單次前向傳遞的機制自適應。③ 對 `autonomy=全自動黑盒` 軸具指標意義：徹底移除手動特徵工程與頻繁重估（Retraining）依賴，實現零延遲推斷。④ 關鍵實證：CSI 500 樣本外 IR 達 0.85，機制轉換期 IR 達 0.97，顯著優於靜態樹模型。

@@ -1,10 +1,18 @@
+---
+title: "AlphaQuanter"
+description: "落點於「單Agent RL 端到端優化 LLM 工具調用與交易決策」，解決了多Agent辯論信號不一致與Prompt方法缺乏前瞻回報優化的Prior Gap。"
+---
 <!-- ontology-5axis data=多模态 horizon=日频波段 paradigm=强化学习 alpha=端到端表征 autonomy=Agent自主演进 -->
-
-# AlphaQuanter 解構（AlphaQuanter）
 
 > **發布**：2025-10-19 · （無 venue）
 > **QuantML 導讀**：[AlphaQuanter：端到端Agentic强化学习交易框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492036&idx=1&sn=338b316b4b7fd9a2a1af6b8509124d98&chksm=ce7d86daf90a0fcc0e2762580886e6815807930b82e7ea5f206f6b43a96a496f6a6d12894a55#rd)
 > **核心定位**：落點於「單Agent RL 端到端優化 LLM 工具調用與交易決策」，解決了多Agent辯論信號不一致與Prompt方法缺乏前瞻回報優化的Prior Gap。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `多模态` | `日频波段` | `强化学习` | `端到端表征` | `Agent自主演进` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 提出單Agent框架，用RL端到端優化LLM工具調用與交易決策。② 核心Trick是構建工具增強MDP與結果+過程雙獎勵，用GRPO訓練。③ 對「端到端表征」軸★，將信息獲取內化為策略行動而非靜態特徵。④ 導讀未給完整量化結果，僅披露7B模型較最強基準絕對ARR增益高達18.45%。

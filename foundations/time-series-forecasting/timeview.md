@@ -1,10 +1,18 @@
+---
+title: "TIMEVIEW"
+description: "將時間序列XAI從「逐點歸因」轉向「趨勢組合映射」，解決黑盒模型在長週期預測中無法直觀對齊人類趨勢認知與反事實推演的Prior Gap。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=人机协同可解释 -->
-
-# TIMEVIEW 解構（TIMEVIEW）
 
 > **發布**：2024-06-16 · ICLR 2024
 > **QuantML 導讀**：[ICLR 2024 | 通向透明的时间序列预测](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247484754&idx=1&sn=44bcf54c0caa1001ac343648d89a9407&chksm=ce7e624cf909eb5a44ce762087ef23bd8cfeb663aa623f0d729b99d56450abafd525d927bc5e#rd)
 > **核心定位**：將時間序列XAI從「逐點歸因（bottom-up）」轉向「趨勢組合映射（top-down）」，解決黑盒模型在長週期預測中無法直觀對齊人類趨勢認知與反事實推演的Prior Gap。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `监督回归` | `端到端表征` | `人机协同可解释` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** 提出雙層透明度框架，將靜態特徵映射至B樣條係數以生成預測軌跡，並透過Motif與Composition分解實現趨勢級可解釋性。核心trick是以「模式組合映射」取代傳統SHAP/LIME的逐點歸因，使模型輸出直接對齊人類對趨勢與屬性的認知。對日頻波段軸而言，它提供了一條「不犧牲過多糖分即可視覺化alpha衰減路徑」的工程路徑。實證僅提及「性能輕微折損且優於透明基線」，未披露具體數值。

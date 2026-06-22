@@ -1,10 +1,18 @@
+---
+title: "ES-RNN"
+description: "將 M4 冠軍的 C++ 統計-深度混合架構移植至 PyTorch/GPU，解了「經典指數平滑與 RNN 聯合訓練在 CPU 上迭代成本過高、難以批量處理」的工程瓶頸，使端到端時間序列預測進入可快速實驗的階段。"
+---
 <!-- ontology-5axis data=量价表格 horizon=跨周期 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
-
-# ES-RNN 解構（ES-RNN）
 
 > **發布**：2024-11-24 · （無 venue）
 > **QuantML 導讀**：[Fast ES-RNN: 基于GPU的ES-RNN算法实现](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487904&idx=1&sn=a042e89489254d71b1c712fc86608f59&chksm=ce7e76bef909ffa84564297956fb74331f1e79623435c6360109560f3c2ac15d565120e2cfc2#rd)
 > **核心定位**：將 M4 冠軍的 C++ 統計-深度混合架構移植至 PyTorch/GPU，解了「經典指數平滑與 RNN 聯合訓練在 CPU 上迭代成本過高、難以批量處理」的工程瓶頸，使端到端時間序列預測進入可快速實驗的階段。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `跨周期` | `监督回归` | `端到端表征` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** 將 Smyl 的 ES-RNN 從 CPU/C++ 重構為 PyTorch 向量化實現，透過 GPU 並行化 Holt-Winters 預處理與擴張 LSTM 的聯合訓練，實現 322 倍加速。對量價軸而言，此架構保留了經典狀態空間模型的歸納偏置，同時以端到端方式學習殘差，是「統計先驗 + 深度表征」的標準範例。導讀未給量化結果。

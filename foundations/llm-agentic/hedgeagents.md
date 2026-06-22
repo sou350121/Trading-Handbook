@@ -1,10 +1,18 @@
+---
+title: "HedgeAgents"
+description: "將傳統對沖基金架構映射為 LLM 多智能體系統，以結構化會議機制替代單點 RL/LLM 的脆弱性。解了極端波動下風險預算硬編碼與提示詞漂移的 prior gap。"
+---
 <!-- ontology-5axis data=多模态 horizon=日频波段 paradigm=生成式大模型 alpha=多智能体博弈 autonomy=Agent自主演进 -->
-
-# HedgeAgents 解構（HedgeAgents）
 
 > **發布**：2025-02-21 · （無 venue）
 > **QuantML 導讀**：[HedgeAgents：基于对冲策略的多智能体金融交易系统](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489386&idx=1&sn=d7bcfd851bc02128234d2080109c02d5&chksm=ce7e7074f909f962bc54d1576360ca0783d9533f078bbdb32ee23871c3808f36f4fe51394dcb#rd)
 > **核心定位**：將傳統對沖基金架構映射為 LLM 多智能體系統，以結構化會議機制替代單點 RL/LLM 的脆弱性。解了極端波動下風險預算硬編碼與提示詞漂移的 prior gap。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `多模态` | `日频波段` | `生成式大模型` | `多智能体博弈` | `Agent自主演进` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 將對沖基金架構映射為 LLM 多智能體系統。② 核心 trick 是預算分配(BAC)、經驗分享(ESC)、極端市場(EMC) 三類會議機制與記憶迭代。③ 對「多智能體博弈」軸★，用組織協作替代單兵算法的崩潰模式。④ 導讀給出 ARR 71.60% / SR 2.41 / MDD 14.21%。

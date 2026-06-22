@@ -1,10 +1,18 @@
+---
+title: "MacroHFT"
+description: "落點於「高頻日內 × 強化學習 × 組合執行優化」軸，解決傳統單代理 RL 在非平穩加密貨幣市場中因過擬合與極端行情導致的決策單邊化與回撤失控問題。"
+---
 <!-- ontology-5axis data=微观盘口 horizon=高频日内 paradigm=强化学习 alpha=组合执行优化 autonomy=全自动黑盒 -->
-
-# MacroHFT 解構（MacroHFT）
 
 > **發布**：2024-06-23 · KDD'24
 > **QuantML 導讀**：[KDD 24 | 基于增强记忆的上下文感知强化学习的高频交易框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247484852&idx=1&sn=612490637ac96cfa86d829e9ed665c2b&chksm=ce7e62aaf909ebbc864a29a4af3cc6db60eb2930f7dade6882515a61d46222e8877e8018fd07#rd)
 > **核心定位**：落點於「高頻日內 × 強化學習 × 組合執行優化」軸，解決傳統單代理 RL 在非平穩加密貨幣市場中因過擬合與極端行情導致的決策單邊化與回撤失控問題。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `微观盘口` | `高频日内` | `强化学习` | `组合执行优化` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** 提出 MacroHFT 雙階段分層 RL 框架，將市場按趨勢/波動率分解為 6 種 regime 訓練條件子代理，再由帶記憶模塊的超代理以 softmax 權重動態混合決策。核心 trick 在於「條件適配器（Conditional Adapter）+ 關鍵向量記憶檢索」打破單一策略的過擬合邊界。對「組合執行優化」軸而言，它將宏觀狀態感知內嵌至微觀訂單流決策，實現 regime-aware 的權重路由。關鍵實證數字：未披露。

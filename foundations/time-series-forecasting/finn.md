@@ -1,10 +1,18 @@
+---
+title: "FINN扩展框架"
+description: "落點於高頻盤口數據的端到端監督回歸，解決了現有FPGA工具鏈對循環神經網絡缺乏通用化、混合精度硬件部署支持的工程斷層。"
+---
 <!-- ontology-5axis data=微观盘口 horizon=高频日内 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
-
-# FINN扩展框架 解構（FINN扩展框架）
 
 > **發布**：2025-10-04 · （無 venue）
 > **QuantML 導讀**：[面向FPGA的通用化LSTM端到端硬件加速框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491869&idx=1&sn=a710e842d97fb7d4b0eaaeb8862c1f45&chksm=ce7d8603f90a0f15cfff5831ddf07697a825b502e40bdd5cb18b59511cd599c07ddcee4c41e1#rd)
 > **核心定位**：落點於高頻盤口數據的端到端監督回歸，解決了現有FPGA工具鏈對循環神經網絡缺乏通用化、混合精度硬件部署支持的工程斷層。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `微观盘口` | `高频日内` | `监督回归` | `端到端表征` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 將ONNX Scan算子引入LSTM循環建模，打通FINN編譯器對RNN的通用化硬件映射。② 核心trick是通過「流線化」轉換將浮點運算吸收至MultiThreshold層，實現純整數混合精度量化與IP自動生成。③ 對高頻軸而言，它繞過了傳統定制FPGA邏輯的開發瓶頸，使量化ConvLSTM能在邊緣FPGA上實現單樣本推論。④ 導讀未給量化結果。

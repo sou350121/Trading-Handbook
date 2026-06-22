@@ -1,10 +1,18 @@
+---
+title: "FinGAT"
+description: "落點於「圖關係 × 日頻波段 × 監督回歸 × 端到端表徵 × 全自動黑盒」。解了傳統金融GNN依賴靜態先驗圖的 prior gap，將圖拓撲學習與 Top-K 組合構建目標直接對齊。"
+---
 <!-- ontology-5axis data=图关系 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
-
-# FinGAT 解構（FinGAT）
 
 > **發布**：2024-09-19 · （無 venue）
 > **QuantML 導讀**：[FinGAT：金融图注意力网络](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486368&idx=1&sn=63d6932b9216c096666e3825ec6a94be&chksm=ce7e6cbef909e5a89a61963e14f6d1df6ca877fce7d444dd812d755e02ba45a7e9eba34a50df#rd)
 > **核心定位**：落點於「圖關係 × 日頻波段 × 監督回歸 × 端到端表徵 × 全自動黑盒」。解了傳統金融GNN依賴靜態先驗圖（如相關係數閾值或固定行業分類）的 prior gap，將圖拓撲學習與 Top-K 組合構建目標直接對齊。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `图关系` | `日频波段` | `监督回归` | `端到端表征` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 以動態 GAT 替代預定義鄰接矩陣，自動捕獲股票內/行業間潛在交互；② 核心 trick 為「行業池化降維 + 多任務聯合優化（Pairwise Ranking + CE）」；③ 對「端到端表徵」軸★：將優化目標從點預測轉向組合排序，直接對齊實盤 Top-K 選股邏輯；④ 關鍵實證數字：（未披露具體數值，導讀僅稱「顯著提升」）。

@@ -1,10 +1,18 @@
+---
+title: "DeepVol"
+description: "落點於「量價表格→日頻波段」的監督回歸，解了傳統波動率模型需手動構建已實現指標的預處理瓶頸，直接以擴張因果卷積對齊高頻原始收益與日度波動率標籤。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=风险择时 autonomy=全自动黑盒 -->
-
-# DeepVol 解構（DeepVol）
 
 > **發布**：2025-05-04 · （無 venue）
 > **QuantML 導讀**：[DeepVol：基于高频数据的波动率预测模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490274&idx=1&sn=3c9bd18e7590210ddf1f00e54e7fcd15&chksm=ce7e7dfcf909f4eadc57481aa05ba5aa2a47c3f0681bf340887236666686ac36266b8767f84cf#rd)
 > **核心定位**：落點於「量價表格→日頻波段」的監督回歸，解了傳統波動率模型需手動構建已實現指標（Realized Measures）的預處理瓶頸，直接以擴張因果卷積（DCC）對齊高頻原始收益與日度波動率標籤。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `监督回归` | `风险择时` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 用 Dilated Causal Convolution 直接吃原始高頻收益，跳過 Realized Variance 等指標的預處理與信息損耗。② 核心 trick 是指數級擴張感受野 + 殘差連接，在參數不暴增的前提下捕獲長程依賴。③ 對「風險擇時」軸★：提供純數據驅動的次日波動率預測，便於動態調整組合風險預算。④ 導讀未給量化結果，僅聲明「顯著提高了基線模型的性能」。

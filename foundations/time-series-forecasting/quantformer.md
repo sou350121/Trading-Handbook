@@ -1,10 +1,18 @@
+---
+title: "Quantformer"
+description: "將 NLP Transformer 的編碼器結構遷移至量價表格，以線性層替換詞嵌入並移除解碼器，專為單期收益分位數預測重構注意力機制，填補了傳統序列模型處理純數值金融數據時的嵌入失配與自回歸冗餘。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=因子挖掘 autonomy=全自动黑盒 -->
-
-# Quantformer 解構（Quantformer）
 
 > **發布**：2025-06-05 · （無 venue）
 > **QuantML 導讀**：[Quantformer：从注意力到利润的量化策略](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490617&idx=1&sn=7f791154239ed54d2ce275fdf769a442&chksm=ce7e7b27f909f2311e57298b20891b79da0c85f55a8dfefdd37e49155403988b9ec61d0327a5#rd)
 > **核心定位**：將 NLP Transformer 的編碼器結構遷移至量價表格，以線性層替換詞嵌入並移除解碼器，專為單期收益分位數預測重構注意力機制，填補了傳統序列模型處理純數值金融數據時的嵌入失配與自回歸冗餘。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `监督回归` | `因子挖掘` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 提出 Quantformer，將 Transformer 編碼器直接用於量價數據的單期收益預測。② 核心 trick 是以標準線性層替換 NLP 詞嵌入，並移除解碼器與掩碼機制，將 seq2seq 轉為單期分位數回歸/分類。③ 這對「因子挖掘」軸★ 的意義在於，用全局自注意力直接捕捉多維量價特徵的長距離依賴，避免傳統因子工程的手動特徵交叉。④ 導讀未給量化結果。

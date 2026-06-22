@@ -1,10 +1,18 @@
+---
+title: "DeepFund"
+description: "五軸落點於「生成式大模型 × 組合執行優化」的評估基準層，解了歷史回測中訓練語料覆蓋測試期導致的「時間旅行」與信息泄露 prior gap。"
+---
 <!-- ontology-5axis data=多模态 horizon=日频波段 paradigm=生成式大模型 alpha=组合执行优化 autonomy=Agent自主演进 -->
-
-# DeepFund 解構（DeepFund）
 
 > **發布**：2025-10-28 · NeurIPS25
 > **QuantML 導讀**：[NeurIPS 25 ｜ AI投资：是财富密码，还是回测陷阱？](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492144&idx=1&sn=5f8cd500aef477194ef9912676a6400b&chksm=ce7d852ef90a0c383fa4798ef6b5ed71880d090bac15469c2ac08cb8477412b8e40ffc7dc138#rd)
 > **核心定位**：五軸落點於「生成式大模型 × 組合執行優化」的評估基準層，解了歷史回測中訓練語料覆蓋測試期導致的「時間旅行」與信息泄露 prior gap。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `多模态` | `日频波段` | `生成式大模型` | `组合执行优化` | `Agent自主演进` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 構建無信息洩漏的實時正向測試基準 ② 多智能體工作流強制知識截止期後數據輸入 ③ 對「生成式大模型」軸★，揭示LLM在真實交易中的個性分化與淨虧損常態 ④ 僅1/9模型錄得+1.1%累積回報，多數淨虧損。

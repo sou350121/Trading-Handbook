@@ -1,10 +1,18 @@
+---
+title: "Stock-Evol-Instruct"
+description: "落點於日頻波段與Agent自主演進，解決純DRL對非結構化新聞語義的鈍感，以及純LLM缺乏動態市場反饋閉環的prior gap。"
+---
 <!-- ontology-5axis data=多模态 horizon=日频波段 paradigm=强化学习 alpha=端到端表征 autonomy=Agent自主演进 -->
-
-# Stock-Evol-Instruct 解構（Stock-Evol-Instruct）
 
 > **發布**：2025-07-20 · （無 venue）
 > **QuantML 導讀**：[结合强化学习与LLM的量化模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491063&idx=1&sn=de2d415fa30550d0c606827830db0cdd&chksm=ce7e7ae9f909f3ff02a63977c4f3f6972f4cf4837fb3b858914890f3a4ffc5cfe28bf201991a#rd)
 > **核心定位**：落點於日頻波段與Agent自主演進，解決純DRL對非結構化新聞語義的鈍感，以及純LLM缺乏動態市場反饋閉環的prior gap。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `多模态` | `日频波段` | `强化学习` | `端到端表征` | `Agent自主演进` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** 結合DQN/DDQN與LLM，提出Stock-Evol-Instruct指令演進演算法微調大模型，實現新聞輔助的日頻股票交易。核心trick是用LLM分析新聞動態調整RL獎勵，並設計自動指令生成演算法產生高質量交易指令微調LLM，實現策略自主演進。這對「端到端表徵」與「Agent自主演進」軸具指標意義，因它將新聞語義直接映射為獎勵函數與監督訊號，繞過傳統因子工程。導讀給出Mistral-7B在JPM上ROI達53.15%，顯著超越純RL基線。

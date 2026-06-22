@@ -1,10 +1,18 @@
+---
+title: "aLLM4TS"
+description: "落點於「跨周期 × 生成式大模型」軸，解決傳統時間序列表示學習與 LLM 因果預訓練目標錯配、且破壞時間依賴性的 Prior Gap。"
+---
 <!-- ontology-5axis data=量价表格 horizon=跨周期 paradigm=生成式大模型 alpha=端到端表征 autonomy=全自动黑盒 -->
-
-# aLLM4TS 解構（aLLM4TS）
 
 > **發布**：2024-08-31 · ICML24
 > **QuantML 導讀**：[ICML 24 | 将LLM适配于时间序列表示学习](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486045&idx=1&sn=81f477c8b91ec201db5528a9da022f27&chksm=ce7e6d43f909e45525dd8fa38e5b10c6f4a4eedcc30f4e9c6d1a8296a33f5895be6cfe48f6a9#rd)
 > **核心定位**：落點於「跨周期 × 生成式大模型」軸，解決傳統時間序列表示學習（對比/掩碼）與 LLM 因果預訓練目標錯配、且破壞時間依賴性的 Prior Gap。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `跨周期` | `生成式大模型` | `端到端表征` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 將時間序列預測重構為自監督多補丁預測任務。② 核心 Trick 為「因果連續預訓練 + 補丁級解碼層」兩階段策略，替代傳統序列級解碼。③ 對「跨周期/生成式大模型」軸★，因保持時間依賴性且與 LLM 預訓練目標一致。④ 關鍵實證：長期預測平均優於 GPT4TS 9.71%，異常檢測 F1 達 87.51%。

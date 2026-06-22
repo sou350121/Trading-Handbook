@@ -1,10 +1,18 @@
+---
+title: "FinVision"
+description: "落點於「生成式大模型 × 多智能体博弈」軸，解決傳統 CV/RL 將金融數據過度簡化為單變量或黑箱決策的解釋性與多模態整合 gap。"
+---
 <!-- ontology-5axis data=多模态 horizon=日频波段 paradigm=生成式大模型 alpha=多智能体博弈 autonomy=Agent自主演进 -->
-
-# FinVision 解構（FinVision）
 
 > **發布**：2024-11-15 · （無 venue）
 > **QuantML 導讀**：[FinVision: 基于多模态多智能体框架的股票市场预测系统](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487733&idx=1&sn=e95f5aa14a6e742614f1f3aeba626605&chksm=ce7e77ebf909fefd8a81e646e374c3b12b5a2093bc3b72acbf27353f0c2f502bc885aeef0045#rd)
 > **核心定位**：落點於「生成式大模型 × 多智能体博弈」軸，解決傳統 CV/RL 將金融數據過度簡化為單變量或黑箱決策的解釋性與多模態整合 gap。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `多模态` | `日频波段` | `生成式大模型` | `多智能体博弈` | `Agent自主演进` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** 提出 FinVision 多模态多智能体框架，結合 LLM 視覺與文本推理，實現可解釋的日频股票交易決策。核心 trick 是引入摘要、技術分析與反思三模塊協同的 Agent 工作流，將 K 線圖與新聞文本統一為多模態輸入，並內嵌風險管理。這對「多智能体博弈」軸的關鍵在於用 LangGraph 狀態機替代端到端 RL 訓練，以推理換訓練成本。實證顯示在 AAPL 上年化收益率達 14.79%，夏普比率 1.20，優於同期買入持有策略。

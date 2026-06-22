@@ -1,10 +1,18 @@
+---
+title: "FinRL-DeepSeek"
+description: "落點於「文本另类 × 强化学习 × 风险择时」軸。解了傳統 RL 交易代理忽略非結構化新聞資訊與尾部風險管理的 prior gap，以極簡的 LLM 評分擾動機制替代複雜的多代理或特徵工程。"
+---
 <!-- ontology-5axis data=文本另类 horizon=日频波段 paradigm=强化学习 alpha=风险择时 autonomy=全自动黑盒 -->
-
-# FinRL-DeepSeek 解構（FinRL-DeepSeek）
 
 > **發布**：2025-02-13 · （無 venue）
 > **QuantML 導讀**：[FinRL-DeepSeek：基于LLM的强化学习交易代理](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489251&idx=1&sn=a7be7c5be274ad88e6f16c4e4205b86f&chksm=ce7e71fdf909f8eb6e3a9e6f8e1cca7d45f2beec0d957f436532657a06e72a10f4d25fc62f69#rd)
 > **核心定位**：落點於「文本另类 × 强化学习 × 风险择时」軸。解了傳統 RL 交易代理忽略非結構化新聞資訊與尾部風險管理的 prior gap，以極簡的 LLM 評分擾動機制替代複雜的多代理或特徵工程。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `文本另类` | `日频波段` | `强化学习` | `风险择时` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 將 LLM 生成的個股推薦與風險評分以微小係數直接乘入 PPO/CVaR-PPO 的動作空間與軌跡回報。② 核心 trick 在於「擾動係數接近 1」的線性注入，避免破壞 RL 策略梯度穩定性。③ 這對「风险择时」軸★ 具工程啟發：用非結構化文本直接約束 RL 的尾部風險暴露，無需額外因子挖掘。④ 導讀未給量化結果。

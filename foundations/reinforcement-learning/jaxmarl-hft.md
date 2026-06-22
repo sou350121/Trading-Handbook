@@ -1,10 +1,18 @@
+---
+title: "JaxMARL-HFT"
+description: "落點於「高頻日內 × 多智能體博弈」軸，解決傳統 HFT MARL 因 CPU-GPU 傳輸瓶頸與同構限制導致的算力不可擴展問題，將並行訓練從單智能體/預定義對手升級為全鏈路 GPU 異構並發。"
+---
 <!-- ontology-5axis data=微观盘口 horizon=高频日内 paradigm=强化学习 alpha=多智能体博弈 autonomy=全自动黑盒 -->
-
-# JaxMARL-HFT 解構（JaxMARL-HFT）
 
 > **發布**：2025-11-05 · （無 venue）
 > **QuantML 導讀**：[240倍性能飞跃：首个GPU高频交易MARL框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492240&idx=1&sn=f9b15a5c11c4b2a877e033551bb0bdc4&chksm=ce7d858ef90a0c9825b228018974a095c0b3a3527d1227742796efc6254a817e5805573f58c6#rd)
 > **核心定位**：落點於「高頻日內 × 多智能體博弈」軸，解決傳統 HFT MARL 因 CPU-GPU 傳輸瓶頸與同構限制導致的算力不可擴展問題，將並行訓練從單智能體/預定義對手升級為全鏈路 GPU 異構並發。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `微观盘口` | `高频日内` | `强化学习` | `多智能体博弈` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 首個專為 HFT 與 MBO 數據設計的 GPU 加速 MARL 框架。② 核心 trick 為利用 JAX `vmap` 實現跨片段與跨同類型智能體雙層並行，全鏈路 GPU 執行徹底消除 CPU-GPU 傳輸延遲。③ 對「高頻日內」軸的關鍵意義在於將環境吞吐量與訓練規模解耦，使大規模超參數掃描與異構對手博弈成為工程可行。④ 關鍵實證數字：吞吐量提升最高240倍。

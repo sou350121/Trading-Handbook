@@ -1,10 +1,18 @@
+---
+title: "DGNSDE"
+description: "落點於「端到端表征 × 監督回歸」軸，以連續時間幾何 SDE 與 DTW 時延圖打破傳統 GNN 的同步/確定性假設，解決低信噪比截面聯動中的時間錯配與過擬合 prior gap。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
-
-# DGNSDE 解構（DGNSDE）
 
 > **發布**：2026-05-29 · WWW26
 > **QuantML 導讀**：[如何捕捉市场的“领先-滞后”效应？融合时滞图与几何SDE的选股模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493952&idx=1&sn=e38563c8c9bb2e8ea84ab58bcf8d3077&chksm=ce7d8e5ef90a07482dfd143d7bdba42a6ecbb9d899217cdb55c49ebc2e51e3962a96d67fd356#rd)
 > **核心定位**：落點於「端到端表征 × 監督回歸」軸，以連續時間幾何 SDE 與 DTW 時延圖打破傳統 GNN 的同步/確定性假設，解決低信噪比截面聯動中的時間錯配與過擬合 prior gap。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `监督回归` | `端到端表征` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 在連續時間軸上顯式建模股票「先導-滯後」效應與隨機波動，替代離散步長更新。② 核心 trick：雙層 DTW 測算分數天時延並平移對齊，結合三次 Hermite 插值實現非同步信息傳遞至 SDE 漂移項。③ 對「端到端表征」軸的關鍵價值在於以物理直覺（連續演化、非負約束、隨機擴散正則化）替代黑盒序列擬合，抑制微觀雜訊過擬合。④ 關鍵實證：CSI300 測試期 RankIC 0.058 / IR 2.921 / ARR 60.9%。

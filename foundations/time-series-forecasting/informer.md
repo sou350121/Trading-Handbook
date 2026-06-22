@@ -1,10 +1,18 @@
+---
+title: "Informer"
+description: "將 Informer 架構引入 BTC 高頻量價預測，透過客製化損失函數與滾動窗口評估，解決傳統 Transformer 在金融時間序列中對極端回報與交易成本敏感的 prior gap。"
+---
 <!-- ontology-5axis data=量价表格 horizon=高频日内 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
-
-# Informer 解構（Informer）
 
 > **發布**：2025-03-25 · （無 venue）
 > **QuantML 導讀**：[基于 Informer 结构的高频比特币策略研究](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489777&idx=1&sn=fa21f1ac62aa7e2e2aefc89c4af56128&chksm=ce7e7feff909f6f999ebd2464ee617a84209323139b43d42ac2c36dac709816923569a720a84#rd)
 > **核心定位**：將 Informer 架構引入 BTC 高頻量價預測，透過客製化損失函數（GMADL）與滾動窗口評估，解決傳統 Transformer 在金融時間序列中對極端回報與交易成本敏感的 prior gap。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `高频日内` | `监督回归` | `端到端表征` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** 本文將 Informer 架構應用於 BTC 5/15/30 分鐘量價數據，透過對比 RMSE、Quantile 與 GMADL 損失函數，驗證端到端深度學習信號在頻繁換倉環境下的有效性。核心 trick 在於以 GMADL 損失函數替代傳統 MSE，使模型對高頻回報的極值與趨勢轉折更魯棒。這對「端到端表征」軸具指標意義：證明客製化損失設計比單純堆疊注意力層更能決定高頻策略的實戰存活率。關鍵實證數字：5 分鐘 GMADL 策略年化回報率達到 115%，最大回撤僅為 32.7%。

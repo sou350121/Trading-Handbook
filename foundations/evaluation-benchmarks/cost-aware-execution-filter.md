@@ -1,10 +1,18 @@
+---
+title: "Cost-Aware Execution Filter"
+description: "落點於「組合執行優化」與「監督回歸」的交叉軸，解決了高頻預測中「統計誤差最小化」與「實盤淨值最大化」的 Prediction-to-Trading Gap。將優化重心從預測端架構複雜度後移至執行端摩擦覆蓋邏輯。"
+---
 <!-- ontology-5axis data=量价表格 horizon=高频日内 paradigm=监督回归 alpha=组合执行优化 autonomy=人机协同可解释 -->
-
-# Cost-Aware Execution Filter 解構（Cost-Aware Execution Filter）
 
 > **發布**：2026-05-31 · （無 venue）
 > **QuantML 導讀**：[从年化 129% 到巨亏 -83.9% 仅需 10bps 成本？](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493963&idx=1&sn=9e239a51619ce3ed480a3c9b71d18894&chksm=ce7d8e55f90a07434f83e370e9208c2c3be0ac1d2cfcb28d927375c119a05b3676cb7020d5a0#rd)
 > **核心定位**：落點於「組合執行優化」與「監督回歸」的交叉軸，解決了高頻預測中「統計誤差最小化」與「實盤淨值最大化」的 Prediction-to-Trading Gap。將優化重心從預測端架構複雜度後移至執行端摩擦覆蓋邏輯。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `高频日内` | `监督回归` | `组合执行优化` | `人机协同可解释` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 提出成本感知執行過濾器（CA），將預測信號轉化為交易決策的觸發條件從「符號判斷」升級為「幅度覆蓋摩擦成本」。② 核心 trick 是動態閾值過濾：僅當 `|預測收益| > 成本係數 × 調倉幅度` 時才執行，否則維持原倉位。③ 對「組合執行優化」軸而言，它證明執行端紀律的邊際貢獻遠超預測端架構複雜度。④ 關鍵實證：引入 CA 後，XGBoost 做多策略交易次數從 10,619 次銳減至 251 次，年化收益率從 -64.00% 修復至 65.40%。

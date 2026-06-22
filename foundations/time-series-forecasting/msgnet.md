@@ -1,10 +1,18 @@
+---
+title: "MSGNet"
+description: "落點於「跨周期監督回歸」與「端到端黑盒」交匯處，以頻譜分解強制剝離週期先驗，再用動態圖卷積重構變量條件依賴，解了傳統 Transformer 注意力稀疏與靜態 GNN 無法適配非平穩相關性矩陣的 prior gap。"
+---
 <!-- ontology-5axis data=量价表格 horizon=跨周期 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
-
-# MSGNet 解構（MSGNet）
 
 > **發布**：2025-03-20 · （無 venue）
 > **QuantML 導讀**：[MSGNet：多尺度融合相关性学习的时间序列预测模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489733&idx=1&sn=ec9f8f489d2b860a990e098a30481e17&chksm=ce7e7fdbf909f6cd89db2aaf46100d9dff132d8fc4d33a832ad705ac2dbe8d1e8e6bc7b9e3b1#rd)
 > **核心定位**：落點於「跨周期監督回歸」與「端到端黑盒」交匯處，以頻譜分解強制剝離週期先驗，再用動態圖卷積重構變量條件依賴，解了傳統 Transformer 注意力稀疏與靜態 GNN 無法適配非平穩相關性矩陣的 prior gap。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `跨周期` | `监督回归` | `端到端表征` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 提出多尺度融合架構，透過FFT動態識別週期並重塑張量。② 核心 trick 為自適應混合跳圖卷積結合頻譜幅度加權聚合。③ 此設計直接強化了跨周期軸上的序列間相關性捕獲能力。④ 在Flight數據集上，MSE從0.265降至0.208，MAE從0.372降至0.321。

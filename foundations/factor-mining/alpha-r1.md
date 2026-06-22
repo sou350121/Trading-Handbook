@@ -1,10 +1,18 @@
+---
+title: "Alpha-R1"
+description: "將因子篩選從「靜態數值回歸」轉為「語義條件門控」，用 GRPO 對齊 8B 推理模型，以價格與新聞雙模態上下文動態激活/停用因子，直擊非平穩市場中的模型設定錯誤與 Alpha 衰減。"
+---
 <!-- ontology-5axis data=多模态 horizon=日频波段 paradigm=强化学习 alpha=因子挖掘 autonomy=人机协同可解释 -->
-
-# Alpha-R1 解構（Alpha-R1）
 
 > **發布**：2025-12-30 · （無 venue）
 > **QuantML 導讀**：[交大 x 跃阶AI | Alpha-R1： 首个面向Alpha因子筛选的LLM推理模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492859&idx=1&sn=e63a9a823aa0ee2f7be4cb154a9f3bee&chksm=ce7d83e5f90a0af32a3025fb55340075ecb9e3dde750e9244e5304f2cd5514f2f53a7fb6487d#rd)
 > **核心定位**：將因子篩選從「靜態數值回歸」轉為「語義條件門控」，用 GRPO 對齊 8B 推理模型，以價格與新聞雙模態上下文動態激活/停用因子，直擊非平穩市場中的模型設定錯誤（Model Misspecification）與 Alpha 衰減。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `多模态` | `日频波段` | `强化学习` | `因子挖掘` | `人机协同可解释` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 用 GRPO 將 8B LLM 對齊至客觀市場回報，取代傳統靜態權重或純數值 RL。② 核心 trick 是「雙層語義上下文」+「條件門控」：LLM 讀懂因子失效條件與當前新聞/價格狀態，按需開關因子。③ 對因子挖掘軸★：把非平穩性適配從「參數重估」外包給「語義推理」，降低過擬合風險。④ 域內 CSI 300 夏普比率 1.62 / 最大回撤 6.76%，域外 CSI 1000 零樣本夏普比率 4.03。

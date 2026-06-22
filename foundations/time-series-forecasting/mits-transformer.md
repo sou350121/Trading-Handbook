@@ -1,10 +1,18 @@
+---
+title: "MiTS-Transformer"
+description: "落點於「監督回歸 × 端到端表徵」軸，解決原始 Transformer 離散嵌入層與連續時間序列的 prior gap，以最小改動重構 Seq2Seq 架構。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
-
-# MiTS-Transformer 解構（MiTS-Transformer）
 
 > **發布**：2025-04-20 · （無 venue）
 > **QuantML 導讀**：[连续值预测：最小时间序列Transformer](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490128&idx=1&sn=aa5df5ea7f3568a8a1a52a2ef9271141&chksm=ce7e7d4ef909f458286d010b50cfb7470fa97cab8ac8e04443b37c79bfda71d0c0a063fb5015#rd)
 > **核心定位**：落點於「監督回歸 × 端到端表徵」軸，解決原始 Transformer 離散嵌入層與連續時間序列的 prior gap，以最小改動重構 Seq2Seq 架構。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `监督回归` | `端到端表征` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** 將原始 Transformer 的離散 Token 嵌入層替換為線性層，實現連續值輸入的最小適配（MiTS）；提出位置編碼擴展機制（PoTS），在低維模型計算中嵌入高維位置信息，緩解長序列建模與參數爆炸的矛盾。此設計對「端到端表徵」軸★ 具有工程啟發性，證明極簡架構在連續序列上可透過解耦模型維度與位置維度提升泛化。關鍵實證數字：單序列健全性檢查最終 MSE 誤差為 0.23（導讀給出）。

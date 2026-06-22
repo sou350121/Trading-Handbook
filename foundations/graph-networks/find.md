@@ -1,10 +1,18 @@
+---
+title: "FinD³"
+description: "落點於日频波段监督回归，解了傳統MTS坍缩特徵與靜態GNN無法捕捉Regime Shift的Prior Gap。將SSM狀態轉移與超圖拓撲更新統一為端到端可微流程，繞過因子工程瓶頸。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
-
-# FinD³ 解構（FinD³）
 
 > **發布**：2025-12-23 · CIKM 2025
 > **QuantML 導讀**：[CIKM 25 | “3D状态空间+演化超图”挖掘Alpha](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492772&idx=1&sn=93f437ede205d1cdec4c1cf1041d7b8f&chksm=ce7d83baf90a0aac8624b62823c70355545d105681478b3aca007a29c218ada48534b5a8f778#rd)
 > **核心定位**：落點於日频波段监督回归，解了傳統MTS坍缩特徵與靜態GNN無法捕捉Regime Shift的Prior Gap。將SSM狀態轉移與超圖拓撲更新統一為端到端可微流程，繞過因子工程瓶頸。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `监督回归` | `端到端表征` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** 提出FinD³框架，將SSM擴展至3D立方體並引入演化超圖，端到端建模量價時序與動態關聯。核心Trick是Selective CubeSSM並行捕捉跨股/跨特徵依賴，配合Gumbel-Softmax可微二值化動態更新先驗超邊。此設計對「端到端表征」軸★，直接繞過因子工程瓶頸。導讀未給IRR具體數值，僅披露NASDAQ上SR達2.32。

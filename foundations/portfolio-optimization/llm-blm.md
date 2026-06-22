@@ -1,10 +1,18 @@
+---
+title: "LLM-BLM框架"
+description: "將生成式LLM的點狀預測與內在方差對齊至Black-Litterman貝葉斯框架，解了「觀點生成不可擴展且主觀」的prior gap，落點於組合執行優化軸。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=生成式大模型 alpha=组合执行优化 autonomy=全自动黑盒 -->
-
-# LLM-BLM框架 解構（LLM-BLM框架）
 
 > **發布**：2025-10-21 · （無 venue）
 > **QuantML 導讀**：[LLM增强的BL组合优化框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492053&idx=1&sn=f825980b4cf19dc1408a70f6c8f15071&chksm=ce7d86cbf90a0fdd6a6a722ea1193774cb8bbc6bac1f9c0f966dad2c23e37cc307b64fa693f9#rd)
 > **核心定位**：將生成式LLM的點狀預測與內在方差對齊至Black-Litterman貝葉斯框架，解了「觀點生成不可擴展且主觀」的prior gap，落點於組合執行優化軸。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `生成式大模型` | `组合执行优化` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 將LLM多次預測的均值與方差直接映射為BL模型的觀點向量(q)與置信矩陣(Ω)對角元。② 核心trick是用LLM自身的不確定性（預測方差）動態下調高風險觀點的權重，實現無縫集成。③ 這對「組合執行優化」軸的關鍵在於把LLM從「預測器」降維成「風格化觀點供應商」，業績取決於模型內在偏見與市場機制的對齊。④ 導讀給出測試期BLM-Llama年化夏普比率1.2286，顯著超越MVO的0.2793。

@@ -1,10 +1,18 @@
+---
+title: "Bloomberg | 如何增强OHLC数据预测"
+description: "落點於「量价表格 × 高频日内 × 监督回归」軸，解決傳統OHLC bar內微觀結構信息丟失的prior gap。透過引入價格點精確時間戳與學生t分佈輸出，將bar級數據的預測信噪比推向新邊界。"
+---
 <!-- ontology-5axis data=量价表格 horizon=高频日内 paradigm=监督回归 alpha=因子挖掘 autonomy=全自动黑盒 -->
-
-# Bloomberg | 如何增强OHLC数据预测 解構（Bloomberg | 如何增强OHLC数据预测）
 
 > **發布**：2025-09-22 · （無 venue）
 > **QuantML 導讀**：[Bloomberg | 如何增强OHLC数据预测效果](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491760&idx=1&sn=95ec26a437f20c42ee34ef7239c50b23&chksm=ce7d87aef90a0eb807224c54a16fc357ec01a24018af288d15d8c3c77124a45e060fdc8e4778#rd)
 > **核心定位**：落點於「量价表格 × 高频日内 × 监督回归」軸，解決傳統OHLC bar內微觀結構信息丟失的prior gap。透過引入價格點精確時間戳與學生t分佈輸出，將bar級數據的預測信噪比推向新邊界。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `高频日内` | `监督回归` | `因子挖掘` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 首次系統性驗證OHLC bar內各價格點（開/高/低/收）精確時間戳的預測價值。② 核心trick為將時間戳作為序列特徵輸入，並強制輸出層擬合學生t分佈參數。③ 對「监督回归」軸★：證明分鐘級bar內部微觀時間動態可直接轉化為高夏普方向信號，無需下沉至tick層。④ 導讀給出測試集方向預測準確率達72.294%，高信心分位達88.21%。

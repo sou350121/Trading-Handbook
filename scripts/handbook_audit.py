@@ -215,11 +215,11 @@ def check_ontology_headers():
                 continue
             f = pathlib.Path(dirpath) / n
             try:
-                first = f.read_text(encoding="utf-8").lstrip().splitlines()[:1]
-            except (OSError, UnicodeDecodeError, IndexError):
-                first = []
-            line = first[0] if first else ""
-            if not ONTOLOGY_RE.search(line):
+                # ontology comment sits in the head (after optional YAML frontmatter)
+                head = "\n".join(f.read_text(encoding="utf-8").splitlines()[:8])
+            except (OSError, UnicodeDecodeError):
+                head = ""
+            if not ONTOLOGY_RE.search(head):
                 missing.append(rel(f))
     return missing
 

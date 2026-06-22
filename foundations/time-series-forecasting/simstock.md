@@ -1,10 +1,18 @@
+---
+title: "SimStock"
+description: "落點於「日频波段 × 端到端表征 × 黑盒自動化」，試圖以時間域泛化彌補傳統量價相關性在跨市場/非平穩環境下的結構斷裂。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
-
-# SimStock 解構（SimStock）
 
 > **發布**：2024-08-27 · （無 venue）
 > **QuantML 導讀**：[股票相似性的时间表示学习及其在投资管理中的应用](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485992&idx=1&sn=9c13d3832825cf98c8b1eb593acf6ce9&chksm=ce7e6d36f909e4203370742f24372136d5bec9d84ccf2044028a2cab8cd7ac3f3a8e7f6fe0aa#rd)
 > **核心定位**：落點於「日频波段 × 端到端表征 × 黑盒自動化」，試圖以時間域泛化（Temporal Domain Generalization）彌補傳統量價相關性在跨市場/非平穩環境下的結構斷裂。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `监督回归` | `端到端表征` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 提出 SimStock 框架，將自監督學習與 LSTM 驅動的參數動態更新結合，學習非平穩市場下的股票時序穩健表示。② 核心 trick 為 DRAIN 時間域泛化機制 + 維度損壞（Dimension Corruption）生成 SSL 視圖 + 三元組損失約束嵌入空間。③ 對「端到端表征」軸★：跳脫固定窗口歷史回報的線性假設，以動態參數流適配分佈漂移。④ 關鍵實證數字：各任務提升幅度均「未披露」，僅定性描述為「更優/最低回撤/更低跟蹤誤差」。

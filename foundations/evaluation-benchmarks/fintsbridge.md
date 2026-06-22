@@ -1,10 +1,18 @@
+---
+title: "FinTSBridge"
+description: "落點於「量价表格 × 跨周期 × 監督回歸 × 端到端表徵 × 全自動黑盒」軸心，解決傳統時間序列預測在金融場景中「誤差指標與實盤信號穩定性脫鉤」的 prior gap。"
+---
 <!-- ontology-5axis data=量价表格 horizon=跨周期 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
-
-# FinTSBridge 解構（FinTSBridge）
 
 > **發布**：2025-03-11 · （無 venue）
 > **QuantML 導讀**：[融合前沿深度学习模型的金融时序预测框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489625&idx=1&sn=571070b27861b9058ffc9ee96a6ea4c6&chksm=ce7e7f47f909f6512ec3d1b249e59dcb2cf08bf3ef673c7544294e44ad46a2dfcf86b5d2a961#rd)
 > **核心定位**：落點於「量价表格 × 跨周期 × 監督回歸 × 端到端表徵 × 全自動黑盒」軸心，解決傳統時間序列預測在金融場景中「誤差指標與實盤信號穩定性脫鉤」的 prior gap。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `跨周期` | `监督回归` | `端到端表征` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 構建跨頻率金融數據集（GSMI/OPTION/BTCF）並系統對齊十餘種 SOTA 模型。② 首創 msIC/msIR 替代純誤差評估，直接捕捉多步預測的時序相關性與穩定性。③ 對「端到端表徵」軸★：將模型輸出從點對點數值對齊至實盤所需的信號方向與一致性，彌合學術指標與交易需求的斷層。④ 導讀未給量化結果。

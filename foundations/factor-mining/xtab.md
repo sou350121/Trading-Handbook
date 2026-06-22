@@ -1,10 +1,18 @@
+---
+title: "XTab"
+description: "落點於「跨周期量價表格」與「端到端表征」軸，解決傳統 Tabular Transformer 因列結構異質性導致的跨數據集泛化失效問題，透過 FedAvg 聯邦預訓練實現權重初始化遷移。"
+---
 <!-- ontology-5axis data=量价表格 horizon=跨周期 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
-
-# XTab 解構（XTab）
 
 > **發布**：2024-06-28 · ICML23
 > **QuantML 導讀**：[ICML 23 | XTab：基于联邦学习的表格类预训练模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247484944&idx=1&sn=3301b97ec2256efc831967f00019cdfd&chksm=ce7e610ef909e818eefd8da5401d05677c089933abbbdf995c2b9a992fe3395e5ad35d79ca24#rd)
 > **核心定位**：落點於「跨周期量價表格」與「端到端表征」軸，解決傳統 Tabular Transformer 因列結構異質性導致的跨數據集泛化失效問題，透過 FedAvg 聯邦預訓練實現權重初始化遷移。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `跨周期` | `监督回归` | `端到端表征` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 提出跨表格預訓練框架 XTab，解決 Tabular Transformer 難以跨數據集泛化的瓶頸。② 核心 Trick 為「數據特定 Featurizer + 共享 Transformer Backbone + FedAvg 聯邦聚合」，解耦列結構差異。③ 對「端到端表征」軸而言，它首次將 NLP/CV 的預訓練范式成功遷移至異構表格，提供高質量權重初始化。④ 在 OpenML-AutoML Benchmark 的 84 個任務上，預訓練模型在緊縮訓練時間預算下顯著超越隨機初始化與傳統樹模型（具體數值未披露）。

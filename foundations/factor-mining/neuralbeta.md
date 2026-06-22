@@ -1,10 +1,18 @@
+---
+title: "NeuralBeta"
+description: "落點於「監督回歸 × 人機協同可解釋」軸，將傳統靜態/滾動 OLS/WLS 的 β 估計推入動態深度學習框架，解了「制度轉換期 β 跳躍滯後」與「黑盒權重不可審計」的 prior gap。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=因子挖掘 autonomy=人机协同可解释 -->
-
-# NeuralBeta 解構（NeuralBeta）
 
 > **發布**：2024-08-12 · （無 venue）
 > **QuantML 導讀**：[NeuralBeta: 深度学习预测β系数](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485758&idx=1&sn=caa3760dc7a2be287bdee8de4067a7a4&chksm=ce7e6e20f909e736841978af5895aa4f3a893bea742099e088d9bd0f0d81f6afb9973f0eaa90#rd)
 > **核心定位**：落點於「監督回歸 × 人機協同可解釋」軸，將傳統靜態/滾動 OLS/WLS 的 β 估計推入動態深度學習框架，解了「制度轉換期 β 跳躍滯後」與「黑盒權重不可審計」的 prior gap。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `监督回归` | `因子挖掘` | `人机协同可解释` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 提出 NeuralBeta 以深度網路動態估計單/多變量 β 係數。② 核心 trick 為受正則化加權線性回歸啟發的可解釋輸出層，以樣本加權形式顯式量化數據重要性。③ 對「人機協同可解釋」軸★：將注意力機制轉化為可審計的 WLS 權重，使 regime 切換具備透明度。④ 導讀未給量化結果。

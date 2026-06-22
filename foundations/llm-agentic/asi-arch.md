@@ -1,10 +1,18 @@
+---
+title: "ASI-ARCH"
+description: "落點於「元学习搜索 × Agent自主演进」軸，將傳統 NAS 的預定義空間限制，升級為 LLM 驅動的多智能體閉環科研。解了量化/ML 架構設計中人類先驗偏見與迭代帶寬的 prior gap，驗證了「科學發現可計算擴展」的假設。"
+---
 <!-- ontology-5axis data=文本另类 horizon=跨周期 paradigm=元学习搜索 alpha=端到端表征 autonomy=Agent自主演进 -->
-
-# ASI-ARCH 解構（ASI-ARCH）
 
 > **發布**：2025-08-04 · （無 venue）
 > **QuantML 導讀**：[AI自我进化：模型架构探索的AlphaGo时刻](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491248&idx=1&sn=d97b2d09033ad0fc38b76018dd01a114&chksm=ce7e79aef909f0b897a2e7f2c165dddf5de7c89ff597c3cf45e99d97269cbfac7290d34ccae9#rd)
 > **核心定位**：落點於「元学习搜索 × Agent自主演进」軸，將傳統 NAS 的預定義空間限制，升級為 LLM 驅動的多智能體閉環科研。解了量化/ML 架構設計中人類先驗偏見與迭代帶寬的 prior gap，驗證了「科學發現可計算擴展」的假設。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `文本另类` | `跨周期` | `元学习搜索` | `端到端表征` | `Agent自主演进` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 構建全自主多智能體系統 ASI-ARCH，透過 LLM 驅動進化搜索自動發現線性注意力架構。② 核心 trick 在於複合適應度函數（量化性能 Sigmoid 變換 + LLM 評委定性打分）與「認知庫檢索+情境對比」的雙軌知識注入。③ 對「元学习搜索」軸具里程碑意義，證明架構創新可脫離人類先驗空間，實現從模仿到抽象推理的自主躍遷。④ 導讀未給量化結果（僅給 GPU 小時與架構數量，無具體性能指標對比）。

@@ -1,10 +1,18 @@
+---
+title: "QFR"
+description: "落點於 RL 驅動的公式化因子挖掘。解決了傳統 REINFORCE 在離散序列生成時梯度方差過大、以及 PPO 需維護 Critic 網絡導致採樣效率低下的工程瓶頸，透過貪婪基線與 IR 獎勵塑造實現低方差穩定收斂。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=强化学习 alpha=因子挖掘 autonomy=人机协同可解释 -->
-
-# QFR 解構（QFR）
 
 > **發布**：2024-09-10 · （無 venue）
 > **QuantML 導讀**：[基于方差有界强化学习算法的稳定公式化Alpha因子挖掘](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486244&idx=1&sn=d33fa67f6730fedbec80f8756e443daf&chksm=ce7e6c3af909e52c7fa93bf039d5e40f449e59962e66cdc8501d4b093bc14334dad2d484e149#rd)
 > **核心定位**：落點於 RL 驅動的公式化因子挖掘。解決了傳統 REINFORCE 在離散序列生成時梯度方差過大、以及 PPO 需維護 Critic 網絡導致採樣效率低下的工程瓶頸，透過貪婪基線與 IR 獎勵塑造實現低方差穩定收斂。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `强化学习` | `因子挖掘` | `人机协同可解释` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 提出 QFR 算法，將公式化 Alpha 生成建模為 MDP，以 REINFORCE 為底層架構。② 核心 trick 為引入貪婪基線歸一化梯度估計，並結合信息比率構建時變獎勵塑造機制。③ 理論證明梯度方差有界，直接對齊日頻波段因子挖掘的穩定性需求。④ 導讀未給量化結果。

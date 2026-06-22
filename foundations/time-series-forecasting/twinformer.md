@@ -1,10 +1,18 @@
+---
+title: "TwinFormer"
+description: "五軸落點於「量價表格 × 日频波段 × 监督回归」，解決標準 Transformer $O$ 二次複雜度在極長序列上的算力瓶頸，並透過雙層稀疏注意力+GRU聚合器補足扁平 Patch-based 模型對「局部動力學與長程依賴分離建模」的結構性缺失。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
-
-# TwinFormer 解構（TwinFormer）
 
 > **發布**：2026-01-06 · （無 venue）
 > **QuantML 導讀**：[TwinFormer：双层注意力+GRU时间序列预测SOTA模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492929&idx=1&sn=bfc00e0abde9b6612002422bced5e4d2&chksm=ce7d825ff90a0b496f865264a3f244c0b5cc7c600f63d5c6891baaa18f92d10cfa4d071785dc#rd)
 > **核心定位**：五軸落點於「量價表格 × 日频波段 × 监督回归」，解決標準 Transformer $O(L^2)$ 二次複雜度在極長序列上的算力瓶頸，並透過雙層稀疏注意力+GRU聚合器補足扁平 Patch-based 模型對「局部動力學與長程依賴分離建模」的結構性缺失。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `监督回归` | `端到端表征` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 提出 Local/Global 雙層 Informer 架構，將時間序列切分為非重疊 Patch，分別建模 Patch 內細粒度動態與 Patch 間長程依賴。② 核心 trick 為 Top-k 稀疏注意力（CSA）取代 ProbSparse，並接輕量 GRU 聚合器進行直接多步預測。③ 對「端到端表征」軸★，它將 CV 的層級抽象轉譯至時間域，避免扁平序列的語義稀釋。④ 導讀給出 Power consumption 數據集上 MAE 從 1528.64 降至 1505.65，且 34 項測試中佔 27 項前兩名。

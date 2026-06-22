@@ -1,10 +1,18 @@
+---
+title: "TimePro"
+description: "落點於「端到端表征 × 监督回归」軸，針對多元長序列預測中「不同變數對目標影響存在時間滯後差異」的 prior gap，以硬體感知的線性複雜度架構取代 Transformer 的二次方瓶頸。"
+---
 <!-- ontology-5axis data=量价表格 horizon=中长周期 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
-
-# TimePro 解構（TimePro）
 
 > **發布**：2025-08-07 · ICML 25
 > **QuantML 導讀**：[ICML 25 | 华为诺亚方舟：TimePro高效多元时序预测](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491281&idx=2&sn=c431c36f81ccc98cef4112b920e58024&chksm=ce7e79cff909f0d98baef327c37bd6d4d7b10f0ff2e6dd807bb4dfd8eccb427cd91cf8d5a1d4#rd)
 > **核心定位**：落點於「端到端表征 × 监督回归」軸，針對多元長序列預測中「不同變數對目標影響存在時間滯後差異」（多延遲問題）的 prior gap，以硬體感知的線性複雜度架構取代 Transformer 的二次方瓶頸。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `中长周期` | `监督回归` | `端到端表征` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 提出基於 Mamba 的 TimePro 模型，專攻多元長序列的「多延遲問題」。② 核心 trick 為 HyperMamba 模組：沿變數維度掃描獲取初始狀態後，透過可學習偏移量與線性插值，自適應採樣關鍵時間點重構「變數與時間感知超狀態」。③ 這對「自動黑盒 × 長週期」軸★的意義在於，將狀態空間模型的選擇性機制從純時間維度擴展至「變數-時間」雙維度，兼顧細粒度依賴與線性擴展性。④ 導讀未給量化結果。

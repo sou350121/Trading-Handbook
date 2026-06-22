@@ -1,10 +1,18 @@
+---
+title: "LLMOE"
+description: "以LLM取代傳統靜態門控，作為情境感知路由器動態分配至樂觀/悲觀專家，解決單模態MoE在金融市場中路由僵化與情緒特徵解耦的Prior Gap。"
+---
 <!-- ontology-5axis data=多模态 horizon=日频波段 paradigm=生成式大模型 alpha=端到端表征 autonomy=人机协同可解释 -->
-
-# LLMOE 解構（LLMOE）
 
 > **發布**：2025-07-07 · （無 venue）
 > **QuantML 導讀**：[基于LLM专家混合路由的交易框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490939&idx=1&sn=1b5c16409146876e23c4b9d427ff1069&chksm=ce7e7a65f909f3738e1e83c0a1dc25bce75c3251ab7e64c20b863e21773c45dc1afa2cfa667e#rd)
 > **核心定位**：以LLM取代傳統靜態門控，作為情境感知路由器動態分配至樂觀/悲觀專家，解決單模態MoE在金融市場中路由僵化與情緒特徵解耦的Prior Gap。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `多模态` | `日频波段` | `生成式大模型` | `端到端表征` | `人机协同可解释` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 將LLM嵌入MoE架構擔任動態路由器，融合價格數值與新聞文本進行情境分類 ② 核心trick是「路由與預測解耦」：LLM僅輸出Opt/Pess標籤與自然語言推理，FNN專家專注數值擬合 ③ 對「端到端表征/可解釋性」軸★提供實盤合規審計抓手，降低黑盒路由的不可控性 ④ 導讀給出MSFT測試集TR 65.44、SR 2.14、MDD 11.32%（對比MLP TR 33.92、LSTM SR 1.39）

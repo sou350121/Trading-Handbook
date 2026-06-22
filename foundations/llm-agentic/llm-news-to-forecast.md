@@ -1,10 +1,18 @@
+---
+title: "从新闻到预测：基于LLM的时间序列预测"
+description: "落點於「文本另类 × 生成式大模型」軸，解了傳統TS模型無法系統性內化非結構化社會事件的Prior Gap，將新聞過濾與序列預測耦合為可迭代的Agent閉環。"
+---
 <!-- ontology-5axis data=文本另类 horizon=日频波段 paradigm=生成式大模型 alpha=端到端表征 autonomy=Agent自主演进 -->
-
-# 从新闻到预测：基于LLM的时间序列预测 解構（从新闻到预测：基于LLM的时间序列预测）
 
 > **發布**：2024-10-15 · （無 venue）
 > **QuantML 導讀**：[从新闻到预测：基于LLM的时间序列预测](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487049&idx=1&sn=7337916648f291ef40e325faa83b0aca&chksm=ce7e6957f909e0414601ededa9a7c3957a1c31f0360a79398c097b4e9db731345fa970f93ea1#rd)
 > **核心定位**：落點於「文本另类 × 生成式大模型」軸，解了傳統TS模型無法系統性內化非結構化社會事件（Regime Shift）的Prior Gap，將新聞過濾與序列預測耦合為可迭代的Agent閉環。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `文本另类` | `日频波段` | `生成式大模型` | `端到端表征` | `Agent自主演进` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ①將新聞事件轉化為條件Token，微調預訓練LLM執行自回歸時間序列預測。②核心Trick是設計「推理Agent（過濾/分類新聞）+評估Agent（基於預測誤差反饋優化過濾邏輯）」的雙閉環迭代。③對「Agent自主演进」軸★，它用預測結果驅動數據清洗，實現了非結構化Alpha的自動對齊與降噪。④導讀未給量化結果。

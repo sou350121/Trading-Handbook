@@ -1,10 +1,18 @@
+---
+title: "KTD-FIN"
+description: "落點於「生成式大模型 × 因子挖掘 × Agent自主演进」軸，解決 LLM 交易評測中預訓練記憶洩漏與風格暴露混淆選股能力的 prior gap，將評測標準從「淨值神話」強制拉回「殘差歸因」。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=生成式大模型 alpha=因子挖掘 autonomy=Agent自主演进 -->
-
-# KTD-FIN 解構（KTD-FIN）
 
 > **發布**：2026-06-18 · （無 venue）
 > **QuantML 導讀**：[清华 X 阶跃星辰 ｜ 剥离风格和记忆，LLM还剩下多少Alpha？](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247494094&idx=1&sn=f04a150a17f3b98c4d7b4a8fc22ae31f&chksm=ce7d8ed0f90a07c69e5e37ecb5129b007cc84ae3cfd3214dd13f8ff576a3734a20494d6d9284#rd)
 > **核心定位**：落點於「生成式大模型 × 因子挖掘 × Agent自主演进」軸，解決 LLM 交易評測中預訓練記憶洩漏與風格暴露混淆選股能力的 prior gap，將評測標準從「淨值神話」強制拉回「殘差歸因」。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `生成式大模型` | `因子挖掘` | `Agent自主演进` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 建立首個帶物理級數據掩碼與 Barra 截面歸因的 LLM 交易 Agent 基準。② 核心 trick 為四階段掩碼協議切斷記憶通道，並用 WLS 回歸將收益拆解為市場β、風格與選股殘差。③ 對「Agent自主演进」軸而言，它廢止了 Prompt 工程驱动的淨值幻覺，強制模型在匿名化因子表格上進行結構化推理。④ 實證顯示 10 款主流 LLM 中 9 款選股 Alpha 為負，淨值收益實為風格暴露。

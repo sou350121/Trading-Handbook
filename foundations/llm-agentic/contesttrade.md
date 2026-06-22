@@ -1,10 +1,18 @@
+---
+title: "ContestTrade"
+description: "落點於「多智能體博弈 × Agent自主演進」軸，針對單一LLM Agent在日頻波段交易中對市場噪聲敏感、決策不穩定且缺乏量化推理能力的Prior Gap，以企業內部競賽架構實現信號動態篩選與資金分配。"
+---
 <!-- ontology-5axis data=文本另类 horizon=日频波段 paradigm=生成式大模型 alpha=多智能体博弈 autonomy=Agent自主演进 -->
-
-# ContestTrade 解構（ContestTrade）
 
 > **發布**：2025-08-15 · （無 venue）
 > **QuantML 導讀**：[优胜劣汰：ContestTrade多智能体交易架构](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491371&idx=1&sn=b8c61a7ab6841bc05253c301c54f40df&chksm=ce7e7835f909f123b824f84973c88034db152fc8c09276a170a4f84833a67030766e4e49c3a8#rd)
 > **核心定位**：落點於「多智能體博弈 × Agent自主演進」軸，針對單一LLM Agent在日頻波段交易中對市場噪聲敏感、決策不穩定且缺乏量化推理能力的Prior Gap，以企業內部競賽架構實現信號動態篩選與資金分配。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `文本另类` | `日频波段` | `生成式大模型` | `多智能体博弈` | `Agent自主演进` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** 提出ContestTrade框架，通过数据与研究双团队内部竞赛机制，实现LLM多智能体交易信号的动态筛选与资金分配。引入量化-预测-分配三阶段内部竞赛机制，用ZI Trader量化因子、LightGBM预测效用、0/1背包分配资源，实现多智能体优胜劣汰。這對「多智能體博弈」軸★，因它將靜態協作轉為動態淘汰，直接對沖LLM的上下文衰減與噪聲過敏。測試期實現52.80%累計回報率與3.12夏普比率。

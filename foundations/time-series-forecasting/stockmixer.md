@@ -1,10 +1,18 @@
+---
+title: "StockMixer"
+description: "落點於「端到端表征 × 全自动黑盒」軸，以純 MLP 架構替代 RNN/GNN 處理多變量時間序列。解了圖結構先驗依賴與遞歸梯度瓶頸的 prior gap，將截面交互降維為可並行的超圖式線性操作。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
-
-# StockMixer 解構（StockMixer）
 
 > **發布**：2024-11-08 · AAAI24
 > **QuantML 導讀**：[AAAI 24 | StockMixer: 一种简单而强大的基于MLP的股价预测架构](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487545&idx=1&sn=c1188efc7ea54fa2c6784bfbb892784c&chksm=ce7e7727f909fe31643dfcef60364bc0aa03d0509ed9edcef76fe1f21863b0ceb6662f728ec8#rd)
 > **核心定位**：落點於「端到端表征 × 全自动黑盒」軸，以純 MLP 架構替代 RNN/GNN 處理多變量時間序列。解了圖結構先驗依賴與遞歸梯度瓶頸的 prior gap，將截面交互降維為可並行的超圖式線性操作。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `监督回归` | `端到端表征` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 提出純 MLP 架構做日频收益預測，棄用遞歸與圖消息傳遞。② 核心 trick 是時間混合塊的上三角因果掩碼結合多尺度 patch，以及股票混合塊的「個股↔市場」超圖式解耦。③ 對「端到端表征」軸★：以極低參數量與計算開銷實現跨截面信息交換，訓練穩定性顯著提升。④ 導讀明確指出其在多數指標上平均相對性能提升 7.6%，10.8% 和 10.9%（p < 0.01）。

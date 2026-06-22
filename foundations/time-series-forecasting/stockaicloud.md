@@ -1,10 +1,18 @@
+---
+title: "StockAICloud"
+description: "落點於「部署工程」與「模型架構」的交叉軸，解了傳統量化團隊在日頻波段策略從 Notebook 到生產環境的「容器化-彈性伸縮-高併發推理」工程斷層，而非提升 Alpha 預測能力。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
-
-# StockAICloud 解構（StockAICloud）
 
 > **發布**：2025-06-20 · （無 venue）
 > **QuantML 導讀**：[StockAICloud：基于AI和Serverless云计算的股票预测框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490786&idx=1&sn=a4a73a7a22b4f83ce05ea74dee278fb9&chksm=ce7e7bfcf909f2ea766ec4b71c3aea987e1e746bd4f854f7dc5729a47e7be78a872e998a11fd#rd)
 > **核心定位**：落點於「部署工程」與「模型架構」的交叉軸，解了傳統量化團隊在日頻波段策略從 Notebook 到生產環境的「容器化-彈性伸縮-高併發推理」工程斷層，而非提升 Alpha 預測能力。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `监督回归` | `端到端表征` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 提出將 LSTM/GRU/CNN 與 AWS Fargate 無服務器架構深度綁定的端到端部署框架。② 核心 trick 是透過 Docker 容器化 + ALB 動態路由，將標準卷商回測流水線直接映射為彈性伸縮的 REST API 服務。③ 這對「Autonomy/部署軸」★ 有意義，它把模型推理從固定 EC2 遷移至按需計費的無服務器節點，解決高併發下的冷啟動與資源閒置問題。④ 導讀未給量化結果（模型預測指標），僅披露無服務器節點在 400 併發下達到 21.2 req/min 的吞吐量。

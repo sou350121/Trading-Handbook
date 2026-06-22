@@ -1,10 +1,18 @@
+---
+title: "TWMA/ResNet Trader"
+description: "落點於「監督回歸 × 因子挖掘」軸，以 Smooth Grad-CAM 壓縮出的時域重要性權重動態注入傳統 WMA，解了純黑盒 CNN 預測無法與經典技術指標對齊的工程斷層。"
+---
 <!-- ontology-5axis data=量价表格 horizon=日频波段 paradigm=监督回归 alpha=因子挖掘 autonomy=人机协同可解释 -->
-
-# TWMA/ResNet Trader 解構（TWMA/ResNet Trader）
 
 > **發布**：2024-08-20 · （無 venue）
 > **QuantML 導讀**：[图像识别与知识迁移融合的深度学习模型增强趋势交易信号](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485854&idx=1&sn=357ea4d5356e932c7e012127108236df&chksm=ce7e6e80f909e7965b8ee0d52b1ea64d4baa58f67a0a69b34d9844d5e4d62587a271c03fef43#rd)
 > **核心定位**：落點於「監督回歸 × 因子挖掘」軸，以 Smooth Grad-CAM 壓縮出的時域重要性權重動態注入傳統 WMA，解了純黑盒 CNN 預測無法與經典技術指標對齊的工程斷層。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `日频波段` | `监督回归` | `因子挖掘` | `人机协同可解释` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 將 D 日 OHLCV 圖表轉為圖像，用 ResNet 預測未來走向並輸出定位圖。② 核心 trick 是將定位圖垂直壓縮、插值歸一化為三重I權重，直接乘入動量/反轉等原始信號。③ 這對「因子挖掘」軸的關鍵在於把機器視覺特徵轉為可加權的時域濾波器，保留公式可解釋性。④ 導讀未給完整回測曲線，僅披露一日持有期組合夏普比率平均提高了0.25。

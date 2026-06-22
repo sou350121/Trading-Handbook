@@ -1,10 +1,18 @@
+---
+title: "MultiRC"
+description: "落點於「無標簽前瞻預測」，將傳統事後異常檢測轉為基於頻域主導週期估算的異常預測，解決了異質性反應時間與標簽稀缺的 prior gap。"
+---
 <!-- ontology-5axis data=量价表格 horizon=高频日内 paradigm=监督回归 alpha=端到端表征 autonomy=全自动黑盒 -->
-
-# MultiRC 解構（MultiRC）
 
 > **發布**：2024-10-21 · （無 venue）
 > **QuantML 導讀**：[MultiRC：突破事后检测局限，预测未来异常的时序异常预测模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487147&idx=1&sn=16ffb61687a4042bc10881f737f454b7&chksm=ce7e69b5f909e0a336e2e1eccedd3938adfd5077e2a315426740a6cf2c043b1e8c14956c16ea#rd)
 > **核心定位**：落點於「無標簽前瞻預測」，將傳統事後異常檢測（Anomaly Detection）轉為基於頻域主導週期估算的異常預測（Anomaly Prediction），解決了異質性反應時間（Reaction Time）與標簽稀缺的 prior gap。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `量价表格` | `高频日内` | `监督回归` | `端到端表征` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 提出無監督時序異常預測框架，不依賴異常標簽即可前瞻波動前兆。② 核心 trick 是 FFT 提取單變量主導週期以動態估算反應時間，結合多尺度掩碼重構與受控噪聲對比學習。③ 對「端到端表征+全自動黑盒」軸的關鍵在於將離散的檢測閾值問題轉化為連續的重構誤差與對比距離優化。④ 關鍵實證：在 PSM/SWaT 工業數據集上達 SOTA，但金融量價數據表現未披露。

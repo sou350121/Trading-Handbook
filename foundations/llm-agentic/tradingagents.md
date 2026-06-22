@@ -1,10 +1,18 @@
+---
+title: "TradingAgents"
+description: "落點於「多智能體博弈 × 生成式大模型」軸，解決傳統 LLM 單點決策缺乏制衡與可解釋性的工程坑，將投行前中後台職能映射為 LangGraph 狀態機。"
+---
 <!-- ontology-5axis data=文本另类 horizon=日频波段 paradigm=生成式大模型 alpha=多智能体博弈 autonomy=人机协同可解释 -->
-
-# TradingAgents 解構（TradingAgents）
 
 > **發布**：2025-06-08 · （無 venue） · arXiv [2412.20138](https://arxiv.org/abs/2412.20138)
 > **QuantML 導讀**：[QuantML社群最新重磅开源 | TradingAgents：多智能体交易框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490650&idx=1&sn=4d2dfa1b6c9139a38c84122c715fd015&chksm=ce7e7b44f909f25207a85309bbb0066d6d6590a6cdfce20284bb352cba463e638a4985be7274#rd)
 > **核心定位**：落點於「多智能體博弈 × 生成式大模型」軸，解決傳統 LLM 單點決策缺乏制衡與可解釋性的工程坑，將投行前中後台職能映射為 LangGraph 狀態機。
+
+**五軸座標**
+
+| 數據模態 | 時間尺度 | 學習範式 | Alpha機制 | 人機協作 |
+|:-:|:-:|:-:|:-:|:-:|
+| `文本另类` | `日频波段` | `生成式大模型` | `多智能体博弈` | `人机协同可解释` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
 **TL;DR:** ① 將交易決策拆解為分析-研究-執行-風控的專業化 LLM 智能體團隊。② 核心 trick 是引入看漲/看跌結構化辯論機制與三層風險管理哲學，透過 LangGraph 編排五階段順序流水線。③ 這對「多智能體博弈」軸★的關鍵在於用對抗性對話替代單向 prompt，強制模型輸出權衡過程。④ 導讀給出 AAPL 實證年化回報 30.5%（買入持有基準 -5.09%），最大回撤低於 3%。
