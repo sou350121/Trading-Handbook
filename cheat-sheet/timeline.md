@@ -6,6 +6,33 @@
 
 ---
 
+## 鳥瞰圖（先看兩張圖）
+
+**半年脊 × 代表方法**（每段主旋律＋代表作）：
+
+```mermaid
+timeline
+    title 量化方法演进 2024H2-2026H1
+    2024 H2 : 时序预测换骨 : Timer / Time-MoE / TEMPO / aLLM4TS : 基础模型登场
+    2025 H1 : 生成式时序铺开 : ARMD / TabPFN-TS / Delphyne : RL占比见顶 : 评测立规矩 TFB / FinTSB
+    2025 H2 : 多智能体爆发 : MASS / ContestTrade / ASI-ARCH : 微观结构成熟 : 怀疑加深 DeepFund
+    2026 H1 : 证伪与成本收口 : KTD-FIN / FinStressTS : 防Alpha衰减 ReCAP / AlphaAgentEvo : TiMi工程解耦
+```
+
+**五道波次**（macro-waves，疊起來而非互斥；後一道起來時前一道退到背景）：
+
+```mermaid
+flowchart LR
+    W1["Wave 1<br/>时序基础模型化<br/>2024H2 起爆 贯穿全期"]
+    W2["Wave 2<br/>LLM 情绪分析 → 多智能体交易工厂<br/>2024H2 萌芽 → 2025H2 爆发"]
+    W3["Wave 3<br/>RL 配置 → 执行 / 高频 / 做市<br/>2025 全年加速"]
+    W4["Wave 4<br/>因子 手工/遗传 → 生成式 + LLM + 抗衰减<br/>2025H2 集中"]
+    W5["Wave 5<br/>证伪转向 评测严格 + 成本 + 制度<br/>2025H1 抬头 → 2026H1 主导"]
+    W1 --> W2 --> W3 --> W4 --> W5
+```
+
+---
+
 ## 0. 兩年的形狀（先給結論）
 
 語料按半年切，每段的篇數與「必讀（⚡）密度」如下（皆由 `data/distill/` 直接點算，非估計）：

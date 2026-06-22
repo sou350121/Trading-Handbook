@@ -2,7 +2,7 @@
 
 > **本質衝突**：Co-pilot 模式保留人类风控兜底与监管合规，但迭代慢、受人带宽限制；多智能体自主博弈迭代快、能挖微观套利，但易陷策略同质化、流动性枯竭与失控。实盘需设硬止损与策略多样性正则。
 
-**Status:** v0.6 — Opus 手寫綜合，非摘要。autonomous/multi-agent 极已随语料增长大幅补实（llm-agentic 入库 ~46 篇，多智能体框架成主流）。
+**Status:** v0.7 — Opus 手寫綜合，非摘要。autonomous/multi-agent 极已随语料增长大幅补实（llm-agentic 入库 ~46 篇，多智能体框架成主流）。
 
 ## 中心张力
 
@@ -13,6 +13,29 @@
 全自动智能体（autonomous multi-agent）走到另一极：多个 LLM/RL agent 自主感知-决策-执行-反思，甚至 agent 之间互相博弈、自我进化（StockAgent 模拟交易者博弈、FinAgent 多模态自主交易、AlphaQuanter 端到端 Agentic RL、FinSight 自主分析师都在这一极）。它的速度和探索广度碾压人机协同，能挖人想不到的微观套利、能 7×24 自我迭代。但代价是这条张力里最凶险的一组失效模式：**问责真空**（出事了谁负责？监管这一关很多 autonomous 方案直接过不了）、**策略同质化**（多个 agent 用相似的预训练/奖励，会收敛到同一类策略，于是一起拥挤、一起踩踏）、**流动性枯竭与反身性**（自主 agent 在模拟市场里学到的「最优」放到真实市场，可能集体抽走流动性、制造闪崩——2010 闪崩的幽灵）、以及 **reward hacking 的放大**（没有人盯着，agent 找到 reward 漏洞会一路跑到底）。在哪里咬人最狠：合规（autonomous 在受监管市场常落不了主仓）、尾部风险（同质化 + 反身性让自动 agent 的回撤是**关联的、突发的**，不像人会先犹豫）、以及调试（多 agent 涌现行为难复现、难归因，比单模型黑盒更黑）。
 
 关键洞察：这条张力**不是连续滑块而是带护栏的谱系**——务实的实盘几乎从不站在纯 autonomous 端，而是「autonomous 在沙盒里探索/生成 + 人在闸门上批准 + 硬止损/多样性正则兜底」。自治度的提升必须和兜底机制的强度**同步**增长，否则就是裸奔。
+
+下图刻意把「multi-agent = autonomous」这个隐含等式打破：**决定自治度的是决策权和护栏的位置，不是 agent 数量**。看两个反例——AlphaAgents 是多 agent 却定位 co-pilot（给人看的辩论日志），AlphaQuanter 是单 agent + RL 却最自主。务实部署里纯 autonomous 几乎不存在，都落在中间的「自主探索 × 人闸门 × 硬护栏」带。
+
+```mermaid
+flowchart LR
+  subgraph COPILOT["人机协同 co-pilot (人守决策闸门, 可问责)"]
+    direction TB
+    A["FinRobot 感知-大脑-行动"]
+    B["FinBERT 情绪供人决策"]
+    C["LLMFactor 因子给人审"]
+    X["AlphaAgents (多 agent 却仍 co-pilot)"]
+  end
+  subgraph AUTO["全自动智能体 autonomous (自我进化, 速度广度碾压)"]
+    direction TB
+    D["FinAgent 多模态自主"]
+    E["StockAgent 博弈仿真"]
+    F["R&D-Agent-Quant 自研闭环"]
+    Y["AlphaQuanter (单 agent + RL 却最自主)"]
+  end
+  COPILOT -->|"用 AI 放大研究产能"| SEAM
+  AUTO -->|"自治度上调一格, 护栏必须同步上调"| SEAM
+  SEAM["唯一务实部署: 自主探索 x 人闸门 x 硬护栏<br/>护栏内生化: FinCon CVaR / ContestTrade 竞赛 / MASA 风险 agent"]
+```
 
 ## 五轴投影
 
