@@ -27,12 +27,17 @@
 
 **1.2 ⚡ Eureka** 用可微 Top-k 注意力分數直接錨定「誰領先、落後幾天」，將離散滯後選擇轉化為連續梯度流。
 **1.3 信息流 ASCII**
-```
-[Target Stock] -> Query -> [Cross-Attention] <- Key (All Peers)
-                                      |
-                                 Top-k Routing
-                                      |
-[Lag Leaders @ t-lag] -> Raw Features -> Weighted Aggregation -> MLP -> R_{t+1}
+```mermaid
+flowchart TD
+    A["Target Stock"] --> B["Query"]
+    B --> C["Cross-Attention"]
+    D["Key (All Peers)"] --> C
+    C --> E["Top-k Routing"]
+    E --> F["Lag Leaders @ t-lag"]
+    F --> G["Raw Features"]
+    G --> H["Weighted Aggregation"]
+    H --> I["MLP"]
+    I --> J["R_{t+1}"]
 ```
 
 ## §2 · 數學層

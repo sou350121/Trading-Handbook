@@ -29,12 +29,18 @@
 把 Grad-CAM 的空間熱力圖垂直池化後，直接當時間序列的動態權重向量塞進 WMA 公式，讓機器告訴傳統指標「哪幾天該信、哪幾天該靜音」。
 
 **1.3 信息流 ASCII**
-```
-OHLCV (D日) → mplfinance圖表 → ResNet前向 → Grad-CAM後向
-       ↓                              ↓
-  空間定位矩陣 → 垂直壓縮/插值/歸一化 → 三重I權重向量 W_t
-       ↓
-  原始信號 S_raw (MOM/STR/TREND...) × W_t → S_TWMA → 組合構建/持有期
+```mermaid
+flowchart TD
+    N1["OHLCV (D日)"] --> N2["mplfinance圖表"]
+    N2["mplfinance圖表"] --> N3["ResNet前向"]
+    N3["ResNet前向"] --> N4["Grad-CAM後向"]
+    N1["OHLCV (D日)"] --> N5["空間定位矩陣"]
+    N4["Grad-CAM後向"] --> N7["三重I權重向量 W_t"]
+    N5["空間定位矩陣"] --> N6["垂直壓縮/插值/歸一化"]
+    N6["垂直壓縮/插值/歸一化"] --> N7["三重I權重向量 W_t"]
+    N5["空間定位矩陣"] --> N8["原始信號 S_raw (MOM/STR/TREND...) × W_t"]
+    N8["原始信號 S_raw (MOM/STR/TREND...) × W_t"] --> N9["S_TWMA"]
+    N9["S_TWMA"] --> N10["組合構建/持有期"]
 ```
 
 ## §2 · 數學層

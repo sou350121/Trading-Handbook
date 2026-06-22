@@ -29,12 +29,22 @@
 編解碼分離 + 高斯 Copula 依賴解耦，用無監督互信息替代有監督標籤反傳，切斷未來隨機性對表征學習的干擾。
 
 **1.3 信息流 ASCII 圖**
-```text
-[Macro/Micro Data] -> [Multi-grain LSTM] -> [Gaussian Copula] -> Macro-Sector Context
-                                                              |
-[Stock Features] -> [Encoder] -> [GRU] -> Micro Context -> [Concat + MLP] -> Current Context
-                                                              |
-[Future States] -> [CPC Contrastive Task (NCE)] -> Stock Representation -> [Decoder/LSTM] -> Prediction
+```mermaid
+flowchart TD
+    A["Macro/Micro Data"] --> B["Multi-grain LSTM"]
+    B --> C["Gaussian Copula"]
+    C --> D["Macro-Sector Context"]
+    D --> K["Future States"]
+    E["Stock Features"] --> F["Encoder"]
+    F --> G["GRU"]
+    G --> H["Micro Context"]
+    H --> I["Concat + MLP"]
+    I --> J["Current Context"]
+    J --> K
+    K --> L["CPC Contrastive Task (NCE)"]
+    L --> M["Stock Representation"]
+    M --> N["Decoder/LSTM"]
+    N --> O["Prediction"]
 ```
 
 ## §2 · 數學層

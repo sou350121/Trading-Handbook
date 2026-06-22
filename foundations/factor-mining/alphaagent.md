@@ -29,14 +29,11 @@
 用AST最大公共子樹大小量化「語法新奇度」，用LLM打分「假設-描述-表達式」鏈路一致性，將黑盒生成轉為可約束的符號優化。
 
 **1.3 信息流 ASCII**
-```
-Idea Agent (市場假設 h) 
-   ↓
-Factor Agent (AST組裝 / 複雜度過濾 / 知識庫避錯)
-   ↓
-Eval Agent (IC/IR/MDD評估 / 歷史記錄追蹤)
-   ↓
-反饋至 Idea Agent (閉環演化)
+```mermaid
+flowchart TD
+    A["Idea Agent (市場假設 h)"] --> B["Factor Agent (AST組裝 / 複雜度過濾 / 知識庫避錯)"]
+    B --> C["Eval Agent (IC/IR/MDD評估 / 歷史記錄追蹤)"]
+    C --> D["反饋至 Idea Agent (閉環演化)"]
 ```
 
 ## §2 · 數學層

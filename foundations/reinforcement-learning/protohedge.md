@@ -26,10 +26,15 @@
 
 ⚡ **Eureka:** 「This looks like that」——對沖行動 = Σ(當前狀態與原型相似度 × 該原型學習到的有界行動)。
 🌊 **信息流:**
-```
-Market State → [Encoder] → Encoded Vector → [Dist to K Prototypes] → Softmax Weights
-       ↓
-[Weighted Avg of Prototype Actions] → [SoftClip] → Final Hedge Action
+```mermaid
+flowchart TD
+    A["Market State"] --> B["[Encoder]"]
+    B --> C["Encoded Vector"]
+    C --> D["[Dist to K Prototypes]"]
+    D --> E["Softmax Weights"]
+    E --> F["[Weighted Avg of Prototype Actions]"]
+    F --> G["[SoftClip]"]
+    G --> H["Final Hedge Action"]
 ```
 
 ## §2 · 數學層

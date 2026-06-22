@@ -29,16 +29,18 @@
 把時序「拆開餵」給 GPT，讓每個分量帶專屬提示詞，模型只需學「怎麼組合提示」而非「重記數據分佈」。
 
 **1.3 信息流 ASCII 圖**
-```
-X (Raw TS) → Decompose → [Trend, Seasonality, Residual]
-                ↓
-Prompt Gen → [P_t, P_s, P_r] (Semi-soft)
-                ↓
-Concat → [T+P_t, S+P_s, R+P_r] → GPT Decoder Blocks
-                ↓
-Update: PosEmb, LayerNorm + LoRA adapters
-                ↓
-Output → Ŷ (H-step forecast)
+```mermaid
+flowchart TD
+    A["X (Raw TS)"] --> B["Decompose"]
+    B --> C["[Trend, Seasonality, Residual]"]
+    C --> D["Prompt Gen"]
+    D --> E["[P_t, P_s, P_r] (Semi-soft)"]
+    E --> F["Concat"]
+    F --> G["[T+P_t, S+P_s, R+P_r]"]
+    G --> H["GPT Decoder Blocks"]
+    H --> I["Update: PosEmb, LayerNorm + LoRA adapters"]
+    I --> J["Output"]
+    J --> K["Ŷ (H-step forecast)"]
 ```
 
 ## §2 · 數學層

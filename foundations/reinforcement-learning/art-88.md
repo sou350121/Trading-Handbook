@@ -30,14 +30,17 @@
 - **直覺:** 真正有效的策略在訓練集與驗證集的排名應該高度一致；若排名劇烈跳動，說明模型在「記憶」特定區間的噪聲，logit 分佈能將這種不一致性轉化為可拒絕的概率閾值。
 
 **1.3 信息流 ASCII 圖**
-```
-Raw 5-min Data → [CCV Splits] → Train DRL (PPO/SAC/TD3) × N
-     ↓
-IS/OOS Performance Matrix M → Rank Consistency → Logit Transform
-     ↓
-Overfitting Prob. Distribution → Hypothesis Test (H0: P_OF ≤ α)
-     ↓
-Accept/Reject Agent → Live Execution Env (Gym-style)
+```mermaid
+flowchart TD
+    A["Raw 5-min Data"] --> B["[CCV Splits]"]
+    B --> C["Train DRL (PPO/SAC/TD3) × N"]
+    C --> D["IS/OOS Performance Matrix M"]
+    D --> E["Rank Consistency"]
+    E --> F["Logit Transform"]
+    F --> G["Overfitting Prob. Distribution"]
+    G --> H["Hypothesis Test (H0: P_OF ≤ α)"]
+    H --> I["Accept/Reject Agent"]
+    I --> J["Live Execution Env (Gym-style)"]
 ```
 
 ## §2 · 數學層

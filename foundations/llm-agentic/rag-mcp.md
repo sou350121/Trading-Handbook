@@ -27,12 +27,17 @@
 
 **1.2 ⚡ Eureka**：將「工具發現」與「任務生成」正交解耦，用檢索替代記憶。
 **1.3 信息流 ASCII**
-```
-User Task → [Retriever] → Semantic Search on MCP Vector Index → Top-k Candidates
-                                ↓
-                        [Validator] → Synthetic Query Test → Best-1 MCP
-                                ↓
-                        [LLM Prompt] → Inject Single MCP Schema → Execute Task
+```mermaid
+flowchart TD
+    A["User Task"] --> B["[Retriever]"]
+    B --> C["Semantic Search on MCP Vector Index"]
+    C --> D["Top-k Candidates"]
+    D --> E["[Validator]"]
+    E --> F["Synthetic Query Test"]
+    F --> G["Best-1 MCP"]
+    G --> H["[LLM Prompt]"]
+    H --> I["Inject Single MCP Schema"]
+    I --> J["Execute Task"]
 ```
 
 ## §2 · 數學層

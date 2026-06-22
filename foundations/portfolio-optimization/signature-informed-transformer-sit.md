@@ -29,14 +29,16 @@
 用跨資產路徑特徵的內積生成注意力加性偏差，讓模型「知道」該關注誰，而非盲目學習。
 
 **1.3 信息流 ASCII**
-```
-[Path/Time/Asset Embeddings] → Concat → Linear → Token
-       ↓
-[Time Self-Attention] → [Asset Self-Attention + Path Bias]
-       ↓
-[Softmax Allocation Head] → Portfolio Weights
-       ↓
-[CVaR Loss (End-to-End Gradient)]
+```mermaid
+flowchart TD
+    A["[Path/Time/Asset Embeddings]"] --> B["Concat"]
+    B --> C["Linear"]
+    C --> D["Token"]
+    A --> E["[Time Self-Attention]"]
+    E --> F["[Asset Self-Attention + Path Bias]"]
+    E --> G["[Softmax Allocation Head]"]
+    G --> H["Portfolio Weights"]
+    G --> I["[CVaR Loss (End-to-End Gradient)]"]
 ```
 
 ## §2 · 數學層

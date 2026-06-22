@@ -26,9 +26,17 @@
 
 ⚡ **Eureka:** 用圖社區劃分將海量文本塊壓縮為層次化摘要，讓 LLM 能在有限 context window 內「看見」全局結構。
 **信息流:**
-```
-Source Docs → Text Chunks → [LLM Gleanings] → Element Instances → Element Summaries 
-→ Homogeneous Weighted Graph → [Leiden] → Graph Communities → Community Summaries → Global Answer
+```mermaid
+flowchart TD
+A["Source Docs"] --> B["Text Chunks"]
+B["Text Chunks"] --> C["[LLM Gleanings]"]
+C["[LLM Gleanings]"] --> D["Element Instances"]
+D["Element Instances"] --> E["Element Summaries"]
+E["Element Summaries"] --> F["Homogeneous Weighted Graph"]
+F["Homogeneous Weighted Graph"] --> G["[Leiden]"]
+G["[Leiden]"] --> H["Graph Communities"]
+H["Graph Communities"] --> I["Community Summaries"]
+I["Community Summaries"] --> J["Global Answer"]
 ```
 
 ## §2 · 數學層

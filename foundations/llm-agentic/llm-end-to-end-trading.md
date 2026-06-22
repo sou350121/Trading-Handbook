@@ -27,12 +27,25 @@
 ⚡ **Eureka:** 將 LLM 輸出的連續 logits 視為動態權重因子，與分鐘級 VWAP 技術指標進行實時正交融合，以跳過傳統情緒模型「分類→離散信號→手動調參」的斷層。
 
 **信息流 ASCII:**
-```
-User Input → [WebSocket/NewsAPI/PRAW] → Preprocess (Min VWAP / Cohere Summarize)
-       ↓
-FinGPT (LoRA-tuned) → Logits/Class → Signal Fusion (SMA/RSI/Stoch)
-       ↓
-FastAPI REST → K8s Pods → Dashboard (Real-time VWAP/Logits/Signals)
+```mermaid
+flowchart TD
+    A["User Input"]
+    B["[WebSocket/NewsAPI/PRAW]"]
+    C["Preprocess (Min VWAP / Cohere Summarize)"]
+    D["FinGPT (LoRA-tuned)"]
+    E["Logits/Class"]
+    F["Signal Fusion (SMA/RSI/Stoch)"]
+    G["FastAPI REST"]
+    H["K8s Pods"]
+    I["Dashboard (Real-time VWAP/Logits/Signals)"]
+    A --> B
+    B --> C
+    B --> D
+    D --> E
+    E --> F
+    E --> G
+    G --> H
+    H --> I
 ```
 
 ## §2 · 數學層

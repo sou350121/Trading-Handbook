@@ -26,12 +26,16 @@
 
 **⚡ Eureka:** 用 EMA 維護目標網絡，在加噪掩碼的不確定性視圖下對齊原始視圖的表征，以非對稱更新穩定對比學習。
 **信息流:**
-```
-Input(OHLCV+MA) → TDA(殘差MHA) → RDA(GAT+PosEmb) → MDC(多尺度卷積+門控) → PD_Rep
-                                                      ↓
-Uncertainty View(Noise+Mask) → PD_Rep_Noisy
-                                                      ↓
-EMA Contrastive Alignment → Ranking/Return Prediction
+```mermaid
+flowchart TD
+    A["Input(OHLCV+MA)"] --> B["TDA(殘差MHA)"]
+    B["TDA(殘差MHA)"] --> C["RDA(GAT+PosEmb)"]
+    C["RDA(GAT+PosEmb)"] --> D["MDC(多尺度卷積+門控)"]
+    D["MDC(多尺度卷積+門控)"] --> E["PD_Rep"]
+    E["PD_Rep"] --> G["PD_Rep_Noisy"]
+    F["Uncertainty View(Noise+Mask)"] --> G["PD_Rep_Noisy"]
+    G["PD_Rep_Noisy"] --> H["EMA Contrastive Alignment"]
+    H["EMA Contrastive Alignment"] --> I["Ranking/Return Prediction"]
 ```
 
 ## §2 · 數學層

@@ -29,9 +29,13 @@
 將「查詢工具」與「交易決策」統一為MDP行動空間，用過程獎勵抑制退化模式，使信息獲取成為可優化的策略行動。
 
 **1.3 信息流 ASCII**
-```
-Initial Context → [Plan] → Acquire(Tool Call) → Reason(Update State) → Act(Trade/Loop)
-       ↑___________________________________________________________|
+```mermaid
+flowchart TD
+    A["Initial Context"] --> B["[Plan]"]
+    B["[Plan]"] --> C["Acquire(Tool Call)"]
+    C["Acquire(Tool Call)"] --> D["Reason(Update State)"]
+    D["Reason(Update State)"] --> E["Act(Trade/Loop)"]
+    E["Act(Trade/Loop)"] --> A["Initial Context"]
 ```
 
 ## §2 · 數學層

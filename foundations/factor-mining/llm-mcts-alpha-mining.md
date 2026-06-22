@@ -27,17 +27,21 @@
 ⚡ **Eureka 一句話 trick + 直覺**：用金融回測多維指標直接評估 MCTS 節點，結合頻繁子樹規避機制，引導 LLM 迭代生成高預測力且可解釋的 Alpha 公式。直覺：把因子挖掘當成「下棋」，每一步優化都看實戰回測分數，並記住「別再走別人走爛的套路」。
 
 **信息流 ASCII 圖**
-```
-[OHLCV/VWAP] --> (Expression Tree) --> [LLM Generator]
-      |                                      |
-      v                                      v
-[Backtest Engine] <-- (Multi-dim Metrics) <-- [MCTS Node Evaluation]
-      |                                      ^
-      v                                      |
-[Relative Ranking] --> [Q-value Update] --> [UCT Selection]
-      ^                                      |
-      |                                      v
-[FSA Mining] ---------> [Avoid Frequent Subtrees] --> [LLM Prompt Context]
+```mermaid
+flowchart TD
+    A["[OHLCV/VWAP]"] --> B["(Expression Tree)"]
+    B["(Expression Tree)"] --> C["[LLM Generator]"]
+    A["[OHLCV/VWAP]"] --> D["[Backtest Engine]"]
+    C["[LLM Generator]"] --> F["[MCTS Node Evaluation]"]
+    F["[MCTS Node Evaluation]"] --> E["(Multi-dim Metrics)"]
+    E["(Multi-dim Metrics)"] --> D["[Backtest Engine]"]
+    D["[Backtest Engine]"] --> G["[Relative Ranking]"]
+    F["[MCTS Node Evaluation]"] --> I["[UCT Selection]"]
+    G["[Relative Ranking]"] --> H["[Q-value Update]"]
+    H["[Q-value Update]"] --> I["[UCT Selection]"]
+    J["[FSA Mining]"] --> K["[Avoid Frequent Subtrees]"]
+    K["[Avoid Frequent Subtrees]"] --> L["[LLM Prompt Context]"]
+    I["[UCT Selection]"] --> L["[LLM Prompt Context]"]
 ```
 
 ## §2 · 數學層

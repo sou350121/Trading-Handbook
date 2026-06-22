@@ -29,14 +29,17 @@
 將「何時交易」與「交易多少」耦合為單一連續動作輸出，並用Zone劃分與調倉懲罰約束探索空間，使RL代理在無預設規則下自發學習均值回歸節奏。
 
 **1.3 信息流 ASCII**
-```
-[Market Data] -> [Sliding Window] -> [Z-Score Spread & Zone]
-                          |
-                          v
-[Observation Space] -> [Actor Network] -> [Action (-1 to 1)] -> [Position & Cash]
-                          ^                      |
-                          |                      v
-[Critic Network] <- [Multi-Part Reward] <- [Environment Feedback]
+```mermaid
+flowchart TD
+    N1["Market Data"] --> N2["Sliding Window"]
+    N2 --> N3["Z-Score Spread & Zone"]
+    N2 --> N4["Observation Space"]
+    N4 --> N5["Actor Network"]
+    N5 --> N6["Action (-1 to 1)"]
+    N6 --> N7["Position & Cash"]
+    N6 --> N9["Multi-Part Reward"]
+    N10["Environment Feedback"] --> N9
+    N9 --> N8["Critic Network"]
 ```
 
 ## §2 · 數學層

@@ -27,12 +27,15 @@
 
 **1.2 ⚡ Eureka** 用 LLM 輸出評分，以係數直接乘入 PPO 動作與 CVaR 損失，讓文本先驗「貼著」策略梯度走，而非覆蓋它。
 **1.3 信息流**
-```
-新聞文本 → LLM Prompt → [Rec_Score, Risk_Score]
-      ↓              ↓
-動作擾動: a_t' = a_t * α_rec    軌跡回報調整: R_t' = R_t * α_risk
-      ↓              ↓
-PPO 策略更新 ←─────── 環境反饋 (價格/倉位)
+```mermaid
+flowchart TD
+    A["新聞文本"] --> B["LLM Prompt"]
+    B --> C["[Rec_Score, Risk_Score]"]
+    A --> D["動作擾動: a_t' = a_t * α_rec"]
+    B --> E["軌跡回報調整: R_t' = R_t * α_risk"]
+    D --> F["PPO 策略更新"]
+    E --> G["環境反饋 (價格/倉位)"]
+    G --> F
 ```
 
 ## §2 · 數學層

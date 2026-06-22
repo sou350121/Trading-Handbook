@@ -26,12 +26,15 @@
 
 **⚡ Eureka:** 放棄外部獎勵，直接最小化模型對自身預測的不確定性；用 `pass@k` 方差鎖定「能力臨界點」提示，10 步內強制 logits 右偏，無監督釋放推理。
 **信息流 ASCII:**
-```
-Prompt (1 sample) → Pass@k Variance Filter → High-Uncertainty Selection
-       ↓
-Token-level Conditional Entropy Calculation → Gradient Update (10 steps)
-       ↓
-Logit Right-Shift → Greedy Decoding @ Temp 0.5 → Reasoning Output
+```mermaid
+flowchart TD
+    A["Prompt (1 sample)"] --> B["Pass@k Variance Filter"]
+    B["Pass@k Variance Filter"] --> C["High-Uncertainty Selection"]
+    C["High-Uncertainty Selection"] --> D["Token-level Conditional Entropy Calculation"]
+    D["Token-level Conditional Entropy Calculation"] --> E["Gradient Update (10 steps)"]
+    E["Gradient Update (10 steps)"] --> F["Logit Right-Shift"]
+    F["Logit Right-Shift"] --> G["Greedy Decoding @ Temp 0.5"]
+    G["Greedy Decoding @ Temp 0.5"] --> H["Reasoning Output"]
 ```
 
 ## §2 · 數學層

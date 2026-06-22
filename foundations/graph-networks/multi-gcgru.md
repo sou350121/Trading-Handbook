@@ -26,11 +26,15 @@
 
 ⚡ **Eureka:** 「可學習權重的多圖卷積 + 數據驅動動態圖」讓模型同時具備專家知識的結構先驗與市場微結構的自適應性。
 🌊 **信息流 ASCII:**
-```
-Raw OHLCV ──┐
-            ├─► [Holdings / Industry / Topic / Dynamic Graphs] ──► Multi-GCN ──┐
-            │                                                              ├─► Concat ──► GRU ──► FC/Sigmoid ──► P(up)
-            └────────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TD
+    A["Raw OHLCV"] --> B["[Holdings / Industry / Topic / Dynamic Graphs]"]
+    B --> C["Multi-GCN"]
+    C --> D["Concat"]
+    A --> D
+    D --> E["GRU"]
+    E --> F["FC/Sigmoid"]
+    F --> G["P(up)"]
 ```
 
 ## §2 · 數學層

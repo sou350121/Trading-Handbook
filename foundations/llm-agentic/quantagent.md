@@ -29,14 +29,20 @@
 「內層用 LLM 隱式做貝葉斯後驗更新縮小信息差距，外層用悲觀離線 RL 把 KB 當做保守策略搜索空間，雙層疊加迫使因子庫向真實環境最優策略收斂。」直覺：模擬環境負責快速試錯與知識積累，實盤反饋負責校正分佈偏移，悲觀主義防止代理在稀疏反饋中過度自信。
 
 **1.3 信息流 ASCII 圖**
-```
-[User Query] → [Context Buffer] → Writer → [Alpha Code]
-       ↑                              ↓
-[KB Retrieval] ← Judge (Score/Feedback) ← [Sim Environment]
-       ↓
-[Outer Loop: Real Market Eval] → Performance Score → KB Update (Sanity Check)
-       ↓
-[New Iteration] → Refined Writer Policy
+```mermaid
+flowchart TD
+    A["User Query"] --> B["Context Buffer"]
+    B --> C[Writer]
+    C --> D["Alpha Code"]
+    D --> G["Sim Environment"]
+    G --> F["Judge (Score/Feedback)"]
+    F --> E["KB Retrieval"]
+    E --> A
+    E --> H["Outer Loop: Real Market Eval"]
+    H --> I["Performance Score"]
+    I --> J["KB Update (Sanity Check)"]
+    J --> K["New Iteration"]
+    K --> L["Refined Writer Policy"]
 ```
 
 ## §2 · 數學層

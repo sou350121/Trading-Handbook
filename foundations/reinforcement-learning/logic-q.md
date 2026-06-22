@@ -27,14 +27,16 @@
 ⚡ **Eureka Trick:** 用「符號閾值孔洞」替換神經網絡的隱式特徵學習，讓貝葉斯優化直接對齊人類專家的趨勢直覺（如「低波動+高增長=穩定上升」），基座模型只負責微觀執行，草圖負責宏觀開關。
 
 **信息流 ASCII:**
-```
-[Market Data] → [3 Indicators: Vol, DownsideRisk, Growth]
-       ↓
-[Program Sketch Interpreter] → (if/else logic with θ_holes)
-       ↓
-[Adjustment Params τ / w] → (Freeze DRL Base)
-       ↓
-[Post-hoc π_adj(a|s)] → Sample Action → [Execution]
+```mermaid
+flowchart TD
+    A["Market Data"] --> B["3 Indicators: Vol, DownsideRisk, Growth"]
+    B --> C["Program Sketch Interpreter"]
+    C --> D["if/else logic with θ_holes"]
+    D --> E["Adjustment Params τ / w"]
+    E --> F["Freeze DRL Base"]
+    F --> G["Post-hoc π_adj(a|s)"]
+    G --> H["Sample Action"]
+    H --> I["Execution"]
 ```
 
 ## §2 · 數學層

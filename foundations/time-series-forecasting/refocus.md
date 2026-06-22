@@ -27,10 +27,15 @@
 ⚡ **Eureka 一句話 trick**：頻域不是「濾波」而是「重分配概率」——用 Softmax 把能量轉成跨通道選擇權，讓模型自己決定哪些頻率該被跨變量共享。
 
 **信息流 ASCII:**
-```
-Input X → [AMEO: 能量重分配] → FFT → [EKPB: MLP→FFT→Energy→Softmax→Pick→iFFT]
-       → Add&Norm → MLP → Output Y
-       ↖ KET: 交替訓練 (Real ↔ Synthetic Mix-up)
+```mermaid
+flowchart TD
+    A["Input X"] --> B["[AMEO: 能量重分配]"]
+    B --> C["FFT"]
+    C --> D["[EKPB: MLP→FFT→Energy→Softmax→Pick→iFFT]"]
+    D --> E["Add&Norm"]
+    E --> F["MLP"]
+    F --> G["Output Y"]
+    H["KET: 交替訓練 (Real ↔ Synthetic Mix-up)"] --> C
 ```
 
 ## §2 · 數學層

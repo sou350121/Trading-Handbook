@@ -27,10 +27,16 @@
 ⚡ **Eureka:** 將注意力權重從「圖全局共享」降維至「節點私有」，讓每家公司的鄰居聚合規則自適應其行業/市值/新聞曝光特性。
 
 **信息流 ASCII:**
-```
-[歷史價格序列] → LSTM → Seq Embed (h_s)
-[新聞/推文共現] → 時間衰減聚合 → Relational Weight (β_ij)
-h_s + β_ij → Node-Specific Attn (a_i) → Multi-head Concat → FC → [Trend / Vol]
+```mermaid
+flowchart TD
+    A["[歷史價格序列]"] --> B["LSTM"]
+    B --> C["Seq Embed (h_s)"]
+    D["[新聞/推文共現]"] --> E["時間衰減聚合"]
+    E --> F["Relational Weight (β_ij)"]
+    G["h_s + β_ij"] --> H["Node-Specific Attn (a_i)"]
+    H --> I["Multi-head Concat"]
+    I --> J["FC"]
+    J --> K["[Trend / Vol]"]
 ```
 
 ## §2 · 數學層

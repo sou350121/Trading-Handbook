@@ -29,16 +29,20 @@
 將因子公式拆解為 `(操作符, 操作數1, 操作數2, 操作數3)` 四元組指令流，用 RL 代理像編譯器一樣逐步生成計算樹。直覺：把「猜公式」變成「寫代碼」，用 reward 驅動語法正確性與邏輯有效性，而非盲目交叉變異。
 
 **1.3 信息流 ASCII 圖**
-```
-原始特徵 (Open/Close/High/Low/Volume/WAP)
-       ↓
-[RL Agent] → 狀態 State_t → 動作 Action_t (選 Op/Arg)
-       ↓
-指令序列 → 維度一致性檢查 (硬過濾) → 計算樹構建
-       ↓
-Alpha 值 ζ → 獎勵計算 (IC + 多樣性懲罰) → MCTS 價值更新
-       ↓
-[外部組合模型 XGBoost] → 擬合回報 → 交易信號 (Top-K/Drop-N)
+```mermaid
+flowchart TD
+    A["原始特徵 (Open/Close/High/Low/Volume/WAP)"] --> B["[RL Agent]"]
+    B --> C["狀態 State_t"]
+    C --> D["動作 Action_t (選 Op/Arg)"]
+    D --> E["指令序列"]
+    E --> F["維度一致性檢查 (硬過濾)"]
+    F --> G["計算樹構建"]
+    G --> H["Alpha 值 ζ"]
+    H --> I["獎勵計算 (IC + 多樣性懲罰)"]
+    I --> J["MCTS 價值更新"]
+    J --> K["[外部組合模型 XGBoost]"]
+    K --> L["擬合回報"]
+    L --> M["交易信號 (Top-K/Drop-N)"]
 ```
 
 ## §2 · 數學層

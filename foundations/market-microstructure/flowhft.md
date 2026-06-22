@@ -27,14 +27,14 @@
 ⚡ **Eureka 一句話 trick + 直覺**：用 ODE 軌跡將噪聲平滑推演為專家動作序列，本質是「連續時間的隱式長視角規劃」，切斷了單步誤差累積鏈。
 
 **信息流 ASCII 圖**
-```
-[LOB/Agent State] → (Condition) → [Noise Sequence]
-                          ↓
-                  [Flow Matching ODE Solver]
-                          ↓
-  [Pretrained Action Sequence] → [Grid Search Linear Transform]
-                          ↓
-                  [Final HFT Execution Orders]
+```mermaid
+flowchart TD
+    A["LOB/Agent State"] --> B["Condition"]
+    B --> C["Noise Sequence"]
+    B --> D["Flow Matching ODE Solver"]
+    D --> E["Pretrained Action Sequence"]
+    E --> F["Grid Search Linear Transform"]
+    F --> G["Final HFT Execution Orders"]
 ```
 
 ## §2 · 數學層

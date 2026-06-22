@@ -29,30 +29,18 @@
 用擴散模型的多路徑樣本協方差作為BL的「主觀精度」，讓模型自己告訴優化器「我有多不確定」，不確定時系統自動退守歷史先驗。
 
 **1.3 信息流 ASCII**
-```
-Macro Vector (5 indices)
-        │
-        ▼
-┌───────────────────────────────┐
-│ Kalman Filter                 │ → 動態敏感度 β_t
-└───────────────┬───────────────┘
-                ▼
-┌───────────────────────────────┐
-│ Linear Projection & Fusion    │ → 融合條件表示
-└───────────────┬───────────────┘
-                ▼
-┌───────────────────────────────┐
-│ Conditional DDIM (MLG)        │ → 多路徑收益率採樣
-│   Macro Branch vs Full Branch │
-└───────────────┬───────────────┘
-                ▼
-┌───────────────────────────────┐
-│ Sample Mean & Covariance      │ → 主觀觀點 (μ_view, Ω)
-└───────────────┬───────────────┘
-                ▼
-┌───────────────────────────────┐
-│ BL Bayesian Fusion → MVO      │ → 最終配置權重
-└───────────────────────────────┘
+```mermaid
+flowchart TD
+    N1["Macro Vector (5 indices)"] --> N2["Kalman Filter"]
+    N2 --> N4["Linear Projection & Fusion"]
+    N2 --> N3["動態敏感度 β_t"]
+    N4 --> N6["Conditional DDIM (MLG)<br/>Macro Branch vs Full Branch"]
+    N4 --> N5["融合條件表示"]
+    N6 --> N8["Sample Mean & Covariance"]
+    N6 --> N7["多路徑收益率採樣"]
+    N8 --> N10["BL Bayesian Fusion → MVO"]
+    N8 --> N9["主觀觀點 (μ_view, Ω)"]
+    N10 --> N11["最終配置權重"]
 ```
 
 ## §2 · 數學層

@@ -29,14 +29,12 @@
 解耦「列結構映射」與「特徵交互學習」。直覺：讓模型先學「怎麼看不同形狀的表格」，再學「表格裡的規律是什麼」。
 
 **1.3 信息流**
-```
-[Raw Tabular Data] 
-   │ (Featurizer_i: 數值×向量+偏置 / 分類→查找表)
-   ▼
-[Token Embeddings] → [Shared Transformer Backbone (MHSA + FFN)] → [Contextual Reps]
-   │ (Projection Head_j: 重建/對比/監督)
-   ▼
-[Loss / Task Output]
+```mermaid
+flowchart TD
+    A["Raw Tabular Data"] -->|"Featurizer_i: 數值×向量+偏置 / 分類→查找表"| B["Token Embeddings"]
+    B --> C["Shared Transformer Backbone (MHSA + FFN)"]
+    C --> D["Contextual Reps"]
+    B -->|"Projection Head_j: 重建/對比/監督"| E["Loss / Task Output"]
 ```
 
 ## §2 · 數學層

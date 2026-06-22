@@ -29,20 +29,14 @@
 用「前向滾動標準化 + 基線中心初始化」鎖死跨股票標籤漂移，再用「OFI-回報相關性排序」將無監督簇強制對齊經濟行為，完成從數據模式到微結構機制的閉環。
 
 **1.3 信息流 ASCII**
-```
-MBO Events (Add/Cancel/Trade)
-   ↓
-6 Time-Related Features (Qty, ΔT_mid, ΔT_first, ΔT_prev, CumVol_same, CumVol_opp)
-   ↓
-Forward Rolling Normalization (Window=100)
-   ↓
-K-means++ (3 Clusters: φ1/φ2/φ3)
-   ↓
-OFI Calc (Size/Qty variants in 30-min buckets)
-   ↓
-Correlation w/ Returns (CONR / FRNB / FREB) → Label Mapping
-   ↓
-Cluster-Specific Trading Signal
+```mermaid
+flowchart TD
+    A["MBO Events (Add/Cancel/Trade)"] --> B["6 Time-Related Features (Qty, ΔT_mid, ΔT_first, ΔT_prev, CumVol_same, CumVol_opp)"]
+    B --> C["Forward Rolling Normalization (Window=100)"]
+    C --> D["K-means++ (3 Clusters: φ1/φ2/φ3)"]
+    D --> E["OFI Calc (Size/Qty variants in 30-min buckets)"]
+    E --> F["Correlation w/ Returns (CONR / FRNB / FREB) → Label Mapping"]
+    F --> G["Cluster-Specific Trading Signal"]
 ```
 
 ## §2 · 數學層

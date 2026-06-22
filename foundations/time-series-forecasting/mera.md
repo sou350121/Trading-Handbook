@@ -27,22 +27,22 @@
 ⚡ **Eureka Trick**: `聚合歷史標籤 → GateNet 路由`。直覺：股票模式（如高收益/低收益）在特徵空間可能重疊，但在標籤空間的歷史分佈具有強自相關性。用近鄰的「結果」反推「模式」，比用「過程特徵」猜模式更魯棒。
 
 📡 **信息流 ASCII**:
-```
-Raw Minute Data → [MAE Pretrain] → Query Embed (h_t)
-                                      ↓
-                              Retrieval Pool (Past Embeds + Labels)
-                                      ↓ (MSE Distance)
-                              Top-N Neighbors → [Attention Aggregation]
-                                      ↓
-                  ┌───────────────────┴───────────────────┐
-                  ↓                                       ↓
-          Aggregated Labels (l_agg)            Aggregated Features (h_agg) + h_t
-                  ↓                                       ↓
-              [GateNet] → Top-K=1 Expert ID          [GRU Expert] → h_expert
-                  ↓                                       ↓
-                  └───────────────→ [MLP Predictor] ←────┘
-                                      ↓
-                              Final Return Prediction (y_pred)
+```mermaid
+flowchart TD
+    A["Raw Minute Data"] --> B["[MAE Pretrain]"]
+    B --> C["Query Embed (h_t)"]
+    C --> D["Retrieval Pool (Past Embeds + Labels)"]
+    D --> E["Top-N Neighbors"]
+    E --> F["[Attention Aggregation]"]
+    F --> G["Aggregated Labels (l_agg)"]
+    F --> H["Aggregated Features (h_agg) + h_t"]
+    G --> I["[GateNet]"]
+    I --> J["Top-K=1 Expert ID"]
+    H --> K["[GRU Expert]"]
+    K --> L["h_expert"]
+    J --> M["[MLP Predictor]"]
+    L --> M
+    M --> N["Final Return Prediction (y_pred)"]
 ```
 
 ## §2 · 數學層

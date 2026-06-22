@@ -30,18 +30,24 @@
 **直覺:** 用自然語言的語義先驗（Semantic Prior）錨定 GP 的初始種群，避免在無效運算子空間中浪費算力；GP 接管橫截面/時間序列的數學組合，LLM 負責回測結果的語義翻譯與下一輪 Prompt 修正。
 
 ### 1.3 信息流 ASCII
-```
-[研究員自然語言想法] 
-       ↓
-[Trading Idea Polisher] → (查詢文獻/數據字段庫) → 結構化 Prompt
-       ↓
-[Quant Developer (LLM)] → 生成種子 Alpha 表達式 → Alpha DB
-       ↓
-[Alpha Compute Framework] → GP 交叉/變異/選擇 → 候選群體
-       ↓
-[Trading Backtest Engine] → 計算 IC/Sharpe/收益 → 量化指標
-       ↓
-[Analyst Agent] → 綜合摘要 → 反饋至研究員 → [下一輪迭代]
+```mermaid
+flowchart TD
+    N1["[研究員自然語言想法]"] --> N2["[Trading Idea Polisher]"]
+    N2["[Trading Idea Polisher]"] --> N3["(查詢文獻/數據字段庫)"]
+    N3["(查詢文獻/數據字段庫)"] --> N4["結構化 Prompt"]
+    N4["結構化 Prompt"] --> N5["[Quant Developer (LLM)]"]
+    N5["[Quant Developer (LLM)]"] --> N6["生成種子 Alpha 表達式"]
+    N6["生成種子 Alpha 表達式"] --> N7["Alpha DB"]
+    N7["Alpha DB"] --> N8["[Alpha Compute Framework]"]
+    N8["[Alpha Compute Framework]"] --> N9["GP 交叉/變異/選擇"]
+    N9["GP 交叉/變異/選擇"] --> N10["候選群體"]
+    N10["候選群體"] --> N11["[Trading Backtest Engine]"]
+    N11["[Trading Backtest Engine]"] --> N12["計算 IC/Sharpe/收益"]
+    N12["計算 IC/Sharpe/收益"] --> N13["量化指標"]
+    N13["量化指標"] --> N14["[Analyst Agent]"]
+    N14["[Analyst Agent]"] --> N15["綜合摘要"]
+    N15["綜合摘要"] --> N16["反饋至研究員"]
+    N16["反饋至研究員"] --> N17["[下一輪迭代]"]
 ```
 
 ## §2 · 數學層

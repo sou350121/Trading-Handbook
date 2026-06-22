@@ -29,10 +29,13 @@
 對數損失將「絕對價格誤差」映射為「百分比誤差」，使模型在訓練時自動完成跨資產的標準化，無需手動 Z-score 或收益率轉換。
 
 1.3 信息流 ASCII 圖
-```
-[原始價格序列 y] -> log(y) -> [隨機掩碼切片] -> [TimesFM Decoder] -> [預測 log(y_hat)]
-      ^                                                      |
-      |______________________________________________________| (Loss: MSE on log space)
+```mermaid
+flowchart TD
+  A["原始價格序列 y"] --> B["log(y)"]
+  B --> C["隨機掩碼切片"]
+  C --> D["TimesFM Decoder"]
+  D --> E["預測 log(y_hat)"]
+  E -->|"(Loss: MSE on log space)"| A
 ```
 
 ## §2 · 數學層

@@ -29,11 +29,16 @@
 用因果掩碼限制編碼器只「看過去」，再用解碼器對「加噪的當前分塊」做去噪，本質是讓模型在自回歸生成過程中學會過濾量價噪聲，而非盲目擬合歷史路徑。
 
 **1.3 信息流 ASCII 圖**
-```
-[Clean Chunks] -> [Linear Embed + PE] -> [Causal Transformer Encoder] -> [Context Reps]
-      |                                              |
-      v (Add Noise via Cosine Scheduler)             v (Cross-Attn: Query=Noisy, KV=Context)
-[Noisy Chunks] -> [Linear Embed + PE] -> [Denoising Decoder] -> [Reconstruction]
+```mermaid
+flowchart TD
+    A["Clean Chunks"] --> B["Linear Embed + PE"]
+    B --> C["Causal Transformer Encoder"]
+    C --> D["Context Reps"]
+    A -->|Add Noise via Cosine Scheduler| E["Noisy Chunks"]
+    D -->|Cross-Attn: Query=Noisy, KV=Context| G["Denoising Decoder"]
+    E --> F["Linear Embed + PE"]
+    F --> G
+    G --> H["Reconstruction"]
 ```
 
 ## §2 · 數學層

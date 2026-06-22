@@ -29,12 +29,16 @@
 將連續價格軌跡投影至離散排名空間，利用排名分佈的跨期穩定性過濾微結構噪聲，使殘差收益的均值回歸半衰期顯著縮短。
 
 **1.3 信息流 ASCII**
-```
-[Raw Minute Data] → [Market Cap Calculation] → [Rank Sorting] 
-       ↓
-[PCA Factor Extraction] → [Residual Returns] → [DNN Input] 
-       ↓
-[Portfolio Weights] → [Intraday Rebalance] → [Name Space Execution]
+```mermaid
+flowchart TD
+    A["Raw Minute Data"] --> B["Market Cap Calculation"]
+    B --> C["Rank Sorting"]
+    B --> D["PCA Factor Extraction"]
+    D --> E["Residual Returns"]
+    E --> F["DNN Input"]
+    E --> G["Portfolio Weights"]
+    G --> H["Intraday Rebalance"]
+    H --> I["Name Space Execution"]
 ```
 
 ## §2 · 數學層

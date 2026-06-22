@@ -29,9 +29,15 @@
 用二元球面量化將連續 OHLCVA 強制映射為離散語言，再以「先預測粗結構、再補細殘差」的序貫自回歸，繞過連續空間回歸對金融低信噪比的歸納偏置衝突。
 
 **1.3 信息流 ASCII**
-```
-[History OHLCVA] -> BSQ Tokenizer -> [Coarse Token] -> Decoder -> [Fine Token] -> Decoder -> [Next OHLCVA]
-      ^___________________________________________________________|
+```mermaid
+flowchart TD
+    A["[History OHLCVA]"] --> B["BSQ Tokenizer"]
+    B --> C["[Coarse Token]"]
+    C --> D["Decoder"]
+    D --> E["[Fine Token]"]
+    E --> F["Decoder"]
+    F --> G["[Next OHLCVA]"]
+    G --> A
 ```
 
 ## §2 · 數學層

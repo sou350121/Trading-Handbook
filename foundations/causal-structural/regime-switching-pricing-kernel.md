@@ -29,12 +29,14 @@
 「錯配存在於箭頭（Transitions），而非節點（Regimes）」：市場系統性低估向高壓力、高相關性機制轉換的權重，導致定價核（SDF）與真實轉移動態脫鉤。
 
 **1.3 信息流**
-```
-Daily Returns → Rolling 250d Beta Decomp → Regime Label (High-rho / High-sigma / Mixed)
-       ↓
-Empirical Transition Matrix P (MLE) → Stress Test (Perturb P)
-       ↓
-Pricing Kernel Mismatch (P_true ≠ P_market) → Sequence Risk / Clustered Drawdowns
+```mermaid
+flowchart TD
+  A["Daily Returns"] --> B["Rolling 250d Beta Decomp"]
+  B --> C["Regime Label (High-rho / High-sigma / Mixed)"]
+  B --> D["Empirical Transition Matrix P (MLE)"]
+  D --> E["Stress Test (Perturb P)"]
+  D --> F["Pricing Kernel Mismatch (P_true ≠ P_market)"]
+  F --> G["Sequence Risk / Clustered Drawdowns"]
 ```
 
 ## §2 · 數學層

@@ -29,14 +29,21 @@
 將自注意力矩陣對角線置為 `-inf`，強制模型「不看自己」，只能透過其他時間步與特徵的交互來推斷缺失值，本質上是用跨維度條件分佈替代遞歸猜測。
 
 **1.3 信息流 ASCII 圖**
-```
-[Raw TS + Mask] → (Concat) → DMSA Block 1 → X1
-                                ↓
-[X1 + Non-linear] → DMSA Block 2 → X2
-                                ↓
-[Avg Attn Weights + Mask] → Sigmoid Weight → Weighted Combine (X1, X2) → X3
-                                ↓
-[X3 + Original Observed] → Imputed TS → [Downstream Model]
+```mermaid
+flowchart TD
+  A["[Raw TS + Mask]"] --> B["(Concat)"]
+  B --> C["DMSA Block 1"]
+  C --> D[X1]
+  D --> E["[X1 + Non-linear]"]
+  E --> F["DMSA Block 2"]
+  F --> G[X2]
+  G --> H["[Avg Attn Weights + Mask]"]
+  H --> I["Sigmoid Weight"]
+  I --> J["Weighted Combine (X1, X2)"]
+  J --> K[X3]
+  K --> L["[X3 + Original Observed]"]
+  L --> M["Imputed TS"]
+  M --> N["[Downstream Model]"]
 ```
 
 ## §2 · 數學層

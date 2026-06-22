@@ -29,12 +29,30 @@
 Q-Filter 將行為克隆從「強制模仿」降級為「條件引導」，只有當 Critic 估算的專家動作價值高於當前動作時，才計算 BC Loss，防止代理被不切實際的「完美交易」帶偏。
 
 **1.3 信息流 ASCII**
-```
-[Obs: Price, TA, PnL] → GRU(hidden_t) → Actor(a_t) / Critic(Q_t)
-       ↓
-[Env] → Reward(ΔSR) + Demo Buffer(PER) + BC_Loss(Q-filtered)
-       ↓
-[Update] → Policy θ_π / Value θ_Q
+```mermaid
+flowchart TD
+    N1["[Obs: Price, TA, PnL]"]
+    N2["GRU(hidden_t)"]
+    N3["Actor(a_t)"]
+    N4["Critic(Q_t)"]
+    N5["[Env]"]
+    N6["Reward(ΔSR)"]
+    N7["Demo Buffer(PER)"]
+    N8["BC_Loss(Q-filtered)"]
+    N9["[Update]"]
+    N10["Policy θ_π"]
+    N11["Value θ_Q"]
+
+    N1 --> N2
+    N2 --> N3
+    N2 --> N4
+    N1 --> N5
+    N5 --> N6
+    N5 --> N7
+    N5 --> N8
+    N5 --> N9
+    N9 --> N10
+    N9 --> N11
 ```
 
 ## §2 · 數學層

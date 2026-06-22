@@ -29,14 +29,18 @@
 用預訓練的「中間價方向預測」任務初始化 Attn-LOB 權重，讓 RL 智能體從「懂市場微結構」的起點開始探索，而非隨機撞牆。直覺：將無標籤 LOB 序列轉為監督信號，大幅降低 RL 探索方差與樣本複雜度。
 
 ### 1.3 信息流 ASCII 圖
-```
-LOB Snapshot (T, 4n) + Dynamic States (OSI/RV/RSI)
-      │
-[Attn-LOB Pretrain] → CNN → Inception → Multi-Head Attention
-      │
-[RL Agent] → PPO/DQN → Continuous/Discrete Action
-      │
-[Hybrid Reward] → DP + TP + IP → Policy Update
+```mermaid
+flowchart TD
+    A["LOB Snapshot (T, 4n) + Dynamic States (OSI/RV/RSI)"] --> B["[Attn-LOB Pretrain]"]
+    B --> C["CNN"]
+    C --> D["Inception"]
+    D --> E["Multi-Head Attention"]
+    B --> F["[RL Agent]"]
+    F --> G["PPO/DQN"]
+    G --> H["Continuous/Discrete Action"]
+    F --> I["[Hybrid Reward]"]
+    I --> J["DP + TP + IP"]
+    J --> K["Policy Update"]
 ```
 
 ## §2 · 數學層

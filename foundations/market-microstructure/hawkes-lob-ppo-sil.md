@@ -26,12 +26,14 @@
 
 **⚡ Eureka:** 將TWAP執行階段作為離散狀態先驗注入，使RL從「被動響應LOB事件」轉為「主動對齊確定性訂單流」。
 **信息流:**
-```
-LOB Events → Hawkes Process → Pulse Trigger → [Decision Net] → [Action Net]
-                                      ↑
-                              (fRL State: TWAP Mode)
-                                      ↓
-                          Order Placement / Cancel / Skip
+```mermaid
+flowchart TD
+    A["LOB Events"] --> B["Hawkes Process"]
+    B["Hawkes Process"] --> C["Pulse Trigger"]
+    C["Pulse Trigger"] --> D["[Decision Net]"]
+    D["[Decision Net]"] --> E["[Action Net]"]
+    F["(fRL State: TWAP Mode)"] --> D["[Decision Net]"]
+    F["(fRL State: TWAP Mode)"] --> G["Order Placement / Cancel / Skip"]
 ```
 
 ## §2 · 數學層

@@ -29,14 +29,29 @@
 用可學習的注意力權重「軟化」DF 檢驗的嚴苛協整條件，將稀疏的配對交易轉化為全市場覆蓋的虛擬理性價格回歸問題。
 
 **1.3 信息流 ASCII 圖**
-```
-Input(量價序列)
-  ├─ Stock-Level: Cointegration Attention → Virtual Rational Price → Diff Factor (Irrationality_Stock)
-  └─ Market-Level: Self-Attn Rep → Sub-market Contrast & Sync Prediction → Market Factor (Irrationality_Market)
-       ↓
-Predictor: Transformer(Temporal) + GNN(Relational) → MLP → Return Forecast
-       ↓
-Loss: MSE + RankIC Regularization
+```mermaid
+flowchart TD
+    A["Input(量價序列)"]
+    B["Stock-Level: Cointegration Attention"]
+    C["Virtual Rational Price"]
+    D["Diff Factor (Irrationality_Stock)"]
+    E["Market-Level: Self-Attn Rep"]
+    F["Sub-market Contrast & Sync Prediction"]
+    G["Market Factor (Irrationality_Market)"]
+    H["Predictor: Transformer(Temporal) + GNN(Relational)"]
+    I["MLP"]
+    J["Return Forecast"]
+    K["Loss: MSE + RankIC Regularization"]
+    A --> B
+    A --> E
+    B --> C
+    C --> D
+    E --> F
+    F --> G
+    G --> H
+    H --> I
+    I --> J
+    J --> K
 ```
 
 ## §2 · 數學層

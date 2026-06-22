@@ -29,23 +29,23 @@
 用分佈熵與擾動相關性替代序列化回測，將Alpha評估從「策略級PnL模擬」降維至「信號級統計診斷」，使多維質量指標可獨立並行計算。
 
 **1.3 信息流 ASCII 圖**
-```
-Raw Data (OHLCV/Fund) 
-   │
-   ▼
-Alpha Generator (GA/RL/GAN/LLM) 
-   │
-   ▼
-Candidate Pool [α₁, α₂, ..., αₙ]
-   │
-   ├─► PPS (IC + RankIC) ──┐
-   ├─► RRE (Rank KL Div)   ├─► AlphaEval Scorer (Parallel)
-   ├─► PFS (Perturbation)  │
-   ├─► Logic (LLM Judge)   │
-   └─► DE (Cov EigenEntropy)┘
-   │
-   ▼
-Filtered Subset → Combiner (Linear/Tree) → Final Signal
+```mermaid
+flowchart TD
+  A["Raw Data (OHLCV/Fund)"] --> B["Alpha Generator (GA/RL/GAN/LLM)"]
+  B --> C["Candidate Pool [α₁, α₂, ..., αₙ]"]
+  C --> D["PPS (IC + RankIC)"]
+  C --> E["RRE (Rank KL Div)"]
+  C --> F["PFS (Perturbation)"]
+  C --> G["Logic (LLM Judge)"]
+  C --> H["DE (Cov EigenEntropy)"]
+  D --> I["AlphaEval Scorer (Parallel)"]
+  E --> I
+  F --> I
+  G --> I
+  H --> I
+  I --> J["Filtered Subset"]
+  J --> K["Combiner (Linear/Tree)"]
+  K --> L["Final Signal"]
 ```
 
 ## §2 · 數學層

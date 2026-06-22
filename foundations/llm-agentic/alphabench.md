@@ -27,20 +27,14 @@
 ⚡ **Eureka:** 放棄讓 LLM 當「絕對裁判」，改讓它當「相對排序器」；用 AST 與元數據補齊公式背後的物理執行上下文，使比較任務從欠定問題轉為可學習的結構特徵匹配。
 
 **信息流 ASCII:**
-```
-User Intent / Taxonomy
-       │
-       ▼
-[LLM Agent] (EA/CoE/ToT) ──生成候選公式──►
-       │                              │
-       ▼                              ▼
-[AST Parser & Hard Filter] ◄──語法/前瞻/深度/NaN/時效校驗──┘
-       │
-       ▼
-[Qlib Backtest] ──計算 IC/RankIC/IR ──►
-       │
-       ▼
-[SFT Pairwise Comparator] ──相對排序/篩選 Top-K ──► Factor Pool
+```mermaid
+flowchart TD
+    A["User Intent / Taxonomy"] --> B["[LLM Agent] (EA/CoE/ToT)"]
+    B -->|生成候選公式| C["[AST Parser & Hard Filter]"]
+    B -->|語法/前瞻/深度/NaN/時效校驗| C
+    C --> D["[Qlib Backtest]"]
+    D -->|計算 IC/RankIC/IR| E["[SFT Pairwise Comparator]"]
+    E -->|相對排序/篩選 Top-K| F["Factor Pool"]
 ```
 
 ## §2 · 數學層

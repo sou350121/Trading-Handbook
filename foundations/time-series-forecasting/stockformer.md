@@ -29,14 +29,22 @@
 `頻譜分離 > 隱式濾波；圖嵌入 > 靜態鄰接；多任務 > 單一目標。`
 
 **1.3 信息流 ASCII 圖**
-```
-[Raw OHLCV + Alpha360] → Decoupling Flow (DWT) → [Low-Freq] & [High-Freq]
-          ↓ (Upsample + FC)
-Dual-Freq Spatiotemporal Encoder → [Time Conv + Attn] + [Struc2Vec Graph Attn]
-          ↓
-Dual-Freq Fusion Decoder → Fusion Attention → [Return Regressor] + [Trend Classifier]
-          ↓
-Multi-Supervision Loss (L_reg + λ*L_cls)
+```mermaid
+flowchart TD
+    A["[Raw OHLCV + Alpha360]"] --> B["Decoupling Flow (DWT)"]
+    B --> C["[Low-Freq]"]
+    B --> D["[High-Freq]"]
+    C --> E["Dual-Freq Spatiotemporal Encoder"]
+    D --> E["Dual-Freq Spatiotemporal Encoder"]
+    E --> F["[Time Conv + Attn]"]
+    E --> G["[Struc2Vec Graph Attn]"]
+    F --> H["Dual-Freq Fusion Decoder"]
+    G --> H["Dual-Freq Fusion Decoder"]
+    H --> I["Fusion Attention"]
+    I --> J["[Return Regressor]"]
+    I --> K["[Trend Classifier]"]
+    J --> L["Multi-Supervision Loss (L_reg + λ*L_cls)"]
+    K --> L["Multi-Supervision Loss (L_reg + λ*L_cls)"]
 ```
 
 ## §2 · 數學層

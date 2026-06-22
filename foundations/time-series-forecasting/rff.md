@@ -27,13 +27,13 @@
 **⚡ Eureka:** 複雜度提升帶來的「近似收益」嚴格壓倒「估計方差」，正則化是將雙降/雙升曲線平滑為永久上升的關鍵閾值。
 
 **信息流 ASCII:**
-```
-Raw Predictors (15) 
-   → RFF Nonlinear Expansion (High-Dim K) 
-   → Ridge Regression (λ penalty) 
-   → Predicted Excess Return 
-   → Timing Portfolio (Long-biased) 
-   → Sharpe / R^2 Evaluation
+```mermaid
+flowchart TD
+    A["Raw Predictors (15)"] --> B["RFF Nonlinear Expansion (High-Dim K)"]
+    B["RFF Nonlinear Expansion (High-Dim K)"] --> C["Ridge Regression (λ penalty)"]
+    C["Ridge Regression (λ penalty)"] --> D["Predicted Excess Return"]
+    D["Predicted Excess Return"] --> E["Timing Portfolio (Long-biased)"]
+    E["Timing Portfolio (Long-biased)"] --> F["Sharpe / R^2 Evaluation"]
 ```
 
 ## §2 · 數學層

@@ -26,8 +26,13 @@
 
 ⚡ **Eureka:** 「不給答案，只給問題與工具權限，讓代理在真實數據流中自證推理鏈。」
 **信息流:**
-```
-User Query -> Agent Planner -> [Search/API/SQL Router] -> External Data Stream -> Validator/Reasoner -> Final Answer
+```mermaid
+flowchart TD
+    A["User Query"] --> B["Agent Planner"]
+    B["Agent Planner"] --> C["[Search/API/SQL Router]"]
+    C["[Search/API/SQL Router]"] --> D["External Data Stream"]
+    D["External Data Stream"] --> E["Validator/Reasoner"]
+    E["Validator/Reasoner"] --> F["Final Answer"]
 ```
 
 ## §2 · 數學層

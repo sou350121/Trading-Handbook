@@ -29,9 +29,13 @@
 用注意力權重矩陣的對角線/塊狀模式直接映射「短期動量-中期趨勢-狀態切換-危機記憶」，將黑盒壓縮轉譯為技術分析語言。
 
 **1.3 信息流 ASCII**
-```
-Raw Price/Volume -> VWAP/Volume Ratio -> Sliding Spearman Matrix 
--> MHA Autoencoder (32->16) -> DBSCAN Clustering -> Median Price Support Levels
+```mermaid
+flowchart TD
+    A["Raw Price/Volume"] --> B["VWAP/Volume Ratio"]
+    B["VWAP/Volume Ratio"] --> C["Sliding Spearman Matrix"]
+    C["Sliding Spearman Matrix"] --> D["MHA Autoencoder (32->16)"]
+    D["MHA Autoencoder (32->16)"] --> E["DBSCAN Clustering"]
+    E["DBSCAN Clustering"] --> F["Median Price Support Levels"]
 ```
 
 ## §2 · 數學層

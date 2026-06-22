@@ -26,12 +26,17 @@
 
 ⚡ **Eureka:** 將 LLM 的推理能力錨定在 `Python/Pandas` 代碼空間，以代碼片段為「基因」執行遺傳演算法，使因子從「統計擬合」升級為「邏輯演進」。
 **信息流:**
-```
-[OHLCV] → Level I~VII Agents (Prompt/Paraphrase) → LLM Code Gen
-   ↓
-[Multi-Agent Checker] → (Syntax/Logic/Look-ahead) → Pass/Fail
-   ↓
-[Evolution Pool] → Mutation / Crossover → Next Gen → [IC/RankIC Eval]
+```mermaid
+flowchart TD
+    A["[OHLCV]"] --> B["Level I~VII Agents (Prompt/Paraphrase)"]
+    B --> C["LLM Code Gen"]
+    C --> D["[Multi-Agent Checker]"]
+    D --> E["(Syntax/Logic/Look-ahead)"]
+    E --> F["Pass/Fail"]
+    F --> G["[Evolution Pool]"]
+    G --> H["Mutation / Crossover"]
+    H --> I["Next Gen"]
+    I --> J["[IC/RankIC Eval]"]
 ```
 
 ## §2 · 數學層

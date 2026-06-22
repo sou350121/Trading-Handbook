@@ -26,10 +26,17 @@
 
 ⚡ **Eureka:** 用「事後確認的極值」作為訓練代理目標，以空間換時間，過濾日頻噪聲。
 🌊 **信息流:**
-```
-Raw Text (Twitter/Reddit/News) → BART MNLI / RoBERTa → 語義分數
-Price/Volume/On-chain → 技術指標 / 賬戶餘額 → 數值特徵
-[語義分數] ⊕ [數值特徵] → MLP / LSTM / TFT / XGBoost → P(極值) → 交易信號
+```mermaid
+flowchart TD
+    A["Raw Text (Twitter/Reddit/News)"] --> B["BART MNLI / RoBERTa"]
+    B --> C["語義分數"]
+    D["Price/Volume/On-chain"] --> E["技術指標 / 賬戶餘額"]
+    E --> F["數值特徵"]
+    C --> G["[語義分數] ⊕ [數值特徵]"]
+    F --> G
+    G --> H["MLP / LSTM / TFT / XGBoost"]
+    H --> I["P(極值)"]
+    I --> J["交易信號"]
 ```
 
 ## §2 · 數學層

@@ -29,18 +29,22 @@
 用已實現的 Sharpe Ratio 作為監督標籤反饋訓練，讓模型「只學賺錢的視覺模式」，而非「只學歷史價格相似性」。
 
 **1.3 信息流 ASCII 圖**
-```
-OHLC (21d window) → Log-scale → Render RGB Candlestick (resolution undisclosed)
-       ↓
-[CAE Encoder] → Latent Vector (per stock)
-       ↓
-Time-Average (past 3 months) → Concat (Pair) → PCA (512)
-       ↓
-[MLP Regressor] → Predicted Next-Month Sharpe Ratio
-       ↓
-Select Top 100 Pairs → Execute (GATEV/VIDYAMURTHY rules)
-       ↓
-Realized PnL → Calc Annualized Sharpe → Feedback to Training Set (Top/Bottom 20)
+```mermaid
+flowchart TD
+    N1["OHLC (21d window)"] --> N2["Log-scale"]
+    N2 --> N3["Render RGB Candlestick (resolution undisclosed)"]
+    N3 --> N4["[CAE Encoder]"]
+    N4 --> N5["Latent Vector (per stock)"]
+    N5 --> N6["Time-Average (past 3 months)"]
+    N6 --> N7["Concat (Pair)"]
+    N7 --> N8["PCA (512)"]
+    N8 --> N9["[MLP Regressor]"]
+    N9 --> N10["Predicted Next-Month Sharpe Ratio"]
+    N10 --> N11["Select Top 100 Pairs"]
+    N11 --> N12["Execute (GATEV/VIDYAMURTHY rules)"]
+    N12 --> N13["Realized PnL"]
+    N13 --> N14["Calc Annualized Sharpe"]
+    N14 --> N15["Feedback to Training Set (Top/Bottom 20)"]
 ```
 
 ## §2 · 數學層

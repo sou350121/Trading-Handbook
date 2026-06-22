@@ -29,10 +29,14 @@
 將「新聞影響力」與「股票傳導路徑」解耦為可學習的圖結構與權重，用變分推斷逼近因果後驗，而非強行擬合歷史共動。直覺：市場傳導本質是非對稱的（供應商→客戶），DAG 能天然刻畫這種方向性與時間滯後，避免注意力機制將噪音誤判為強連接。
 
 **1.3 信息流 ASCII 圖**
-```
-News + Prices → [MIE: DNE(5-dim) + Price Embed] → X_<T
-X_<T → [Lag-dependent TCD] → q_φ(G) (Causal Graph & Weight Graph)
-G + X_<T → [FCM: Additive Noise] → y_T (Probability)
+```mermaid
+flowchart TD
+    A["News + Prices"] --> B["[MIE: DNE(5-dim) + Price Embed]"]
+    B --> C["X_<T"]
+    C --> D["[Lag-dependent TCD]"]
+    D --> E["q_φ(G) (Causal Graph & Weight Graph)"]
+    F["G + X_<T"] --> G["[FCM: Additive Noise]"]
+    G --> H["y_T (Probability)"]
 ```
 
 ## §2 · 數學層

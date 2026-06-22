@@ -27,18 +27,13 @@
 ⚡ **Eureka Trick:** 用模擬退火每日微調 Agent 分佈權重，讓市場「自己教自己」如何聚合分歧，而非依賴靜態規則。
 
 **信息流 ASCII:**
-```
-[Macro, Firm Features] 
-       ↓
-LLM Agent Pool (16 types × 32 agents) → 隨機分配觀察池
-       ↓
-Forward: Strategy Gen → Stock Pick → 分散決策信號
-       ↓
-Score Aggregation: Consensus/Disagreement 線性組合
-       ↓
-Backward Opt: 滑動窗口內最大化 Signal-Return 相似度 → 更新分佈 W
-       ↓
-Portfolio Output (日頻調倉)
+```mermaid
+flowchart TD
+    A["[Macro, Firm Features]"] --> B["LLM Agent Pool (16 types × 32 agents) → 隨機分配觀察池"]
+    B --> C["Forward: Strategy Gen → Stock Pick → 分散決策信號"]
+    C --> D["Score Aggregation: Consensus/Disagreement 線性組合"]
+    D --> E["Backward Opt: 滑動窗口內最大化 Signal-Return 相似度 → 更新分佈 W"]
+    E --> F["Portfolio Output (日頻調倉)"]
 ```
 
 ## §2 · 數學層

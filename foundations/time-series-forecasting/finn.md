@@ -29,12 +29,20 @@
 用Scan算子把LSTM的「時間展開」變成計算圖的「迭代節點」，再讓編譯器把浮點加乘全部「吸」進MultiThreshold比較層，徹底抹除浮點運算。
 
 **1.3 信息流 ASCII**
-```
-[OrderBook 144 feat] -> [Conv Modules] -> [LSTM (Scan Loop)] -> [FC] -> [Class]
-          |                       |
-    [QCDQ Rep]              [Streamlining]
-          |                       |
-    [QONNX] -> [FINN-ONNX] -> [Pure Integer Graph] -> [Vitis HLS IP] -> [FPGA]
+```mermaid
+flowchart TD
+    N1["OrderBook 144 feat"] --> N2["Conv Modules"]
+    N2 --> N3["LSTM (Scan Loop)"]
+    N3 --> N4["FC"]
+    N4 --> N5["Class"]
+    N1 --> N6["QCDQ Rep"]
+    N3 --> N7["Streamlining"]
+    N6 --> N8["QONNX"]
+    N7 --> N10["Pure Integer Graph"]
+    N8 --> N9["FINN-ONNX"]
+    N9 --> N10
+    N10 --> N11["Vitis HLS IP"]
+    N11 --> N12["FPGA"]
 ```
 
 ## §2 · 數學層

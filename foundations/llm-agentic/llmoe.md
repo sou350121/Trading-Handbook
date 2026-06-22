@@ -29,27 +29,19 @@
 用LLM做路由而非預測，以自然語言推理橋接數值特徵與市場情緒，實現「情境感知」的專家分配。
 
 **1.3 信息流 ASCII**
-```
-[Price + News Headlines] 
-       │
-       ▼
-┌──────────────────┐
-│   LLM Router     │── Classification: {Optimistic, Pessimistic}
-│  (Llama3.2)      │── Reasoning: Natural Language Explanation
-└────────┬─────────┘
-         │ (Route based on Class)
-         ▼
-┌──────────────────┐      ┌──────────────────┐
-│ Optimistic Expert│      │ Pessimistic Expert│
-│ (FNN, 3 hidden)  │      │ (FNN, 3 hidden)   │
-└────────┬─────────┘      └────────┬─────────┘
-         │                         │
-         └──────────┬──────────────┘
-                    ▼
-         ┌──────────────────┐
-         │ All-in All-out   │
-         │ Trading Signal   │
-         └──────────────────┘
+```mermaid
+flowchart TD
+    A["[Price + News Headlines]"]
+    B["LLM Router\n(Llama3.2)\nClassification: {Optimistic, Pessimistic}\nReasoning: Natural Language Explanation"]
+    C["Optimistic Expert\n(FNN, 3 hidden)"]
+    D["Pessimistic Expert\n(FNN, 3 hidden)"]
+    E["All-in All-out\nTrading Signal"]
+
+    A --> B
+    B --> C
+    B --> D
+    C --> E
+    D --> E
 ```
 
 ## §2 · 數學層

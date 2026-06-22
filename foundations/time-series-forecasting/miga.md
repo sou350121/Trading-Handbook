@@ -26,12 +26,17 @@
 
 ⚡ **Eureka:** 「用組內注意力把孤島專家連成網，用負 IC 損失直接對齊量化排序目標。」
 **信息流 ASCII:**
-```
-Input (T=5, D=626) → Router (TCN/LSTM/Transformer) → Top-K Weights
-                                      ↓
-Experts (Linear Layers, 63 total) → Concat → Inner Group Attention → Aggregated Output
-                                      ↓
-Final Prediction (Weighted Sum) → IC Loss + Router Variance Loss → Backprop
+```mermaid
+flowchart TD
+    A["Input (T=5, D=626)"] --> B["Router (TCN/LSTM/Transformer)"]
+    B --> C["Top-K Weights"]
+    C --> D["Experts (Linear Layers, 63 total)"]
+    D --> E[Concat]
+    E --> F["Inner Group Attention"]
+    F --> G["Aggregated Output"]
+    G --> H["Final Prediction (Weighted Sum)"]
+    H --> I["IC Loss + Router Variance Loss"]
+    I --> J[Backprop]
 ```
 
 ## §2 · 數學層

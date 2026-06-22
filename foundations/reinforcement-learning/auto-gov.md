@@ -29,14 +29,21 @@
 `Action Clipping + Incremental Constraint`：不讓 Agent 一步到位，而是以 2.5% 為步長微調抵押因子，將「策略失誤」的破壞力鎖定在漸進範圍內，本質是將 RL 的探索風險轉化為可控的參數滑動。
 
 **1.3 信息流 ASCII 圖**
-```
-[Pool/User/Market States] → (Embedding) → [DQN Online Net] → [Action: ±2.5% / Hold]
-       ↓                                              ↓
-[DeFi Env (GBM/Attack/Default)] ← [Apply Action] ← [Constraint Check]
-       ↓
-[Reward = ΔNetPos_RL - ΔNetPos_Base - Penalty] → [Prioritized Replay Buffer]
-       ↓
-[TD Error] → [Update Online Net] → (Periodic Copy) → [Target Net]
+```mermaid
+flowchart TD
+    A["Pool/User/Market States"] --> B["Embedding"]
+    B --> C["DQN Online Net"]
+    C --> D["Action: ±2.5% / Hold"]
+    A --> E["DeFi Env (GBM/Attack/Default)"]
+    D --> F["Apply Action"]
+    G["Constraint Check"] --> F
+    F --> E
+    E --> H["Reward = ΔNetPos_RL - ΔNetPos_Base - Penalty"]
+    H --> I["Prioritized Replay Buffer"]
+    I --> J["TD Error"]
+    J --> K["Update Online Net"]
+    K --> L["Periodic Copy"]
+    L --> M["Target Net"]
 ```
 
 ## §2 · 數學層

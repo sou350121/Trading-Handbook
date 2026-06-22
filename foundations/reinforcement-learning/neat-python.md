@@ -27,14 +27,17 @@
 ⚡ **Eureka:** 適應度函數加入「獎勵交易次數」與「懲罰平均持倉時間」，直接將演化壓力從「預測準確率」錨定至「交易行為學」，迫使網路放棄被動暴露，轉向主動波段。
 
 📊 **信息流 ASCII:**
-```
-[技術指標 + 頭寸狀態] → NEAT-evolved RNN → [Buy/Sell/Volume]
-       ↓                                      ↓
-[Backtest Engine] ←─────────────────────── [Position Sizing]
-       ↓
-[Fitness Calc] → (PnL, vs_BH, MDD, TradeCount, HoldTime)
-       ↓
-[Selection/Mutation] → Next Gen Topology
+```mermaid
+flowchart TD
+    A["技術指標 + 頭寸狀態"] --> B["NEAT-evolved RNN"]
+    B["NEAT-evolved RNN"] --> C["Buy/Sell/Volume"]
+    A["技術指標 + 頭寸狀態"] --> D["Backtest Engine"]
+    C["Buy/Sell/Volume"] --> E["Position Sizing"]
+    E["Position Sizing"] --> D["Backtest Engine"]
+    D["Backtest Engine"] --> F["Fitness Calc"]
+    F["Fitness Calc"] --> G["PnL, vs_BH, MDD, TradeCount, HoldTime"]
+    F["Fitness Calc"] --> H["Selection/Mutation"]
+    H["Selection/Mutation"] --> I["Next Gen Topology"]
 ```
 
 ## §2 · 數學層

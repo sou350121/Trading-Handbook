@@ -29,10 +29,19 @@
 用價格波動觸發的霍克斯激勵係數替代皮爾遜相關係數，讓圖拓撲「長」在訂單流節奏上，而非歷史統計分佈上。
 
 **1.3 信息流 ASCII**
-```
-[Price Events] → [Hawkes MLE] → [Sparse Adj Matrix] → [GAT Encoder] → [LSTM Cells] → [Price Pred]
-       ↑              ↑               ↑                  ↑              ↑             ↓
-[Vol Threshold]  [Low-Rank Reg]   [Graph Construction] [Topo Embed]  [Seq Dep]   [Rebalancing Logic]
+```mermaid
+flowchart TD
+    A["Price Events"] --> B["Hawkes MLE"]
+    B["Hawkes MLE"] --> C["Sparse Adj Matrix"]
+    C["Sparse Adj Matrix"] --> D["GAT Encoder"]
+    D["GAT Encoder"] --> E["LSTM Cells"]
+    E["LSTM Cells"] --> F["Price Pred"]
+    G["Vol Threshold"] --> A["Price Events"]
+    H["Low-Rank Reg"] --> B["Hawkes MLE"]
+    I["Graph Construction"] --> C["Sparse Adj Matrix"]
+    J["Topo Embed"] --> D["GAT Encoder"]
+    K["Seq Dep"] --> E["LSTM Cells"]
+    F["Price Pred"] --> L["Rebalancing Logic"]
 ```
 
 ## §2 · 數學層

@@ -29,14 +29,14 @@
 不讓 LLM 直接「讀懂」表格，而是讓它「寫函數」去數據庫拉數，把非結構化 NL 轉為結構化 API 調用。
 
 **1.3 信息流 ASCII**
-```
-User Query (NL) 
-   → [FinBloom 7B Agent] 
-   → Structured Request (Company, Metric, Date) 
-   → [Data Module] 
-   → Table Data + News (語義匹配) 
-   → [LLM Context] 
-   → Answer
+```mermaid
+flowchart TD
+    A["User Query (NL)"] --> B["[FinBloom 7B Agent]"]
+    B["[FinBloom 7B Agent]"] --> C["Structured Request (Company, Metric, Date)"]
+    C["Structured Request (Company, Metric, Date)"] --> D["[Data Module]"]
+    D["[Data Module]"] --> E["Table Data + News (語義匹配)"]
+    E["Table Data + News (語義匹配)"] --> F["[LLM Context]"]
+    F["[LLM Context]"] --> G["Answer"]
 ```
 
 ## §2 · 數學層

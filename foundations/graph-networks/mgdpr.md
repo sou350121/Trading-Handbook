@@ -29,12 +29,16 @@
 用信號能量衡量活躍度、信息熵衡量不可預測性，雙指標動態生成加權有向邊，讓圖結構隨市場狀態實時重構，而非依賴歷史相關性滯後。
 
 1.3 信息流 ASCII 圖
-```
-[Raw OHLCV] → (Signal Energy + Info Entropy) → [Dynamic Multi-Rel Graph]
-          ↓                                      ↓
-[Parallel Retention] ← (Decoupled Rep Learning) ← [Learnable Graph Diffusion]
-          ↓
-[Cross-Entropy Loss] → [Trend Prediction (Next Day)]
+```mermaid
+flowchart TD
+    A["Raw OHLCV"] --> B["Signal Energy + Info Entropy"]
+    B["Signal Energy + Info Entropy"] --> C["Dynamic Multi-Rel Graph"]
+    A["Raw OHLCV"] --> D["Parallel Retention"]
+    C["Dynamic Multi-Rel Graph"] --> F["Learnable Graph Diffusion"]
+    F["Learnable Graph Diffusion"] --> E["Decoupled Rep Learning"]
+    E["Decoupled Rep Learning"] --> D["Parallel Retention"]
+    D["Parallel Retention"] --> G["Cross-Entropy Loss"]
+    G["Cross-Entropy Loss"] --> H["Trend Prediction (Next Day)"]
 ```
 
 ## §2 · 數學層

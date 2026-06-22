@@ -26,10 +26,17 @@
 
 ⚡ **Eureka:** 把「再平衡間隔」從日曆約束轉化為策略網路的離散輸出，讓模型自己決定「何時該動、何時該躺」。
 **信息流 ASCII:**
-```
-[歷史量價張量] → [Transformer Encoder] → [隱狀態 H_t]
-                      ├→ [Interval Head (Softmax)] → 採樣 h → 跳躍至 t+h
-                      └→ [Weight Head (Gaussian)] → tanh → 歸一化 w_t → 計算回報 R_t
+```mermaid
+flowchart TD
+    A["[歷史量價張量]"] --> B["[Transformer Encoder]"]
+    B["[Transformer Encoder]"] --> C["[隱狀態 H_t]"]
+    C["[隱狀態 H_t]"] --> D["[Interval Head (Softmax)]"]
+    D["[Interval Head (Softmax)]"] --> E["採樣 h"]
+    E["採樣 h"] --> F["跳躍至 t+h"]
+    C["[隱狀態 H_t]"] --> G["[Weight Head (Gaussian)]"]
+    G["[Weight Head (Gaussian)]"] --> H["tanh"]
+    H["tanh"] --> I["歸一化 w_t"]
+    I["歸一化 w_t"] --> J["計算回報 R_t"]
 ```
 
 ## §2 · 數學層

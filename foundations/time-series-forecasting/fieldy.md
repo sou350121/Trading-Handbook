@@ -29,18 +29,15 @@
 用兩條並行注意力流分別「讀行」與「讀列」，再在融合層補齊行列座標，讓 Transformer 第一次真正具備表格的「二維網格」幾何直覺。
 
 **1.3 信息流 ASCII**
-```
-[Raw Tabular Time-Series]
-        |
-+-------+-------+
-| Row Field T | Col Field T |  (Stage-1 Parallel)
-+-------+-------+
-        |
-[Concat + FC Layer] --> [Enriched Field Reps]
-        |
-+ Add Row Pos + Col Idx Embeddings
-        |
-[Final Transformer] --> [Global Sequence Rep] --> [Head: Reg/Class]
+```mermaid
+flowchart TD
+    A["Raw Tabular Time-Series"] --> B["Row Field T | Col Field T |  (Stage-1 Parallel)"]
+    B --> C["Concat + FC Layer"]
+    C --> D["Enriched Field Reps"]
+    C --> E["Add Row Pos + Col Idx Embeddings"]
+    E --> F["Final Transformer"]
+    F --> G["Global Sequence Rep"]
+    G --> H["Head: Reg/Class"]
 ```
 
 ## §2 · 數學層

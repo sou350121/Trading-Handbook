@@ -29,14 +29,17 @@
 將「交易成本+流動性」硬編碼進 `step()` 的現金流更新邏輯，使 DQN 在訓練期直接內化摩擦成本，而非事後扣除。
 
 **1.3 信息流 ASCII**
-```
-[yfinance Daily] -> [Feature Eng (MACD/ATR/EMA/Macro)] -> [Min-Max Norm]
-        |
-        v
-[TradingEnv.step(action)] -> [Update Cash/Position w/ Cost] -> [Reward: clipped_ret or Sharpe]
-        |
-        v
-[DQN Agent] -> [Q-Network (Sequential)] -> [Replay Buffer (Reverb)] -> [Policy]
+```mermaid
+flowchart TD
+    A["yfinance Daily"] --> B["Feature Eng (MACD/ATR/EMA/Macro)"]
+    B --> C["Min-Max Norm"]
+    C --> D["TradingEnv.step(action)"]
+    D --> E["Update Cash/Position w/ Cost"]
+    E --> F["Reward: clipped_ret or Sharpe"]
+    F --> G["DQN Agent"]
+    G --> H["Q-Network (Sequential)"]
+    H --> I["Replay Buffer (Reverb)"]
+    I --> J["Policy"]
 ```
 
 ## §2 · 數學層

@@ -26,12 +26,12 @@
 
 ⚡ **Eureka:** 「不交易」是最強風險擇時信號，RL 將倉位縮放直接編碼進策略梯度，讓模型學會「在沒把握時空倉」。
 **信息流:**
-```
-[Open Price, Vol, VIX] 
-   → DNN Agent (20d seq) / DT Agent (short window) 
-   → RL Context Evaluator (24h re-eval) 
-   → Scaled Action (Long/Short/Flat × 0/±1) 
-   → Execution
+```mermaid
+flowchart TD
+    A["[Open Price, Vol, VIX]"] --> B["DNN Agent (20d seq) / DT Agent (short window)"]
+    B --> C["RL Context Evaluator (24h re-eval)"]
+    C --> D["Scaled Action (Long/Short/Flat × 0/±1)"]
+    D --> E["Execution"]
 ```
 
 ## §2 · 數學層

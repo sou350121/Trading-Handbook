@@ -27,12 +27,18 @@
 ⚡ **Eureka Trick:** `Hindsight Reward = r_t + λ * E[Profit | longer_hold]` — 用未來收盤前的潛在利潤反哺當前決策，本質是將日內交易從「多步貪婪」重構為「單日閉環優化」。
 
 **信息流 ASCII:**
-```
-[LOB 5級] → [微觀Encoder] ─┐
-                              ├→ [多模態融合] → [BDQ Agent] → [動作元組(價,量)] → [執行/平倉]
-[OHLCV+11指標] → [宏觀Encoder]─┘
-                              ↑
-[波動率預測] → [輔助任務 Loss] → [穩定訓練梯度]
+```mermaid
+flowchart TD
+    A["LOB 5級"] --> B["微觀Encoder"]
+    B --> C["多模態融合"]
+    G["OHLCV+11指標"] --> H["宏觀Encoder"]
+    H --> C
+    C --> D["BDQ Agent"]
+    D --> E["動作元組(價,量)"]
+    E --> F["執行/平倉"]
+    I["波動率預測"] --> J["輔助任務 Loss"]
+    J --> K["穩定訓練梯度"]
+    K --> H
 ```
 
 ## §2 · 數學層

@@ -30,19 +30,15 @@ Trick: 「分而治之+層級過濾」：將單一LLM拆為多個定制專家並
 直覺: 如同投資團隊的初級分析師並行研讀不同財報章節，再由資深分析師匯總去偽，避免單人疲勞導致的遺漏與錯判。
 
 **1.3 信息流 ASCII 圖**
-```
-[User Query]
-      │
-┌─────┼─────┐
-▼     ▼     ▼
-[Agent1] [Agent2] [Agent3]  (並行處理分片上下文/調用API)
-│     │     │
-└─────┼─────┘
-      ▼
-[Aggregator] (過濾/整合/生成最終響應)
-      │
-      ▼
-[Final Output + Agent Logs] (透明可審計)
+```mermaid
+flowchart TD
+    A["User Query"] --> B["Agent1"]
+    A["User Query"] --> C["Agent2"]
+    A["User Query"] --> D["Agent3"]
+    B["Agent1"] --> E["Aggregator"]
+    C["Agent2"] --> E["Aggregator"]
+    D["Agent3"] --> E["Aggregator"]
+    E["Aggregator"] --> F["Final Output + Agent Logs"]
 ```
 
 ## §2 · 數學層

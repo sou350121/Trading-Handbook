@@ -29,17 +29,15 @@
 把 LSTM 內部的 `i, f, o, c, h` 全部攤平當特徵，用當前已知價格做一個「內部小回歸」算出誰最重要，下一拍就只輸出那個最重要的組件，不再死守固定公式。
 
 **1.3 信息流 ASCII 圖**
-```
-[LOB Tick t] --> [LSTM Cell (i,f,o,c,h)]
-                      |
-                      v
-           [Feature Repo (6 gates/states)]
-                      |
-                      v
-      [Internal Non-predictive Regression] --> [Importance Weights]
-                      |
-                      v
-           [Dynamic Output Router] --> [Selected Output] --> [Next Cell / Prediction]
+```mermaid
+flowchart TD
+    A["LOB Tick t"] --> B["LSTM Cell (i,f,o,c,h)"]
+    B --> C["Feature Repo (6 gates/states)"]
+    C --> D["Internal Non-predictive Regression"]
+    D --> E["Importance Weights"]
+    D --> F["Dynamic Output Router"]
+    F --> G["Selected Output"]
+    G --> H["Next Cell / Prediction"]
 ```
 
 ## §2 · 數學層

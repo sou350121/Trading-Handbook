@@ -27,11 +27,18 @@
 ⚡ **Eureka:** 用「智囊團討論」式少樣本提示讓 LLM 投票出情緒標籤，再以一致性分數校準，避免單次調用噪聲。
 
 **信息流 ASCII:**
-```
-News ──▶ LLM Few-Shot (m=3) ──▶ Sentiment Vector ──▶ Embed ──▶ Tanh(α) & Fuse
-Macro (Top N Crypto) ──▶ 1D Conv + Pos Enc + Cross-Attn ──▶ V̂_macro
-Target Price + 7 Tech Indicators ──▶ Modified NLinear ──▶ V̂_indiv
-V̂_macro, V̂_indiv, α ──▶ Fusion ──▶ P̂_{t+1}
+```mermaid
+flowchart TD
+    N1["News"] --> N2["LLM Few-Shot (m=3)"]
+    N2 --> N3["Sentiment Vector"]
+    N3 --> N4["Embed"]
+    N4 --> N5["Tanh(α) & Fuse"]
+    N6["Macro (Top N Crypto)"] --> N7["1D Conv + Pos Enc + Cross-Attn"]
+    N7 --> N8["V̂_macro"]
+    N9["Target Price + 7 Tech Indicators"] --> N10["Modified NLinear"]
+    N10 --> N11["V̂_indiv"]
+    N12["V̂_macro, V̂_indiv, α"] --> N13["Fusion"]
+    N13 --> N14["P̂_{t+1}"]
 ```
 
 ## §2 · 數學層

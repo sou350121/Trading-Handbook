@@ -29,11 +29,22 @@
 用 `do-calculus` 隨機置換可變關係特徵，強行切斷模型對「短期波動關係」的依賴，逼它只學「長週期不變結構」。
 
 **1.3 信息流**
-```
-Raw Data → [TML] → Expert Dist → RPPsAtt → Temporal Rep
-Raw Data → [RML] → Poly Approx → DCM → Decoupled Attn → Inv/Var Rep
-Temporal Rep + Inv Rep → [SGC Fusion] → Downstream Predictor
-Loss → Meta-Train (Predictor) → Meta-Validate (TML/RML) → Loop
+```mermaid
+flowchart TD
+    A["Raw Data"] --> B["[TML]"]
+    B --> C["Expert Dist"]
+    C --> D["RPPsAtt"]
+    D --> E["Temporal Rep"]
+    A --> F["[RML]"]
+    F --> G["Poly Approx"]
+    G --> H["DCM"]
+    H --> I["Decoupled Attn"]
+    I --> J["Inv/Var Rep"]
+    K["Temporal Rep + Inv Rep"] --> L["[SGC Fusion]"]
+    L --> M["Downstream Predictor"]
+    N["Loss"] --> O["Meta-Train (Predictor)"]
+    O --> P["Meta-Validate (TML/RML)"]
+    P --> Q["Loop"]
 ```
 
 ## §2 · 數學層

@@ -27,18 +27,14 @@
 ⚡ **Eureka:** 用 `tanh` 平滑替代 `sign` 函數，使不可導的排序關係轉為可微的單調邏輯回歸損失，實現端到端梯度下降。
 
 **信息流 ASCII:**
-```
-[高頻 OHLCV/價差] ──┐
-                     ├─► Stock-wise Multi-Freq Fusion (CNN) ──► 中間嵌入
-[低頻 財務/基本面] ──┘          │
-                                ▼
-                    Inter-Stock Transformer (Self-Attention)
-                                │
-                                ▼
-                        預測得分 S (N 只股票)
-                                │
-                                ▼
-                    Monotonic Logistic Loss (vs 真實回報排序)
+```mermaid
+flowchart TD
+    A["[高頻 OHLCV/價差]"] --> C["Stock-wise Multi-Freq Fusion (CNN)"]
+    B["[低頻 財務/基本面]"] --> C["Stock-wise Multi-Freq Fusion (CNN)"]
+    C["Stock-wise Multi-Freq Fusion (CNN)"] --> D["中間嵌入"]
+    D["中間嵌入"] --> E["Inter-Stock Transformer (Self-Attention)"]
+    E["Inter-Stock Transformer (Self-Attention)"] --> F["預測得分 S (N 只股票)"]
+    F["預測得分 S (N 只股票)"] --> G["Monotonic Logistic Loss (vs 真實回報排序)"]
 ```
 
 ## §2 · 數學層

@@ -29,20 +29,20 @@
 將 GD 的權重更新軌跡轉譯為特徵重要性向量，與樹模型的 MDI 在同一距離矩陣上「賽跑」，勝者直接決定 RBFNN 的隱藏層中心分佈。直覺上，這等於讓梯度下降與不純度降低在線上環境中互相校準，避免單一指標在特定 regime 下失效。
 
 **1.3 信息流 ASCII 圖**
-```
-[LOB Tick Stream] -> [Sliding Window (100 evt, 99 overlap)]
-              |
-              v
-    [MDI Vector] <---(Compete)---> [GD Vector]
-              |                         |
-              v                         v
-[Correlation Matrix] -> [Distance Matrix] -> [K-Means (k via Silhouette)]
-              |
-              v
-[RBFNN Hidden Layer (Centers/Widths)] -> [Linear Output] -> [Mid-Price Forecast]
-              |
-              v
-    [Cumulative 5-Fold Update] -> [Next Window]
+```mermaid
+flowchart TD
+    A["LOB Tick Stream"] --> B["Sliding Window (100 evt, 99 overlap)"]
+    B --> C["MDI Vector"]
+    C <-->|Compete| D["GD Vector"]
+    C --> E["Correlation Matrix"]
+    D --> G["K-Means (k via Silhouette)"]
+    E --> F["Distance Matrix"]
+    F --> G
+    E --> H["RBFNN Hidden Layer (Centers/Widths)"]
+    H --> I["Linear Output"]
+    I --> J["Mid-Price Forecast"]
+    H --> K["Cumulative 5-Fold Update"]
+    K --> L["Next Window"]
 ```
 
 ## §2 · 數學層

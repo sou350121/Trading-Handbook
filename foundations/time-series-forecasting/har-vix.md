@@ -29,16 +29,16 @@
 滾動步長與重估頻率決定線性模型的樣本外壽命，VIX 注入全局狀態信息即可讓輕量級回歸在經濟效用上壓倒黑盒 ML。
 
 **1.3 信息流 ASCII**
-```
-Intraday TAQ (5-min) → Log RV Calculation
-       ↓
-[Rolling Window Estimator] ← (Step/Freq Calibration)
-       ↓
-HAR-VIX (Linear)  vs  Lasso/RF/GBT/FFNN (ML)
-       ↓
-MSE / QLIKE  →  MCS (95% Conf)  →  Realized Utility (Cost-Adjusted)
-       ↓
-Risk-Timing Signal (日频波段)
+```mermaid
+flowchart TD
+    A["Intraday TAQ (5-min)"] --> B["Log RV Calculation"]
+    B --> C["[Rolling Window Estimator]"]
+    D["(Step/Freq Calibration)"] --> C
+    C --> E["HAR-VIX (Linear)  vs  Lasso/RF/GBT/FFNN (ML)"]
+    E --> F["MSE / QLIKE"]
+    F --> G["MCS (95% Conf)"]
+    G --> H["Realized Utility (Cost-Adjusted)"]
+    H --> I["Risk-Timing Signal (日频波段)"]
 ```
 
 ## §2 · 數學層

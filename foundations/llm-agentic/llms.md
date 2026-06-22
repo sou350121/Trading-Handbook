@@ -30,14 +30,14 @@ Trick: 放棄EOS瓶頸壓縮，直接對所有Token向量做簡單平均（Mean 
 直覺: 財務新聞的多空信息分散在各個Token中，瓶頸向量易在壓縮時丟失尾部或邊緣信號；聚合表征保留全序列信息分佈，更利於模型學習「信號疊加」而非「單一結論」。
 
 **1.3 信息流 ASCII 圖**
-```
-[財務新聞文本] -> [Pre-trained LLM (Encoder/Decoder)] -> [Token Embeddings]
-      |
-      v (Mean Pooling / Aggregate)
-[Sequence Vector] -> [Dense Layer (Regression Head)] -> [Predicted Return]
-      |
-      v (MSE Loss vs Actual Forward Return)
-[Portfolio Construction: Top/Bottom Quantiles]
+```mermaid
+flowchart TD
+    A["財務新聞文本"] --> B["Pre-trained LLM (Encoder/Decoder)"]
+    B --> C["Token Embeddings"]
+    C -->|Mean Pooling / Aggregate| D["Sequence Vector"]
+    D --> E["Dense Layer (Regression Head)"]
+    E --> F["Predicted Return"]
+    F -->|MSE Loss vs Actual Forward Return| G["Portfolio Construction: Top/Bottom Quantiles"]
 ```
 
 ## §2 · 數學層

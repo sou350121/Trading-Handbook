@@ -27,9 +27,13 @@
 ⚡ **Eureka:** 用 NTP 縮放權重矩陣學習率，配合週期性 LR 調度，讓 MLP 在免早停下穩定收斂至 256 epoch，實質是將「訓練動態控制」內建於架構。
 
 **信息流 ASCII:**
-```
-Input -> [Categorical Embedding / PBLD Num Embed] -> [Scaling Layer (Diag)]
-       -> [Linear (NTP Init) + Trainable Activation + Dropout] -> ... (x256) -> Output
+```mermaid
+flowchart TD
+  A["Input"] --> B["[Categorical Embedding / PBLD Num Embed]"]
+  B --> C["[Scaling Layer (Diag)]"]
+  C --> D["[Linear (NTP Init) + Trainable Activation + Dropout]"]
+  D --> E["... (x256)"]
+  E --> F["Output"]
 ```
 
 ## §2 · 數學層

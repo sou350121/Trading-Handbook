@@ -29,12 +29,18 @@
 用 KL 散度讓門控機率去擬合「誰在當前數據上負誤差更小」，而不是讓梯度硬扛混合權重的方差放大。
 
 **1.3 信息流 ASCII 圖**
-```
-[Factors] ──► Dense(θ_F) ──► f_F
-[News]    ──► DeBERTa ──► Dense(θ_N) ──► f_N
-[f_F, f_N] ──► Logits(φ) ──► Softmax ──► w
-w·f_F + (1-w)·f_N ──► Target Return
-(Decoupled: Train θ_F, θ_N on MSE separately → Estimate p_target ∝ exp(-MSE/T) → Train φ via KL(q_φ || p_target))
+```mermaid
+flowchart TD
+    A["[Factors]"] --> B["Dense(θ_F)"]
+    B["Dense(θ_F)"] --> C["f_F"]
+    D["[News]"] --> E["DeBERTa"]
+    E["DeBERTa"] --> F["Dense(θ_N)"]
+    F["Dense(θ_N)"] --> G["f_N"]
+    H["[f_F, f_N]"] --> I["Logits(φ)"]
+    I["Logits(φ)"] --> J["Softmax"]
+    J["Softmax"] --> K["w"]
+    L["w·f_F + (1-w)·f_N"] --> M["Target Return"]
+    N["(Decoupled: Train θ_F, θ_N on MSE separately → Estimate p_target ∝ exp(-MSE/T) → Train φ via KL(q_φ || p_target))"]
 ```
 
 ## §2 · 數學層

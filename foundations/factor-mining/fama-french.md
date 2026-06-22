@@ -30,18 +30,15 @@
 直覺：不追求「買在最低、賣在最高」，而是設定吸引力閾值，僅在信號衰減至臨界點以下時觸發換倉，用「不作為」換取成本優勢，讓短期信號的 Alpha 在扣除摩擦後仍能存活。
 
 **1.3 信息流 ASCII 圖**
-```
-[Raw Price/Fundamental/Estimates]
-        ↓
-[5 Short-term Signals: STR, IND_MOM, REV30D, SEA_SAME, iVOL]
-        ↓ (Cross-sectional Standardization)
-[Composite Score]
-        ↓ (Regional Neutral Ranking)
-[Threshold Check: Attractiveness > Limit?]
-        ↓ (No)          ↓ (Yes)
-  [Hold Position]   [Execute Trade]
-        ↓
-[Equal-Weight Quintile Portfolio] → [Net Alpha]
+```mermaid
+flowchart TD
+    A["Raw Price/Fundamental/Estimates"] --> B["5 Short-term Signals: STR, IND_MOM, REV30D, SEA_SAME, iVOL"]
+    B -->|Cross-sectional Standardization| C["Composite Score"]
+    C -->|Regional Neutral Ranking| D["Threshold Check: Attractiveness > Limit?"]
+    D -->|No| E["Hold Position"]
+    D -->|Yes| F["Execute Trade"]
+    E --> G["Equal-Weight Quintile Portfolio"]
+    G --> H["Net Alpha"]
 ```
 
 ## §2 · 數學層

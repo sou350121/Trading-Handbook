@@ -29,12 +29,22 @@
 用路由器分發特徵給不同專家，等同於讓模型自動學習「市場狀態分類器」，避免單一網絡在牛熊轉換時梯度衝突。
 
 **1.3 信息流 ASCII 圖**
-```
-State (P_t, I_t) 
-  ├─> [FC嵌入 + 時空矩陣] -> [時間Attention] -> [空間Attention] -> [MoE Router] -> 專家池 -> w_t
-  └─> [指數LSTM] -> [時間Attention] -> [FC] -> 高斯采樣 -> α_t
-       ↓
-  Action (w_t, α_t) -> 環境交互 -> DPG 梯度更新
+```mermaid
+flowchart TD
+    A["State (P_t, I_t)"] --> B["[FC嵌入 + 時空矩陣]"]
+    B --> C["[時間Attention]"]
+    C --> D["[空間Attention]"]
+    D --> E["[MoE Router]"]
+    E --> F["專家池"]
+    F --> G["w_t"]
+    A --> H["[指數LSTM]"]
+    H --> I["[時間Attention]"]
+    I --> J["[FC]"]
+    J --> K["高斯采樣"]
+    K --> L["α_t"]
+    L --> M["Action (w_t, α_t)"]
+    M --> N["環境交互"]
+    N --> O["DPG 梯度更新"]
 ```
 
 ## §2 · 數學層

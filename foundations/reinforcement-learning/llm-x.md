@@ -26,11 +26,15 @@
 
 ⚡ **Eureka Trick:** 用LLM做「非結構化文本到低維數值」的即時投影，讓RL直接吃原始序列，跳過特徵工程的黑箱。
 **信息流 ASCII:**
-```
-News(t) ──► LLM Prompt ──► [Sentiment(1-5), Risk(1-5)]
-                                      │
-                                      ▼
-OHLCV(t) ─────────────────────────► Concat ──► LSTM/Transformer Encoder ──► Policy Head ──► Action (Long/Short/Hold)
+```mermaid
+flowchart TD
+    N1["News(t)"] --> N2["LLM Prompt"]
+    N2["LLM Prompt"] --> N3["[Sentiment(1-5), Risk(1-5)]"]
+    N3["[Sentiment(1-5), Risk(1-5)]"] --> N5["Concat"]
+    N4["OHLCV(t)"] --> N5["Concat"]
+    N5["Concat"] --> N6["LSTM/Transformer Encoder"]
+    N6["LSTM/Transformer Encoder"] --> N7["Policy Head"]
+    N7["Policy Head"] --> N8["Action (Long/Short/Hold)"]
 ```
 
 ## §2 · 數學層

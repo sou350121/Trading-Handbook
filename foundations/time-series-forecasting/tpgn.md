@@ -29,11 +29,14 @@
 將一維序列重塑為二維（行=短期/列=長期），用單個門控同時控制所有時間步的信息選擇與融合，實現 O(1) 路徑與並行計算。
 
 **1.3 信息流 ASCII 圖**
-```
-Input (1D, L) -> [Reshape 2D (P x R)] 
-                -> [Long Branch: PGN along R] 
-                -> [Short Branch: Linear -> Patch -> Global] 
-                -> [Concat] -> [Single Gate Fusion] -> [Linear Prediction]
+```mermaid
+flowchart TD
+    A["Input (1D, L)"] --> B["Reshape 2D (P x R)"]
+    B --> C["Long Branch: PGN along R"]
+    C --> D["Short Branch: Linear -> Patch -> Global"]
+    D --> E["Concat"]
+    E --> F["Single Gate Fusion"]
+    F --> G["Linear Prediction"]
 ```
 
 ## §2 · 數學層

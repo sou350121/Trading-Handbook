@@ -29,14 +29,22 @@
 用對比學習的互信息最大化作為「領域偏移探針」，將非平穩性從干擾項轉化為元學習的任務分佈來源。
 
 **1.3 信息流 ASCII**
-```
-[Raw OHLCV] → (Macro TCN) → [Aligned Embeddings] → (Micro Contrastive) → [Shift-Sensitive Reps]
-          ↓                                              ↓
-[Label Distance Matrix]                      [Dual-Window Pairs]
-          ↓                                              ↓
-[MSE + Frobenius Loss] ← (Joint Pretrain) → [InfoNCE/BCE Loss]
-          ↓                                              ↓
-[Task Construction & Sampling] → (MAML Meta-Update) → [Online Prediction Stream]
+```mermaid
+flowchart TD
+    A["[Raw OHLCV]"] --> B["(Macro TCN)"]
+    B --> C["[Aligned Embeddings]"]
+    C --> D["(Micro Contrastive)"]
+    D --> E["[Shift-Sensitive Reps]"]
+    A --> F["[Label Distance Matrix]"]
+    E --> G["[Dual-Window Pairs]"]
+    F --> H["[MSE + Frobenius Loss]"]
+    G --> J["[InfoNCE/BCE Loss]"]
+    I["(Joint Pretrain)"] --> H
+    I --> J
+    H --> K["[Task Construction & Sampling]"]
+    J --> M["[Online Prediction Stream]"]
+    K --> L["(MAML Meta-Update)"]
+    L --> M
 ```
 
 ## §2 · 數學層

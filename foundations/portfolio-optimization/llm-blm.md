@@ -27,12 +27,14 @@
 **⚡ Eureka:** 用LLM的「自我懷疑程度」（預測方差）自動決定BL模型該聽它多少話。
 
 **信息流 ASCII:**
-```
-[日頻行情/GICS] → [Structured Prompt] → [LLM ×100] → Mean(q) / Var(Ω)
-                                      ↓
-                              [BL Optimizer] → [Portfolio Weights]
-                                      ↑
-                              [τ (驗證期固定)]
+```mermaid
+flowchart TD
+    A["日頻行情/GICS"] --> B["Structured Prompt"]
+    B["Structured Prompt"] --> C["LLM ×100"]
+    C["LLM ×100"] --> D["Mean(q) / Var(Ω)"]
+    D["Mean(q) / Var(Ω)"] --> E["BL Optimizer"]
+    E["BL Optimizer"] --> F["Portfolio Weights"]
+    G["τ (驗證期固定)"] --> E["BL Optimizer"]
 ```
 
 ## §2 · 數學層

@@ -29,23 +29,13 @@
 「先讓 Adaptive LASSO 在高維空間做稀疏投影，再用 OLS 對高頻入選因子做無偏重估，以頻率穩定性替代單次回歸顯著性。」
 
 **1.3 信息流 ASCII 圖**
-```
-44 因子池 (市場/異象/宏觀/趨勢)
-       │
-       ▼
-[Adaptive LASSO] (權重 w_j = 1/|β_OLS|^γ, λ via AIC)
-       │ (稀疏投影 + 頻率統計)
-       ▼
-[候選因子排序] (跨基金/組合/行業層面一致性檢驗)
-       │
-       ▼
-[OLS 第二步] (子集回歸 + AIC/BIC + 調整 R²)
-       │
-       ▼
-HF9 模型 (9 因子: MKT, AGR, BAB, LRSK, ROA, TSMOM, 10Y, CRDT, TERM)
-       │
-       ▼
-[Alpha 剝離] (橫截面異質性暴露 + 左尾風險識別)
+```mermaid
+flowchart TD
+    A["44 因子池 (市場/異象/宏觀/趨勢)"] --> B["[Adaptive LASSO] (權重 w_j = 1/|β_OLS|^γ, λ via AIC)"]
+    B -->|稀疏投影 + 頻率統計| C["[候選因子排序] (跨基金/組合/行業層面一致性檢驗)"]
+    C --> D["[OLS 第二步] (子集回歸 + AIC/BIC + 調整 R²)"]
+    D --> E["HF9 模型 (9 因子: MKT, AGR, BAB, LRSK, ROA, TSMOM, 10Y, CRDT, TERM)"]
+    E --> F["[Alpha 剝離] (橫截面異質性暴露 + 左尾風險識別)"]
 ```
 
 ## §2 · 數學層

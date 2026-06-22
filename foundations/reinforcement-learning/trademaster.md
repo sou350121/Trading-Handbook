@@ -29,16 +29,13 @@
 > 「把真實市場摩擦（成本/滑點/槓桿）寫進 `env.step()` 的狀態轉移邏輯，而非事後在 reward 裡補丁。」直覺：RL 代理必須在帶摩擦的動態系統中學會自我約束，否則學到的是「無摩擦套利」的幻覺。
 
 **1.3 信息流 ASCII 圖**
-```
-Raw Data → Preprocessor (Clean/Impute/Standardize/Select)
-       ↓
-   Gym Env (reset/step/reward + Constraints)
-       ↓
-   RL Agent (PPO/SAC/DDPG/Custom RLFT)
-       ↓
-   Evaluator (PRUDEX-Compass / t-SNE / Heatmap)
-       ↓
-   UI/Deploy (Colab / Web GUI / Docker)
+```mermaid
+flowchart TD
+    A["Raw Data"] --> B["Preprocessor (Clean/Impute/Standardize/Select)"]
+    B --> C["Gym Env (reset/step/reward + Constraints)"]
+    C --> D["RL Agent (PPO/SAC/DDPG/Custom RLFT)"]
+    D --> E["Evaluator (PRUDEX-Compass / t-SNE / Heatmap)"]
+    E --> F["UI/Deploy (Colab / Web GUI / Docker)"]
 ```
 
 ## §2 · 數學層

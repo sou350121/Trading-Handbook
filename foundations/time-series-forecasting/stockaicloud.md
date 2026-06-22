@@ -29,17 +29,17 @@
 將卷商常見的 `train.py` 與 `predict.py` 封裝為無狀態 Docker 鏡像，透過 ALB 將 HTTP POST 請求直接映射為模型推理任務，實現「流量驅動算力」的 FinOps 閉環。
 
 **1.3 信息流 ASCII 圖**
-```
-[Yahoo Finance API] --> [AWS S3 (Data Lake)]
-                              |
-                              v
-[User/Quant System] --> [ALB] --> [Fargate Task (0.5 vCPU)]
-                              |         |
-                              |         v
-                              |    [FastAPI + LSTM/GRU/CNN]
-                              |         |
-                              v         v
-[Prediction JSON] <-- [ALB] <-- [Container Output]
+```mermaid
+flowchart TD
+    A["Yahoo Finance API"] --> B["AWS S3 (Data Lake)"]
+    B --> C["User/Quant System"]
+    C --> D["ALB"]
+    D --> E["Fargate Task (0.5 vCPU)"]
+    D --> G["Prediction JSON"]
+    E --> F["FastAPI + LSTM/GRU/CNN"]
+    F --> I["Container Output"]
+    I --> H["ALB"]
+    H --> G
 ```
 
 ## §2 · 數學層

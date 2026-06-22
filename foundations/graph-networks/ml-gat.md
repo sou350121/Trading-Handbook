@@ -26,14 +26,20 @@
 
 ⚡ **Eureka:** 用「關係摘要向量」作為中間態，先按關係類型聚合鄰居，再按類型重要性聚合摘要，將圖卷積的「空間平滑」轉為「語義篩選」。
 **信息流 ASCII:**
-```
-[Price] -> LSTM -> h_price
-[News]  -> BERT -> h_news
-[Wikidata] -> Meta-paths -> Homogeneous Graph
-h_price, h_news -> Node Init -> h_i
-h_i + Graph -> State Attn -> r_rel_type (relation summary)
-r_rel_type + h_i -> Relation Attn -> h_agg
-h_agg + h_price + h_news -> h_final -> Linear/Softmax -> Trend
+```mermaid
+flowchart TD
+    N1["[Price]"] --> N2["LSTM"] --> N3["h_price"]
+    N4["[News]"] --> N5["BERT"] --> N6["h_news"]
+    N7["[Wikidata]"] --> N8["Meta-paths"] --> N9["Homogeneous Graph"]
+    N3 --> N10["Node Init"] --> N11["h_i"]
+    N6 --> N10
+    N11 --> N13["State Attn"] --> N14["r_rel_type (relation summary)"]
+    N12["Graph"] --> N13
+    N14 --> N15["Relation Attn"] --> N16["h_agg"]
+    N11 --> N15
+    N16 --> N17["h_final"] --> N18["Linear/Softmax"] --> N19["Trend"]
+    N3 --> N17
+    N6 --> N17
 ```
 
 ## §2 · 數學層

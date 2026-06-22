@@ -29,17 +29,25 @@
 棄用「高頻=雜訊」的靜態假設，將頻帶邊界與專家權重全部可微分化，讓模型自己學會「何時該聽低頻趨勢，何時該抓高頻波動」。
 
 **1.3 信息流 ASCII**
-```
-Input (L, C) -> Norm -> FFT -> rFFT (Freq Domain)
-   |
-   +-> Learnable Boundaries [0,1] -> Sort -> Map to Freq Indices
-   |
-   +-> MoE Experts (Masked by Freq Bands) -> Complex Linear Processing
-   |
-   +-> Gating Net (Avg Amp -> Linear -> Softmax) -> Weighted Sum
-   |
-   v
-iFFT -> DeNorm -> Residual Blocks (Complex Linear + ReLU + Dropout) -> Iterative Refinement -> Output
+```mermaid
+flowchart TD
+    A["Input (L, C)"] --> B["Norm"]
+    B["Norm"] --> C["FFT"]
+    C["FFT"] --> D["rFFT (Freq Domain)"]
+    D["rFFT (Freq Domain)"] --> E["Learnable Boundaries [0,1]"]
+    E["Learnable Boundaries [0,1]"] --> F["Sort"]
+    F["Sort"] --> G["Map to Freq Indices"]
+    G["Map to Freq Indices"] --> L["iFFT"]
+    D["rFFT (Freq Domain)"] --> H["MoE Experts (Masked by Freq Bands)"]
+    H["MoE Experts (Masked by Freq Bands)"] --> I["Complex Linear Processing"]
+    I["Complex Linear Processing"] --> L["iFFT"]
+    D["rFFT (Freq Domain)"] --> J["Gating Net (Avg Amp -> Linear -> Softmax)"]
+    J["Gating Net (Avg Amp -> Linear -> Softmax)"] --> K["Weighted Sum"]
+    K["Weighted Sum"] --> L["iFFT"]
+    L["iFFT"] --> M["DeNorm"]
+    M["DeNorm"] --> N["Residual Blocks (Complex Linear + ReLU + Dropout)"]
+    N["Residual Blocks (Complex Linear + ReLU + Dropout)"] --> O["Iterative Refinement"]
+    O["Iterative Refinement"] --> P["Output"]
 ```
 
 ## §2 · 數學層

@@ -26,14 +26,14 @@
 
 ⚡ **Eureka Trick:** 用經典計量經濟學公式生成「綠盒」數據，以反事實參數調整取代歷史單軌回測。
 🔀 **信息流 ASCII:**
-```
-Params (GARCH/HAR/Hawkes/Markov) 
-       ↓
-DGP Engine → Synthetic Panel (N assets × T steps) 
-       ↓
-Model Input → Point/Prob Output → Metric (NMAE/CRPS) 
-       ↓
-Diagnosis (Capacity vs Inductive Bias)
+```mermaid
+flowchart TD
+    A["Params (GARCH/HAR/Hawkes/Markov)"] --> B["DGP Engine"]
+    B --> C["Synthetic Panel (N assets × T steps)"]
+    B --> D["Model Input"]
+    D --> E["Point/Prob Output"]
+    E --> F["Metric (NMAE/CRPS)"]
+    D --> G["Diagnosis (Capacity vs Inductive Bias)"]
 ```
 
 ## §2 · 數學層

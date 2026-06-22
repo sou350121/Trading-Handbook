@@ -26,12 +26,19 @@
 
 ⚡ **Eureka:** 將3D張量視為立方體，用兩條正交SSM分支並行掃描，再以可微二值化超圖動態重權。
 **信息流:**
-```
-Input (Stock×Feature×Time)
-   ├─ Cross-Stock Branch → Selective CubeSSM → h_stock
-   └─ Cross-Feature Branch → Flip → Selective CubeSSM → h_feat
-          ↓ (Concat/Flip back)
-   Unified Embedding → EHA (HAGC + Gumbel Topology) → Output
+```mermaid
+flowchart TD
+    A["Input (Stock×Feature×Time)"] --> B["Cross-Stock Branch"]
+    A["Input (Stock×Feature×Time)"] --> E["Cross-Feature Branch"]
+    B["Cross-Stock Branch"] --> C["Selective CubeSSM"]
+    C["Selective CubeSSM"] --> D["h_stock"]
+    E["Cross-Feature Branch"] --> F["Flip"]
+    F["Flip"] --> G["Selective CubeSSM"]
+    G["Selective CubeSSM"] --> H["h_feat"]
+    D["h_stock"] -->|↓ (Concat/Flip back)| I["Unified Embedding"]
+    H["h_feat"] -->|↓ (Concat/Flip back)| I["Unified Embedding"]
+    I["Unified Embedding"] --> J["EHA (HAGC + Gumbel Topology)"]
+    J["EHA (HAGC + Gumbel Topology)"] --> K["Output"]
 ```
 
 ## §2 · 數學層

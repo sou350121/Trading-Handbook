@@ -27,17 +27,21 @@
 ⚡ **Eureka:** 用 OU 隨機微分方程殘差構建物理信息正則化損失，強制對比學習生成的資產簇遵循均值回歸動力學，從源頭保證配對的可交易性與穩定性。
 
 **信息流 ASCII:**
-```
-Raw Features -> [PLE Encoder] -> [Bi-Transformer] -> [CLS Rep]
-      |                                      |
-      v                                      v
-[Random Mask / Gauss Noise]          [Cluster Proj Head]
-      |                                      |
-      v                                      v
-[Instance Contrast Loss] <-----> [Cluster Contrast Loss]
-      \                                      /
-       \                                    /
-        \-> [OU Residual Calc] -> [PINN Loss] -> [Unified Loss] -> [Trade Signal]
+```mermaid
+flowchart TD
+    A["Raw Features"] --> B["[PLE Encoder]"]
+    B --> C["[Bi-Transformer]"]
+    C --> D["[CLS Rep]"]
+    A --> E["[Random Mask / Gauss Noise]"]
+    D --> F["[Cluster Proj Head]"]
+    E --> G["[Instance Contrast Loss]"]
+    F --> H["[Cluster Contrast Loss]"]
+    G <--> H
+    G --> I["[OU Residual Calc]"]
+    H --> I
+    I --> J["[PINN Loss]"]
+    J --> K["[Unified Loss]"]
+    K --> L["[Trade Signal]"]
 ```
 
 ## §2 · 數學層

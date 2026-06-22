@@ -29,16 +29,20 @@
 用 Granger 因果檢驗做特徵工程的「守門員」，再用 Focal Calibration Loss 做概率輸出的「校準儀」，讓情緒因子從「黑盒輸入」變成「可驗證、可校準」的因果驅動模塊。
 
 **1.3 信息流 ASCII 圖**
-```
-News (197 countries) -> FinBERT -> Sentiment Score
-                                      |
-                                      v
-[Granger Causality Test] --> (Lags 1/3/7/14/30) --> Validated Sentiment Feature
-                                      |
-                                      v
-S&P500 OHLCV + Validated Sentiment -> LSTM (MSE Loss) -> Volatility Prediction
-                                      |
-Text Data -> DAN 3 + GloVe -> Focal Calibration Loss -> Calibrated Prob (ECE 3.34%)
+```mermaid
+flowchart TD
+    A["News (197 countries)"] --> B["FinBERT"]
+    B --> C["Sentiment Score"]
+    C --> D["[Granger Causality Test]"]
+    D --> E["(Lags 1/3/7/14/30)"]
+    E --> F["Validated Sentiment Feature"]
+    F --> G["S&P500 OHLCV + Validated Sentiment"]
+    G --> H["LSTM (MSE Loss)"]
+    H --> I["Volatility Prediction"]
+    I --> J["Text Data"]
+    J --> K["DAN 3 + GloVe"]
+    K --> L["Focal Calibration Loss"]
+    L --> M["Calibrated Prob (ECE 3.34%)"]
 ```
 
 ## §2 · 數學層

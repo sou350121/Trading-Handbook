@@ -28,15 +28,17 @@
 **直覺:** 時間序列的「趨勢-週期-噪聲」等同於自然語言的「語法-詞彙-語境」；只要預訓練語料足夠廣，模型會自動學到時序的生成規則，下游任務只需改變輸入上下文與採樣策略，無需重訓 Head。
 
 **信息流 ASCII:**
-```
-Raw TS (Multi-var/IR) → Normalization → S3 Pool (Fixed Context)
-       ↓
-Window Sampling → Decoder-only Transformer (Causal Attn)
-       ↓
-Next-Token Prediction (Pretraining) → Downstream Routing
-       ├─ Forecasting (Autoregressive Rollout)
-       ├─ Imputation (Masked Segment Generation)
-       └─ Anomaly Detection (Prediction vs Observation Δ)
+```mermaid
+flowchart TD
+    A["Raw TS (Multi-var/IR)"] --> B["Normalization"]
+    B["Normalization"] --> C["S3 Pool (Fixed Context)"]
+    C["S3 Pool (Fixed Context)"] --> D["Window Sampling"]
+    D["Window Sampling"] --> E["Decoder-only Transformer (Causal Attn)"]
+    E["Decoder-only Transformer (Causal Attn)"] --> F["Next-Token Prediction (Pretraining)"]
+    F["Next-Token Prediction (Pretraining)"] --> G["Downstream Routing"]
+    G["Downstream Routing"] --> H["Forecasting (Autoregressive Rollout)"]
+    G["Downstream Routing"] --> I["Imputation (Masked Segment Generation)"]
+    G["Downstream Routing"] --> J["Anomaly Detection (Prediction vs Observation Δ)"]
 ```
 
 ## §2 · 數學層

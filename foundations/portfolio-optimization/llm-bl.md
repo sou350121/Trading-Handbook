@@ -30,20 +30,14 @@ Trick：用 LLM 對同一 prompt 的多次輸出方差直接填充 Black-Litterm
 直覺：LLM 越「猶豫」（方差大），優化器給該觀點的權重越低；LLM 越「堅定」（方差小且均值極端），權重越高。這本質上是用生成模型的內在熵值做動態風險預算。
 
 **1.3 信息流 ASCII 圖**
-```
-[歷史兩週日頻回報 + 公司元數據]
-          ↓
-[LLM Prompt (10次採樣)] → 輸出序列 {r1, r2, ..., r10}
-          ↓
-[統計聚合] → μ_view = mean({r}), σ²_view = var({r})
-          ↓
-[BL 映射] → q = μ_view, Ω = diag(σ²_view), P = I
-          ↓
-[後驗回報計算] → π_prior (CAPM) + BL 調整 → μ_posterior
-          ↓
-[組合優化] → w* = argmax(μ_posterior, Σ)
-          ↓
-[雙週調倉執行]
+```mermaid
+flowchart TD
+    N1["歷史兩週日頻回報 + 公司元數據"] --> N2["LLM Prompt (10次採樣) → 輸出序列 {r1, r2, ..., r10}"]
+    N2 --> N3["統計聚合 → μ_view = mean({r}), σ²_view = var({r})"]
+    N3 --> N4["BL 映射 → q = μ_view, Ω = diag(σ²_view), P = I"]
+    N4 --> N5["後驗回報計算 → π_prior (CAPM) + BL 調整 → μ_posterior"]
+    N5 --> N6["組合優化 → w* = argmax(μ_posterior, Σ)"]
+    N6 --> N7["雙週調倉執行"]
 ```
 
 ## §2 · 數學層

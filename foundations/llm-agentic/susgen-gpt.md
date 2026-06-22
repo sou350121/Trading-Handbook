@@ -29,14 +29,14 @@
 以數據中心主義的類別均衡下採樣，強制模型在 7-8B 容量內重構金融語義流形，將生成任務轉化為條件機率最大化而非純粹參數記憶。
 
 **1.3 信息流 ASCII 圖**
-```
-Input(年報/金融文本) 
-  → RAG Chunk(1024 tok) 
-  → Vector DB (all-mpnet-base-v2) 
-  → Top-10 Context Retrieval 
-  → Prompt(Alpaca Template) 
-  → QLoRA 7-8B (4-bit) 
-  → Output(TCFD Report / Label)
+```mermaid
+flowchart TD
+    A["Input(年報/金融文本)"] --> B["RAG Chunk(1024 tok)"]
+    B --> C["Vector DB (all-mpnet-base-v2)"]
+    C --> D["Top-10 Context Retrieval"]
+    D --> E["Prompt(Alpaca Template)"]
+    E --> F["QLoRA 7-8B (4-bit)"]
+    F --> G["Output(TCFD Report / Label)"]
 ```
 
 ## §2 · 數學層

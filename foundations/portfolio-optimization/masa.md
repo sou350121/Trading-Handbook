@@ -29,12 +29,18 @@
 RL 負責「進攻」（收益探索），求解器負責「防守」（風險硬約束），觀察者負責「戰術指揮」（趨勢反饋調整獎勵），三者鬆耦合避免單一網絡在波動中權重失衡。
 
 ### 1.3 信息流 ASCII 圖
-```
-Market State (t) → [市場觀察者 MLP] → Trend Feedback λ(t)
-      ↓
-[RL Agent (TD3)] → Raw Weights w_raw → [Solver Agent] → Final Weights w_final
-      ↓                                      ↓
-   Env Step ←─── Reward R(w_final, λ(t)) ←─── Risk/Return Calc
+```mermaid
+flowchart TD
+    A["Market State (t)"] --> B["[市場觀察者 MLP]"]
+    B --> C["Trend Feedback λ(t)"]
+    A --> D["[RL Agent (TD3)]"]
+    D --> E["Raw Weights w_raw"]
+    E --> F["[Solver Agent]"]
+    F --> G["Final Weights w_final"]
+    D --> H["Env Step"]
+    G --> I["Reward R(w_final, λ(t))"]
+    J["Risk/Return Calc"] --> I
+    I --> H
 ```
 
 ## §2 · 數學層

@@ -30,12 +30,19 @@
 **直覺:** 演員負責「敢不敢買/賣」，評論家負責「這筆交易值不值」，優勢函數過濾掉市場 Beta 噪音，只讓 Alpha 驅動倉位變動。
 
 ### 1.3 信息流 ASCII 圖
-```
-OHLCV (23yr) -> 特徵工程 (Trend/Vol/Momentum) -> 滾動窗口 State_t
-State_t -> [Actor Network] -> Action_t (Buy/Sell/Rebalance prob)
-State_t -> [Critic Network] -> Value_t (Expected Cumulative Reward)
-Action_t -> Environment (Market + Transaction Cost) -> Reward_t, State_{t+1}
-Reward_t, Value_t -> Advantage_t -> Update Actor/Critic
+```mermaid
+flowchart TD
+  A["OHLCV (23yr)"] --> B["特徵工程 (Trend/Vol/Momentum)"]
+  B --> C["滾動窗口 State_t"]
+  C --> D["[Actor Network]"]
+  D --> E["Action_t (Buy/Sell/Rebalance prob)"]
+  C --> F["[Critic Network]"]
+  F --> G["Value_t (Expected Cumulative Reward)"]
+  E --> H["Environment (Market + Transaction Cost)"]
+  H --> I["Reward_t, State_{t+1}"]
+  I --> J["Advantage_t"]
+  G --> J
+  J --> K["Update Actor/Critic"]
 ```
 
 ## §2 · 數學層

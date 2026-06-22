@@ -30,15 +30,14 @@
 「將收益預測重構為序列元任務，以最近一期的特徵-收益關係為條件，單次前向傳遞即可自適應機制轉換。」直覺上，模型不學固定權重，而是學「如何根據上一期橫截面狀態快速擬合當前期」，將時間維度的非平穩性轉化為元任務的分佈採樣。
 
 **1.3 信息流 ASCII 圖**
-```
-[t-1 特徵 X_{t-1}] + [t-1 收益 Y_{t-1}]  --> (Context Tokens)
-[t 特徵 X_t]                            --> (Query Tokens)
-          |
-          v
-[Transformer Encoder] (Inter-feature & Inter-sample Attn, Causal Mask)
-          |
-          v
-[Output Distribution] --> Median -> [t 預測收益 Ŷ_t]
+```mermaid
+flowchart TD
+  A["[t-1 特徵 X_{t-1}] + [t-1 收益 Y_{t-1}]"] --> B["(Context Tokens)"]
+  C["[t 特徵 X_t]"] --> D["(Query Tokens)"]
+  D --> E["[Transformer Encoder] (Inter-feature & Inter-sample Attn, Causal Mask)"]
+  E --> F["[Output Distribution]"]
+  F --> G["Median"]
+  G --> H["[t 預測收益 Ŷ_t]"]
 ```
 
 ## §2 · 數學層

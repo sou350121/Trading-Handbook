@@ -29,10 +29,18 @@
 利用未知干預導致的短期狀態獨立性，建立塊狀識別理論，實現長短期變量顯式解耦。
 
 **1.3 信息流 ASCII**
-```
-Input X_t → [Long Encoder] → Z_long_t → Smoothness Constraint → Decoder → Ŷ_{t+1}
-          → [Short Encoder]→ Z_short_t→ Interruption Constraint ↗
-          (Intervention I_t ~ Bernoulli(p))
+```mermaid
+flowchart TD
+    A["Input X_t"] --> B["[Long Encoder]"]
+    B --> C["Z_long_t"]
+    C --> D["Smoothness Constraint"]
+    D --> E["Decoder"]
+    E --> F["Ŷ_{t+1}"]
+    A --> G["[Short Encoder]"]
+    G --> H["Z_short_t"]
+    H --> I["Interruption Constraint"]
+    I --> E
+    J["(Intervention I_t ~ Bernoulli(p))"]
 ```
 
 ## §2 · 數學層

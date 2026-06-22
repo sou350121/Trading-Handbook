@@ -26,10 +26,15 @@
 
 ⚡ **Eureka:** 用 `Motif (區間形狀) + Composition (序列組合)` 取代逐點歸因，直接輸出「輸入特徵如何改變整體趨勢節奏」。
 🌊 **信息流:**
-```
-Static Features (x) → FC Encoder (θ) → B-spline Coeffs (c) → Trajectory Y(t)
-       ↓                                      ↓
-Composition Map → Motif Extraction → Interactive Viz (Trend/Attribute)
+```mermaid
+flowchart TD
+  A["Static Features (x)"] --> B["FC Encoder (θ)"]
+  B["FC Encoder (θ)"] --> C["B-spline Coeffs (c)"]
+  C["B-spline Coeffs (c)"] --> D["Trajectory Y(t)"]
+  A["Static Features (x)"] --> E["Composition Map"]
+  D["Trajectory Y(t)"] --> G["Interactive Viz (Trend/Attribute)"]
+  E["Composition Map"] --> F["Motif Extraction"]
+  F["Motif Extraction"] --> G["Interactive Viz (Trend/Attribute)"]
 ```
 
 ## §2 · 數學層

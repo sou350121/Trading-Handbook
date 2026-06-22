@@ -29,16 +29,21 @@
 用頻域主導週期動態錨定「反應時間」，將異質性波動轉為可重構的掩碼區間，使模型學會「正常態應如何平滑重構，波動態必然重構失敗」。
 
 **1.3 信息流 ASCII**
-```
-Raw TS → FFT (Dominant Period) → Multi-scale Patching
-       ↓
-Masking (Reaction Time Window) → Encoder (Transformer) → Z_rep
-       ↓
-Decoder (MLP) → X_hat → L_rec (Local Amplitude)
-       ↓
-Noise Perturbation → Z_neg → L_cont (Global Trend, InfoNCE)
-       ↓
-Joint Opt: L = L_rec + λ·L_cont → Anomaly Score (Reconstruction Error)
+```mermaid
+flowchart TD
+    N1["Raw TS"] --> N2["FFT (Dominant Period)"]
+    N2 --> N3["Multi-scale Patching"]
+    N2 --> N4["Masking (Reaction Time Window)"]
+    N4 --> N5["Encoder (Transformer)"]
+    N5 --> N6["Z_rep"]
+    N5 --> N7["Decoder (MLP)"]
+    N7 --> N8["X_hat"]
+    N8 --> N9["L_rec (Local Amplitude)"]
+    N8 --> N10["Noise Perturbation"]
+    N10 --> N11["Z_neg"]
+    N11 --> N12["L_cont (Global Trend, InfoNCE)"]
+    N11 --> N13["Joint Opt: L = L_rec + λ·L_cont"]
+    N13 --> N14["Anomaly Score (Reconstruction Error)"]
 ```
 
 ## §2 · 數學層

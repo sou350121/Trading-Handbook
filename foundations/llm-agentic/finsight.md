@@ -29,14 +29,20 @@
 CAVM 將所有數據、工具與智能體映射為可編程變數，使 LLM 的代碼生成能力直接驅動工作流編排；直覺上是用「執行環境」替代「提示詞工程」，讓模型在變數空間中動態搜索與迭代。
 
 **1.3 信息流 ASCII 圖**
-```
-[異構數據/新聞/財報] → Data Collection → 結構化多模態記憶庫
-       ↓
-[CAVM 變數空間] ↔ 動態搜索/工具調用 ↔ 多輪交互分析
-       ↓ (輸出: 分析鏈片段)
-[Two-Stage Writing] → 片段擴展 → 圖文引用綁定 → 專業研報
-       ↑
-[Iterative Vision-Enhanced] ← VLM 反饋 ← 代碼生成圖表
+```mermaid
+flowchart TD
+    N1["[異構數據/新聞/財報]"] --> N2["Data Collection"]
+    N2["Data Collection"] --> N3["結構化多模態記憶庫"]
+    N3["結構化多模態記憶庫"] --> N4["[CAVM 變數空間]"]
+    N4["[CAVM 變數空間]"] <--> N5["動態搜索/工具調用"]
+    N5["動態搜索/工具調用"] <--> N6["多輪交互分析"]
+    N6["多輪交互分析"] -->|"輸出: 分析鏈片段"| N7["[Two-Stage Writing]"]
+    N7["[Two-Stage Writing]"] --> N8["片段擴展"]
+    N8["片段擴展"] --> N9["圖文引用綁定"]
+    N9["圖文引用綁定"] --> N10["專業研報"]
+    N11["[Iterative Vision-Enhanced]"] --> N7["[Two-Stage Writing]"]
+    N12["VLM 反饋"] --> N11["[Iterative Vision-Enhanced]"]
+    N13["代碼生成圖表"] --> N12["VLM 反饋"]
 ```
 
 ## §2 · 數學層

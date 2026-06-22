@@ -27,10 +27,16 @@
 **⚡ Eureka:** 向量檢索負責「找全」，圖譜檢索負責「找準」，兩路上下文不經複雜權重學習，直接按 `Vector → Graph` 順序拼接輸入 LLM，以結構化提示工程替代端到端訓練。
 
 **信息流:**
-```
-Query → [VectorDB: Pinecone] → Context_V → \
-                                  → [Concatenation] → [LLM: GPT-3.5-turbo] → Answer
-Query → [KG: Networkx]    → Context_G → /
+```mermaid
+flowchart TD
+    Q["Query"] --> VDB["[VectorDB: Pinecone]"]
+    VDB["[VectorDB: Pinecone]"] --> CV["Context_V"]
+    CV["Context_V"] --> C["[Concatenation]"]
+    Q["Query"] --> KG["[KG: Networkx]"]
+    KG["[KG: Networkx]"] --> CG["Context_G"]
+    CG["Context_G"] --> C["[Concatenation]"]
+    C["[Concatenation]"] --> LLM["[LLM: GPT-3.5-turbo]"]
+    LLM["[LLM: GPT-3.5-turbo]"] --> Ans["Answer"]
 ```
 
 ## §2 · 數學層

@@ -26,14 +26,16 @@
 
 ⚡ **Eureka:** 用預測誤差反饋驅動新聞過濾邏輯的迭代，而非一次性靜態對齊。
 📊 **信息流 ASCII:**
-```
-Raw News → Reasoning Agent (Filter/Classify) → JSON Context
-                                      ↓
-                              LLM Predictor (Fine-tune)
-                                      ↓
-                              Prediction Output → Evaluation Agent (Check Error)
-                                      ↓
-                              Feedback → Reasoning Agent (Update Logic) → Loop
+```mermaid
+flowchart TD
+    A["Raw News"] --> B["Reasoning Agent (Filter/Classify)"]
+    B --> C["JSON Context"]
+    B --> D["LLM Predictor (Fine-tune)"]
+    D --> E["Prediction Output"]
+    E --> F["Evaluation Agent (Check Error)"]
+    F --> G["Feedback"]
+    G --> H["Reasoning Agent (Update Logic)"]
+    H --> I["Loop"]
 ```
 
 ## §2 · 數學層

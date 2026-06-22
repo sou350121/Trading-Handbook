@@ -26,10 +26,16 @@
 
 ⚡ **Eureka:** 放棄黑盒隱空間，用「頻域振幅+正交基」硬編碼週期先驗，靠 MSS 與 HCC 做軟性微調。
 **信息流:**
-```
-Input X → [FFT / Orthogonal Init] → Amplitude/Orthogonal Features
-       → MSS(Q, K) + Linear(V) → Dot Product → Softmax
-       → HCC(Conv on H heads) → Attention Weights → Output
+```mermaid
+flowchart TD
+  A["Input X"] --> B["[FFT / Orthogonal Init]"]
+  B --> C["Amplitude/Orthogonal Features"]
+  A --> D["MSS(Q, K) + Linear(V)"]
+  D --> E["Dot Product"]
+  E --> F["Softmax"]
+  A --> G["HCC(Conv on H heads)"]
+  G --> H["Attention Weights"]
+  H --> I["Output"]
 ```
 
 ## §2 · 數學層

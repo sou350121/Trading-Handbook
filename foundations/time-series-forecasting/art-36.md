@@ -27,14 +27,15 @@
 ⚡ **Eureka 一句話 trick + 直覺**：用可微的Sharpe Ratio替代MSE作為Loss，讓網絡在梯度下降中直接「學習如何賺錢」而非「學習如何猜對價格」；Turnover正則將摩擦成本轉化為信號平滑約束，避免梯度爆炸式調倉。
 
 **信息流 ASCII 圖**
-```
-Raw Features (Log Moneyness, DTE, MACD, Ret)
-       ↓
-[ CNN / LSTM / MLP / Linear ]
-       ↓
-Raw Signal → Vol-Target Scaling (15% Ann.) → Position
-       ↓
-PnL → Sharpe Loss + Turnover Penalty → Backprop
+```mermaid
+flowchart TD
+    A["Raw Features (Log Moneyness, DTE, MACD, Ret)"] --> B["[ CNN / LSTM / MLP / Linear ]"]
+    B --> C["Raw Signal"]
+    C --> D["Vol-Target Scaling (15% Ann.)"]
+    D --> E["Position"]
+    E --> F["PnL"]
+    F --> G["Sharpe Loss + Turnover Penalty"]
+    G --> H["Backprop"]
 ```
 
 ## §2 · 數學層

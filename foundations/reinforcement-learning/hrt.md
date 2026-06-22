@@ -29,22 +29,16 @@
 將「買什麼」與「買多少」拆成兩個獨立代理，讓高層專注於宏觀方向與情緒，低層專注於微觀流動性與倉位平滑，透過交替凍結參數實現策略與執行的漸進式對齊。
 
 **1.3 信息流 ASCII 圖**
-```
-[Market Data + News] → [Feature Eng (158 Qlib + Transformer + FinGPT)]
-              │
-              ▼
-┌─────────────────────┐      ┌─────────────────────┐
-│   High-Level (HLC)  │─────▶│   Low-Level (LLC)   │
-│   (PPO / Discrete)  │◀─────│ (DDPG / Continuous) │
-│  Output: Buy/Sell/Hold│    │  Output: Trade Qty  │
-└─────────────────────┘      └─────────────────────┘
-              │                           │
-              ▼                           ▼
-[Reward: Aligned Return + LLC Feedback] [Reward: Portfolio Value Δ]
-              │                           │
-              └───────────┬───────────────┘
-                          ▼
-              [Alternating Joint Training Loop]
+```mermaid
+flowchart TD
+  A["Market Data + News"] --> B["Feature Eng (158 Qlib + Transformer + FinGPT)"]
+  B --> C["High-Level (HLC) (PPO / Discrete) Output: Buy/Sell/Hold"]
+  C --> D["Low-Level (LLC) (DDPG / Continuous) Output: Trade Qty"]
+  D --> C
+  C --> E["Reward: Aligned Return + LLC Feedback"]
+  D --> F["Reward: Portfolio Value Δ"]
+  E --> G["Alternating Joint Training Loop"]
+  F --> G
 ```
 
 ## §2 · 數學層

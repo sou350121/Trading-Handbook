@@ -26,11 +26,14 @@
 
 ⚡ **Eureka 一句話 trick**：用 5 個離散 Action Tokens 切割分析鏈路，將「寫代碼」與「看結果」解耦，強制模型在環境反饋中自我修正。
 **信息流 ASCII**：
-```
-<Analyze> → <Understand> → <Code> → <Execute> → [Result/Error]
-       ↑___________________________________________|
-       ↓
-    <Answer> (任務完成)
+```mermaid
+flowchart TD
+    A["<Analyze>"] --> B["<Understand>"]
+    B["<Understand>"] --> C["<Code>"]
+    C["<Code>"] --> D["<Execute>"]
+    D["<Execute>"] --> E["[Result/Error]"]
+    E["[Result/Error]"] --> A["<Analyze>"]
+    A["<Analyze>"] --> F["<Answer> (任務完成)"]
 ```
 
 ## §2 · 數學層

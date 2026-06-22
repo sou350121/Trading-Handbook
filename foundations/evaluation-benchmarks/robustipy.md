@@ -28,12 +28,14 @@
 「固定核心理論變量 + 遍歷控制變量」將組合爆炸轉為可控的設定空間，直覺上等同於在因子驗證時鎖定經濟邏輯主軸，僅對雜訊控制項進行壓力測試。
 
 **1.3 信息流 ASCII 圖**
-```
-[Raw Tabular Data] → [Define Fixed Covariates / Effects] → [Generate Spec Space (2^k or Sub-sampling)]
-       ↓
-[OLS / Logit / LPM Estimation] → [Bootstrap CI / BMA Weighting / SHAP Attribution]
-       ↓
-[Specification Curve + OOS Metrics Distribution] → [Joint Inference (Stouffer's Z)]
+```mermaid
+flowchart TD
+  A["[Raw Tabular Data]"] --> B["[Define Fixed Covariates / Effects]"]
+  B --> C["[Generate Spec Space (2^k or Sub-sampling)]"]
+  C --> D["[OLS / Logit / LPM Estimation]"]
+  D --> E["[Bootstrap CI / BMA Weighting / SHAP Attribution]"]
+  E --> F["[Specification Curve + OOS Metrics Distribution]"]
+  F --> G["[Joint Inference (Stouffer's Z)]"]
 ```
 
 ## §2 · 數學層

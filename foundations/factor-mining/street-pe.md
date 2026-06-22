@@ -26,10 +26,14 @@
 
 ⚡ **Eureka:** 用分析師口徑的擬制性盈餘替代 GAAP 收益，使估值比率的分子（價格）與分母（盈餘）的波動來源解耦，比率變動真正追蹤未來回報預期而非會計雜訊。
 **信息流:**
-```
-Raw Financials (Compustat) ──┐
-                             ├──> Analyst Adjustments (I/B/E/S) ──> Street Earnings ──> Street PE ──> Campbell-Shiller Decomp ──> Return Predictability (Fama-MacBeth)
-GAAP Earnings ───────────────┘
+```mermaid
+flowchart TD
+    A["Raw Financials (Compustat)"] --> B["Analyst Adjustments (I/B/E/S)"]
+    G["GAAP Earnings"] --> B["Analyst Adjustments (I/B/E/S)"]
+    B["Analyst Adjustments (I/B/E/S)"] --> C["Street Earnings"]
+    C["Street Earnings"] --> D["Street PE"]
+    D["Street PE"] --> E["Campbell-Shiller Decomp"]
+    E["Campbell-Shiller Decomp"] --> F["Return Predictability (Fama-MacBeth)"]
 ```
 
 ## §2 · 數學層

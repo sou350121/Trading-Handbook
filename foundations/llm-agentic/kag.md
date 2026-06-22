@@ -27,14 +27,16 @@
 ⚡ **Eureka:** 用符號邏輯將自然語言問題轉譯為可執行圖遍歷路徑，讓 LLM 從「猜詞補全」變成「解題演算」。
 
 **信息流 ASCII:**
-```
-User Query → Intent/Entity Parse → Logic Form Generation
-       ↓
-Hybrid Engine [Plan | Reason | Retrieve | Compute]
-       ↓
-KG ↔ Text Mutual Index → Multimodal Alignment
-       ↓
-Agent Execution → Answer Generation → Feedback Loop (KG Update)
+```mermaid
+flowchart TD
+    A["User Query"] --> B["Intent/Entity Parse"]
+    B["Intent/Entity Parse"] --> C["Logic Form Generation"]
+    C["Logic Form Generation"] --> D["Hybrid Engine [Plan | Reason | Retrieve | Compute]"]
+    D["Hybrid Engine [Plan | Reason | Retrieve | Compute]"] --> E["KG ↔ Text Mutual Index"]
+    E["KG ↔ Text Mutual Index"] --> F["Multimodal Alignment"]
+    F["Multimodal Alignment"] --> G["Agent Execution"]
+    G["Agent Execution"] --> H["Answer Generation"]
+    H["Answer Generation"] --> I["Feedback Loop (KG Update)"]
 ```
 
 ## §2 · 數學層

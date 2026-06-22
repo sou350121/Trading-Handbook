@@ -26,12 +26,18 @@
 
 ⚡ **Eureka:** 不存完整模型，只存「參數差值」；不靠固定週期重訓，靠 CUSUM 捕捉宏觀特徵的累積偏差突變。
 **信息流 ASCII:**
-```
-[Macro Features] → (CUSUM) → [Regime Boundary]
-          ↓
-[Base Policy θ_base] + [Δθ_i] → (RGM Attention) → [θ_final]
-          ↓
-[Asset Features] → [θ_final] → [Action/Weights] → [Execution]
+```mermaid
+flowchart TD
+    A["Macro Features"] --> B["CUSUM"]
+    B --> C["Regime Boundary"]
+    A --> D["Base Policy θ_base"]
+    D --> F["RGM Attention"]
+    E["Δθ_i"] --> F
+    F --> G["θ_final"]
+    D --> H["Asset Features"]
+    H --> I["θ_final"]
+    I --> J["Action/Weights"]
+    J --> K["Execution"]
 ```
 
 ## §2 · 數學層

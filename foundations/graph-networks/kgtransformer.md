@@ -28,17 +28,18 @@
 **1.2 ⚡ Eureka** 用「元實體類別」作為注意力掩碼的先驗，讓模型在圖遍歷時自動過濾無關語義漂移，直覺上等同於給 GNN 加了金融領域的「語義濾鏡」，避免跨領域實體（如科技股 vs 消費品）在注意力計算中產生虛假關聯。
 
 **1.3 信息流 ASCII 圖**
-```
-News Text -> [ICKG LLM] -> (Entity, Category, Relation, Time) Quads
-     |
-     v
-[Sentence-BERT Disambiguation] -> FinDKG (Dynamic Graph G_t)
-     |
-     v
-[KGTransformer] -> Time/Struct Embedding -> Multi-Head Attention -> Entity Embeddings h_t
-     |
-     v
-[Link Prediction / Theme Scoring] -> Portfolio Weights
+```mermaid
+flowchart TD
+    A["News Text"] --> B["[ICKG LLM]"]
+    B --> C["(Entity, Category, Relation, Time) Quads"]
+    C --> D["[Sentence-BERT Disambiguation]"]
+    D --> E["FinDKG (Dynamic Graph G_t)"]
+    E --> F["[KGTransformer]"]
+    F --> G["Time/Struct Embedding"]
+    G --> H["Multi-Head Attention"]
+    H --> I["Entity Embeddings h_t"]
+    I --> J["[Link Prediction / Theme Scoring]"]
+    J --> K["Portfolio Weights"]
 ```
 
 ## §2 · 數學層

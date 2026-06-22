@@ -29,14 +29,18 @@
 用統計相關性閾值（>0.7）硬編碼圖拓撲，再以 GAT 自注意力學習鄰域權重，最後用圖池化將橫截面信息「拍扁」成一維張量輸入時序 CNN。
 
 **1.3 信息流 ASCII**
-```
-[Input: T×F Matrix] → [Graph Build: corr > 0.7]
-          ↓
-[GAT/GCN Layer] → [Adjacency Message Passing] → [Graph Pooling (Mean/Max/FC)]
-          ↓ (Flatten to 1D)
-[Multi-scale CNN] → [3-day Conv + ReLU + MaxPool] → [Cross-over with GAT blocks]
-          ↓
-[FC Layer] → [Sigmoid] → [5-Index Probability Output]
+```mermaid
+flowchart TD
+    A["Input: T×F Matrix"] --> B["Graph Build: corr > 0.7"]
+    B --> C["GAT/GCN Layer"]
+    C --> D["Adjacency Message Passing"]
+    D --> E["Graph Pooling (Mean/Max/FC)"]
+    E --> F["Multi-scale CNN"]
+    F --> G["3-day Conv + ReLU + MaxPool"]
+    G --> H["Cross-over with GAT blocks"]
+    H --> I["FC Layer"]
+    I --> J["Sigmoid"]
+    J --> K["5-Index Probability Output"]
 ```
 
 ## §2 · 數學層

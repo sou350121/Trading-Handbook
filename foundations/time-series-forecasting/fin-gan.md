@@ -30,24 +30,21 @@
 **直覺:** 傳統 GAN 關心生成的曲線長得像不像歷史；Fin-GAN 關心當我敢下重注時方向是否對，當我不確定時是否自動降倉。
 
 ### 1.3 信息流 ASCII 圖
-```
-[歷史序列 X(L)] ──► [LSTM Encoder] ──► [條件向量 C]
-                                  │
-[隨機噪聲 z ~ N(0,1)] ────────┘
-                                  ▼
-                          [Generator G(z|C)]
-                                  │
-                    ┌─────────────┼─────────────┐
-                    ▼             ▼             ▼
-              [預測分佈]    [抽樣 B=1000]   [計算 Pu/Pd]
-                    │             │             │
-                    └─────────────┼─────────────┘
-                                  ▼
-                    [經濟學損失 L_econ = f(SRw, wPnL)]
-                                  │
-                    ┌─────────────┼─────────────┐
-                    ▼             ▼             ▼
-              [更新 G]      [更新 D]      [輸出方向/置信度]
+```mermaid
+flowchart TD
+    N1["歷史序列 X(L)"] --> N2["LSTM Encoder"]
+    N2["LSTM Encoder"] --> N3["條件向量 C"]
+    N3["條件向量 C"] --> N5["Generator G(z|C)"]
+    N4["隨機噪聲 z ~ N(0,1)"] --> N5["Generator G(z|C)"]
+    N5["Generator G(z|C)"] --> N6["預測分佈"]
+    N5["Generator G(z|C)"] --> N7["抽樣 B=1000"]
+    N5["Generator G(z|C)"] --> N8["計算 Pu/Pd"]
+    N6["預測分佈"] --> N9["經濟學損失 L_econ = f(SRw, wPnL)"]
+    N7["抽樣 B=1000"] --> N9["經濟學損失 L_econ = f(SRw, wPnL)"]
+    N8["計算 Pu/Pd"] --> N9["經濟學損失 L_econ = f(SRw, wPnL)"]
+    N9["經濟學損失 L_econ = f(SRw, wPnL)"] --> N10["更新 G"]
+    N9["經濟學損失 L_econ = f(SRw, wPnL)"] --> N11["更新 D"]
+    N9["經濟學損失 L_econ = f(SRw, wPnL)"] --> N12["輸出方向/置信度"]
 ```
 
 ## §2 · 數學層

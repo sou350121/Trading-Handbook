@@ -29,15 +29,21 @@
 `Reward = f(組合價值變動 - 內生交易成本 - 風險懲罰)`。直覺：不把成本當後驗過濾器，而是讓 agent 在 step 時直接「感受」到滑點與手續費，迫使策略在訓練期就學會避開流動性陷阱與過度交易。
 
 **1.3 信息流 ASCII 圖**
-```
-Raw Market Data → [Data Module] → Cleaned DF + Tech Indicators
-       ↓
-[Env Module] (Gym Wrapper) → State: {prices, indicators, cash, positions}
-       ↓ Action: {weights/shares} → Step → Next State + Reward (cost-aware)
-       ↓
-[Agent Module] (PPO/SAC/etc.) → Policy Update → Checkpoint
-       ↓
-[Backtest/Eval] → Metrics (Sharpe, MDD, AR) → Live Deployment Hook
+```mermaid
+flowchart TD
+    A["Raw Market Data"] --> B["[Data Module]"]
+    B --> C["Cleaned DF + Tech Indicators"]
+    C --> D["[Env Module] (Gym Wrapper)"]
+    D --> E["State: {prices, indicators, cash, positions}"]
+    E --> F["Action: {weights/shares}"]
+    F --> G["Step"]
+    G --> H["Next State + Reward (cost-aware)"]
+    H --> I["[Agent Module] (PPO/SAC/etc.)"]
+    I --> J["Policy Update"]
+    J --> K["Checkpoint"]
+    K --> L["[Backtest/Eval]"]
+    L --> M["Metrics (Sharpe, MDD, AR)"]
+    M --> N["Live Deployment Hook"]
 ```
 
 ## §2 · 數學層

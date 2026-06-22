@@ -26,11 +26,15 @@
 
 **⚡ Eureka:** 用 `dilation` 替換 `recursion`，讓卷積核隔點採樣，單層感受野呈指數擴張，配合殘差跳連直達深層。
 **信息流 ASCII:**
-```
-Raw HF Returns (t-1, t-2, ...) → [DCC Layer 1 (d=1)] → [DCC Layer 2 (d=2)] → ... → [DCC Layer L (d=2^(L-1))]
-       ↖________________________ Residual Skip _________________________↗
-       ↓
-Linear Projection → Predicted Next-Day Realized Volatility
+```mermaid
+flowchart TD
+  A["Raw HF Returns (t-1, t-2, ...)"] --> B["DCC Layer 1 (d=1)"]
+  B --> C["DCC Layer 2 (d=2)"]
+  C --> D["..."]
+  D --> E["DCC Layer L (d=2^(L-1))"]
+  A -->|Residual Skip| E
+  A --> F["Linear Projection"]
+  F --> G["Predicted Next-Day Realized Volatility"]
 ```
 
 ## §2 · 數學層

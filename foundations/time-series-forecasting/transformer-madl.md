@@ -29,8 +29,14 @@
 損失值正負直接對應策略盈虧：預測同向時損失為負（獎勵），異向時損失為正（懲罰），最小化 MADL 等同最大化方向性 PnL。
 
 **1.3 信息流 ASCII**
-```
-[3日收益率] -> (Q=t+1, K=歷史, V=歷史) -> Multi-Head Attn -> Decoder -> ReLU -> sign() -> [-1/0/1]
+```mermaid
+flowchart TD
+A["[3日收益率]"] --> B["(Q=t+1, K=歷史, V=歷史)"]
+B --> C["Multi-Head Attn"]
+C --> D[Decoder]
+D --> E[ReLU]
+E --> F["sign()"]
+F --> G["[-1/0/1]"]
 ```
 
 ## §2 · 數學層

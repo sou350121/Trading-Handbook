@@ -29,22 +29,15 @@
 「用線性層替換嵌入層，並將位置編碼升維後再投影回低維流形，即可在不增加 `d_model` 的前提下容納長序列位置信息。」直覺：連續序列的相鄰樣本高度相關，低維模型足以捕捉局部動態；真正稀缺的是全局位置感知，將其獨立升維可避免模型容量被位置信息稀釋。
 
 **1.3 信息流 ASCII**
-```
-X_cont (T, B, d_input)
-  │
-  ├─ Linear(d_input→d_model) ──┐
-  │                            ▼
-  │  ┌─ pos_expansion(d_model→pos_dim) ──┐
-  │  │                                   ▼
-  │  │  PositionalEncoding(pos_dim)      │
-  │  │                                   ▼
-  │  └─ pos_invexpansion(pos_dim→d_model)─┘
-  │                            ▼
-  └────────── Transformer Encoder/Decoder ──────────┘
-                           ▼
-                Linear(d_model→d_input)
-                           ▼
-                Y_pred (T, B, d_input)
+```mermaid
+flowchart TD
+    N1["X_cont (T, B, d_input)"] --> N2["Linear(d_input→d_model)"]
+    N2["Linear(d_input→d_model)"] --> N3["pos_expansion(d_model→pos_dim)"]
+    N3["pos_expansion(d_model→pos_dim)"] --> N4["PositionalEncoding(pos_dim)"]
+    N4["PositionalEncoding(pos_dim)"] --> N5["pos_invexpansion(pos_dim→d_model)"]
+    N5["pos_invexpansion(pos_dim→d_model)"] --> N6["Transformer Encoder/Decoder"]
+    N6["Transformer Encoder/Decoder"] --> N7["Linear(d_model→d_input)"]
+    N7["Linear(d_model→d_input)"] --> N8["Y_pred (T, B, d_input)"]
 ```
 
 ## §2 · 數學層

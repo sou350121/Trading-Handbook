@@ -29,10 +29,18 @@
 用排名相關係數的均值與標準差比率（msIC/msIR）替代純誤差，直接對齊「預測方向一致性」與「實盤信號穩定性」。
 
 **1.3 信息流 ASCII**
-```
-[多頻 OHLCV] → [Log-Diff + 錨定100] → [SOTA Backbone] → [msIC/msIR Calculator] → [策略模擬器] → [實盤信號過濾]
-      ↑              ↑                      ↑                  ↑                    ↑
-   市場數據        量綱對齊             監督回歸訓練        相關性穩定性評估      離線經濟價值 proxy
+```mermaid
+flowchart TD
+    A["多頻 OHLCV"] --> B["Log-Diff + 錨定100"]
+    B --> C["SOTA Backbone"]
+    C --> D["msIC/msIR Calculator"]
+    D --> E["策略模擬器"]
+    E --> F["實盤信號過濾"]
+    G["市場數據"] --> A
+    H["量綱對齊"] --> B
+    I["監督回歸訓練"] --> C
+    J["相關性穩定性評估"] --> D
+    K["離線經濟價值 proxy"] --> E
 ```
 
 ## §2 · 數學層

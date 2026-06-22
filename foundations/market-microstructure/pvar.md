@@ -29,11 +29,12 @@
 突破日度局限，構建分鐘級PVAR與脈衝響應，量化套利頻率與價格調整滯後性，證偽噪音傳導假說。
 
 **1.3 信息流 ASCII**
-```
-ETF Ret / OrderFlow  ──┐
-                       ├──▶ [PVAR(GMM, IV)] ──▶ CIRF / FEVD ──▶ 標的組合 Ret / OrderFlow
-Underlying Ret / OF ───┘
-          ▲ (單向驅動：標的 → ETF，反向傳導 ≈ 0)
+```mermaid
+flowchart TD
+    A["ETF Ret / OrderFlow"] --> B["[PVAR(GMM, IV)]"]
+    E["Underlying Ret / OF"] --> B["[PVAR(GMM, IV)]"]
+    B["[PVAR(GMM, IV)]"] --> C["CIRF / FEVD"]
+    C["CIRF / FEVD"] --> D["標的組合 Ret / OrderFlow"]
 ```
 
 ## §2 · 數學層

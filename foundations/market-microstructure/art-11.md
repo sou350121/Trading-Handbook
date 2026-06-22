@@ -28,20 +28,12 @@
 用時間窗口均值重定義標籤方向，直接將離散跳躍轉為局部趨勢，降低標籤噪聲；RF 透過特徵重要性自動過濾冗餘盤口特徵，實現「輕模型+重特徵」的 Pareto 最優。
 
 **1.3 信息流 ASCII 圖**
-```
-LOB Message/Book Files
-        │
-        ▼
-[Feature Eng] → Imbalance / Arrival Rate / Depth Levels
-        │
-        ▼
-[Label Smoothing] → y_t = sign(mean(m_{t-α}..m_{t+α}) - m_t)
-        │
-        ▼
-[Random Forest] → GridSearchCV (n_est, max_feat, min_leaf)
-        │
-        ▼
-Direction Prediction (+1 / -1 / 0) → [未連接執行層]
+```mermaid
+flowchart TD
+A["LOB Message/Book Files"] --> B["[Feature Eng] → Imbalance / Arrival Rate / Depth Levels"]
+B --> C["[Label Smoothing] → y_t = sign(mean(m_{t-α}..m_{t+α}) - m_t)"]
+C --> D["[Random Forest] → GridSearchCV (n_est, max_feat, min_leaf)"]
+D --> E["Direction Prediction (+1 / -1 / 0) → [未連接執行層]"]
 ```
 
 ## §2 · 數學層

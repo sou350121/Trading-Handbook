@@ -30,24 +30,18 @@ Trick: 以「協方差正則化損失」約束 Stage 1 因子多樣性，再以 
 直覺: 先讓監督學習負責「找對的訊號」，再讓強化學習負責「在對的時候信誰」，避免 RL 在雜訊中盲目試錯。
 
 **1.3 信息流 ASCII 圖**
-```
-Raw OHLCV (30d window)
-          │
-          ▼
-[Stage 1: CATimeMixer]
-├─ Multi-scale Conv1D (Top-down trend / Bottom-up seasonal)
-├─ Cross-asset MHA
-└─ Covariance Regularization → α₁...α₆₄ (Low-correlation factors)
-          │
-          ▼
-[Stage 2: PPO + GAT]
-├─ State: Factor vector α
-├─ Graph: αᵢ as nodes, GAT computes attention weights wᵢ
-├─ Action: Portfolio weights w (Top-K selection)
-└─ Reward: R = (w·r) - cost (PPO update)
-          │
-          ▼
-Final Portfolio Allocation
+```mermaid
+flowchart TD
+    A["Raw OHLCV (30d window)"] --> B["[Stage 1: CATimeMixer]"]
+    B --> C["Multi-scale Conv1D (Top-down trend / Bottom-up seasonal)"]
+    B --> D["Cross-asset MHA"]
+    B --> E["Covariance Regularization → α₁...α₆₄ (Low-correlation factors)"]
+    B --> F["[Stage 2: PPO + GAT]"]
+    F --> G["State: Factor vector α"]
+    F --> H["Graph: αᵢ as nodes, GAT computes attention weights wᵢ"]
+    F --> I["Action: Portfolio weights w (Top-K selection)"]
+    F --> J["Reward: R = (w·r) - cost (PPO update)"]
+    F --> K["Final Portfolio Allocation"]
 ```
 
 ## §2 · 數學層

@@ -27,16 +27,14 @@
 ⚡ **Eureka:** 放棄端到端輸出權重，改由決策邏輯融合 TCN 拐點預測與 Hawkes-GAT 收益排序執行粗略動作。
 
 **信息流 ASCII:**
-```
-State (OHLCV+Turnover) 
-   │
-   ▼
-[SAC Actor] ──(粗略動作: type, magnitude)──┐
-                                           ▼
-[TCN Turning Point] ──(拐點日/非拐點日)──┤
-[Hawkes-GAT Scoring] ──(個股收益排序)────┤
-                                           ▼
-[Decision Logic] ──(擇時過濾 → 排序執行)──► Final Portfolio Action
+```mermaid
+flowchart TD
+    A["State (OHLCV+Turnover)"] --> B["[SAC Actor]"]
+    B -->|(粗略動作: type, magnitude)| C["[TCN Turning Point]"]
+    B -->|(粗略動作: type, magnitude)| D["[Hawkes-GAT Scoring]"]
+    C -->|(拐點日/非拐點日)| E["[Decision Logic]"]
+    D -->|(個股收益排序)| E["[Decision Logic]"]
+    E -->|(擇時過濾 → 排序執行)| F["Final Portfolio Action"]
 ```
 
 ## §2 · 數學層

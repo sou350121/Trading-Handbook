@@ -29,14 +29,18 @@
 「不直接教模型『怎麼賺錢』，而是教模型『模仿已經算好的最優權重分佈』，再用多模型投票壓低單次訓練的運氣成分。」
 
 **1.3 信息流 ASCII 圖**
-```
-[OHLCV 252d] -> [Feature Norm] -> [LSTM/Trans/Mamba] -> [Softmax/Logits]
-      |                                              |
-      v                                              v
-[Pre-calc Target] (Max-Sortino / One-Hot) <--- [Cross-Entropy Loss]
-      |                                              |
-      v                                              v
-[Deep Ensemble] (Avg over N models) -> [Final Weights] -> [Rebalance (Monthly, 2d lag)]
+```mermaid
+flowchart TD
+    A["[OHLCV 252d]"] --> B["[Feature Norm]"]
+    B --> C["[LSTM/Trans/Mamba]"]
+    C --> D["[Softmax/Logits]"]
+    A --> E["[Pre-calc Target] (Max-Sortino / One-Hot)"]
+    D --> F["[Cross-Entropy Loss]"]
+    F --> E
+    E --> G["[Deep Ensemble] (Avg over N models)"]
+    F --> H["[Final Weights]"]
+    G --> H
+    H --> I["[Rebalance (Monthly, 2d lag)]"]
 ```
 
 ## §2 · 數學層

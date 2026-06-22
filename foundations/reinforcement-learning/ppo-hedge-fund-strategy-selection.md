@@ -26,12 +26,16 @@
 
 ⚡ **Eureka:** 將「策略切換」抽象為 POMDP 動作空間，用 DeepLabV3+ 的膨脹卷積捕捉短長期市場 Context，以 PPO 剪切機制約束策略跳變。
 **信息流 ASCII:**
-```
-[市場數據] → [DeepLabV3+ 特徵提取] → [觀測張量 O_t]
-                                      ↓
-[PPO Agent] → [策略選擇動作 A_t ∈ {Momentum, MR}] → [環境執行]
-                                      ↓
-[獎勵計算 R_t = Sharpe/CVaR] → [梯度更新 π_θ] → [動態路由]
+```mermaid
+flowchart TD
+    A["市場數據"] --> B["DeepLabV3+ 特徵提取"]
+    B --> C["觀測張量 O_t"]
+    C --> D["PPO Agent"]
+    D --> E["策略選擇動作 A_t ∈ {Momentum, MR}"]
+    E --> F["環境執行"]
+    F --> G["獎勵計算 R_t = Sharpe/CVaR"]
+    G --> H["梯度更新 π_θ"]
+    H --> I["動態路由"]
 ```
 
 ## §2 · 數學層

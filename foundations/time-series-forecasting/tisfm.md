@@ -29,19 +29,30 @@
 用市場指數首時間步的編碼向量經 FFN+Softmax 生成 4 維 regime 權重，直接對 4 套並行行業 Transformer 的輸出做加權求和，讓模型「先看大勢，再挑板塊」。
 
 1.3 信息流 ASCII 圖
-```
-[市場指數序列] -> 線性投影+PE -> [Transformer Encoder] -> H_market_ctx
-     |
-     v (取首步向量) -> FFN -> Softmax -> W_state (4維)
-[行業指數序列] -> 線性投影+PE -> H_industry
-     |
-     v (複製4份) -> [4x Parallel Transformer Encoders] -> H_industry_regime_i
-     |
-     v (加權求和 W_state) -> H_industry_agg -> [Industry Temporal Encoder] -> H_industry_ctx
-     |
-     v (Bidirectional Cross-Attention: H_market_ctx <-> H_industry_ctx) -> H_fused
-     |
-     v (Residual + H_market_ctx) -> MLP -> SMA Log Diff Prediction
+```mermaid
+flowchart TD
+    A["[市場指數序列]"] --> B["線性投影+PE"]
+    B --> C["[Transformer Encoder]"]
+    C --> D["H_market_ctx"]
+    D --> E["v (取首步向量)"]
+    E --> F["FFN"]
+    F --> G["Softmax"]
+    G --> H["W_state (4維)"]
+    H --> I["[行業指數序列]"]
+    I --> J["線性投影+PE"]
+    J --> K["H_industry"]
+    K --> L["v (複製4份)"]
+    L --> M["[4x Parallel Transformer Encoders]"]
+    M --> N["H_industry_regime_i"]
+    N --> O["v (加權求和 W_state)"]
+    O --> P["H_industry_agg"]
+    P --> Q["[Industry Temporal Encoder]"]
+    Q --> R["H_industry_ctx"]
+    R --> S["v (Bidirectional Cross-Attention: H_market_ctx <-> H_industry_ctx)"]
+    S --> T["H_fused"]
+    T --> U["v (Residual + H_market_ctx)"]
+    U --> V["MLP"]
+    V --> W["SMA Log Diff Prediction"]
 ```
 
 ## §2 · 數學層

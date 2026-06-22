@@ -26,8 +26,12 @@
 
 ⚡ **Eureka:** 「讓視覺模型專攻周期，數值模型掌控趨勢，門控動態分配話語權。」
 **信息流:**
-```
-[Raw TS] → [DMMV-A Decomposer] → {Trend (Num Predictor) + Cycle (LVM/MAE w/ BCMASK)} → [Learnable Gate] → [Forecast]
+```mermaid
+flowchart TD
+    A["Raw TS"] --> B["DMMV-A Decomposer"]
+    B --> C["Trend (Num Predictor) + Cycle (LVM/MAE w/ BCMASK)"]
+    C --> D["Learnable Gate"]
+    D --> E["Forecast"]
 ```
 
 ## §2 · 數學層

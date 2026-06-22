@@ -27,14 +27,20 @@
 ⚡ **Eureka:** 揚棄標量降頻，將資產映射為「日度收益-日內波動曲線」複合對象，在非歐度量空間中利用 Fréchet 條件/無條件變差比計算依賴得分，實現高保真篩選。
 
 **信息流:**
-```
-[1-min Returns] -> [5-min Grid Smoothing] -> [Spot Vol Curve]
-      |
-[Daily Return] + [Vol Curve] -> [Point-Curve Object] -> [Product Metric Dist]
-      |
-[High-Freq Sharpe Rank] -> [Top 10% Cap-Weighted] -> [Target Sequence Y]
-      |
-[Fréchet Variance Decomposition] -> [MDS Score] -> [Cross-sectional Filter]
+```mermaid
+flowchart TD
+    N1["1-min Returns"] --> N2["5-min Grid Smoothing"]
+    N2 --> N3["Spot Vol Curve"]
+    N3 --> N4["Daily Return"]
+    N4 --> N6["Point-Curve Object"]
+    N5["Vol Curve"] --> N6
+    N6 --> N7["Product Metric Dist"]
+    N7 --> N8["High-Freq Sharpe Rank"]
+    N8 --> N9["Top 10% Cap-Weighted"]
+    N9 --> N10["Target Sequence Y"]
+    N10 --> N11["Fréchet Variance Decomposition"]
+    N11 --> N12["MDS Score"]
+    N12 --> N13["Cross-sectional Filter"]
 ```
 
 ## §2 · 數學層

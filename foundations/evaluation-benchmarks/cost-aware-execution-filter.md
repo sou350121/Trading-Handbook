@@ -30,14 +30,15 @@
 **直覺:** 過濾掉 0 軸附近的雜訊翻轉，用空間換時間，讓策略在震盪市「裝死」，在趨勢市「重拳出擊」。執行層紀律直接切斷了微弱信號對淨值的慢性失血。
 
 ### 1.3 信息流
-```
-Raw OHLCV/TA/EGARCH 
-   → ML Model (XGB/LSTM/iTF) 
-   → Predicted Return (r_hat) 
-   → CA Filter (|r_hat| > threshold?) 
-      ├─ Yes: Execute Trade (Δpos) 
-      └─ No:  Hold Position (Δpos = 0) 
-   → PnL & Fold-Level Stats
+```mermaid
+flowchart TD
+    A["Raw OHLCV/TA/EGARCH"] --> B["ML Model (XGB/LSTM/iTF)"]
+    B --> C["Predicted Return (r_hat)"]
+    C --> D["CA Filter (|r_hat| > threshold?)"]
+    D --> E["Yes: Execute Trade (Δpos)"]
+    D --> F["No:  Hold Position (Δpos = 0)"]
+    E --> G["PnL & Fold-Level Stats"]
+    F --> G["PnL & Fold-Level Stats"]
 ```
 
 ## §2 · 數學層

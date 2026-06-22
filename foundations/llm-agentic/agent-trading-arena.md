@@ -29,12 +29,18 @@
 > 「LLM 的幾何推理能力遠強於代數推理；把數值轉成圖，它就能看懂趨勢。」
 
 **1.3 信息流 ASCII**
-```
-[Market Data] → (Visual Encoder) → [K-Line/Scatter] → [LLM Vision-Text]
-       ↑                                              ↓
-[Reflection Module] ← (Trajectory Memory) ← [Action/Return]
-       ↓
-[Strategy Library] → (Contrastive Update) → [Next-Day Policy]
+```mermaid
+flowchart TD
+    A["Market Data"] --> B["Visual Encoder"]
+    B["Visual Encoder"] --> C["K-Line/Scatter"]
+    C["K-Line/Scatter"] --> D["LLM Vision-Text"]
+    D["LLM Vision-Text"] --> E["Reflection Module"]
+    E["Reflection Module"] --> A["Market Data"]
+    G["Action/Return"] --> F["Trajectory Memory"]
+    F["Trajectory Memory"] --> E["Reflection Module"]
+    E["Reflection Module"] --> H["Strategy Library"]
+    H["Strategy Library"] --> I["Contrastive Update"]
+    I["Contrastive Update"] --> J["Next-Day Policy"]
 ```
 
 ## §2 · 數學層

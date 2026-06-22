@@ -29,10 +29,21 @@
 用一組可學習的 Query Vectors 對資產特徵做 Softmax 匹配，讓模型「自己決定」哪些股票該歸為同一個套利因子，而非由 PCA 的數學正交性強行綁定；殘差序列直接餵給 LongConv 輸出權重，全程梯度可導。
 
 **1.3 信息流 ASCII 圖**
-```
-公司特徵 (79維) → [Embedding] → [Attention (Query Vectors)] → 因子權重 W
-收益率 R → [因子模型投影] → 殘差 ε → [LongConv] → 殘差權重 w_res
-W ⊗ w_res → 資產空間權重 → [成本函數 C] → 淨收益 R_net → [Loss: -Net Sharpe + λ·Var]
+```mermaid
+flowchart TD
+    N1["公司特徵 (79維)"] --> N2["[Embedding]"]
+    N2 --> N3["[Attention (Query Vectors)]"]
+    N3 --> N4["因子權重 W"]
+    N5["收益率 R"] --> N6["[因子模型投影]"]
+    N6 --> N7["殘差 ε"]
+    N7 --> N8["[LongConv]"]
+    N8 --> N9["殘差權重 w_res"]
+    N4 --> N10["W ⊗ w_res"]
+    N9 --> N10
+    N10 --> N11["資產空間權重"]
+    N11 --> N12["[成本函數 C]"]
+    N12 --> N13["淨收益 R_net"]
+    N13 --> N14["[Loss: -Net Sharpe + λ·Var]"]
 ```
 
 ## §2 · 數學層

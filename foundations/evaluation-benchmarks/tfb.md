@@ -29,14 +29,15 @@
 「以特徵分佈反推方法選擇」——用 PCA 量化序列的趨勢/季節性/平穩性/偏移/轉換，強制要求 benchmark 覆蓋全特徵空間，從而消除「挑數據刷榜」的偏見。直覺：不拼模型深度，拼實驗設計的對照嚴謹度。
 
 **1.3 信息流 ASCII 圖**
-```
-[Data Layer] → 統一格式/PCA特徵驗證/存儲
-       ↓
-[Method Layer] → 統計/ML/DL 35種方法集成/超參協議
-       ↓
-[Eval Layer] → 固定/滾動策略切換/MAE-MSE-SMAPE-RMSE 計算
-       ↓
-[Report Layer] → 日誌追蹤/可視化/能力邊界映射指南
+```mermaid
+flowchart TD
+  A["[Data Layer] → 統一格式/PCA特徵驗證/存儲"]
+  B["[Method Layer] → 統計/ML/DL 35種方法集成/超參協議"]
+  C["[Eval Layer] → 固定/滾動策略切換/MAE-MSE-SMAPE-RMSE 計算"]
+  D["[Report Layer] → 日誌追蹤/可視化/能力邊界映射指南"]
+  A --> B
+  B --> C
+  C --> D
 ```
 
 ## §2 · 數學層

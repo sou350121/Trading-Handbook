@@ -27,16 +27,17 @@
 ⚡ **Eureka Trick:** Predictor 作為代理優化器（Proxy Optimizer），將符號樹的適應度評估從「實盤回測計算 IC」降維為「神經網絡前向推理」，實現梯度可導的連續空間搜索。
 
 **信息流 ASCII:**
-```
-Normal Noise → Generator (RPN Decoder) → Formula Candidate
-                                      ↓
-                              Predictor (Proxy IC)
-                                      ↓
-                          Diversity Loss & Filter
-                                      ↓
-                          Fixed Factor Pool (Size=10)
-                                      ↓
-Rolling IC/ICIR Eval → Dynamic Linear Combiner → Mega-Alpha → Portfolio
+```mermaid
+flowchart TD
+    N1["Normal Noise"] --> N2["Generator (RPN Decoder)"]
+    N2["Generator (RPN Decoder)"] --> N3["Formula Candidate"]
+    N3["Formula Candidate"] --> N4["Predictor (Proxy IC)"]
+    N4["Predictor (Proxy IC)"] --> N5["Diversity Loss & Filter"]
+    N5["Diversity Loss & Filter"] --> N6["Fixed Factor Pool (Size=10)"]
+    N6["Fixed Factor Pool (Size=10)"] --> N7["Rolling IC/ICIR Eval"]
+    N7["Rolling IC/ICIR Eval"] --> N8["Dynamic Linear Combiner"]
+    N8["Dynamic Linear Combiner"] --> N9["Mega-Alpha"]
+    N9["Mega-Alpha"] --> N10["Portfolio"]
 ```
 
 ## §2 · 數學層

@@ -29,12 +29,16 @@
 把「選哪對」當作上下文強盜問題的選項，讓低層交易回報直接反饋給高層選擇策略，實現跨時間尺度的信用分配。
 
 **1.3 信息流 ASCII 圖**
-```
-Market Data (Open/Close/Volume) 
-   → Bi-GRU + Temporal Attention → State Embedding
-   → High-Level Manager (Pair Selection) → Selected Pair
-   → Low-Level Worker (Execution) → Action (Long/Short/Cover)
-   → Reward (Cumulative PnL) → A2C Update (Joint)
+```mermaid
+flowchart TD
+    N1["Market Data (Open/Close/Volume)"] --> N2["Bi-GRU + Temporal Attention"]
+    N2 --> N3["State Embedding"]
+    N1 --> N4["High-Level Manager (Pair Selection)"]
+    N4 --> N5["Selected Pair"]
+    N1 --> N6["Low-Level Worker (Execution)"]
+    N6 --> N7["Action (Long/Short/Cover)"]
+    N1 --> N8["Reward (Cumulative PnL)"]
+    N8 --> N9["A2C Update (Joint)"]
 ```
 
 ## §2 · 數學層

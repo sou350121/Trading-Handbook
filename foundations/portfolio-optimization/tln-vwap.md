@@ -29,10 +29,14 @@
 放棄「猜準成交量」的代理目標，用自動微分把「滑點」本身變成可導的 Loss，讓模型直接學「怎麼分倉最省錢」。
 
 **1.3 信息流 ASCII**
-```
-Input (Vol, Hour, Day, Ret) → TLN Layers → Raw Weights → Softmax (Σ=1, ≥0)
-       ↓
-Allocation Curve → Custom VWAP Loss (Abs/Quad) → Backprop (Adam)
+```mermaid
+flowchart TD
+    A["Input (Vol, Hour, Day, Ret)"] --> B["TLN Layers"]
+    B --> C["Raw Weights"]
+    C --> D["Softmax (Σ=1, ≥0)"]
+    D --> E["Allocation Curve"]
+    E --> F["Custom VWAP Loss (Abs/Quad)"]
+    F --> G["Backprop (Adam)"]
 ```
 
 ## §2 · 數學層

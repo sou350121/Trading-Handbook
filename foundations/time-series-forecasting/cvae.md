@@ -27,8 +27,14 @@
 
 **1.2 ⚡ Eureka**：將「已知未來事件」直接作為條件變量注入編解碼器，讓潛在空間的分佈參數隨事件狀態條件化，從而繞過非平穩序列的線性收斂假設。
 **1.3 信息流 ASCII**：
-```
-[歷史觀測 x_t] + [條件變量 c] → [Encoder] → (μ, σ) → [Sample z] → [Decoder + c] → 預測路徑集
+```mermaid
+flowchart TD
+    A["[歷史觀測 x_t]"] --> C["[Encoder]"]
+    B["[條件變量 c]"] --> C["[Encoder]"]
+    C["[Encoder]"] --> D["(μ, σ)"]
+    D["(μ, σ)"] --> E["[Sample z]"]
+    E["[Sample z]"] --> F["[Decoder + c]"]
+    F["[Decoder + c]"] --> G["預測路徑集"]
 ```
 
 ## §2 · 數學層

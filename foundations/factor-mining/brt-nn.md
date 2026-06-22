@@ -29,14 +29,17 @@
 用人類直覺的「歷史勝率」做降維，讓 BRT/NN 只學「如何加權有效信號」而非「從零找信號」。
 
 **1.3 信息流 ASCII 圖**
-```
-Raw Financials (240 vars) × 76 Transforms → Signal Universe (18,113)
-       ↓
-Recursive Window (t-1) → Compute t-stat for each signal's Long-Short portfolio
-       ↓
-Rank & Decile → Select Top/Bottom groups
-       ↓
-BRT/NN (Trained on selected signals) → Predict 12m Return → Decile Portfolio → Long-Short
+```mermaid
+flowchart TD
+  A["Raw Financials (240 vars) × 76 Transforms"] --> B["Signal Universe (18,113)"]
+  B --> C["Recursive Window (t-1)"]
+  C --> D["Compute t-stat for each signal's Long-Short portfolio"]
+  D --> E["Rank & Decile"]
+  E --> F["Select Top/Bottom groups"]
+  F --> G["BRT/NN (Trained on selected signals)"]
+  G --> H["Predict 12m Return"]
+  H --> I["Decile Portfolio"]
+  I --> J["Long-Short"]
 ```
 
 ## §2 · 數學層

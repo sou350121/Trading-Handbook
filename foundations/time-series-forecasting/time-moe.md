@@ -29,17 +29,15 @@
 「訓練時喂飽所有專家，推理時只喚醒最對口的幾個，用稀疏性買下 2.4B 的容量。」
 
 **1.3 信息流 ASCII 圖**
-```
-Raw TS (t, v) 
-   │
-   ▼
-Point-wise Token + SwiGLU Embedding
-   │
-   ▼
-MoE Decoder Block ──▶ [Router G(x)] → Top-k Experts E_i(x) ──▶ Sparse Activation
-   │
-   ▼
-Multi-Resolution Output Heads ──▶ Forecast Horizon H ∈ {96, 192, 336, 720}
+```mermaid
+flowchart TD
+  A["Raw TS (t, v)"] --> B["Point-wise Token + SwiGLU Embedding"]
+  B --> C["MoE Decoder Block"]
+  C --> D["[Router G(x)]"]
+  D --> E["Top-k Experts E_i(x)"]
+  E --> F["Sparse Activation"]
+  C --> G["Multi-Resolution Output Heads"]
+  G --> H["Forecast Horizon H ∈ {96, 192, 336, 720}"]
 ```
 
 ## §2 · 數學層

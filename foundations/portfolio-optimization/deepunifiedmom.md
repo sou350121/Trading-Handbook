@@ -29,18 +29,13 @@
 用 soft-capping 對數變換截斷 Sharpe 的極端梯度，讓 CAN 在訓練時「不敢」過度集中於單一高波動資產，直覺上等同於在損失函數內嵌了一個動態風險懲罰項。
 
 ### 1.3 信息流 ASCII 圖
-```
-[Input: Vol-Adj Log Returns (3d~252d)]
-          ↓
-[Shared LSTM Backbone] → 參數共享提取跨資產趨勢特徵
-          ↓
-[Multi-Gate MoE] → Fast(1M) / Medium(3M) / Slow(6M) 門控路由
-          ↓
-[Task-Specific FNNs] → 預測前瞻性 TSMOM 訊號 (RMSE Loss)
-          ↓
-[Capital Allocation Network (CAN)] → tanh/softmax 輸出組合權重
-          ↓
-[Soft-Capped Sharpe Loss] → 端到端梯度回傳更新 LSTM/MoE/CAN
+```mermaid
+flowchart TD
+    A["Input: Vol-Adj Log Returns (3d~252d)"] --> B["Shared LSTM Backbone → 參數共享提取跨資產趨勢特徵"]
+    B --> C["Multi-Gate MoE → Fast(1M) / Medium(3M) / Slow(6M) 門控路由"]
+    C --> D["Task-Specific FNNs → 預測前瞻性 TSMOM 訊號 (RMSE Loss)"]
+    D --> E["Capital Allocation Network (CAN) → tanh/softmax 輸出組合權重"]
+    E --> F["Soft-Capped Sharpe Loss → 端到端梯度回傳更新 LSTM/MoE/CAN"]
 ```
 
 ## §2 · 數學層

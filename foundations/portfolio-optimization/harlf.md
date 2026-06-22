@@ -27,10 +27,18 @@
 **⚡ Eureka:** 用「未來H期累積回報」反推當前最佳模態權重，將RL的探索問題轉化為頂層的監督學習問題。
 
 **信息流 ASCII:**
-```
-[新聞] → FinBERT → Base(NLP) → Meta(NLP) ─┐
-[價量] → YahooFin → Base(Quant) → Meta(Quant)─┼→ Super-Agent → 月度權重
-                                          └→ (MSE Loss)
+```mermaid
+flowchart TD
+    A["[新聞]"] --> B["FinBERT"]
+    B --> C["Base(NLP)"]
+    C --> D["Meta(NLP)"]
+    E["[價量]"] --> F["YahooFin"]
+    F --> G["Base(Quant)"]
+    G --> H["Meta(Quant)"]
+    D --> I["Super-Agent"]
+    H --> I
+    I --> J["月度權重"]
+    I --> K["(MSE Loss)"]
 ```
 
 ## §2 · 數學層

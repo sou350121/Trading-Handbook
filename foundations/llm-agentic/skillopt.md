@@ -26,10 +26,15 @@
 
 ⚡ **Eureka Trick:** 將文本編輯映射為梯度更新，透過編輯預算控制步長、嚴格驗證集攔截防過擬合，並引入 Epoch 慢更新保留核心策略。
 **信息流:**
-```
-Train Split Rollout → Minibatch Reflection (Success/Fail) → Edit Pool → Ranking & Clip(Budget)
-       ↓
-Validation Gate (Val Split) → Accept/Reject Buffer → Epoch Slow Update → Deploy Skill Doc
+```mermaid
+flowchart TD
+A["Train Split Rollout"] --> B["Minibatch Reflection (Success/Fail)"]
+B["Minibatch Reflection (Success/Fail)"] --> C["Edit Pool"]
+C["Edit Pool"] --> D["Ranking & Clip(Budget)"]
+D["Ranking & Clip(Budget)"] --> E["Validation Gate (Val Split)"]
+E["Validation Gate (Val Split)"] --> F["Accept/Reject Buffer"]
+F["Accept/Reject Buffer"] --> G["Epoch Slow Update"]
+G["Epoch Slow Update"] --> H["Deploy Skill Doc"]
 ```
 
 ## §2 · 數學層

@@ -27,12 +27,18 @@
 ⚡ **Eureka:** 用 HSIC 蒸餾損失強行對齊「純歷史表徵」與「未來感知表徵」的非線性依賴，讓學生模型在無未來標籤時也能隱式推演分佈漂移。
 
 **信息流 ASCII:**
-```
-歷史圖 -> [時空GNN] -> H_hist
-未來標籤 -> [FNN] -> H_fut
-H_hist + H_fut -> [多通道融合+Attention] -> H_fused (Teacher)
-H_hist -> [共享預測頭] -> Pred
-H_hist -> [HSIC Loss vs H_fused] -> 梯度更新 (Student)
+```mermaid
+flowchart TD
+    A["歷史圖"] --> B["[時空GNN]"]
+    B --> C["H_hist"]
+    D["未來標籤"] --> E["[FNN]"]
+    E --> F["H_fut"]
+    G["H_hist + H_fut"] --> H["[多通道融合+Attention]"]
+    H --> I["H_fused (Teacher)"]
+    C --> J["[共享預測頭]"]
+    J --> K["Pred"]
+    C --> L["[HSIC Loss vs H_fused]"]
+    L --> M["梯度更新 (Student)"]
 ```
 
 ## §2 · 數學層

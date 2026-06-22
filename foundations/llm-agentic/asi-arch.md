@@ -29,10 +29,11 @@
 用 Sigmoid 壓縮性能差異值以放大微小改進並抑制極端值，配合 LLM 評委的結構性打分，強制搜索脫離「獎勵黑客」與參數堆疊陷阱。
 
 **1.3 信息流 ASCII 圖**
-```
-[Researcher] --(提出架構/寫代碼)--> [Engineer] --(訓練/自修正/LLM評分)--> [Analyzer]
-     ^                                                              |
-     |_____________________(更新候選池/檢索認知庫/情境對比)___________|
+```mermaid
+flowchart TD
+    A["Researcher"] -->|提出架構/寫代碼| B["Engineer"]
+    B["Engineer"] -->|訓練/自修正/LLM評分| C["Analyzer"]
+    C["Analyzer"] -->|更新候選池/檢索認知庫/情境對比| A["Researcher"]
 ```
 
 ## §2 · 數學層

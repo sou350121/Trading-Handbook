@@ -26,10 +26,14 @@
 
 ⚡ **Eureka:** 將優化器解的Jacobian (∂w*/∂μ̂) 作為梯度橋樑，使預測網絡直接優化組合績效而非MSE。
 **信息流:**
-```
-Input → [Predictor θ] → μ̂ → [Differentiable Optimizer] → w* → [Portfolio Loss L]
-       ↑_______________________________________________________↓
-                          ∂L/∂θ (backprop via Jacobian)
+```mermaid
+flowchart TD
+    A[Input] --> B["Predictor θ"]
+    B --> C["μ̂"]
+    C --> D["Differentiable Optimizer"]
+    D --> E["w*"]
+    E --> F["Portfolio Loss L"]
+    F -->|∂L/∂θ (backprop via Jacobian)| A
 ```
 
 ## §2 · 數學層

@@ -26,10 +26,14 @@
 
 ⚡ **Eureka trick:** 用正則表達式鎖死推理路徑，讓 RL 只能靠「真邏輯」拿分，而非「猜格式」。
 **信息流:**
-```
-Prompt → [Model] → <think>...</think><answer>...</answer>
-       → Regex Extract → Format Reward + Answer Reward
-       → REINFORCE++ Update (w/ KL Penalty) → Policy Update
+```mermaid
+flowchart TD
+    A["Prompt"] --> B["[Model]"]
+    B --> C["<think>...<...>"]
+    B --> D["Regex Extract"]
+    D --> E["Format Reward + Answer Reward"]
+    E --> F["REINFORCE++ Update (w/ KL Penalty)"]
+    F --> G["Policy Update"]
 ```
 
 ## §2 · 數學層

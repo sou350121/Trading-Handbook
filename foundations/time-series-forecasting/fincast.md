@@ -27,8 +27,17 @@
 **⚡ Eureka:** 用 Instance Normalization 剝離資產絕對尺度，讓模型只學「相對形態與趨勢」，配合 PQ-loss 的分位數輸出，直接對沖金融數據的異方差與肥尾。
 
 **信息流 ASCII:**
-```
-[Raw TS] -> (Instance Norm) -> [Patch Tokens] + [Freq Embed] -> [Causal Attn] -> [Sparse MoE] -> [Residual MLP] -> (Inverse Norm) -> [Point + Quantiles]
+```mermaid
+flowchart TD
+    A["[Raw TS]"] --> B["(Instance Norm)"]
+    B --> C["[Patch Tokens]"]
+    B --> D["[Freq Embed]"]
+    C --> E["[Causal Attn]"]
+    D --> E
+    E --> F["[Sparse MoE]"]
+    F --> G["[Residual MLP]"]
+    G --> H["(Inverse Norm)"]
+    H --> I["[Point + Quantiles]"]
 ```
 
 ## §2 · 數學層

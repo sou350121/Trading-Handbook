@@ -29,10 +29,14 @@
 將分位數與矩的關係構建為線性回歸，讓偏差項被截距吸收，從而從有偏分位數中提煉無偏方差作為探索獎勵。
 
 **1.3 信息流 ASCII**
-```
-[State: Token Seq] → [Quantile Net (IQN)] → [QCM Regressor] → [Unbiased Variance]
-       ↓
-[Action Policy: Q + β*Var] → [Env: Linear Pool Fit & IC Δ] → [Reward]
+```mermaid
+flowchart TD
+    A["State: Token Seq"] --> B["Quantile Net (IQN)"]
+    B["Quantile Net (IQN)"] --> C["QCM Regressor"]
+    C["QCM Regressor"] --> D["Unbiased Variance"]
+    D["Unbiased Variance"] --> E["Action Policy: Q + β*Var"]
+    E["Action Policy: Q + β*Var"] --> F["Env: Linear Pool Fit & IC Δ"]
+    F["Env: Linear Pool Fit & IC Δ"] --> G["Reward"]
 ```
 
 ## §2 · 數學層

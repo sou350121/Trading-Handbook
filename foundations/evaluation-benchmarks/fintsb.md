@@ -26,14 +26,20 @@
 
 **1.2 ⚡ Eureka:** 用 TopK-Drop 替代 TopK，以 10% 換手閾值與 0.1% 手續費強制模型輸出「低頻穩健」的排序信號，而非高頻噪聲。
 **1.3 信息流:**
-```
-Raw OHLCV → [波動模式分類器] → FinTSB Dataset (4 regimes)
-      ↓
-[統一訓練層] → Loss = MSE/MAE + Rank Loss → 預測日收益率
-      ↓
-[回測交易協議] → 預測排名 → TopK-Drop (K=5, 10% turnover) → 扣 0.1% 手續費
-      ↓
-[三維指標輸出] → Error / Rank / Portfolio Metrics → 反饋調優
+```mermaid
+flowchart TD
+    N1["Raw OHLCV"] --> N2["[波動模式分類器]"]
+    N2["[波動模式分類器]"] --> N3["FinTSB Dataset (4 regimes)"]
+    N3["FinTSB Dataset (4 regimes)"] --> N4["[統一訓練層]"]
+    N4["[統一訓練層]"] --> N5["Loss = MSE/MAE + Rank Loss"]
+    N5["Loss = MSE/MAE + Rank Loss"] --> N6["預測日收益率"]
+    N6["預測日收益率"] --> N7["[回測交易協議]"]
+    N7["[回測交易協議]"] --> N8["預測排名"]
+    N8["預測排名"] --> N9["TopK-Drop (K=5, 10% turnover)"]
+    N9["TopK-Drop (K=5, 10% turnover)"] --> N10["扣 0.1% 手續費"]
+    N10["扣 0.1% 手續費"] --> N11["[三維指標輸出]"]
+    N11["[三維指標輸出]"] --> N12["Error / Rank / Portfolio Metrics"]
+    N12["Error / Rank / Portfolio Metrics"] --> N13["反饋調優"]
 ```
 
 ## §2 · 數學層

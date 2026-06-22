@@ -26,16 +26,14 @@
 
 **1.2 ⚡ Eureka**：`「把價格『何時』出現，看得比價格『是多少』更重。」` 直覺：高點若出現在bar初期，代表買盤快速消耗流動性，後續回調概率高；若出現在末期，則為趨勢延續。時間戳直接錨定了訂單流消耗速率。
 **1.3 信息流 ASCII**：
-```
-[20min Lookback OHLC Bars]
-      │
-      ├─ 價格/成交量特徵 (No-timing set)
-      └─ 時間戳特徵 (Timestamp Annotations) ──► [MLP / GRU / Transformer]
-                                                │
-                                                ├─ 自注意力/序列編碼
-                                                └─ 輸出層：μ, σ, ν (Student's t)
-                                                     │
-                                                     └─ 預測下一分鐘 VWAP 回報分佈
+```mermaid
+flowchart TD
+    A["[20min Lookback OHLC Bars]"] --> B["價格/成交量特徵 (No-timing set)"]
+    A["[20min Lookback OHLC Bars]"] --> C["時間戳特徵 (Timestamp Annotations)"]
+    C["時間戳特徵 (Timestamp Annotations)"] --> D["[MLP / GRU / Transformer]"]
+    D["[MLP / GRU / Transformer]"] --> E["自注意力/序列編碼"]
+    D["[MLP / GRU / Transformer]"] --> F["輸出層：μ, σ, ν (Student's t)"]
+    F["輸出層：μ, σ, ν (Student's t)"] --> G["預測下一分鐘 VWAP 回報分佈"]
 ```
 
 ## §2 · 數學層

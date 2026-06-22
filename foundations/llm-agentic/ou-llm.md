@@ -29,14 +29,14 @@
 S-score將價差偏離度除以「均衡波動率」，本質是讓閾值隨回歸速度與波動率體制自適應；LLM在此不產α，僅作語義電路斷路器，過濾永久衝擊。
 
 **1.3 信息流 ASCII**
-```
-Raw Prices -> Correlation/Hurst/ADF/Cointegration -> OU Parameter Est. -> S-score Calc
-      |
-      v
-Multi-Level Conditioning (Sector Limit / SmartBuzz NLP / Q-Score)
-      |
-      v
-LLM Shock Classification (5-day News -> Temp/Perm) -> Execution / Stop-loss (2% Cap)
+```mermaid
+flowchart TD
+  A["Raw Prices"] --> B["Correlation/Hurst/ADF/Cointegration"]
+  B["Correlation/Hurst/ADF/Cointegration"] --> C["OU Parameter Est."]
+  C["OU Parameter Est."] --> D["S-score Calc"]
+  D["S-score Calc"] --> E["Multi-Level Conditioning (Sector Limit / SmartBuzz NLP / Q-Score)"]
+  E["Multi-Level Conditioning (Sector Limit / SmartBuzz NLP / Q-Score)"] --> F["LLM Shock Classification (5-day News -> Temp/Perm)"]
+  F["LLM Shock Classification (5-day News -> Temp/Perm)"] --> G["Execution / Stop-loss (2% Cap)"]
 ```
 
 ## §2 · 數學層

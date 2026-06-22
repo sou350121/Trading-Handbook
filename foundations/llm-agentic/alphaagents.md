@@ -26,14 +26,21 @@
 
 ⚡ **Eureka Trick:** 「強制對齊的 Round Robin 辯論」——不依賴模型自發推理，而是透過協調者（Group Chat Assistant）強制要求每個 Agent 閱讀同儕結論後更新判斷，直到達成 Buy/Sell 共識，本質是將 LLM 的隨機性約束為結構化投票。
 **信息流 ASCII:**
-```
-[10-K/10-Q] → Fundamental Agent → [初稿報告]
-[News/Ratings] → Sentiment Agent → [初稿報告]
-[Price/Volume] → Valuation Agent → [初稿報告]
-          ↓
-[Group Chat Assistant] → 匯總 → Round Robin 辯論 (更新判斷)
-          ↓
-[共識] → BUY / SELL → 等權組合構建 → 回測/人工審計
+```mermaid
+flowchart TD
+    A["[10-K/10-Q]"] --> B["Fundamental Agent"]
+    B --> C["[初稿報告]"]
+    D["[News/Ratings]"] --> E["Sentiment Agent"]
+    E --> C
+    F["[Price/Volume]"] --> G["Valuation Agent"]
+    G --> C
+    C --> H["[Group Chat Assistant]"]
+    H --> I["匯總"]
+    I --> J["Round Robin 辯論 (更新判斷)"]
+    J --> K["[共識]"]
+    K --> L["BUY / SELL"]
+    L --> M["等權組合構建"]
+    M --> N["回測/人工審計"]
 ```
 
 ## §2 · 數學層

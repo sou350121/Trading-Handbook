@@ -28,18 +28,20 @@
 **1.2 ⚡ Eureka** 將 PnL 最大化重構為 LASSO 回歸學習稀疏圖權重；集成完整條件概率分佈而非點預測，保留不確定性優化交易規模。
 
 **1.3 信息流 ASCII**
-```
-[Asset_i Data] -> (Indiv. Generator_i) -> [Cond. Prob. Dist.]
-      |                    |                      |
-      v                    v                      v
-[Asset_j Data] -> (Indiv. Generator_j) -> [Cond. Prob. Dist.]
-      |                    |                      |
-      +--------------------+----------------------+
-                           v
-                  [Meta-generator_j]
-                  (LASSO Sparse Weights)
-                           v
-                  [Final Trading Signal/Size]
+```mermaid
+flowchart TD
+    N1["Asset_i Data"] --> N2["Indiv. Generator_i"]
+    N2 --> N3["Cond. Prob. Dist."]
+    N4["Asset_j Data"] --> N5["Indiv. Generator_j"]
+    N5 --> N6["Cond. Prob. Dist."]
+    N1 --> N4
+    N2 --> N5
+    N3 --> N6
+    N4 --> N7["Meta-generator_j"]
+    N5 --> N7
+    N6 --> N7
+    N7 --> N8["LASSO Sparse Weights"]
+    N8 --> N9["Final Trading Signal/Size"]
 ```
 
 ## §2 · 數學層

@@ -30,17 +30,14 @@ Trick: `Loss = -J(θ) + β * KL(π_i || π_ensemble)`
 直覺：用 KL 散度當「多樣性正則化項」，強迫不同智能體在不同市場微觀結構下探索差異化路徑，而非收斂到同一個局部最優，從根源壓制價值函數近似誤差。
 
 **1.3 信息流 ASCII 圖**
-```
-[OHLCV/LOB Data] --> (GPU VecEnv: SubEnv_1 ... SubEnv_N)
-                      |  parallel step/reward
-                      v
-              [GPU Tensor Replay Buffer]
-                      |  vectorized sampling
-                      v
-        [Actor/Critic Networks] --> Loss(Return + KL_Diversity)
-                      |  gradient update
-                      v
-            [Ensemble Policy] --> Weighted Avg / Majority Vote
+```mermaid
+flowchart TD
+    A["OHLCV/LOB Data"] --> B["GPU VecEnv: SubEnv_1 ... SubEnv_N"]
+    B -->|parallel step/reward| C["GPU Tensor Replay Buffer"]
+    C -->|vectorized sampling| D["Actor/Critic Networks"]
+    D --> E["Loss(Return + KL_Diversity)"]
+    D -->|gradient update| F["Ensemble Policy"]
+    F --> G["Weighted Avg / Majority Vote"]
 ```
 
 ## §2 · 數學層

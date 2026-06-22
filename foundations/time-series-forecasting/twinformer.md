@@ -26,14 +26,20 @@
 
 ⚡ **Eureka:** 用 CV 的「局部細節→全局語義」層級抽象替代時間域的扁平展開，Top-k 硬截斷+均值池化壓縮 Token，最後用 GRU 串聯時間因果鏈。
 📊 **信息流 ASCII:**
-```
-Input (L) → MinMax → Linear Embed → Patching (N patches, len P)
-   │
-   ├─ Local Informer: [Multi-Head Top-k CSA + FFN] → Mean Pooling → Patch Tokens (N)
-   │
-   ├─ Global Informer: [Multi-Head Top-k CSA + FFN] → Context Tokens (N)
-   │
-   └─ GRU Aggregator → Final Hidden State → Linear Head → Forecast (S)
+```mermaid
+flowchart TD
+    N1["Input (L)"] --> N2["MinMax"]
+    N2["MinMax"] --> N3["Linear Embed"]
+    N3["Linear Embed"] --> N4["Patching (N patches, len P)"]
+    N4["Patching (N patches, len P)"] --> N5["Local Informer: [Multi-Head Top-k CSA + FFN]"]
+    N5["Local Informer: [Multi-Head Top-k CSA + FFN]"] --> N6["Mean Pooling"]
+    N6["Mean Pooling"] --> N7["Patch Tokens (N)"]
+    N4["Patching (N patches, len P)"] --> N8["Global Informer: [Multi-Head Top-k CSA + FFN]"]
+    N8["Global Informer: [Multi-Head Top-k CSA + FFN]"] --> N9["Context Tokens (N)"]
+    N4["Patching (N patches, len P)"] --> N10["GRU Aggregator"]
+    N10["GRU Aggregator"] --> N11["Final Hidden State"]
+    N11["Final Hidden State"] --> N12["Linear Head"]
+    N12["Linear Head"] --> N13["Forecast (S)"]
 ```
 
 ## §2 · 數學層

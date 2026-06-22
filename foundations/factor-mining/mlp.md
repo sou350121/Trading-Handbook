@@ -29,16 +29,22 @@
 用開收盤價變化的 85th/99.7th 百分位動態切割回報分佈，將「預測價格」降維為「判斷是否進入交易閾值」，直覺上等同為模型加上自適應的止盈/止損濾鏡。
 
 **1.3 信息流 ASCII**
-```
-OHLCV + Time → [Feature Extractor] → (Candlestick, Tech Ind, EMA Cross)
-                      ↓
-              [Dual-Threshold Labeler] → y ∈ {Buy, Hold, Sell}
-                      ↓
-            [Random Undersampling] → Balanced Dataset
-                      ↓
-Input(128) → LeakyReLU → Hidden(64) → LeakyReLU → Hidden(32) → Softmax(3)
-                      ↓
-              [Signal Generator] → Trade Execution (w/ fees/slippage)
+```mermaid
+flowchart TD
+    N1["OHLCV + Time"] --> N2["[Feature Extractor]"]
+    N2["[Feature Extractor]"] --> N3["(Candlestick, Tech Ind, EMA Cross)"]
+    N3["(Candlestick, Tech Ind, EMA Cross)"] --> N4["[Dual-Threshold Labeler]"]
+    N4["[Dual-Threshold Labeler]"] --> N5["y ∈ {Buy, Hold, Sell}"]
+    N5["y ∈ {Buy, Hold, Sell}"] --> N6["[Random Undersampling]"]
+    N6["[Random Undersampling]"] --> N7["Balanced Dataset"]
+    N7["Balanced Dataset"] --> N8["Input(128)"]
+    N8["Input(128)"] --> N9["LeakyReLU"]
+    N9["LeakyReLU"] --> N10["Hidden(64)"]
+    N10["Hidden(64)"] --> N11["LeakyReLU"]
+    N11["LeakyReLU"] --> N12["Hidden(32)"]
+    N12["Hidden(32)"] --> N13["Softmax(3)"]
+    N13["Softmax(3)"] --> N14["[Signal Generator]"]
+    N14["[Signal Generator]"] --> N15["Trade Execution (w/ fees/slippage)"]
 ```
 
 ## §2 · 數學層

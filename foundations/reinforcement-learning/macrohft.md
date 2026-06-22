@@ -29,14 +29,17 @@
 用「市場宏觀標籤」作為條件向量注入 DDQN 的隱藏層（Adaptive LayerNorm），讓同一套網絡參數在不同 Regime 下自動切換行為模式，而非訓練多個獨立模型。
 
 **1.3 信息流 ASCII 圖**
-```
-Raw LOB/OHLCV → LowPass Filter & Vol Calc → 6 Regime Labels (Trend/Vol Quantiles)
-       ↓
-[Sub-Agent 1..6] (DDQN + Conditional Adapter) → Local Q-values/Actions
-       ↓
-[Meta-Agent] (Memory Module + Softmax Router) → Final Action/Position
-       ↓
-Execution Engine (Binance API) → Reward (TR/MDD/Sharpe) → Backprop
+```mermaid
+flowchart TD
+    A["Raw LOB/OHLCV"] --> B["LowPass Filter & Vol Calc"]
+    B --> C["6 Regime Labels (Trend/Vol Quantiles)"]
+    C --> D["[Sub-Agent 1..6] (DDQN + Conditional Adapter)"]
+    D --> E["Local Q-values/Actions"]
+    E --> F["[Meta-Agent] (Memory Module + Softmax Router)"]
+    F --> G["Final Action/Position"]
+    G --> H["Execution Engine (Binance API)"]
+    H --> I["Reward (TR/MDD/Sharpe)"]
+    I --> J["Backprop"]
 ```
 
 ## §2 · 數學層

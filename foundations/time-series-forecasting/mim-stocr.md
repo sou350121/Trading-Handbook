@@ -29,10 +29,16 @@
 用驗證集損失相對於訓練集損失的「收斂比率」作為反饋信號，動態收緊 EMA 平滑係數與權重衰減強度；直覺上，當模型開始死記訓練集噪聲時，自動踩下正則化與梯度慣性的剎車。
 
 **1.3 信息流 ASCII 圖**
-```
-[量價特徵] → [Backbone (LSTM/GAT/HIST)] → [回歸頭: 收益率] → [CQB 梯度平衡] → [優化器]
-                                      ↘ [分類頭: 動量線五類] → [Adaptive-k ApproxNDCG Loss] ↗
-[驗證集損失趨勢] ──(相對收斂比率)──→ [動態調整 EMA 與 Weight Decay]
+```mermaid
+flowchart TD
+    A["量價特徵"] --> B["Backbone (LSTM/GAT/HIST)"]
+    B --> C["回歸頭: 收益率"]
+    C --> D["CQB 梯度平衡"]
+    D --> E["優化器"]
+    B --> F["分類頭: 動量線五類"]
+    F --> G["Adaptive-k ApproxNDCG Loss"]
+    G --> E
+    H["驗證集損失趨勢"] -->|相對收斂比率| I["動態調整 EMA 與 Weight Decay"]
 ```
 
 ## §2 · 數學層
