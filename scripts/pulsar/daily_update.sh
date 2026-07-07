@@ -13,6 +13,7 @@ export GIT_COMMITTER_NAME="Pulsar Bot" GIT_COMMITTER_EMAIL="noreply@anthropic.co
 LOG=data/daily.log
 ts(){ date -u +"%Y-%m-%d %H:%M:%S"; }
 log(){ echo "[$(ts)] $*" | tee -a "$LOG"; }
+mark_ok(){ echo "$(ts) $*" > data/.daily_ok; }   # heartbeat: healthy run (watchdog checks its age)
 # The cron's own managed output set. Dirt confined to these = our leftover -> recover & commit.
 MANAGED='^(foundations/|crossing/|cheat-sheet/|bridge-to-vla/|docs\.json$|data/index\.json$|data/corpus_meta\.json$)'
 
@@ -77,7 +78,7 @@ PY
 TREE_DIRTY=$(git status --porcelain -- foundations crossing cheat-sheet docs.json data/index.json data/corpus_meta.json)
 
 if [ "$CNT" -eq 0 ] && [ "$MISSING" -eq 0 ] && [ -z "$TREE_DIRTY" ]; then
-  log "nothing to do (0 new, 0 missing pages, clean tree)"; exit 0
+  mark_ok "noop"; log "nothing to do (0 new, 0 missing pages, clean tree)"; exit 0
 fi
 log "work: fetch=$CNT missing-pages=$MISSING dirty=$([ -n "$TREE_DIRTY" ] && echo y || echo n)"
 
@@ -117,7 +118,7 @@ git add foundations/ crossing/ cheat-sheet/ bridge-to-vla/ docs.json data/index.
 if git diff --cached --name-only | grep -q '^data/\(raw\|distill\)/'; then
   log "ABORT: refusing to commit raw/distill bodies"; git reset -q; exit 1
 fi
-if [ -z "$(git diff --cached --name-only)" ]; then log "nothing staged"; exit 0; fi
+if [ -z "$(git diff --cached --name-only)" ]; then mark_ok "nothing-staged"; log "nothing staged"; exit 0; fi
 
 if ! python3 scripts/handbook_audit.py >>"$LOG" 2>&1; then
   log "GATE FAILED — staged, not pushing; next run will retry"; exit 1
@@ -131,4 +132,5 @@ else
     log "PUSHED after rebase (+$CNT new)"
   else log "push FAILED — next run will retry"; exit 1; fi
 fi
+mark_ok "pushed +$CNT/$MISSING"
 log "===== daily done ====="
