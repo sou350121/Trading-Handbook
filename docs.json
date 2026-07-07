@@ -358,6 +358,7 @@
               "foundations/factor-mining/neuralfactors.md",
               "foundations/factor-mining/orca.md",
               "foundations/factor-mining/proj-sue.md",
+              "foundations/factor-mining/ptk.md",
               "foundations/factor-mining/qfr.md",
               "foundations/factor-mining/quantpedia-ceo.md",
               "foundations/factor-mining/realmlp.md",
@@ -367,6 +368,7 @@
               "foundations/factor-mining/twma-resnet-trader.md",
               "foundations/factor-mining/umi.md",
               "foundations/factor-mining/unicorn-edge.md",
+              "foundations/factor-mining/x.md",
               "foundations/factor-mining/xtab.md",
               "foundations/factor-mining/zookeeper.md"
             ]
@@ -380,6 +382,7 @@
               "foundations/portfolio-optimization/art-201.md",
               "foundations/portfolio-optimization/art-272.md",
               "foundations/portfolio-optimization/art-399.md",
+              "foundations/portfolio-optimization/art-409.md",
               "foundations/portfolio-optimization/art-78.md",
               "foundations/portfolio-optimization/bpqp.md",
               "foundations/portfolio-optimization/cgan.md",
@@ -398,6 +401,7 @@
               "foundations/portfolio-optimization/llm-blm.md",
               "foundations/portfolio-optimization/masa.md",
               "foundations/portfolio-optimization/moedrlpm.md",
+              "foundations/portfolio-optimization/rienet.md",
               "foundations/portfolio-optimization/rts-pno.md",
               "foundations/portfolio-optimization/sdfl.md",
               "foundations/portfolio-optimization/sharpe-omega-cvar.md",
@@ -419,6 +423,7 @@
               "foundations/causal-structural/causalstock.md",
               "foundations/causal-structural/csht.md",
               "foundations/causal-structural/regime-switching-pricing-kernel.md",
+              "foundations/causal-structural/seer.md",
               "foundations/causal-structural/varlingam.md"
             ]
           },
@@ -430,6 +435,7 @@
               "foundations/evaluation-benchmarks/art-279.md",
               "foundations/evaluation-benchmarks/art-33.md",
               "foundations/evaluation-benchmarks/art-337.md",
+              "foundations/evaluation-benchmarks/art-408.md",
               "foundations/evaluation-benchmarks/cost-aware-execution-filter.md",
               "foundations/evaluation-benchmarks/finsearchcomp.md",
               "foundations/evaluation-benchmarks/finstressts.md",

@@ -3598,5 +3598,104 @@
     "itemidx": "1",
     "create_time": 1782043458,
     "date": "2026-06-21"
+  },
+  {
+    "pos": 401,
+    "title": "ADIA Lab挑战赛复盘：因子投资如何从相关性走向因果驱动？",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247494115&idx=1&sn=eff2d4699c0c4693d17ca0c1b7dd187c&chksm=ce7d8efdf90a07eb896e148e3f4b2acc94d4e105c82d37226b2bd26e9fab5db5ea091d86397a#rd",
+    "msgid": "2247494115",
+    "itemidx": "1",
+    "create_time": 1782129145,
+    "date": "2026-06-22"
+  },
+  {
+    "pos": 402,
+    "title": "经济物理学泰斗Mantegna新作： 端到端协方差网络",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247494131&idx=1&sn=f6ca8472c1db8785f68b7b867e934304&chksm=ce7d8eedf90a07fb9177b2d1810b8fe57bbed3a2da92e540c424dd1d1996af14175196cd2fed#rd",
+    "msgid": "2247494131",
+    "itemidx": "1",
+    "create_time": 1782299899,
+    "date": "2026-06-24"
+  },
+  {
+    "pos": 403,
+    "title": "探寻交易信号的反身性：基于符号回归的非线性市场冲击分析",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247494137&idx=1&sn=c50c3b673d3cdfe7abaab81a7917d76e&chksm=ce7d8ee7f90a07f12cfb47b59ea3477d382d765c4d7f0c96607ae6026761cf119769e0c81286#rd",
+    "msgid": "2247494137",
+    "itemidx": "1",
+    "create_time": 1782386332,
+    "date": "2026-06-25"
+  },
+  {
+    "pos": 404,
+    "title": "KDD 2026 量化论文合集",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247494142&idx=1&sn=acee4fcccd93d9a4dfea69916ff50547&chksm=ce7d8ee0f90a07f61a14fdf3e836c85769c1725632ba39c4c09347d4d564672246324c55cb6b#rd",
+    "msgid": "2247494142",
+    "itemidx": "1",
+    "create_time": 1782563631,
+    "date": "2026-06-27"
+  },
+  {
+    "pos": 405,
+    "title": "从 Optiver 到 Jane Street：顶级做市商的Agent技术探索",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247494152&idx=1&sn=bfad100e7821527b21ab720a39d70195&chksm=ce7d8d16f90a0400a2a1dd922a9ce4a448856ee4803a3c0a478c8691407bd37086beaa5cf6c3#rd",
+    "msgid": "2247494152",
+    "itemidx": "1",
+    "create_time": 1782649511,
+    "date": "2026-06-28"
+  },
+  {
+    "pos": 406,
+    "title": "耶鲁 X 牛津 | 知情交易与预期收益",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247494158&idx=1&sn=105559ebbced3bd5942e74da1c2f9316&chksm=ce7d8d10f90a0406ef144857c9d5d8deded9e6046bd439968f44e5223e5d1df6939099fd9566#rd",
+    "msgid": "2247494158",
+    "itemidx": "1",
+    "create_time": 1782727204,
+    "date": "2026-06-29"
+  },
+  {
+    "pos": 407,
+    "title": "AQR Bryan Kelly 新作 ｜ 高维深度因子模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247494165&idx=1&sn=1ae62852e8aebdc8b7b6973c142072c5&chksm=ce7d8d0bf90a041dd519ddaa9bbd2bb303d7c654c4d276f44e3b7ead6dad26cf3e96d51b61f4#rd",
+    "msgid": "2247494165",
+    "itemidx": "1",
+    "create_time": 1782819785,
+    "date": "2026-06-30"
+  },
+  {
+    "pos": 408,
+    "title": "重磅新作：为不可解释构建可解释系统",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247494188&idx=1&sn=e0fbb16cfc8f26f61c819a82fd69d1bd&chksm=ce7d8d32f90a042400460e1e318e1c2a82c953195520c0f61dd42cfbb187db8ec0660f46483c#rd",
+    "msgid": "2247494188",
+    "itemidx": "1",
+    "create_time": 1782893110,
+    "date": "2026-07-01"
+  },
+  {
+    "pos": 409,
+    "title": "偏度组合管理：如何系统性提升经典因子的收益？",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247494196&idx=1&sn=b70b78af6bc7bcd77d851f83f9f3998e&chksm=ce7d8d2af90a043cd3e049024470bc6b66b4bec326bedccfadd109f84ce373e205a09ec99478#rd",
+    "msgid": "2247494196",
+    "itemidx": "1",
+    "create_time": 1782986066,
+    "date": "2026-07-02"
+  },
+  {
+    "pos": 410,
+    "title": "法国科学院院士、量化传奇Bouchaud最新力作：趋势跟踪已死？",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247494204&idx=1&sn=42ce4bc14c9e855d4fbbfdc376a120c7&chksm=ce7d8d22f90a043475ddc360b4a2df3c64b219387c11f0e749e5e63b6ad5786771afe3efca98#rd",
+    "msgid": "2247494204",
+    "itemidx": "1",
+    "create_time": 1783074354,
+    "date": "2026-07-03"
+  },
+  {
+    "pos": 411,
+    "title": "香港金管局: AI量化是不是砸盘元凶？",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247494219&idx=1&sn=56f92b68c0e9f99cc586d9be923170cb&chksm=ce7d8d55f90a04431e970339ab0bb57cdc1ca81f1c765b8a1cf99b0d13a6d1202a0524e4e680#rd",
+    "msgid": "2247494219",
+    "itemidx": "1",
+    "create_time": 1783337388,
+    "date": "2026-07-06"
   }
 ]
