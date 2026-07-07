@@ -68,7 +68,7 @@ quadrantChart
 ## 代表方法
 
 **可解释因子一极**（公式可读、可证伪、暴露可拆、合规友好）：
-- [3万个因子能否超越同行评议因子](/foundations/factor-mining/3)（factor-mining · 2247484872）— 直接拷问暴力挖掘 vs 先验因子，本张力的实证
+- [3万个因子能否超越同行评议因子](/foundations/factor-mining/factor-zoo-vs-peer-review)（factor-mining · 2247484872）— 直接拷问暴力挖掘 vs 先验因子，本张力的实证
 - [Street PE 用收益估值](/foundations/factor-mining/street-pe)（factor-mining · 2247486921）— 经典可解释估值因子
 - [因子的非对称性](/foundations/factor-mining/factor-asymmetry-bear-market)（factor-mining · 2247494088）— 拥挤度/regime 视角，公式因子失效逻辑可归因
 - [UBS 拥挤度拐点后的非对称 Alpha](/foundations/factor-mining/comprehensive-crowded-factor)（factor-mining · 2247493037）— 拥挤度可监控、可算拐点，正是因子端独有的「可见性」优势

@@ -19,7 +19,7 @@ def slug(d):
     fw = (d.get("source", {}) or {}).get("framework")
     b = fw if fw and fw.lower() not in ("null", "none", "") else d["title"]
     s = re.sub(r'[^a-zA-Z0-9]+', '-', (b or "")).strip('-').lower()
-    return s or "art-%s" % d["pos"]
+    return s if (s and len(s) > 2 and not s.isdigit()) else "art-%s" % d["pos"]
 
 
 def main():

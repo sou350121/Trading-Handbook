@@ -81,7 +81,7 @@
 | [NeuralForecast/TFT](neuralforecast-tft) | 🔧 | NeuralForecast/TFT | 基于TFT模型与自定义风险收益指标，实现日频股市预测的端到端训练、滚动预测与样本外评估。 |
 | [NeuralForecast/TFT](neuralforecast-tft) | 🔧 | NeuralForecast/TFT | 提出用夏普比率等交易指标替代MSE作为深度学习时序模型的验证指标，使模型优化更贴合日间交易的风险 |
 | [MCI-GRU](mci-gru) | 🔧 | MCI-GRU | 提出MCI-GRU模型，融合改进GRU、GAT与多头交叉注意力，从量价数据中联合提取时序、横截面 |
-| [深度学习与NLP在加密货币预测中的应用：整合金融、区块链和社](nlp) | 🔧 | — | 融合社媒文本与价格数据，用BART零样本分类与深度学习预测BTC/ETH日频涨跌及局部极值，提升 |
+| [深度学习与NLP在加密货币预测中的应用：整合金融、区块链和社](nlp-crypto-multimodal) | 🔧 | — | 融合社媒文本与价格数据，用BART零样本分类与深度学习预测BTC/ETH日频涨跌及局部极值，提升 |
 | （当前）为何你不需要深度学习来进行时间序列预测，以及你需要什 | 🔧 | — | 基于M5/Kaggle竞赛经验，论证当前时序预测应优先使用GBM与特征工程，而非深度学习，强调交 |
 | [xLSTM-Mixer](xlstm-mixer) | 🔧 | xLSTM-Mixer | 提出xLSTM-Mixer，结合线性预测与sLSTM块，通过时间/变量/多视图混合实现高精度长期 |
 | [MultiRC](multirc) | 🔧 | MultiRC | 提出MultiRC模型，通过多尺度重构与对比学习捕捉前兆信号，实现无需异常标注的时间序列异常预测 |

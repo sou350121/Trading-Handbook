@@ -91,7 +91,7 @@ def slugify(d):
     fw = (d.get("source",{}) or {}).get("framework")
     base = fw if fw and fw.lower() not in ("null","none","") else d["title"]
     s = re.sub(r'[^a-zA-Z0-9]+','-', (base or "")).strip('-').lower()
-    return s or f"art-{d['pos']}"
+    return s if (s and len(s) > 2 and not s.isdigit()) else f"art-{d['pos']}"
 
 def build(d, raw):
     src = d.get("source",{}) or {}
