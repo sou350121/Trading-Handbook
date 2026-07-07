@@ -8158,5 +8158,25 @@
       "alpha": "组合执行优化",
       "autonomy": "人机协同可解释"
     }
+  },
+  {
+    "pos": 412,
+    "msgid": "2247494224",
+    "title": "ICML 2026 量化论文合集",
+    "zone": "evaluation-benchmarks",
+    "rating": "📖",
+    "page_worthy": false,
+    "slug": "icml-2026",
+    "dup_of": "2247493920",
+    "framework": null,
+    "venue": "ICML 2026",
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "跨周期",
+      "paradigm": "生成式大模型",
+      "alpha": "多智能体博弈",
+      "autonomy": "Agent自主演进"
+    }
   }
 ]

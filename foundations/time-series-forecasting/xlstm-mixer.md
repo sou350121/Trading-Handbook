@@ -29,14 +29,18 @@
 「線性打底 + 遞歸提昇 + 正反視圖對稱學習」：長週期預測的本質是趨勢與季節性，線性層已能捕捉基線；剩餘的非線性殘差交給 sLSTM 處理，正反視圖強制模型學習對稱特徵，避免單向遞歸的順序偏差。
 
 **1.3 信息流 ASCII 圖**
-```
-X_raw → RevIN → NLinear(g_initial) → FC_UP(x_UP)
-                                      ↓
-[sLSTM Stack S(.)] ← 變量順序遍歷 + 可學習初始軟提示 n
-                                      ↓
-正向視圖 y'  &  反向視圖 y" → FC_view 拼接投影 → y_norm
-                                      ↓
-RevIN⁻¹ → Y_pred
+```mermaid
+flowchart TD
+  A["X_raw"] --> B["RevIN"]
+  B["RevIN"] --> C["NLinear(g_initial)"]
+  C["NLinear(g_initial)"] --> D["FC_UP(x_UP)"]
+  D["FC_UP(x_UP)"] --> E["[sLSTM Stack S(.)]"]
+  F["變量順序遍歷 + 可學習初始軟提示 n"] --> E["[sLSTM Stack S(.)]"]
+  E["[sLSTM Stack S(.)]"] --> G["正向視圖 y'  &  反向視圖 y\""]
+  G["正向視圖 y'  &  反向視圖 y\""] --> H["FC_view 拼接投影"]
+  H["FC_view 拼接投影"] --> I["y_norm"]
+  I["y_norm"] --> J["RevIN⁻¹"]
+  J["RevIN⁻¹"] --> K["Y_pred"]
 ```
 
 ## §2 · 數學層
