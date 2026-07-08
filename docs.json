@@ -304,6 +304,7 @@
               "foundations/market-microstructure/optm-lstm.md",
               "foundations/market-microstructure/order-flow-explanatory-power.md",
               "foundations/market-microstructure/pvar.md",
+              "foundations/market-microstructure/tick-size.md",
               "foundations/market-microstructure/tlob.md",
               "foundations/market-microstructure/vanishing-index-effect.md"
             ]
@@ -436,6 +437,7 @@
               "foundations/evaluation-benchmarks/art-33.md",
               "foundations/evaluation-benchmarks/art-337.md",
               "foundations/evaluation-benchmarks/art-408.md",
+              "foundations/evaluation-benchmarks/bayes-stein-shrinkage.md",
               "foundations/evaluation-benchmarks/cost-aware-execution-filter.md",
               "foundations/evaluation-benchmarks/finsearchcomp.md",
               "foundations/evaluation-benchmarks/finstressts.md",

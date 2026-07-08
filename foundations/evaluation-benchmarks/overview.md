@@ -2,12 +2,13 @@
 
 > **收錄**：回测防穿越、样本外稳定性、过拟合检测、鲁棒性量化、公开基准(TFB/QuantBench)与模型衰减归因
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：21 篇（18 篇成解構頁，其餘為 registry）
+> **本 zone 現有**：22 篇（19 篇成解構頁，其餘為 registry）
 
 ## 解構清單
 
 | 方法 | 評級 | 來源 | TL;DR |
 |---|---|---|---|
+| [Bayes-Stein Shrinkage](bayes-stein-shrinkage) | ⚡ | Bayes-Stein Shrinkage | 基于流动性过滤与贝叶斯收缩，验证2006年后经典学术Alpha在大盘股中收益趋零，揭示回测与实盘 |
 | [非对称可解释性原则](art-408) | ⚡ | 非对称可解释性原则 | 提出非对称可解释性原则，将透明度要求从特征层后移至决策与监控层，构建六层架构防过拟合与可审计。 |
 | [KTD-FIN](ktd-fin) | ⚡ | KTD-FIN | 提出KTD-FIN基准，通过数据掩码与Barra归因剥离记忆与风格，证明主流LLM交易收益实为风 |
 | [FinStressTS](finstressts) | ⚡ | FinStressTS | 构建参数可控的金融时序合成基准FinStressTS，系统诊断深度模型在低信噪比与机制切换下的失 |

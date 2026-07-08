@@ -8160,6 +8160,26 @@
     }
   },
   {
+    "pos": 410,
+    "msgid": "2247494204",
+    "title": "法国科学院院士、量化传奇Bouchaud最新力作：趋势跟踪已死？",
+    "zone": "market-microstructure",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "tick-size",
+    "dup_of": null,
+    "framework": "波动率归一化Tick Size",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "日频波段",
+      "paradigm": "因果结构",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
     "pos": 412,
     "msgid": "2247494224",
     "title": "ICML 2026 量化论文合集",
@@ -8177,6 +8197,26 @@
       "paradigm": "生成式大模型",
       "alpha": "多智能体博弈",
       "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 413,
+    "msgid": "2247494230",
+    "title": "美联储 X UCLA ｜ 经典学术Alpha还有用吗？",
+    "zone": "evaluation-benchmarks",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "bayes-stein-shrinkage",
+    "dup_of": null,
+    "framework": "Bayes-Stein Shrinkage",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
     }
   }
 ]
