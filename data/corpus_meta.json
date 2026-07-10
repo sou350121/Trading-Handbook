@@ -8080,6 +8080,26 @@
     }
   },
   {
+    "pos": 405,
+    "msgid": "2247494152",
+    "title": "从 Optiver 到 Jane Street：顶级做市商的Agent技术探索",
+    "zone": "llm-agentic",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "agentic-sdlc",
+    "dup_of": null,
+    "framework": "Agentic SDLC",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "高频日内",
+      "paradigm": "生成式大模型",
+      "alpha": "多智能体博弈",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
     "pos": 406,
     "msgid": "2247494158",
     "title": "耶鲁 X 牛津 | 知情交易与预期收益",
@@ -8214,6 +8234,46 @@
     "axes": {
       "data": "量价表格",
       "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 414,
+    "msgid": "2247494237",
+    "title": "MIT ｜ 预测如何落地为交易？基于双层强化学习的决策闭环研究",
+    "zone": "reinforcement-learning",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "hrt",
+    "dup_of": "2247487175",
+    "framework": "HRT",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "日频波段",
+      "paradigm": "强化学习",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 415,
+    "msgid": "2247494255",
+    "title": "如何动态组合 Alpha 因子？基于混合专家网络与注意力机制的 FactorMoE 框架",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "factormoe",
+    "dup_of": null,
+    "framework": "FactorMoE",
+    "venue": "Complex & Intelligent Systems",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
       "paradigm": "监督回归",
       "alpha": "因子挖掘",
       "autonomy": "人机协同可解释"

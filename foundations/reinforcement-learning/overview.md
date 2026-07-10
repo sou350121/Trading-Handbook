@@ -2,7 +2,7 @@
 
 > **收錄**：DRL/MARL在选股、调仓、做市、执行与对冲中的应用，涵盖PPO/SAC/分布RL、奖励函数设计与环境模拟
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：41 篇（39 篇成解構頁，其餘為 registry）
+> **本 zone 現有**：42 篇（40 篇成解構頁，其餘為 registry）
 
 ## 解構清單
 
@@ -14,6 +14,7 @@
 | [AlphaQuanter](alphaquanter) | ⚡ | AlphaQuanter | 提出AlphaQuanter单Agent框架，用RL端到端优化LLM工具调用与交易决策，实现高收 |
 | [MetaTrader](metatrader) | ⚡ | MetaTrader | 提出MetaTrader双层强化学习框架，通过数据变换与保守TD目标解决金融非平稳性下的OOD泛 |
 | [MacroHFT](macrohft) | ⚡ | KDD'24 | 提出MacroHFT框架，通过市场分解训练子代理，并用记忆增强超代理混合决策，提升加密货币高频交 |
+| [HRT](hrt) | 🔧 | HRT | 提出HRT双层强化学习框架，上层PPO做离散方向决策，下层TD3结合硬约束层做连续仓位微调，解决 |
 | [PPO策略自适应选择框架](ppo-hedge-fund-strategy-selection) | 🔧 | PPO策略自适应选择框架 | 提出基于PPO的强化学习框架，动态切换动量与均值回归策略，以夏普比率为奖励优化对冲基金风险调整后 |
 | [FNN+DRL组合框架](fnn-drl) | 🔧 | FNN+DRL组合框架 | 结合FNN基本面选股与PPO-CTCN周度调仓，引入相对收益奖励与湍流风控，实现稳健跑赢基准的组 |
 | [贝莱德 ｜ 深度强化学习在最优订单执行中的应用](art-359) | 🔧 | — | 提出基于Actor-Critic的DRL模型解决日内最优订单执行，通过收益与冲击惩罚平衡，显著优 |
