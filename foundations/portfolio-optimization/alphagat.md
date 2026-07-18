@@ -4,6 +4,7 @@
 
 > **發布**：2025-10-11 · IJCAI 25
 > **QuantML 導讀**：[IJCAI 25 | AlphaGAT：结合Alpha 因子挖掘和图注意力网络的自适应投资组合框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491933&idx=1&sn=5545c677db397f6eba97d4f6f735dc06&chksm=ce7d8643f90a0f55ebf89aa99919ce95bfe37d8dcb504ec758605798208dc6d8dff5e4d09cf0#rd)
+> **原始論文**：[AlphaGAT: A Two-Stage Learning Approach for Adaptive Portfolio Selection](https://doi.org/10.24963/ijcai.2025/834)（Proceedings of the Thirty-Fourth International Joint Conference on Artificial Intelligence · 2025 · 被引 0 · Crossref）
 > **核心定位**：落點於「因子挖掘 → 強化學習組合」的自動化黑盒鏈路。解決傳統端到端 RL 在低信噪比原始量價數據上難以收斂、且無法動態適應分佈偏移的 prior gap，透過兩階段解耦將特徵提取與權重分配分離。
 
 **五軸座標**

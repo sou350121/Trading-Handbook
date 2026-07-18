@@ -4,6 +4,7 @@
 
 > **發布**：2024-10-13 · （無 venue）
 > **QuantML 導讀**：[频率自适应归一化用于非平稳时间序列预测](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487027&idx=1&sn=5b926cdd42c1bb19e4b6a90fec37b1a2&chksm=ce7e692df909e03bcdb66f737db1b2cea6495bd67904c7c108f91fdb77f797b206a620a3a1bf#rd)
+> **原始論文**：[FAN-TSF: A Frequency Adaptive Normalization Approach for Non-stationary Time Series Forecasting on Stock Market Data](https://doi.org/10.2139/ssrn.5259125)（2025 · 被引 0 · Crossref）
 > **核心定位**：落點於 **监督回归 × 端到端表征** 軸，針對 **量价表格/日频波段** 數據。解決了傳統實例歸一化（如 RevIN/SAN）僅能提取均值/趨勢、無法動態捕捉演變季節性與頻譜結構的 **prior gap**，將非平穩信號剝離為可預測的頻域殘差。
 
 **五軸座標**

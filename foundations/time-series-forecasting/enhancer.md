@@ -4,6 +4,7 @@
 
 > **發布**：2025-08-10 · KDD 2025
 > **QuantML 導讀**：[KDD 25 北京大学 | Enhancer：具备分布感知的时序预测元学习框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491315&idx=1&sn=aedbf8f931db1cd3bd7f63ef03ae8f82&chksm=ce7e79edf909f0fbfd9d38876af5a17054d4d896744c6390e86419d68b79374295cec992bf56#rd)
+> **原始論文**：[Enhancer: A Distribution-Aware Framework with Temporal-Relational Meta-Learning for Stock Prediction](https://doi.org/10.1145/3711896.3736934)（Proceedings of the 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.2 · 2025 · 被引 3 · Crossref）
 > **核心定位**：落點於元學習搜索與端到端表征軸，解決量價表格在日频波段中同時面臨的時序分佈漂移(TDS)與關係分佈漂移(RDS) prior gap，將「分佈魯棒性」從後處理挪至表征提取層。
 
 **五軸座標**

@@ -4,6 +4,7 @@
 
 > **發布**：2025-11-24 · （無 venue）
 > **QuantML 導讀**：[基于图像的配对交易框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492463&idx=1&sn=eff946db3dd23827d1a41b6a7ded0c97&chksm=ce7d8471f90a0d67f7218e814e1c77ae8c34c4f9046a89cdc52f470fb9390427497a2e0b38e0#rd)
+> **原始論文**：[ISEPT: Image-Based Selection and Execution Framework for Pair Trading](https://doi.org/10.1145/3768292.3770346)（Proceedings of the 6th ACM International Conference on AI in Finance · 2025 · 被引 0 · Crossref）
 > **核心定位**：將傳統割裂的「資產對選擇」與「交易執行」統一為端到端監督回歸框架；透過 CAE 提取 K 線圖視覺特徵並預測下月 Sharpe Ratio，以實盤績效閉環抵抗市場漂移，解決了統計套利在 regime shift 下的靜態過擬合與執行反饋斷裂問題。
 
 **五軸座標**

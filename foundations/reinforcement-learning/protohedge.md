@@ -4,6 +4,7 @@
 
 > **發布**：2025-11-30 · （無 venue）
 > **QuantML 導讀**：[像交易员一样思考：ProtoHedge可解释性对冲模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492539&idx=1&sn=f0ff7b790857b7433e58356b748c10f4&chksm=ce7d84a5f90a0db3ce97497f616ca4a0e6ec9cfd122e5516c8218ad52bc16a0822a51ad0b7a9#rd)
+> **原始論文**：[ProtoHedge: Interpretable Hedging with Market Prototypes](https://doi.org/10.1145/3768292.3770347)（Proceedings of the 6th ACM International Conference on AI in Finance · 2025 · 被引 0 · Crossref）
 > **核心定位**：以「原型相似度加權」替換黑箱神經網路，將 Deep Hedging 的序列決策重構為可審計的案例推理架構。解決了業內對 RL 對沖策略合規性與歸因穩定性的 prior gap，在內在可解釋性與對沖效用之間切出新的 Pareto 前沿。
 
 **五軸座標**

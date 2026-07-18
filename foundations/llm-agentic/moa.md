@@ -4,6 +4,7 @@
 
 > **發布**：2024-09-15 · （無 venue）
 > **QuantML 導讀**：[Vanguard： MoA is All You Need](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486321&idx=1&sn=ca4686d736d6ec1ed85b977f3976b32c&chksm=ce7e6c6ff909e5791ef9cb844fff76d1b29d909d71df93c9411d1f4c5137605610dcbe154fe1#rd)
+> **原始論文**：[The MOA Software](https://doi.org/10.7551/mitpress/10654.003.0016)（Machine Learning for Data Streams · 2018 · 被引 0 · Crossref）
 > **核心定位**：落點於生成式大模型與多智能體博弈軸，解決單一密集LLM在金融長文本檢索中面臨的上下文窗口瓶頸、高幻覺率與企業級部署成本失衡的Prior Gap。
 
 **五軸座標**

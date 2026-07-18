@@ -4,6 +4,7 @@
 
 > **發布**：2024-11-02 · （無 venue）
 > **QuantML 導讀**：[MCI-GRU：基于多头交叉注意力和改进型GRU的股市预测模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487364&idx=1&sn=b81d90860c1bddb0fb315f60ca89ecf6&chksm=ce7e689af909e18c3ea9672a6e135a6f74345e99c85b64e656b53dfce463d02a154329443f53#rd)
+> **原始論文**：[Mci-Gru: Stock Prediction Model Based on Multi-Head Cross-Attention and Improved Gru](https://doi.org/10.2139/ssrn.5020128)（2024 · 被引 0 · Crossref）
 > **核心定位**：落點於「端到端表徵 × 日頻波段」，試圖以單一架構同時啃下時序長期依賴與截面關聯，並硬塞可學習潛在狀態向量模擬不可觀測市場 regime。解了傳統 GRU/LSTM 門控權重分配僵化與截面特徵需手工拼接的工程坑。
 
 **五軸座標**

@@ -4,6 +4,7 @@
 
 > **發布**：2025-03-18 · （無 venue）
 > **QuantML 導讀**：[视觉胜于文本：LLM在交易中更好的应用方式？](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489712&idx=1&sn=2c37c80069f65fae35fd198105c8b7f8&chksm=ce7e7faef909f6b8915ec67acd899e75b43dd8b1058efbc737a1fce250b4f299937c2af0e623#rd)
+> **原始論文**：[Agent Trading Arena: A Study on Numerical Understanding in LLM-Based Agents](https://doi.org/10.18653/v1/2025.findings-emnlp.294)（Findings of the Association for Computational Linguistics: EMNLP 2025 · 2025 · 被引 1 · Crossref）
 > **核心定位**：將 LLM 決策輸入從「文本代數」強行切換至「視覺幾何」，在五軸中佔據生成式大模型與多智能體博弈交叉點。解了 prior gap：純文本表格輸入導致 LLM 過擬合局部數值、喪失趨勢感知與跨期關聯提取能力。
 
 **五軸座標**

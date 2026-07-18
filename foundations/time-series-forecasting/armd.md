@@ -4,6 +4,7 @@
 
 > **發布**：2025-01-20 · AAAI 2025
 > **QuantML 導讀**：[ARMD：基于自回归滑动扩散模型的时间序列预测](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488868&idx=1&sn=aa76019420bf31adc423ce36d629f446&chksm=ce7e727af909fb6c2c4dbd2ecafa9fa814f88e2d24aea841f0aefe17e97fcc0c2145da865294#rd)
+> **原始論文**：[Auto-Regressive Moving Diffusion Models for Time Series Forecasting](https://doi.org/10.1609/aaai.v39i16.33838)（Proceedings of the AAAI Conference on Artificial Intelligence · 2025 · 被引 16 · Crossref）
 > **核心定位**：落點於「生成式大模型 × 端到端表征」軸，解決傳統擴散模型在金融時序中因隨機加噪破壞連續性與結構信息的 prior gap。將時序演化重構為確定性滑動過程，以線性逆網絡替代複雜去噪網絡，實現高精度預測。
 
 **五軸座標**

@@ -4,6 +4,7 @@
 
 > **發布**：2024-08-27 · （無 venue）
 > **QuantML 導讀**：[股票相似性的时间表示学习及其在投资管理中的应用](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485992&idx=1&sn=9c13d3832825cf98c8b1eb593acf6ce9&chksm=ce7e6d36f909e4203370742f24372136d5bec9d84ccf2044028a2cab8cd7ac3f3a8e7f6fe0aa#rd)
+> **原始論文**：[SimStock : Representation Model for Stock Similarities](https://doi.org/10.1145/3604237.3626888)（4th ACM International Conference on AI in Finance · 2023 · 被引 3 · Crossref）
 > **核心定位**：落點於「日频波段 × 端到端表征 × 黑盒自動化」，試圖以時間域泛化（Temporal Domain Generalization）彌補傳統量價相關性在跨市場/非平穩環境下的結構斷裂。
 
 **五軸座標**

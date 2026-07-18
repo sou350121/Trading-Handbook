@@ -4,6 +4,7 @@
 
 > **發布**：2024-12-01 · NeurIPS 2024
 > **QuantML 導讀**：[NIPS 24 | PGN：RNN 的新继任者](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488128&idx=1&sn=a8287377302d2cdf5d1d6ddc321cdf31&chksm=ce7e759ef909fc88f0bc9ddea5171b4bac84008972a60925fe3fcc4eff005e37503d2ba7525f#rd)
+> **原始論文**：[TPGN: A Time-Preference Gate Network for e-commerce purchase intention recognition](https://doi.org/10.1016/j.knosys.2021.106920)（Knowledge-Based Systems · 2021 · 被引 21 · Crossref）
 > **核心定位**：落點於量價表格與中長週期監督回歸，以端到端表徵取代傳統 RNN/Transformer 的遞歸或注意力機制，解決長程依賴捕捉與順序計算瓶頸的 prior gap。
 
 **五軸座標**

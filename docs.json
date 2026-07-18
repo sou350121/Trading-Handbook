@@ -488,6 +488,32 @@
         ]
       },
       {
+        "tab": "Radar",
+        "icon": "satellite-dish",
+        "groups": [
+          {
+            "group": "总览",
+            "pages": [
+              "radar/overview.md"
+            ]
+          },
+          {
+            "group": "arXiv q-fin",
+            "pages": [
+              "radar/arxiv/overview.md",
+              "radar/arxiv/2026-W29.md"
+            ]
+          },
+          {
+            "group": "实践者 Practitioner",
+            "pages": [
+              "radar/practitioner/overview.md",
+              "radar/practitioner/2026-W29.md"
+            ]
+          }
+        ]
+      },
+      {
         "tab": "Benchmarks",
         "icon": "gauge",
         "groups": [

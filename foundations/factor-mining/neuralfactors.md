@@ -4,6 +4,7 @@
 
 > **發布**：2024-08-06 · （無 venue）
 > **QuantML 導讀**：[NeuralFactors： Bloomberg新型股票深度学习生成模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485681&idx=1&sn=41f393ec549475fc35bff1cc0d9e3304&chksm=ce7e6feff909e6f9017777ce833060055ae4d0d24011ff950fc74cf3383467bdb437112eba1a#rd)
+> **原始論文**：[NeuralFactors: A Novel Factor Learning Approach to Generative Modeling of Equities](https://doi.org/10.1145/3677052.3698647)（Proceedings of the 5th ACM International Conference on AI in Finance · 2024 · 被引 2 · Crossref）
 > **核心定位**：落點於生成式大模型與因子挖掘的交叉軸，解決傳統線性因子模型（如Fama-French/BARRA）在捕捉高維非線性股票相關性與動態協方差結構時的表達力瓶頸，將因子暴露與因子收益的學習統一至條件VAE框架內。
 
 **五軸座標**

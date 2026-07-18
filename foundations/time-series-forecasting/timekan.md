@@ -4,6 +4,7 @@
 
 > **發布**：2025-03-04 · （無 venue）
 > **QuantML 導讀**：[TimeKAN：基于KAN的时间序列预测模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489535&idx=1&sn=26594d07909476172bb0fadd3abc344d&chksm=ce7e70e1f909f9f7651af812fd78bbf9d510e345c9dd8804cc9c2b02281ab62261429de0f4b8#rd)
+> **原始論文**：[Kolmogorov-Arnold Networks for Time Series Analysis and Forecasting: A Survey](https://doi.org/10.2139/ssrn.5220118)（2025 · 被引 0 · Crossref）
 > **核心定位**：落點於量價表格與日頻波段的監督回歸黑盒。解決了傳統頻譜分解後「高低頻模式密度不均導致單一網絡擬合能力錯配」的工程坑，將 KAN 的可學習激活階數與頻率帶動態對齊。
 
 **五軸座標**

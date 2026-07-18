@@ -4,6 +4,7 @@
 
 > **發布**：2024-08-15 · （無 venue）
 > **QuantML 導讀**：[贝莱德&英伟达：HybridRAG结合GraphRAG以及VectorRAG的新型RAG系统](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485798&idx=1&sn=04b56d6bd5864325ee5b4195b88007c1&chksm=ce7e6e78f909e76e3ed448882a568bfb2c453d91fa76339713dbf5e89c3d23353107c4b57b34#rd)
+> **原始論文**：[HybridRAG-Based LLM Agents for Low-Carbon Optimization in Low-Altitude Economy Networks](https://doi.org/10.1109/tmc.2025.3637120)（IEEE Transactions on Mobile Computing · 2026 · 被引 1 · Crossref）
 > **核心定位**：落點於文本另类與生成式大模型軸，解決單一檢索在金融非結構化文本中「廣度與深度不可兼得」的 prior gap，透過雙路上下文拼接提升 LLM 財務問答的結構化推理與語義覆蓋。
 
 **五軸座標**

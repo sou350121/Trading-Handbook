@@ -4,6 +4,7 @@
 
 > **發布**：2024-12-05 · NeurIPS24
 > **QuantML 導讀**：[NIPS 24 | 改进MLP在表格数据表现](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488210&idx=1&sn=93c8b4dc5f3e9d83523c68020d4ce413&chksm=ce7e75ccf909fcdac25f2712eb57ab2f635c7060a98418abe16643362710f59425da3188ddef#rd)
+> **原始論文**：[Exploring AI-Driven Employment Platforms: A Case Study on Vocational College Graduates' Survey Data Using RealMLP with Strong Meta-Tuned Default Parameters](https://doi.org/10.1145/3783669.3783743)（Proceedings of the 2025 International Conference on Computer Technology, Digital Media and Communication · 2025 · 被引 0 · Crossref）
 > **核心定位**：落點於「元學習搜索」與「端到端表徵」軸，解決表格數據中 NN 對 GBDT 的「超參數敏感與默認性能劣勢」prior gap。透過元訓練基準固化強默認參數，使 MLP 在免調參下逼近樹模型的時間-精度 Pareto 前沿。
 
 **五軸座標**

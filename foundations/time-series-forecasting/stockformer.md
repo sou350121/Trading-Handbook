@@ -4,6 +4,7 @@
 
 > **發布**：2024-06-19 · （無 venue）
 > **QuantML 導讀**：[信息量极高！StockFormer： 基于多任务目标（回归/分类）及高低频分离的选股模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247484801&idx=1&sn=bb6d765cbd18849b1e1f09f650cbe1e1&chksm=ce7e629ff909eb8976f291cf23e68a0c73c43a628640dcbd21dd06124edead0629deac6d6c5f#rd)
+> **原始論文**：[StockFormer: Learning Hybrid Trading Machines with Predictive Coding](https://arxiv.org/abs/2401.06139)（Proceedings of the Thirty-Second International Joint Conference on Artificial Intelligence · 2023 · 被引 34 · Crossref）
 > **核心定位**：落點於「日频波段 × 端到端表征 × 全自动黑盒」。解了傳統量價因子模型中「頻譜混疊」與「橫截面結構靜態化」的 prior gap，將小波頻域解耦硬編碼進時空編碼器，以多任務監督替代單一回歸目標。
 
 **五軸座標**

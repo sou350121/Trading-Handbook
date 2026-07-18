@@ -4,6 +4,7 @@
 
 > **發布**：2025-06-08 · （無 venue） · arXiv [2412.20138](https://arxiv.org/abs/2412.20138)
 > **QuantML 導讀**：[QuantML社群最新重磅开源 | TradingAgents：多智能体交易框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490650&idx=1&sn=4d2dfa1b6c9139a38c84122c715fd015&chksm=ce7e7b44f909f25207a85309bbb0066d6d6590a6cdfce20284bb352cba463e638a4985be7274#rd)
+> **原始論文**：[Reproducibility in the TradingAgents Framework](https://arxiv.org/abs/2412.20138)（Proceedings of the 2026 International Conference on Artificial Intelligence and Fintech · 2026 · 被引 0 · Crossref）
 > **核心定位**：落點於「多智能體博弈 × 生成式大模型」軸，解決傳統 LLM 單點決策缺乏制衡與可解釋性的工程坑，將投行前中後台職能映射為 LangGraph 狀態機。
 
 **五軸座標**

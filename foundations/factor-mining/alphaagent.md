@@ -4,6 +4,7 @@
 
 > **發布**：2025-08-20 · （無 venue）
 > **QuantML 導讀**：[AlphaAgent：LLM如何终结Alpha衰减，挖掘持久有效的量化因子](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491423&idx=1&sn=cd28fd7401005a782d146b95a5bb69ce&chksm=ce7e7841f909f15766be17d859aef9e90f2c006800ba728878b99bf69e0b6094ef795ceaab94#rd)
+> **原始論文**：[AlphaAgent: LLM-Driven Alpha Mining with Regularized Exploration to Counteract Alpha Decay](https://doi.org/10.1145/3711896.3736838)（Proceedings of the 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.2 · 2025 · 被引 7 · Crossref）
 > **核心定位**：落點於「生成式大模型 × Agent自主演進」軸，解決了傳統LLM挖因子時缺乏結構化約束導致信號同質化與Alpha快速衰减的Prior Gap。
 
 **五軸座標**

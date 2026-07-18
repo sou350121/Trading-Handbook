@@ -4,6 +4,7 @@
 
 > **發布**：2024-09-19 · （無 venue）
 > **QuantML 導讀**：[FinGAT：金融图注意力网络](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486368&idx=1&sn=63d6932b9216c096666e3825ec6a94be&chksm=ce7e6cbef909e5a89a61963e14f6d1df6ca877fce7d444dd812d755e02ba45a7e9eba34a50df#rd)
+> **原始論文**：[FinGAT: Financial Graph Attention Networks for Recommending Top-K Profitable Stocks](https://doi.org/10.1109/tkde.2021.3079496)（IEEE Transactions on Knowledge and Data Engineering · 2022 · 被引 51 · Crossref）
 > **核心定位**：落點於「圖關係 × 日頻波段 × 監督回歸 × 端到端表徵 × 全自動黑盒」。解了傳統金融GNN依賴靜態先驗圖（如相關係數閾值或固定行業分類）的 prior gap，將圖拓撲學習與 Top-K 組合構建目標直接對齊。
 
 **五軸座標**

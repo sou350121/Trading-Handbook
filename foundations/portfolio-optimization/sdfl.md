@@ -4,6 +4,7 @@
 
 > **發布**：2025-03-26 · （無 venue）
 > **QuantML 導讀**：[半决策导向学习与深度集成：稳健投资组合优化框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489784&idx=1&sn=88ec66fdda5195f4f4399b3cfbd02b1c&chksm=ce7e7fe6f909f6f05eea22b1475291c853fcdc11999c707f60017bbfc579408b8c99eb759fb9#rd)
+> **原始論文**：[Performance prediction for submicron GaAs SDFL logic](https://doi.org/10.1109/edl.1982.25507)（IEEE Electron Device Letters · 1982 · 被引 9 · Crossref）
 > **核心定位**：將傳統 DFL 非凸的夏普/索提諾直接優化，降維成凸的交叉熵監督回歸；透過預計算目標權重 + 深度集成，解決深度序列模型在組合權重輸出上的初始化敏感與訓練不穩定問題。
 
 **五軸座標**

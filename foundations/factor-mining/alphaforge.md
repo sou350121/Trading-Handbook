@@ -4,6 +4,7 @@
 
 > **發布**：2024-08-28 · （無 venue）
 > **QuantML 導讀**：[AlphaForge：挖掘和动态组合公式化Alpha因子框架（附有实盘验证结果）](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486006&idx=1&sn=3474fe8c1f4c4b915746910f7f7a3753&chksm=ce7e6d28f909e43e222bc6066cdf1b2824b59c23b45c10a77803bee235d92c41d57b9b8c2a23#rd)
+> **原始論文**：[AlphaForge: A Framework to Mine and Dynamically Combine Formulaic Alpha Factors](https://doi.org/10.1609/aaai.v39i12.33365)（Proceedings of the AAAI Conference on Artificial Intelligence · 2025 · 被引 8 · Crossref）
 > **核心定位**：落點於「元學習搜索×因子挖掘」軸，以 Generator-Predictor 代理優化迴路替代傳統符號回歸的低效變異，並透過滾動 IC/ICIR 動態線性加權，解了「單因子過擬合」與「靜態權重無法適應 Regime 切換」的 Prior Gap。
 
 **五軸座標**

@@ -4,6 +4,7 @@
 
 > **發布**：2024-12-04 · NeurIPS24
 > **QuantML 導讀**：[NIPS 24 | 超越CVXPY,新型端到端优化器](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488193&idx=1&sn=a91d10d06dca7a988dda550ccaaa9941&chksm=ce7e75dff909fcc9f9b367702183d9eae5b688123de730a1a5cd0ef5841204c049ee9d7b508a#rd)
+> **原始論文**：[BPQP: A Differentiable Convex Optimization Framework for Efficient End-to-End Learning](https://doi.org/10.52202/079017-2463)（Advances in Neural Information Processing Systems 37 · 2024 · 被引 4 · Crossref）
 > **核心定位**：落點於監督回歸與組合執行優化軸，解決可微分凸優化層在端到端訓練中的隱式微分算力瓶頸。將傳統依賴二階線性系統求解的梯度計算，重構為一階求解器友好的分離式 QP，打通預測模型到權重分配的訓練閉環。
 
 **五軸座標**

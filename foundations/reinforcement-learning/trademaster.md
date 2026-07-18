@@ -4,6 +4,7 @@
 
 > **發布**：2025-01-18 · NeurIPS22 · arXiv [2201.01901](https://arxiv.org/abs/2201.01901)
 > **QuantML 導讀**：[TradeMaster ：基于强化学习的开源量化交易平台](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488847&idx=1&sn=3b862d85cb5c108d9f53281c1dc7c5e2&chksm=ce7e7251f909fb479846df7d050061988d87d5c6fb985028514864b644b01fda3e8c2b58a023#rd)
+> **原始論文**：[TradeMaster: A Holistic Quantitative Trading Platform Empowered by Reinforcement Learning](https://arxiv.org/abs/2201.01901)（Advances in Neural Information Processing Systems 36 · 2023 · 被引 2 · Crossref）
 > **核心定位**：落點於「端到端表徵 × 全自動黑盒」軸，解了 RLFT 研究長期存在的數據格式割裂、環境約束不一致、評估維度碎片化等工程坑。提供標準化 Gym 環境與 PRUDEX-Compass 評測基準，使跨算法比較具備統計意義。
 
 **五軸座標**

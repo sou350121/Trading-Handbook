@@ -4,6 +4,7 @@
 
 > **發布**：2025-01-13 · （無 venue）
 > **QuantML 導讀**：[打工人救星，中科院推出PPTAgent框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247488795&idx=1&sn=dbc480b1f12428dc3b37e915b2222b4b&chksm=ce7e7205f909fb13f94b136efd578e4e580b0eec61ffd3b3e81cc185b1dc5582aa9024deabf8#rd)
+> **原始論文**：[PPTAgent: Generating and Evaluating Presentations Beyond Text-to-Slides](https://doi.org/10.18653/v1/2025.emnlp-main.728)（Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing · 2025 · 被引 8 · Crossref）
 > **核心定位**：落點於「多模態解析 + Agent自主演進」軸，解決傳統端到端生成模型在複雜版面控制與樣式漂移上的 prior gap，將不可控的文本擴散轉為確定性的程式化編輯迴路。
 
 **五軸座標**

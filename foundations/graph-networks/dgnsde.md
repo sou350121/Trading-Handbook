@@ -4,6 +4,7 @@
 
 > **發布**：2026-05-29 · WWW26
 > **QuantML 導讀**：[如何捕捉市场的“领先-滞后”效应？融合时滞图与几何SDE的选股模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493952&idx=1&sn=e38563c8c9bb2e8ea84ab58bcf8d3077&chksm=ce7d8e5ef90a07482dfd143d7bdba42a6ecbb9d899217cdb55c49ebc2e51e3962a96d67fd356#rd)
+> **原始論文**：[Modeling Irregular Astronomical Time Series with Neural Stochastic Delay Differential Equations](https://doi.org/10.1145/3746252.3760805)（Proceedings of the 34th ACM International Conference on Information and Knowledge Management · 2025 · 被引 0 · Crossref）
 > **核心定位**：落點於「端到端表征 × 監督回歸」軸，以連續時間幾何 SDE 與 DTW 時延圖打破傳統 GNN 的同步/確定性假設，解決低信噪比截面聯動中的時間錯配與過擬合 prior gap。
 
 **五軸座標**

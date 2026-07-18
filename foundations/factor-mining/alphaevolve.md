@@ -4,6 +4,7 @@
 
 > **發布**：2024-08-19 · （無 venue）
 > **QuantML 導讀**：[AlphaEvolve：基于AutoML的公式型Alpha因子挖掘框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485843&idx=1&sn=06e314197e9e5189ecdfcb1de81def19&chksm=ce7e6e8df909e79b516274d49c1fd1a5c1d1d95fab905c0b2566ec97c20fe5499ec584562923#rd)
+> **原始論文**：[Full Precision Hardware Implementation of the AlphaEvolve 4×4 Complex Valued Matrix Multiplication Algorithm](https://doi.org/10.1109/access.2026.3690301)（IEEE Access · 2026 · 被引 0 · Crossref）
 > **核心定位**：落點於元學習搜索與因子挖掘的交叉帶，解決傳統遺傳算法搜索空間狹窄與機器學習因子難以組合成低相關性池的工程痛點。
 
 **五軸座標**

@@ -4,6 +4,7 @@
 
 > **發布**：2025-11-05 · （無 venue）
 > **QuantML 導讀**：[240倍性能飞跃：首个GPU高频交易MARL框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492240&idx=1&sn=f9b15a5c11c4b2a877e033551bb0bdc4&chksm=ce7d858ef90a0c9825b228018974a095c0b3a3527d1227742796efc6254a817e5805573f58c6#rd)
+> **原始論文**：[JaxMARL-HFT: GPU-Accelerated Large-Scale Multi-Agent Reinforcement Learning for High-Frequency Trading](https://doi.org/10.1145/3768292.3770416)（Proceedings of the 6th ACM International Conference on AI in Finance · 2025 · 被引 1 · Crossref）
 > **核心定位**：落點於「高頻日內 × 多智能體博弈」軸，解決傳統 HFT MARL 因 CPU-GPU 傳輸瓶頸與同構限制導致的算力不可擴展問題，將並行訓練從單智能體/預定義對手升級為全鏈路 GPU 異構並發。
 
 **五軸座標**

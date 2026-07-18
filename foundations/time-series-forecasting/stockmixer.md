@@ -4,6 +4,7 @@
 
 > **發布**：2024-11-08 · AAAI24
 > **QuantML 導讀**：[AAAI 24 | StockMixer: 一种简单而强大的基于MLP的股价预测架构](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487545&idx=1&sn=c1188efc7ea54fa2c6784bfbb892784c&chksm=ce7e7727f909fe31643dfcef60364bc0aa03d0509ed9edcef76fe1f21863b0ceb6662f728ec8#rd)
+> **原始論文**：[StockMixer: A Simple Yet Strong MLP-Based Architecture for Stock Price Forecasting](https://doi.org/10.1609/aaai.v38i8.28681)（Proceedings of the AAAI Conference on Artificial Intelligence · 2024 · 被引 37 · Crossref）
 > **核心定位**：落點於「端到端表征 × 全自动黑盒」軸，以純 MLP 架構替代 RNN/GNN 處理多變量時間序列。解了圖結構先驗依賴與遞歸梯度瓶頸的 prior gap，將截面交互降維為可並行的超圖式線性操作。
 
 **五軸座標**

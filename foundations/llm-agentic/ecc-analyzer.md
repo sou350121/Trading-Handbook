@@ -4,6 +4,7 @@
 
 > **發布**：2024-09-03 · （無 venue）
 > **QuantML 導讀**：[基于电话会议的LLMs股票预测框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247486072&idx=1&sn=5350f2e4ddae323640bdf9a7bbfdcc01&chksm=ce7e6d66f909e470eff57f1c44952160499b4fca42a294867e4ad9d8b162c2d0894dd299ff5a#rd)
+> **原始論文**：[ECC Analyzer: Extracting Trading Signal from Earnings Conference Calls using Large Language Model for Stock Volatility Prediction](https://doi.org/10.1145/3677052.3698689)（Proceedings of the 5th ACM International Conference on AI in Finance · 2024 · 被引 13 · Crossref）
 > **核心定位**：落點於「多模態非結構數據 → 監督回歸 → 風險擇時」軸。解了傳統波動率模型（GARCH/LSTM）對電話會議音頻語調與管理層微觀語義的雙重信息損耗，將非結構化 ECC 轉化為可交易的短期波動率因子。
 
 **五軸座標**

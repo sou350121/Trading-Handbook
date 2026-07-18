@@ -4,6 +4,7 @@
 
 > **發布**：2025-02-21 · （無 venue）
 > **QuantML 導讀**：[HedgeAgents：基于对冲策略的多智能体金融交易系统](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489386&idx=1&sn=d7bcfd851bc02128234d2080109c02d5&chksm=ce7e7074f909f962bc54d1576360ca0783d9533f078bbdb32ee23871c3808f36f4fe51394dcb#rd)
+> **原始論文**：[HedgeAgents: A Balanced-aware Multi-agent Financial Trading System](https://doi.org/10.1145/3701716.3715232)（Companion Proceedings of the ACM on Web Conference 2025 · 2025 · 被引 13 · Crossref）
 > **核心定位**：將傳統對沖基金架構映射為 LLM 多智能體系統，以結構化會議機制替代單點 RL/LLM 的脆弱性。解了極端波動下風險預算硬編碼與提示詞漂移的 prior gap。
 
 **五軸座標**

@@ -4,6 +4,7 @@
 
 > **發布**：2024-06-23 · KDD'24
 > **QuantML 導讀**：[KDD 24 | 基于增强记忆的上下文感知强化学习的高频交易框架](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247484852&idx=1&sn=612490637ac96cfa86d829e9ed665c2b&chksm=ce7e62aaf909ebbc864a29a4af3cc6db60eb2930f7dade6882515a61d46222e8877e8018fd07#rd)
+> **原始論文**：[MacroHFT: Memory Augmented Context-aware Reinforcement Learning On High Frequency Trading](https://doi.org/10.1145/3637528.3672064)（Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining · 2024 · 被引 3 · Crossref）
 > **核心定位**：落點於「高頻日內 × 強化學習 × 組合執行優化」軸，解決傳統單代理 RL 在非平穩加密貨幣市場中因過擬合與極端行情導致的決策單邊化與回撤失控問題。
 
 **五軸座標**

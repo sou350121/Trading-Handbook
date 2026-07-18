@@ -4,6 +4,7 @@
 
 > **發布**：2026-06-06 · JBF
 > **QuantML 導讀**：[用条件概率重塑Alpha：指数择时的一种低成本改进路径](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247494002&idx=1&sn=d9b318f7af6e19b2bda9badd465301f3&chksm=ce7d8e6cf90a077adf225ebf3340eb851c3ee4cf351b302b7d9f2a352a967ec80c2f76179985#rd)
+> **原始論文**：[Journal of banking and finance and the European finance association](https://doi.org/10.1016/0378-4266(87)90015-x)（Journal of Banking &amp; Finance · 1987 · 被引 0 · Crossref）
 > **核心定位**：落點於監督回歸與風險擇時軸，以條件概率分解取代 Copula 耦合，解決了傳統線性擇時忽略符號-幅度非線性交互、以及 Copula 族選擇帶來模型不確定性的 prior gap。
 
 **五軸座標**

@@ -4,6 +4,7 @@
 
 > **發布**：2024-07-01 · （無 venue） · arXiv [2308.13289](https://arxiv.org/abs/2308.13289)
 > **QuantML 導讀**：[牛津大学：解锁大规模强化学习交易的GPU加速LOB模拟器](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247484978&idx=1&sn=ed321f9103b3d156245934eb49142756&chksm=ce7e612cf909e83aaf17537148f12270c3a1578d255cc814b676cbbdcacb5bf659cc42312d73#rd)
+> **原始論文**：[JAX-LOB: A GPU-Accelerated limit order book simulator to unlock large scale reinforcement learning for trading](https://arxiv.org/abs/2308.13289)（4th ACM International Conference on AI in Finance · 2023 · 被引 9 · Crossref）
 > **核心定位**：落點於「高頻日內 × 強化學習 × 組合執行優化」軸。解決了傳統 Python/C++ LOB 模擬器在 RL 大規模並行採樣時的 I/O 與控制流瓶頸，使 Agent 能在 GPU 上實現萬級環境 Rollout。
 
 **五軸座標**

@@ -4,6 +4,7 @@
 
 > **發布**：2025-03-20 · （無 venue）
 > **QuantML 導讀**：[MSGNet：多尺度融合相关性学习的时间序列预测模型](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489733&idx=1&sn=ec9f8f489d2b860a990e098a30481e17&chksm=ce7e7fdbf909f6cd89db2aaf46100d9dff132d8fc4d33a832ad705ac2dbe8d1e8e6bc7b9e3b1#rd)
+> **原始論文**：[MSGNet: A Multi-Scale Transmission Guided Network for Underwater Image Restoration](https://doi.org/10.1109/iatmsi68868.2026.11465478)（2026 IEEE International Conference on Interdisciplinary Approaches in Technology and Management for Social Innovation (IATMSI) · 2026 · 被引 0 · Crossref）
 > **核心定位**：落點於「跨周期監督回歸」與「端到端黑盒」交匯處，以頻譜分解強制剝離週期先驗，再用動態圖卷積重構變量條件依賴，解了傳統 Transformer 注意力稀疏與靜態 GNN 無法適配非平穩相關性矩陣的 prior gap。
 
 **五軸座標**

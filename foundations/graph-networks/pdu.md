@@ -4,6 +4,7 @@
 
 > **發布**：2025-08-19 · KDD 2025
 > **QuantML 導讀**：[KDD 25 | PDU: 如何利用“不确定性对比”发掘稳健超额收益](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491411&idx=1&sn=1645eed1869a707d31f7c3652edaf418&chksm=ce7e784df909f15ba86e3ba2763394d5d9ee0793ecd9e4e2981df2bcb277cc522970a2cec9d1#rd)
+> **原始論文**：[Progressive Dependency Representation Learning for Stock Ranking in Uncertain Risk Contrasting](https://doi.org/10.1145/3690624.3709189)（Proceedings of the 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.1 · 2025 · 被引 4 · Crossref）
 > **核心定位**：落點於「端到端表征 × 監督回歸」軸，解決了傳統量價模型在「時間-關係依賴緊耦合」與「市場不確定性風險」之間的 Prior Gap。
 
 **五軸座標**

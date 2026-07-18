@@ -4,6 +4,7 @@
 
 > **發布**：2025-06-27 · AAAI25
 > **QuantML 導讀**：[AAAI 25 | 融合扩散模型与专家混合的层级化股票预测研究](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490858&idx=1&sn=a7ca3ad90535784bf9116af8fb76725c&chksm=ce7e7a34f909f322220426f75e3b3d8fd4739cda8dd1caa240b612ff3fd7ab1e42cab1e4ebec#rd)
+> **原始論文**：[DHMoE: Diffusion Generated Hierarchical Multi-Granular Expertise for Stock Prediction](https://doi.org/10.1609/aaai.v39i11.33250)（Proceedings of the AAAI Conference on Artificial Intelligence · 2025 · 被引 3 · Crossref）
 > **核心定位**：落點於「多模態 × 監督回歸 × 全自動黑盒」軸，解決傳統單一黑箱預測器無法模擬機構「自上而下教學／自下而上決策」協作流程的 prior gap，將異構信號轉化為可微的條件參數生成任務。
 
 **五軸座標**

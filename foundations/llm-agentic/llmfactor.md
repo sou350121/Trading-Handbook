@@ -4,6 +4,7 @@
 
 > **發布**：2024-07-07 · （無 venue）
 > **QuantML 導讀**：[LLMFactor ：大模型结合SKGP提供可解释的股价预测](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485339&idx=1&sn=e4f4f5dceaf6d660628b771ab88f0da5&chksm=ce7e6085f909e993cd16f6c9b7462561271c7b38a96de53e2fda8156ffeff7a698f9a52e4ffc#rd)
+> **原始論文**：[LLMFactor: Extracting Profitable Factors through Prompts for Explainable Stock Movement Prediction](https://doi.org/10.18653/v1/2024.findings-acl.185)（Findings of the Association for Computational Linguistics ACL 2024 · 2024 · 被引 21 · Crossref）
 > **核心定位**：落點於「文本另类×日频波段×生成式大模型」，解決傳統NLP因子挖掘僅依賴情感/關鍵詞、缺乏市場驅動邏輯與可解釋性的 prior gap，將非結構化新聞轉為結構化因子並聯合量價進行二分類預測。
 
 **五軸座標**

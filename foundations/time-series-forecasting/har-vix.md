@@ -4,6 +4,7 @@
 
 > **發布**：2024-07-11 · （無 venue）
 > **QuantML 導讀**：[线性模型足矣？传统HAR模型与机器学习在实现波动率预测中的对比](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485388&idx=1&sn=80428bd4ba936be537bc300ab55ef7d5&chksm=ce7e60d2f909e9c46231f77be22b1f6fdb69a5d1d1c0f607ba740b5572eba0f09e79f5fccfbd#rd)
+> **原始論文**：[A Simple Approximate Long-Memory Model of Realized Volatility](https://doi.org/10.1093/jjfinec/nbp001)（Journal of Financial Econometrics · 2008 · 被引 1787 · Crossref）
 > **核心定位**：落點於量價表格與日頻波段的監督回歸框架，以風險擇時為 Alpha 生成機制。解了「過度追求 ML 非線性卻忽略估計策略紀律」的 prior gap，證明線性異質自回歸在正確工程配置下具備實戰級別的可解釋與經濟效用。
 
 **五軸座標**

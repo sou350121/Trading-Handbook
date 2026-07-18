@@ -4,6 +4,7 @@
 
 > **發布**：2025-03-24 · AAAI25
 > **QuantML 導讀**：[AAAI 25 | LSTD: 识别长短期潜在变量，增强时序预测效果](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247489769&idx=1&sn=c3928bb79cca917beff2cc2b4ad024d6&chksm=ce7e7ff7f909f6e1a700ecaef0adc955dd3d5ee26a2b428a8b3318a4e1a4e2612c7c5a8a167c#rd)
+> **原始論文**：[Novel Robust Time Series Analysis for Long-term and Short-term Prediction](https://doi.org/10.21203/rs.3.rs-150640/v1)（2021 · 被引 0 · Crossref）
 > **核心定位**：落點於因果結構與端到端表征軸，解決在線非平穩環境下長短期潛在變量隱式耦合導致模型無法快速適應未知干預（如政策/匯率突變）的 prior gap。
 
 **五軸座標**

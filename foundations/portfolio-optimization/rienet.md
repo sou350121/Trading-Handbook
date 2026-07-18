@@ -4,6 +4,7 @@
 
 > **發布**：2026-06-24 · （無 venue）
 > **QuantML 導讀**：[经济物理学泰斗Mantegna新作： 端到端协方差网络](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247494131&idx=1&sn=f6ca8472c1db8785f68b7b867e934304&chksm=ce7d8eedf90a07fb9177b2d1810b8fe57bbed3a2da92e540c424dd1d1996af14175196cd2fed#rd)
+> **原始論文**：[End-to-End Large Portfolio Optimization for Variance Minimization with Neural Networks Through Covariance Cleaning](https://doi.org/10.2139/ssrn.5377303)（2025 · 被引 1 · Crossref）
 > **核心定位**：落點於「監督回歸 × 組合執行優化」軸，解決傳統 RMT 收縮估計器以 Frobenius 范數為目標與實際組合樣本外風險脫節的 prior gap，並透過特徵值排序映射打破深度學習參數隨資產維度膨脹的剛性限制。
 
 **五軸座標**

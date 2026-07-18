@@ -4,6 +4,7 @@
 
 > **發布**：2026-05-19 · （無 venue）
 > **QuantML 導讀**：[小样本时序预测等于抛硬币？](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247493892&idx=1&sn=f55369b67a684ef2e0b0176ed5681425&chksm=ce7d8e1af90a070c139e18611ae370beaf69ddd8cee5dfdc3b48762715a7923b98f7d42ba367#rd)
+> **原始論文**：[Sequential Structure in Intraday Futures Data: LSTM vs Gradient Boosting on MNQ](https://doi.org/10.2139/ssrn.6792161)（2026 · 被引 0 · Crossref）
 > **核心定位**：五軸落點於「高頻日內×監督回歸」的極端樣本約束場景，解構了「小規模分鐘線數據訓練深度時序模型」的過擬合先驗，以統計檢驗替代傳統回測指標作為Alpha有效性閾值。
 
 **五軸座標**

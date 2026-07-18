@@ -4,6 +4,7 @@
 
 > **發布**：2026-06-21 · （無 venue）
 > **QuantML 導讀**：[周五潜伏？知情交易周内择时的非线性 Alpha](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247494106&idx=1&sn=5f259f3c9b089fdc91431064ad8e4c9a&chksm=ce7d8ec4f90a07d27916db12deffcc653f19d397fa6557db4edd2641e5e30ee569b0b943564b#rd)
+> **原始論文**：[All that Glitters: The Effect of Attention and News on the Buying Behavior of Individual and Institutional Investors](https://doi.org/10.2139/ssrn.460660)（SSRN Electronic Journal · 2005 · 被引 41 · Crossref）
 > **核心定位**：落點於量價表格與日頻波段軸，以監督回歸解構因子挖掘。補齊了傳統內部人交易因子忽略「市場注意力閾值」與「週內擇時非線性交互」的 prior gap。
 
 **五軸座標**

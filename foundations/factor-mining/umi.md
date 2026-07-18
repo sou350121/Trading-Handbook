@@ -4,6 +4,7 @@
 
 > **發布**：2025-06-15 · KDD 2025
 > **QuantML 導讀**：[KDD 25 | 学习通用多层次市场非理性因子以提升股票收益预测](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490730&idx=1&sn=1a80d4c8f3880daec0b07b8c60710c95&chksm=ce7e7bb4f909f2a20ecffa3a88c4251710d72a5ed3e0fe5fbfafdd1fc8c902ebf0a475102b73#rd)
+> **原始論文**：[The UMI-Sci-Ed Platform: Integrating UMI Technologies to Promote Science Education](https://doi.org/10.5220/0006686200780090)（Proceedings of the 10th International Conference on Computer Supported Education · 2018 · 被引 6 · Crossref）
 > **核心定位**：落點於「量價表格 × 日频波段 × 监督回归」，以「因子挖掘 × 全自动黑盒」將行為金融學中的隱變量（情緒/操縱/心理偏差）轉化為可微的表示學習目標，填補了純技術面模型缺乏宏觀/微觀非理性錨點的 prior gap。
 
 **五軸座標**

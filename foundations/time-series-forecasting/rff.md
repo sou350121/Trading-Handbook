@@ -4,6 +4,7 @@
 
 > **發布**：2025-10-25 · （無 venue）
 > **QuantML 導讀**：[耶鲁 x AQR ｜ 模型越复杂，效果越好？](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247492112&idx=1&sn=0755e79d8a46b26e0047db1eb02e49c2&chksm=ce7d850ef90a0c18b98127b41ce5a5f1ab08a594fb7389d9a2a06802d2021ecc5eaf508876a3#rd)
+> **原始論文**：[A Comprehensive Look at The Empirical Performance of Equity Premium Prediction](https://doi.org/10.1093/rfs/hhm014)（Review of Financial Studies · 2007 · 被引 3382 · Crossref）
 > **核心定位**：落點於長週期量價監督回歸，解決傳統金融「奧卡姆剃刀」偏好低維線性模型導致的設定偏誤（misspecification）與經濟價值低估問題。
 
 **五軸座標**

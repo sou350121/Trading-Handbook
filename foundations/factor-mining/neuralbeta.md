@@ -4,6 +4,7 @@
 
 > **發布**：2024-08-12 · （無 venue）
 > **QuantML 導讀**：[NeuralBeta: 深度学习预测β系数](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247485758&idx=1&sn=caa3760dc7a2be287bdee8de4067a7a4&chksm=ce7e6e20f909e736841978af5895aa4f3a893bea742099e088d9bd0f0d81f6afb9973f0eaa90#rd)
+> **原始論文**：[NeuralBeta: Estimating Beta Using Deep Learning](https://doi.org/10.1145/3768292.3770373)（Proceedings of the 6th ACM International Conference on AI in Finance · 2025 · 被引 1 · Crossref）
 > **核心定位**：落點於「監督回歸 × 人機協同可解釋」軸，將傳統靜態/滾動 OLS/WLS 的 β 估計推入動態深度學習框架，解了「制度轉換期 β 跳躍滯後」與「黑盒權重不可審計」的 prior gap。
 
 **五軸座標**

@@ -4,6 +4,7 @@
 
 > **發布**：2025-05-30 · （無 venue）
 > **QuantML 導讀**：[FreqMoE: 通过频率分解MoE提升时间序列预测性能](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247490566&idx=1&sn=5c9eb1d7711e71d8c7c8f571c2c843331&chksm=ce7e7b18f909f20e0b5c809056a137026abbe81512481048c26c3cdff517b1b99a6b36b02bfa#rd)
+> **原始論文**：[FreqMoE: Dynamic Frequency Enhancement for Neural PDE Solvers](https://doi.org/10.24963/ijcai.2024/818)（Proceedings of the Thirty-ThirdInternational Joint Conference on Artificial Intelligence · 2024 · 被引 14 · Crossref）
 > **核心定位**：落點於「端到端表征 × 跨周期」軸，針對傳統頻域模型「固定濾波器無差別丟棄高頻分量」的 prior gap，以可學習邊界與動態門控實現頻帶自適應分配。
 
 **五軸座標**

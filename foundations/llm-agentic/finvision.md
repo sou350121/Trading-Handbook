@@ -4,6 +4,7 @@
 
 > **發布**：2024-11-15 · （無 venue）
 > **QuantML 導讀**：[FinVision: 基于多模态多智能体框架的股票市场预测系统](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247487733&idx=1&sn=e95f5aa14a6e742614f1f3aeba626605&chksm=ce7e77ebf909fefd8a81e646e374c3b12b5a2093bc3b72acbf27353f0c2f502bc885aeef0045#rd)
+> **原始論文**：[FinVision: A Multi-Agent Framework for Stock Market Prediction](https://doi.org/10.1145/3677052.3698688)（Proceedings of the 5th ACM International Conference on AI in Finance · 2024 · 被引 23 · Crossref）
 > **核心定位**：落點於「生成式大模型 × 多智能体博弈」軸，解決傳統 CV/RL 將金融數據過度簡化為單變量或黑箱決策的解釋性與多模態整合 gap。
 
 **五軸座標**
