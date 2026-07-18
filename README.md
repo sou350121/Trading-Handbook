@@ -33,11 +33,22 @@
 
 詳見 [`cheat-sheet/ontology.md`](cheat-sheet/ontology.md)。
 
-## Foundations — 10 個方法族 zone
+## Foundations — 10 個方法族 zone（351 頁，點進去逐頁解構）
 
-`time-series-forecasting` · `graph-networks` · `reinforcement-learning` · `llm-agentic` · `market-microstructure` · `factor-mining` · `portfolio-optimization` · `causal-structural` · `evaluation-benchmarks` · `data-generation-augmentation`
+| Zone 方法族 | 頁數 | 焦點 |
+|---|--:|---|
+| [時序預測](foundations/time-series-forecasting/overview.md) `time-series-forecasting` | 87 | 預測基座/基礎模型 |
+| [因子挖掘](foundations/factor-mining/overview.md) `factor-mining` | 60 | Alpha 因子/擁擠度 |
+| [LLM 智能體](foundations/llm-agentic/overview.md) `llm-agentic` | 48 | 大模型/多智能體交易 |
+| [強化學習](foundations/reinforcement-learning/overview.md) `reinforcement-learning` | 39 | 執行/做市/組合 RL |
+| [組合優化](foundations/portfolio-optimization/overview.md) `portfolio-optimization` | 33 | 配置/端到端優化 |
+| [市場微結構](foundations/market-microstructure/overview.md) `market-microstructure` | 26 | 訂單流/LOB/日內 |
+| [圖網絡](foundations/graph-networks/overview.md) `graph-networks` | 24 | 關係圖/動態圖 |
+| [評測基準](foundations/evaluation-benchmarks/overview.md) `evaluation-benchmarks` | 19 | 基準/打假/穩健性 |
+| [因果結構](foundations/causal-structural/overview.md) `causal-structural` | 9 | 機制/regime/定價 |
+| [數據生成](foundations/data-generation-augmentation/overview.md) `data-generation-augmentation` | 6 | 合成/增強/模擬 |
 
-> zone 按**方法族**切；跨族資訊由五軸座標 + tags 承載，在 [Crossing](crossing/overview.md) 張力圖撈出（預測 vs 策略驅動、可解釋因子 vs 端到端黑盒、大模型 vs 專用時序基座 …）。
+> zone 按**方法族**切；跨族資訊由五軸座標 + tags 承載，在 [Crossing 張力圖](crossing/overview.md) 撈出（預測 vs 策略驅動、可解釋因子 vs 端到端黑盒、大模型 vs 專用時序基座 …）。時間維度見 [兩年演進 timeline](cheat-sheet/timeline.md)。
 
 ## 怎麼建的（Pulsar 管線 · Opus/qwen 分工）
 
