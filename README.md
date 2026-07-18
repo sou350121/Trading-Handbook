@@ -15,7 +15,9 @@
 
 一本給**做過實盤或嚴肅回測**的量化研究員 / ML 工程師的方法解構手冊。不科普「什麼是 Transformer / 強化學習 / 因子」，直接進「這個方法跟另一個在五軸上差在哪、哪些 claim 在真實市場會崩、怎麼跟另一條線組合」。
 
-語料源：**QuantML 公眾號**「論文」合集（2024-06 ~ 2026-06，399 篇論文導讀）作為**選題雷達與發現源**。每一頁解構是我們**自己對公開論文（arXiv / KDD / ICML / JFE 等）的二階分析**，QuantML 作為策展來源致謝並回鏈；不轉載其正文。
+語料源：**QuantML 公眾號**「論文」合集（2024-06 起，每日增量）作為**選題雷達與發現源**。每一頁解構是我們**自己對公開論文（arXiv / KDD / ICML / JFE 等）的二階分析**，多數頁面已回鏈到 `原始論文`（arXiv/DOI + venue + 被引數，經 Crossref 核驗）；QuantML 作為策展來源致謝並回鏈，不轉載其正文。
+
+**多源情報層（[Radar](radar/overview.md)）**：除 QuantML 外，每週自動掃描更多來源並依五軸/十區分類——[arXiv q-fin 雷達](radar/arxiv/overview.md)（q-fin.* + cs.LG/stat.ML 量化新論文）與[实践者雷达](radar/practitioner/overview.md)（Quantocracy / Alpha Architect / AQR / Quantpedia / CXO 等從業者博客）。雷達只出「標題＋鏈接＋我們的一句話機制解讀」，⚡ 標記候選深度解構。
 
 ## 五軸本體論（手冊的靈魂）
 

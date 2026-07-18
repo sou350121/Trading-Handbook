@@ -112,6 +112,7 @@ python3 scripts/pulsar/asciiflow_to_mermaid.py --workers 2 >>"$LOG" 2>&1 || true
 python3 scripts/gen_overviews.py >>"$LOG" 2>&1
 python3 scripts/gen_nav.py >>"$LOG" 2>&1
 python3 scripts/pulsar/number_audit.py >>"$LOG" 2>&1 || true        # advisory (logs flags)
+/usr/bin/python3.11 scripts/pulsar/resolve_sources_v2.py --resolve --inject >>"$LOG" 2>&1 || true  # link new pages to real paper (Crossref)
 python3 scripts/export_corpus_meta.py >>"$LOG" 2>&1 || true         # ship recoverable slug/label state
 
 git add foundations/ crossing/ cheat-sheet/ bridge-to-vla/ docs.json data/index.json data/corpus_meta.json 2>>"$LOG"
