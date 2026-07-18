@@ -8298,5 +8298,25 @@
       "alpha": "因子挖掘",
       "autonomy": "人机协同可解释"
     }
+  },
+  {
+    "pos": 418,
+    "msgid": "2247494295",
+    "title": "GOOGLE ｜ 大模型因子挖掘的真实生存率",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "llm-factor-lab",
+    "dup_of": null,
+    "framework": "LLM Factor Lab",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "生成式大模型",
+      "alpha": "因子挖掘",
+      "autonomy": "Agent自主演进"
+    }
   }
 ]
