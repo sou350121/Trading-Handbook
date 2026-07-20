@@ -8300,6 +8300,26 @@
     }
   },
   {
+    "pos": 417,
+    "msgid": "2247494280",
+    "title": "XALPHA：AI量化研究员——研报理解、策略挖掘与代码生成",
+    "zone": "llm-agentic",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "xalpha",
+    "dup_of": null,
+    "framework": "XALPHA",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "因子挖掘",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
     "pos": 418,
     "msgid": "2247494295",
     "title": "GOOGLE ｜ 大模型因子挖掘的真实生存率",
