@@ -2,12 +2,13 @@
 
 > **收錄**：限价订单簿(LOB)建模、订单流信号、做市策略、高频套利、微观流动性与价格形成机制
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：32 篇（29 篇成解構頁，其餘為 registry）
+> **本 zone 現有**：35 篇（32 篇成解構頁，其餘為 registry）
 
 ## 解構清單
 
 | 方法 | 評級 | 來源 | TL;DR |
 |---|---|---|---|
+| [Autocorrelation Map](autocorrelation-map) | ⚡ | [arXiv](https://arxiv.org/abs/2607.09426) | 发现加密货币期货在整点/刻钟存在算法交易引发的量价脉冲，刻钟开盘订单失衡可预测4-12小时收益。 |
 | [波动率归一化Tick Size](tick-size) | ⚡ | 波动率归一化Tick Size | 揭示2008年后短周期趋势策略失效源于HFT做市商在细Tick稀疏订单簿中的定向撤单，切断趋势自 |
 | [影响中性测度变换](art-395) | ⚡ | 影响中性测度变换 | 本文在Kyle-Back模型中引入动态合规风险，通过影响中性测度变换将随机博弈退化为确定性最优控 |
 | [MDS (Metric Dependence Screening)](mds-metric-dependence-screening) | ⚡ | MDS (Metric Dependence Screening) | 提出基于Fréchet变差的度量依赖筛选框架，利用日内波动曲线与日度收益构建非欧度量空间，实现高 |
@@ -21,7 +22,9 @@
 | [JF | 消失的指数效应](vanishing-index-effect) | ⚡ | JF | 本文实证发现S&P 500指数纳入/剔除的异常回报近十年趋零，主因是指数迁移抵消需求冲击及市场流 |
 | [EDGE](edge) | ⚡ | JFE | 提出基于日频OHLC的EDGE估计量，通过GMM动态组合矩条件，解决传统低频价差估计的偏差与高方 |
 | [Stochastic Optimal Control with Reputation Gates](stochastic-optimal-control-with-reputation-gates) | 🔧 | [arXiv](https://arxiv.org/abs/2607.11328) | 构建含声誉反馈的OTC做市随机控制模型，揭示报价策略在声誉积累与变现间的动态权衡及双稳态现象。 |
+| [Phase-diagram ABM with null/artefact discipline](phase-diagram-abm-with-null-artefact-discipline) | 🔧 | [arXiv](https://arxiv.org/abs/2607.08907) | 用相图法验证订单簿ABM中羊群行为引发的流动性枯竭是真实相变，并分解其反射机制。 |
 | [Detecting unusual trading patt](detecting-unusual-trading-patterns-on-cryptocurrency-exchanges-by-means-of-complexity-measures) | 🔧 | [arXiv](https://arxiv.org/abs/2607.13916) | 本文基于高频交易数据，利用多重分形、近似熵等复杂度指标构建诊断框架，有效识别中心化交易所的刷量与 |
+| [L2 Liquidity-State Transition](l2-liquidity-state-transition) | 🔧 | [arXiv](https://arxiv.org/abs/2607.09230) | 在加密期货事件窗口内，预事件L2流动性状态是预测后事件流动性的首要信号，订单流仅具增量价值。 |
 | [解码动量溢出：日内-隔夜收益的非对称结构](art-333) | 🔧 | — | 将动量溢出拆解为日内与隔夜收益，揭示散户追涨与机构慢速套利驱动的非对称定价机制。 |
 | [谱交易量模型](art-332) | 🔧 | 谱交易量模型 | 本文提出基于傅里叶分析的谱交易量模型，揭示中美股市高频交易量的周期性规律，并应用于VWAP执行优 |
 | [TLOB](tlob) | 🔧 | TLOB | 提出TLOB模型，利用时间与特征双重注意力机制及双线性归一化，直接端到端预测限价订单簿价格趋势， |

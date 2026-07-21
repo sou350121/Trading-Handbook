@@ -2,12 +2,13 @@
 
 > **收錄**：DRL/MARL在选股、调仓、做市、执行与对冲中的应用，涵盖PPO/SAC/分布RL、奖励函数设计与环境模拟
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：45 篇（43 篇成解構頁，其餘為 registry）
+> **本 zone 現有**：46 篇（44 篇成解構頁，其餘為 registry）
 
 ## 解構清單
 
 | 方法 | 評級 | 來源 | TL;DR |
 |---|---|---|---|
+| [Sinkhorn-based Robust RL for Market Making](sinkhorn-based-robust-rl-for-market-making) | ⚡ | [arXiv](https://arxiv.org/abs/2607.08291) | 提出基于Sinkhorn模糊集的高频做市鲁棒RL框架，解耦不确定性容忍与动作鲁棒性两维度，揭示流 |
 | [ReCAP](recap) | ⚡ | KDD26 | 提出ReCAP持续学习框架，通过CUSUM自适应切分市场制度、存储策略差异向量与动态网关融合，解 |
 | [OPHR](ophr) | ⚡ | OPHR | 提出OPHR多智能体强化学习框架，通过OP-Agent择时与HR-Agent路由对冲，在加密货币 |
 | [JaxMARL-HFT](jaxmarl-hft) | ⚡ | JaxMARL-HFT | 提出首个GPU加速的HFT多智能体强化学习框架JaxMARL-HFT，基于JAX实现异构智能体并 |

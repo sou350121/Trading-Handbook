@@ -35,7 +35,8 @@
             "pages": [
               "cheat-sheet/overview.md",
               "cheat-sheet/ontology.md",
-              "cheat-sheet/timeline.md"
+              "cheat-sheet/timeline.md",
+              "cheat-sheet/seminal-canon.md"
             ]
           },
           {
@@ -239,6 +240,7 @@
               "foundations/reinforcement-learning/recap.md",
               "foundations/reinforcement-learning/reinforcement-learning-for-execution-under-dynamic-fees-in-a-closed-loop-dex-simulator.md",
               "foundations/reinforcement-learning/sac-cnn-mha.md",
+              "foundations/reinforcement-learning/sinkhorn-based-robust-rl-for-market-making.md",
               "foundations/reinforcement-learning/stock-evol-instruct.md",
               "foundations/reinforcement-learning/td3.md",
               "foundations/reinforcement-learning/tf-agents.md",
@@ -273,6 +275,7 @@
               "foundations/llm-agentic/finsight.md",
               "foundations/llm-agentic/finvision.md",
               "foundations/llm-agentic/graphrag.md",
+              "foundations/llm-agentic/grounded-event-extraction-system.md",
               "foundations/llm-agentic/hedgeagents.md",
               "foundations/llm-agentic/hybridrag.md",
               "foundations/llm-agentic/kag.md",
@@ -317,6 +320,7 @@
               "foundations/market-microstructure/art-363.md",
               "foundations/market-microstructure/art-395.md",
               "foundations/market-microstructure/attn-lob.md",
+              "foundations/market-microstructure/autocorrelation-map.md",
               "foundations/market-microstructure/clusterlob.md",
               "foundations/market-microstructure/coi.md",
               "foundations/market-microstructure/detecting-unusual-trading-patterns-on-cryptocurrency-exchanges-by-means-of-complexity-measures.md",
@@ -324,11 +328,13 @@
               "foundations/market-microstructure/flowhft.md",
               "foundations/market-microstructure/hawkes-lob-ppo-sil.md",
               "foundations/market-microstructure/hlob.md",
+              "foundations/market-microstructure/l2-liquidity-state-transition.md",
               "foundations/market-microstructure/lob.md",
               "foundations/market-microstructure/mdi-gd-rbfnn.md",
               "foundations/market-microstructure/mds-metric-dependence-screening.md",
               "foundations/market-microstructure/optm-lstm.md",
               "foundations/market-microstructure/order-flow-explanatory-power.md",
+              "foundations/market-microstructure/phase-diagram-abm-with-null-artefact-discipline.md",
               "foundations/market-microstructure/pvar.md",
               "foundations/market-microstructure/stochastic-optimal-control-with-reputation-gates.md",
               "foundations/market-microstructure/tick-size.md",
@@ -432,6 +438,7 @@
               "foundations/portfolio-optimization/harlf.md",
               "foundations/portfolio-optimization/llm-bl.md",
               "foundations/portfolio-optimization/llm-blm.md",
+              "foundations/portfolio-optimization/lpas.md",
               "foundations/portfolio-optimization/masa.md",
               "foundations/portfolio-optimization/moedrlpm.md",
               "foundations/portfolio-optimization/rienet.md",
@@ -455,6 +462,7 @@
               "foundations/causal-structural/art-324.md",
               "foundations/causal-structural/art-57.md",
               "foundations/causal-structural/causalstock.md",
+              "foundations/causal-structural/convex-surrogate-contextual-pricing.md",
               "foundations/causal-structural/csht.md",
               "foundations/causal-structural/regime-switching-pricing-kernel.md",
               "foundations/causal-structural/seer.md",
@@ -531,6 +539,13 @@
             ]
           },
           {
+            "group": "頂刊 Journals",
+            "pages": [
+              "radar/journals/overview.md",
+              "radar/journals/2026-W30.md"
+            ]
+          },
+          {
             "group": "arXiv q-fin",
             "pages": [
               "radar/arxiv/overview.md",
@@ -565,7 +580,8 @@
           {
             "group": "Overview",
             "pages": [
-              "deployment/overview.md"
+              "deployment/overview.md",
+              "deployment/github_engineering_notes.md"
             ]
           }
         ]

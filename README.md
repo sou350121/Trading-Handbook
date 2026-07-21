@@ -14,7 +14,7 @@
 ![一手解構](https://img.shields.io/badge/新-arXiv_一手全文解構-D4910A)
 [![照見 Pulsar](https://img.shields.io/badge/照見_Pulsar-自動驅動-8B5CF6)](https://github.com/sou350121/Pulsar-KenVersion)
 
-`366 頁解構` · `10 方法族` · `6 深度綜述` · `6 張力圖` · `13 篇 arXiv 一手解構` · `每日自動增長`
+`367 頁解構` · `10 方法族` · `6 深度綜述` · `12 頂刊雷達` · `14 篇一手解構` · `11 庫工程筆記` · `每日自動增長`
 
 </div>
 
@@ -28,11 +28,12 @@
 不是教科書、不是論文摘要，是一張**可導航的方法地圖**。每一頁把一個量化 ML 方法拆成「架構 → 數學 → 數據 → 評測 → **失效模式** → 怎麼跟別的線組合」，再投到**五軸本體論**上跟其他方法做 Pareto 對比。多數頁已回鏈原始論文（arXiv/DOI＋被引數，Crossref 核）。
 
 > [!TIP]
-> **想在裡面找靈感？四條路——**
+> **想在裡面找靈感？五條路——**
 > 1. 想吃透**一整族** → **🧭 深度綜述**：把幾十頁串成演進主線＋核心張力＋失效合集
 > 2. 要**策略角度** → **⚔️ 六個策略問題**：每個都是一場「誰持續付錢」的博弈
 > 3. 查**某類方法** → **📂 10 區地圖**，每區 `⚡` = 最值得先讀
-> 4. 追**前沿** → **📡 雷達**，每週自動掃 arXiv ＋ 從業者博客（`⚡` 命中會被一手全文解構成新頁）
+> 4. 追**前沿** → **📡 三路雷達**：12 本頂刊 ＋ arXiv ＋ 從業者/NBER/Fed/BIS（`⚡` 命中自動一手全文解構）
+> 5. 要**工程實戰** → **🔧 GitHub 工程筆記**：11 個 quant 開源庫的坑→解法，論文不會告訴你的事
 
 ## 三個理由選它
 
@@ -57,7 +58,7 @@
 | **失效模式點破** | ⚠️ 自己讀出 | ❌ 只講亮點 | ⚠️ 偏正面 | ⚠️ 零散 | ✅ 每頁 §6 隱含假設 + 何時崩 |
 | **方法間系統對比** | ❌ 一篇篇看 | ❌ | ⚠️ 偏因子 | ❌ | ✅ 五軸 + 6 張力圖 + 6 綜述 |
 | **一手 vs 二手** | ✅ 一手 | ❌ 二手摘要 | ⚠️ 混合 | ⚠️ 混雜 | ✅ 導讀 ＋ arXiv 一手全文解構 |
-| **更新頻率** | 實時但海量 | 不定期 | 月 / 季 | 實時但難搜 | 每日自動 + 每週雷達 |
+| **更新頻率** | 實時但海量 | 不定期 | 月 / 季 | 實時但難搜 | 每日自動＋週度三路雷達＋工程層 |
 | **歷史可查 / grep** | ✅ arXiv | ❌ 90 天限流 | ❌ 難獲取 | ❌ 帖子易沉 | ✅ Git 永久 + 全文 grep |
 | **數字可信** | ✅ 原文 | ⚠️ 轉述易錯 | ✅ | ⚠️ 參差 | ✅ number_audit 逐字接地 |
 
@@ -121,7 +122,7 @@
 | **Alpha 機制** | 顯式因子 ↔ 端到端表徵 ↔ 組合/執行優化 ↔ 多智能體博弈 |
 | **人機協作** | 全自動黑盒 ↔ 人機協同/可解釋 ↔ Agent/自主演進 |
 
-詳見 [五軸速查](cheat-sheet/ontology.md) · 時間維度看 [兩年演進 timeline](cheat-sheet/timeline.md)。
+詳見 [五軸速查](cheat-sheet/ontology.md) · 時間維度看 [兩年演進 timeline](cheat-sheet/timeline.md) · 溯源看 [祖先論文正典](cheat-sheet/seminal-canon.md)（本冊引文圖裡的開山之作：ARCH / EMH / LSTM / Fama-French / LOBSTER…，Crossref 機械統計）。
 
 ## 📂 10 方法族地圖（366 頁）
 
@@ -140,20 +141,26 @@
 
 > zone 按**方法族**切；跨族的比較由五軸 + tags 承載，在上面的張力圖撈出。
 
-## 📡 雷達（多源前瞻情報）
+## 📡 三路雷達（多源前瞻情報）
 
-除 QuantML 策展外，每週自動掃更多來源、依十區分類，只出「標題＋鏈接＋一句話機制解讀」；`⚡` 命中會被**抓全文一手解構成新頁**（走 ar5iv/PDF，非二手摘要）：
+除 QuantML 策展外，每週自動掃三層來源、依十區分類，只出「標題＋鏈接＋一句話機制解讀」；`⚡` 命中會被**抓全文一手解構成新頁**（arXiv 走 ar5iv/PDF、頂刊走 Unpaywall 開放取用副本）：
 
+- [頂刊雷達](radar/journals/overview.md) — **JF / JFE / RFS / JFQA / Management Science / Quantitative Finance 等 12 本金融頂刊**（Crossref 註冊流輪詢，補上 arXiv 之外真正的金融文獻主戰場）
 - [arXiv q-fin 雷達](radar/arxiv/overview.md) — q-fin.* ＋ cs.LG/stat.ML 量化新論文
-- [實踐者雷達](radar/practitioner/overview.md) — Quantocracy / Alpha Architect / AQR / Quantpedia / CXO 等從業者博客
+- [實踐者雷達](radar/practitioner/overview.md) — Quantocracy / Alpha Architect / Quantpedia / CXO 等從業者博客 ＋ **NBER / Fed / BIS 機構工作論文**
+
+## 🔧 工程經驗（論文不會告訴你的事）
+
+[GitHub 工程經驗筆記](deployment/github_engineering_notes.md) — **11 個核心 quant 開源庫**（qlib / FinRL / vectorbt / nautilus_trader / LEAN / backtesting.py / pysystemtrade / freqtrade / hummingbot / ML4T / OpenBB）的高互動 issues，蒸餾成「坑 → 解法」，逐條帶原 issue 連結可追溯，每週增量。方法為什麼崩看 [綜述](guides/overview.md)；**工程**為什麼崩看這裡。
 
 ## ⏱ 自動更新（北京時間）
 
 | 內容 | 時間 | 去哪看 |
 |---|---|---|
 | QuantML 語料增量同步 | 每日 21:00 | [foundations/](foundations/overview.md) |
-| arXiv q-fin ＋ 從業者雷達 | 每週六 15:00 | [radar/](radar/arxiv/overview.md) |
-| ⚡ 命中 → 一手全文解構 | 隨週度雷達 | foundations/（arXiv 頁） |
+| 頂刊 ＋ arXiv ＋ 從業者/機構三路雷達 | 每週六 15:00 | [radar/](radar/overview.md) |
+| GitHub 工程經驗筆記（增量追加） | 每週六 15:00 | [deployment/](deployment/github_engineering_notes.md) |
+| ⚡ 命中 → 一手全文解構（arXiv＋頂刊 OA） | 隨週度雷達 | foundations/ |
 | 自愈 watchdog | 每日 09:00 | — |
 
 ## ⚙️ 背後的系統：照見 Pulsar
@@ -167,7 +174,7 @@
 
 ## 狀態（誠實）
 
-**v0.5 · 每日自動增長。** 366 頁已生成、質量閘門全綠（0 斷鏈/孤頁/版權洩漏）。內容是對公開論文的**二階分析**（多數已回鏈原文、約 1/4 帶被引數），另有 13 篇由 arXiv 全文**一手解構**——是一張**強地圖**，不是逐頁核過原文的權威參考；未驗證細節標 `TBD`（設計特性，不假裝確定）。
+**v0.5 · 每日自動增長。** 367 頁已生成、質量閘門全綠（0 斷鏈/孤頁/版權洩漏）。內容是對公開論文的**二階分析**（多數已回鏈原文、約 1/4 帶被引數），另有 14 篇由 arXiv／頂刊 OA 全文**一手解構**——是一張**強地圖**，不是逐頁核過原文的權威參考；未驗證細節標 `TBD`（設計特性，不假裝確定）。頂刊雷達／工程筆記層 2026-W30 剛上線（首週數據，長期價值看累積）。
 
 <details>
 <summary><b>怎麼建的 · 版權</b></summary>
