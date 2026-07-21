@@ -31,7 +31,7 @@
 **1.3 信息流 ASCII 圖**
 ```mermaid
 flowchart TD
-    A["Raw Market Data"] --> B["[Data Module]"]
+    A["Raw Market Data"] --> B["Data Module"]
     B --> C["Cleaned DF + Tech Indicators"]
     C --> D["[Env Module] (Gym Wrapper)"]
     D --> E["State: {prices, indicators, cash, positions}"]
@@ -41,7 +41,7 @@ flowchart TD
     H --> I["[Agent Module] (PPO/SAC/etc.)"]
     I --> J["Policy Update"]
     J --> K["Checkpoint"]
-    K --> L["[Backtest/Eval]"]
+    K --> L["Backtest/Eval"]
     L --> M["Metrics (Sharpe, MDD, AR)"]
     M --> N["Live Deployment Hook"]
 ```

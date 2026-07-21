@@ -31,15 +31,15 @@
 **1.3 信息流 ASCII 圖**
 ```mermaid
 flowchart TD
-    A["State (P_t, I_t)"] --> B["[FC嵌入 + 時空矩陣]"]
-    B --> C["[時間Attention]"]
-    C --> D["[空間Attention]"]
-    D --> E["[MoE Router]"]
+    A["State (P_t, I_t)"] --> B["FC嵌入 + 時空矩陣"]
+    B --> C["時間Attention"]
+    C --> D["空間Attention"]
+    D --> E["MoE Router"]
     E --> F["專家池"]
     F --> G["w_t"]
-    A --> H["[指數LSTM]"]
-    H --> I["[時間Attention]"]
-    I --> J["[FC]"]
+    A --> H["指數LSTM"]
+    H --> I["時間Attention"]
+    I --> J["FC"]
     J --> K["高斯采樣"]
     K --> L["α_t"]
     L --> M["Action (w_t, α_t)"]

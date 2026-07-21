@@ -31,18 +31,18 @@
 **1.3 信息流 ASCII**
 ```mermaid
 flowchart TD
-    A["[Raw OHLCV]"] --> B["(Macro TCN)"]
-    B --> C["[Aligned Embeddings]"]
+    A["Raw OHLCV"] --> B["(Macro TCN)"]
+    B --> C["Aligned Embeddings"]
     C --> D["(Micro Contrastive)"]
-    D --> E["[Shift-Sensitive Reps]"]
-    A --> F["[Label Distance Matrix]"]
-    E --> G["[Dual-Window Pairs]"]
-    F --> H["[MSE + Frobenius Loss]"]
-    G --> J["[InfoNCE/BCE Loss]"]
+    D --> E["Shift-Sensitive Reps"]
+    A --> F["Label Distance Matrix"]
+    E --> G["Dual-Window Pairs"]
+    F --> H["MSE + Frobenius Loss"]
+    G --> J["InfoNCE/BCE Loss"]
     I["(Joint Pretrain)"] --> H
     I --> J
-    H --> K["[Task Construction & Sampling]"]
-    J --> M["[Online Prediction Stream]"]
+    H --> K["Task Construction &amp; Sampling"]
+    J --> M["Online Prediction Stream"]
     K --> L["(MAML Meta-Update)"]
     L --> M
 ```

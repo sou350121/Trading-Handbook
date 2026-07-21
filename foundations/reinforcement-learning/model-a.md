@@ -28,7 +28,7 @@
 **信息流:**
 ```mermaid
 flowchart TD
-    A["[Open Price, Vol, VIX]"] --> B["DNN Agent (20d seq) / DT Agent (short window)"]
+    A["Open Price, Vol, VIX"] --> B["DNN Agent (20d seq) / DT Agent (short window)"]
     B --> C["RL Context Evaluator (24h re-eval)"]
     C --> D["Scaled Action (Long/Short/Flat × 0/±1)"]
     D --> E["Execution"]

@@ -34,9 +34,9 @@
 flowchart TD
   A["OHLCV (23yr)"] --> B["特徵工程 (Trend/Vol/Momentum)"]
   B --> C["滾動窗口 State_t"]
-  C --> D["[Actor Network]"]
+  C --> D["Actor Network"]
   D --> E["Action_t (Buy/Sell/Rebalance prob)"]
-  C --> F["[Critic Network]"]
+  C --> F["Critic Network"]
   F --> G["Value_t (Expected Cumulative Reward)"]
   E --> H["Environment (Market + Transaction Cost)"]
   H --> I["Reward_t, State_{t+1}"]
@@ -47,7 +47,7 @@ flowchart TD
 
 ## §2 · 數學層
 📌 **Napkin Formula:**
-$A(s,a) = Q(s,a) - V(s)$
+\$A(s,a) = Q(s,a) - V(s)\$
 $\mathcal{L} = \mathcal{L}_{policy} + \mathcal{L}_{value} + \beta \mathcal{L}_{entropy}$
 **複雜度:** 前向傳播 $O(W \times N \times F)$，訓練步數 100 萬步，依賴 8x A800 集群。
 **直覺:** 優勢函數剥离了狀態本身的基礎價值，使策略梯度僅對「超額表現」敏感；熵損失強制探索，防止策略收斂到單一資產或空倉。

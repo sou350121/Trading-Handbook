@@ -33,11 +33,11 @@
 ```mermaid
 flowchart TD
   A["[t-1 特徵 X_{t-1}] + [t-1 收益 Y_{t-1}]"] --> B["(Context Tokens)"]
-  C["[t 特徵 X_t]"] --> D["(Query Tokens)"]
-  D --> E["[Transformer Encoder] (Inter-feature & Inter-sample Attn, Causal Mask)"]
-  E --> F["[Output Distribution]"]
+  C["t 特徵 X_t"] --> D["(Query Tokens)"]
+  D --> E["[Transformer Encoder] (Inter-feature &amp; Inter-sample Attn, Causal Mask)"]
+  E --> F["Output Distribution"]
   F --> G["Median"]
-  G --> H["[t 預測收益 Ŷ_t]"]
+  G --> H["t 預測收益 Ŷ_t"]
 ```
 
 ## §2 · 數學層

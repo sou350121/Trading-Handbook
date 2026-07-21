@@ -33,10 +33,10 @@
 flowchart TD
     A["News (197 countries)"] --> B["FinBERT"]
     B --> C["Sentiment Score"]
-    C --> D["[Granger Causality Test]"]
+    C --> D["Granger Causality Test"]
     D --> E["(Lags 1/3/7/14/30)"]
     E --> F["Validated Sentiment Feature"]
-    F --> G["S&P500 OHLCV + Validated Sentiment"]
+    F --> G["S&amp;P500 OHLCV + Validated Sentiment"]
     G --> H["LSTM (MSE Loss)"]
     H --> I["Volatility Prediction"]
     I --> J["Text Data"]

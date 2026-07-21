@@ -32,9 +32,9 @@
 **1.3 信息流 ASCII**
 ```mermaid
 flowchart TD
-    A["SEC Form 4"] --> B["[Routine Filter (Cohen 2012)]"]
+    A["SEC Form 4"] --> B["Routine Filter (Cohen 2012)"]
     B --> C["Opportunistic Event"]
-    C --> D["[Volume > 30d Mean?]"]
+    C --> D["Volume &gt; 30d Mean?"]
     D --> E["High Attention=1"]
     E --> F["Interaction Term (Fri/Mon × HighAtt)"]
     F --> G["CAR [0, +2] Prediction"]

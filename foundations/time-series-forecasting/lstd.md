@@ -32,12 +32,12 @@
 **1.3 信息流 ASCII**
 ```mermaid
 flowchart TD
-    A["Input X_t"] --> B["[Long Encoder]"]
+    A["Input X_t"] --> B["Long Encoder"]
     B --> C["Z_long_t"]
     C --> D["Smoothness Constraint"]
     D --> E["Decoder"]
     E --> F["Ŷ_{t+1}"]
-    A --> G["[Short Encoder]"]
+    A --> G["Short Encoder"]
     G --> H["Z_short_t"]
     H --> I["Interruption Constraint"]
     I --> E

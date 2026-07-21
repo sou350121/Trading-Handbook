@@ -33,11 +33,11 @@
 ```mermaid
 flowchart TD
     N1["Macro Vector (5 indices)"] --> N2["Kalman Filter"]
-    N2 --> N4["Linear Projection & Fusion"]
+    N2 --> N4["Linear Projection &amp; Fusion"]
     N2 --> N3["動態敏感度 β_t"]
     N4 --> N6["Conditional DDIM (MLG)<br/>Macro Branch vs Full Branch"]
     N4 --> N5["融合條件表示"]
-    N6 --> N8["Sample Mean & Covariance"]
+    N6 --> N8["Sample Mean &amp; Covariance"]
     N6 --> N7["多路徑收益率採樣"]
     N8 --> N10["BL Bayesian Fusion → MVO"]
     N8 --> N9["主觀觀點 (μ_view, Ω)"]

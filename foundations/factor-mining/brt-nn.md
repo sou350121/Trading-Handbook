@@ -34,7 +34,7 @@ flowchart TD
   A["Raw Financials (240 vars) × 76 Transforms"] --> B["Signal Universe (18,113)"]
   B --> C["Recursive Window (t-1)"]
   C --> D["Compute t-stat for each signal's Long-Short portfolio"]
-  D --> E["Rank & Decile"]
+  D --> E["Rank &amp; Decile"]
   E --> F["Select Top/Bottom groups"]
   F --> G["BRT/NN (Trained on selected signals)"]
   G --> H["Predict 12m Return"]

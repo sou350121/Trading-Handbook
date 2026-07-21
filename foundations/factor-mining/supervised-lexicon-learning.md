@@ -31,31 +31,31 @@
 **1.3 信息流**
 ```mermaid
 flowchart TD
-  N1["[10-K HTML]"] --> N2["(正則提取)"]
-  N2 --> N3["[Full Text / Item 1A]"]
-  N2 --> N4["[Tokenization]"]
-  N4 --> N5["[Document-Term Matrix D]"]
-  N4 --> N6["[Labels: Return / Volatility]"]
-  N6 --> N7["[Supervised Lexicon Learning]"]
-  N6 --> N8["[Topic Distribution O]"]
-  N8 --> N9["[Penalized Likelihood]"]
-  N9 --> N10["[Sentiment Score p]"]
-  N8 --> N11["[Aggregation: Sector / Portfolio / Firm]"]
-  N11 --> N12["[Factor Signal]"]
+  N1["10-K HTML"] --> N2["(正則提取)"]
+  N2 --> N3["Full Text / Item 1A"]
+  N2 --> N4["Tokenization"]
+  N4 --> N5["Document-Term Matrix D"]
+  N4 --> N6["Labels: Return / Volatility"]
+  N6 --> N7["Supervised Lexicon Learning"]
+  N6 --> N8["Topic Distribution O"]
+  N8 --> N9["Penalized Likelihood"]
+  N9 --> N10["Sentiment Score p"]
+  N8 --> N11["Aggregation: Sector / Portfolio / Firm"]
+  N11 --> N12["Factor Signal"]
 ```
 
 ## §2 · 數學層
 📌 **Napkin Formula**:
 $D \in \mathbb{R}^{n \times m}_{+}$ (Document-Term Matrix)
 $p_i \in [0,1]$ (Unobserved sentiment score for filing $i$)
-$\hat{p} = \arg\max_p \mathcal{L}(p | D, y) - \lambda \|p\|^2$ (Penalized likelihood estimation against label $y$)
+$\hat{p} = \arg\max_p \mathcal{L}(p \mid D, y) - \lambda \|p\|^2$ (Penalized likelihood estimation against label $y$)
 
 **直覺**: 將詞彙頻率矩陣 $D$ 與市場標籤 $y$ 對齊，透過優化求解每個文件的隱含情緒 $p$ 與詞彙主題分佈 $\hat{O}$。複雜度取決於詞彙表大小 $m$ 與文件數 $n$，屬矩陣分解與凸優化範疇，遠低於 Transformer 的序列建模成本。
 **Loss/訓練細節**: 採用懲罰似然估計，未披露具體正則化項 $\lambda$ 與優化器超參（TBD）。
 
 ## §2.5 · 帶數字走一遍（Worked Example）
 **假設/示意**：以下為機制手算演示，**非論文實證結果**。
-1. **輸入**：某科技股 10-K Item 1A 經預處理後詞彙表 $m=5$，文件數 $n=1$。$D = [10, 2, 5, 0, 8]$（對應詞彙：`risk`, `growth`, `debt`, `profit`, `litigation`）。
+1. **輸入**：某科技股 10-K Item 1A 經預處理後詞彙表 $m=5$，文件數 $n=1$。\$D = [10, 2, 5, 0, 8]\$（對應詞彙：`risk`, `growth`, `debt`, `profit`, `litigation`）。
 2. **標籤**：未來波動率 $y$ 標定為高風險。
 3. **主題更新**：模型透過監督學習更新 $\hat{O}$，推導出高風險相關詞彙權重上升：`risk`(+0.4), `debt`(+0.3), `litigation`(+0.5)；`growth`(-0.2), `profit`(-0.1)。
 4. **得分計算**：$p = \sum (D_j \times \hat{O}_j) / \sum D_j = (10\times0.4 + 2\times(-0.2) + 5\times0.3 + 0 + 8\times0.5) / 25 = 9.1 / 25 = 0.364$。

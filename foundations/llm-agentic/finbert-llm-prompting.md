@@ -38,7 +38,7 @@ flowchart TD
 ```
 
 ## §2 · 數學層
-📌 **Napkin Formula**: $P(y|x, \mathcal{D}_{prompt}) = \text{Softmax}(W \cdot \text{LLM}_{\theta}(x \oplus \mathcal{D}_{prompt}))$，其中 $\mathcal{D}_{prompt}$ 為靜態示例集。複雜度：推理 $O(L \cdot d)$，無訓練梯度計算。
+📌 **Napkin Formula**: $P(y \mid x, \mathcal{D}_{prompt}) = \text{Softmax}(W \cdot \text{LLM}_{\theta}(x \oplus \mathcal{D}_{prompt}))$，其中 $\mathcal{D}_{prompt}$ 為靜態示例集。複雜度：推理 $O(L \cdot d)$，無訓練梯度計算。
 **直覺**: 將領域知識編碼為輸入序列的條件分佈，而非更新模型權重 $\theta$。
 **Loss/訓練**: 無。LLM 採用 API 調用（Zero/Few-shot）；FinBERT 使用標準 Cross-Entropy Loss 在 Financial PhraseBank 上微調至收斂。
 

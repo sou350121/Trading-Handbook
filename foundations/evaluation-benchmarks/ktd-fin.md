@@ -31,13 +31,13 @@
 **1.3 信息流 ASCII 圖**
 ```mermaid
 flowchart TD
-    A["[Blinded Data]"] --> B["(Day_-3 / asset_NNNN)"]
-    B --> C["[LLM Agent]"]
+    A["Blinded Data"] --> B["(Day_-3 / asset_NNNN)"]
+    B --> C["LLM Agent"]
     C --> D["ReAct Loop"]
     D --> E["{get_market_context, screen_candidates, get_stock_snapshot, compare_candidates, portfolio_state, risk_check}"]
-    E --> F["[Qlib Engine]"]
+    E --> F["Qlib Engine"]
     F --> G["T+1 / ±9.5%~29.5% / 5bps-15bps 費率"]
-    G --> H["[Barra WLS]"]
+    G --> H["Barra WLS"]
     H --> I["截面回歸"]
     I --> J["殘差 α (Selection Alpha)"]
 ```

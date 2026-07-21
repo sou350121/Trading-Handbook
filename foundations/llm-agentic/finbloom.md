@@ -31,12 +31,12 @@
 **1.3 信息流 ASCII**
 ```mermaid
 flowchart TD
-    A["User Query (NL)"] --> B["[FinBloom 7B Agent]"]
-    B["[FinBloom 7B Agent]"] --> C["Structured Request (Company, Metric, Date)"]
-    C["Structured Request (Company, Metric, Date)"] --> D["[Data Module]"]
-    D["[Data Module]"] --> E["Table Data + News (語義匹配)"]
-    E["Table Data + News (語義匹配)"] --> F["[LLM Context]"]
-    F["[LLM Context]"] --> G["Answer"]
+    A["User Query (NL)"] --> B["FinBloom 7B Agent"]
+    B["FinBloom 7B Agent"] --> C["Structured Request (Company, Metric, Date)"]
+    C["Structured Request (Company, Metric, Date)"] --> D["Data Module"]
+    D["Data Module"] --> E["Table Data + News (語義匹配)"]
+    E["Table Data + News (語義匹配)"] --> F["LLM Context"]
+    F["LLM Context"] --> G["Answer"]
 ```
 
 ## §2 · 數學層

@@ -29,7 +29,7 @@ flowchart LR
     direction TB
     D["FinAgent 多模态自主"]
     E["StockAgent 博弈仿真"]
-    F["R&D-Agent-Quant 自研闭环"]
+    F["R&amp;D-Agent-Quant 自研闭环"]
     Y["AlphaQuanter (单 agent + RL 却最自主)"]
   end
   COPILOT -->|"用 AI 放大研究产能"| SEAM

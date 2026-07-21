@@ -34,7 +34,7 @@
 flowchart TD
     A["Raw Price/Fundamental/Estimates"] --> B["5 Short-term Signals: STR, IND_MOM, REV30D, SEA_SAME, iVOL"]
     B -->|Cross-sectional Standardization| C["Composite Score"]
-    C -->|Regional Neutral Ranking| D["Threshold Check: Attractiveness > Limit?"]
+    C -->|Regional Neutral Ranking| D["Threshold Check: Attractiveness &gt; Limit?"]
     D -->|No| E["Hold Position"]
     D -->|Yes| F["Execute Trade"]
     E --> G["Equal-Weight Quintile Portfolio"]
@@ -46,7 +46,7 @@ flowchart TD
 
 📌 **Napkin Formula：**
 $Score_{i,t} = \frac{1}{5} \sum_{k=1}^{5} \text{Std}(Signal_{i,k,t}^{regional})$
-Trade Rule: $\Delta w_{i,t} = \mathbb{I}(|Score_{i,t} - Score_{i,t-1}| > \tau) \cdot (w_{target} - w_{current})$
+Trade Rule: $\Delta w_{i,t} = \mathbb{I}( \mid Score_{i,t} - Score_{i,t-1} \mid > \tau) \cdot (w_{target} - w_{current})$
 複雜度：$O(N \cdot K)$ 截面排序與標準化，門檻判斷為 $O(N)$。
 
 直覺：截面標準化消除量綱與極值干擾，區域中性剝離宏觀/地區 Beta。門檻函數 $\mathbb{I}$ 將連續信號轉為離散觸發，本質是將交易成本內生化為優化目標的一部分。Loss/訓練細節：導讀未披露具體監督回歸 Loss 函數，策略以等權五分位組合回報與 CAPM/FF6 Alpha 為評估基準，屬無參數/低參數因子合成框架。

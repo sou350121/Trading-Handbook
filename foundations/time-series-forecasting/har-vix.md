@@ -33,7 +33,7 @@
 ```mermaid
 flowchart TD
     A["Intraday TAQ (5-min)"] --> B["Log RV Calculation"]
-    B --> C["[Rolling Window Estimator]"]
+    B --> C["Rolling Window Estimator"]
     D["(Step/Freq Calibration)"] --> C
     C --> E["HAR-VIX (Linear)  vs  Lasso/RF/GBT/FFNN (ML)"]
     E --> F["MSE / QLIKE"]

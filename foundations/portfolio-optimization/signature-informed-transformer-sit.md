@@ -31,14 +31,14 @@
 **1.3 信息流 ASCII**
 ```mermaid
 flowchart TD
-    A["[Path/Time/Asset Embeddings]"] --> B["Concat"]
+    A["Path/Time/Asset Embeddings"] --> B["Concat"]
     B --> C["Linear"]
     C --> D["Token"]
-    A --> E["[Time Self-Attention]"]
-    E --> F["[Asset Self-Attention + Path Bias]"]
-    E --> G["[Softmax Allocation Head]"]
+    A --> E["Time Self-Attention"]
+    E --> F["Asset Self-Attention + Path Bias"]
+    E --> G["Softmax Allocation Head"]
     G --> H["Portfolio Weights"]
-    G --> I["[CVaR Loss (End-to-End Gradient)]"]
+    G --> I["CVaR Loss (End-to-End Gradient)"]
 ```
 
 ## §2 · 數學層

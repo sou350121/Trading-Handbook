@@ -41,7 +41,7 @@ Industry/Wiki ──► [TGC] ──► Rel Embed (N×d)
 ## §2 · 數學層
 📌 **Napkin Formula:**
 $\mathcal{L} = \lambda_1 \sum_{i} (y_i - \hat{y}_i)^2 + \lambda_2 \sum_{i,j} \max\left(0, 1 - (\hat{y}_i - \hat{y}_j) \cdot \text{sign}(y_i - y_j)\right)$
-複雜度: $O(T \cdot N \cdot d + |E_t| \cdot d)$ 每步前向。
+複雜度: $O(T \cdot N \cdot d + \mid E_t \mid \cdot d)$ 每步前向。
 
 **直覺:** 第一項錨定絕對回報量級，防止排序損失在無標度時梯度消失；第二項強制模型學習橫截面相對強弱，直接輸出可交易的排名序列。
 **Loss/訓練:** 端到端聯合優化，$\lambda$ 權重需交叉驗證。訓練超參（LR/Epoch/Batch/優化器）未披露。

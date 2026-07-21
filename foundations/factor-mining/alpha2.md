@@ -31,7 +31,7 @@
 **1.3 信息流 ASCII 圖**
 ```mermaid
 flowchart TD
-    A["原始特徵 (Open/Close/High/Low/Volume/WAP)"] --> B["[RL Agent]"]
+    A["原始特徵 (Open/Close/High/Low/Volume/WAP)"] --> B["RL Agent"]
     B --> C["狀態 State_t"]
     C --> D["動作 Action_t (選 Op/Arg)"]
     D --> E["指令序列"]
@@ -40,7 +40,7 @@ flowchart TD
     G --> H["Alpha 值 ζ"]
     H --> I["獎勵計算 (IC + 多樣性懲罰)"]
     I --> J["MCTS 價值更新"]
-    J --> K["[外部組合模型 XGBoost]"]
+    J --> K["外部組合模型 XGBoost"]
     K --> L["擬合回報"]
     L --> M["交易信號 (Top-K/Drop-N)"]
 ```
@@ -48,7 +48,7 @@ flowchart TD
 ## §2 · 數學層
 📌 **Napkin Formula:**
 $$a_t = \mathcal{F}_{\theta}(\text{State}_t) \rightarrow \text{Instruction}_t \rightarrow \text{Tree}(\zeta) \rightarrow \text{IC}(\zeta, r)$$
-**複雜度:** $O(T \cdot |\mathcal{A}| \cdot \log N)$ (MCTS 展開與價值估計)
+**複雜度:** $O(T \cdot \mid \mathcal{A} \mid \cdot \log N)$ (MCTS 展開與價值估計)
 **直覺:** 狀態為當前程序片段，動作空間為操作符/操作數選擇。獎勵函數融合預測 IC 與已發現因子集的多樣性距離，強制代理在稀疏空間中尋找正交路徑。
 **Loss/訓練細節:** 採用 Policy Gradient 優化策略網絡 $\pi_\theta$，Value Network $V_\phi$ 負責估計長期稀疏獎勵。MCTS 在訓練期進行在線 rollout 以更新節點價值，推理期僅需策略網絡前向生成指令。
 

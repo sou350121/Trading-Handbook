@@ -40,7 +40,7 @@ flowchart TD
 ```
 
 ## §2 · 數學層
-📌 **Napkin Formula**：$L_{VWAP} = \frac{1}{T} \sum_{t=1}^T |P_{exec}^t - VWAP^t|$ （Absolute）或二次形式。複雜度：$O(T \cdot F \cdot L)$ 每步前向。
+📌 **Napkin Formula**：$L_{VWAP} = \frac{1}{T} \sum_{t=1}^T \mid P_{exec}^t - VWAP^t \mid$ （Absolute）或二次形式。複雜度：$O(T \cdot F \cdot L)$ 每步前向。
 **直覺**：滑點可分解為價格偏差加權與成交量分佈差異。模型透過 Softmax 輸出 $\omega_t$ 直接壓低分佈差異項，避開預測誤差累積。
 **Loss/訓練**：Adam 優化器，初始 LR=0.001，最大輪數 1000，早停 patience=10，LR 降頻 patience=5。
 

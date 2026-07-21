@@ -29,8 +29,8 @@
 ```mermaid
 flowchart TD
     A["User Query"] --> B["Agent Planner"]
-    B["Agent Planner"] --> C["[Search/API/SQL Router]"]
-    C["[Search/API/SQL Router]"] --> D["External Data Stream"]
+    B["Agent Planner"] --> C["Search/API/SQL Router"]
+    C["Search/API/SQL Router"] --> D["External Data Stream"]
     D["External Data Stream"] --> E["Validator/Reasoner"]
     E["Validator/Reasoner"] --> F["Final Answer"]
 ```
@@ -38,7 +38,7 @@ flowchart TD
 ## §2 · 數學層
 📌 **Napkin Formula:** 
 $Score_{task} = \frac{N_{correct}}{N_{total}} \times 100$
-複雜度隨任務階梯遞增：$C(T1) < C(T2) < C(T3)$，其中 $C(T3)$ 涉及多跳推理鏈長度 $L$ 與數據口徑對齊矩陣 $M_{align}$。
+複雜度隨任務階梯遞增：\$C(T1) < C(T2) < C(T3)\$，其中 $C(T3)$ 涉及多跳推理鏈長度 $L$ 與數據口徑對齊矩陣 $M_{align}$。
 **直覺:** 將金融搜索轉化為離散決策路徑的正確率統計，T3 的複雜度不在於檢索量，而在於時間軸對齊與實體解析的組合爆炸。
 **Loss/訓練細節:** 無模型訓練，純推理評測；依賴專家標注答案集與多階段質檢協議進行離散評分。
 

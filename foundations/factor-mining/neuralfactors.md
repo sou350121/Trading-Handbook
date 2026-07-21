@@ -32,19 +32,19 @@
 **1.3 信息流 ASCII**
 ```mermaid
 flowchart TD
-    A["歷史特徵 F_t"] --> B["[股票嵌入器]"]
-    B["[股票嵌入器]"] --> C["[序列模型 LSTM/Attn]"]
-    C["[序列模型 LSTM/Attn]"] --> D["[MLP]"]
-    D["[MLP]"] --> E["潛在因子 Z_t (學生T近似)"]
-    E["潛在因子 Z_t (學生T近似)"] --> F["[線性解碼器]"]
-    F["[線性解碼器]"] --> G["因子暴露 α_t & 因子收益"]
-    F["[線性解碼器]"] --> H["輸出: μ_t, Σ_t (協方差) / 合成收益 y_t"]
+    A["歷史特徵 F_t"] --> B["股票嵌入器"]
+    B["股票嵌入器"] --> C["序列模型 LSTM/Attn"]
+    C["序列模型 LSTM/Attn"] --> D["MLP"]
+    D["MLP"] --> E["潛在因子 Z_t (學生T近似)"]
+    E["潛在因子 Z_t (學生T近似)"] --> F["線性解碼器"]
+    F["線性解碼器"] --> G["因子暴露 α_t &amp; 因子收益"]
+    F["線性解碼器"] --> H["輸出: μ_t, Σ_t (協方差) / 合成收益 y_t"]
 ```
 
 ## §2 · 數學層
 📌 **Napkin Formula**
-條件分佈建模：$p(y_t | F_{t-1}) = \int p_\theta(y_t | z_t, \alpha_t) q_\phi(z_t | F_{t-1}) dz_t$
-優化目標：$\mathcal{L}_{CIWAE} = \mathbb{E}_{q}[\log \frac{1}{K}\sum_{k=1}^K \frac{p_\theta(y|z_k)p(z_k)}{q_\phi(z_k|y)}]$，複雜度 $O(K \cdot N \cdot D)$
+條件分佈建模：$p(y_t \mid F_{t-1}) = \int p_\theta(y_t \mid z_t, \alpha_t) q_\phi(z_t \mid F_{t-1}) dz_t$
+優化目標：$\mathcal{L}_{CIWAE} = \mathbb{E}_{q}[\log \frac{1}{K}\sum_{k=1}^K \frac{p_\theta(y \mid z_k)p(z_k)}{q_\phi(z_k \mid y)}]$，複雜度 $O(K \cdot N \cdot D)$
 **直覺**：CIWAE 透過 K 次重要性採樣逼近真實對數似然，解決標準 VAE 在生成任務中的後驗坍塌與偏差；線性解碼器強制潛在變量與收益呈線性映射，使 $\alpha_t$ 具備傳統因子暴露的經濟含義。
 **Loss/訓練**：CIWAE 損失（負對數似然 + KL 散度項），Adam 優化器，特徵經標準化後輸入。
 

@@ -30,9 +30,9 @@
 flowchart TD
     A["LOB Events"] --> B["Hawkes Process"]
     B["Hawkes Process"] --> C["Pulse Trigger"]
-    C["Pulse Trigger"] --> D["[Decision Net]"]
-    D["[Decision Net]"] --> E["[Action Net]"]
-    F["(fRL State: TWAP Mode)"] --> D["[Decision Net]"]
+    C["Pulse Trigger"] --> D["Decision Net"]
+    D["Decision Net"] --> E["Action Net"]
+    F["(fRL State: TWAP Mode)"] --> D["Decision Net"]
     F["(fRL State: TWAP Mode)"] --> G["Order Placement / Cancel / Skip"]
 ```
 

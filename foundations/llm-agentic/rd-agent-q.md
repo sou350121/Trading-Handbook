@@ -33,15 +33,15 @@ Trick：用 IC(max) ≥ 0.99 做信號去重，並用上下文湯普森採樣將
 ```mermaid
 flowchart TD
     N1["Specification"] --> N2["(約束/協議)"]
-    N2["(約束/協議)"] --> N3["[Synthesis]"]
-    N3["[Synthesis]"] --> N4["(假設/任務)"]
-    N4["(假設/任務)"] --> N5["[Implementation]"]
-    N5["[Implementation]"] --> N6["(代碼/執行)"]
-    N6["(代碼/執行)"] --> N7["[Validation]"]
-    N7["[Validation]"] --> N8["(IC/MDD/回測)"]
-    N8["(IC/MDD/回測)"] --> N9["[Analysis]"]
-    N9["[Analysis]"] --> N10["(反饋/湯普森採樣)"]
-    N10["(反饋/湯普森採樣)"] --> N3["[Synthesis]"]
+    N2["(約束/協議)"] --> N3["Synthesis"]
+    N3["Synthesis"] --> N4["(假設/任務)"]
+    N4["(假設/任務)"] --> N5["Implementation"]
+    N5["Implementation"] --> N6["(代碼/執行)"]
+    N6["(代碼/執行)"] --> N7["Validation"]
+    N7["Validation"] --> N8["(IC/MDD/回測)"]
+    N8["(IC/MDD/回測)"] --> N9["Analysis"]
+    N9["Analysis"] --> N10["(反饋/湯普森採樣)"]
+    N10["(反饋/湯普森採樣)"] --> N3["Synthesis"]
 ```
 
 ## §2 · 數學層

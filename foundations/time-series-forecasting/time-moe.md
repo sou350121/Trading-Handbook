@@ -33,7 +33,7 @@
 flowchart TD
   A["Raw TS (t, v)"] --> B["Point-wise Token + SwiGLU Embedding"]
   B --> C["MoE Decoder Block"]
-  C --> D["[Router G(x)]"]
+  C --> D["Router G(x)"]
   D --> E["Top-k Experts E_i(x)"]
   E --> F["Sparse Activation"]
   C --> G["Multi-Resolution Output Heads"]
@@ -44,7 +44,7 @@ flowchart TD
 **📌 Napkin Formula**
 $$y_t = \sum_{i=1}^{k} G(x_t)_i \cdot E_i(x_t) + b, \quad \mathcal{L} = \text{Huber}(y_t, \hat{y}_t; \delta)$$
 - **複雜度**：訓練 $O(N \cdot E \cdot d)$，推理 $O(N \cdot k \cdot d)$（$N$=序列長, $E$=專家總數, $k$=激活數, $d$=隱層維度）。
-- **直覺**：路由網絡 $G(\cdot)$ 根據當前時間步特徵動態分配門控權重，僅激活 $k$ 個專家，將推理計算鎖定為常數。Huber Loss 在殘差 $|r|<\delta$ 時退化为 MSE，$|r|\ge\delta$ 時退化为 MAE，壓制金融/實測數據中的極端噪聲與離群點。
+- **直覺**：路由網絡 $G(\cdot)$ 根據當前時間步特徵動態分配門控權重，僅激活 $k$ 個專家，將推理計算鎖定為常數。Huber Loss 在殘差 $\mid r \mid <\delta$ 時退化为 MSE，$\mid r \mid \ge\delta$ 時退化为 MAE，壓制金融/實測數據中的極端噪聲與離群點。
 - **訓練細節**：AdamW 優化器，線性預熱 + 餘弦退火 LR 調度；驗證 bf16 與 float32 性能相當， bf16 顯著降低顯存與訓練時間。
 
 ## §3 · 數據層

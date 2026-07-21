@@ -30,7 +30,7 @@
 ```mermaid
 flowchart TD
     A["新聞文本"] --> B["LLM Prompt"]
-    B --> C["[Rec_Score, Risk_Score]"]
+    B --> C["Rec_Score, Risk_Score"]
     A --> D["動作擾動: a_t' = a_t * α_rec"]
     B --> E["軌跡回報調整: R_t' = R_t * α_risk"]
     D --> F["PPO 策略更新"]

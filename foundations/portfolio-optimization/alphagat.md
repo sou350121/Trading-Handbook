@@ -33,11 +33,11 @@ Trick: 以「協方差正則化損失」約束 Stage 1 因子多樣性，再以 
 **1.3 信息流 ASCII 圖**
 ```mermaid
 flowchart TD
-    A["Raw OHLCV (30d window)"] --> B["[Stage 1: CATimeMixer]"]
+    A["Raw OHLCV (30d window)"] --> B["Stage 1: CATimeMixer"]
     B --> C["Multi-scale Conv1D (Top-down trend / Bottom-up seasonal)"]
     B --> D["Cross-asset MHA"]
     B --> E["Covariance Regularization → α₁...α₆₄ (Low-correlation factors)"]
-    B --> F["[Stage 2: PPO + GAT]"]
+    B --> F["Stage 2: PPO + GAT"]
     F --> G["State: Factor vector α"]
     F --> H["Graph: αᵢ as nodes, GAT computes attention weights wᵢ"]
     F --> I["Action: Portfolio weights w (Top-K selection)"]

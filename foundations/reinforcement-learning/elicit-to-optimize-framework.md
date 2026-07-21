@@ -31,25 +31,25 @@
 **1.3 信息流 ASCII**
 ```mermaid
 flowchart TD
-    A["[交易員決策軌跡/問卷]"] --> B["(Adaptive Bayesian IRL)"]
-    B["(Adaptive Bayesian IRL)"] --> C["[Latent Distortion Riskmetric]"]
-    A["[交易員決策軌跡/問卷]"] --> D["[市場狀態/成本序列]"]
-    D["[市場狀態/成本序列]"] --> E["(Quantile Network + Policy/Value Nets)"]
-    E["(Quantile Network + Policy/Value Nets)"] --> F["[Risk-Sensitive Policy]"]
-    D["[市場狀態/成本序列]"] --> G["[執行/回測]"]
-    G["[執行/回測]"] --> H["(Conditional Distortion Risk Evaluation)"]
-    H["(Conditional Distortion Risk Evaluation)"] --> I["[閉環反饋]"]
+    A["交易員決策軌跡/問卷"] --> B["(Adaptive Bayesian IRL)"]
+    B["(Adaptive Bayesian IRL)"] --> C["Latent Distortion Riskmetric"]
+    A["交易員決策軌跡/問卷"] --> D["市場狀態/成本序列"]
+    D["市場狀態/成本序列"] --> E["(Quantile Network + Policy/Value Nets)"]
+    E["(Quantile Network + Policy/Value Nets)"] --> F["Risk-Sensitive Policy"]
+    D["市場狀態/成本序列"] --> G["執行/回測"]
+    G["執行/回測"] --> H["(Conditional Distortion Risk Evaluation)"]
+    H["(Conditional Distortion Risk Evaluation)"] --> I["閉環反饋"]
 ```
 
 ## §2 · 數學層
 📌 **Napkin Formula**：
 $\rho(C) = \int_0^1 F_C^{-1}(p) \, d\omega(p)$  （扭曲風險指標積分形式）
-**複雜度**：分位數網絡前向傳播 $O(N \cdot d_{q})$，PPO 更新 $O(T \cdot d_{\pi})$，IRL 貝葉斯更新 $O(m \cdot |\Theta|)$。
+**複雜度**：分位數網絡前向傳播 $O(N \cdot d_{q})$，PPO 更新 $O(T \cdot d_{\pi})$，IRL 貝葉斯更新 $O(m \cdot \mid \Theta \mid )$。
 **直覺**：不直接優化期望收益，而是透過扭曲函數 $\omega$ 重權分位數，將尾部風險或波動率偏好編碼進 reward。訓練時同時優化 policy loss、value loss 與 quantile regression loss，確保分位數估計無偏。
 
 ## §2.5 · 帶數字走一遍（Worked Example）
 （以下為明確標「假設/示意」的玩具數字，僅供機制演示，非實證結果）
-1. **假設輸入**：某日頻波段策略成本序列 $C = [2, 5, 8, 12, 20]$（bps），扭曲函數 $\omega(p) = p^2$（風險厭惡型）。
+1. **假設輸入**：某日頻波段策略成本序列 \$C = [2, 5, 8, 12, 20]\$（bps），扭曲函數 $\omega(p) = p^2$（風險厭惡型）。
 2. **排序與分位數**：$C_{(1)}=2, C_{(2)}=5, C_{(3)}=8, C_{(4)}=12, C_{(5)}=20$，對應 $p \in \{0.2, 0.4, 0.6, 0.8, 1.0\}$。
 3. **Quantile Network 輸出**：$\hat{F}_C^{-1}(p) \approx [2.1, 5.0, 8.2, 11.8, 20.5]$。
 4. **扭曲權重微分**：$d\omega(p) \approx \omega'(p)\Delta p = 2p \cdot 0.2$。

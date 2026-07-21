@@ -31,7 +31,7 @@
 **1.3 信息流 ASCII**
 ```mermaid
 flowchart TD
-    A["Input: T×F Matrix"] --> B["Graph Build: corr > 0.7"]
+    A["Input: T×F Matrix"] --> B["Graph Build: corr &gt; 0.7"]
     B --> C["GAT/GCN Layer"]
     C --> D["Adjacency Message Passing"]
     D --> E["Graph Pooling (Mean/Max/FC)"]
@@ -46,7 +46,7 @@ flowchart TD
 ## §2 · 數學層
 📌 **Napkin Formula:**
 $h_u^{(n)} = \sigma\left(\sum_{v \in \mathcal{N}(u)} \alpha_{uv} W h_v^{(n-1)}\right)$ （GAT 注意力聚合）
-複雜度：$O(|\mathcal{E}| \cdot F \cdot F')$，$\alpha_{uv}$ 為可學習注意力係數，$W$ 為共享權重矩陣。
+複雜度：$O( \mid \mathcal{E} \mid \cdot F \cdot F')$，$\alpha_{uv}$ 為可學習注意力係數，$W$ 為共享權重矩陣。
 **直覺:** GAT 以注意力係數替換 GCN 的固定度數歸一化權重，使高相關特徵節點在消息傳遞中獲得更高權重。損失函數未披露，推測為交叉熵（分類）或 MSE（回歸），訓練使用 Adam 優化器，batch size=32。
 
 ## §3 · 數據層

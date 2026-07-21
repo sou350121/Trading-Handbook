@@ -43,7 +43,7 @@ flowchart TD
 
 ## §2 · 數學層
 📌 **Napkin Formula：**
-$ \mathcal{L} = -\ln\left(\frac{\mu_p}{\sigma_p}\right) + \lambda \|w\|_1 $
+$\mathcal{L} = -\ln\left(\frac{\mu_p}{\sigma_p}\right) + \lambda \|w\|_1$
 **複雜度：** 距離相關性計算 $O(N^2)$，TMFG 濾波 $O(N \log N)$，GAT 前向 $O(E \cdot d)$（$E$ 為濾波後邊數，受平面圖限制 $E \le 3N-6$）。
 **直覺：** 損失函數將組合波動率 $\sigma_p$ 置於分母並取對數，梯度會自動懲罰高相關集群的權重集中；L1 項與 sparsemax 確保輸出權重矩陣天然稀疏，降低 rebalance 摩擦。
 **Loss/訓練細節：** 採用早期停止（patience=15），驗證集監控 − ln SR 防止過擬合。

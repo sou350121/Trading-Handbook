@@ -30,15 +30,15 @@
 **信息流 ASCII:**
 ```mermaid
 flowchart TD
-    A["[Raw TS]"] --> B["(Instance Norm)"]
-    B --> C["[Patch Tokens]"]
-    B --> D["[Freq Embed]"]
-    C --> E["[Causal Attn]"]
+    A["Raw TS"] --> B["(Instance Norm)"]
+    B --> C["Patch Tokens"]
+    B --> D["Freq Embed"]
+    C --> E["Causal Attn"]
     D --> E
-    E --> F["[Sparse MoE]"]
-    F --> G["[Residual MLP]"]
+    E --> F["Sparse MoE"]
+    F --> G["Residual MLP"]
     G --> H["(Inverse Norm)"]
-    H --> I["[Point + Quantiles]"]
+    H --> I["Point + Quantiles"]
 ```
 
 ## §2 · 數學層

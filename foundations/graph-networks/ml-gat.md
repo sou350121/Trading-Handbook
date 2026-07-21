@@ -28,9 +28,9 @@
 **信息流 ASCII:**
 ```mermaid
 flowchart TD
-    N1["[Price]"] --> N2["LSTM"] --> N3["h_price"]
-    N4["[News]"] --> N5["BERT"] --> N6["h_news"]
-    N7["[Wikidata]"] --> N8["Meta-paths"] --> N9["Homogeneous Graph"]
+    N1["Price"] --> N2["LSTM"] --> N3["h_price"]
+    N4["News"] --> N5["BERT"] --> N6["h_news"]
+    N7["Wikidata"] --> N8["Meta-paths"] --> N9["Homogeneous Graph"]
     N3 --> N10["Node Init"] --> N11["h_i"]
     N6 --> N10
     N11 --> N13["State Attn"] --> N14["r_rel_type (relation summary)"]
@@ -45,7 +45,7 @@ flowchart TD
 ## §2 · 數學層
 📌 **Napkin Formula:**
 $h_i^{(l+1)} = \sigma\left( \sum_{r \in \mathcal{R}} \alpha_{i,r} \cdot \text{Attn}_{state}(h_i, \{h_j\}_{j \in \mathcal{N}_r}, r) \right)$
-複雜度：$O(|\mathcal{E}| \cdot d + |\mathcal{R}| \cdot d)$，其中 $|\mathcal{E}|$ 為邊數，$d$ 為隱層維度，$|\mathcal{R}|$ 為關係類型數（導讀提及使用篩選後的 10 種）。
+複雜度：$O( \mid \mathcal{E} \mid \cdot d + \mid \mathcal{R} \mid \cdot d)$，其中 $\mid \mathcal{E} \mid$ 為邊數，$d$ 為隱層維度，$\mid \mathcal{R} \mid$ 為關係類型數（導讀提及使用篩選後的 10 種）。
 直覺：第一層注意力計算節點間係數 $\beta_{ij}^r$，第二層計算關係類型權重 $\alpha_{i,r}$。雙層設計將「誰重要」與「什麼關係重要」解耦，避免梯度在異構邊上發散。
 Loss/訓練：交叉熵損失（Cross-Entropy），Adam 優化器，lr=5e-4，wd=5e-5，batch=32，epochs=100，每層 Dropout=0.5。端到端聯合訓練。
 

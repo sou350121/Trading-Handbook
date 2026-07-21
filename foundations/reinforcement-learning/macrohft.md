@@ -32,7 +32,7 @@
 **1.3 信息流 ASCII 圖**
 ```mermaid
 flowchart TD
-    A["Raw LOB/OHLCV"] --> B["LowPass Filter & Vol Calc"]
+    A["Raw LOB/OHLCV"] --> B["LowPass Filter &amp; Vol Calc"]
     B --> C["6 Regime Labels (Trend/Vol Quantiles)"]
     C --> D["[Sub-Agent 1..6] (DDQN + Conditional Adapter)"]
     D --> E["Local Q-values/Actions"]

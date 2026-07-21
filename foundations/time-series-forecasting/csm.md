@@ -14,7 +14,7 @@
 | `量价表格` | `中长周期` | `监督回归` | `风险择时` | `人机协同可解释` |
 
 **Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
-**TL;DR:** ① 提出 CSM 框架，將收益符號直接條件化於當期幅度，避開 Copula 建模。② 核心 trick 是利用條件概率公式分解聯合分佈，實現參數解耦並行估計與高數值穩定性。③ 這對「風險擇時」軸★意義在於提供低計算成本且規避分佈假設風險的實戰路徑。④ 關鍵實證數字：在因子數 k=3 時，樣本外終端資產達 $181.68，年化等價確定性收益率（CER）提升 1.878%（均值-方差偏好）。
+**TL;DR:** ① 提出 CSM 框架，將收益符號直接條件化於當期幅度，避開 Copula 建模。② 核心 trick 是利用條件概率公式分解聯合分佈，實現參數解耦並行估計與高數值穩定性。③ 這對「風險擇時」軸★意義在於提供低計算成本且規避分佈假設風險的實戰路徑。④ 關鍵實證數字：在因子數 k=3 時，樣本外終端資產達 \$181.68，年化等價確定性收益率（CER）提升 1.878%（均值-方差偏好）。
 
 **X-Ray.** CSM 在五軸 Pareto 前緣切中「可解釋性-穩定性」的甜蜜點。它不追求高維非線性擬合的極限，而是透過機率分解重構預測目標，直接填平了 OLS 在線性投影下的結構性盲區，以及 Copula 在多步估計中的效率損耗。對量化讀者而言，其價值不在於突破樣本外 R² 的天花板，而在於提供一個 Hessian 天然負定、似然函數可完美拆解的工程化基座。它打不開高頻微結構或跨資產動量傳導的 envelope，但為中低頻宏觀/因子擇時提供了一套免調 Copula 族、免擔心數值發散的低摩擦替換件。
 
@@ -22,7 +22,7 @@
 ### 1.1 三大改動 vs 前作
 | 改動維度 | 傳統 OLS/線性投影 | Copula 符號-幅度框架 | CSM 框架 |
 |---|---|---|---|
-| 依賴結構 | 假設線性獨立，忽略符號-幅度耦合 | 分別建模邊緣分佈後用 Copula 耦合 | 直接條件化：$f(S, M) = f(M) \cdot f(S|M)$ |
+| 依賴結構 | 假設線性獨立，忽略符號-幅度耦合 | 分別建模邊緣分佈後用 Copula 耦合 | 直接條件化：$f(S, M) = f(M) \cdot f(S \mid M)$ |
 | 參數估計 | 單步 OLS，易受對稱性干擾致係數為 0 | 多步估計（如 IFM），效率損失與參數不穩定 | 聯合似然拆解為兩獨立似然之和，完全解耦並行估計 |
 | 數值穩定性 | 低（MSE 高） | 中/低（Copula 族選擇敏感，Hessian 可能病態） | 高（Probit 部分 Hessian 天然負定，保證全局凹性） |
 
@@ -32,21 +32,21 @@
 ### 1.3 信息流 ASCII 圖
 ```mermaid
 flowchart TD
-    A["[因子池 X]"] --> B["(MEM 建模)"]
-    B --> C["[幅度邊緣分佈 f(M)]"]
+    A["因子池 X"] --> B["(MEM 建模)"]
+    B --> C["幅度邊緣分佈 f(M)"]
     B --> D["(Probit 條件化 M)"]
     A --> D
-    D --> E["[條件符號分佈 f(S|M)]"]
-    D --> F["[概率積分變換/蒙特卡洛]"]
+    D --> E["條件符號分佈 f(S|M)"]
+    D --> F["概率積分變換/蒙特卡洛"]
     F --> G["[重構期望收益率 E[R]]"]
-    G --> H["[擇時信號/倉位切換]"]
+    G --> H["擇時信號/倉位切換"]
 ```
 
 ## §2 · 數學層
 📌 **Napkin Formula**：
-1. 聯合分佈分解：$f(S, M) = f(M) \cdot f(S|M)$
+1. 聯合分佈分解：$f(S, M) = f(M) \cdot f(S \mid M)$
 2. 似然拆解：$\mathcal{L}(\theta_M, \theta_S) = \mathcal{L}_M(\theta_M) + \mathcal{L}_S(\theta_S)$
-3. 期望收益重構：$E[R] = E[M \cdot S] = \iint m \cdot s \cdot f(m) \cdot f(s|m) \,dm\,ds \rightarrow$ 轉換為單變量積分求解
+3. 期望收益重構：$E[R] = E[M \cdot S] = \iint m \cdot s \cdot f(m) \cdot f(s \mid m) \,dm\,ds \rightarrow$ 轉換為單變量積分求解
 
 **複雜度**：$O(T \cdot k)$ 線性掃描 + 毫秒級數值積分（高斯求積/蒙特卡洛），無迭代優化 Copula 參數。
 **直覺**：幅度（波動率）是符號（方向）的「狀態變量」。條件化後，模型只需學習「在當前波動率下漲的概率」，避開直接擬合帶符號的收益率。
@@ -73,9 +73,9 @@ flowchart TD
 | S&P 500 月度 | Squared Loss R² (k=3-5) | CSR: 低維勉強正 | CSM: 約在 0.5% 到 1.35% 之間 | 未披露 |
 | S&P 500 月度 | Absolute Loss R² (k=3-8) | OLS/MS: 多數被剔除 | CSM: 全部實現正向 | 未披露 |
 | S&P 500 月度 | MCS p-value (80%顯著性) | OLS/MS: 多數剔除 | CSM: 接近 1.0 | 未披露 |
-| S&P 500 月度 | Terminal Wealth (k=3, 10bps成本) | B&H: 未披露 | CSM Baseline: $181.68 | 未披露 |
-| S&P 500 月度 | Terminal Wealth (k=3, 10bps成本) | OLS: $112.79 | CSM Baseline: $181.68 | 未披露 |
-| S&P 500 月度 | Terminal Wealth (k=3, 10bps成本) | CSR: $98.22 | CSM Baseline: $181.68 | 未披露 |
+| S&P 500 月度 | Terminal Wealth (k=3, 10bps成本) | B&H: 未披露 | CSM Baseline: \$181.68 | 未披露 |
+| S&P 500 月度 | Terminal Wealth (k=3, 10bps成本) | OLS: \$112.79 | CSM Baseline: \$181.68 | 未披露 |
+| S&P 500 月度 | Terminal Wealth (k=3, 10bps成本) | CSR: \$98.22 | CSM Baseline: \$181.68 | 未披露 |
 | S&P 500 月度 | Sharpe Ratio (k=3) | B&H: 未披露具體值 | CSM Baseline: 0.21 | 未披露 |
 | S&P 500 月度 | CER Gains (k=3, γ=3) | Gaussian Copula: 損失約 50.4 bps | CSM Baseline: 1.878% (MV) / 1.939% (CRRA) | 未披露 |
 

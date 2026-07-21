@@ -30,15 +30,15 @@
 **1.3 信息流 ASCII 圖**
 ```mermaid
 flowchart TD
-    A["News Text"] --> B["[ICKG LLM]"]
+    A["News Text"] --> B["ICKG LLM"]
     B --> C["(Entity, Category, Relation, Time) Quads"]
-    C --> D["[Sentence-BERT Disambiguation]"]
+    C --> D["Sentence-BERT Disambiguation"]
     D --> E["FinDKG (Dynamic Graph G_t)"]
-    E --> F["[KGTransformer]"]
+    E --> F["KGTransformer"]
     F --> G["Time/Struct Embedding"]
     G --> H["Multi-Head Attention"]
     H --> I["Entity Embeddings h_t"]
-    I --> J["[Link Prediction / Theme Scoring]"]
+    I --> J["Link Prediction / Theme Scoring"]
     J --> K["Portfolio Weights"]
 ```
 

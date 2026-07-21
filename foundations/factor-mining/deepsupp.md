@@ -33,8 +33,8 @@
 flowchart TD
     A["Raw Price/Volume"] --> B["VWAP/Volume Ratio"]
     B["VWAP/Volume Ratio"] --> C["Sliding Spearman Matrix"]
-    C["Sliding Spearman Matrix"] --> D["MHA Autoencoder (32->16)"]
-    D["MHA Autoencoder (32->16)"] --> E["DBSCAN Clustering"]
+    C["Sliding Spearman Matrix"] --> D["MHA Autoencoder (32-&gt;16)"]
+    D["MHA Autoencoder (32-&gt;16)"] --> E["DBSCAN Clustering"]
     E["DBSCAN Clustering"] --> F["Median Price Support Levels"]
 ```
 

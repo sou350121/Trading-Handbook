@@ -31,9 +31,9 @@
 **1.3 信息流 ASCII**
 ```mermaid
 flowchart TD
-    A["ETF Ret / OrderFlow"] --> B["[PVAR(GMM, IV)]"]
-    E["Underlying Ret / OF"] --> B["[PVAR(GMM, IV)]"]
-    B["[PVAR(GMM, IV)]"] --> C["CIRF / FEVD"]
+    A["ETF Ret / OrderFlow"] --> B["PVAR(GMM, IV)"]
+    E["Underlying Ret / OF"] --> B["PVAR(GMM, IV)"]
+    B["PVAR(GMM, IV)"] --> C["CIRF / FEVD"]
     C["CIRF / FEVD"] --> D["標的組合 Ret / OrderFlow"]
 ```
 

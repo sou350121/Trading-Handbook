@@ -30,12 +30,12 @@
 **1.3 信息流 ASCII 圖**
 ```mermaid
 flowchart TD
-  A["[Raw Tabular Data]"] --> B["[Define Fixed Covariates / Effects]"]
-  B --> C["[Generate Spec Space (2^k or Sub-sampling)]"]
-  C --> D["[OLS / Logit / LPM Estimation]"]
-  D --> E["[Bootstrap CI / BMA Weighting / SHAP Attribution]"]
-  E --> F["[Specification Curve + OOS Metrics Distribution]"]
-  F --> G["[Joint Inference (Stouffer's Z)]"]
+  A["Raw Tabular Data"] --> B["Define Fixed Covariates / Effects"]
+  B --> C["Generate Spec Space (2^k or Sub-sampling)"]
+  C --> D["OLS / Logit / LPM Estimation"]
+  D --> E["Bootstrap CI / BMA Weighting / SHAP Attribution"]
+  E --> F["Specification Curve + OOS Metrics Distribution"]
+  F --> G["Joint Inference (Stouffer's Z)"]
 ```
 
 ## §2 · 數學層

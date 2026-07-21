@@ -29,13 +29,13 @@
 **信息流 ASCII:**
 ```mermaid
 flowchart TD
-    A["[歷史量價張量]"] --> B["[Transformer Encoder]"]
-    B["[Transformer Encoder]"] --> C["[隱狀態 H_t]"]
-    C["[隱狀態 H_t]"] --> D["[Interval Head (Softmax)]"]
-    D["[Interval Head (Softmax)]"] --> E["採樣 h"]
+    A["歷史量價張量"] --> B["Transformer Encoder"]
+    B["Transformer Encoder"] --> C["隱狀態 H_t"]
+    C["隱狀態 H_t"] --> D["Interval Head (Softmax)"]
+    D["Interval Head (Softmax)"] --> E["採樣 h"]
     E["採樣 h"] --> F["跳躍至 t+h"]
-    C["[隱狀態 H_t]"] --> G["[Weight Head (Gaussian)]"]
-    G["[Weight Head (Gaussian)]"] --> H["tanh"]
+    C["隱狀態 H_t"] --> G["Weight Head (Gaussian)"]
+    G["Weight Head (Gaussian)"] --> H["tanh"]
     H["tanh"] --> I["歸一化 w_t"]
     I["歸一化 w_t"] --> J["計算回報 R_t"]
 ```

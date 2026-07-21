@@ -30,8 +30,8 @@
 flowchart TD
 A["Train Split Rollout"] --> B["Minibatch Reflection (Success/Fail)"]
 B["Minibatch Reflection (Success/Fail)"] --> C["Edit Pool"]
-C["Edit Pool"] --> D["Ranking & Clip(Budget)"]
-D["Ranking & Clip(Budget)"] --> E["Validation Gate (Val Split)"]
+C["Edit Pool"] --> D["Ranking &amp; Clip(Budget)"]
+D["Ranking &amp; Clip(Budget)"] --> E["Validation Gate (Val Split)"]
 E["Validation Gate (Val Split)"] --> F["Accept/Reject Buffer"]
 F["Accept/Reject Buffer"] --> G["Epoch Slow Update"]
 G["Epoch Slow Update"] --> H["Deploy Skill Doc"]

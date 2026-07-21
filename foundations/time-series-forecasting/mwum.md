@@ -42,7 +42,7 @@ flowchart TD
 ## §2 · 數學層
 📌 **Napkin Formula**：
 $w_{t+1}^i = w_t^i \cdot \exp(\eta \cdot g_t^i)$
-$g_t^i = \underbrace{\text{Exploitation}(\epsilon_t^i, \sigma_t^2)}_{\text{獎勵低誤差}} + \underbrace{\text{Exploration}(\text{Redundancy Matrix } M)}_{\text{懲罰冗餘/獎勵差異}}$
+\$g_t^i = \underbrace{\text{Exploitation}(\epsilon_t^i, \sigma_t^2)}_{\text{獎勵低誤差}} + \underbrace{\text{Exploration}(\text{Redundancy Matrix } M)}_{\text{懲罰冗餘/獎勵差異}}\$
 複雜度：$O(N \cdot T)$，N為模型數，T為時間步，無需反向傳播。
 直覺：指數乘法規避了梯度消失/爆炸，增益函數將預測誤差與市場波動率錨定，確保權重調整幅度與當前市場風險匹配。
 Loss/訓練細節：無全局 Loss，各子模型獨立訓練，集成層僅在線更新權重；自適應學習率 $\eta$ 基於過去 12 個月樣本外表現從預定義網格中選取。

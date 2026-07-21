@@ -39,7 +39,7 @@ flowchart TD
 ```
 
 ## §2 · 數學層
-📌 **Napkin Formula:** $P(y_t | y_{<t}, \text{News}_{filtered}) = \text{LLM}_\theta(y_{<t} \oplus \text{News}_{filtered})$
+📌 **Napkin Formula:** $P(y_t \mid y_{<t}, \text{News}_{filtered}) = \text{LLM}_\theta(y_{<t} \oplus \text{News}_{filtered})$
 **複雜度:** $O(N \cdot L_{ctx} \cdot d^2)$ per step，主要瓶頸在於Attention對拼接Token的計算。
 **直覺:** 將數字序列離散化為Token，新聞作為條件前綴注入Attention Mask，自回歸生成下一時刻數值分佈。Loss為標準Next-Token Prediction Loss (Cross-Entropy)，但輸出層直接映射回數值空間（無歸一化以保留物理尺度）。訓練非端到端梯度更新，而是依賴評估Agent根據MSE/MAE誤差調整新聞過濾Prompt與邏輯，屬離散優化閉環。
 

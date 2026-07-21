@@ -32,16 +32,16 @@
 **1.3 信息流 ASCII**
 ```mermaid
 flowchart TD
-    A["Raw Returns"] --> B["[Lag-Transform]"]
+    A["Raw Returns"] --> B["Lag-Transform"]
     B --> C["Cleaned Returns"]
-    C --> D["[Cov/Eigen]"]
-    D --> E["[BiLSTM(Rank)]"]
+    C --> D["Cov/Eigen"]
+    D --> E["BiLSTM(Rank)"]
     E --> F["Cleaned Eigenvalues"]
-    D --> G["[MLP(Vol)]"]
+    D --> G["MLP(Vol)"]
     G --> H["Inv Vol"]
-    H --> I["[Assembly + Projection]"]
+    H --> I["Assembly + Projection"]
     I --> J["Inv Cov"]
-    J --> K["[QP/Weights]"]
+    J --> K["QP/Weights"]
     K --> L["OOS Variance Loss"]
 ```
 

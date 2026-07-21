@@ -29,13 +29,13 @@
 **1.3 信息流 ASCII**
 ```mermaid
 flowchart TD
-    A["User Task"] --> B["[Retriever]"]
+    A["User Task"] --> B["Retriever"]
     B --> C["Semantic Search on MCP Vector Index"]
     C --> D["Top-k Candidates"]
-    D --> E["[Validator]"]
+    D --> E["Validator"]
     E --> F["Synthetic Query Test"]
     F --> G["Best-1 MCP"]
-    G --> H["[LLM Prompt]"]
+    G --> H["LLM Prompt"]
     H --> I["Inject Single MCP Schema"]
     I --> J["Execute Task"]
 ```

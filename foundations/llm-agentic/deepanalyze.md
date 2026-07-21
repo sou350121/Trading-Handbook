@@ -32,8 +32,8 @@ flowchart TD
     A["<Analyze>"] --> B["<Understand>"]
     B["<Understand>"] --> C["<Code>"]
     C["<Code>"] --> D["<Execute>"]
-    D["<Execute>"] --> E["[Result/Error]"]
-    E["[Result/Error]"] --> A["<Analyze>"]
+    D["<Execute>"] --> E["Result/Error"]
+    E["Result/Error"] --> A["<Analyze>"]
     A["<Analyze>"] --> F["<Answer> (任務完成)"]
 ```
 

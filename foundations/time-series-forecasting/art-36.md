@@ -29,7 +29,7 @@
 **信息流 ASCII 圖**
 ```mermaid
 flowchart TD
-    A["Raw Features (Log Moneyness, DTE, MACD, Ret)"] --> B["[ CNN / LSTM / MLP / Linear ]"]
+    A["Raw Features (Log Moneyness, DTE, MACD, Ret)"] --> B[" CNN / LSTM / MLP / Linear "]
     B --> C["Raw Signal"]
     C --> D["Vol-Target Scaling (15% Ann.)"]
     D --> E["Position"]

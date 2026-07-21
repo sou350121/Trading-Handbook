@@ -29,13 +29,13 @@
 **信息流 ASCII:**
 ```mermaid
 flowchart TD
-    A["原始價格序列 (T=20)"] --> B["[Transformer Encoder]"]
+    A["原始價格序列 (T=20)"] --> B["Transformer Encoder"]
     B --> C["節點隱狀態 H_tr"]
-    C --> D["[時態圖注意力]"]
+    C --> D["時態圖注意力"]
     D --> E["聚合時間切片鄰居信息 H_pn / H_nn"]
-    E --> F["[異構圖注意力 HGA]"]
+    E --> F["異構圖注意力 HGA"]
     F --> G["自適應融合自身/正相關/負相關權重"]
-    G --> H["[MLP Classifier]"]
+    G --> H["MLP Classifier"]
     H --> I["預測概率 / 截面排名"]
     I --> J["交易信號"]
 ```

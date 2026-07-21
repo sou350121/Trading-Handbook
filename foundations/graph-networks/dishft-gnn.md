@@ -29,15 +29,15 @@
 **信息流 ASCII:**
 ```mermaid
 flowchart TD
-    A["歷史圖"] --> B["[時空GNN]"]
+    A["歷史圖"] --> B["時空GNN"]
     B --> C["H_hist"]
-    D["未來標籤"] --> E["[FNN]"]
+    D["未來標籤"] --> E["FNN"]
     E --> F["H_fut"]
-    G["H_hist + H_fut"] --> H["[多通道融合+Attention]"]
+    G["H_hist + H_fut"] --> H["多通道融合+Attention"]
     H --> I["H_fused (Teacher)"]
-    C --> J["[共享預測頭]"]
+    C --> J["共享預測頭"]
     J --> K["Pred"]
-    C --> L["[HSIC Loss vs H_fused]"]
+    C --> L["HSIC Loss vs H_fused"]
     L --> M["梯度更新 (Student)"]
 ```
 

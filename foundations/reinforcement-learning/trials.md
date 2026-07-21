@@ -43,7 +43,7 @@ flowchart TD
 
 ## §2 · 數學層
 📌 **Napkin Formula:** 
-狀態編碼 $h_t = \text{BiGRU}(x_t)$, 注意力權重 $a_t = \text{softmax}(\frac{q k^T}{\sqrt{d}})$, 策略分佈 $\pi = \text{softmax}(W h_t + b)$, A2C 梯度更新 $\theta \leftarrow \theta + \alpha \nabla \log \pi(a|s) A(s,a)$。複雜度隨序列長度與資產池組合數平方膨脹。
+狀態編碼 $h_t = \text{BiGRU}(x_t)$, 注意力權重 $a_t = \text{softmax}(\frac{q k^T}{\sqrt{d}})$, 策略分佈 $\pi = \text{softmax}(W h_t + b)$, A2C 梯度更新 $\theta \leftarrow \theta + \alpha \nabla \log \pi(a \mid s) A(s,a)$。複雜度隨序列長度與資產池組合數平方膨脹。
 **直覺:** 高層用交易期累積利潤當外在獎勵，低層用形成期內利潤當內在獎勵，兩層共享注意力機制的狀態表示，避免長序列梯度消失。
 **Loss/訓練細節:** 採用 A2C，高層基於交易期表現更新，低層基於形成期內在獎勵更新，聯合優化兩階段策略。
 

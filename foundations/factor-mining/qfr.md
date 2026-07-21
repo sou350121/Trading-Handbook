@@ -45,7 +45,7 @@ flowchart TD
 
 ## §2 · 數學層
 📌 **Napkin Formula**：
-$\nabla J(\theta) \approx \frac{1}{N} \sum_{i=1}^N (R(\tau_i) - B_{greedy}) \nabla_\theta \log \pi_\theta(a_t|s_t)$
+$\nabla J(\theta) \approx \frac{1}{N} \sum_{i=1}^N (R(\tau_i) - B_{greedy}) \nabla_\theta \log \pi_\theta(a_t \mid s_t)$
 **複雜度**：策略網絡前向 $O(L \cdot d)$，基線採樣 $O(1)$，無 Critic 網絡開銷。
 **直覺**：梯度方向由「隨機軌跡獎勵」與「貪婪基線獎勵」的差值驅動。IR 時變獎勵隨訓練輪次動態收緊對低 IR 因子的容忍度，將優化目標從「最大化預測準確率」轉為「最大化風險調整後穩定性」。Loss 為標準策略梯度負對數似然加權，訓練細節依賴蒙特卡洛 Rollout，無 TD 誤差回傳。
 

@@ -29,7 +29,7 @@
 **信息流 ASCII:**
 ```mermaid
 flowchart TD
-    A["[Macro, Firm Features]"] --> B["LLM Agent Pool (16 types × 32 agents) → 隨機分配觀察池"]
+    A["Macro, Firm Features"] --> B["LLM Agent Pool (16 types × 32 agents) → 隨機分配觀察池"]
     B --> C["Forward: Strategy Gen → Stock Pick → 分散決策信號"]
     C --> D["Score Aggregation: Consensus/Disagreement 線性組合"]
     D --> E["Backward Opt: 滑動窗口內最大化 Signal-Return 相似度 → 更新分佈 W"]

@@ -29,7 +29,7 @@
 **信息流 ASCII:**
 ```mermaid
 flowchart TD
-    A["Raw Multivariate TS"] --> B["Patchify & Channel-Independent"]
+    A["Raw Multivariate TS"] --> B["Patchify &amp; Channel-Independent"]
     A --> C["Causal LLM Backbone (fθ)"]
     C --> D["Position-Aware Attention Mask"]
     C --> E["Anchor Patches + History Patches"]

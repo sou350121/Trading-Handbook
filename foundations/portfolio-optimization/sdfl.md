@@ -32,16 +32,16 @@
 **1.3 信息流 ASCII 圖**
 ```mermaid
 flowchart TD
-    A["[OHLCV 252d]"] --> B["[Feature Norm]"]
-    B --> C["[LSTM/Trans/Mamba]"]
-    C --> D["[Softmax/Logits]"]
+    A["OHLCV 252d"] --> B["Feature Norm"]
+    B --> C["LSTM/Trans/Mamba"]
+    C --> D["Softmax/Logits"]
     A --> E["[Pre-calc Target] (Max-Sortino / One-Hot)"]
-    D --> F["[Cross-Entropy Loss]"]
+    D --> F["Cross-Entropy Loss"]
     F --> E
     E --> G["[Deep Ensemble] (Avg over N models)"]
-    F --> H["[Final Weights]"]
+    F --> H["Final Weights"]
     G --> H
-    H --> I["[Rebalance (Monthly, 2d lag)]"]
+    H --> I["Rebalance (Monthly, 2d lag)"]
 ```
 
 ## §2 · 數學層

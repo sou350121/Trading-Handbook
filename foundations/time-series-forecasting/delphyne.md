@@ -38,7 +38,7 @@
 
 ## §2 · 數學層
 📌 **Napkin Formula:**
-$\mathcal{L}_{NLL} = -\sum_{t} \log \left( \sum_{k} \pi_k \cdot \text{StudentT}(y_t | \mu_k, \sigma_k, \nu_k) \right)$
+$\mathcal{L}_{NLL} = -\sum_{t} \log \left( \sum_{k} \pi_k \cdot \text{StudentT}(y_t \mid \mu_k, \sigma_k, \nu_k) \right)$
 複雜度：$O(L \cdot D^2)$ 標準 Transformer 注意力，其中 $L$ 為序列長度，$D$ 為維度。
 **直覺:** 損失函數放棄了高斯假設，改用混合學生T分佈的負對數似然。這意味著模型在訓練時會自動為不同變量/時段分配不同的自由度與尺度，實質上是在做動態的異質波動率建模。訓練細節依賴 100 萬次梯度更新與 1e-4 初始學習率，配合線性預熱與餘弦衰減，確保在跨域數據上收斂至一個廣義特徵空間，而非過擬合單一市場。
 

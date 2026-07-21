@@ -30,10 +30,10 @@
 ```mermaid
 flowchart TD
     A["User Intent / Taxonomy"] --> B["[LLM Agent] (EA/CoE/ToT)"]
-    B -->|生成候選公式| C["[AST Parser & Hard Filter]"]
+    B -->|生成候選公式| C["AST Parser &amp; Hard Filter"]
     B -->|語法/前瞻/深度/NaN/時效校驗| C
-    C --> D["[Qlib Backtest]"]
-    D -->|計算 IC/RankIC/IR| E["[SFT Pairwise Comparator]"]
+    C --> D["Qlib Backtest"]
+    D -->|計算 IC/RankIC/IR| E["SFT Pairwise Comparator"]
     E -->|相對排序/篩選 Top-K| F["Factor Pool"]
 ```
 

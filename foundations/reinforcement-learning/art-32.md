@@ -32,11 +32,11 @@
 ```mermaid
 flowchart TD
     N1["Market Data"] --> N2["Sliding Window"]
-    N2 --> N3["Z-Score Spread & Zone"]
+    N2 --> N3["Z-Score Spread &amp; Zone"]
     N2 --> N4["Observation Space"]
     N4 --> N5["Actor Network"]
     N5 --> N6["Action (-1 to 1)"]
-    N6 --> N7["Position & Cash"]
+    N6 --> N7["Position &amp; Cash"]
     N6 --> N9["Multi-Part Reward"]
     N10["Environment Feedback"] --> N9
     N9 --> N8["Critic Network"]
@@ -44,7 +44,7 @@ flowchart TD
 
 ## §2 · 數學層
 📌 **Napkin Formula**
-$R_t = R_{portfolio} + \lambda_1 R_{zone} - \lambda_2 |a_t - a_{t-1}|$
+$R_t = R_{portfolio} + \lambda_1 R_{zone} - \lambda_2 \mid a_t - a_{t-1} \mid$
 $a_t \in [-1, 1]$ (continuous position ratio)
 複雜度：Actor-Critic 前向/反向傳播 $O(N_{params})$，訓練依賴PPO/A2C等On/Off-policy算法。
 

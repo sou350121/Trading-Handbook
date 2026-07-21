@@ -30,12 +30,12 @@
 ```mermaid
 flowchart TD
 A["Source Docs"] --> B["Text Chunks"]
-B["Text Chunks"] --> C["[LLM Gleanings]"]
-C["[LLM Gleanings]"] --> D["Element Instances"]
+B["Text Chunks"] --> C["LLM Gleanings"]
+C["LLM Gleanings"] --> D["Element Instances"]
 D["Element Instances"] --> E["Element Summaries"]
 E["Element Summaries"] --> F["Homogeneous Weighted Graph"]
-F["Homogeneous Weighted Graph"] --> G["[Leiden]"]
-G["[Leiden]"] --> H["Graph Communities"]
+F["Homogeneous Weighted Graph"] --> G["Leiden"]
+G["Leiden"] --> H["Graph Communities"]
 H["Graph Communities"] --> I["Community Summaries"]
 I["Community Summaries"] --> J["Global Answer"]
 ```

@@ -32,16 +32,16 @@
 **1.3 信息流**
 ```mermaid
 flowchart TD
-    A["Raw Data"] --> B["[TML]"]
+    A["Raw Data"] --> B["TML"]
     B --> C["Expert Dist"]
     C --> D["RPPsAtt"]
     D --> E["Temporal Rep"]
-    A --> F["[RML]"]
+    A --> F["RML"]
     F --> G["Poly Approx"]
     G --> H["DCM"]
     H --> I["Decoupled Attn"]
     I --> J["Inv/Var Rep"]
-    K["Temporal Rep + Inv Rep"] --> L["[SGC Fusion]"]
+    K["Temporal Rep + Inv Rep"] --> L["SGC Fusion"]
     L --> M["Downstream Predictor"]
     N["Loss"] --> O["Meta-Train (Predictor)"]
     O --> P["Meta-Validate (TML/RML)"]

@@ -32,29 +32,29 @@
 ### 1.3 信息流 ASCII
 ```mermaid
 flowchart TD
-    N1["[研究員自然語言想法]"] --> N2["[Trading Idea Polisher]"]
-    N2["[Trading Idea Polisher]"] --> N3["(查詢文獻/數據字段庫)"]
+    N1["研究員自然語言想法"] --> N2["Trading Idea Polisher"]
+    N2["Trading Idea Polisher"] --> N3["(查詢文獻/數據字段庫)"]
     N3["(查詢文獻/數據字段庫)"] --> N4["結構化 Prompt"]
-    N4["結構化 Prompt"] --> N5["[Quant Developer (LLM)]"]
-    N5["[Quant Developer (LLM)]"] --> N6["生成種子 Alpha 表達式"]
+    N4["結構化 Prompt"] --> N5["Quant Developer (LLM)"]
+    N5["Quant Developer (LLM)"] --> N6["生成種子 Alpha 表達式"]
     N6["生成種子 Alpha 表達式"] --> N7["Alpha DB"]
-    N7["Alpha DB"] --> N8["[Alpha Compute Framework]"]
-    N8["[Alpha Compute Framework]"] --> N9["GP 交叉/變異/選擇"]
+    N7["Alpha DB"] --> N8["Alpha Compute Framework"]
+    N8["Alpha Compute Framework"] --> N9["GP 交叉/變異/選擇"]
     N9["GP 交叉/變異/選擇"] --> N10["候選群體"]
-    N10["候選群體"] --> N11["[Trading Backtest Engine]"]
-    N11["[Trading Backtest Engine]"] --> N12["計算 IC/Sharpe/收益"]
+    N10["候選群體"] --> N11["Trading Backtest Engine"]
+    N11["Trading Backtest Engine"] --> N12["計算 IC/Sharpe/收益"]
     N12["計算 IC/Sharpe/收益"] --> N13["量化指標"]
-    N13["量化指標"] --> N14["[Analyst Agent]"]
-    N14["[Analyst Agent]"] --> N15["綜合摘要"]
+    N13["量化指標"] --> N14["Analyst Agent"]
+    N14["Analyst Agent"] --> N15["綜合摘要"]
     N15["綜合摘要"] --> N16["反饋至研究員"]
-    N16["反饋至研究員"] --> N17["[下一輪迭代]"]
+    N16["反饋至研究員"] --> N17["下一輪迭代"]
 ```
 
 ## §2 · 數學層
 📌 **Napkin Formula:**
 $$F_{t+1} = \text{GP\_Select}\left(\text{Backtest}\left(\text{GP\_Crossover}\left(\text{LLM}(P_{\text{prompt}})\right)\right)\right)$$
 **複雜度:** $O(N_{\text{pop}} \cdot T_{\text{backtest}} \cdot C_{\text{LLM}})$，其中 $N_{\text{pop}}$ 為 GP 種群規模，$T_{\text{backtest}}$ 為回測窗口計算量，$C_{\text{LLM}}$ 為推理 Token 成本。
-**直覺:** LLM 提供條件分佈 $P(F_{\text{seed}}|P_{\text{prompt}})$ 作為 GP 的初始種群先驗；GP 的適應度函數直接對齊量化指標（IC/Sharpe），非可微損失。訓練細節：LLM 採用指令微調與 RAG 檢索增強，不參與端到端梯度下降；GP 依賴歷史數據模擬的離散適應度評分進行選擇與變異。
+**直覺:** LLM 提供條件分佈 $P(F_{\text{seed}} \mid P_{\text{prompt}})$ 作為 GP 的初始種群先驗；GP 的適應度函數直接對齊量化指標（IC/Sharpe），非可微損失。訓練細節：LLM 採用指令微調與 RAG 檢索增強，不參與端到端梯度下降；GP 依賴歷史數據模擬的離散適應度評分進行選擇與變異。
 
 ## §3 · 數據層
 - **規模/頻率/市場:** 中國與美國市場股票日內價量數據（OHLCV、VWAP）。WorldQuant IQC 提供超過 5000 個數據字段與 100 多個算子。

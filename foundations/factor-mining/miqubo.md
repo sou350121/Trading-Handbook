@@ -31,7 +31,7 @@
 **1.3 信息流 ASCII**
 ```mermaid
 flowchart TD
-    A["原始因子池 (N維)"] --> B["計算MI(i, Y) & CMI(i, j|Y)"]
+    A["原始因子池 (N維)"] --> B["計算MI(i, Y) &amp; CMI(i, j|Y)"]
     B --> C["構建QUBO矩陣(Q, L)"]
     C --> D["D-Wave Kerberos (混合退火)"]
     D --> E["輸出二元掩碼 x∈{0,1}^N"]

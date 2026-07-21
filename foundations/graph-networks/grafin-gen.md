@@ -46,7 +46,7 @@ flowchart TD
 
 ## §2 · 數學層
 📌 **Napkin Formula**:
-$p_j(y|x) = \sum_{i} w_{ij} p_{i \to j}(y|x)$, $w_{ij} \ge 0, \sum_i w_{ij} = 1$
+$p_j(y \mid x) = \sum_{i} w_{ij} p_{i \to j}(y \mid x)$, $w_{ij} \ge 0, \sum_i w_{ij} = 1$
 權重學習: $\min_{w} \| \hat{y} - y \|_2^2 + \lambda \|w\|_1$ (LASSO 重構)
 **複雜度**: 訓練 $O(N \cdot T)$ 獨立並行；推理 $O(N \cdot k)$ 僅非零邊計算，$k \ll N$。
 **直覺**: 元生成器分佈是各生成器分佈的凸組合，反對稱函數（如交易信號）的期望可線性疊加。LASSO 的 $L_1$ 正則化天然產生稀疏解，自動過濾無效遷移路徑。

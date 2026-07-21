@@ -29,10 +29,10 @@
 **信息流 ASCII:**
 ```mermaid
 flowchart TD
-    A["[新聞]"] --> B["FinBERT"]
+    A["新聞"] --> B["FinBERT"]
     B --> C["Base(NLP)"]
     C --> D["Meta(NLP)"]
-    E["[價量]"] --> F["YahooFin"]
+    E["價量"] --> F["YahooFin"]
     F --> G["Base(Quant)"]
     G --> H["Meta(Quant)"]
     D --> I["Super-Agent"]

@@ -31,20 +31,20 @@
 **1.3 信息流 ASCII**
 ```mermaid
 flowchart TD
-    N1["OHLCV + Time"] --> N2["[Feature Extractor]"]
-    N2["[Feature Extractor]"] --> N3["(Candlestick, Tech Ind, EMA Cross)"]
-    N3["(Candlestick, Tech Ind, EMA Cross)"] --> N4["[Dual-Threshold Labeler]"]
-    N4["[Dual-Threshold Labeler]"] --> N5["y ∈ {Buy, Hold, Sell}"]
-    N5["y ∈ {Buy, Hold, Sell}"] --> N6["[Random Undersampling]"]
-    N6["[Random Undersampling]"] --> N7["Balanced Dataset"]
+    N1["OHLCV + Time"] --> N2["Feature Extractor"]
+    N2["Feature Extractor"] --> N3["(Candlestick, Tech Ind, EMA Cross)"]
+    N3["(Candlestick, Tech Ind, EMA Cross)"] --> N4["Dual-Threshold Labeler"]
+    N4["Dual-Threshold Labeler"] --> N5["y ∈ {Buy, Hold, Sell}"]
+    N5["y ∈ {Buy, Hold, Sell}"] --> N6["Random Undersampling"]
+    N6["Random Undersampling"] --> N7["Balanced Dataset"]
     N7["Balanced Dataset"] --> N8["Input(128)"]
     N8["Input(128)"] --> N9["LeakyReLU"]
     N9["LeakyReLU"] --> N10["Hidden(64)"]
     N10["Hidden(64)"] --> N11["LeakyReLU"]
     N11["LeakyReLU"] --> N12["Hidden(32)"]
     N12["Hidden(32)"] --> N13["Softmax(3)"]
-    N13["Softmax(3)"] --> N14["[Signal Generator]"]
-    N14["[Signal Generator]"] --> N15["Trade Execution (w/ fees/slippage)"]
+    N13["Softmax(3)"] --> N14["Signal Generator"]
+    N14["Signal Generator"] --> N15["Trade Execution (w/ fees/slippage)"]
 ```
 
 ## §2 · 數學層

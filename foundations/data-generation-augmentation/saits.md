@@ -32,19 +32,19 @@
 **1.3 信息流 ASCII 圖**
 ```mermaid
 flowchart TD
-  A["[Raw TS + Mask]"] --> B["(Concat)"]
+  A["Raw TS + Mask"] --> B["(Concat)"]
   B --> C["DMSA Block 1"]
   C --> D[X1]
-  D --> E["[X1 + Non-linear]"]
+  D --> E["X1 + Non-linear"]
   E --> F["DMSA Block 2"]
   F --> G[X2]
-  G --> H["[Avg Attn Weights + Mask]"]
+  G --> H["Avg Attn Weights + Mask"]
   H --> I["Sigmoid Weight"]
   I --> J["Weighted Combine (X1, X2)"]
   J --> K[X3]
-  K --> L["[X3 + Original Observed]"]
+  K --> L["X3 + Original Observed"]
   L --> M["Imputed TS"]
-  M --> N["[Downstream Model]"]
+  M --> N["Downstream Model"]
 ```
 
 ## §2 · 數學層

@@ -28,7 +28,7 @@
 🌊 **信息流 ASCII:**
 ```mermaid
 flowchart TD
-    A["Raw OHLCV"] --> B["[Holdings / Industry / Topic / Dynamic Graphs]"]
+    A["Raw OHLCV"] --> B["Holdings / Industry / Topic / Dynamic Graphs"]
     B --> C["Multi-GCN"]
     C --> D["Concat"]
     A --> D

@@ -29,10 +29,10 @@
 **信息流 ASCII:**
 ```mermaid
 flowchart TD
-    A["Input X"] --> B["[AMEO: 能量重分配]"]
+    A["Input X"] --> B["AMEO: 能量重分配"]
     B --> C["FFT"]
-    C --> D["[EKPB: MLP→FFT→Energy→Softmax→Pick→iFFT]"]
-    D --> E["Add&Norm"]
+    C --> D["EKPB: MLP→FFT→Energy→Softmax→Pick→iFFT"]
+    D --> E["Add&amp;Norm"]
     E --> F["MLP"]
     F --> G["Output Y"]
     H["KET: 交替訓練 (Real ↔ Synthetic Mix-up)"] --> C
@@ -40,7 +40,7 @@ flowchart TD
 
 ## §2 · 數學層
 📌 **Napkin Formula:**
-$E_c = |FFT(X_c)|^2$
+$E_c = \mid FFT(X_c) \mid ^2$
 $P_c = \text{Softmax}(E_c)$
 $X_{shared} = \text{iFFT}(\sum_{c} P_c \cdot FFT(X_c))$
 複雜度：FFT $O(N \log N)$ / 通道；跨通道 Softmax $O(C)$。

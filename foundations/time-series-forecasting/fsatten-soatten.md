@@ -28,7 +28,7 @@
 **信息流:**
 ```mermaid
 flowchart TD
-  A["Input X"] --> B["[FFT / Orthogonal Init]"]
+  A["Input X"] --> B["FFT / Orthogonal Init"]
   B --> C["Amplitude/Orthogonal Features"]
   A --> D["MSS(Q, K) + Linear(V)"]
   D --> E["Dot Product"]

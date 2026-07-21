@@ -35,8 +35,8 @@ flowchart TD
   B["Correlation/Hurst/ADF/Cointegration"] --> C["OU Parameter Est."]
   C["OU Parameter Est."] --> D["S-score Calc"]
   D["S-score Calc"] --> E["Multi-Level Conditioning (Sector Limit / SmartBuzz NLP / Q-Score)"]
-  E["Multi-Level Conditioning (Sector Limit / SmartBuzz NLP / Q-Score)"] --> F["LLM Shock Classification (5-day News -> Temp/Perm)"]
-  F["LLM Shock Classification (5-day News -> Temp/Perm)"] --> G["Execution / Stop-loss (2% Cap)"]
+  E["Multi-Level Conditioning (Sector Limit / SmartBuzz NLP / Q-Score)"] --> F["LLM Shock Classification (5-day News -&gt; Temp/Perm)"]
+  F["LLM Shock Classification (5-day News -&gt; Temp/Perm)"] --> G["Execution / Stop-loss (2% Cap)"]
 ```
 
 ## §2 · 數學層

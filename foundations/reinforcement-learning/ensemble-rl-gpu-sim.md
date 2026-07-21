@@ -43,7 +43,7 @@ flowchart TD
 ## §2 · 數學層
 📌 **Napkin Formula**:
 $J(\theta) = \mathbb{E}_{\tau \sim \pi_\theta} [R(\tau)]$
-$\nabla J(\theta) \approx \frac{1}{N} \sum_{i=1}^N \nabla_\theta \log \pi_\theta(a_t|s_t) R(\tau_i) + \lambda \cdot \text{KL}(\pi_i || \pi_{ref})$
+$\nabla J(\theta) \approx \frac{1}{N} \sum_{i=1}^N \nabla_\theta \log \pi_\theta(a_t \mid s_t) R(\tau_i) + \lambda \cdot \text{KL}(\pi_i \mid  \mid \pi_{ref})$
 複雜度: 環境模擬 $O(N)$ 並行，梯度估計方差隨 $N$ 增大按 $1/\sqrt{N}$ 收斂。
 直覺: 傳統 RL 依賴單軌跡或少量軌跡估計梯度，金融獎勵噪聲大導致梯度方差極高。本法透過 GPU 並行生成海量軌跡壓低方差，並用 KL 項約束策略分佈差異，確保集成不是「同質化投票」。
 Loss/訓練細節: 股票任務使用滾動窗口，權重由 Sharpe 經 softmax 計算；加密貨幣任務採用多數投票。

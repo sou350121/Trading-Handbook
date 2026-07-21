@@ -31,11 +31,11 @@
 **1.3 信息流 ASCII**
 ```mermaid
 flowchart TD
-    A["OHLCV (21日序列)"] --> B["[獨立訓練 N 個 NN]"]
+    A["OHLCV (21日序列)"] --> B["獨立訓練 N 個 NN"]
     B --> C["預測權重 w_i"]
-    B --> D["[Deep Ensemble 平均]"]
+    B --> D["Deep Ensemble 平均"]
     D --> E["w_ensemble"]
-    D --> F["回測引擎 (含 0.4% 雙邊成本 & 2日延遲)"]
+    D --> F["回測引擎 (含 0.4% 雙邊成本 &amp; 2日延遲)"]
     F --> G["財務指標"]
 ```
 

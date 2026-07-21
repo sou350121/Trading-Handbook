@@ -32,7 +32,7 @@ flowchart TD
     N1["News"] --> N2["LLM Few-Shot (m=3)"]
     N2 --> N3["Sentiment Vector"]
     N3 --> N4["Embed"]
-    N4 --> N5["Tanh(α) & Fuse"]
+    N4 --> N5["Tanh(α) &amp; Fuse"]
     N6["Macro (Top N Crypto)"] --> N7["1D Conv + Pos Enc + Cross-Attn"]
     N7 --> N8["V̂_macro"]
     N9["Target Price + 7 Tech Indicators"] --> N10["Modified NLinear"]

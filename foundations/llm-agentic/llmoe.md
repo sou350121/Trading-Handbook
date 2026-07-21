@@ -31,7 +31,7 @@
 **1.3 信息流 ASCII**
 ```mermaid
 flowchart TD
-    A["[Price + News Headlines]"]
+    A["Price + News Headlines"]
     B["LLM Router\n(Llama3.2)\nClassification: {Optimistic, Pessimistic}\nReasoning: Natural Language Explanation"]
     C["Optimistic Expert\n(FNN, 3 hidden)"]
     D["Pessimistic Expert\n(FNN, 3 hidden)"]

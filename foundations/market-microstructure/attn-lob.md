@@ -31,14 +31,14 @@
 ### 1.3 信息流 ASCII 圖
 ```mermaid
 flowchart TD
-    A["LOB Snapshot (T, 4n) + Dynamic States (OSI/RV/RSI)"] --> B["[Attn-LOB Pretrain]"]
+    A["LOB Snapshot (T, 4n) + Dynamic States (OSI/RV/RSI)"] --> B["Attn-LOB Pretrain"]
     B --> C["CNN"]
     C --> D["Inception"]
     D --> E["Multi-Head Attention"]
-    B --> F["[RL Agent]"]
+    B --> F["RL Agent"]
     F --> G["PPO/DQN"]
     G --> H["Continuous/Discrete Action"]
-    F --> I["[Hybrid Reward]"]
+    F --> I["Hybrid Reward"]
     I --> J["DP + TP + IP"]
     J --> K["Policy Update"]
 ```

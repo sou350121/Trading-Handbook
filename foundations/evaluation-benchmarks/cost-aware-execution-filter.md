@@ -35,11 +35,11 @@
 flowchart TD
     A["Raw OHLCV/TA/EGARCH"] --> B["ML Model (XGB/LSTM/iTF)"]
     B --> C["Predicted Return (r_hat)"]
-    C --> D["CA Filter (|r_hat| > threshold?)"]
+    C --> D["CA Filter (|r_hat| &gt; threshold?)"]
     D --> E["Yes: Execute Trade (Δpos)"]
     D --> F["No:  Hold Position (Δpos = 0)"]
-    E --> G["PnL & Fold-Level Stats"]
-    F --> G["PnL & Fold-Level Stats"]
+    E --> G["PnL &amp; Fold-Level Stats"]
+    F --> G["PnL &amp; Fold-Level Stats"]
 ```
 
 ## §2 · 數學層

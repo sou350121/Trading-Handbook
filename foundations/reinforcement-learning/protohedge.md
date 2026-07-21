@@ -29,12 +29,12 @@
 🌊 **信息流:**
 ```mermaid
 flowchart TD
-    A["Market State"] --> B["[Encoder]"]
+    A["Market State"] --> B["Encoder"]
     B --> C["Encoded Vector"]
-    C --> D["[Dist to K Prototypes]"]
+    C --> D["Dist to K Prototypes"]
     D --> E["Softmax Weights"]
-    E --> F["[Weighted Avg of Prototype Actions]"]
-    F --> G["[SoftClip]"]
+    E --> F["Weighted Avg of Prototype Actions"]
+    F --> G["SoftClip"]
     G --> H["Final Hedge Action"]
 ```
 

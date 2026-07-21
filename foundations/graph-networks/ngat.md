@@ -29,20 +29,20 @@
 **信息流 ASCII:**
 ```mermaid
 flowchart TD
-    A["[歷史價格序列]"] --> B["LSTM"]
+    A["歷史價格序列"] --> B["LSTM"]
     B --> C["Seq Embed (h_s)"]
-    D["[新聞/推文共現]"] --> E["時間衰減聚合"]
+    D["新聞/推文共現"] --> E["時間衰減聚合"]
     E --> F["Relational Weight (β_ij)"]
     G["h_s + β_ij"] --> H["Node-Specific Attn (a_i)"]
     H --> I["Multi-head Concat"]
     I --> J["FC"]
-    J --> K["[Trend / Vol]"]
+    J --> K["Trend / Vol"]
 ```
 
 ## §2 · 數學層
 📌 **Napkin Formula:**
 $$\alpha_{ij}^{(i)} = \frac{\exp(\text{LeakyReLU}(\vec{a}_i^T [W_q \vec{h}_i || W_k \vec{h}_j] + \beta_{ij}))}{\sum_{k \in \mathcal{N}_i} \exp(\text{LeakyReLU}(\vec{a}_i^T [W_q \vec{h}_i || W_k \vec{h}_k] + \beta_{ik}))}$$
-複雜度：$O(|E| \cdot d \cdot H)$ 每層，參數量隨節點數 $|V|$ 線性增長。Loss：趨勢任務用 Binary Cross Entropy，波動率任務用 MSE。訓練採 Grid Search 驗證集調優（如記憶窗口 5 天、頭數等），優化器 Adam。直覺：私有 $\vec{a}_i$ 打破拓撲同質假設，Softmax 前加入邊權 $\beta_{ij}$ 與自嵌入拼接，維持節點自身特徵不被鄰居淹沒。
+複雜度：$O( \mid E \mid \cdot d \cdot H)$ 每層，參數量隨節點數 $\mid V \mid$ 線性增長。Loss：趨勢任務用 Binary Cross Entropy，波動率任務用 MSE。訓練採 Grid Search 驗證集調優（如記憶窗口 5 天、頭數等），優化器 Adam。直覺：私有 $\vec{a}_i$ 打破拓撲同質假設，Softmax 前加入邊權 $\beta_{ij}$ 與自嵌入拼接，維持節點自身特徵不被鄰居淹沒。
 
 ## §3 · 數據層
 - **資料規模/頻率/市場/時段**：日度頻率。SPNews（標普500成分股）與 ACL2018（兩年推文數據）。具體起止日期與樣本量未披露。

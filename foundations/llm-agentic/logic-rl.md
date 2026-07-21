@@ -28,8 +28,8 @@
 **信息流:**
 ```mermaid
 flowchart TD
-    A["Prompt"] --> B["[Model]"]
-    B --> C["<think>...<...>"]
+    A["Prompt"] --> B["Model"]
+    B --> C["<think>...&lt;...&gt;"]
     B --> D["Regex Extract"]
     D --> E["Format Reward + Answer Reward"]
     E --> F["REINFORCE++ Update (w/ KL Penalty)"]

@@ -30,14 +30,14 @@
 **信息流:**
 ```mermaid
 flowchart TD
-    Q["Query"] --> VDB["[VectorDB: Pinecone]"]
-    VDB["[VectorDB: Pinecone]"] --> CV["Context_V"]
-    CV["Context_V"] --> C["[Concatenation]"]
-    Q["Query"] --> KG["[KG: Networkx]"]
-    KG["[KG: Networkx]"] --> CG["Context_G"]
-    CG["Context_G"] --> C["[Concatenation]"]
-    C["[Concatenation]"] --> LLM["[LLM: GPT-3.5-turbo]"]
-    LLM["[LLM: GPT-3.5-turbo]"] --> Ans["Answer"]
+    Q["Query"] --> VDB["VectorDB: Pinecone"]
+    VDB["VectorDB: Pinecone"] --> CV["Context_V"]
+    CV["Context_V"] --> C["Concatenation"]
+    Q["Query"] --> KG["KG: Networkx"]
+    KG["KG: Networkx"] --> CG["Context_G"]
+    CG["Context_G"] --> C["Concatenation"]
+    C["Concatenation"] --> LLM["LLM: GPT-3.5-turbo"]
+    LLM["LLM: GPT-3.5-turbo"] --> Ans["Answer"]
 ```
 
 ## §2 · 數學層

@@ -31,12 +31,12 @@
 **1.3 信息流 ASCII**
 ```mermaid
 flowchart TD
-A["[3日收益率]"] --> B["(Q=t+1, K=歷史, V=歷史)"]
+A["3日收益率"] --> B["(Q=t+1, K=歷史, V=歷史)"]
 B --> C["Multi-Head Attn"]
 C --> D[Decoder]
 D --> E[ReLU]
 E --> F["sign()"]
-F --> G["[-1/0/1]"]
+F --> G["-1/0/1"]
 ```
 
 ## §2 · 數學層

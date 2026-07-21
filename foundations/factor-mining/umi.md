@@ -37,7 +37,7 @@ flowchart TD
     C["Virtual Rational Price"]
     D["Diff Factor (Irrationality_Stock)"]
     E["Market-Level: Self-Attn Rep"]
-    F["Sub-market Contrast & Sync Prediction"]
+    F["Sub-market Contrast &amp; Sync Prediction"]
     G["Market Factor (Irrationality_Market)"]
     H["Predictor: Transformer(Temporal) + GNN(Relational)"]
     I["MLP"]

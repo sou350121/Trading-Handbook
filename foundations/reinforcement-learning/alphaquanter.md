@@ -32,8 +32,8 @@
 **1.3 信息流 ASCII**
 ```mermaid
 flowchart TD
-    A["Initial Context"] --> B["[Plan]"]
-    B["[Plan]"] --> C["Acquire(Tool Call)"]
+    A["Initial Context"] --> B["Plan"]
+    B["Plan"] --> C["Acquire(Tool Call)"]
     C["Acquire(Tool Call)"] --> D["Reason(Update State)"]
     D["Reason(Update State)"] --> E["Act(Trade/Loop)"]
     E["Act(Trade/Loop)"] --> A["Initial Context"]

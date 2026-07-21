@@ -30,9 +30,9 @@
 **信息流 ASCII:**
 ```mermaid
 flowchart TD
-  A["Input"] --> B["[Categorical Embedding / PBLD Num Embed]"]
-  B --> C["[Scaling Layer (Diag)]"]
-  C --> D["[Linear (NTP Init) + Trainable Activation + Dropout]"]
+  A["Input"] --> B["Categorical Embedding / PBLD Num Embed"]
+  B --> C["Scaling Layer (Diag)"]
+  C --> D["Linear (NTP Init) + Trainable Activation + Dropout"]
   D --> E["... (x256)"]
   E --> F["Output"]
 ```

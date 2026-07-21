@@ -31,7 +31,7 @@
 **1.3 信息流 ASCII**
 ```mermaid
 flowchart TD
-    A["[連續多變量事件向量] (Return, Gap, VolReg, Calendar, Mask)"] --> B["[Linear Projection]"]
+    A["[連續多變量事件向量] (Return, Gap, VolReg, Calendar, Mask)"] --> B["Linear Projection"]
     B --> C["[Decoder-Only Transformer] (Causal Attention)"]
     C --> D["[MoMS Return Head] (Categorical Dist)"]
     C --> E["[Aux Heads: Gap / VolReg / Ordinal] (Shared Hidden State)"]
@@ -49,7 +49,7 @@ $$ \mathcal{L}_{total} = \mathcal{L}_{NLL}(y_{t+1}^{bucket} | \mathbf{x}_{1:t}) 
 1. **輸入**：假設 $t$ 時刻 1H 條形數據為連續向量 $\mathbf{x}_t = [0.0012, 0.0005, 1.2, 14, 1.0]$（分別代表標準化收益、Gap、VolReg 狀態、日曆位置、數據掩碼）。
 2. **投影與編碼**：向量經 Linear Projection 映射至 hidden dim，進入 Transformer 進行因果自注意力計算，輸出隱狀態 $\mathbf{h}_t$。
 3. **輔助約束**：$\mathbf{h}_t$ 同時輸入 Gap/VolReg/Ordinal 輔助頭，計算輔助損失，強制 $\mathbf{h}_t$ 保留價差與波動率幾何。
-4. **MoMS 輸出**：$\mathbf{h}_t$ 進入 MoMS Return Head，根據當前 VolReg 狀態分配混合權重，輸出下一期收益分桶的類別概率分佈 $P(\hat{y}_{t+1}^{bucket})$。假設分桶為 $[-0.5, -0.2, 0.0, 0.2, 0.5]$，模型輸出概率為 $[0.1, 0.2, 0.4, 0.2, 0.1]$。
+4. **MoMS 輸出**：$\mathbf{h}_t$ 進入 MoMS Return Head，根據當前 VolReg 狀態分配混合權重，輸出下一期收益分桶的類別概率分佈 $P(\hat{y}_{t+1}^{bucket})$。假設分桶為 \$[-0.5, -0.2, 0.0, 0.2, 0.5]\$，模型輸出概率為 \$[0.1, 0.2, 0.4, 0.2, 0.1]\$。
 5. **損失計算**：若真實下一期收益落入 $0.0$ 桶，主損失 $\mathcal{L}_{NLL} = -\log(0.4) \approx 0.737$ nats（約 1.06 bits）。FullSeq 監督將此計算擴展至序列所有位置。
 
 ## §3 · 數據層

@@ -32,18 +32,18 @@
 **1.3 信息流 ASCII 圖**
 ```mermaid
 flowchart TD
-    A["[Raw OHLCV + Alpha360]"] --> B["Decoupling Flow (DWT)"]
-    B --> C["[Low-Freq]"]
-    B --> D["[High-Freq]"]
+    A["Raw OHLCV + Alpha360"] --> B["Decoupling Flow (DWT)"]
+    B --> C["Low-Freq"]
+    B --> D["High-Freq"]
     C --> E["Dual-Freq Spatiotemporal Encoder"]
     D --> E["Dual-Freq Spatiotemporal Encoder"]
-    E --> F["[Time Conv + Attn]"]
-    E --> G["[Struc2Vec Graph Attn]"]
+    E --> F["Time Conv + Attn"]
+    E --> G["Struc2Vec Graph Attn"]
     F --> H["Dual-Freq Fusion Decoder"]
     G --> H["Dual-Freq Fusion Decoder"]
     H --> I["Fusion Attention"]
-    I --> J["[Return Regressor]"]
-    I --> K["[Trend Classifier]"]
+    I --> J["Return Regressor"]
+    I --> K["Trend Classifier"]
     J --> L["Multi-Supervision Loss (L_reg + λ*L_cls)"]
     K --> L["Multi-Supervision Loss (L_reg + λ*L_cls)"]
 ```

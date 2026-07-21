@@ -28,15 +28,15 @@
 **信息流:**
 ```mermaid
 flowchart TD
-    A["[OHLCV]"] --> B["Level I~VII Agents (Prompt/Paraphrase)"]
+    A["OHLCV"] --> B["Level I~VII Agents (Prompt/Paraphrase)"]
     B --> C["LLM Code Gen"]
-    C --> D["[Multi-Agent Checker]"]
+    C --> D["Multi-Agent Checker"]
     D --> E["(Syntax/Logic/Look-ahead)"]
     E --> F["Pass/Fail"]
-    F --> G["[Evolution Pool]"]
+    F --> G["Evolution Pool"]
     G --> H["Mutation / Crossover"]
     H --> I["Next Gen"]
-    I --> J["[IC/RankIC Eval]"]
+    I --> J["IC/RankIC Eval"]
 ```
 
 ## §2 · 數學層

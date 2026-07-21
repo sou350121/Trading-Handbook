@@ -31,19 +31,19 @@
 **1.3 信息流 ASCII**
 ```mermaid
 flowchart TD
-    A["[History OHLCVA]"] --> B["BSQ Tokenizer"]
-    B --> C["[Coarse Token]"]
+    A["History OHLCVA"] --> B["BSQ Tokenizer"]
+    B --> C["Coarse Token"]
     C --> D["Decoder"]
-    D --> E["[Fine Token]"]
+    D --> E["Fine Token"]
     E --> F["Decoder"]
-    F --> G["[Next OHLCVA]"]
+    F --> G["Next OHLCVA"]
     G --> A
 ```
 
 ## §2 · 數學層
 **📌 Napkin Formula**
 $x_t \xrightarrow{BSQ} (c_t, f_t)$
-$P(y_{t+1}) = P(c_{t+1}|h_t) \cdot P(f_{t+1}|c_{t+1}, h_t)$
+$P(y_{t+1}) = P(c_{t+1} \mid h_t) \cdot P(f_{t+1} \mid c_{t+1}, h_t)$
 $\mathcal{L} = \mathcal{L}_{coarse} + \mathcal{L}_{fine} + \mathcal{L}_{commit}$
 複雜度：自回歸步長 $O(T \cdot d^2)$，參數量最高 5 億。
 **直覺**：粗標記捕捉價格趨勢與波動主軸，細標記編碼跳空與流動性殘差；訓練時用采樣值而非 Teacher-Forcing 以對齊推理分佈。

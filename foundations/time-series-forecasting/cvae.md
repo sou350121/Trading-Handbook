@@ -29,16 +29,16 @@
 **1.3 信息流 ASCII**：
 ```mermaid
 flowchart TD
-    A["[歷史觀測 x_t]"] --> C["[Encoder]"]
-    B["[條件變量 c]"] --> C["[Encoder]"]
-    C["[Encoder]"] --> D["(μ, σ)"]
-    D["(μ, σ)"] --> E["[Sample z]"]
-    E["[Sample z]"] --> F["[Decoder + c]"]
-    F["[Decoder + c]"] --> G["預測路徑集"]
+    A["歷史觀測 x_t"] --> C["Encoder"]
+    B["條件變量 c"] --> C["Encoder"]
+    C["Encoder"] --> D["(μ, σ)"]
+    D["(μ, σ)"] --> E["Sample z"]
+    E["Sample z"] --> F["Decoder + c"]
+    F["Decoder + c"] --> G["預測路徑集"]
 ```
 
 ## §2 · 數學層
-📌 **Napkin Formula**：$p(y_t | x_t, c) = \int p_\theta(y_t | z, c) q_\phi(z | x_t, c) dz$
+📌 **Napkin Formula**：$p(y_t \mid x_t, c) = \int p_\theta(y_t \mid z, c) q_\phi(z \mid x_t, c) dz$
 **複雜度**：依賴編解碼器 MLP 層數與潛在維度，訓練需聯合優化重構誤差與 KL 散度。
 **直覺**：給定歷史觀測 $x_t$ 與條件 $c$（如再平衡標記），編碼器輸出潛在變量 $z$ 的後驗分佈；解碼器從 $z$ 與 $c$ 生成未來交易量 $y_t$ 的條件高斯分佈。訓練時最小化負證據下界 (ELBO)，使模型既能還原歷史路徑，又能條件化生成多條情景路徑。
 

@@ -34,7 +34,7 @@
 flowchart TD
     A["Input (1D, L)"] --> B["Reshape 2D (P x R)"]
     B --> C["Long Branch: PGN along R"]
-    C --> D["Short Branch: Linear -> Patch -> Global"]
+    C --> D["Short Branch: Linear -&gt; Patch -&gt; Global"]
     D --> E["Concat"]
     E --> F["Single Gate Fusion"]
     F --> G["Linear Prediction"]

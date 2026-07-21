@@ -28,7 +28,7 @@
 **信息流 ASCII:**
 ```mermaid
 flowchart TD
-    A["正樣本批次 B"] --> B["[DINS採樣器]"]
+    A["正樣本批次 B"] --> B["DINS採樣器"]
     B --> C["(隨機收發 / 未來時間 / 負自環)"]
     B --> D["[正樣本增強] (注入未來邊防梯度崩塌)"]
     D --> E["聯合訓練批次"]
@@ -38,7 +38,7 @@ flowchart TD
 
 ## §2 · 數學層
 📌 **Napkin Formula:**
-$L = -\frac{1}{|B|} \sum_{(u,v,t) \in B} [\log \sigma(f(u,v,t)) + \lambda \sum_{k} \log \sigma(-f(u, v'_k, t'_k))]$
+$L = -\frac{1}{ \mid B \mid } \sum_{(u,v,t) \in B} [\log \sigma(f(u,v,t)) + \lambda \sum_{k} \log \sigma(-f(u, v'_k, t'_k))]$
 **複雜度:** 負樣本數量增加 $O(k)$，訓練時間約翻倍。
 **直覺:** 損失函數的負半空間被領域知識重構，$\lambda$ 控制正樣本增強權重以平衡梯度。Loss 為標準二元交叉熵，訓練採用時間序列交叉驗證（按月劃分）。正樣本增強約束為添加數量不超過當前批次大小，避免計算開銷過大。
 

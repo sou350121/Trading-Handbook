@@ -37,6 +37,7 @@ timeout 2400 "$PY" scripts/pulsar/arxiv_dissect.py --limit 8 --workers 2 >>"$LOG
 "$PY" scripts/gen_overviews.py >>"$LOG" 2>&1 || true
 "$PY" scripts/gen_nav.py >>"$LOG" 2>&1 || true
 "$PY" scripts/pulsar/resolve_sources_v2.py --resolve --inject >>"$LOG" 2>&1 || true
+"$PY" scripts/pulsar/fix_github_render.py >>"$LOG" 2>&1 || true   # GitHub math+mermaid render fixes (idempotent)
 "$PY" scripts/export_corpus_meta.py >>"$LOG" 2>&1 || true
 
 git add radar/ foundations/ crossing/ cheat-sheet/ docs.json data/corpus_meta.json 2>>"$LOG"

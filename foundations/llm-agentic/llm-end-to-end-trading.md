@@ -30,7 +30,7 @@
 ```mermaid
 flowchart TD
     A["User Input"]
-    B["[WebSocket/NewsAPI/PRAW]"]
+    B["WebSocket/NewsAPI/PRAW"]
     C["Preprocess (Min VWAP / Cohere Summarize)"]
     D["FinGPT (LoRA-tuned)"]
     E["Logits/Class"]

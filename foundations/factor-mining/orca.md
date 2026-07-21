@@ -29,19 +29,19 @@
 **信息流 ASCII:**
 ```mermaid
 flowchart TD
-    A["Raw Features"] --> B["[PLE Encoder]"]
-    B --> C["[Bi-Transformer]"]
-    C --> D["[CLS Rep]"]
-    A --> E["[Random Mask / Gauss Noise]"]
-    D --> F["[Cluster Proj Head]"]
-    E --> G["[Instance Contrast Loss]"]
-    F --> H["[Cluster Contrast Loss]"]
+    A["Raw Features"] --> B["PLE Encoder"]
+    B --> C["Bi-Transformer"]
+    C --> D["CLS Rep"]
+    A --> E["Random Mask / Gauss Noise"]
+    D --> F["Cluster Proj Head"]
+    E --> G["Instance Contrast Loss"]
+    F --> H["Cluster Contrast Loss"]
     G <--> H
-    G --> I["[OU Residual Calc]"]
+    G --> I["OU Residual Calc"]
     H --> I
-    I --> J["[PINN Loss]"]
-    J --> K["[Unified Loss]"]
-    K --> L["[Trade Signal]"]
+    I --> J["PINN Loss"]
+    J --> K["Unified Loss"]
+    K --> L["Trade Signal"]
 ```
 
 ## §2 · 數學層

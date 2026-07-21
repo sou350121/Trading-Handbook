@@ -29,28 +29,28 @@
 **信息流 ASCII 圖**
 ```mermaid
 flowchart TD
-    A["[OHLCV/VWAP]"] --> B["(Expression Tree)"]
-    B["(Expression Tree)"] --> C["[LLM Generator]"]
-    A["[OHLCV/VWAP]"] --> D["[Backtest Engine]"]
-    C["[LLM Generator]"] --> F["[MCTS Node Evaluation]"]
-    F["[MCTS Node Evaluation]"] --> E["(Multi-dim Metrics)"]
-    E["(Multi-dim Metrics)"] --> D["[Backtest Engine]"]
-    D["[Backtest Engine]"] --> G["[Relative Ranking]"]
-    F["[MCTS Node Evaluation]"] --> I["[UCT Selection]"]
-    G["[Relative Ranking]"] --> H["[Q-value Update]"]
-    H["[Q-value Update]"] --> I["[UCT Selection]"]
-    J["[FSA Mining]"] --> K["[Avoid Frequent Subtrees]"]
-    K["[Avoid Frequent Subtrees]"] --> L["[LLM Prompt Context]"]
-    I["[UCT Selection]"] --> L["[LLM Prompt Context]"]
+    A["OHLCV/VWAP"] --> B["(Expression Tree)"]
+    B["(Expression Tree)"] --> C["LLM Generator"]
+    A["OHLCV/VWAP"] --> D["Backtest Engine"]
+    C["LLM Generator"] --> F["MCTS Node Evaluation"]
+    F["MCTS Node Evaluation"] --> E["(Multi-dim Metrics)"]
+    E["(Multi-dim Metrics)"] --> D["Backtest Engine"]
+    D["Backtest Engine"] --> G["Relative Ranking"]
+    F["MCTS Node Evaluation"] --> I["UCT Selection"]
+    G["Relative Ranking"] --> H["Q-value Update"]
+    H["Q-value Update"] --> I["UCT Selection"]
+    J["FSA Mining"] --> K["Avoid Frequent Subtrees"]
+    K["Avoid Frequent Subtrees"] --> L["LLM Prompt Context"]
+    I["UCT Selection"] --> L["LLM Prompt Context"]
 ```
 
 ## §2 · 數學層
 📌 **Napkin Formula**：
 1. UCT Selection: $UCT(a) = Q(s, a) + c \sqrt{\frac{\ln N(s)}{N(s, a)}}$
 2. Dimension Sampling: $P(d_i) = \frac{\exp(-score_{d_i} / \tau)}{\sum_j \exp(-score_{d_j} / \tau)}$ （低分維度被選中概率高）
-3. Relative Ranking: $Rank_{IC}(\alpha) = \frac{1}{|S|} \sum_{\alpha' \in S} \mathbb{I}(IC(\alpha) > IC(\alpha'))$
+3. Relative Ranking: $Rank_{IC}(\alpha) = \frac{1}{ \mid S \mid } \sum_{\alpha' \in S} \mathbb{I}(IC(\alpha) > IC(\alpha'))$
 
-**複雜度**：節點擴展依賴 LLM 推理與回測引擎，單次迭代成本為 $O(T_{LLM} + T_{BT})$；FSA 挖掘頻繁子樹需遍歷有效庫，近似 $O(|S| \cdot L_{tree})$。
+**複雜度**：節點擴展依賴 LLM 推理與回測引擎，單次迭代成本為 $O(T_{LLM} + T_{BT})$；FSA 挖掘頻繁子樹需遍歷有效庫，近似 $O( \mid S \mid \cdot L_{tree})$。
 **直覺**：內層優化學習組合模型參數以最大化性能指標，外層優化搜索 Alpha 集合使指標最大。本法將外層搜索離散化為樹節點擴展，用多維得分平均作為獎勵信號更新 Q 值。
 **Loss/訓練細節**：無傳統梯度下降 Loss。訓練為迭代式提示優化與回測評估循環；過擬合風險分數由 LLM 基於公式結構與優化歷史生成定性評分，其餘維度基於回測指標相對排名計算。
 

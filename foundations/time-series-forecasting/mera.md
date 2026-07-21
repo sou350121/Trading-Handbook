@@ -30,18 +30,18 @@
 📡 **信息流 ASCII**:
 ```mermaid
 flowchart TD
-    A["Raw Minute Data"] --> B["[MAE Pretrain]"]
+    A["Raw Minute Data"] --> B["MAE Pretrain"]
     B --> C["Query Embed (h_t)"]
     C --> D["Retrieval Pool (Past Embeds + Labels)"]
     D --> E["Top-N Neighbors"]
-    E --> F["[Attention Aggregation]"]
+    E --> F["Attention Aggregation"]
     F --> G["Aggregated Labels (l_agg)"]
     F --> H["Aggregated Features (h_agg) + h_t"]
-    G --> I["[GateNet]"]
+    G --> I["GateNet"]
     I --> J["Top-K=1 Expert ID"]
-    H --> K["[GRU Expert]"]
+    H --> K["GRU Expert"]
     K --> L["h_expert"]
-    J --> M["[MLP Predictor]"]
+    J --> M["MLP Predictor"]
     L --> M
     M --> N["Final Return Prediction (y_pred)"]
 ```

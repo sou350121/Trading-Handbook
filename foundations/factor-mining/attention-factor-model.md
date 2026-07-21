@@ -31,19 +31,19 @@
 **1.3 信息流 ASCII 圖**
 ```mermaid
 flowchart TD
-    N1["公司特徵 (79維)"] --> N2["[Embedding]"]
-    N2 --> N3["[Attention (Query Vectors)]"]
+    N1["公司特徵 (79維)"] --> N2["Embedding"]
+    N2 --> N3["Attention (Query Vectors)"]
     N3 --> N4["因子權重 W"]
-    N5["收益率 R"] --> N6["[因子模型投影]"]
+    N5["收益率 R"] --> N6["因子模型投影"]
     N6 --> N7["殘差 ε"]
-    N7 --> N8["[LongConv]"]
+    N7 --> N8["LongConv"]
     N8 --> N9["殘差權重 w_res"]
     N4 --> N10["W ⊗ w_res"]
     N9 --> N10
     N10 --> N11["資產空間權重"]
-    N11 --> N12["[成本函數 C]"]
+    N11 --> N12["成本函數 C"]
     N12 --> N13["淨收益 R_net"]
-    N13 --> N14["[Loss: -Net Sharpe + λ·Var]"]
+    N13 --> N14["Loss: -Net Sharpe + λ·Var"]
 ```
 
 ## §2 · 數學層

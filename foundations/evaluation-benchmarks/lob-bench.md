@@ -33,8 +33,8 @@
 
 ## §2 · 數學層
 📌 **Napkin Formula:** 
-$D(P_{real}, P_{gen}) = \frac{1}{2} \sum |p_{real}(x) - p_{gen}(x)|$ (L1) 或 $W_1 = \frac{1}{n} \sum |x_{(i)}^{real} - x_{(i)}^{gen}|$。
-條件評估加權平均：$\mathcal{L}_{cond} = \sum_{k=1}^{10} w_k D(P_{real|z_k}, P_{gen|z_k})$。複雜度：分箱 $O(N \log N)$，距離計算 $O(N)$。
+$D(P_{real}, P_{gen}) = \frac{1}{2} \sum \mid p_{real}(x) - p_{gen}(x) \mid$ (L1) 或 $W_1 = \frac{1}{n} \sum \mid x_{(i)}^{real} - x_{(i)}^{gen} \mid$。
+條件評估加權平均：$\mathcal{L}_{cond} = \sum_{k=1}^{10} w_k D(P_{real \mid z_k}, P_{gen \mid z_k})$。複雜度：分箱 $O(N \log N)$，距離計算 $O(N)$。
 **直覺:** 不依賴模型內部 logits，直接比較採樣後序列的統計分佈。損失函數本質是分佈距離而非交叉熵。
 **訓練細節:** 判別器用二元分類損失訓練，生成模型本身保持原訓練方式（如自回歸 Next-Token Prediction），Benchmark 僅作後驗評估。
 

@@ -29,8 +29,8 @@
 **信息流 ASCII:**
 ```mermaid
 flowchart TD
-    A["[高頻 OHLCV/價差]"] --> C["Stock-wise Multi-Freq Fusion (CNN)"]
-    B["[低頻 財務/基本面]"] --> C["Stock-wise Multi-Freq Fusion (CNN)"]
+    A["高頻 OHLCV/價差"] --> C["Stock-wise Multi-Freq Fusion (CNN)"]
+    B["低頻 財務/基本面"] --> C["Stock-wise Multi-Freq Fusion (CNN)"]
     C["Stock-wise Multi-Freq Fusion (CNN)"] --> D["中間嵌入"]
     D["中間嵌入"] --> E["Inter-Stock Transformer (Self-Attention)"]
     E["Inter-Stock Transformer (Self-Attention)"] --> F["預測得分 S (N 只股票)"]

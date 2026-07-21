@@ -35,8 +35,8 @@ flowchart TD
     B["Quantile Net (IQN)"] --> C["QCM Regressor"]
     C["QCM Regressor"] --> D["Unbiased Variance"]
     D["Unbiased Variance"] --> E["Action Policy: Q + β*Var"]
-    E["Action Policy: Q + β*Var"] --> F["Env: Linear Pool Fit & IC Δ"]
-    F["Env: Linear Pool Fit & IC Δ"] --> G["Reward"]
+    E["Action Policy: Q + β*Var"] --> F["Env: Linear Pool Fit &amp; IC Δ"]
+    F["Env: Linear Pool Fit &amp; IC Δ"] --> G["Reward"]
 ```
 
 ## §2 · 數學層

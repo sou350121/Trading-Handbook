@@ -32,11 +32,11 @@
 ```mermaid
 flowchart TD
     A["X (Raw TS)"] --> B["Decompose"]
-    B --> C["[Trend, Seasonality, Residual]"]
+    B --> C["Trend, Seasonality, Residual"]
     C --> D["Prompt Gen"]
     D --> E["[P_t, P_s, P_r] (Semi-soft)"]
     E --> F["Concat"]
-    F --> G["[T+P_t, S+P_s, R+P_r]"]
+    F --> G["T+P_t, S+P_s, R+P_r"]
     G --> H["GPT Decoder Blocks"]
     H --> I["Update: PosEmb, LayerNorm + LoRA adapters"]
     I --> J["Output"]

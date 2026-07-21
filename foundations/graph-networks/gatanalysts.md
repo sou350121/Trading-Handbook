@@ -36,7 +36,7 @@
 
 ## §2 · 數學層
 📌 **Napkin Formula:** 
-$h_i^{(l+1)} = \sigma\left(\sum_{j \in \mathcal{N}(i)} \alpha_{ij}^{(l)} W^{(l)} h_j^{(l)}\right)$, 其中 $\alpha_{ij} = \text{softmax}_j(\text{LeakyReLU}(a^T [W h_i || W h_j]))$。複雜度 $O(|E| \cdot D \cdot D')$。
+$h_i^{(l+1)} = \sigma\left(\sum_{j \in \mathcal{N}(i)} \alpha_{ij}^{(l)} W^{(l)} h_j^{(l)}\right)$, 其中 $\alpha_{ij} = \text{softmax}_j(\text{LeakyReLU}(a^T [W h_i \mid  \mid W h_j]))$。複雜度 $O( \mid E \mid \cdot D \cdot D')$。
 **直覺:** 鄰居聚合不再是簡單平均，而是通過可學習的注意力係數動態分配權重，允許模型捕捉多跳溢出效應。
 **Loss/訓練:** 二分類交叉熵（預測 t+21 超額/欠額概率）。Rolling window：每月重訓，Train 10天 / Val 10天 / Test 1天。Grid search 學習率、層數、注意力頭數、權重衰減。
 

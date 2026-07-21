@@ -31,12 +31,12 @@
 **1.3 信息流 ASCII 圖**
 ```mermaid
 flowchart TD
-    A["[Factors]"] --> B["Dense(θ_F)"]
+    A["Factors"] --> B["Dense(θ_F)"]
     B["Dense(θ_F)"] --> C["f_F"]
-    D["[News]"] --> E["DeBERTa"]
+    D["News"] --> E["DeBERTa"]
     E["DeBERTa"] --> F["Dense(θ_N)"]
     F["Dense(θ_N)"] --> G["f_N"]
-    H["[f_F, f_N]"] --> I["Logits(φ)"]
+    H["f_F, f_N"] --> I["Logits(φ)"]
     I["Logits(φ)"] --> J["Softmax"]
     J["Softmax"] --> K["w"]
     L["w·f_F + (1-w)·f_N"] --> M["Target Return"]

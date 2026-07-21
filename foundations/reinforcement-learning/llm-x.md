@@ -29,8 +29,8 @@
 ```mermaid
 flowchart TD
     N1["News(t)"] --> N2["LLM Prompt"]
-    N2["LLM Prompt"] --> N3["[Sentiment(1-5), Risk(1-5)]"]
-    N3["[Sentiment(1-5), Risk(1-5)]"] --> N5["Concat"]
+    N2["LLM Prompt"] --> N3["Sentiment(1-5), Risk(1-5)"]
+    N3["Sentiment(1-5), Risk(1-5)"] --> N5["Concat"]
     N4["OHLCV(t)"] --> N5["Concat"]
     N5["Concat"] --> N6["LSTM/Transformer Encoder"]
     N6["LSTM/Transformer Encoder"] --> N7["Policy Head"]
@@ -41,7 +41,7 @@ flowchart TD
 📌 **Napkin Formula:**
 $s_t = \text{Concat}(OHLCV_t, \text{LLM}(News_t)) \in \mathbb{R}^d$
 $h_t = \text{SeqNet}(s_{t-w:t})$
-$\pi(a_t|s_t) = \text{MLP}(h_t)$
+$\pi(a_t \mid s_t) = \text{MLP}(h_t)$
 DDQN Loss: $L = \mathbb{E}[(r_t + \gamma \max_a Q_{\theta'}(s_{t+1}, a) - Q_\theta(s_t, a_t))^2]$
 GRPO: 以組內回報均值與標準差計算相對獎勵，替代Critic網絡。
 **直覺:** 將新聞衝擊建模為狀態空間的即時偏移量，序列網絡負責濾除高頻噪聲並捕捉情緒衰減曲線。相對獎勵機制避免了價值網絡的額外記憶體開銷，但依賴組內樣本的方差穩定性。

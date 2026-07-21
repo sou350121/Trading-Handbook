@@ -32,11 +32,11 @@
 **1.3 信息流 ASCII 圖**
 ```mermaid
 flowchart TD
-    A["News + Prices"] --> B["[MIE: DNE(5-dim) + Price Embed]"]
-    B --> C["X_<T"]
-    C --> D["[Lag-dependent TCD]"]
-    D --> E["q_φ(G) (Causal Graph & Weight Graph)"]
-    F["G + X_<T"] --> G["[FCM: Additive Noise]"]
+    A["News + Prices"] --> B["MIE: DNE(5-dim) + Price Embed"]
+    B --> C["X_&lt;T"]
+    C --> D["Lag-dependent TCD"]
+    D --> E["q_φ(G) (Causal Graph &amp; Weight Graph)"]
+    F["G + X_&lt;T"] --> G["FCM: Additive Noise"]
     G --> H["y_T (Probability)"]
 ```
 

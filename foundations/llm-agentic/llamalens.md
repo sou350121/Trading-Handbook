@@ -33,7 +33,7 @@ Raw Text → [GPT-4o/Claude] Instruction Gen → [Task Shuffle] Mixed Dataset
 ```
 
 ## §2 · 數學層
-📌 **Napkin Formula:** $\Delta W = BA$, where $B \in \mathbb{R}^{d \times r}, A \in \mathbb{R}^{r \times d}$, $r=512$. Loss: $\mathcal{L} = -\sum \log P(y_t | x_{<t}, y_{<t}, \text{instruction})$. Complexity: $O(T \cdot d \cdot r)$ per step, memory reduced by 4-bit quantization in QLoRA variant.
+📌 **Napkin Formula:** $\Delta W = BA$, where $B \in \mathbb{R}^{d \times r}, A \in \mathbb{R}^{r \times d}$, $r=512$. Loss: $\mathcal{L} = -\sum \log P(y_t \mid x_{<t}, y_{<t}, \text{instruction})$. Complexity: $O(T \cdot d \cdot r)$ per step, memory reduced by 4-bit quantization in QLoRA variant.
 **直覺:** 低秩矩陣僅更新關鍵注意力與 MLP 投影層，避免災難性遺忘；指令條件化將生成過程約束在任務標籤空間內。
 **Loss/訓練:** AdamW, batch 16, linear LR schedule, lr 2e-4, 2 epochs for full precision.
 

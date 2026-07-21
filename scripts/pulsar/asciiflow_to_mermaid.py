@@ -12,6 +12,7 @@ import glob, re, sys, pathlib, threading
 from concurrent.futures import ThreadPoolExecutor, as_completed
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import _qwen
+import fix_github_render as _github_render
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 # the ascii flow block: a "信息流 ..." label line (bold may open before a §-number),
@@ -79,6 +80,7 @@ def process(path, dry=False):
             print("  KEEP-ASCII (invalid mermaid) %s" % path, flush=True)
             return
         block = m.group(1) + "```mermaid\n" + mer + "\n```"
+        block = _github_render.fix_mermaid(block)   # GitHub-safe labels (strip ["[]"], escape <>&)
         new = text[:m.start()] + block + text[m.end():]
         if dry:
             print("=" * 60, "\n", path, "\n", block[:500], flush=True)

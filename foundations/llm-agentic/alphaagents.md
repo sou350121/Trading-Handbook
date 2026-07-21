@@ -28,16 +28,16 @@
 **信息流 ASCII:**
 ```mermaid
 flowchart TD
-    A["[10-K/10-Q]"] --> B["Fundamental Agent"]
-    B --> C["[初稿報告]"]
-    D["[News/Ratings]"] --> E["Sentiment Agent"]
+    A["10-K/10-Q"] --> B["Fundamental Agent"]
+    B --> C["初稿報告"]
+    D["News/Ratings"] --> E["Sentiment Agent"]
     E --> C
-    F["[Price/Volume]"] --> G["Valuation Agent"]
+    F["Price/Volume"] --> G["Valuation Agent"]
     G --> C
-    C --> H["[Group Chat Assistant]"]
+    C --> H["Group Chat Assistant"]
     H --> I["匯總"]
     I --> J["Round Robin 辯論 (更新判斷)"]
-    J --> K["[共識]"]
+    J --> K["共識"]
     K --> L["BUY / SELL"]
     L --> M["等權組合構建"]
     M --> N["回測/人工審計"]

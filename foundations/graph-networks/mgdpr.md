@@ -44,7 +44,7 @@ flowchart TD
 ## §2 · 數學層
 📌 Napkin Formula：
 $G_t = (V, E_t, R)$, 其中 $w_{ij}^{(r)} = f(Energy(x_i), Entropy(x_j))$
-複雜度：圖擴散多層疊加 2D 卷積，時間複雜度 $O(L \cdot |E| \cdot d^2)$，$L$ 為層數，$d$ 為特徵維度。
+複雜度：圖擴散多層疊加 2D 卷積，時間複雜度 $O(L \cdot \mid E \mid \cdot d^2)$，$L$ 為層數，$d$ 為特徵維度。
 直覺：邊權重由動態統計量驅動，擴散過程透過可學習轉移矩陣 $T$ 與權重係數 $\alpha$ 優化路徑，避免靜態圖的結構偏差。
 Loss/訓練：交叉熵損失 + 圖擴散約束項，端到端反向傳播，PyTorch 實現，Nvidia A100 訓練。
 

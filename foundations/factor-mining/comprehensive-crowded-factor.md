@@ -33,8 +33,8 @@ flowchart TD
     C --> D["月度再平衡"]
     D --> E["計算分位跳變幅度"]
     E --> F["過濾: |ΔQuintile| ≥ 2/3"]
-    D --> G["Long Leg: Q1->Q3+"]
-    H["Short Leg: Q5->Q3-"] --> I["雙重排序疊加風格因子"]
+    D --> G["Long Leg: Q1-&gt;Q3+"]
+    H["Short Leg: Q5-&gt;Q3-"] --> I["雙重排序疊加風格因子"]
     I --> J["多空組合"]
 ```
 

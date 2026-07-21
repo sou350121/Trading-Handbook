@@ -32,7 +32,7 @@
 **1.3 信息流 ASCII 圖**
 ```mermaid
 flowchart TD
-    A["Raw 5-min Data"] --> B["[CCV Splits]"]
+    A["Raw 5-min Data"] --> B["CCV Splits"]
     B --> C["Train DRL (PPO/SAC/TD3) × N"]
     C --> D["IS/OOS Performance Matrix M"]
     D --> E["Rank Consistency"]

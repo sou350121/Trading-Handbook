@@ -49,12 +49,12 @@ $M_{ij} = \frac{1}{T}\sum_{t=1}^T I(X_i^t; X_j^t)$  (Avg MI Matrix)
 $G_{TMFG} = \text{argmax}_{G \in \mathcal{P}} \sum_{(i,j)\in E} M_{ij}$  (Planar/Maximal Triangulation)
 $H^{(l+1)} = \sigma(\Theta^{(l)} *_{\mathcal{H}} H^{(l)})$  (HCNN on Homology Groups)
 
-**複雜度:** TMFG 構建 $O(N^2)$，HCNN 卷積 $O(|V|+|E|+|F|)$，LSTM 前向 $O(T \cdot d^2)$。
+**複雜度:** TMFG 構建 $O(N^2)$，HCNN 卷積 $O( \mid V \mid + \mid E \mid + \mid F \mid )$，LSTM 前向 $O(T \cdot d^2)$。
 **直覺:** 互信息矩陣量化量價層級的統計依賴，TMFG 施加平面圖約束過濾雜訊邊，同卷積在簡化同調群（0/1/2 維）上執行局部聚合，最後由 LSTM 吸收時間殘差。
 **Loss/訓練:** 分類交叉熵 (Cross-Entropy)，AdamW ($lr=6\times10^{-5}, \beta_1=0.90, \beta_2=0.95$)，按年份劃分 Train/Val/Test，超參繼承自 LOBFrame 基線。
 
 ## §3 · 數據層
-- **市場/標的:** NASDAQ 15 檔股票（覆蓋 6 部門/13 子行業，市值 >$100B）。
+- **市場/標的:** NASDAQ 15 檔股票（覆蓋 6 部門/13 子行業，市值 >\$100B）。
 - **頻率/時段:** 逐筆 (Tick-by-tick) LOB 數據，2017-01 至 2019-12。
 - **來源/預處理:** LOBSTER 提供商；保留 10 檔價格/成交量層級；按 tick size 分三組 (Small/Mid/Large)；成交量分箱降噪；訓練期逐日計算成對 MI 並平均。
 - **樣本外/容量:** 按年份嚴格劃分（訓練連續日/驗證隨機日/測試連續日）；未披露單日最大訂單流容量與滑點假設，推測適用於機構級流動性標的，小盤/低流動性股票拓撲穩定性存疑（未驗證）。
@@ -82,7 +82,7 @@ $H^{(l+1)} = \sigma(\Theta^{(l)} *_{\mathcal{H}} H^{(l)})$  (HCNN on Homology Gr
 **6.2 推斷的隱含假設:**
 - **Regime 依賴:** TMFG 基於訓練期平均 MI，假設微觀結構依賴關係在測試期保持平穩。波動率跳升或流動性驟降時，拓撲重構滯後將導致特徵失效。
 - **容量/成本:** 監督回歸標籤 (Up/Down/Stable) 忽略買賣價差與訂單簿深度非對稱性；未計入 TCA 成本，高頻信號需搭配智能路由/拆單算法。
-- **數據泄漏/Survivorship:** 僅選取 NASDAQ 大型股 (>$100B)，存在倖存者偏差；按年劃分雖嚴謹，但 MI 計算若未嚴格隔離測試期數據，可能引入輕微前瞻。
+- **數據泄漏/Survivorship:** 僅選取 NASDAQ 大型股 (>\$100B)，存在倖存者偏差；按年劃分雖嚴謹，但 MI 計算若未嚴格隔離測試期數據，可能引入輕微前瞻。
 
 ## §7 · 對比 & 面試 Tip
 | 同軸對手 | 關鍵差異軸 | Open? | Status |

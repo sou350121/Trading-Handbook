@@ -43,7 +43,7 @@ flowchart TD
 
 ## §2 · 數學層
 📌 **Napkin Formula**:
-$P = 1/f_{top}$, 其中 $f_{top} = \arg\max_{f} |\mathcal{F}(x_{hist})|$
+$P = 1/f_{top}$, 其中 $f_{top} = \arg\max_{f} \mid \mathcal{F}(x_{hist}) \mid$
 特徵構建: $X_{i,j} = x_{t - j \cdot P}$ (按週期 P 回溯索引)
 複雜度: FFT $O(N \log N)$ + 特徵矩陣構建 $O(N \cdot k \cdot \text{lookback})$ + TabPFN 推理 $O(N_{samples}^2)$ (in-context 注意力)
 直覺: 將時域週期性轉化為表格列的對齊規則，使 TabPFN 的 in-context 機制直接學習「同週相位」的條件分佈。

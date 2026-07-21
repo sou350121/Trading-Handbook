@@ -4,7 +4,7 @@
 
 > **發布**：2025-09-22 · （無 venue）
 > **QuantML 導讀**：[Bloomberg | 如何增强OHLC数据预测效果](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247491760&idx=1&sn=95ec26a437f20c42ee34ef7239c50b23&chksm=ce7d87aef90a0eb807224c54a16fc357ec01a24018af288d15d8c3c77124a45e060fdc8e4778#rd)
-> **原始論文**：[CEEMD-based Multivariate Financial Time Series Forecasting using a Temporal Fusion Transformer](https://doi.org/10.1109/iscaie61308.2024.10576340)（2024 IEEE 14th Symposium on Computer Applications &amp;amp; Industrial Electronics (ISCAIE) · 2024 · 被引 10 · Crossref）
+> **原始論文**：[CEEMD-based Multivariate Financial Time Series Forecasting using a Temporal Fusion Transformer](https://doi.org/10.1109/iscaie61308.2024.10576340)（2024 IEEE 14th Symposium on Computer Applications &amp; Industrial Electronics (ISCAIE) · 2024 · 被引 10 · Crossref）
 > **核心定位**：落點於「量价表格 × 高频日内 × 监督回归」軸，解決傳統OHLC bar內微觀結構信息丟失的prior gap。透過引入價格點精確時間戳與學生t分佈輸出，將bar級數據的預測信噪比推向新邊界。
 
 **五軸座標**
@@ -29,11 +29,11 @@
 **1.3 信息流 ASCII**：
 ```mermaid
 flowchart TD
-    A["[20min Lookback OHLC Bars]"] --> B["價格/成交量特徵 (No-timing set)"]
-    A["[20min Lookback OHLC Bars]"] --> C["時間戳特徵 (Timestamp Annotations)"]
-    C["時間戳特徵 (Timestamp Annotations)"] --> D["[MLP / GRU / Transformer]"]
-    D["[MLP / GRU / Transformer]"] --> E["自注意力/序列編碼"]
-    D["[MLP / GRU / Transformer]"] --> F["輸出層：μ, σ, ν (Student's t)"]
+    A["20min Lookback OHLC Bars"] --> B["價格/成交量特徵 (No-timing set)"]
+    A["20min Lookback OHLC Bars"] --> C["時間戳特徵 (Timestamp Annotations)"]
+    C["時間戳特徵 (Timestamp Annotations)"] --> D["MLP / GRU / Transformer"]
+    D["MLP / GRU / Transformer"] --> E["自注意力/序列編碼"]
+    D["MLP / GRU / Transformer"] --> F["輸出層：μ, σ, ν (Student's t)"]
     F["輸出層：μ, σ, ν (Student's t)"] --> G["預測下一分鐘 VWAP 回報分佈"]
 ```
 

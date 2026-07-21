@@ -45,7 +45,7 @@ Constraint: AST_Similarity(α_evolved, α_seed) ≥ 0.1
 ## §3 · 數據層
 - **資料規模/頻率/市場:** 沪深300（HS300）與中證500（CSI500），日频波段。
 - **時段:** 2023 年至 2025 年（具體劃分為 2023-01 至 2024-01 熊市，2024-01 至 2025-01 牛市，組合回測 2024-01 至 2025-11）。
-- **來源與特徵:** Tushare 數據源，包含籌碼分佈（$winner_rate, $chip_conct_90）、資金流向（$buy_sm_vol, $net_mf_vol）及截面/時間序列算子（RANK, INDUSTRY_NEUTRALIZE, TS_RANK, RSI）。
+- **來源與特徵:** Tushare 數據源，包含籌碼分佈（$winner_rate,$chip_conct_90）、資金流向（$buy_sm_vol,$net_mf_vol）及截面/時間序列算子（RANK, INDUSTRY_NEUTRALIZE, TS_RANK, RSI）。
 - **樣本外與容量假設:** AlphaEvo500 庫含 350 個訓練種子，50 個驗證種子，100 個測試種子。外部測試集 Alpha158。容量假設未披露，但等權組合前 10 個因子暗示單策略容量有限。
 
 ## §4 · 代碼層
