@@ -25,15 +25,28 @@ timeout 1500 "$PY" scripts/pulsar/arxiv_radar.py --days 8 >>"$LOG" 2>&1 || log "
 # practitioner RSS radar
 timeout 1500 "$PY" scripts/pulsar/practitioner_radar.py --days 8 >>"$LOG" 2>&1 || log "practitioner_radar returned nonzero (partial ok)"
 
-# refresh the hot-queue metadata into corpus (radar_queue is gitignored; corpus_meta unchanged here)
-git add radar/ 2>>"$LOG"
-if [ -z "$(git diff --cached --name-only)" ]; then log "no new radar pages this week"; exit 0; fi
+# arXiv ⚡ -> first-hand full-text dissection. Ingests queued hot papers as data/raw (QuantML
+# schema) and reuses the origin-aware Pass A/B to write foundations/ pages -- the leverage move:
+# primary-source dissections, not second-hand digests. A qwen outage just leaves the raws cached;
+# the daily cron's own Pass A/B (also origin-aware) self-heals them on its next run.
+timeout 2400 "$PY" scripts/pulsar/arxiv_dissect.py --limit 8 --workers 2 >>"$LOG" 2>&1 || log "arxiv_dissect returned nonzero (partial ok)"
+
+# Downstream page processing (mirrors daily_update.sh); each is a no-op when nothing new landed.
+"$PY" scripts/add_fingerprint.py >>"$LOG" 2>&1 || true
+"$PY" scripts/pulsar/asciiflow_to_mermaid.py --workers 2 >>"$LOG" 2>&1 || true
+"$PY" scripts/gen_overviews.py >>"$LOG" 2>&1 || true
+"$PY" scripts/gen_nav.py >>"$LOG" 2>&1 || true
+"$PY" scripts/pulsar/resolve_sources_v2.py --resolve --inject >>"$LOG" 2>&1 || true
+"$PY" scripts/export_corpus_meta.py >>"$LOG" 2>&1 || true
+
+git add radar/ foundations/ crossing/ cheat-sheet/ docs.json data/corpus_meta.json 2>>"$LOG"
+if [ -z "$(git diff --cached --name-only)" ]; then log "no new radar/dissection pages this week"; exit 0; fi
 if git diff --cached --name-only | grep -q '^data/\(raw\|distill\)/'; then
   log "ABORT: refusing to commit raw/distill"; git reset -q; exit 1
 fi
 $PY scripts/handbook_audit.py >>"$LOG" 2>&1 || { log "gate FAILED — staged, not pushing"; exit 1; }
 W=$(date -u +%G-W%V)
-git commit -q -m "radar: weekly arXiv + practitioner sweep [$W]" >>"$LOG" 2>&1
+git commit -q -m "radar: weekly arXiv + practitioner sweep + first-hand dissections [$W]" >>"$LOG" 2>&1
 if git push -q >>"$LOG" 2>&1; then log "PUSHED weekly radar $W"
 elif git pull --rebase -q >>"$LOG" 2>&1 && git push -q >>"$LOG" 2>&1; then log "PUSHED after rebase $W"
 else log "push FAILED — next run retries"; exit 1; fi

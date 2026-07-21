@@ -36,10 +36,10 @@ TEMPLATE = """請依下面骨架，把這篇方法寫成一頁解構 markdown。
 # {name} 解構（{fw_en}）
 
 > **發布**：{date} · {venue}{arxiv_line}
-> **QuantML 導讀**：[{wechat_title}]({url})
+> **{src_label}**：[{wechat_title}]({url}){prov}
 > **核心定位**：（1-2 句：五軸落點 + 解了什麼 prior gap）
 
-**Status:** v0.5 — 基於 QuantML 導讀 + 原論文（如有）。benchmark 細節待升 v1。
+**Status:** v0.5 — 基於{src_label}（有原文則以原文為準）。細節待升 v1。
 **TL;DR:**（≤4 句：①做什麼新事 ②核心 trick ③為什麼這對某條軸★ ④一個關鍵實證數字**——若導讀沒有量化結果，寫「導讀未給量化結果」，不要編數字**）
 
 **X-Ray.**（150-300 字分析論斷：放回五軸 Pareto、解了哪些舊工程坑、預測它打不開的 envelope、對量化讀者意義。不是 summary）
@@ -49,6 +49,9 @@ TEMPLATE = """請依下面骨架，把這篇方法寫成一頁解構 markdown。
 
 ## §2 · 數學層
 （📌 Napkin Formula：1-3 行最關鍵 equation + 複雜度；直覺 2-3 句；loss/訓練細節）
+
+## §2.5 · 帶數字走一遍（Worked Example）
+（用**明確標「假設/示意」的玩具數字**把核心機制手算一遍：給一組假想輸入 → 中間量怎麼算 → 輸出什麼，讓讀者「照著算一遍就懂」。3-6 步。**這裡的數字是示意用途、不是論文實證結果**；論文真實數字一律留在 §5，缺的寫「未披露」。）
 
 ## §3 · 數據層
 （資料規模/頻率/市場/時段、怎麼來、樣本外與容量假設）
@@ -69,7 +72,7 @@ TEMPLATE = """請依下面骨架，把這篇方法寫成一頁解構 markdown。
 （按 persona 分流，至少 3 條：因子研究員/高頻執行/組合配置/LLM-agent/RL 策略/研究學生）
 
 ## References
-（列原論文 + lineage + QuantML 導讀鏈接）
+（列原論文 + lineage + 來源鏈接）
 
 ---
 
@@ -80,7 +83,7 @@ TEMPLATE = """請依下面骨架，把這篇方法寫成一頁解構 markdown。
 - 核心 trick 線索：{trick}
 - 來源：venue={venue} arxiv={arxiv} framework={fw}
 
-QuantML 導讀正文（你的主要事實來源，截斷 8000 字）：
+{body_label}（你的主要事實來源）：
 \"\"\"
 {body}
 \"\"\"
@@ -96,15 +99,23 @@ def slugify(d):
 def build(d, raw):
     src = d.get("source",{}) or {}
     ax = d.get("axes",{})
+    origin = src.get("origin", "quantml")
     arxiv = src.get("arxiv"); venue = src.get("venue") or "（無 venue）"
     fw = src.get("framework") or d["title"][:24]
     arxiv_line = f" · arXiv [{arxiv}](https://arxiv.org/abs/{arxiv})" if arxiv and arxiv not in ("null","None") else ""
     axes_human = " · ".join(f"{AXES_NAME[k]}={ax.get(k,'?')}" for k in AXES_NAME)
+    if origin == "arxiv":
+        src_label = "arXiv 原文"; body_label = "arXiv 原文（摘要＋正文，截斷）"
+        prov = "　·　_本頁由 arXiv 原文一手自主解構_"; blen = 11000
+    else:
+        src_label = "QuantML 導讀"; body_label = "QuantML 導讀正文（截斷）"
+        prov = ""; blen = 8000
     return TEMPLATE.format(
         name=fw, fw_en=fw, fw=fw, date=d.get("date",""), venue=venue,
         arxiv=arxiv, arxiv_line=arxiv_line, wechat_title=d.get("title",""),
         url=d.get("url",""), tldr=d.get("tldr",""), trick=d.get("key_trick",""),
-        axes_human=axes_human, body=raw["body"][:8000],
+        axes_human=axes_human, body=raw["body"][:blen],
+        src_label=src_label, prov=prov, body_label=body_label,
         data=ax.get("data","?"),horizon=ax.get("horizon","?"),paradigm=ax.get("paradigm","?"),
         alpha=ax.get("alpha","?"),autonomy=ax.get("autonomy","?"))
 

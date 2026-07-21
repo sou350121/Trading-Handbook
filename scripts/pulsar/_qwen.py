@@ -44,7 +44,10 @@ def ask(prompt, system=None, thinking=True, temperature=0.3, max_tokens=8000,
             with urllib.request.urlopen(req, timeout=timeout) as r:
                 body = json.loads(r.read().decode("utf-8"))
             return body["choices"][0]["message"]["content"]
-        except (urllib.error.HTTPError, urllib.error.URLError, KeyError) as e:
+        # NB: a read timeout on an open socket raises TimeoutError (socket.timeout), NOT URLError,
+        # so without it here a slow/degraded endpoint escaped the retry loop on attempt 1.
+        except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError,
+                ConnectionError, KeyError) as e:
             last = e
             code = getattr(e, "code", "n/a")
             try:
