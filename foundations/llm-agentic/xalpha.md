@@ -4,6 +4,7 @@
 
 > **發布**：2026-07-15 · （無 venue）
 > **QuantML 導讀**：[XALPHA：AI量化研究员——研报理解、策略挖掘与代码生成](https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247494280&idx=1&sn=8fde823e78e57a016f152a63eb01d468&chksm=ce7d8d96f90a048055ca89535dcce487abb8b138cb6dced10af0357e2d25fd64a1c97b1bc351#rd)
+> **原始論文**：[&lt;title&gt;Dynamic light scattering of Brownian particles under y/xalpha boundary&lt;/title&gt;](https://doi.org/10.1117/12.279766)（SPIE Proceedings · 1997 · 被引 0 · Crossref）
 > **核心定位**：聚焦「量价表格 × 日频波段 × Agent自主演进」轴，解构传统黑盒搜索/纯统计LLM在低信噪比、非平稳市场中的过拟合与数据泄露死胡同。将因子挖掘从「参数暴力试错」重构为「研报阅读-假说-实现-验证-反思-演化」的假设驱动闭环。
 
 **五軸座標**

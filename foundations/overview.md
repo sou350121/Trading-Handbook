@@ -8,7 +8,7 @@
 - [大模型与智能体](/foundations/llm-agentic/overview) — 62 篇
 - [微观结构与高频](/foundations/market-microstructure/overview) — 30 篇
 - [因子挖掘与特征工程](/foundations/factor-mining/overview) — 67 篇
-- [组合优化与资产配置](/foundations/portfolio-optimization/overview) — 36 篇
+- [组合优化与资产配置](/foundations/portfolio-optimization/overview) — 37 篇
 - [因果推断与结构建模](/foundations/causal-structural/overview) — 11 篇
 - [评测基准与失效分析](/foundations/evaluation-benchmarks/overview) — 23 篇
 - [数据生成与增强](/foundations/data-generation-augmentation/overview) — 6 篇

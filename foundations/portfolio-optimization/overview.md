@@ -2,7 +2,7 @@
 
 > **收錄**：均值方差/风险平价/Black-Litterman、稀疏优化、执行算法(VWAP/冲击成本)、多资产轮动与战术配置
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：36 篇（33 篇成解構頁，其餘為 registry）
+> **本 zone 現有**：37 篇（34 篇成解構頁，其餘為 registry）
 
 ## 解構清單
 
@@ -13,6 +13,7 @@
 | [DeePM](deepm) | ⚡ | DeePM | 提出DeePM框架，通过定向延迟、宏观图谱先验与SoftMin-EVaR目标，实现端到端宏观资产 |
 | [RTS-PnO](rts-pno) | ⚡ | KDD25 | 提出RTS-PnO框架，通过端到端PnO范式与自适应不确定性约束对齐预测与决策目标，实盘降低8. |
 | [BPQP](bpqp) | ⚡ | NeurIPS24 | 提出BPQP框架，将可微分凸优化的反向传播重构为二次规划问题，实现前后向分离，大幅提升端到端投资 |
+| [SciPhyRL](sciphyrl) | 🔧 | [arXiv](https://arxiv.org/abs/2607.15195) | 提出基于SciPhyRL的连续时间组合优化框架，通过PINN离线求解路径HJB方程，结合微观结构 |
 | [偏度组合管理：如何系统性提升经典因子的收益？](art-409) | 🔧 | — | 提出基于预期偏度预测与顺序双重排序的偏度管理框架，系统性修复去极值对经典因子尾部收益的破坏。 |
 | [RIEnet](rienet) | 🔧 | RIEnet | 提出RIEnet神经网络，通过时滞变换、BiLSTM清洗特征值与MLP估计波动率，端到端最小化样 |
 | [拒绝先预测再优化：将 Sharpe/Omega/CVaR塞入](sharpe-omega-cvar) | 🔧 | — | 提出端到端可微组合优化框架，将Sharpe/Omega/CVaR平滑为损失函数，直接输出权重并优 |
