@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" role="img" aria-label="Trading-Handbook 量化交易手冊">
+  <rect width="1200" height="300" fill="#0B1220"/>
+  <rect x="0" y="0" width="1200" height="4" fill="#D4910A"/>
+
+  <!-- five-axis glyph: five bars, the book's coordinate system -->
+  <g transform="translate(1000,74)" fill="#D4910A">
+    <rect x="0"   y="60" width="14" height="88"  rx="2" opacity="0.55"/>
+    <rect x="30"  y="30" width="14" height="118" rx="2" opacity="0.70"/>
+    <rect x="60"  y="78" width="14" height="70"  rx="2" opacity="0.45"/>
+    <rect x="90"  y="12" width="14" height="136" rx="2" opacity="0.90"/>
+    <rect x="120" y="48" width="14" height="100" rx="2" opacity="0.60"/>
+  </g>
+
+  <text x="80" y="118" font-family="Georgia, 'Times New Roman', serif" font-size="60" font-weight="700" fill="#F5F3EE">Trading-Handbook</text>
+  <text x="84" y="162" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="30" fill="#C7CCD1" letter-spacing="10">量化交易手冊</text>
+  <text x="86" y="196" font-family="sans-serif" font-size="16" fill="#8A93A0" letter-spacing="3">照見 · Pulsar 系列 — Decision / Trading 端</text>
+
+  <line x1="80" y1="224" x2="820" y2="224" stroke="#222E44" stroke-width="1"/>
+  <text x="80" y="252" font-family="ui-monospace,'SF Mono',Menlo,monospace" font-size="15" fill="#D4910A" letter-spacing="1">數據模態 · 時間尺度 · 學習範式 · Alpha機制 · 人機協作</text>
+  <text x="80" y="282" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="14" fill="#6B7280">給做過實盤的人的一張量化 ML 方法活地圖 — 方法怎麼差 · 哪些 claim 會崩 · 誰在持續付錢</text>
+</svg>
