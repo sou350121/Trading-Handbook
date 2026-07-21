@@ -40,6 +40,8 @@
 
 **張力四：無約束最優 vs 換手/成本約束。** 一端是數學上的最優權重（頻繁翻轉、高換手），另一端是把交易成本、稀疏性、換手率硬編進優化。[DeePM](../foundations/portfolio-optimization/deepm.md)（Top-K 集成隱式壓換手）、[Grid-FW](../foundations/portfolio-optimization/grid-fw.md)（稀疏基數約束降交易筆數）、[DAR4020](../foundations/portfolio-optimization/dar4020.md)（月度再平衡 + 規則型）在約束這端。**裁決：這是實盤與回測的分水嶺，也是這一族最系統性的謊言區。** 絕大多數頁面的 §5 解讀都不得不加一句「未計交易成本/滑點，實盤 Δ 將顯著縮水」——[SIT](../foundations/portfolio-optimization/signature-informed-transformer-sit.md) 明說 5-10 bps 摩擦可能吞噬 Alpha，[RIEnet](../foundations/portfolio-optimization/rienet.md) 的 57% 換手率是懸在頭上的刀。真正把成本當一等公民的少數頁面反而值得信：[RIEnet](../foundations/portfolio-optimization/rienet.md) 用 IBKR 級摩擦模擬器（含佣金/規費/融資利息）驗證高換手仍有淨值優勢，這種帶摩擦的宣稱才有實盤參考價值。裁決明確：**看到高夏普先問換手率與滑點假設，沒有帶摩擦驗證的配置法一律當回測產物**。
 
+**張力五：RL 隱式學風控 vs 求解器硬約束。** 純 RL 派相信序列決策能自己學會風險控制，混合派則堅持把硬約束交給凸優化求解器。[MoEDRLPM](../foundations/portfolio-optimization/moedrlpm.md)/[HARLF](../foundations/portfolio-optimization/harlf.md) 偏純 RL（風險靠 reward 設計與資本管理模塊），[MASA](../foundations/portfolio-optimization/masa.md) 是混合派的旗幟。**裁決：混合派在實盤約束下勝面更大，但這不是 RL 的失敗、而是 RL 的正確用法。** MASA 頁面的面試 Tip 把道理講透：單一 reward 權重敏感、連續動作在劇烈波動下必然約束越界，把硬約束（槓桿、多空、行業中性）交給求解器投影、讓 RL 專注非線性收益探索，是分工而非替代。純 RL 的軟懲罰（Lagrangian penalty）在金融非平穩環境下調參極難，且 TD3/PPO 的價值過估計會被放大。所以這條張力的正解不是「RL vs 求解器」的二選一，而是 [Grid-FW](../foundations/portfolio-optimization/grid-fw.md) 頁面提示的另一種組合——把求解器當成 RL 的「動作空間投影層」，讓 RL 的連續輸出經稀疏/合規投影後才落地。RL 負責找 Alpha，求解器負責讓 Alpha 可執行。
+
 ## 什麼在持續有效 vs 什麼被擁擠掉
 
 有結構性理由持續有效的，是**繞開收益預測、只做風險/約束工程的那些工序**。協方差清洗（[RIEnet](../foundations/portfolio-optimization/rienet.md)）、稀疏求解（[Grid-FW](../foundations/portfolio-optimization/grid-fw.md)）、可微優化層（[BPQP](../foundations/portfolio-optimization/bpqp.md)）之所以耐用，是因為它們不預測 Alpha、不與其他資金搶同一份收益，只是把「同樣的預測」轉換成「更穩健、更省成本的權重」。這類工序的競爭對手是數值穩定性和算力，不是市場擁擠，因此不會被套利掉。同理，[2024 JFQA](../foundations/portfolio-optimization/2024-jfqa-1-n.md) 揭示的 **1/N 分散化底線**是結構性的——它源於高維估計風險這條數學鐵律，只要維度災難存在，1/N 就永遠是那個難以擊敗的錨。
@@ -86,6 +88,7 @@
 4. [Grid-FW](../foundations/portfolio-optimization/grid-fw.md) — 稀疏基數約束，用選股數量硬控估計誤差放大。
 5. [MASA](../foundations/portfolio-optimization/masa.md) — RL 產收益、求解器打硬約束的鬆耦合風控範本。
 6. [RIEnet](../foundations/portfolio-optimization/rienet.md) — 協方差工程作為風險模型底座。
+7. [TLN-VWAP](../foundations/portfolio-optimization/tln-vwap.md) — 把 VWAP 滑點寫進損失，執行層的成本內生化。
 
 ## 開放問題 / 值得下注的方向
 
@@ -127,3 +130,15 @@
 - [SciPhyRL](../foundations/portfolio-optimization/sciphyrl.md) — PINN 離線解 HJB 的連續時間配置。
 - [art-78 排名空間統計套利](../foundations/portfolio-optimization/art-78.md) — 空間變換降維 + 高頻再平衡的容量邊界。
 - [Sharpe/Omega/CVaR 端到端框架](../foundations/portfolio-optimization/sharpe-omega-cvar.md) — 不可微金融指標平滑化的工具箱。
+- [cGAN 策略克隆](../foundations/portfolio-optimization/cgan.md) — 從持倉克隆經理人策略的 Agent 生成器，用於壓測與歸因。
+- [TLN-VWAP](../foundations/portfolio-optimization/tln-vwap.md) — 執行層 Loss Engineering，成本直接可微優化。
+- [MoEDRLPM](../foundations/portfolio-optimization/moedrlpm.md) — 時空嵌入 + MoE 路由解耦宏觀擇時與微觀選股。
+- [HARLF](../foundations/portfolio-optimization/harlf.md) — 三層分層 RL 融合情感與量價的多模態配置。
+- [AlphaGAT](../foundations/portfolio-optimization/alphagat.md) — 兩階段因子挖掘 + PPO/GAT 動態因子權重分配。
+- [SDFL](../foundations/portfolio-optimization/sdfl.md) — 半決策聚焦學習 + 深度集成的穩健調倉。
+- [DSPO](../foundations/portfolio-optimization/dspo.md) — 高頻日頻融合 + 單調邏輯回歸損失的排序組合。
+- [YAND](../foundations/portfolio-optimization/yand.md) — 微分幾何求解含偏度峰度的千級資產組合優化。
+- [DGT 動態網格](../foundations/portfolio-optimization/dgt.md) — 加密市場以「重置」替「終止」的資本管理。
+- [DiT-LSTM-SVAR](../foundations/portfolio-optimization/dit-lstm-svar.md) — SVAR 噪聲過濾剔除隨機游走標的的高頻組合。
+- [art-201 宏觀狀態檢測 TAA](../foundations/portfolio-optimization/art-201.md) — K-means 經濟狀態當條件先驗的戰術資產配置。
+- [STRAPSim](../foundations/portfolio-optimization/strapsim.md) — 語義匹配度量組合相似性的成分感知工具。
