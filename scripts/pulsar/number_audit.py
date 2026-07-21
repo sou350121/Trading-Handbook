@@ -46,14 +46,21 @@ def body_for(page_text):
     if _BODY_INDEX is None:
         _BODY_INDEX = _build_index()
     m = re.search(r'mp\.weixin\.qq\.com/s\?[^\s)\]]+', page_text)
-    if not m:
-        return None
-    url = m.group(0)
+    if m:
+        url = m.group(0)
+    else:
+        # arXiv-origin pages carry an arxiv.org/abs URL instead of a WeChat link. The raw is keyed
+        # by the versioned abs_url (…/<id>v1); the page's first arXiv link is unversioned, so match
+        # by containment either way.
+        m = re.search(r'arxiv\.org/abs/\d{4}\.\d{4,5}(?:v\d+)?', page_text)
+        if not m:
+            return None
+        url = "https://" + m.group(0)
     if url in _BODY_INDEX:
         return _BODY_INDEX[url]
-    tail = url[-40:]                       # fall back to suffix match
+    tail = url[-40:]                       # fall back to suffix / containment match
     for u, b in _BODY_INDEX.items():
-        if tail in u:
+        if tail in u or url in u or u in url:
             return b
     return None
 
