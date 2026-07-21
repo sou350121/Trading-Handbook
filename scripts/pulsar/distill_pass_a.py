@@ -90,12 +90,14 @@ def do_one(f):
             if v not in opts: d.setdefault("axes",{})[k]= (v or "?")
         d.update({"pos":rec["pos"],"msgid":rec["msgid"],"title":rec["title"],
                   "date":rec.get("date",""),"url":rec["url"],"chars":rec["chars"]})
-        # arXiv-ingested raws (msgid arxiv_<id>) are first-hand papers, not QuantML digests:
-        # stamp source.origin so Pass B renders the arXiv-origin header no matter which cron
-        # (weekly arxiv_dissect OR the daily raw sweep) happens to classify them.
+        # First-hand raws (arXiv / OA-journal pdf) are papers, not QuantML digests: stamp
+        # source.origin so Pass B renders the primary-source header no matter which cron
+        # (weekly dissect OR the daily raw sweep) happens to classify them.
         if rec["msgid"].startswith("arxiv_"):
             d.setdefault("source", {})["origin"] = "arxiv"
             d["source"]["arxiv"] = rec["msgid"][len("arxiv_"):]
+        elif rec["msgid"].startswith("oa_"):
+            d.setdefault("source", {})["origin"] = "oa"
         out.write_text(json.dumps(d, ensure_ascii=False, indent=2))
         with _lock:
             _stats["ok"]+=1

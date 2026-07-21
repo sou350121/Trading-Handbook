@@ -49,10 +49,10 @@ def body_for(page_text):
     if m:
         url = m.group(0)
     else:
-        # arXiv-origin pages carry an arxiv.org/abs URL instead of a WeChat link. The raw is keyed
-        # by the versioned abs_url (…/<id>v1); the page's first arXiv link is unversioned, so match
-        # by containment either way.
-        m = re.search(r'arxiv\.org/abs/\d{4}\.\d{4,5}(?:v\d+)?', page_text)
+        # arXiv-origin pages carry an arxiv.org/abs URL; OA-journal pages carry a doi.org URL
+        # (their raw is keyed by exactly that link). Versioned/unversioned handled by containment.
+        m = (re.search(r'arxiv\.org/abs/\d{4}\.\d{4,5}(?:v\d+)?', page_text)
+             or re.search(r'doi\.org/[^\s)\]"]+', page_text))
         if not m:
             return None
         url = "https://" + m.group(0)

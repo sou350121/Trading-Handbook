@@ -30,7 +30,9 @@ ROOT = pathlib.Path(__file__).resolve().parents[2]
 RAW = ROOT / "data" / "raw"
 DIS = ROOT / "data" / "distill"
 QUEUE = ROOT / "data" / "radar_queue.json"
-POS_BASE = 100000  # arXiv pos band, far above QuantML (~419) -> never collides with corpus pos
+OA_QUEUE = ROOT / "data" / "oa_queue.json"     # journal ⚡ papers with an Unpaywall OA pdf
+POS_BASE = 100000     # arXiv pos band, far above QuantML (~419) -> never collides with corpus pos
+OA_POS_BASE = 200000  # OA-journal band, disjoint from both
 UA = {"User-Agent": "Mozilla/5.0 (Trading-Handbook research bot)"}
 
 
@@ -187,13 +189,130 @@ def patch_origin(msgid, tid):
     return d
 
 
+# ---------------- OA-journal branch (Unpaywall pdfs queued by journal_radar.py) ----------------
+
+def oa_key(doi):
+    return re.sub(r"[^A-Za-z0-9]+", "_", doi).strip("_").lower()
+
+
+def ingest_oa(entry, seq):
+    """Try each OA pdf candidate (repository copies first; publisher-hosted ones 403 this IP)
+    -> pdftotext -> QuantML-schema raw. Returns (msgid, status)."""
+    doi = entry["doi"]
+    msgid = f"oa_{oa_key(doi)}"
+    out = RAW / f"{msgid}_1.json"
+    if out.exists() and len(json.loads(out.read_text()).get("body", "")) > 800:
+        return msgid, "cached"
+    cands = entry.get("pdf_candidates") or ([entry["pdf"]] if entry.get("pdf") else [])
+    data = b""
+    for cu in cands:
+        try:
+            data, _ = _fetch(cu, timeout=90, retries=2)
+        except Exception:
+            continue
+        if data[:5] != b"%PDF-":
+            # some OA links serve a landing page; try one embedded pdf link
+            try:
+                h = data.decode("utf-8", "replace")
+                m = re.search(r'href="([^"]+\.pdf[^"]*)"', h)
+                if m:
+                    data, _ = _fetch(urllib.request.urljoin(cu, m.group(1)), timeout=90, retries=2)
+            except Exception:
+                pass
+        if data[:5] == b"%PDF-":
+            break
+    if data[:5] != b"%PDF-":
+        return msgid, "no-fetchable-pdf"
+    txt = _pdf_text(data)
+    if len(txt) < 2500:
+        return msgid, "too-short"
+    rec = {"pos": OA_POS_BASE + seq, "msgid": msgid, "itemidx": "1",
+           "title": entry["title"], "wechat_title": entry["title"],
+           "date": entry.get("date", ""), "url": f"https://doi.org/{doi}",
+           "chars": len(txt), "body": txt}
+    RAW.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps(rec, ensure_ascii=False, indent=2))
+    return msgid, "fulltext-pdf"
+
+
+def patch_origin_oa(msgid, entry):
+    """Stamp origin=oa + authoritative journal/doi metadata onto the distill record."""
+    f = DIS / f"{msgid}.json"
+    if not f.exists():
+        return None
+    d = json.loads(f.read_text())
+    src = d.setdefault("source", {})
+    src["origin"] = "oa"
+    src["doi"] = entry["doi"]
+    src["venue"] = entry.get("journal") or src.get("venue")   # journal name is authoritative
+    if not d.get("slug_override"):
+        # english title -> meaningful slug (otherwise slugify falls back to ugly art-<pos>)
+        s = re.sub(r"[^a-zA-Z0-9]+", "-", entry.get("title", "")).strip("-").lower()
+        words = [w for w in s.split("-") if w][:7]
+        if len("-".join(words)) > 4:
+            d["slug_override"] = "-".join(words)
+    f.write_text(json.dumps(d, ensure_ascii=False, indent=2))
+    return d
+
+
+def run_oa(limit, workers):
+    q = json.load(open(OA_QUEUE)) if OA_QUEUE.exists() else []
+    todo = []
+    for e in q:
+        if (DIS / f"oa_{oa_key(e['doi'])}.json").exists():
+            continue
+        if e.get("attempts", 0) >= 3:
+            continue
+        todo.append(e)
+    todo.sort(key=lambda e: e.get("date", ""), reverse=True)
+    if limit:
+        todo = todo[:limit]
+    if not todo:
+        print("oa_dissect: nothing to do")
+        return
+    print(f"oa_dissect: {len(todo)} paper(s)", flush=True)
+    ingested = []
+    for seq, e in enumerate(todo):
+        msgid, st = ingest_oa(e, seq)
+        print(f"  ingest oa {e['doi'][:34]:>34} [{st}]  {e['title'][:44]}", flush=True)
+        if st in ("fulltext-pdf", "cached"):
+            ingested.append((e, msgid))
+        else:
+            e["attempts"] = e.get("attempts", 0) + 1   # bounded retries across weeks
+    OA_QUEUE.write_text(json.dumps(q, ensure_ascii=False, indent=1))
+    if not ingested:
+        return
+    print("Pass A (classify) ...", flush=True)
+    with ThreadPoolExecutor(max_workers=workers) as ex:
+        for fu in as_completed([ex.submit(PA.do_one, RAW / f"{mid}_1.json") for _, mid in ingested]):
+            fu.result()
+    pages = []
+    for e, mid in ingested:
+        d = patch_origin_oa(mid, e)
+        if d and d.get("page_worthy") and d.get("rating") in ("⚡", "🔧"):
+            pages.append(d)
+        else:
+            print(f"  gate: {e['doi']} rating={(d or {}).get('rating','?')} -> no page", flush=True)
+    print(f"Pass B (dissect) on {len(pages)} page(s) ...", flush=True)
+    with ThreadPoolExecutor(max_workers=workers) as ex:
+        for fu in as_completed([ex.submit(PB.do_one, d) for d in pages]):
+            fu.result()
+    print(f"oa_dissect done: ingested={len(ingested)} pages_attempted={len(pages)} "
+          f"pageB_ok={PB._n['ok']} pageB_fail={PB._n['fail']}", flush=True)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, default=8, help="max papers per run (0 = all queued)")
     ap.add_argument("--ids", type=str, default="", help="comma arXiv ids; overrides queue")
     ap.add_argument("--ingest-only", action="store_true", help="fetch+raw only, skip qwen")
+    ap.add_argument("--oa", action="store_true", help="process the OA-journal queue instead of arXiv")
     ap.add_argument("--workers", type=int, default=2)
     args = ap.parse_args()
+
+    if args.oa:
+        run_oa(args.limit, args.workers)
+        return
 
     if args.ids:
         wanted = [i.strip() for i in args.ids.split(",") if i.strip()]

@@ -70,3 +70,9 @@
 3. 定 Pass B 入選政策（page_worthy 標準）。
 4. 手寫 Crossing atlases + cheat-sheet 五軸總圖。
 5. 跑 audit、定 docs.json、修長尾。
+
+## 6. 多源情報層的 qwen 偵察角色（2026-07-22 增）
+- **頂刊雷達分類**（`journal_radar.py`）：12 本頂刊新文 → {relevance, zone, rating, 一句話}；temp 0.1、thinking off、json_mode、signal.alarm(85) 硬牆。分類失敗不記 seen → 下週自動重試。
+- **GitHub 工程蒸餾**（`gh_quant_issues.py`）：每庫一批高互動 issues → 「坑→解法」JSON；**只依據 issue 原文，數字須逐字在文本中**；thinking on、alarm(170)。
+- **正典一句話**（`build_seminal_canon.py`）：開山論文各 ≤40 字「開創了什麼」；引用計數一律 Crossref 機械統計，qwen 不碰數字。
+- **OA 一手解構**：復用 Pass A/B（同 §2-4 紀律），origin=oa 由管線機械蓋章，qwen 無權決定來源標籤。

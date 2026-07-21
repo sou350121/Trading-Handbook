@@ -1,14 +1,92 @@
 [
-  { "id": "quantocracy",        "name": "Quantocracy",              "url": "https://quantocracy.com/feed/",                      "weight": "core" },
-  { "id": "alphaarchitect",     "name": "Alpha Architect",          "url": "https://alphaarchitect.com/feed/",                   "weight": "core" },
-  { "id": "quantpedia",         "name": "Quantpedia",               "url": "https://quantpedia.com/feed/",                       "weight": "core" },
-  { "id": "quantseeker",        "name": "QuantSeeker",              "url": "https://quantseeker.substack.com/feed",              "weight": "core" },
-  { "id": "cxoadvisory",        "name": "CXO Advisory",             "url": "https://www.cxoadvisory.com/feed/",                  "weight": "core" },
-  { "id": "allocatesmartly",    "name": "Allocate Smartly",         "url": "https://allocatesmartly.com/feed/",                  "weight": "core" },
-  { "id": "philosophicalecon",  "name": "Philosophical Economics",  "url": "https://www.philosophicaleconomics.com/feed/",       "weight": "extra" },
-  { "id": "falkenblog",         "name": "Falkenblog",               "url": "https://falkenblog.blogspot.com/feeds/posts/default", "weight": "extra" },
-  { "id": "quantinsti",         "name": "QuantInsti Blog",          "url": "https://blog.quantinsti.com/rss/",                   "weight": "extra" },
-  { "id": "robotwealth",        "name": "Robot Wealth",             "url": "https://robotwealth.com/feed/",                      "weight": "extra" },
-  { "id": "validea",            "name": "Validea Blog",             "url": "https://blog.validea.com/feed/",                     "weight": "extra" },
-  { "id": "wilmott",            "name": "Wilmott",                  "url": "https://wilmott.com/feed/",                          "weight": "extra" }
+  {
+    "id": "quantocracy",
+    "name": "Quantocracy",
+    "url": "https://quantocracy.com/feed/",
+    "weight": "core"
+  },
+  {
+    "id": "alphaarchitect",
+    "name": "Alpha Architect",
+    "url": "https://alphaarchitect.com/feed/",
+    "weight": "core"
+  },
+  {
+    "id": "quantpedia",
+    "name": "Quantpedia",
+    "url": "https://quantpedia.com/feed/",
+    "weight": "core"
+  },
+  {
+    "id": "quantseeker",
+    "name": "QuantSeeker",
+    "url": "https://quantseeker.substack.com/feed",
+    "weight": "core"
+  },
+  {
+    "id": "cxoadvisory",
+    "name": "CXO Advisory",
+    "url": "https://www.cxoadvisory.com/feed/",
+    "weight": "core"
+  },
+  {
+    "id": "allocatesmartly",
+    "name": "Allocate Smartly",
+    "url": "https://allocatesmartly.com/feed/",
+    "weight": "core"
+  },
+  {
+    "id": "philosophicalecon",
+    "name": "Philosophical Economics",
+    "url": "https://www.philosophicaleconomics.com/feed/",
+    "weight": "extra"
+  },
+  {
+    "id": "falkenblog",
+    "name": "Falkenblog",
+    "url": "https://falkenblog.blogspot.com/feeds/posts/default",
+    "weight": "extra"
+  },
+  {
+    "id": "quantinsti",
+    "name": "QuantInsti Blog",
+    "url": "https://blog.quantinsti.com/rss/",
+    "weight": "extra"
+  },
+  {
+    "id": "robotwealth",
+    "name": "Robot Wealth",
+    "url": "https://robotwealth.com/feed/",
+    "weight": "extra"
+  },
+  {
+    "id": "validea",
+    "name": "Validea Blog",
+    "url": "https://blog.validea.com/feed/",
+    "weight": "extra"
+  },
+  {
+    "id": "wilmott",
+    "name": "Wilmott",
+    "url": "https://wilmott.com/feed/",
+    "weight": "extra"
+  },
+  {
+    "id": "nber",
+    "name": "NBER 工作論文",
+    "url": "https://back.nber.org/rss/new.xml",
+    "weight": "institutional"
+  },
+  {
+    "id": "fed-feds",
+    "name": "Fed FEDS 工作論文",
+    "url": "https://www.federalreserve.gov/feeds/feds.xml",
+    "weight": "institutional"
+  },
+  {
+    "id": "bis-wp",
+    "name": "BIS 工作論文",
+    "url": "https://www.bis.org/doclist/wppubls.rss",
+    "weight": "institutional"
+  }
 ]

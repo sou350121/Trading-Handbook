@@ -401,7 +401,7 @@ def render_overview(feeds, weeks_index):
     lines.append("| 来源 | 权重 | 链接 |")
     lines.append("|---|---|---|")
     for f in feeds:
-        w = "核心" if f.get("weight") == "core" else "扩展"
+        w = {"core": "核心", "institutional": "機構/央行"}.get(f.get("weight"), "扩展")
         lines.append(f"| {md_escape_cell(f['name'])} | {w} | [{md_escape_cell(f['url'])}]({f['url']}) |")
     lines.append("")
     lines.append("## 週報索引")

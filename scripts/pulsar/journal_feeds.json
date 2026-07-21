@@ -1,0 +1,14 @@
+[
+  {"issn": "1540-6261", "name": "Journal of Finance", "tier": "top"},
+  {"issn": "0304-405X", "name": "Journal of Financial Economics", "tier": "top"},
+  {"issn": "0893-9454", "name": "Review of Financial Studies", "tier": "top"},
+  {"issn": "0022-1090", "name": "J. Financial & Quantitative Analysis", "tier": "top"},
+  {"issn": "0025-1909", "name": "Management Science", "tier": "top"},
+  {"issn": "1469-7688", "name": "Quantitative Finance", "tier": "quant"},
+  {"issn": "0960-1627", "name": "Mathematical Finance", "tier": "quant"},
+  {"issn": "1386-4181", "name": "Journal of Financial Markets", "tier": "field"},
+  {"issn": "0927-5398", "name": "Journal of Empirical Finance", "tier": "field"},
+  {"issn": "1479-8409", "name": "Journal of Financial Econometrics", "tier": "field"},
+  {"issn": "0095-4918", "name": "Journal of Portfolio Management", "tier": "practitioner"},
+  {"issn": "2640-3943", "name": "Journal of Financial Data Science", "tier": "practitioner"}
+]

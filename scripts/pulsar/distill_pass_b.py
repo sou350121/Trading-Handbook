@@ -107,6 +107,9 @@ def build(d, raw):
     if origin == "arxiv":
         src_label = "arXiv 原文"; body_label = "arXiv 原文（摘要＋正文，截斷）"
         prov = "　·　_本頁由 arXiv 原文一手自主解構_"; blen = 11000
+    elif origin == "oa":
+        src_label = "期刊原文（OA）"; body_label = "期刊論文原文（開放取用全文，截斷）"
+        prov = "　·　_本頁由開放取用期刊原文一手自主解構_"; blen = 11000
     else:
         src_label = "QuantML 導讀"; body_label = "QuantML 導讀正文（截斷）"
         prov = ""; blen = 8000

@@ -15,7 +15,7 @@ ts(){ date -u +"%Y-%m-%d %H:%M:%S"; }
 log(){ echo "[$(ts)] $*" | tee -a "$LOG"; }
 mark_ok(){ echo "$(ts) $*" > data/.daily_ok; }   # heartbeat: healthy run (watchdog checks its age)
 # The cron's own managed output set. Dirt confined to these = our leftover -> recover & commit.
-MANAGED='^(foundations/|crossing/|cheat-sheet/|bridge-to-vla/|docs\.json$|data/index\.json$|data/corpus_meta\.json$)'
+MANAGED='^(foundations/|crossing/|cheat-sheet/|bridge-to-vla/|radar/|deployment/|guides/|docs\.json$|data/index\.json$|data/corpus_meta\.json$)'
 
 log "===== daily start ====="
 
