@@ -50,6 +50,8 @@
 | [因子挖掘全景](guides/factor-mining.md) | 61 頁 | 護城河不是更高 IC 的單因子，而是抗衰減的因子生產線 |
 | [LLM-Agentic 交易全景](guides/llm-agentic.md) | 50 頁 | 哪幾層 alpha 是真的，哪幾層是包裝洩漏的 demo |
 | [執行與組合 RL 全景](guides/reinforcement-learning.md) | 39 頁 | RL 的真戰場是執行/對沖，不是端到端選股 |
+| [組合優化全景](guides/portfolio-optimization.md) | 34 頁 | 護城河是把預測誤差關進籠子的工序，不是更準的預測 |
+| [市場微結構全景](guides/market-microstructure.md) | 26 頁 | 毫秒到日內：扣掉延遲與成本，這條 alpha 你來得及吃嗎 |
 
 > 索引與讀法見 [深度綜述總覽](guides/overview.md)。
 
