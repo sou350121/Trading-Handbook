@@ -2,7 +2,7 @@
 
 > **收錄**：回测防穿越、样本外稳定性、过拟合检测、鲁棒性量化、公开基准(TFB/QuantBench)与模型衰减归因
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：23 篇（19 篇成解構頁，其餘為 registry）
+> **本 zone 現有**：24 篇（20 篇成解構頁，其餘為 registry）
 
 ## 解構清單
 
@@ -15,6 +15,7 @@
 | [深度优于广度：线性模型样本外衰减](art-337) | ⚡ | — | 推导线性模型样本外夏普衰减解析公式，量化过拟合惩罚，证明强信号优于弱信号堆砌。 |
 | [盈亏平衡夏普比率](art-279) | ⚡ | JFE | 揭示多因子模型高样本内夏普比率的陷阱，量化估计风险导致的样本外衰减，并提出考虑估计风险的盈亏平衡 |
 | [大语言模型在时间序列预测中真的有效吗？](art-33) | ⚡ | — | 通过系统消融证明LLM在时序预测中无性能优势且计算昂贵，简单注意力模型即可替代，呼吁转向LLM+ |
+| [Base-Rate-Honest Benchmark](base-rate-honest-benchmark) | 🔧 | [arXiv](https://arxiv.org/abs/2607.12248) | 本文指出股票方向预测中原始准确率易受牛市基线率误导，提出基于滚动验证与诚实基线的可复现评测协议， |
 | [Cost-Aware Execution Filter](cost-aware-execution-filter) | 🔧 | Cost-Aware Execution Filter | 揭示高频交易中预测精度与实盘收益的割裂，提出交易成本感知过滤器，证明执行端纪律比复杂模型更关键。 |
 | [LightQuant](lightquant) | 🔧 | LightQuant | 构建中国股市多模态数据集CSMD与轻量级回测框架LightQuant，结合LLM因子提取提升股价 |
 | [Walk-Forward Analysis / 分层验证框架](walk-forward-analysis) | 🔧 | Walk-Forward Analysis / 分层验证框架 | 本文系统剖析传统回测过拟合风险，详解Walk-Forward分析原理、WFE指标及分层验证框架， |

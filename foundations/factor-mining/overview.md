@@ -2,7 +2,7 @@
 
 > **收錄**：公式型Alpha生成、AutoML/遗传编程挖掘、特征选择、风格因子构造、信号衰减与拥挤度分析
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：67 篇（61 篇成解構頁，其餘為 registry）
+> **本 zone 現有**：68 篇（62 篇成解構頁，其餘為 registry）
 
 ## 解構清單
 
@@ -26,6 +26,7 @@
 | [经验贝叶斯(EB)](empirical-bayes) | ⚡ | 经验贝叶斯(EB) | 美联储首席经济学家用经验贝叶斯法系统挖掘13.6万策略，校正数据挖掘偏差，发现会计因子与小盘股在 |
 | [AlphaSharpe](alphasharpe) | ⚡ | AlphaSharpe | 利用LLM结合进化策略迭代生成与优化风险调整指标，显著提升资产排名相关性与组合夏普比率。 |
 | [结构化深度排序因子模型](art-121) | ⚡ | JFQA | 提出结构化深度神经网络，将传统特征排序自动化为潜在因子生成框架，以最小化定价误差解释横截面收益。 |
+| [Supervised Lexicon Learning](supervised-lexicon-learning) | 🔧 | [arXiv](https://arxiv.org/abs/2607.14174) | 基于监督词表学习提取10-K全文与风险章节情绪，验证聚合层级对收益与波动率预测信号有效性的影响。 |
 | [LLM Factor Lab](llm-factor-lab) | 🔧 | LLM Factor Lab | 用LLM在预设会计公式空间内自主演化因子，经严苛学术检验仅极少数存活。 |
 | [FactorMoE](factormoe) | 🔧 | Complex & Intelligent Systems | 提出FactorMoE框架，用链式MoE与注意力机制动态组合公式化Alpha因子，提升非平稳市场 |
 | [周五潜伏？知情交易周内择时的非线性 Alpha](alpha) | 🔧 | — | 揭示内部人交易Alpha高度依赖市场关注度，周五买入/周一卖出仅在异常放量时产生显著短期超额收益 |

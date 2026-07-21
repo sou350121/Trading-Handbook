@@ -8341,6 +8341,26 @@
   },
   {
     "pos": 100000,
+    "msgid": "arxiv_2607.14373",
+    "title": "A Noise-Robust Elicit-to-Optimize Framework for Distortion Riskmetrics via Inverse Reinforcement Learning",
+    "zone": "reinforcement-learning",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "elicit-to-optimize-framework",
+    "dup_of": null,
+    "framework": "Elicit-to-Optimize Framework",
+    "venue": "IJOC",
+    "arxiv": "2607.14373",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "强化学习",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 100000,
     "msgid": "arxiv_2607.15195",
     "title": "SciPhy Reinforcement Learning for Portfolio Optimization",
     "zone": "portfolio-optimization",
@@ -8357,6 +8377,226 @@
       "paradigm": "强化学习",
       "alpha": "组合执行优化",
       "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 100001,
+    "msgid": "arxiv_2607.13929",
+    "title": "VAIOM: Continuous-Input, Discrete-Output Decoder-Only Financial Sequence Modeling",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "vaiom",
+    "dup_of": null,
+    "framework": "VAIOM",
+    "venue": null,
+    "arxiv": "2607.13929",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "高频日内",
+      "paradigm": "生成式大模型",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 100001,
+    "msgid": "arxiv_2607.14361",
+    "title": "NeuralChaos: Optimal Adapted Approximation of Square Integrable Predictable Processes",
+    "zone": "reinforcement-learning",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "neuralchaos",
+    "dup_of": null,
+    "framework": "NeuralChaos",
+    "venue": null,
+    "arxiv": "2607.14361",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "强化学习",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 100003,
+    "msgid": "arxiv_2607.13916",
+    "title": "Detecting unusual trading patterns on cryptocurrency exchanges by means of complexity measures",
+    "zone": "market-microstructure",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "detecting-unusual-trading-patterns-on-cryptocurrency-exchanges-by-means-of-complexity-measures",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": "2607.13916",
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "因果结构",
+      "alpha": "风险择时",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 100004,
+    "msgid": "arxiv_2607.14174",
+    "title": "How Much of a 10-K Matters? Aggregation-Dependent Value of Full-Text versus Risk-Factor Sentiment",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "supervised-lexicon-learning",
+    "dup_of": null,
+    "framework": "Supervised Lexicon Learning",
+    "venue": null,
+    "arxiv": "2607.14174",
+    "axes": {
+      "data": "文本另类",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 100005,
+    "msgid": "arxiv_2607.13112",
+    "title": "Anchored Geodesic Analysis for Multivariate Extremes",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "agca",
+    "dup_of": null,
+    "framework": "AGCA",
+    "venue": null,
+    "arxiv": "2607.13112",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "风险择时",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 100006,
+    "msgid": "arxiv_2607.12248",
+    "title": "When Directional Accuracy Lies: A Base-Rate-Honest Benchmark for LoRA-Adapted TimesFM on Equity Forecasting",
+    "zone": "evaluation-benchmarks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "base-rate-honest-benchmark",
+    "dup_of": null,
+    "framework": "Base-Rate-Honest Benchmark",
+    "venue": null,
+    "arxiv": "2607.12248",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "生成式大模型",
+      "alpha": "风险择时",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 100007,
+    "msgid": "arxiv_2607.12067",
+    "title": "Institutional Equity Holdings Prediction Using Node Affinities of Dynamic Graphs",
+    "zone": "graph-networks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "navis",
+    "dup_of": null,
+    "framework": "NAVIS",
+    "venue": null,
+    "arxiv": "2607.12067",
+    "axes": {
+      "data": "图关系",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 100008,
+    "msgid": "arxiv_2607.11328",
+    "title": "Strategic OTC market making with reputation feedback",
+    "zone": "market-microstructure",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "stochastic-optimal-control-with-reputation-gates",
+    "dup_of": null,
+    "framework": "Stochastic Optimal Control with Reputation Gates",
+    "venue": null,
+    "arxiv": "2607.11328",
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "强化学习",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 100009,
+    "msgid": "arxiv_2607.10960",
+    "title": "Reinforcement Learning for Execution under Dynamic Fees in a Closed-Loop DEX Simulator",
+    "zone": "reinforcement-learning",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "reinforcement-learning-for-execution-under-dynamic-fees-in-a-closed-loop-dex-simulator",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": "2607.10960",
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "强化学习",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 100010,
+    "msgid": "arxiv_2607.10810",
+    "title": "Diachronic Sample Integration: Robust Tail-Risk Estimation with Generative Models",
+    "zone": "data-generation-augmentation",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "dsi",
+    "dup_of": null,
+    "framework": "DSI",
+    "venue": null,
+    "arxiv": "2607.10810",
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "生成式大模型",
+      "alpha": "风险择时",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 100011,
+    "msgid": "arxiv_2607.10297",
+    "title": "Recovering Structural Organization in Noisy Correlation Networks Using Financial Systems as a Testbed",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "art-100011",
+    "dup_of": null,
+    "framework": "谱去噪相关性网络",
+    "venue": null,
+    "arxiv": "2607.10297",
+    "axes": {
+      "data": "图关系",
+      "horizon": "日频波段",
+      "paradigm": "因果结构",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
     }
   }
 ]

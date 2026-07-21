@@ -2,7 +2,7 @@
 
 > **收錄**：面向价格/收益率/波动率的序列建模，涵盖Transformer变体、RNN/LSTM、MLP/Mixer、状态空间模型及频率自适应架构
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：100 篇（91 篇成解構頁，其餘為 registry）
+> **本 zone 現有**：101 篇（92 篇成解構頁，其餘為 registry）
 
 ## 解構清單
 
@@ -23,6 +23,7 @@
 | [Time-MoE](time-moe) | ⚡ | Time-MoE | 提出基于稀疏MoE的解码器Transformer基础模型，在3000亿时间点数据集上预训练，实现 |
 | [TEMPO](tempo) | ⚡ | ICLR 2024 | 提出TEMPO框架，利用趋势-季节性分解与半软提示词，基于GPT实现零样本时间序列预测，在多模态 |
 | [aLLM4TS](allm4ts) | ⚡ | ICML24 | 提出aLLM4TS框架，通过自监督多补丁预测与两阶段训练，将LLM适配至时间序列表示学习，显著提 |
+| [VAIOM](vaiom) | 🔧 | [arXiv](https://arxiv.org/abs/2607.13929) | 提出VAIOM架构，解耦连续输入与离散分桶输出，用Decoder-Only Transforme |
 | [CSM](csm) | 🔧 | JBF | 提出CSM框架，将收益符号条件化于波动率幅度，避开Copula建模，实现低成本高稳定的指数择时预 |
 | [LSTM/GBM对比与置换检验](lstm-gbm) | 🔧 | LSTM/GBM对比与置换检验 | 对比LSTM与GBM在MNQ 5分钟数据上的预测能力，结合置换检验证明小样本时序模型实为噪音拟合 |
 | [MiM-StocR](mim-stocr) | 🔧 | MiM-StocR | 提出MiM-StocR框架，通过动量线辅助任务、Adaptive-k排序损失与CQB优化策略，提 |

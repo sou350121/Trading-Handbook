@@ -2,7 +2,7 @@
 
 > **收錄**：限价订单簿(LOB)建模、订单流信号、做市策略、高频套利、微观流动性与价格形成机制
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：30 篇（27 篇成解構頁，其餘為 registry）
+> **本 zone 現有**：32 篇（29 篇成解構頁，其餘為 registry）
 
 ## 解構清單
 
@@ -20,6 +20,8 @@
 | [FlowHFT](flowhft) | ⚡ | FlowHFT | 提出FlowHFT框架，结合流匹配模仿学习与网格搜索微调，在高频做市中自适应学习并超越多场景专家 |
 | [JF | 消失的指数效应](vanishing-index-effect) | ⚡ | JF | 本文实证发现S&P 500指数纳入/剔除的异常回报近十年趋零，主因是指数迁移抵消需求冲击及市场流 |
 | [EDGE](edge) | ⚡ | JFE | 提出基于日频OHLC的EDGE估计量，通过GMM动态组合矩条件，解决传统低频价差估计的偏差与高方 |
+| [Stochastic Optimal Control with Reputation Gates](stochastic-optimal-control-with-reputation-gates) | 🔧 | [arXiv](https://arxiv.org/abs/2607.11328) | 构建含声誉反馈的OTC做市随机控制模型，揭示报价策略在声誉积累与变现间的动态权衡及双稳态现象。 |
+| [Detecting unusual trading patt](detecting-unusual-trading-patterns-on-cryptocurrency-exchanges-by-means-of-complexity-measures) | 🔧 | [arXiv](https://arxiv.org/abs/2607.13916) | 本文基于高频交易数据，利用多重分形、近似熵等复杂度指标构建诊断框架，有效识别中心化交易所的刷量与 |
 | [解码动量溢出：日内-隔夜收益的非对称结构](art-333) | 🔧 | — | 将动量溢出拆解为日内与隔夜收益，揭示散户追涨与机构慢速套利驱动的非对称定价机制。 |
 | [谱交易量模型](art-332) | 🔧 | 谱交易量模型 | 本文提出基于傅里叶分析的谱交易量模型，揭示中美股市高频交易量的周期性规律，并应用于VWAP执行优 |
 | [TLOB](tlob) | 🔧 | TLOB | 提出TLOB模型，利用时间与特征双重注意力机制及双线性归一化，直接端到端预测限价订单簿价格趋势， |
