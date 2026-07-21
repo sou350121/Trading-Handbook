@@ -47,6 +47,22 @@
         ]
       },
       {
+        "tab": "Guides",
+        "icon": "compass",
+        "groups": [
+          {
+            "group": "深度綜述",
+            "pages": [
+              "guides/overview.md",
+              "guides/time-series-forecasting.md",
+              "guides/factor-mining.md",
+              "guides/llm-agentic.md",
+              "guides/reinforcement-learning.md"
+            ]
+          }
+        ]
+      },
+      {
         "tab": "Foundations",
         "icon": "layer-group",
         "groups": [
