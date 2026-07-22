@@ -38,6 +38,12 @@
 
 **張力四：因子生成能力 vs 過濾管線嚴苛度。** 這是第 4 代揭示的最反直覺的張力。[LLM Factor Lab](../foundations/factor-mining/llm-factor-lab.md) 與 [factor-zoo-vs-peer-review](../foundations/factor-mining/factor-zoo-vs-peer-review.md) 站在同一立場：生成不是瓶頸，過濾才是。前者用 FF5/q-factor/異象賽馬三重過濾把 280 個候選砍到個位數；後者證明 2.9 萬個數據挖掘因子在嚴格多重測試校正下，樣本外預測力不遜於同行評審因子。**裁決：這條張力的贏家明確——把研發預算從「造更多因子」轉到「更狠的多重檢驗校正 + 已知因子吸收」**。多重測試校正才是護城河，不是模型參數量。
 
+> **2026-07-22 補註（一次對抗式文獻審計的結果，17 條確認 / 8 條推翻，見 [審計報告](/reports/deep-research/2026-07-22-autoresearch-audit)）——上面這條裁決方向正確，但要加兩道限制：**
+>
+> **一、它在生成側從未被實施。** 對 AlphaGen、[AlphaQCM](../foundations/factor-mining/alphaqcm.md)、TLRS、RiskMiner、[AlphaEval](../foundations/evaluation-benchmarks/alphaeval.md) 做全文檢索，`multiple testing` / `data snooping` / `deflated Sharpe` / `PBO` / `CSCV` / `White's Reality Check` / `false discovery` / `Bonferroni` **命中次數全部為 0**。唯一防線是驗證集選模型，而該選擇步驟本身即是未校正的選擇偏誤。所以「校正才是護城河」目前是**一塊空地**，不是既成事實。
+>
+> **二、它不能被直接寫進自動迴圈。** PBO/CSCV 的原作者明文禁止把反過擬合指標當成搜索目標（「當一個度量變成目標，它就不再是好的度量」），同時指出單一 holdout 無法回答過擬合問題，因為它對嘗試次數失明。因此正確的實施形態不是「在 fitness 裡加一項校正」，而是把校正放到迴圈**構不到**的一層。完整論證見 [Crossing · 自動化搜索 vs 預註冊驗證](../crossing/autoresearch-vs-preregistration/overview.md)，落地做法見 [自動化研究迴圈建造指南](autoresearch-loop.md)。
+
 **張力五：擁擠是 alpha 信號還是風險信號。** [comprehensive-crowded-factor](../foundations/factor-mining/comprehensive-crowded-factor.md) 與 [art-344](../foundations/factor-mining/art-344.md) 給出對立又互補的答案。前者（UBS）認為擁擠度的「跳變」是可交易的順勢 alpha，因為資金流入的推升效應非對稱地壓倒撤離的壓迫效應；後者用博弈論證明擁擠度**不預測收益**、只預測尾部崩盤概率。**裁決：兩者其實不衝突**——UBS 賺的是「進入擁擠過程」的順勢動量（跳變事件），art-344 說的是「已擁擠水平」不能做均值擇時。實盤結論：擁擠度的變化率可接信號模塊，擁擠度的絕對水平只接風險預算模塊。混用兩者就是 art-344 的錯答。
 
 ## 什麼在持續有效 vs 什麼被擁擠掉

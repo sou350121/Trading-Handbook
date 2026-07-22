@@ -60,7 +60,8 @@
               "guides/llm-agentic.md",
               "guides/reinforcement-learning.md",
               "guides/portfolio-optimization.md",
-              "guides/market-microstructure.md"
+              "guides/market-microstructure.md",
+              "guides/autoresearch-loop.md"
             ]
           }
         ]
@@ -523,7 +524,8 @@
               "crossing/llm-reasoning-vs-ts-baselines/overview.md",
               "crossing/static-graph-vs-dynamic-flow/overview.md",
               "crossing/predict-then-optimize-vs-end-to-end/overview.md",
-              "crossing/human-in-loop-vs-autonomous-agent/overview.md"
+              "crossing/human-in-loop-vs-autonomous-agent/overview.md",
+              "crossing/autoresearch-vs-preregistration/overview.md"
             ]
           }
         ]
@@ -593,7 +595,8 @@
           {
             "group": "Overview",
             "pages": [
-              "use-cases/overview.md"
+              "use-cases/overview.md",
+              "use-cases/philosophy-quantification.md"
             ]
           }
         ]
@@ -629,7 +632,8 @@
           {
             "group": "Overview",
             "pages": [
-              "reports/overview.md"
+              "reports/overview.md",
+              "reports/deep-research/2026-07-22-autoresearch-audit.md"
             ]
           }
         ]
