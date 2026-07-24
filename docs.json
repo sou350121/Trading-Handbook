@@ -634,7 +634,8 @@
             "group": "Overview",
             "pages": [
               "reports/overview.md",
-              "reports/deep-research/2026-07-22-autoresearch-audit.md"
+              "reports/deep-research/2026-07-22-autoresearch-audit.md",
+              "reports/deep-research/2026-07-24-657-trials-audited-findings.md"
             ]
           }
         ]
