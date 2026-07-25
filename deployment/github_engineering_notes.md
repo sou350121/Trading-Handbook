@@ -9,6 +9,8 @@
 
 ## microsoft/qlib
 _微軟量化平台（因子/模型/回測全棧）_
+- **[#1166](https://github.com/microsoft/qlib/issues/1166)**（closed · 16💬 · API坑 · 2026-W30） — 坑：`np.loadtxt` 的 `delimiter` 參數升級後禁止使用換行符（`\n` 或 `\r`）導致 `TypeError`。解法：升級 qlib 至修復版本（PR 1141）。
+- **[#535](https://github.com/microsoft/qlib/issues/535)**（closed · 16💬 · 數據 · 2026-W30） — 坑：`dump_bin.py` 僅支援 `numeric fields`（int/float），非數值欄位會導致 dump 失敗。解法：使用 `--exlcude_fields` 排除非數值欄位，或改用 `--include_fields` 僅指定數值欄位。
 
 - **[#1547](https://github.com/microsoft/qlib/issues/1547)**（closed · 23💬 · 執行 · 2026-W30） — 坑：get_data 腳本硬編碼舊版 URL 導致 409 Public access error。解法：修改 qlib/tests/data.py 第 163 行 file_name = _get_file_name("latest")。
 - **[#96](https://github.com/microsoft/qlib/issues/96)**（closed · 22💬 · 部署 · 2026-W30） — 坑：pip install 或 setup.py install 後報 ModuleNotFoundError: No module named 'qlib.config'。解法：在 clean env 重新安裝可解決，疑為 repo 或環境污染問題。
@@ -21,6 +23,8 @@ _微軟量化平台（因子/模型/回測全棧）_
 
 ## AI4Finance-Foundation/FinRL
 _RL 交易框架（學術系主流基線）_
+- **[#1011](https://github.com/AI4Finance-Foundation/FinRL/issues/1011)**（open · 16💬 · API坑 · 2026-W30） — 坑：Gym/Gymnasium 升級後 env.reset() 與 env.step() 回傳 tuple 長度變為 5，導致 unpack 報錯。解法：將 env.reset()[np.newaxis, :] 改為 env.reset()[0][np.newaxis, :] 並同步適配 step() 回傳值。
+- **[#962](https://github.com/AI4Finance-Foundation/FinRL/issues/962)**（open · 16💬 · 數據 · 2026-W30） — 坑：Yahoo downloader 對 PG、TRV、UNH、CRM、VZ、V、WBA、WMT、DIS、DOW 等符號全部回傳 No data found for this date range, symbol may be delisted。結論：資料源失效或符號被除牌，需確認日期範圍與替代資料源。
 
 - **[#573](https://github.com/AI4Finance-Foundation/FinRL/issues/573)**（open · 28💬 · 數據 · 2026-W30） — 坑：Paper Trading Demo 僅支援 OHLCV 週期數據，無法處理 tick level 數據。結論：秒級/ tick 級數據伴隨高延遲與大量 I/O 運算開銷，且交易成本可能吞噬利潤，目前分鐘級數據被視為實時部署的可行粒度。
 - **[#440](https://github.com/AI4Finance-Foundation/FinRL/issues/440)**（closed · 21💬 · API坑 · 2026-W30） — 坑：使用 Stable Baselines3 時，超參數優化結果每次運行皆不同，無法固定。解法：在 DRL_prediction 中設定 deterministic=True 參數，即可在測試或驗證階段獲得確定性結果。
@@ -33,6 +37,8 @@ _RL 交易框架（學術系主流基線）_
 
 ## nautechsystems/nautilus_trader
 _事件驅動生產級交易引擎_
+- **[#190](https://github.com/nautechsystems/nautilus_trader/issues/190)**（closed · 25💬 · API坑 · 2026-W30） — 坑：ccxt.pro 部分交易所 data checksum 邏輯仍為 TODO 且 live trading 穩定性未驗證。結論：目前仍有些東西要 work out，尚未有明確的 live trading 成功報告。
+- **[#333](https://github.com/nautechsystems/nautilus_trader/issues/333)**（closed · 25💬 · 性能 · 2026-W30） — 坑：用 trade history 回測時 DataFrame size 變 unmanageable。解法：改用 Arctic 或 parquet(file system) with s3 來處理 scalability and maintenance，避免直接用 Dask。
 
 - **[#257](https://github.com/nautechsystems/nautilus_trader/issues/257)**（closed · 42💬 · 部署 · 2026-W30） — 坑→Windows 編譯 Cython 需 MSVC 14.0 且 `long` 型別跨平台長度不一致；解法→移除 `uint128`、將內部時間戳標準化為 `int64_t` nanoseconds、改用 `libc.stdlib` 的 `rand` 函數以避開 `long` 依賴。
 - **[#532](https://github.com/nautechsystems/nautilus_trader/issues/532)**（closed · 36💬 · 數據 · 2026-W30） — 坑→回測文件過時且 API 頻繁變更（如 `import_from_data_loader` 移除、`process_files` 需 `block_parser`），導致 CSV 導入失敗；解法→改用 `develop` 分支並參考更新後的 Loading External Data 文件，自行實作 `parser` 函數。
@@ -45,6 +51,8 @@ _事件驅動生產級交易引擎_
 
 ## QuantConnect/Lean
 _QuantConnect 開源引擎（實盤+回測）_
+- **[#669](https://github.com/QuantConnect/Lean/issues/669)**（closed · 17💬 · API坑 · 2026-W30） — 坑：用戶強烈需求用 TradeBar 繪製 K 線圖但官方長期未支援。結論：該功能需求明確但開發優先級低，長期擱置未解決。
+- **[#30](https://github.com/QuantConnect/Lean/issues/30)**（closed · 17💬 · 數據 · 2026-W30） — 坑：統計模組耦合且缺乏自訂基準。解法：重構為實例驅動並分離 Benchmark 介面；針對分倉/加倉場景，需明確定義 FIFO 或均價法則以確保損益計算準確。
 
 - **[#166](https://github.com/QuantConnect/Lean/issues/166)**（closed · 70💬 · API坑 · 2026-W30） — 坑：Options 支援需跨層級改動（解析/儲存/物件/定價）。解法：Phase 1 先實作 Vanilla Black-Scholes 預設 implied vol 與 Greeks，並開放使用者替換模型。
 - **[#452](https://github.com/QuantConnect/Lean/issues/452)**（closed · 43💬 · 部署 · 2026-W30） — 坑：直接遷移 .Net Core 風險高且函式庫不相容。解法：改對齊 .Net Standard 2.0 surface，利用 Portability Analyzer 驗證相容性，維持 Mono 跨平台現狀。
@@ -56,6 +64,8 @@ _QuantConnect 開源引擎（實盤+回測）_
 
 ## kernc/backtesting.py
 _輕量回測庫_
+- **[#251](https://github.com/kernc/backtesting.py/issues/251)**（closed · 13💬 · 執行 · 2026-W30） — 預設市價單在下一根K線開盤價執行，無法精確觸及自訂線；解法：改用 limit 單指定開倉價，或設 tp/sl 指定平倉價，亦可開 trade_on_close=True 改在收盤價執行。
+- **[#82](https://github.com/kernc/backtesting.py/issues/82)**（closed · 13💬 · 執行 · 2026-W30） — 設 tp/sl 後實際成交價可能偏離設定值；坑：若下根K線開盤價已穿過 tp/sl 閾值，系統會直接以該開盤價執行出場，導致滑點。
 
 - **[#81](https://github.com/kernc/backtesting.py/issues/81)**（open · 24💬 · API坑 · 2026-W30） — 坑：框架原生不支援實盤交易。解法/結論：需另建獨立類別實作，共用 Strategy 並改寫 _Broker 與資料餵入邏輯，週期需與回測 bar 匹配。
 - **[#649](https://github.com/kernc/backtesting.py/issues/649)**（closed · 22💬 · 回測失真 · 2026-W30） — 坑：15m 資料點過多觸發自動降頻時，resample 邏輯會引發長度不匹配錯誤。解法/結論：強制傳入字串降頻或設 resample=False 可避開，但會失去自動降頻功能。
@@ -68,6 +78,8 @@ _輕量回測庫_
 
 ## pst-group/pysystemtrade
 _Rob Carver 系統化期貨（實盤跑真錢）_
+- **[#495](https://github.com/pst-group/pysystemtrade/issues/495)**（closed · 17💬 · 回測失真 · 2026-W30） — 坑：報告生成時 Config.fill_with_defaults 被多次呼叫，導致 diagnostic/reporting 的 config 與 backtest 的 config 混淆，notional_trading_capital 錯誤回退至 defaults.yaml。解法：在 run_system_classic.py 加入 is not None 條件判斷，強制用傳入參數覆蓋 config 的 capital 與 base_currency。
+- **[#241](https://github.com/pst-group/pysystemtrade/issues/241)**（closed · 16💬 · API坑 · 2026-W30） — 坑：執行 update_fx_prices 時 ib_insync 層報錯 'Couldn't evaluate ibFxPricesData'，常因 IB gateway 未啟動或連線參數錯誤。解法：確認 gateway 狀態、指定 account 參數連線，並升級 ib_insync 與 IB gateway 版本以解決間歇性連線延遲。
 
 - **[#274](https://github.com/pst-group/pysystemtrade/issues/274)**（closed · 39💬 · 數據 · 2026-W30） — 坑：數據存在大段缺失或手動更新遺漏導致 assertion 失敗與 sharding 警告。解法：手動修正缺失數據與 roll，並確保 capital 與 config 同步。
 - **[#267](https://github.com/pst-group/pysystemtrade/issues/267)**（closed · 29💬 · 數據 · 2026-W30） — 坑：缺少 multiple price 數據時 diagnostics 嘗試讀取標籤導致 crash。解法：在無 multiple price 時移除標籤機制，並手動建立 roll calendar。
@@ -80,6 +92,8 @@ _Rob Carver 系統化期貨（實盤跑真錢）_
 
 ## freqtrade/freqtrade
 _加密貨幣自動交易（最大社區）_
+- **[#6710](https://github.com/freqtrade/freqtrade/issues/6710)**（closed · 44💬 · 部署 · 2026-W30） — 坑：Windows 使用 Docker 部署時 Web UI 無法顯示。解法：需補充更多環境資訊與截圖才能定位問題。
+- **[#8998](https://github.com/freqtrade/freqtrade/issues/8998)**（closed · 43💬 · 執行 · 2026-W30） — 坑：`adjust_trade_position()` 計算 `max_stake` 時，若無交易觸發，錢包餘額更新延遲（最長 1 小時）或受 `available_capital` 限制，導致誤報餘額不足。解法：建議在計算前呼叫 `self.wallets.update()` 強制刷新。
 
 - **[#1371](https://github.com/freqtrade/freqtrade/issues/1371)**（closed · 64💬 · 執行 · 2026-W30） — 坑：Bot 因 amount 精度計算與交易所不一致導致 Insufficient funds 無法賣出。→ 結論：需嚴格對齊交易所精度，並確認 CCXT 與 Bot 的 rounding/truncating 邏輯差異。
 - **[#11008](https://github.com/freqtrade/freqtrade/issues/11008)**（closed · 57💬 · 數據 · 2026-W30） — 坑：Live 模式缺乏 orderflow 數據且下載耗時長。→ 結論：Bot 會自動下載 max_candles 數據，測試時可縮小 max_candles 與 cache_size 以加速啟動。
@@ -91,6 +105,8 @@ _加密貨幣自動交易（最大社區）_
 
 ## hummingbot/hummingbot
 _做市機器人（execution/microstructure）_
+- **[#3909](https://github.com/hummingbot/hummingbot/issues/3909)**（closed · 27💬 · API坑 · 2026-W30） — 坑：交易所對特定交易對有最小交易量精度限制（如 CRO-USDT 不支援小數），Bot 發送帶小數的訂單會被 API 強制取整為整數，導致所需資金超出帳戶餘額而觸發 insufficient balance 錯誤。解法：開發 Connector 時必須嚴格對接交易所的 lot size 規則，在發送訂單前將數量精度截斷或取整，避免精度不符引發的執行失敗。
+- **[#6897](https://github.com/hummingbot/hummingbot/issues/6897)**（closed · 27💬 · 其他 · 2026-W30） — 坑：交易所協議大版本升級（如 dYdX v4）會導致舊版 Connector 失效，需投入大量工程資源重構以符合新架構與官方 Checklist。解法：透過 Bounty 機制公開招募開發者，並強制要求遵循 Contribution Guidelines 與 Checklist 進行開發與審查，確保升級後的 Connector 品質與合規性。
 
 - **[#6585](https://github.com/hummingbot/hummingbot/issues/6585)**（closed · 55💬 · API坑 · 2026-W30） — 交易所強制停用舊版 API 會導致連接器直接失效，需依賴社區 Bounty 機制集資推動升級至新版 API。
 - **[#7207](https://github.com/hummingbot/hummingbot/issues/7207)**（closed · 52💬 · API坑 · 2026-W30） — WebSocket 消息解析時發生 TypeError 會導致訂單狀態無法追蹤，需修復 JSON 解析邏輯以正確處理 WebSocketError。
@@ -103,6 +119,8 @@ _做市機器人（execution/microstructure）_
 
 ## stefan-jansen/machine-learning-for-trading
 _ML4T 書配套代碼（學習者踩坑集中地）_
+- **[#130](https://github.com/stefan-jansen/machine-learning-for-trading/issues/130)**（closed · 8💬 · 部署 · 2026-W30） — 坑：Python 3.8 建立的 .h5 檔無法在 Python 3.5.6 環境開啟→解法：升級 Zipline 至 3.8 以統一環境，或重裝環境。
+- **[#40](https://github.com/stefan-jansen/machine-learning-for-trading/issues/40)**（closed · 8💬 · 部署 · 2026-W30） — 坑：Windows 下 docker run -v $(pwd):... 報錯找不到檔案→解法：將 $(pwd) 替換為 repo 的絕對路徑，並確認 Docker 已授權存取該磁碟。
 
 - **[#113](https://github.com/stefan-jansen/machine-learning-for-trading/issues/113)**（closed · 17💬 · 部署 · 2026-W30） — Pickle protocol 5 不相容與 KeyError 坑→解法：確保讀寫 notebook 使用相同 Docker 環境與 Python 版本以維持一致性。
 - **[#103](https://github.com/stefan-jansen/machine-learning-for-trading/issues/103)**（closed · 15💬 · 數據 · 2026-W30） — Pandas 無法解析自訂日期字串進行 split 坑→解法：確認 index 類型非 string，需轉換為 datetime 物件。
@@ -115,5 +133,19 @@ _ML4T 書配套代碼（學習者踩坑集中地）_
 
 ## OpenBB-finance/OpenBB
 _開源投研終端（數據工程的坑）_
+- **[#6706](https://github.com/OpenBB-finance/OpenBB/issues/6706)**（closed · 32💬 · 其他 · 2026-W30） — 坑：社群貢獻者易重複搶佔同一 issue。解法：引入 oss-gg bot 強制 48h 內提交 draft PR，否則自動 unassign 釋放任務。
+- **[#6713](https://github.com/OpenBB-finance/OpenBB/issues/6713)**（closed · 26💬 · 其他 · 2026-W30） — 坑：貢獻者逾期未交 PR 阻塞進度。解法：oss-gg bot 在 48h 基礎上追加 12h 倒數提醒，未提交即自動 unassign 以維持交付節奏。
 
 - **[#4872](https://github.com/OpenBB-finance/OpenBB/issues/4872)**（closed · 44💬 · 部署 · 2026-W30） — 坑→Ubuntu Docker 跑 X11 顯示圖表變白視窗；解法→確認 compose 檔名是 `docker-compose.x11.yaml` 而非 `docker-compose-X11.yaml`，並掛載 `/tmp/.X11-unix` 與設定 `DISPLAY` 環境變數。
+
+## polakowo/vectorbt
+_向量化回測（速度取向）_
+
+- **[#113](https://github.com/polakowo/vectorbt/issues/113)**（closed · 25💬 · 回測失真 · 2026-W30） — 坑：Stop loss 需要乾淨的訊號，若訊號相鄰會導致 Portfolio.stats 與 Dashboard 數據不一致。解法：生成 Stop loss 前，先對 entries 與 exits 執行 `.vbt.signals.first(reset_by=..., allow_gaps=True)` 清理訊號。
+- **[#17](https://github.com/polakowo/vectorbt/issues/17)**（closed · 23💬 · API坑 · 2026-W30） — 坑：`vbt.MA.from_combinations` 傳入整數陣列會引發 Numba TypeError。解法：將 `windows` 陣列轉型為 `np.float64`，或升級至 0.6 版本以支援任意整數類型。
+- **[#31](https://github.com/polakowo/vectorbt/issues/31)**（closed · 17💬 · 回測失真 · 2026-W30） — 坑：`SizeType='TargetPercent'` 時，若 size 為 0 會導致部位無法平倉、進出場日期顯示錯誤。解法：將 size 的 0 替換為 `-np.inf`，或移除原始碼特定行並發 PR。
+- **[#111](https://github.com/polakowo/vectorbt/issues/111)**（closed · 16💬 · 其他 · 2026-W30） — 坑：使用者想將隨機策略結果持久化。解法：利用 `Portfolio` 物件的 `config` 屬性存取初始化參數，透過 `Portfolio(**config)` 重建並儲存策略。
+- **[#131](https://github.com/polakowo/vectorbt/issues/131)**（closed · 15💬 · API坑 · 2026-W30） — 坑：`direction='shortonly'` 搭配 `size_type='percent'` 會導致 share_flow 全為 0。解法：改用 `Portfolio.from_orders` 搭配 `size_type='targetpercent'`，將 size 設為目標百分比（如 0.01）與 0 來控制開平倉。
+- **[#77](https://github.com/polakowo/vectorbt/issues/77)**（closed · 15💬 · 性能 · 2026-W30） — 坑：多資產回測時呼叫 `portfolio.total_return()` 觸發 Numba Segfault。解法：此為記憶體不足所致，需減少超參數數量或將模擬分塊（chunks）執行。
+- **[#156](https://github.com/polakowo/vectorbt/issues/156)**（open · 15💬 · 執行 · 2026-W30） — 坑：需限制特定時段進場但允許任意時段出場。解法：建立布林值 `activity_mask` 序列，在允許時段設為 True，不允許時段設為 False 傳入 `from_order_func` 過濾訊號。
+- **[#342](https://github.com/polakowo/vectorbt/issues/342)**（closed · 13💬 · 部署 · 2026-W30） — 坑：股票回測出現指標斷層或需 dropna。解法：設定 `vbt.settings['array_wrapper']['freq']` 與 `year_freq` 處理頻率，並在 `Portfolio.from_signals` 傳入 `size_granularity=1` 確保整數部位。
