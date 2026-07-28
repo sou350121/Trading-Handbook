@@ -2,7 +2,7 @@
 
 > **收錄**：限价订单簿(LOB)建模、订单流信号、做市策略、高频套利、微观流动性与价格形成机制
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：35 篇（32 篇成解構頁，其餘為 registry）
+> **本 zone 現有**：36 篇（33 篇成解構頁，其餘為 registry）
 
 ## 解構清單
 
@@ -25,6 +25,7 @@
 | [Phase-diagram ABM with null/artefact discipline](phase-diagram-abm-with-null-artefact-discipline) | 🔧 | [arXiv](https://arxiv.org/abs/2607.08907) | 用相图法验证订单簿ABM中羊群行为引发的流动性枯竭是真实相变，并分解其反射机制。 |
 | [Detecting unusual trading patt](detecting-unusual-trading-patterns-on-cryptocurrency-exchanges-by-means-of-complexity-measures) | 🔧 | [arXiv](https://arxiv.org/abs/2607.13916) | 本文基于高频交易数据，利用多重分形、近似熵等复杂度指标构建诊断框架，有效识别中心化交易所的刷量与 |
 | [L2 Liquidity-State Transition](l2-liquidity-state-transition) | 🔧 | [arXiv](https://arxiv.org/abs/2607.09230) | 在加密期货事件窗口内，预事件L2流动性状态是预测后事件流动性的首要信号，订单流仅具增量价值。 |
+| [Extra Trees](extra-trees) | 🔧 | Extra Trees | 利用专有高频标签训练Extra Trees，将公开TAQ指标映射为主动/被动HFT流向代理变量。 |
 | [解码动量溢出：日内-隔夜收益的非对称结构](art-333) | 🔧 | — | 将动量溢出拆解为日内与隔夜收益，揭示散户追涨与机构慢速套利驱动的非对称定价机制。 |
 | [谱交易量模型](art-332) | 🔧 | 谱交易量模型 | 本文提出基于傅里叶分析的谱交易量模型，揭示中美股市高频交易量的周期性规律，并应用于VWAP执行优 |
 | [TLOB](tlob) | 🔧 | TLOB | 提出TLOB模型，利用时间与特征双重注意力机制及双线性归一化，直接端到端预测限价订单簿价格趋势， |
