@@ -140,6 +140,8 @@ _開源投研終端（數據工程的坑）_
 
 ## polakowo/vectorbt
 _向量化回測（速度取向）_
+- **[#181](https://github.com/polakowo/vectorbt/issues/181)**（closed · 13💬 · 回測失真 · 2026-W31） — 坑：`generate_ohlc_stop_exits` 觸發停損/停利後，若未傳入 `price` 參數，回測會用 `Close` 價格結算，導致實際虧損大於設定的 `sl_stop`。解法：將 `generate_ohlc_stop_exits` 輸出的 `out_dict` 中的停損/停利價格作為 `price` 參數傳入 `Portfolio.from_signals`，確保觸發時以正確價格執行。
+- **[#11](https://github.com/polakowo/vectorbt/issues/11)**（closed · 12💬 · 其他 · 2026-W31） — 坑：目前版本不支援做空（shorting）功能。結論：開發者確認此為未來功能，但當前優先級較低，正專注於撰寫專案文件與 API 參考。
 
 - **[#113](https://github.com/polakowo/vectorbt/issues/113)**（closed · 25💬 · 回測失真 · 2026-W30） — 坑：Stop loss 需要乾淨的訊號，若訊號相鄰會導致 Portfolio.stats 與 Dashboard 數據不一致。解法：生成 Stop loss 前，先對 entries 與 exits 執行 `.vbt.signals.first(reset_by=..., allow_gaps=True)` 清理訊號。
 - **[#17](https://github.com/polakowo/vectorbt/issues/17)**（closed · 23💬 · API坑 · 2026-W30） — 坑：`vbt.MA.from_combinations` 傳入整數陣列會引發 Numba TypeError。解法：將 `windows` 陣列轉型為 `np.float64`，或升級至 0.6 版本以支援任意整數類型。
