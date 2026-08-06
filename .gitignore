@@ -7,3 +7,8 @@ __pycache__/
 *.pyc
 .DS_Store
 !data/corpus_meta.json
+
+# philab 帳本的機器真相：**本倉自己的迴圈產出**（裁決卡片），
+# 不含任何第三方抓取內容，所以不受上面那條版權護欄約束。
+!data/philab/
+!data/philab/verdicts.jsonl
