@@ -634,8 +634,9 @@
           {
             "group": "philab 帳本",
             "pages": [
-              "reports/philab-ledger/overview.md",
-              "reports/philab-ledger/2026-08-06-issue-001.md"
+              "reports/philab-ledger/overview",
+              "reports/philab-ledger/2026-08-07-issue-002",
+              "reports/philab-ledger/2026-08-06-issue-001"
             ]
           },
           {
