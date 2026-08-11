@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><meta http-equiv="refresh" content="900">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>philab 哲學量化面板</title>
+<style>
+/* ── token：亮暗只換這裡 ─────────────────────────────────────── */
+:root{
+  color-scheme:light dark;
+  --bg:#f6f7fa; --card:#ffffff; --ink:#1c2028; --mut:#6a7180;
+  --accent:#3b46c4; --ok:#177a45; --warn:#9a6b00; --bad:#b3261e;
+  --line:#e3e5ec;
+  /* 衍生 token：被推翻＝ink 40%（8 位 hex）；橫幅淺 accent 底；
+     斜紋＝不可稽核 overlay，亮色實心上用白紋 */
+  --refuted:#1c202866; --accent-soft:#3b46c414;
+  --stripe:rgba(255,255,255,.45);
+}
+/* 三態主題：未標記時跟系統；讀者明選 light 要能壓過暗色 OS，
+   明選 dark 要能壓過亮色 OS——三個狀態都只動 token，不動組件。 */
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0e1117; --card:#171b22; --ink:#e6e9f0; --mut:#9aa3b2;
+    --accent:#7b86ff; --ok:#4cc38a; --warn:#e2b93d; --bad:#ff7b72;
+    --line:#262c36;
+    --refuted:#e6e9f066; --accent-soft:#7b86ff1f;
+    --stripe:rgba(0,0,0,.40);
+  }
+}
+:root[data-theme="dark"]{
+    --bg:#0e1117; --card:#171b22; --ink:#e6e9f0; --mut:#9aa3b2;
+    --accent:#7b86ff; --ok:#4cc38a; --warn:#e2b93d; --bad:#ff7b72;
+    --line:#262c36;
+    --refuted:#e6e9f066; --accent-soft:#7b86ff1f;
+    --stripe:rgba(0,0,0,.40);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:15px/1.55 ui-sans-serif,"Segoe UI","PingFang TC",
+       "Microsoft JhengHei",sans-serif;
+  font-variant-numeric:tabular-nums}
+.mono{font-family:ui-monospace,Consolas,monospace}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1180px;margin:0 auto;padding:20px 16px 40px;
+  display:grid;gap:14px}
+.card{background:var(--card);border:1px solid var(--line);
+  border-radius:10px;padding:14px 16px}
+h1{font-size:1.35rem;font-weight:700;margin:0}
+h2{font-size:1rem;font-weight:700;margin:0 0 10px}
+h3{font-size:.92rem;font-weight:700;margin:14px 0 8px}
+.note{color:var(--mut);font-size:.8rem}
+.bad{color:var(--bad)}
+.warnc{color:var(--warn)}
+/* 頁頭 */
+.hd{display:flex;justify-content:space-between;align-items:center;
+  gap:10px;flex-wrap:wrap}
+.hd-r{display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  font-size:.85rem;color:var(--mut)}
+.cap{display:inline-flex;align-items:center;gap:8px;padding:4px 12px;
+  border-radius:99px;border:1px solid var(--line);background:var(--card);
+  font-weight:600;color:var(--ink)}
+.dot{position:relative;width:8px;height:8px;border-radius:50%;
+  background:var(--ok);flex:none}
+.dot::after{content:"";position:absolute;inset:-3px;border-radius:50%;
+  border:2px solid var(--ok);opacity:0;animation:ring 2.4s ease-out infinite}
+@keyframes ring{0%{transform:scale(.5);opacity:.9}
+  70%{transform:scale(1.7);opacity:0}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.dot::after{animation:none}}
+/* 一句話狀態列 */
+.banner{background:var(--accent-soft);border:1px solid var(--line);
+  border-radius:10px;padding:10px 16px;font-size:.95rem}
+/* KPI 卡 */
+.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:14px}
+.kpi .lbl{font-size:.85rem;color:var(--mut)}
+.kpi .n{font-size:2rem;font-weight:750;line-height:1.2}
+.kpi .n.unread{font-size:1.15rem;line-height:2.1}
+.kpi .sub{font-size:.78rem;color:var(--mut)}
+/* 管線流程圖 */
+.flow{display:flex;flex-wrap:wrap;gap:8px}
+.flow .st{flex:1 1 170px;background:var(--card);
+  border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.flow .arr{align-self:center;color:var(--mut);font-size:1.15rem;flex:none}
+.st .nm{font-weight:700}
+.st .d{color:var(--mut);font-size:.78rem}
+.st .num{font-size:.88rem;font-weight:600;margin-top:3px}
+/* 雙欄 */
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:14px;align-items:start}
+.stack{display:grid;gap:14px}
+/* pill（儀器）、chip（裁決）、flag（警示章） */
+.pill{display:inline-block;padding:1px 10px;border-radius:99px;
+  font-size:.76rem;font-weight:650;white-space:nowrap}
+.pill.ok{color:var(--ok);background:color-mix(in srgb,var(--ok) 13%,transparent)}
+.pill.mut{color:var(--mut);background:color-mix(in srgb,var(--mut) 15%,transparent)}
+.pill.bad{color:var(--bad);background:color-mix(in srgb,var(--bad) 13%,transparent)}
+.chip{display:inline-block;padding:1px 9px;border-radius:99px;
+  font-size:.76rem;font-weight:650;white-space:nowrap}
+.chip.g-ok{color:var(--ok);background:color-mix(in srgb,var(--ok) 13%,transparent)}
+.chip.g-accent{color:var(--accent);
+  background:color-mix(in srgb,var(--accent) 12%,transparent)}
+.chip.g-mut{color:var(--mut);background:color-mix(in srgb,var(--mut) 15%,transparent)}
+.chip.g-refuted{color:var(--ink);
+  background:color-mix(in srgb,var(--ink) 12%,transparent)}
+.chip.g-unknown{color:var(--mut);background:none;
+  border:1px solid var(--line);font-weight:500}
+.sfx{color:var(--mut);font-size:.75rem}
+.term{color:var(--mut);font-size:.7rem}
+.flag{font-size:.75rem;font-weight:700;cursor:help;white-space:nowrap}
+.flag.bad{color:var(--bad)}
+.flag.warn{color:var(--warn)}
+/* 裁決分佈堆疊 bar；斜紋＝該段裡不可稽核的部分 */
+.bar{display:flex;height:22px;border-radius:7px;overflow:hidden;
+  border:1px solid var(--line)}
+.bar i{display:block;height:100%}
+.bar i.g-ok,.sw.g-ok{background-color:var(--ok)}
+.bar i.g-accent,.sw.g-accent{background-color:var(--accent)}
+.bar i.g-mut,.sw.g-mut{background-color:var(--mut)}
+.bar i.g-refuted,.sw.g-refuted{background-color:var(--refuted)}
+.bar i.g-unknown,.sw.g-unknown{background-color:var(--mut)}
+.bar i.striped{background-image:repeating-linear-gradient(45deg,
+  var(--stripe) 0 5px,transparent 5px 10px)}
+.leg{display:grid;gap:5px;margin-top:10px;font-size:.85rem}
+.leg .lr{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.sw{width:10px;height:10px;border-radius:3px;flex:none;align-self:center}
+.leg .cnt{font-weight:700;min-width:2ch;text-align:right}
+.leg .zh{font-weight:600}
+.leg .unk{color:var(--mut);font-weight:500}
+.leg .tm{color:var(--mut);font-size:.72rem;
+  font-family:ui-monospace,Consolas,monospace}
+/* 留在場上的 */
+.alive{display:grid;gap:8px}
+.alive .it{border:1px solid var(--line);border-radius:8px;
+  padding:8px 10px;display:grid;gap:3px}
+.alive .cid{font-size:.8rem;word-break:break-all}
+.alive .best{font-size:.84rem}
+.covline{color:var(--mut);font-size:.76rem}
+.covline.warnc{color:var(--warn)}
+.ph{color:var(--mut);font-size:.78rem}
+/* 儀器健康列 */
+.mrow{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;
+  padding:7px 0;border-bottom:1px solid var(--line)}
+.mrow:last-of-type{border-bottom:0}
+.mrow .m{font-weight:700;min-width:74px}
+.mrow .d{color:var(--mut);font-size:.82rem;flex:1}
+.mrow .ev{color:var(--mut);font-size:.76rem;flex-basis:100%}
+/* 工廠佇列 */
+ol.q{margin:0;padding-left:1.4em;display:grid;gap:6px}
+.arena{font-family:ui-monospace,Consolas,monospace;font-size:.72rem;
+  border:1px solid var(--line);border-radius:5px;padding:0 6px;
+  color:var(--mut);margin-left:6px;white-space:nowrap}
+/* 表格 */
+.scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.85rem}
+td,th{padding:5px 8px;border-bottom:1px solid var(--line);
+  text-align:left;vertical-align:top}
+th{color:var(--mut);font-weight:600;font-size:.76rem}
+tr:last-child td{border-bottom:0}
+details{margin-top:10px}
+summary{cursor:pointer;color:var(--mut);font-size:.82rem}
+/* 頁尾守衛列 */
+.guard{font-size:.78rem;color:var(--mut)}
+.guard b{color:var(--ink)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="hd">
+ <h1>philab｜投資哲學 → 可信裁決</h1>
+ <div class="hd-r">
+  <span class="cap"><span class="dot"></span>自轉中</span>
+  <span title="迴圈每 30 分重畫；本頁每 15 分自動刷新">2026-09-05 23:43</span>
+  <nav><a href="index.html">主面板</a> · <a href="century.html">百年頁</a></nav>
+ </div>
+</header>
+<div class="banner">系統自轉中——<b>2</b> 條管線已驗眼、工廠佇列 <b>0</b> 條、歷來裁決 <b>53</b> 條（其中<span class="bad">不可稽核 19 條</span>）</div>
+<section class="kpi">
+<div class="card"><div class="lbl">主張級裁決</div><div class="n">53</div><div class="sub">27 份裁決檔</div></div>
+<div class="card"><div class="lbl">留在場上</div><div class="n">11</div><div class="sub">kept ≠ 有效</div></div>
+<div class="card"><div class="lbl">不可稽核</div><div class="n bad">19</div><div class="sub">原文已佚，永久</div></div>
+<div class="card"><div class="lbl">工廠佇列</div><div class="n">0</div><div class="sub">接下來自動問</div></div>
+</section>
+<section class="flow">
+<div class="st"><div class="nm">主張庫</div><div class="d">哲學語錄拆成可證偽主張</div><div class="num">已被裁決 33 條</div></div>
+<div class="arr">→</div>
+<div class="st"><div class="nm">工廠</div><div class="d">機器自動出題、凍結 protocol</div><div class="num">佇列 0・凍結 7</div></div>
+<div class="arr">→</div>
+<div class="st"><div class="nm">審查</div><div class="d">規格逐條對照凍結宣告</div><div class="num">protocol 31 份</div></div>
+<div class="arr">→</div>
+<div class="st"><div class="nm">閘門</div><div class="d">覆蓋・忠實度・運氣折扣</div><div class="num">計數在裁決內</div></div>
+<div class="arr">→</div>
+<div class="st"><div class="nm">裁決</div><div class="d">寫死進 verdict.json</div><div class="num">主張級 53 條</div></div>
+</section>
+<section class="cols">
+<div class="stack">
+<div class="card"><h2>儀器健康（工廠准入）</h2>
+<div class="mrow"><span class="m mono">xsec</span><span class="pill ok">✓ 已驗</span><span class="d">個股橫斷面：買哪一檔</span><div class="ev">2026-07-31 · 價值溢酬（Fama-French 1992）：小型股 +0.1433/+0.1325 八關全過（偵測下限 0.024 的 6 倍），大型股 +0.0195/+0.0114 過不了——重現了溢酬的規模依賴＝抓到真結構。覆蓋 4/4 完整。</div></div>
+<div class="mrow"><span class="m mono">predicate</span><span class="pill ok">✓ 已驗</span><span class="d">條件分佈：何時之後如何</span><div class="ev">2026-08-01 · 波動叢聚（Mandelbrot 1963/Engle 1982）：vol(60d)&gt;0.25 → fwd_vol@6m signed_d=+1.6563 五關全過；剖面 1m..120m 全正（1.60→1.30）與文獻一致。v1 揭露 P4 剖面閘 7-26 退化（已修，smoke 補「存在≠健康」檢查）。　校準檔 </div></div>
+<div class="mrow"><span class="m mono">book</span><span class="pill mut">✗ 未驗</span><span class="d">名家帳面</span></div>
+<div class="mrow"><span class="m mono">event</span><span class="pill mut">✗ 未驗</span><span class="d">事件研究</span></div>
+<p class="note">verified=false 工廠不碰；此檔只由人更新（registry/instrument_health.json）。</p></div>
+<div class="card"><h2>工廠接下來會問</h2>
+<p class="note">佇列空——工廠閒置是合法狀態。</p>
+<details><summary>工廠帳本尾巴（最後動作：600.8 小時前）</summary><div class="scroll"><table><tr><th>時間</th><th>事件</th><th>對象</th><th>狀態</th></tr>
+<tr><td class="mono">2026-08-11T14:54</td><td>proposed</td><td class="mono">lynch_know_what_you_own.garp_low_peg_outperfor</td><td>inexpressible: 主張同時斷言「盈餘成長率高」與「估值相對較低」兩個特徵的交集，違反規則3（文法一個規格只帶</td></tr>
+<tr><td class="mono">2026-08-10T06:35</td><td>proposed</td><td class="mono">templeton_max_pessimism.global_extreme_pessimi</td><td>inexpressible: 規則0：主張明確比較『估值極端便宜或回撤時買入』與『估值常態或昂貴時買入』兩類策略的相對表</td></tr>
+<tr><td class="mono">2026-08-10T02:11</td><td>proposed</td><td class="mono">taleb_antifragile.barbell_conservative_end_inf</td><td>inexpressible: 規則0：主張明確比較了現金/短期國庫券與股票（中等風險資產）的購買力侵蝕程度（相對表現），</td></tr>
+<tr><td class="mono">2026-08-08T17:09</td><td>proposed</td><td class="mono">soros_reflexivity.reflexivity_overshoot_revers</td><td>inexpressible: 違反規則0：主張在比較「反向操作」與「順勢持有」兩類策略的相對表現，而競技場僅有一條指數序</td></tr>
+<tr><td class="mono">2026-08-08T12:48</td><td>proposed</td><td class="mono">munger_invert.avoid_ruination_outperforms</td><td>inexpressible: 違反規則3：主張同時斷言高槓桿、高集中度及財務質量差等多個特徵的交集，而文法一個規格只能帶</td></tr>
+<tr><td class="mono">2026-08-08T08:44</td><td>proposed</td><td class="mono">marks_cycle.cycle_extreme_counter_trend</td><td>inexpressible: 規則0：主張明確比較逆勢定位與順勢/持有不動兩類策略的相對表現，單一指數序列供不出此比較。</td></tr>
+<tr><td class="mono">2026-08-08T02:44</td><td>ran</td><td class="mono">auto-xsec-asymmetric_risk_compensation-v1</td><td>rc=0</td></tr>
+<tr><td class="mono">2026-08-08T02:39</td><td>frozen</td><td class="mono">auto-xsec-asymmetric_risk_compensation-v1</td><td></td></tr>
+</table></div></details>
+</div>
+</div>
+<div class="card"><h2>記分板</h2>
+<div class="bar"><i class="g-ok striped" style="width:1.89%" title="站得住・不可稽核：1 條（SUPPORTED_ON_DECISION_WINDOW）"></i><i class="g-accent striped" style="width:3.77%" title="留著觀察・不可稽核：2 條（KEPT_BUT_BELOW_MULTIPLICITY_BAR）"></i><i class="g-accent" style="width:15.09%" title="產生假設：8 條（HYPOTHESIS）"></i><i class="g-mut" style="width:28.30%" title="沒東西可帶走：15 條（NOTHING_TO_CARRY）"></i><i class="g-mut striped" style="width:3.77%" title="脆弱・不可稽核：2 條（FRAGILE）"></i><i class="g-mut striped" style="width:3.77%" title="有資訊沒優勢・不可稽核：2 條（INFORMATION_WITHOUT_EDGE）"></i><i class="g-mut" style="width:3.77%" title="測不了：樣本供不出：2 條（CONDITION_UNSUPPLIABLE）"></i><i class="g-mut" style="width:16.98%" title="測不了：沒有合法讀法：9 條（NO_READING_SURVIVED_AUDIT）"></i><i class="g-refuted striped" style="width:22.64%" title="被推翻・不可稽核：12 條（REFUTED）"></i></div>
+<div class="leg">
+<div class="lr" title="通過全部閘門且超過運氣折扣門檻"><span class="sw g-ok"></span><span class="cnt">1</span><span class="zh">站得住</span><span class="tm">SUPPORTED_ON_DECISION_WINDOW</span><span class="bad">其中不可稽核 1</span></div>
+<div class="lr" title="過了閘門但沒超過運氣折扣"><span class="sw g-accent"></span><span class="cnt">2</span><span class="zh">留著觀察</span><span class="tm">KEPT_BUT_BELOW_MULTIPLICITY_BAR</span><span class="bad">其中不可稽核 2</span></div>
+<div class="lr" title="探索期產物：值得再問，不是發現"><span class="sw g-accent"></span><span class="cnt">8</span><span class="zh">產生假設</span><span class="tm">HYPOTHESIS</span></div>
+<div class="lr" title="測了，沒有讀法站得住"><span class="sw g-mut"></span><span class="cnt">15</span><span class="zh">沒東西可帶走</span><span class="tm">NOTHING_TO_CARRY</span></div>
+<div class="lr" title="結論繫於少數事件"><span class="sw g-mut"></span><span class="cnt">2</span><span class="zh">脆弱</span><span class="tm">FRAGILE</span><span class="bad">其中不可稽核 2</span></div>
+<div class="lr" title="統計上有東西但構不成可交易優勢"><span class="sw g-mut"></span><span class="cnt">2</span><span class="zh">有資訊沒優勢</span><span class="tm">INFORMATION_WITHOUT_EDGE</span><span class="bad">其中不可稽核 2</span></div>
+<div class="lr" title="主張要求的條件在這個資料宇宙湊不滿"><span class="sw g-mut"></span><span class="cnt">2</span><span class="zh">測不了：樣本供不出</span><span class="tm">CONDITION_UNSUPPLIABLE</span></div>
+<div class="lr" title="凍結宣告下沒有規格能代表它"><span class="sw g-mut"></span><span class="cnt">9</span><span class="zh">測不了：沒有合法讀法</span><span class="tm">NO_READING_SURVIVED_AUDIT</span></div>
+<div class="lr" title="按主張自己的失效預言被推翻"><span class="sw g-refuted"></span><span class="cnt">12</span><span class="zh">被推翻</span><span class="tm">REFUTED</span><span class="bad">其中不可稽核 12</span></div>
+</div>
+<h3>留在場上的</h3>
+<div class="alive">
+<div class="it"><div><span class="chip g-ok" title="通過全部閘門且超過運氣折扣門檻">站得住</span> <span class="flag bad" title="主張原文已佚，忠實度無法重新檢查——永久">⚠ 不可稽核</span></div><div class="cid mono">buffett_fear_greed.buy_early_short_term_may_lose</div><div class="best">best=<b>1.734</b>　<span class="covline">覆蓋：未記錄</span></div></div>
+<div class="it"><div><span class="chip g-accent" title="過了閘門但沒超過運氣折扣">留著觀察</span> <span class="flag bad" title="主張原文已佚，忠實度無法重新檢查——永久">⚠ 不可稽核</span></div><div class="cid mono">marks_cycle.complacency_precedes_losses</div><div class="best">best=<b>0.389</b>　<span class="covline">覆蓋：未記錄</span></div></div>
+<div class="it"><div><span class="chip g-accent" title="過了閘門但沒超過運氣折扣">留著觀察</span> <span class="flag bad" title="主張原文已佚，忠實度無法重新檢查——永久">⚠ 不可稽核</span></div><div class="cid mono">soros_reflexivity.overextension_reversal</div><div class="best">best=<b>0.3096</b>　<span class="covline">覆蓋：未記錄</span></div></div>
+<div class="it"><div><span class="chip g-accent" title="探索期產物：值得再問，不是發現">產生假設</span></div><div class="cid mono">graham_quantitative_value.value_premium_persists</div><div class="best">best=<b>0.0559</b>　<span class="covline">覆蓋 4/4 完整</span></div></div>
+<div class="it"><div><span class="chip g-accent" title="探索期產物：值得再問，不是發現">產生假設</span></div><div class="cid mono">instrument_control.value_premium_bm <span class="ph">儀器對照</span></div><div class="best">best=<b>0.1433</b>　<span class="covline">覆蓋 4/4 完整</span></div></div>
+<div class="it"><div><span class="chip g-accent" title="探索期產物：值得再問，不是發現">產生假設</span></div><div class="cid mono">instrument_control.vol_clustering <span class="ph">儀器對照</span></div><div class="best"><span class="note">best：沒有讀數</span>　<span class="covline">覆蓋分母未知（空間列舉不完）</span></div></div>
+<div class="it"><div><span class="chip g-accent" title="探索期產物：值得再問，不是發現">產生假設</span></div><div class="cid mono">instrument_control.vol_clustering <span class="ph">儀器對照</span></div><div class="best">best=<b>1.6563</b>　<span class="covline">覆蓋分母未知（空間列舉不完）</span></div></div>
+<div class="it"><div><span class="chip g-accent" title="探索期產物：值得再問，不是發現">產生假設</span></div><div class="cid mono">klarman_margin_of_safety.deep_value_margin_of_safety</div><div class="best">best=<b>0.1708</b>　<span class="covline warnc">⚠ 覆蓋 4/8（分母不完整）</span></div></div>
+<div class="it"><div><span class="chip g-accent" title="探索期產物：值得再問，不是發現">產生假設</span></div><div class="cid mono">klarman_margin_of_safety.deep_value_margin_of_safety</div><div class="best">best=<b>0.1598</b>　<span class="covline warnc">⚠ 覆蓋 1/4（分母不完整）</span></div></div>
+<div class="it"><div><span class="chip g-accent" title="探索期產物：值得再問，不是發現">產生假設</span></div><div class="cid mono">klarman_margin_of_safety.deep_value_margin_of_safety</div><div class="best">best=<b>0.1691</b>　<span class="covline">覆蓋 2/2 完整</span></div></div>
+<div class="it"><div><span class="chip g-accent" title="探索期產物：值得再問，不是發現">產生假設</span> <span class="flag warn" title="within_all_is_a_control_not_a_claim、conjunction_is_expressible">⚠ 代表不了主張</span></div><div class="cid mono">munger_invert.avoid_stupid_factors</div><div class="best">best=<b>0.0696</b>　<span class="covline warnc">⚠ 覆蓋 4/6（分母不完整）</span></div></div>
+</div>
+<p class="bad mono">■機器■ 裁決引用的主張不在庫裡：3 條</p>
+</div>
+</section>
+<div class="card"><h2>產能與健康</h2><div class="scroll"><table><tr><th>日期(UTC)</th><th>試驗</th><th>碰資料</th><th>過閘</th><th>機器壞</th><th>審查擋</th><th></th></tr><tr><td class="mono">2026-08-27</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="bad">產能為零</td></tr><tr><td class="mono">2026-08-28</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="bad">產能為零</td></tr><tr><td class="mono">2026-08-29</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="bad">產能為零</td></tr><tr><td class="mono">2026-08-30</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="bad">產能為零</td></tr><tr><td class="mono">2026-08-31</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="bad">產能為零</td></tr><tr><td class="mono">2026-09-01</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="bad">產能為零</td></tr><tr><td class="mono">2026-09-02</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="bad">產能為零</td></tr><tr><td class="mono">2026-09-03</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="bad">產能為零</td></tr><tr><td class="mono">2026-09-04</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="bad">產能為零</td></tr><tr><td class="mono">2026-09-05</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="note">今日未完</td></tr></table></div><h2>條數 ≠ 發現數</h2><p class="bad">⚠ <span class="mono">ep｜xs_spread@12季</span> 被記在 2 個哲學底下（klarman_margin_of_safety、graham_quantitative_value）——<b>同一個數字算了多次</b></p><p class="note"><span class="mono">ep</span> 有 3 種讀法：一個訊號的多個投影，不是多個發現</p><p class="note"><span class="mono">roa</span> 有 2 種讀法：一個訊號的多個投影，不是多個發現</p><p class="note"><span class="mono">bm</span> 有 2 種讀法：一個訊號的多個投影，不是多個發現</p><h2>逐窗留一（診斷，非閘門）</h2><div class="scroll"><table><tr><th>規格</th><th>全樣本</th><th>最差留一</th><th>留住</th><th>最有利的窗</th></tr><tr><td class="mono">ep｜xs_mdd_spread@12季</td><td>+0.1595</td><td>+0.1387</td><td>87%</td><td class="mono">1999Q1..2001Q4</td></tr><tr><td class="mono">bm｜xs_spread@12季（small之內）</td><td>+0.1431</td><td>+0.1351</td><td>94%</td><td class="mono">2002Q1..2004Q4</td></tr><tr><td class="mono">bm｜xs_spread@20季（small之內）</td><td>+0.1325</td><td>+0.1263</td><td>95%</td><td class="mono">2010Q1..2014Q4</td></tr><tr><td class="mono">roa｜xs_spread@12季</td><td>+0.0695</td><td>+0.0575</td><td>83%</td><td class="mono">1999Q1..2001Q4</td></tr><tr><td class="mono">ep｜xs_spread@12季</td><td>+0.0556</td><td>+0.0396</td><td class="bad">71%</td><td class="mono">1999Q1..2001Q4</td></tr><tr><td class="mono">ep｜xs_spread@20季</td><td>+0.0430</td><td>+0.0326</td><td class="bad">76%</td><td class="mono">2000Q1..2004Q4</td></tr></table></div><p class="note">儀器對照留住多少是判斷這把尺兇不兇的唯一依據——沒有它，「某條留住 71%」讀不出是候選脆弱還是尺子太嚴。</p><h2>波動對照（診斷，非閘門）</h2><p class="note">ep｜xs_mdd_spread@12季｜higher：raw(同宇宙) 0.146 → 中性化 0.0624（留住 0.427）；vs 自身虛無 p=0.006622516556291391。回撤機械上就是波動的函數——證據看 permutation_p，不拿 raw 估計量的下限來除。</p><h2>「沒跑好」是哪一種</h2><table><tr><td><b>29</b></td><td>真陰性（碰過資料，沒站得住的讀法）</td></tr><tr><td><b>9</b></td><td>留在場上</td></tr><tr><td><b>9</b></td><td>該輪有已知機器故障（讀數可能不代表主張）</td></tr><tr><td><b>5</b></td><td>沒有讀法通過事前審查（判斷，非機器故障）</td></tr><tr><td><b>1</b></td><td>機器壞了（形狀×模式不相容，一格資料都沒碰）</td></tr></table><p class="bad">✗ 形狀×模式不相容 1 條——這些 protocol 的每個規格都必然文法失敗，一格資料都碰不到：</p><ul><li class="mono">auto-xsec-accounting_distortion_bm_dec-v1　graham_quantitative_value.accounting_distortion_bm_decay</li></ul><p class="bad">⚠ 漏斗看不到這些試驗（registry 沒有 protocol 指向它們，所以分母不完整）：state\century\ledger.jsonl（78 列）</p><p class="note">機器壞了＝要修；審查擋下＝判斷（有已知誤判史）；真陰性＝答案本身。三者處置完全不同，所以分開數。</p></div>
+<div class="card"><h2>主張檔案——一條主張・多個方案</h2><p class="note">同一條主張拆成多個 facet 各自預註冊；這裡讀的是**成績單**，不是挑最好的那格。被汙染／假判否的輪次保留展示——它們是這條主張的歷史，不是要藏的東西。</p><h3>Klarman｜安全邊際　<span class="term mono">klarman_margin_of_safety.deep_value_margin_of_safety</span></h3><div class="scroll"><table><tr><th>protocol</th><th>判決</th><th>量到（帶單位）</th><th>旗標</th></tr><tr><td class="mono">auto-xsec-deep_value_margin_of_safety-v1</td><td><span class="chip g-accent" title="探索期產物：值得再問，不是發現">產生假設</span></td><td>+17.08 個百分點／12 季（3 年）</td><td><span class="flag warn" title="【2026-08-08 儀器缺陷，mdd 系讀數作廢】外部對抗審查（gpt-5.6-sol，兩位裁判獨立發現）＋合成序列驗證：mode_xsec.panel() 的 mdd{h} 構造漏了 [::-1] 反轉對，實際窗口是 t-10..t+1（幾乎全在過去、與特徵自己的資訊集重疊），且取單季報酬最小值而非累積路徑低點——連兩季 −30%（路徑 −51%）只量到 −30%。本 protocol 的 ">⚠ 該輪有機器故障</span></td></tr><tr><td class="mono">xsec-deepvalue-mdd-retest-v1</td><td><span class="chip g-accent" title="探索期產物：值得再問，不是發現">產生假設</span></td><td>+15.98 個百分點／12 季（3 年）</td><td>—</td></tr><tr><td class="mono">xsec-deepvalue-bull-lag-v1</td><td><span class="chip g-mut" title="測了，沒有讀法站得住">沒東西可帶走</span> <span class="sfx">｜射程受限</span></td><td>-3.75 個百分點／4 季（1 年）</td><td><span class="flag warn" title="【2026-08-12 審查員部分假判否】bm 規格被 A1/A2 判否：推理把 direction 當成會改變排序的東西（它只是假設的符號），且同文法的 ep 同卷放行——同一份文本兩種裁定。ep 那條的負結果是真的（SHAPE：平靜期便宜端反而 +3.75pp/年，與主張的多頭跑輸方向相反）。bm 重測=xsec-deepvalue-bull-lag-v2。另註：主張原文「如低BM、低EP」是">⚠ 該輪有機器故障</span></td></tr><tr><td class="mono">xsec-deepvalue-valuetrap-v1</td><td><span class="chip g-mut" title="凍結宣告下沒有規格能代表它">測不了：沒有合法讀法</span></td><td>—</td><td><span class="flag warn" title="【2026-08-12 審查員假判否，N=0】兩個規格（lev/roa｜mdd@20季｜cheap之內｜higher）全被 A2 判否，但判否推理把回撤當**正的幅度**（實際是負報酬水準，OUTCOMES 原文：差為正＝高分位跌得比較少）。lev 反號後最高分位＝低槓桿，體質好跌得淺 ⇒ 差為正 ⇒ higher 是對的。裁決 NO_READING_SURVIVED_AUDIT 不得讀成關於主張">⚠ 該輪有機器故障</span></td></tr><tr><td class="mono">xsec-deepvalue-valuetrap-v2</td><td><span class="chip g-accent" title="探索期產物：值得再問，不是發現">產生假設</span></td><td>+16.91 個百分點／20 季（5 年）</td><td>—</td></tr><tr><td class="mono">xsec-deepvalue-bull-lag-v2</td><td><span class="chip g-mut" title="凍結宣告下沒有規格能代表它">測不了：沒有合法讀法</span></td><td>—</td><td>—</td></tr></table></div><h3>Buffett｜別人恐懼我貪婪　<span class="term mono">buffett_fear_greed.valuation_discount_not_drawdown</span></h3><div class="scroll"><table><tr><th>protocol</th><th>判決</th><th>量到（帶單位）</th><th>旗標</th></tr><tr><td class="mono">century-value-v1</td><td><span class="chip g-refuted" title="按主張自己的失效預言被推翻">被推翻</span></td><td>-0.0503 CAGR÷MDD</td><td><span class="flag bad">⚠ 不可稽核</span></td></tr><tr><td class="mono">century-predicate-v1</td><td><span class="chip g-mut" title="結論繫於少數事件">脆弱</span></td><td>+0.45 個標準差／120 個月</td><td><span class="flag bad">⚠ 不可稽核</span></td></tr><tr><td class="mono">century-predicate-v2</td><td><span class="chip g-refuted" title="按主張自己的失效預言被推翻">被推翻</span></td><td>+0.07 個標準差／60 個月</td><td><span class="flag bad">⚠ 不可稽核</span></td></tr></table></div><h3>Klarman｜安全邊際　<span class="term mono">klarman_margin_of_safety.intrinsic_value_margin</span></h3><div class="scroll"><table><tr><th>protocol</th><th>判決</th><th>量到（帶單位）</th><th>旗標</th></tr><tr><td class="mono">century-value-v1</td><td><span class="chip g-refuted" title="按主張自己的失效預言被推翻">被推翻</span></td><td>-0.0537 CAGR÷MDD</td><td><span class="flag bad">⚠ 不可稽核</span></td></tr><tr><td class="mono">century-predicate-v1</td><td><span class="chip g-mut" title="結論繫於少數事件">脆弱</span></td><td>+0.70 個標準差／36 個月</td><td><span class="flag bad">⚠ 不可稽核</span></td></tr><tr><td class="mono">century-predicate-v2</td><td><span class="chip g-refuted" title="按主張自己的失效預言被推翻">被推翻</span></td><td>+0.02 個標準差／60 個月</td><td><span class="flag bad">⚠ 不可稽核</span></td></tr></table></div><h3>Marks｜週期　<span class="term mono">marks_cycle.risk_premium_requires_cheapness</span></h3><div class="scroll"><table><tr><th>protocol</th><th>判決</th><th>量到（帶單位）</th><th>旗標</th></tr><tr><td class="mono">century-value-v1</td><td><span class="chip g-refuted" title="按主張自己的失效預言被推翻">被推翻</span></td><td>-0.0479 CAGR÷MDD</td><td><span class="flag bad">⚠ 不可稽核</span></td></tr><tr><td class="mono">century-predicate-v1</td><td><span class="chip g-refuted" title="按主張自己的失效預言被推翻">被推翻</span></td><td>+0.16 個標準差／36 個月</td><td><span class="flag bad">⚠ 不可稽核</span></td></tr><tr><td class="mono">century-predicate-v2</td><td><span class="chip g-refuted" title="按主張自己的失效預言被推翻">被推翻</span></td><td>+0.10 個標準差／60 個月</td><td><span class="flag bad">⚠ 不可稽核</span></td></tr></table></div><h3>Buffett｜別人恐懼我貪婪　<span class="term mono">buffett_fear_greed.buffett_net_buy_fearful</span></h3><div class="scroll"><table><tr><th>protocol</th><th>判決</th><th>量到（帶單位）</th><th>旗標</th></tr><tr><td class="mono">investor-book-v1</td><td><span class="chip g-mut" title="測了，沒有讀法站得住">沒東西可帶走</span></td><td>⚠ 未宣告單位</td><td>—</td></tr><tr><td class="mono">investor-book-v2</td><td><span class="chip g-mut" title="測了，沒有讀法站得住">沒東西可帶走</span> <span class="sfx">｜射程受限｜忠實度未知(1/3 規格未交代 drops)</span></td><td>⚠ 未宣告單位</td><td>—</td></tr><tr><td class="mono">investor-book-v3</td><td><span class="chip g-mut" title="測了，沒有讀法站得住">沒東西可帶走</span> <span class="sfx">｜射程受限</span></td><td>⚠ 未宣告單位</td><td>—</td></tr></table></div><h3>Munger｜反過來想　<span class="term mono">munger_invert.munger_downside_protection</span></h3><div class="scroll"><table><tr><th>protocol</th><th>判決</th><th>量到（帶單位）</th><th>旗標</th></tr><tr><td class="mono">investor-book-v1</td><td><span class="chip g-mut" title="測了，沒有讀法站得住">沒東西可帶走</span></td><td>+0.2572 捕捉差</td><td>—</td></tr><tr><td class="mono">investor-book-v2</td><td><span class="chip g-mut" title="測了，沒有讀法站得住">沒東西可帶走</span> <span class="sfx">｜忠實度未知(1/1 規格未交代 drops)</span></td><td>+0.2961 捕捉差</td><td>—</td></tr><tr><td class="mono">investor-book-v3</td><td><span class="chip g-mut" title="測了，沒有讀法站得住">沒東西可帶走</span> <span class="sfx">｜射程受限</span></td><td>+0.2961 捕捉差</td><td>—</td></tr></table></div><h3>Buffett｜別人恐懼我貪婪　<span class="term mono">buffett_fear_greed.buy_early_short_term_may_lose</span></h3><div class="scroll"><table><tr><th>protocol</th><th>判決</th><th>量到（帶單位）</th><th>旗標</th></tr><tr><td class="mono">century-predicate-v1</td><td><span class="chip g-ok" title="通過全部閘門且超過運氣折扣門檻">站得住</span></td><td>+1.73 個標準差／12 個月</td><td><span class="flag bad">⚠ 不可稽核</span></td></tr><tr><td class="mono">century-predicate-v2</td><td><span class="chip g-refuted" title="按主張自己的失效預言被推翻">被推翻</span></td><td>+0.13 個標準差／60 個月</td><td><span class="flag bad">⚠ 不可稽核</span></td></tr></table></div><h3>Marks｜週期　<span class="term mono">marks_cycle.complacency_precedes_losses</span></h3><div class="scroll"><table><tr><th>protocol</th><th>判決</th><th>量到（帶單位）</th><th>旗標</th></tr><tr><td class="mono">century-predicate-v1</td><td><span class="chip g-refuted" title="按主張自己的失效預言被推翻">被推翻</span></td><td>+0.21 個標準差／36 個月</td><td><span class="flag bad">⚠ 不可稽核</span></td></tr><tr><td class="mono">century-predicate-v2</td><td><span class="chip g-accent" title="過了閘門但沒超過運氣折扣">留著觀察</span></td><td>+0.39 個標準差／60 個月</td><td><span class="flag bad">⚠ 不可稽核</span></td></tr></table></div><h3>Soros｜反身性　<span class="term mono">soros_reflexivity.overextension_reversal</span></h3><div class="scroll"><table><tr><th>protocol</th><th>判決</th><th>量到（帶單位）</th><th>旗標</th></tr><tr><td class="mono">century-predicate-v1</td><td><span class="chip g-accent" title="過了閘門但沒超過運氣折扣">留著觀察</span></td><td>+0.31 個標準差／6 個月</td><td><span class="flag bad">⚠ 不可稽核</span></td></tr><tr><td class="mono">century-predicate-v2</td><td><span class="chip g-refuted" title="按主張自己的失效預言被推翻">被推翻</span></td><td>+0.18 個標準差／12 個月</td><td><span class="flag bad">⚠ 不可稽核</span></td></tr></table></div><h3>Soros｜反身性　<span class="term mono">soros_reflexivity.sorus_trial_and_error_stop_loss</span></h3><div class="scroll"><table><tr><th>protocol</th><th>判決</th><th>量到（帶單位）</th><th>旗標</th></tr><tr><td class="mono">investor-book-v1</td><td><span class="chip g-mut" title="測了，沒有讀法站得住">沒東西可帶走</span></td><td>+0.4823 捕捉差</td><td>—</td></tr><tr><td class="mono">investor-book-v2</td><td><span class="chip g-mut" title="凍結宣告下沒有規格能代表它">測不了：沒有合法讀法</span></td><td>—</td><td>—</td></tr></table></div><h3>⚙ 儀器對照（非哲學）　<span class="term mono">instrument_control.vol_clustering</span></h3><div class="scroll"><table><tr><th>protocol</th><th>判決</th><th>量到（帶單位）</th><th>旗標</th></tr><tr><td class="mono">century-poscontrol-v1</td><td><span class="chip g-accent" title="探索期產物：值得再問，不是發現">產生假設</span></td><td>—</td><td><span class="flag warn" title="2026-07-31：本 protocol 的評估被一道**出生即壞**的閘門汙染。P4_profile_shape 的剖面迴圈把 measure() 的回傳 (f, ok, sd, use) 錯接成 (遮罩, 前瞻, 有效, 標準差)，float 陣列 &amp; float 拋 TypeError 被 except 靜默吞掉——剖面永遠是空 dict，P4 對每個規格說「無法計算」並判否。它從未被發現">⚠ 該輪有機器故障</span></td></tr><tr><td class="mono">century-poscontrol-v2</td><td><span class="chip g-accent" title="探索期產物：值得再問，不是發現">產生假設</span></td><td>+1.66 個標準差／6 個月</td><td>—</td></tr></table></div></div>
+<div class="card"><h2>最新裁決</h2><div class="scroll"><table><tr><th>protocol</th><th>主張</th><th>裁決</th><th>best</th><th>旗標</th></tr>
+<tr><td class="mono">xsec-deepvalue-bull-lag-v2<br><span class="note">599.0 小時前</span></td><td class="mono">deep_value_margin_of_safety</td><td><span class="chip g-mut" title="凍結宣告下沒有規格能代表它">測不了：沒有合法讀法</span><div class="term mono">NO_READING_SURVIVED_AUDIT</div></td><td class="mono">—</td><td></td></tr>
+<tr><td class="mono">xsec-deepvalue-valuetrap-v2<br><span class="note">599.0 小時前</span></td><td class="mono">deep_value_margin_of_safety</td><td><span class="chip g-accent" title="探索期產物：值得再問，不是發現">產生假設</span><div class="term mono">HYPOTHESIS</div></td><td class="mono">+16.91 pp／20 季（5 年）</td><td></td></tr>
+<tr><td class="mono">xsec-deepvalue-valuetrap-v1<br><span class="note">599.2 小時前</span></td><td class="mono">deep_value_margin_of_safety</td><td><span class="chip g-mut" title="凍結宣告下沒有規格能代表它">測不了：沒有合法讀法</span><div class="term mono">NO_READING_SURVIVED_AUDIT</div></td><td class="mono">—</td><td></td></tr>
+<tr><td class="mono">xsec-deepvalue-bull-lag-v1<br><span class="note">599.3 小時前</span></td><td class="mono">deep_value_margin_of_safety</td><td><span class="chip g-mut" title="測了，沒有讀法站得住">沒東西可帶走</span> <span class="sfx">｜射程受限</span><div class="term mono">NOTHING_TO_CARRY</div></td><td class="mono">-3.75 pp／4 季（1 年）</td><td></td></tr>
+</table></div></div>
+<div class="card guard mono">firewall 上次通過：717.6 小時前　·　心跳：不存在　·　工廠停機開關：instrument_health.json 兩個 verified 改 false 即閒置　·　<b>kept ≠ 有效</b>；EXPLORATORY 產出是假設不是發現</div>
+</div>
+</body></html>
