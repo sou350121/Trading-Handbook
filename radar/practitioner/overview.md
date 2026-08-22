@@ -18,7 +18,11 @@
 | Robot Wealth | 扩展 | [https://robotwealth.com/feed/](https://robotwealth.com/feed/) |
 | Validea Blog | 扩展 | [https://blog.validea.com/feed/](https://blog.validea.com/feed/) |
 | Wilmott | 扩展 | [https://wilmott.com/feed/](https://wilmott.com/feed/) |
+| NBER 工作論文 | 機構/央行 | [https://back.nber.org/rss/new.xml](https://back.nber.org/rss/new.xml) |
+| Fed FEDS 工作論文 | 機構/央行 | [https://www.federalreserve.gov/feeds/feds.xml](https://www.federalreserve.gov/feeds/feds.xml) |
+| BIS 工作論文 | 機構/央行 | [https://www.bis.org/doclist/wppubls.rss](https://www.bis.org/doclist/wppubls.rss) |
 
 ## 週報索引
 
+- [2026-W34](/radar/practitioner/2026-W34) — 2026-08-17 ~ 2026-08-23
 - [2026-W29](/radar/practitioner/2026-W29) — 2026-07-13 ~ 2026-07-19
