@@ -2,13 +2,14 @@
 
 > **收錄**：限价订单簿(LOB)建模、订单流信号、做市策略、高频套利、微观流动性与价格形成机制
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：36 篇（33 篇成解構頁，其餘為 registry）
+> **本 zone 現有**：37 篇（34 篇成解構頁，其餘為 registry）
 
 ## 解構清單
 
 | 方法 | 評級 | 來源 | TL;DR |
 |---|---|---|---|
 | [Autocorrelation Map](autocorrelation-map) | ⚡ | [arXiv](https://arxiv.org/abs/2607.09426) | 发现加密货币期货在整点/刻钟存在算法交易引发的量价脉冲，刻钟开盘订单失衡可预测4-12小时收益。 |
+| [M3](art-420) | ⚡ | M3 | 提出M3微观市场生成模型，用开盘价锚定与向量量化耦合订单流与盘口，实现长轨迹反事实推演。 |
 | [波动率归一化Tick Size](tick-size) | ⚡ | 波动率归一化Tick Size | 揭示2008年后短周期趋势策略失效源于HFT做市商在细Tick稀疏订单簿中的定向撤单，切断趋势自 |
 | [影响中性测度变换](art-395) | ⚡ | 影响中性测度变换 | 本文在Kyle-Back模型中引入动态合规风险，通过影响中性测度变换将随机博弈退化为确定性最优控 |
 | [MDS (Metric Dependence Screening)](mds-metric-dependence-screening) | ⚡ | MDS (Metric Dependence Screening) | 提出基于Fréchet变差的度量依赖筛选框架，利用日内波动曲线与日度收益构建非欧度量空间，实现高 |

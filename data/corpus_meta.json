@@ -8380,6 +8380,26 @@
     }
   },
   {
+    "pos": 420,
+    "msgid": "2247494417",
+    "title": "300 亿逐笔订单训练出的微观市场生成模型",
+    "zone": "market-microstructure",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "art-420",
+    "dup_of": null,
+    "framework": "M3",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "生成式大模型",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
     "pos": 100000,
     "msgid": "arxiv_2607.14373",
     "title": "A Noise-Robust Elicit-to-Optimize Framework for Distortion Riskmetrics via Inverse Reinforcement Learning",
