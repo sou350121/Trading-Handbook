@@ -2,7 +2,7 @@
 
 > **收錄**：DRL/MARL在选股、调仓、做市、执行与对冲中的应用，涵盖PPO/SAC/分布RL、奖励函数设计与环境模拟
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：46 篇（44 篇成解構頁，其餘為 registry）
+> **本 zone 現有**：47 篇（44 篇成解構頁，其餘為 registry）
 
 ## 解構清單
 
@@ -52,6 +52,7 @@
 | [强化学习在配对交易中的应用与优化](art-32) | 🔧 | — | 将强化学习引入加密货币配对交易，通过自定义观察/行动空间与多部分奖励塑形，优化开平仓时机与仓位比 |
 | [JAX-LOB](jax-lob) | 🔧 | [arXiv](https://arxiv.org/abs/2308.13289) | 提出基于JAX的GPU加速LOB模拟器JAX-LOB，集成GYMNAX环境，实现RL交易训练5- |
 | [FinRL-Meta](finrl-meta) | 🔧 | FinRL-Meta | 介绍FinRL-Meta开源框架，通过DataOps自动化数据管理与Gym环境构建，支持DRL代 |
+| 弱形式近优控制 | 📖 | Mathematical Finance [arXiv](https://arxiv.org/abs/2506.11778) | 研究部分观测下随机线性二次控制问题，通过限制控制域与Girsanov变换结合条件Novikov条 |
 | 从做市到资管：金融强化学习落地全景 | 📖 | — | 基于PRISMA综述167篇文献，构建合成数据集元分析金融RL绩效，揭示做市技术溢出与工程实现优 |
 | gym-anytrading | 📖 | gym-anytrading | 本文探讨强化学习在量化交易中的应用，对比DQN/PPO/A2C算法，分析技术指标输入、归一化方法 |
 

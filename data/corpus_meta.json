@@ -8798,5 +8798,25 @@
       "alpha": "组合执行优化",
       "autonomy": "人机协同可解释"
     }
+  },
+  {
+    "pos": 200000,
+    "msgid": "oa_10_1111_mafi_70058",
+    "title": "Near Optimal Controls for Partially Observed Stochastic Linear Quadratic Problems",
+    "zone": "reinforcement-learning",
+    "rating": "📖",
+    "page_worthy": false,
+    "slug": "near-optimal-controls-for-partially-observed-stochastic",
+    "dup_of": null,
+    "framework": "弱形式近优控制",
+    "venue": "Mathematical Finance",
+    "arxiv": "2506.11778",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "强化学习",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
   }
 ]
