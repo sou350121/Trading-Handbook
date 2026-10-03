@@ -8818,5 +8818,25 @@
       "alpha": "组合执行优化",
       "autonomy": "全自动黑盒"
     }
+  },
+  {
+    "pos": 200000,
+    "msgid": "oa_10_1080_14697688_2026_2729193",
+    "title": "A new input convex neural network with application to options pricing",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "a-new-input-convex-neural-network-with",
+    "dup_of": null,
+    "framework": "Scrambling Convex Network",
+    "venue": "Quantitative Finance",
+    "arxiv": "2411.12854",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "监督回归",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
   }
 ]

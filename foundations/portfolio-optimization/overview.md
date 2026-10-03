@@ -2,7 +2,7 @@
 
 > **收錄**：均值方差/风险平价/Black-Litterman、稀疏优化、执行算法(VWAP/冲击成本)、多资产轮动与战术配置
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：40 篇（37 篇成解構頁，其餘為 registry）
+> **本 zone 現有**：41 篇（38 篇成解構頁，其餘為 registry）
 
 ## 解構清單
 
@@ -14,6 +14,7 @@
 | [DeePM](deepm) | ⚡ | DeePM | 提出DeePM框架，通过定向延迟、宏观图谱先验与SoftMin-EVaR目标，实现端到端宏观资产 |
 | [RTS-PnO](rts-pno) | ⚡ | KDD25 | 提出RTS-PnO框架，通过端到端PnO范式与自适应不确定性约束对齐预测与决策目标，实盘降低8. |
 | [BPQP](bpqp) | ⚡ | NeurIPS24 | 提出BPQP框架，将可微分凸优化的反向传播重构为二次规划问题，实现前后向分离，大幅提升端到端投资 |
+| [Scrambling Convex Network](a-new-input-convex-neural-network-with) | 🔧 | Quantitative Finance [arXiv](https://arxiv.org/abs/2411.12854) | 提出一种无需权重非负约束的输入凸神经网络，用于高效定价具有凸收益的期权。 |
 | [谱去噪相关性网络](art-100011) | 🔧 | [arXiv](https://arxiv.org/abs/2607.10297) | 基于随机矩阵理论对资产相关性矩阵进行谱去噪，提取核心-边缘网络结构，并据此构建外围资产组合以提升 |
 | [AGCA](agca) | 🔧 | [arXiv](https://arxiv.org/abs/2607.13112) | 提出锚定测地线成分分析(AGCA)，将多元极值降维转化为特征分解，高效模拟组合尾部风险与VaR。 |
 | [SciPhyRL](sciphyrl) | 🔧 | [arXiv](https://arxiv.org/abs/2607.15195) | 提出基于SciPhyRL的连续时间组合优化框架，通过PINN离线求解路径HJB方程，结合微观结构 |
