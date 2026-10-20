@@ -4,7 +4,7 @@
 
 - [时序预测基础](time-series-forecasting/overview.md) — 102 篇
 - [图网络与关系建模](graph-networks/overview.md) — 27 篇
-- [强化学习与策略搜索](reinforcement-learning/overview.md) — 47 篇
+- [强化学习与策略搜索](reinforcement-learning/overview.md) — 48 篇
 - [大模型与智能体](llm-agentic/overview.md) — 65 篇
 - [微观结构与高频](market-microstructure/overview.md) — 42 篇
 - [因子挖掘与特征工程](factor-mining/overview.md) — 69 篇

@@ -8860,6 +8860,26 @@
     }
   },
   {
+    "pos": 100005,
+    "msgid": "arxiv_2610.22522",
+    "title": "Agentic AI in Automated Markets",
+    "zone": "reinforcement-learning",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "agentic-rl-dqn-reinforce-shap",
+    "dup_of": null,
+    "framework": "Agentic RL 三原型框架（DQN+REINFORCE+SHAP）",
+    "venue": null,
+    "arxiv": "2610.22522",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "高频日内",
+      "paradigm": "强化学习",
+      "alpha": "多智能体博弈",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
     "pos": 100006,
     "msgid": "arxiv_2607.12248",
     "title": "When Directional Accuracy Lies: A Base-Rate-Honest Benchmark for LoRA-Adapted TimesFM on Equity Forecasting",
