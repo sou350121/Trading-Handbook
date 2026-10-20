@@ -2,12 +2,13 @@
 
 > **收錄**：面向价格/收益率/波动率的序列建模，涵盖Transformer变体、RNN/LSTM、MLP/Mixer、状态空间模型及频率自适应架构
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：101 篇（92 篇成解構頁，其餘為 registry）
+> **本 zone 現有**：102 篇（93 篇成解構頁，其餘為 registry）
 
 ## 解構清單
 
 | 方法 | 評級 | 來源 | TL;DR |
 |---|---|---|---|
+| Neural Filter Estimator (NFE) | ⚡ | ICAIF26 [arXiv](https://arxiv.org/abs/2610.25802) | 用摊销神经滤波一次前向输出横截面各残差价差的隐状态后验，并把校准后的不确定性直接用于统计套利下单 |
 | [FinPFN](finpfn.md) | ⚡ | Journal of Financial Markets | 提出FinPFN框架，利用真实金融数据训练Transformer元学习模型，动态适应市场风格切换 |
 | [RFF+岭回归](rff.md) | ⚡ | RFF+岭回归 | 颠覆奥卡姆剃刀，证明正则化下高维复杂模型在收益预测与择时夏普率上严格优于简单模型。 |
 | [FinCast](fincast.md) | ⚡ | CIKM 2025 | 提出首个十亿参数金融时序基础模型FinCast，结合稀疏MoE、频率嵌入与PQ-loss，实现跨 |
