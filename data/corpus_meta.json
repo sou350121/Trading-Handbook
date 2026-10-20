@@ -8761,6 +8761,26 @@
   },
   {
     "pos": 100004,
+    "msgid": "arxiv_2610.25671",
+    "title": "Arbitrage-Free Implied Volatility Surface Reconstruction via Additive Martingales",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "addmart",
+    "dup_of": null,
+    "framework": "AddMart",
+    "venue": null,
+    "arxiv": "2610.25671",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "监督回归",
+      "alpha": "风险择时",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 100004,
     "msgid": "arxiv_2607.08346",
     "title": "Grounded Event Extraction from SEC 8-K Filings with a Fine-Grained Taxonomy",
     "zone": "llm-agentic",

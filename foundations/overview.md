@@ -2,7 +2,7 @@
 
 按方法族組織的解構區。
 
-- [时序预测基础](time-series-forecasting/overview.md) — 102 篇
+- [时序预测基础](time-series-forecasting/overview.md) — 103 篇
 - [图网络与关系建模](graph-networks/overview.md) — 27 篇
 - [强化学习与策略搜索](reinforcement-learning/overview.md) — 48 篇
 - [大模型与智能体](llm-agentic/overview.md) — 65 篇
