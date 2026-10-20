@@ -5,7 +5,7 @@ Caches data/raw/<msgid>_<itemidx>.json. Resumable: skips already-fetched.
 Usage:
     python3 fetch_article.py [--limit N] [--start POS] [--only msgid] [--workers W]
 """
-import json, time, urllib.request, urllib.parse, pathlib, argparse, datetime, sys, re, html, threading
+import json, time, urllib.request, urllib.parse, pathlib, argparse, datetime, sys, re, html, threading, hashlib
 from html.parser import HTMLParser
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
@@ -48,7 +48,8 @@ def extract(htmltext):
          or re.search(r'<meta property="og:title" content="(.*?)"', htmltext))
     title = html.unescape(re.sub('<[^>]+>', '', m.group(1)).strip()) if m else ""
     dm = re.search(r'var\s+ct\s*=\s*[\'"](\d+)[\'"]', htmltext)
-    date = datetime.datetime.utcfromtimestamp(int(dm.group(1))).strftime("%Y-%m-%d") if dm else ""
+    # Album dates are publisher-local calendar days, not UTC calendar days.
+    date = datetime.datetime.fromtimestamp(int(dm.group(1)), datetime.timezone(datetime.timedelta(hours=8))).strftime("%Y-%m-%d") if dm else ""
     p = ContentExtractor(); p.feed(htmltext)
     body = html.unescape("".join(p.parts))
     body = re.sub(r'\n[ \t]+', '\n', body); body = re.sub(r'\n{3,}', '\n\n', body)
@@ -61,23 +62,34 @@ def fetch(article_url, retries=2):
     # the existing public proxy remains a bounded fallback, never a success by size.
     enc = urllib.parse.quote(article_url, safe="")
     urls = [article_url] + [f"https://api.allorigins.win/raw?url={enc}"] * retries
+    reasons = []
     for i, url in enumerate(urls):
+        label = 'original' if i == 0 else 'proxy'
         try:
             req = urllib.request.Request(url, headers={"User-Agent": UA})
             with urllib.request.urlopen(req, timeout=25) as response:
                 data = response.read(4_000_000).decode("utf-8", errors="replace")
+                effective_path = urllib.parse.urlsplit(response.geturl()).path
             title, date, body = extract(data)
-            if "js_content" in data and title and date and len(body) >= 300:
+            challenge = any(x in effective_path.lower() or x in data.lower()
+                            for x in ('appmsgcaptcha', 'wappoc_appmsgcaptcha'))
+            if not challenge and "js_content" in data and title and date and len(body) >= 300:
                 return data
+            reason = 'challenge' if challenge else 'article_structure_missing'
+            reasons.append(label + '_' + reason)
+        except urllib.error.HTTPError as error:
+            reasons.append(label + '_http_' + str(error.code))
         except (urllib.error.URLError, TimeoutError, OSError):
-            pass
+            reasons.append(label + '_network_error')
         if i + 1 < len(urls):
             time.sleep(2)
-    raise RuntimeError("article_body_unavailable")
+    # No URLs, challenge tokens or response bodies in operational diagnostics.
+    raise RuntimeError('article_body_unavailable:' + ','.join(dict.fromkeys(reasons)))
 
 
 _lock = threading.Lock()
 _stats = {"ok": 0, "skip": 0, "fail": 0}
+_failures = []
 
 
 def process_one(a):
@@ -99,7 +111,10 @@ def process_one(a):
         rec = {"pos": a["pos"], "msgid": a["msgid"], "itemidx": a["itemidx"],
                "title": title or a["title"], "wechat_title": a["title"],
                "date": date or a["date"], "url": a["url"],
-               "chars": len(body), "body": body}
+               "chars": len(body), "body": body,
+               "source_kind": "fulltext_quantml",
+               "source_html_sha256": hashlib.sha256(raw.encode('utf-8')).hexdigest(),
+               "fetched_at": datetime.datetime.now(datetime.timezone.utc).isoformat()}
         out.write_text(json.dumps(rec, ensure_ascii=False, indent=2))
         with _lock:
             _stats["ok"] += 1
@@ -107,6 +122,8 @@ def process_one(a):
     except Exception as e:
         with _lock:
             _stats["fail"] += 1
+            _failures.append({'msgid': a['msgid'], 'itemidx': a['itemidx'],
+                              'pos': a['pos'], 'reason': str(e) if isinstance(e, (RuntimeError, ValueError)) else type(e).__name__})
             print(f"  FAIL pos={a['pos']:>3} {a['title'][:30]} :: {e}", file=sys.stderr, flush=True)
     time.sleep(1.5)
 
@@ -131,6 +148,11 @@ def main():
     print(f"start: {len(todo)} articles, workers={args.workers}", flush=True)
     with ThreadPoolExecutor(max_workers=args.workers) as ex:
         list(as_completed(ex.submit(process_one, a) for a in todo))
+    from _health import atomic
+    atomic(ROOT / 'data/health/quantml-fetch.json', {
+        'checked_at': datetime.datetime.now(datetime.timezone.utc).isoformat(),
+        'status': 'failed' if _stats['fail'] else 'success',
+        'stats': dict(_stats), 'failures': sorted(_failures, key=lambda item: item['pos'])})
     print(f"\nDONE ok={_stats['ok']} skip={_stats['skip']} fail={_stats['fail']} | raw dir: {RAW}", flush=True)
 
 

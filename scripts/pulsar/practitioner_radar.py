@@ -30,6 +30,7 @@ import sys
 import time
 import urllib.error
 import urllib.request
+import urllib.parse
 import xml.etree.ElementTree as ET
 
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
@@ -70,6 +71,7 @@ CLASSIFY_SYSTEM = (
     "你是量化交易手册的策展编辑。只根据给定的标题与来源，判断这条博客/机构文章是否是"
     "真正的量化交易/投资研究内容（不是产品营销/招聘/公司公告/纯新闻）。"
     "然后把它归入下面某一个方法族 zone，或 meta（行业动态/职业/工具，不属于具体方法族）。"
+    "仅做题名层的主题判断和导览；不得补充题名未支持的发现、数字或结论，不得声称已读全文或已听访谈。"
     "只输出一个 JSON 对象，不要解释。"
 )
 
@@ -185,13 +187,34 @@ def fetch_feed(feed, days):
 
     Never raises: per-feed failures are caught and logged.
     """
+    if feed['id'] == 'nber':
+        try:
+            import _nber
+            items, proof = _nber.fetch(feed, days)
+            _health.atomic(DATA / 'health/nber-provenance.json', proof)
+            return items, 'ok'
+        except Exception as error:
+            print('  NBER-FAIL ' + type(error).__name__, file=sys.stderr)
+            return [], 'official-metadata-verification-failed'
     url = feed["url"]
     try:
         req = urllib.request.Request(
             url, headers={"User-Agent": UA,
                           "Accept": "application/rss+xml,application/atom+xml,application/xml,text/xml,*/*"})
         with urllib.request.urlopen(req, timeout=20) as r:
-            raw = r.read()
+            raw = r.read(8_000_001)
+            content_type = r.headers.get('Content-Type', '').lower()
+            effective = urllib.parse.urlsplit(r.geturl())
+            provenance = {'source_url': url, 'effective_host': effective.hostname,
+                          'effective_path': effective.path, 'http_status': r.status,
+                          'retrieved_at': dt.datetime.now(dt.timezone.utc).isoformat(),
+                          'sha256': hashlib.sha256(raw).hexdigest(), 'bytes': len(raw)}
+        if len(raw) > 8_000_000:
+            return [], 'feed-response-too-large'
+        if 'text/html' in content_type:
+            status = 'redirected-to-html' if effective.hostname != urllib.parse.urlsplit(url).hostname else 'html-not-feed'
+            _health.atomic(DATA / 'health' / ('feed-' + feed['id'] + '.json'), {**provenance, 'status': status})
+            return [], status
     except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, OSError) as e:
         print(f"  FEED-FAIL {feed['id']:<18} {type(e).__name__}: {e}", file=sys.stderr)
         return [], "fetch-fail"
@@ -203,6 +226,11 @@ def fetch_feed(feed, days):
 
     if strip_ns(root.tag).lower() not in {"rss", "rdf", "feed"}:
         return [], "invalid-feed"
+    if feed['id'] == 'validea-excess-returns':
+        channel = root.find('channel')
+        if channel is None or clean_title(channel.findtext('title', '')) != 'Excess Returns':
+            return [], 'publisher-identity-mismatch'
+    _health.atomic(DATA / 'health' / ('feed-' + feed['id'] + '.json'), {**provenance, 'status': 'parsed'})
     cutoff = dt.date.today() - dt.timedelta(days=days)
     items = []
     # iterate any <item> (RSS2 / RSS1-RDF) and <entry> (Atom) anywhere in tree
@@ -213,9 +241,11 @@ def fetch_feed(feed, days):
         title_el = _find_child(entry, {"title"})
         title = clean_title(_text(title_el))
         if not title:
+            _health.fail(feed['id'], 'article_title_missing')
             continue
         link = extract_link(entry)
         if not link:
+            _health.fail(feed['id'], 'article_link_missing')
             continue
         # date fields: pubDate / dc:date / published / updated / date
         date_el = _find_child(entry, {"pubdate", "date", "published", "updated"})
@@ -249,7 +279,7 @@ def _alarm_raise(_s, _f):
 def build_classify_prompt(item):
     zlines = "\n".join(f"  - {slug} ({name}): {scope}" for slug, name, scope in ZONES)
     return (
-        f"文章标题: {item['title']}\n"
+        f"公开条目标题: {item['title']}\n"
         f"来源博客/机构: {item['feed_name']}\n\n"
         f"可选 zone（方法族）:\n{zlines}\n"
         f"  - meta (行业/职业/工具): 行业动态、职业发展、工具/数据平台、访谈，不属于具体方法族\n\n"
@@ -324,15 +354,30 @@ def md_escape_cell(s):
     return (s or "").replace("|", "\\|").replace("\n", " ").strip()
 
 
-def render_weekly(week_key, items, feeds):
+def render_weekly(week_key, items, feeds, failed_feeds=()):
     """items: list of enriched dicts (relevant only). Deterministic ordering."""
     mon, sun = week_range(week_key)
     lines = []
     lines.append(f"# 实践者雷达 · {week_key}")
     lines.append("")
+
+    if failed_feeds:
+        names = [f['name'] for f in feeds if f['id'] in failed_feeds]
+        lines.append('> **來源覆蓋未完成**：' + '、'.join(names) +
+                     ' 本次未完成取得／核驗／分類。下列僅保留已核驗項目；'
+                     '失敗來源的既有收錄不代表本次已更新，缺項不代表沒有新研究。')
+        lines.append('')
     lines.append(f"> 掃描批次 {week_key}（收錄日期以各項原文為準，非發布周統計） · "
                  "量化从业者博客/机构精选 · 仅标题+链接+我们的一句话解读（不转载正文）")
     lines.append("")
+    if any(it['feed_id'] == 'nber' for it in items):
+        lines.append('NBER 題名與發布日期取自[官方結構化元資料](https://www.nber.org/research/data/nber-working-papers-and-chapters-metadata)，'
+                     '並核對官方日期表與現行 RSS；元資料收錄不代表已讀論文全文。')
+        lines.append('')
+    if any(it['feed_id'] == 'validea-excess-returns' for it in items):
+        lines.append('Validea / Excess Returns 為主站連結的官方訪談節目；只提供題名層主題導覽，'
+                     '未聽錄音、未讀逐字稿，不代表已核驗訪談結論，也不代表取回原 Blog。')
+        lines.append('')
 
     # per-source counts (deterministic: by feed order in config, then id)
     fid_order = {f["id"]: i for i, f in enumerate(feeds)}
@@ -392,7 +437,7 @@ def render_weekly(week_key, items, feeds):
 
     lines.append("---")
     lines.append("")
-    lines.append("*版权说明：本页仅收录公开 RSS 的标题与链接，加上本手册的一句话解读；"
+    lines.append("*版权说明：本页仅收录公开 RSS／机构官方元资料的标题与链接，加上本手册的一句话解读；"
                  "正文版权归原作者。索引见 [overview](/radar/practitioner/overview)。*")
     lines.append("")
     return "\n".join(lines)
@@ -407,7 +452,7 @@ def render_overview(feeds, weeks_index):
     lines = []
     lines.append("# 实践者雷达")
     lines.append("")
-    lines.append("每週聚合一批量化從業者博客與機構研究的 RSS，DeepSeek 按十大方法族 zone 分類，"
+    lines.append("每週聚合一批量化從業者博客與機構研究的 RSS／官方元資料，DeepSeek 按十大方法族 zone 分類，"
                  "產出一頁分類週報。**只放標題、鏈接與我們的一句話解讀**，從不轉載正文（版權歸原作者）。"
                  "數據源以 `scripts/pulsar/radar_feeds.json` 配置，可增減。")
     lines.append("")
@@ -417,7 +462,8 @@ def render_overview(feeds, weeks_index):
     lines.append("|---|---|---|")
     for f in feeds:
         w = {"core": "核心", "institutional": "機構/央行"}.get(f.get("weight"), "扩展")
-        lines.append(f"| {md_escape_cell(f['name'])} | {w} | [{md_escape_cell(f['url'])}]({f['url']}) |")
+        origin = ' · [官方入口](' + f['publisher_page'] + ')' if f.get('publisher_page') else ''
+        lines.append(f"| {md_escape_cell(f['name'])} | {w} | [{md_escape_cell(f['url'])}]({f['url']}){origin} |")
     lines.append("")
     lines.append("## 週報索引")
     lines.append("")
@@ -439,6 +485,8 @@ def main():
     ap.add_argument("--week", default=None, help="ISO week key override, e.g. 2026-W29")
     ap.add_argument("--dry-run", action="store_true", help="fetch+classify but don't write pages")
     ap.add_argument("--no-llm", action="store_true", help="skip qwen (only reuse cached state)")
+    ap.add_argument('--allow-verified-partial', action='store_true',
+                    help='retain complete independent feeds; remain partial/nonzero on gaps')
     args = ap.parse_args()
 
     feeds = json.loads(FEEDS_FILE.read_text())
@@ -448,17 +496,24 @@ def main():
     # 1) fetch all feeds
     all_items = []
     feed_status = {}
+    failed_feeds = set()
     for f in feeds:
+        errors_before = len(_health.ERRORS)
         got, status = fetch_feed(f, args.days)
+        if len(_health.ERRORS) != errors_before:
+            status = 'entry-verification-failed'
         feed_status[f["id"]] = (status, len(got))
         if status != "ok":
             _health.fail(f["id"], status)
+            failed_feeds.add(f['id'])
+            got = []
         print(f"  {status:<10} {f['id']:<18} raw={len(got)}")
         all_items.extend(got)
     print(f"Fetched {len(all_items)} raw items across {len(feeds)} feeds")
 
     # 2) dedupe against global seen-set (link-hash)
     seen = set(load_json(SEEN_FILE, []))
+    seen_before = set(seen)
     state = load_json(STATE_FILE, {})  # {week_key: [enriched items]}
     week_state = state.get(week_key, [])
     already_classified = {it["link"] for it in week_state}
@@ -485,6 +540,7 @@ def main():
         for it in fresh:
             if used >= args.cap:
                 print(f"  cap {args.cap} reached — deferring {len(fresh) - used} items to next run")
+                failed_feeds.update(item['feed_id'] for item in fresh[used:])
                 break
             try:
                 used += 1
@@ -499,12 +555,22 @@ def main():
                 else:
                     print(f"     [ irrelevant, dropped   ] {it['feed_name'][:14]:<14} | {it['title'][:40]}")
             except Exception as e:
-                _health.fail("practitioner", "classification_failed")
+                failed_feeds.add(it['feed_id'])
+                _health.fail(it['feed_id'], "classification_failed")
                 print(f"  CLASSIFY-FAIL {it['feed_name'][:14]} :: {e}", file=sys.stderr)
         print(f"DeepSeek calls used: {used}")
 
     if used < len(fresh):
         _health.fail("practitioner", "classification_deferred")
+        failed_feeds.update(item['feed_id'] for item in fresh[used:])
+
+    # A feed is one transaction: one failed/deferred item rolls back ALL its new
+    # classifications, including irrelevant seen IDs. Other complete feeds survive
+    # only under the explicit partial publication authorization.
+    classified = [it for it in classified if it['feed_id'] not in failed_feeds]
+    for it in fresh:
+        if it['feed_id'] in failed_feeds and link_hash(it['link']) not in seen_before:
+            seen.discard(link_hash(it['link']))
 
     # 4) merge into week state (relevant items only), dedupe by link, deterministic
     merged = {it["link"]: it for it in week_state}
@@ -521,13 +587,16 @@ def main():
         print("--dry-run: not writing pages / state")
         return
 
+    if len(failed_feeds) == len(feeds):
+        return  # No complete independent source exists: wrapper rolls back everything.
+
     # 5) persist seen + state
     save_json(SEEN_FILE, sorted(seen))
     save_json(STATE_FILE, state)
 
     # 6) render weekly page (idempotent — full regenerate from week_items)
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    page = render_weekly(week_key, week_items, feeds)
+    page = render_weekly(week_key, week_items, feeds, failed_feeds)
     (OUT_DIR / f"{week_key}.md").write_text(page)
     print(f"Wrote {OUT_DIR / (week_key + '.md')} ({len(page)} bytes)")
 
@@ -538,6 +607,8 @@ def main():
     overview = render_overview(feeds, week_files)
     (OUT_DIR / "overview.md").write_text(overview)
     print(f"Wrote {OUT_DIR / 'overview.md'} (index: {len(week_files)} weeks)")
+    if args.allow_verified_partial and failed_feeds:
+        return 'verified_partial_outputs'
 
 
 if __name__ == "__main__":

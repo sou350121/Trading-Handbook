@@ -142,7 +142,8 @@ def process(job, publish=False, days=8, sources_only=False, allow_verified_parti
         for name, args in [
             ('arxiv_radar.py', ['--days', str(days), '--max-classify', '300']),
             ('journal_radar.py', ['--days', str(days + 1)]),
-            ('practitioner_radar.py', ['--days', str(days), '--cap', '300']),
+            ('practitioner_radar.py', ['--days', str(days), '--cap', '300'] +
+             (['--allow-verified-partial'] if allow_verified_partial else [])),
             ('gh_quant_issues.py', [])]:
             try:
                 step(name, *args, seconds=2400)

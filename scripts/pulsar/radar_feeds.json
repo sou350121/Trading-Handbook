@@ -66,6 +66,15 @@
     "weight": "extra"
   },
   {
+    "id": "validea-excess-returns",
+    "name": "Validea / Excess Returns（官方訪談）",
+    "url": "https://anchor.fm/s/9a1dfac/podcast/rss",
+    "weight": "extra",
+    "medium": "podcast",
+    "publisher_page": "https://www.validea.com/excess-returns-podcast",
+    "relationship": "supplement; original Validea Blog remains monitored"
+  },
+  {
     "id": "wilmott",
     "name": "Wilmott",
     "url": "https://wilmott.com/feed/",

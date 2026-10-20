@@ -29,11 +29,15 @@ def run(component, main):
             out += list((ROOT / 'data').glob(pattern))
         return out
     before = {p: p.read_bytes() for p in paths()}
+    verified_partial = False
     try:
-        main()
+        result = main()
+        # Only an explicitly opted-in source collector may retain its independently
+        # verified outputs. An exception never gets this completion marker.
+        verified_partial = component == 'practitioner' and result == 'verified_partial_outputs'
     except Exception as exc:
         fail(component, 'exception_' + type(exc).__name__)
-    if ERRORS:
+    if ERRORS and not verified_partial:
         for path in set(paths()) | set(before):
             if path in before:
                 path.write_bytes(before[path])
@@ -41,7 +45,7 @@ def run(component, main):
                 path.unlink()  # Only new files created by this failed transaction.
     receipt = {'component': component, 'started_at': started,
                'finished_at': dt.datetime.now(dt.timezone.utc).isoformat(),
-               'status': 'failed' if ERRORS else 'success', 'errors': list(ERRORS)}
+               'status': ('partial' if verified_partial else 'failed') if ERRORS else 'success', 'errors': list(ERRORS)}
     atomic(ROOT / 'data/health' / (component + '.json'), receipt)
     print(json.dumps(receipt, ensure_ascii=False))
-    return 1 if ERRORS else 0
+    return (2 if verified_partial else 1) if ERRORS else 0

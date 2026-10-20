@@ -52,6 +52,12 @@ def validate_page(text, raw, d):
         # URLs, math exponents, reference years and ordered heading markers are
         # not empirical measurements. Percentages and decimals remain checked.
         line = re.sub(r'https?://[^\s)]+|\$[^$]+\$|\b(?:19|20)\d{2}(?:[-./]\d{1,2}){0,2}\b', '', line)
+        # A reference phrase plus an explicit section marker is navigation, not a
+        # measurement. Keep bare decimals, percentages and metric-like uses gated.
+        line = re.sub(r'(?:參見|参见|詳見|详见|參照|参照|參考|参考|見|见|照|\bsee|\bcf\.?|\bsection)\s*§\s*[1-8](?:\.\d+)+(?![\d.%])', '', line, flags=re.I)
+        # The frozen template's 7.1 subheading is also sometimes rendered bold.
+        # Strip its section number only; any measurements later on stay checked.
+        line = re.sub(r'^\s*\*\*7\.1(?=\s+可(?:證偽預測|证伪预测))', '**', line)
         for token in NUMBER.findall(line):
             if '.' not in token and '%' not in token:
                 continue
