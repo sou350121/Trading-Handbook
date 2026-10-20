@@ -16,7 +16,7 @@
 | [MetaTrader](metatrader.md) | ⚡ | MetaTrader | 提出MetaTrader双层强化学习框架，通过数据变换与保守TD目标解决金融非平稳性下的OOD泛 |
 | [MacroHFT](macrohft.md) | ⚡ | KDD'24 | 提出MacroHFT框架，通过市场分解训练子代理，并用记忆增强超代理混合决策，提升加密货币高频交 |
 | [Reinforcement Learning for Exe](reinforcement-learning-for-execution-under-dynamic-fees-in-a-closed-loop-dex-simulator.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.10960) | 构建闭环DEX模拟器，用DQN在动态费率环境下优化交易执行，相比调优启发式策略显著降低实现缺口。 |
-| Agentic RL 三原型框架（DQN+REINFORCE+SHAP） | 🔧 | [arXiv](https://arxiv.org/abs/2610.22522) | 用DQN与REINFORCE训练套利者、操纵者、跟风者三类交易者原型，在加密小时数据上比较其对压 |
+| [Agentic RL 三原型框架（DQN+REINFORCE+SHAP）](agentic-rl-dqn-reinforce-shap.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.22522) | 用DQN与REINFORCE训练套利者、操纵者、跟风者三类交易者原型，在加密小时数据上比较其对压 |
 | [NeuralChaos](neuralchaos.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.14361) | 提出NeuralChaos神经算子，用有限布朗运动采样逼近可预测平方可积过程，理论证明最优逼近率 |
 | [Elicit-to-Optimize Framework](elicit-to-optimize-framework.md) | 🔧 | IJOC [arXiv](https://arxiv.org/abs/2607.14373) | 提出噪声鲁棒的偏好推断与策略优化框架，用贝叶斯IRL从噪声决策中提取风险偏好，结合分位数PPO优 |
 | [HRT](hrt.md) | 🔧 | HRT | 提出HRT双层强化学习框架，上层PPO做离散方向决策，下层TD3结合硬约束层做连续仓位微调，解决 |

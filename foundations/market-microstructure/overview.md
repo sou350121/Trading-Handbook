@@ -25,7 +25,7 @@
 | [JF | 消失的指数效应](vanishing-index-effect.md) | ⚡ | JF | 本文实证发现S&P 500指数纳入/剔除的异常回报近十年趋零，主因是指数迁移抵消需求冲击及市场流 |
 | [EDGE](edge.md) | ⚡ | JFE | 提出基于日频OHLC的EDGE估计量，通过GMM动态组合矩条件，解决传统低频价差估计的偏差与高方 |
 | [Stochastic Optimal Control with Reputation Gates](stochastic-optimal-control-with-reputation-gates.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.11328) | 构建含声誉反馈的OTC做市随机控制模型，揭示报价策略在声誉积累与变现间的动态权衡及双稳态现象。 |
-| OrderFlowDiT | 🔧 | [arXiv](https://arxiv.org/abs/2610.22727) | 用条件扩散Transformer生成未来五分钟买卖盘量价场，并加无偏非平衡最优传输辅助损失，配合 |
+| [OrderFlowDiT](orderflowdit.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.22727) | 用条件扩散Transformer生成未来五分钟买卖盘量价场，并加无偏非平衡最优传输辅助损失，配合 |
 | [Phase-diagram ABM with null/artefact discipline](phase-diagram-abm-with-null-artefact-discipline.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.08907) | 用相图法验证订单簿ABM中羊群行为引发的流动性枯竭是真实相变，并分解其反射机制。 |
 | [Detecting unusual trading patt](detecting-unusual-trading-patterns-on-cryptocurrency-exchanges-by-means-of-complexity-measures.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.13916) | 本文基于高频交易数据，利用多重分形、近似熵等复杂度指标构建诊断框架，有效识别中心化交易所的刷量与 |
 | [L2 Liquidity-State Transition](l2-liquidity-state-transition.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.09230) | 在加密期货事件窗口内，预事件L2流动性状态是预测后事件流动性的首要信号，订单流仅具增量价值。 |
