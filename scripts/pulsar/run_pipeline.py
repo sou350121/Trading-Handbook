@@ -123,11 +123,13 @@ def process(job, publish=False, days=8, sources_only=False, allow_verified_parti
             execute(['git', 'pull', '--rebase', '--quiet'])
     step = lambda name, *args, seconds=900: execute([PYTHON, 'scripts/pulsar/' + name, *args], seconds)
     if job == 'daily':
-        step('enumerate_album.py')
-        for name, args, seconds in [('fetch_article.py', ['--workers', '1'], 1200),
-                                    ('distill_pass_a.py', ['--workers', '1'], 1800),
-                                    ('fix_collisions.py', [], 300),
-                                    ('distill_pass_b.py', ['--workers', '1'], 1800)]:
+        # Keep the normal 1200s cron envelope. Failed legacy sources must not
+        # consume the whole run before writing/audit/publication can start.
+        step('enumerate_album.py', seconds=60)
+        for name, args, seconds in [('fetch_article.py', ['--workers', '1', '--budget-seconds', '180'], 210),
+                                    ('distill_pass_a.py', ['--workers', '1'], 120),
+                                    ('fix_collisions.py', [], 30),
+                                    ('distill_pass_b.py', ['--workers', '1'], 600)]:
             try:
                 step(name, *args, seconds=seconds)
             except RuntimeError:

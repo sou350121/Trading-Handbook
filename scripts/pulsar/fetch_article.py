@@ -5,7 +5,7 @@ Caches data/raw/<msgid>_<itemidx>.json. Resumable: skips already-fetched.
 Usage:
     python3 fetch_article.py [--limit N] [--start POS] [--only msgid] [--workers W]
 """
-import json, time, urllib.request, urllib.parse, pathlib, argparse, datetime, sys, re, html, threading, hashlib
+import json, time, urllib.request, urllib.parse, pathlib, argparse, datetime, sys, re, html, threading, hashlib, signal
 from html.parser import HTMLParser
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
@@ -90,6 +90,19 @@ def fetch(article_url, retries=2):
 _lock = threading.Lock()
 _stats = {"ok": 0, "skip": 0, "fail": 0}
 _failures = []
+_deferred = []
+
+
+class BatchBudgetExpired(BaseException):
+    """Do not turn the batch deadline into an ordinary item retry."""
+
+
+def cached(a):
+    out = RAW / f"{a['msgid']}_{a['itemidx']}.json"
+    try:
+        return len(json.loads(out.read_text()).get('body', '')) >= 300
+    except (OSError, ValueError):
+        return False
 
 
 def process_one(a):
@@ -115,7 +128,8 @@ def process_one(a):
                "source_kind": "fulltext_quantml",
                "source_html_sha256": hashlib.sha256(raw.encode('utf-8')).hexdigest(),
                "fetched_at": datetime.datetime.now(datetime.timezone.utc).isoformat()}
-        out.write_text(json.dumps(rec, ensure_ascii=False, indent=2))
+        from _health import atomic
+        atomic(out, rec)
         with _lock:
             _stats["ok"] += 1
             print(f"  OK pos={a['pos']:>3} {rec['chars']:>5}c  {a['title'][:34]}", flush=True)
@@ -128,6 +142,60 @@ def process_one(a):
     time.sleep(1.5)
 
 
+def bounded_fetch(todo, seconds):
+    """One process, a hard wall deadline, and fair retries of missing bodies.
+
+    Unattempted items go first (newest first on ties). Failed or interrupted
+    items rotate behind older attempts. Deferral never means a verified source.
+    """
+    from _health import atomic
+    attempts_path = ROOT / 'data/health/quantml-attempts.json'
+    try:
+        attempts = json.loads(attempts_path.read_text())
+    except (OSError, ValueError):
+        attempts = {}
+    key = lambda a: str(a['msgid']) + '_' + str(a['itemidx'])
+    ready = []
+    for item in todo:
+        if cached(item):
+            _stats['skip'] += 1
+        else:
+            ready.append(item)
+    ready.sort(key=lambda a: (attempts.get(key(a), 0), -a['pos']))
+    if not ready:
+        return
+    previous_handler = signal.getsignal(signal.SIGALRM)
+    previous_timer = signal.getitimer(signal.ITIMER_REAL)
+    if previous_timer != (0.0, 0.0):
+        raise RuntimeError('preexisting_alarm_requires_review')
+    def deadline(*_):
+        raise BatchBudgetExpired()
+    signal.signal(signal.SIGALRM, deadline)
+    attempted = set()
+    expired = False
+    try:
+        signal.setitimer(signal.ITIMER_REAL, seconds)
+        for item in ready:
+            identity = key(item)
+            attempts[identity] = time.time()
+            # Persist before the request, so an interrupted slow item also rotates.
+            atomic(attempts_path, attempts)
+            attempted.add(identity)
+            process_one(item)
+    except BatchBudgetExpired:
+        expired = True
+    finally:
+        signal.setitimer(signal.ITIMER_REAL, 0)
+        signal.signal(signal.SIGALRM, previous_handler)
+    if expired:
+        failures = {(str(row['msgid']), str(row['itemidx'])) for row in _failures}
+        for item in ready:
+            if cached(item) or (str(item['msgid']), str(item['itemidx'])) in failures:
+                continue
+            _deferred.append({'msgid': item['msgid'], 'itemidx': item['itemidx'], 'pos': item['pos'],
+                              'reason': 'batch_budget_interrupted' if key(item) in attempted else 'batch_budget_deferred'})
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, default=0)
@@ -135,7 +203,12 @@ def main():
     ap.add_argument("--only", type=str, default="")
     ap.add_argument("--poslist", type=str, default="", help="comma-separated pos list (disjoint shard)")
     ap.add_argument("--workers", type=int, default=4)
+    ap.add_argument("--budget-seconds", type=float, default=0, help="hard serial fetch budget; deferred items remain failed/unverified")
     args = ap.parse_args()
+    if not 0 <= args.budget_seconds <= 3600 or args.budget_seconds and args.workers != 1:
+        ap.error('budget must be 0..3600 seconds; positive budget requires workers=1')
+    if args.budget_seconds and not hasattr(signal, 'setitimer'):
+        ap.error('hard batch deadlines require POSIX setitimer')
     idx = json.loads(INDEX.read_text())
     todo = [a for a in idx if a["pos"] >= args.start]
     if args.poslist:
@@ -146,16 +219,20 @@ def main():
     if args.limit:
         todo = todo[:args.limit]
     print(f"start: {len(todo)} articles, workers={args.workers}", flush=True)
-    with ThreadPoolExecutor(max_workers=args.workers) as ex:
-        list(as_completed(ex.submit(process_one, a) for a in todo))
+    if args.budget_seconds:
+        bounded_fetch(todo, args.budget_seconds)
+    else:
+        with ThreadPoolExecutor(max_workers=args.workers) as ex:
+            list(as_completed(ex.submit(process_one, a) for a in todo))
     from _health import atomic
     atomic(ROOT / 'data/health/quantml-fetch.json', {
         'checked_at': datetime.datetime.now(datetime.timezone.utc).isoformat(),
-        'status': 'failed' if _stats['fail'] else 'success',
-        'stats': dict(_stats), 'failures': sorted(_failures, key=lambda item: item['pos'])})
-    print(f"\nDONE ok={_stats['ok']} skip={_stats['skip']} fail={_stats['fail']} | raw dir: {RAW}", flush=True)
+        'status': 'failed' if _stats['fail'] or _deferred else 'success',
+        'stats': dict(_stats), 'failures': sorted(_failures, key=lambda item: item['pos']),
+        'deferred': sorted(_deferred, key=lambda item: item['pos']), 'budget_seconds': args.budget_seconds})
+    print(f"\nDONE ok={_stats['ok']} skip={_stats['skip']} fail={_stats['fail']} deferred={len(_deferred)} | raw dir: {RAW}", flush=True)
 
 
 if __name__ == "__main__":
     main()
-    sys.exit(1 if _stats["fail"] else 0)
+    sys.exit(1 if _stats["fail"] or _deferred else 0)
