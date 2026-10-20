@@ -325,6 +325,7 @@
               "foundations/market-microstructure/attn-lob.md",
               "foundations/market-microstructure/autocorrelation-map.md",
               "foundations/market-microstructure/clusterlob.md",
+              "foundations/market-microstructure/coherent-set-convex-hull-integer-programming-arbitrage.md",
               "foundations/market-microstructure/coi.md",
               "foundations/market-microstructure/detecting-unusual-trading-patterns-on-cryptocurrency-exchanges-by-means-of-complexity-measures.md",
               "foundations/market-microstructure/edge.md",
@@ -495,6 +496,7 @@
               "foundations/evaluation-benchmarks/lightquant.md",
               "foundations/evaluation-benchmarks/lob-bench.md",
               "foundations/evaluation-benchmarks/lobcast.md",
+              "foundations/evaluation-benchmarks/nolbert.md",
               "foundations/evaluation-benchmarks/quantbench.md",
               "foundations/evaluation-benchmarks/robustipy.md",
               "foundations/evaluation-benchmarks/tfb.md",
@@ -560,14 +562,16 @@
               "radar/journals/2026-W34.md",
               "radar/journals/2026-W33.md",
               "radar/journals/2026-W32.md",
-              "radar/journals/2026-W31.md"
+              "radar/journals/2026-W31.md",
+              "radar/journals/2026-W43.md"
             ]
           },
           {
             "group": "arXiv q-fin",
             "pages": [
               "radar/arxiv/overview.md",
-              "radar/arxiv/2026-W29.md"
+              "radar/arxiv/2026-W29.md",
+              "radar/arxiv/2026-W43.md"
             ]
           },
           {

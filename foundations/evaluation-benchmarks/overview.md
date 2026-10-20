@@ -2,7 +2,7 @@
 
 > **收錄**：回测防穿越、样本外稳定性、过拟合检测、鲁棒性量化、公开基准(TFB/QuantBench)与模型衰减归因
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：25 篇（21 篇成解構頁，其餘為 registry）
+> **本 zone 現有**：26 篇（22 篇成解構頁，其餘為 registry）
 
 ## 解構清單
 
@@ -16,6 +16,7 @@
 | [盈亏平衡夏普比率](art-279.md) | ⚡ | JFE | 揭示多因子模型高样本内夏普比率的陷阱，量化估计风险导致的样本外衰减，并提出考虑估计风险的盈亏平衡 |
 | [大语言模型在时间序列预测中真的有效吗？](art-33.md) | ⚡ | — | 通过系统消融证明LLM在时序预测中无性能优势且计算昂贵，简单注意力模型即可替代，呼吁转向LLM+ |
 | [Base-Rate-Honest Benchmark](base-rate-honest-benchmark.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.12248) | 本文指出股票方向预测中原始准确率易受牛市基线率误导，提出基于滚动验证与诚实基线的可复现评测协议， |
+| [NoLBERT](nolbert.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.22745) | 构建时点NoLBERT新闻主题，严格样本外比较文本因子；最佳验证实验亏钱，组合未胜价格基准。 |
 | [比过拟合更隐蔽：一套日内系统逐单对账挖出的六类系统缺陷](art-436.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.21846) | 作者把实盘成交与离线重放逐笔核对一致，定位出数据源默认参数、复权、时区、配置链路等六类隐蔽工程缺 |
 | [Cost-Aware Execution Filter](cost-aware-execution-filter.md) | 🔧 | Cost-Aware Execution Filter | 揭示高频交易中预测精度与实盘收益的割裂，提出交易成本感知过滤器，证明执行端纪律比复杂模型更关键。 |
 | [LightQuant](lightquant.md) | 🔧 | LightQuant | 构建中国股市多模态数据集CSMD与轻量级回测框架LightQuant，结合LLM因子提取提升股价 |

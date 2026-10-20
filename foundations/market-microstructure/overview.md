@@ -2,12 +2,13 @@
 
 > **收錄**：限价订单簿(LOB)建模、订单流信号、做市策略、高频套利、微观流动性与价格形成机制
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：37 篇（34 篇成解構頁，其餘為 registry）
+> **本 zone 現有**：41 篇（38 篇成解構頁，其餘為 registry）
 
 ## 解構清單
 
 | 方法 | 評級 | 來源 | TL;DR |
 |---|---|---|---|
+| [Coherent-set convex hull + integer programming arbitrage](coherent-set-convex-hull-integer-programming-arbitrage.md) | ⚡ | [arXiv](https://arxiv.org/abs/2610.23517) | 用凸包+整数规划识别预测市场中逻辑相关合约的组合套利，并用Polymarket全深度盘口回放测量 |
 | [Autocorrelation Map](autocorrelation-map.md) | ⚡ | [arXiv](https://arxiv.org/abs/2607.09426) | 发现加密货币期货在整点/刻钟存在算法交易引发的量价脉冲，刻钟开盘订单失衡可预测4-12小时收益。 |
 | [M3](art-420.md) | ⚡ | M3 | 提出M3微观市场生成模型，用开盘价锚定与向量量化耦合订单流与盘口，实现长轨迹反事实推演。 |
 | [波动率归一化Tick Size](tick-size.md) | ⚡ | 波动率归一化Tick Size | 揭示2008年后短周期趋势策略失效源于HFT做市商在细Tick稀疏订单簿中的定向撤单，切断趋势自 |
@@ -23,9 +24,12 @@
 | [JF | 消失的指数效应](vanishing-index-effect.md) | ⚡ | JF | 本文实证发现S&P 500指数纳入/剔除的异常回报近十年趋零，主因是指数迁移抵消需求冲击及市场流 |
 | [EDGE](edge.md) | ⚡ | JFE | 提出基于日频OHLC的EDGE估计量，通过GMM动态组合矩条件，解决传统低频价差估计的偏差与高方 |
 | [Stochastic Optimal Control with Reputation Gates](stochastic-optimal-control-with-reputation-gates.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.11328) | 构建含声誉反馈的OTC做市随机控制模型，揭示报价策略在声誉积累与变现间的动态权衡及双稳态现象。 |
+| OrderFlowDiT | 🔧 | [arXiv](https://arxiv.org/abs/2610.22727) | 用条件扩散Transformer生成未来五分钟买卖盘量价场，并加无偏非平衡最优传输辅助损失，配合 |
 | [Phase-diagram ABM with null/artefact discipline](phase-diagram-abm-with-null-artefact-discipline.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.08907) | 用相图法验证订单簿ABM中羊群行为引发的流动性枯竭是真实相变，并分解其反射机制。 |
 | [Detecting unusual trading patt](detecting-unusual-trading-patterns-on-cryptocurrency-exchanges-by-means-of-complexity-measures.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.13916) | 本文基于高频交易数据，利用多重分形、近似熵等复杂度指标构建诊断框架，有效识别中心化交易所的刷量与 |
 | [L2 Liquidity-State Transition](l2-liquidity-state-transition.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.09230) | 在加密期货事件窗口内，预事件L2流动性状态是预测后事件流动性的首要信号，订单流仅具增量价值。 |
+| State-Dependent Hawkes Process (SDHP) | 🔧 | [arXiv](https://arxiv.org/abs/2610.23619) | 用状态依赖多元Hawkes建模日内电力市场季度与小时合约的跨产品订单流和流动性依赖。 |
+| Concave-impact / Hurst-scaled execution framework | 🔧 | [arXiv](https://arxiv.org/abs/2610.23749) | 以交易已实现盈亏的夏普比率内生决定执行时长，并在凹幂律冲击与Hurst缩放价格下用凸优化导出闭式 |
 | [Extra Trees](extra-trees.md) | 🔧 | Extra Trees | 利用专有高频标签训练Extra Trees，将公开TAQ指标映射为主动/被动HFT流向代理变量。 |
 | [解码动量溢出：日内-隔夜收益的非对称结构](art-333.md) | 🔧 | — | 将动量溢出拆解为日内与隔夜收益，揭示散户追涨与机构慢速套利驱动的非对称定价机制。 |
 | [谱交易量模型](art-332.md) | 🔧 | 谱交易量模型 | 本文提出基于傅里叶分析的谱交易量模型，揭示中美股市高频交易量的周期性规律，并应用于VWAP执行优 |

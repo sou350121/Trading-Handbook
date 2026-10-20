@@ -8461,6 +8461,26 @@
   },
   {
     "pos": 100000,
+    "msgid": "arxiv_2610.23749",
+    "title": "From Alpha to Execution: Trading Horizons, Regimes, and Schedules under Concave Impact and Hurst Scaling",
+    "zone": "market-microstructure",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "concave-impact-hurst-scaled-execution-framework",
+    "dup_of": null,
+    "framework": "Concave-impact / Hurst-scaled execution framework",
+    "venue": null,
+    "arxiv": "2610.23749",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 100000,
     "msgid": "arxiv_2607.09426",
     "title": "The Quarter-Hour Effect: Periodic Algorithmic Trading and Return Predictability in Cryptocurrency Futures",
     "zone": "market-microstructure",
@@ -8540,6 +8560,46 @@
     }
   },
   {
+    "pos": 100001,
+    "msgid": "arxiv_2610.23619",
+    "title": "Cross-product Modelling in Continuous Intraday Electricity Markets via Hawkes Processes",
+    "zone": "market-microstructure",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "state-dependent-hawkes-process-sdhp",
+    "dup_of": null,
+    "framework": "State-Dependent Hawkes Process (SDHP)",
+    "venue": null,
+    "arxiv": "2610.23619",
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "因果结构",
+      "alpha": "风险择时",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 100002,
+    "msgid": "arxiv_2610.23517",
+    "title": "Combinatorial Arbitrage in Prediction Markets",
+    "zone": "market-microstructure",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "coherent-set-convex-hull-integer-programming-arbitrage",
+    "dup_of": null,
+    "framework": "Coherent-set convex hull + integer programming arbitrage",
+    "venue": null,
+    "arxiv": "2610.23517",
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "因果结构",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
     "pos": 100002,
     "msgid": "arxiv_2607.09820",
     "title": "Learning Predictive Ambiguity Sets for Decision-Focused Distributionally Robust Optimization",
@@ -8600,6 +8660,26 @@
     }
   },
   {
+    "pos": 100003,
+    "msgid": "arxiv_2610.22745",
+    "title": "Reading the News Without Hindsight: NoLBERT Topics and the Cross-Section of Stock Returns",
+    "zone": "evaluation-benchmarks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "nolbert",
+    "dup_of": null,
+    "framework": "NoLBERT",
+    "venue": null,
+    "arxiv": "2610.22745",
+    "axes": {
+      "data": "文本另类",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
     "pos": 100004,
     "msgid": "arxiv_2607.14174",
     "title": "How Much of a 10-K Matters? Aggregation-Dependent Value of Full-Text versus Risk-Factor Sentiment",
@@ -8637,6 +8717,26 @@
       "paradigm": "生成式大模型",
       "alpha": "因子挖掘",
       "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 100004,
+    "msgid": "arxiv_2610.22727",
+    "title": "OrderFlowDiT: Transport-Regularized Diffusion Transformer for Probabilistic Limit-Order Supply Forecasting",
+    "zone": "market-microstructure",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "orderflowdit",
+    "dup_of": null,
+    "framework": "OrderFlowDiT",
+    "venue": null,
+    "arxiv": "2610.22727",
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "生成式大模型",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
     }
   },
   {
