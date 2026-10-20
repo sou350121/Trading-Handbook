@@ -53,7 +53,9 @@ class _Text(HTMLParser):
         if t == 'math' and not self.skip and dict(a).get('alttext') is not None:
             # LaTeXML includes both rendered MathML and a TeX annotation. Taking
             # both turns 1.0222 into 1.02221.0222. Use its exact accessible formula once.
-            self.parts.append(' ' + dict(a)['alttext'] + ' ')
+            # TeX escapes a literal percent as \%; MathML renders the same %.
+            # Preserve that visible unit so strict source-token checks can match it.
+            self.parts.append(' ' + dict(a)['alttext'].replace(r'\%', '%') + ' ')
             self.math_alt_depth = 1
             return
         if t in self.SKIP:

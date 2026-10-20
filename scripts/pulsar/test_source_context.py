@@ -24,14 +24,14 @@ class SourceContext(unittest.TestCase):
 
     def test_primary_source_end_is_supplied_without_prefix_clipping(self):
         body = 'Source introduction ' * 1000 + '\nCAPACITY_ANALYSIS_AT_THE_END\n'
-        prompt = writer.build(self.metadata(), {'body': body, 'source_kind': 'fulltext-html', 'extraction_version': 3})
+        prompt = writer.build(self.metadata(), {'body': body, 'source_kind': 'fulltext-html', 'extraction_version': 4})
         self.assertIn(body, prompt)
         self.assertIn('CAPACITY_ANALYSIS_AT_THE_END', prompt)
         self.assertNotIn('截斷', prompt)
 
     def test_primary_source_text_is_not_rewritten_by_template_labels(self):
         body = 'Source text 導讀 is an exact quote. ' * 100
-        prompt = writer.build(self.metadata(), {'body': body, 'source_kind': 'fulltext-html', 'extraction_version': 3})
+        prompt = writer.build(self.metadata(), {'body': body, 'source_kind': 'fulltext-html', 'extraction_version': 4})
         self.assertIn(body, prompt)
 
     def test_quantml_complete_cache_is_not_confused_with_original_paper(self):
@@ -120,6 +120,18 @@ class CancellationRegression(unittest.TestCase):
 
 
 class ArxivSourceIntegrity(unittest.TestCase):
+    def test_tex_percent_matches_visible_mathml_without_accepting_other_values(self):
+        body = arxiv.html_to_text('<p>' + 'Source analysis ' * 50 + '</p><math alttext="17.6\\%"><semantics><mrow><mn>17.6</mn><mo>%</mo></mrow><annotation encoding="application/x-tex">17.6\\%</annotation></semantics></math>')
+        page = ('<!-- ontology-5axis data=test -->\n# Study\nhttps://source.invalid/paper\n' +
+                ''.join('\n## §' + str(i) + ' · Section\n' + 'Source-bound analysis ' * 18 for i in range(1, 9)) +
+                '\nResult: 17.6%')
+        raw = {'body': body, 'source_kind': 'fulltext-html', 'extraction_version': 4}
+        metadata = {'url': 'https://source.invalid/paper', 'source': {'origin': 'arxiv'}}
+        validate_page(page, raw, metadata)
+        for unsupported in ['17.7%', '0.176']:
+            with self.assertRaisesRegex(ValueError, 'unverified_empirical_number'):
+                validate_page(page.replace('17.6%', unsupported), raw, metadata)
+
     def test_math_alttext_is_read_once_without_annotation_duplication(self):
         text = arxiv.html_to_text('<p>Bids <math alttext="1.0222"><semantics><mn>1.0222</mn><annotation encoding="application/x-tex">1.0222</annotation></semantics></math>; next <math alttext="-0.08"><mo>−</mo><mn>0.08</mn></math>.</p>')
         self.assertEqual(text.count('1.0222'), 1)
@@ -136,7 +148,7 @@ class ArxivSourceIntegrity(unittest.TestCase):
         page = ('<!-- ontology-5axis data=test -->\n# Study\nhttps://source.invalid/paper\n' +
                 ''.join('\n## §' + str(i) + ' · Section\n' + 'Source-bound analysis ' * 18 for i in range(1, 9)) +
                 '\nResult: 56.5%')
-        validate_page(page, {'body': body, 'source_kind': 'fulltext-html', 'extraction_version': 3},
+        validate_page(page, {'body': body, 'source_kind': 'fulltext-html', 'extraction_version': 4},
                       {'url': 'https://source.invalid/paper', 'source': {'origin': 'arxiv'}})
 
     def cache_case(self, version=None):
@@ -160,12 +172,12 @@ class ArxivSourceIntegrity(unittest.TestCase):
     def test_legacy_cache_is_backed_up_and_refetched(self):
         status, record, calls, backups, before = self.cache_case()
         self.assertEqual(status, 'fulltext-html')
-        self.assertEqual(record['extraction_version'], 3)
+        self.assertEqual(record['extraction_version'], 4)
         self.assertEqual(calls, 1)
         self.assertEqual(backups, [before])
 
     def test_current_cache_is_reused_without_network(self):
-        status, _, calls, backups, _ = self.cache_case(3)
+        status, _, calls, backups, _ = self.cache_case(4)
         self.assertEqual(status, 'cached')
         self.assertEqual(calls, 0)
         self.assertEqual(backups, [])
