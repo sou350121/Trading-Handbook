@@ -8400,6 +8400,26 @@
     }
   },
   {
+    "pos": 436,
+    "msgid": "2247494713",
+    "title": "比过拟合更隐蔽：一套日内系统逐单对账挖出的六类系统缺陷",
+    "zone": "evaluation-benchmarks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "art-436",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": "2610.21846",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
     "pos": 100000,
     "msgid": "arxiv_2607.14373",
     "title": "A Noise-Robust Elicit-to-Optimize Framework for Distortion Riskmetrics via Inverse Reinforcement Learning",

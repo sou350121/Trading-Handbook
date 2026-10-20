@@ -81,7 +81,7 @@ OLS 回歸有偏分位數 $\hat{Q}_{\tau}$，偏差項 $\epsilon$ 被隔離至�
 
 **(b) 種子離散度大於效果量。** Table 2（10 個隨機種子）：GP + 互相關過濾在 Market 宇宙 **IC 0.84% ± 2.27%**、GP 無過濾 1.32% ± 2.01%、PPO + 過濾 2.15% ± 1.86%。而**上表 CSI 300 那格的 0.36pp 優勢，小於兩方法各自的種子離散度**（1.03% / 0.94%）。精確地說：以 10 種子計，PPO + 過濾的均值標準誤 0.59%（t ≈ 3.7），並非與零無異；真正與零無異的是 GP + 過濾（t ≈ 1.17）。可辯護的結論是**單次運行不可靠**，而非「全是噪音」。另注意 GP/PPO 基線由本文作者實作調參（欠調基線設定），且另一份第三方 benchmark 在改用回測損益後把排名完全反轉（AlphaQCM 年化 3.42% / Sharpe 0.1973 vs AlphaGen 6.19% / 0.3425，CSI300）。
 
-> 全文檢索本文 camera-ready：`turnover`、`transaction cost`、`slippage`、`sharpe`、`deflated`、`multiple testing`、`p-value`、`data snooping`、`backtest` **命中皆為 0**。詳見 [Crossing · 自動化搜索 vs 預註冊驗證](/crossing/autoresearch-vs-preregistration) 與 [審計報告](/reports/deep-research/2026-07-22-autoresearch-audit)。
+> 全文檢索本文 camera-ready：`turnover`、`transaction cost`、`slippage`、`sharpe`、`deflated`、`multiple testing`、`p-value`、`data snooping`、`backtest` **命中皆為 0**。詳見 [Crossing · 自動化搜索 vs 預註冊驗證](../../crossing/autoresearch-vs-preregistration/overview.md) 與 [審計報告](../../reports/deep-research/2026-07-22-autoresearch-audit.md)。
 
 ## §6 · 失效與隱含假設
 **6.1 論文自述 limitations**

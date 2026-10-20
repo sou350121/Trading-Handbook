@@ -23,7 +23,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 # Content dirs that hold doc pages. Anything else (data/, scripts/, .git/) is ignored.
 CONTENT_DIRS = [
     "foundations", "crossing", "cheat-sheet", "benchmarks", "bridge-to-vla",
-    "companies", "deployment", "frontier", "reports", "use-cases",
+    "companies", "deployment", "frontier", "reports", "use-cases", "radar", "guides",
 ]
 # Top-level standalone docs referenced by nav but living at repo root.
 ROOT_DOCS = ["ONBOARDING.md", "AGENTS.md", "CONTRIBUTING.md", "MAINTAINER.md", "README.md"]
@@ -67,6 +67,7 @@ def all_content_files():
             for n in names:
                 if n.lower().endswith(DOC_EXTS):
                     files.append(pathlib.Path(dirpath) / n)
+    files += [ROOT / name for name in ROOT_DOCS if (ROOT / name).is_file()]
     return sorted(files, key=lambda p: rel(p))
 
 
@@ -112,6 +113,7 @@ def check_broken_links(files):
             text = f.read_text(encoding="utf-8")
         except (OSError, UnicodeDecodeError):
             continue
+        text = re.sub(r"```.*?```|~~~.*?~~~", "", text, flags=re.S)
         for m in LINK_RE.finditer(text):
             target = m.group(1)
             if target.startswith(("http://", "https://", "mailto:", "tel:")):
@@ -268,6 +270,8 @@ def check_data_leak():
         stdout, _stderr = p.communicate()
     except OSError as e:
         return ["git ls-files failed: {0}".format(e)]
+    if p.returncode != 0:
+        return ["git ls-files failed"]
     if isinstance(stdout, bytes):
         stdout = stdout.decode("utf-8", "replace")
     for line in stdout.splitlines():

@@ -56,22 +56,24 @@ def extract(htmltext):
     return title, date, body
 
 
-def fetch(article_url, retries=6):
+def fetch(article_url, retries=2):
+    # Try the public original first. A CAPTCHA/HTML shell has no valid article body;
+    # the existing public proxy remains a bounded fallback, never a success by size.
     enc = urllib.parse.quote(article_url, safe="")
-    proxy = f"https://api.allorigins.win/raw?url={enc}"
-    last = None
-    for i in range(retries):
+    urls = [article_url] + [f"https://api.allorigins.win/raw?url={enc}"] * retries
+    for i, url in enumerate(urls):
         try:
-            req = urllib.request.Request(proxy, headers={"User-Agent": UA})
-            with urllib.request.urlopen(req, timeout=100) as r:
-                data = r.read().decode("utf-8", errors="ignore")
-            if len(data) > 40000 and "js_content" in data:
+            req = urllib.request.Request(url, headers={"User-Agent": UA})
+            with urllib.request.urlopen(req, timeout=25) as response:
+                data = response.read(4_000_000).decode("utf-8", errors="replace")
+            title, date, body = extract(data)
+            if "js_content" in data and title and date and len(body) >= 300:
                 return data
-            last = f"short/no-content ({len(data)}B)"
-        except Exception as e:
-            last = f"{type(e).__name__}: {e}"
-        time.sleep(2.5 * (i + 1))
-    raise RuntimeError(f"fetch failed after {retries}: {last}")
+        except (urllib.error.URLError, TimeoutError, OSError):
+            pass
+        if i + 1 < len(urls):
+            time.sleep(2)
+    raise RuntimeError("article_body_unavailable")
 
 
 _lock = threading.Lock()
@@ -82,7 +84,7 @@ def process_one(a):
     out = RAW / f"{a['msgid']}_{a['itemidx']}.json"
     if out.exists():
         try:
-            if len(json.loads(out.read_text()).get("body", "")) > 200:
+            if len(json.loads(out.read_text()).get("body", "")) >= 300:
                 with _lock: _stats["skip"] += 1
                 return
         except Exception:
@@ -90,6 +92,10 @@ def process_one(a):
     try:
         raw = fetch(a["url"])
         title, date, body = extract(raw)
+        if len(body) < 300 or not date or date != a["date"]:
+            raise ValueError("article_provenance_invalid")
+        if re.sub(r"\W+", "", title).casefold() != re.sub(r"\W+", "", a["title"]).casefold():
+            raise ValueError("article_title_mismatch")
         rec = {"pos": a["pos"], "msgid": a["msgid"], "itemidx": a["itemidx"],
                "title": title or a["title"], "wechat_title": a["title"],
                "date": date or a["date"], "url": a["url"],
@@ -130,3 +136,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    sys.exit(1 if _stats["fail"] else 0)

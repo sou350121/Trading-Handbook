@@ -21,6 +21,8 @@ HERE = pathlib.Path(__file__).parent
 sys.path.insert(0, str(HERE))
 from _qwen import ask
 
+import _health
+
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 FEEDS = json.loads((HERE / "journal_feeds.json").read_text())
 TAX = json.loads((ROOT / "data" / "taxonomy.json").read_text())
@@ -61,13 +63,19 @@ def fetch_journal(j, days):
     since = (dt.date.today() - dt.timedelta(days=days)).isoformat()
     url = (f"https://api.crossref.org/journals/{j['issn']}/works"
            f"?filter=from-created-date:{since},type:journal-article"
-           f"&rows=40&sort=created&order=desc&select=DOI,title,abstract,created,issued,container-title"
+           f"&rows=1000&sort=created&order=desc&select=DOI,title,abstract,created,issued,container-title"
            f"&mailto={MAILTO}")
     try:
         d = http_json(url)
     except Exception as e:
         print(f"  JOURNAL-FAIL {j['name']}: {repr(e)[:60]}", file=sys.stderr)
+        _health.fail(j["name"], "fetch_failed")
         return []
+    if d.get("status") != "ok" or not isinstance(d.get("message", {}).get("items"), list):
+        _health.fail(j["name"], "invalid_response")
+        return []
+    if d["message"].get("total-results", 0) > 1000:
+        _health.fail(j["name"], "pagination_required")
     out = []
     for it in d.get("message", {}).get("items", []):
         title = (it.get("title") or [""])[0].strip()
@@ -114,6 +122,10 @@ rating:⚡=方法性強、值得全文解構;🔧=重要可用;📖=背景。"""
         signal.signal(signal.SIGALRM, old)
     i, j = raw.find("{"), raw.rfind("}")
     d = json.loads(raw[i:j + 1])
+    if d.get("relevance") not in ("core", "adjacent", "skip") or d.get("rating") not in ("⚡", "🔧", "📖") or not isinstance(d.get("one_line"), str) or not d["one_line"].strip():
+        raise ValueError("classification_schema_invalid")
+    if d["relevance"] == "core" and d.get("zone") not in ZONE_SLUGS:
+        raise ValueError("classification_zone_invalid")
     if d.get("zone") not in ZONE_SLUGS:
         d["zone"] = "skip"
     if d.get("rating") not in ("⚡", "🔧", "📖"):
@@ -150,7 +162,7 @@ def render(week, kept, skipped_n, counts):
     mon = dt.date.fromisocalendar(*[int(x) for x in week.split("-W")], 1)
     sun = mon + dt.timedelta(days=6)
     L = [f"# 頂刊雷達 · {week}", "",
-         f"> 覆蓋 {mon} ~ {sun} · 12 本金融/量化頂刊新文（Crossref 註冊流）· 只列標題+DOI+我們的一句話機制解讀",
+         f"> 掃描批次 {week} · 12 本金融/量化頂刊（Crossref 註冊流）；收錄可能早於本周，並非論文發布周統計。只列標題、DOI 與機制解讀。",
          f"> `⚡` = 方法性強、已排進一手全文解構隊列（有 OA 全文時） · `📄` = 找到開放取用全文", ""]
     if counts:
         L.append("**本週各刊計數**: " + " · ".join(f"{k} {v}" for k, v in counts.items()))
@@ -196,17 +208,23 @@ def main():
         print(f"  {j['name']:<38} {len(items):>3} recent, {len(new):>3} new", flush=True)
         fresh.extend(new)
     if a.limit:
+        if len(fresh) > a.limit:
+            _health.fail("journals", "classification_deferred")
         fresh = fresh[:a.limit]
     if not fresh:
         print("journal_radar: no new items")
         return
 
-    kept, skipped = [], 0
+    cache_path = ROOT / "data/journal_week_state.json"
+    cache = load_json(cache_path, {})
+    prior = cache.get(week, {})
+    kept, skipped = list(prior.get("kept", [])), prior.get("skipped", 0)
     for it in fresh:
         try:
             c = classify(it)
         except Exception as e:
             print(f"  CLASSIFY-FAIL {it['doi']}: {repr(e)[:60]}", file=sys.stderr)
+            _health.fail("journals", "classification_failed")
             continue  # not marked seen -> retried next run
         seen[it["doi"]] = week
         if c["relevance"] == "skip":
@@ -235,7 +253,8 @@ def main():
         print(f"DRY: kept={len(kept)} skipped={skipped} oa_queue+={len(q) - len(qdois)}")
         return
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    (OUT_DIR / f"{week}.md").write_text(render(week, kept, skipped, counts))
+    _health.atomic(cache_path, {**cache, week: {"kept": list({x["doi"]: x for x in kept}.values()), "skipped": skipped}})
+    (OUT_DIR / f"{week}.md").write_text(render(week, list({x["doi"]: x for x in kept}.values()), skipped, counts))
     pathlib.Path(SEEN_F).write_text(json.dumps(seen, ensure_ascii=False, indent=1))
     pathlib.Path(OA_QUEUE_F).write_text(json.dumps(q, ensure_ascii=False, indent=1))
     write_overview()
@@ -248,7 +267,7 @@ def write_overview():
     names = " · ".join(f["name"] for f in FEEDS)
     L = ["# 頂刊雷達 Journal Radar", "",
          f"金融/量化 12 本頂級期刊（{names}）的新文，每週經 **Crossref 註冊流**輪詢一次（比出版社 RSS 穩），"
-         "qwen 依機制歸入 10 個 zone、濾掉與量化交易無關的公司金融/銀行文獻。這補上了 arXiv 之外**真正的金融文獻主戰場**。", "",
+         "DeepSeek 依機制歸入 10 個 zone、濾掉與量化交易無關的公司金融/銀行文獻。這補上了 arXiv 之外**真正的金融文獻主戰場**。", "",
          "⚡ = 方法性強；若 Unpaywall 找到開放取用全文（📄），自動進**一手全文解構**佇列，產出 foundations/ 正式解構頁。", "",
          "## 每週雷達 Weekly pages", ""]
     for w in weeks:
@@ -259,4 +278,5 @@ def write_overview():
 
 
 if __name__ == "__main__":
-    main()
+    import _health
+    sys.exit(_health.run("journals", main))

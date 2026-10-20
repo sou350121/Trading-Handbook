@@ -35,6 +35,8 @@ import xml.etree.ElementTree as ET
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
 from _qwen import ask  # noqa: E402
 
+import _health
+
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 HERE = pathlib.Path(__file__).resolve().parent
 FEEDS_FILE = HERE / "radar_feeds.json"
@@ -199,6 +201,8 @@ def fetch_feed(feed, days):
         print(f"  PARSE-FAIL {feed['id']:<18} {e}", file=sys.stderr)
         return [], "parse-fail"
 
+    if strip_ns(root.tag).lower() not in {"rss", "rdf", "feed"}:
+        return [], "invalid-feed"
     cutoff = dt.date.today() - dt.timedelta(days=days)
     items = []
     # iterate any <item> (RSS2 / RSS1-RDF) and <entry> (Atom) anywhere in tree
@@ -216,8 +220,13 @@ def fetch_feed(feed, days):
         # date fields: pubDate / dc:date / published / updated / date
         date_el = _find_child(entry, {"pubdate", "date", "published", "updated"})
         d = parse_date(_text(date_el))
-        # keep if within window OR (no date -> pass through, conservative)
-        if d is not None and d < cutoff:
+        if d is None:
+            _health.fail(feed["id"], "publication_date_missing")
+            continue
+        if d > dt.date.today():
+            _health.fail(feed["id"], "publication_date_future")
+            continue
+        if d < cutoff:
             continue
         items.append({
             "feed_id": feed["id"],
@@ -274,6 +283,12 @@ def classify(item):
         signal.alarm(0)
         signal.signal(signal.SIGALRM, old)
     d = parse_json(raw)
+    if type(d.get("relevant")) is not bool or type(d.get("must_read")) is not bool:
+        raise ValueError("classification_boolean_invalid")
+    if d.get("zone") not in ZONE_SLUGS and d.get("zone") != "meta":
+        raise ValueError("classification_zone_invalid")
+    if not isinstance(d.get("one_liner_zh"), str) or not d["one_liner_zh"].strip():
+        raise ValueError("classification_summary_missing")
     zone = d.get("zone", "meta")
     if zone not in ZONE_SLUGS and zone != "meta":
         zone = "meta"
@@ -315,7 +330,7 @@ def render_weekly(week_key, items, feeds):
     lines = []
     lines.append(f"# 实践者雷达 · {week_key}")
     lines.append("")
-    lines.append(f"> 覆盖 {mon.isoformat()} ~ {sun.isoformat()} · "
+    lines.append(f"> 掃描批次 {week_key}（收錄日期以各項原文為準，非發布周統計） · "
                  "量化从业者博客/机构精选 · 仅标题+链接+我们的一句话解读（不转载正文）")
     lines.append("")
 
@@ -392,7 +407,7 @@ def render_overview(feeds, weeks_index):
     lines = []
     lines.append("# 实践者雷达")
     lines.append("")
-    lines.append("每週聚合一批量化從業者博客與機構研究的 RSS，qwen 按十大方法族 zone 分類，"
+    lines.append("每週聚合一批量化從業者博客與機構研究的 RSS，DeepSeek 按十大方法族 zone 分類，"
                  "產出一頁分類週報。**只放標題、鏈接與我們的一句話解讀**，從不轉載正文（版權歸原作者）。"
                  "數據源以 `scripts/pulsar/radar_feeds.json` 配置，可增減。")
     lines.append("")
@@ -436,6 +451,8 @@ def main():
     for f in feeds:
         got, status = fetch_feed(f, args.days)
         feed_status[f["id"]] = (status, len(got))
+        if status != "ok":
+            _health.fail(f["id"], status)
         print(f"  {status:<10} {f['id']:<18} raw={len(got)}")
         all_items.extend(got)
     print(f"Fetched {len(all_items)} raw items across {len(feeds)} feeds")
@@ -470,8 +487,8 @@ def main():
                 print(f"  cap {args.cap} reached — deferring {len(fresh) - used} items to next run")
                 break
             try:
-                c = classify(it)
                 used += 1
+                c = classify(it)
                 enriched = {**it, **c}
                 # mark seen only after successful classification (so failures retry next run)
                 seen.add(link_hash(it["link"]))
@@ -482,8 +499,12 @@ def main():
                 else:
                     print(f"     [ irrelevant, dropped   ] {it['feed_name'][:14]:<14} | {it['title'][:40]}")
             except Exception as e:
+                _health.fail("practitioner", "classification_failed")
                 print(f"  CLASSIFY-FAIL {it['feed_name'][:14]} :: {e}", file=sys.stderr)
-        print(f"qwen calls used: {used}")
+        print(f"DeepSeek calls used: {used}")
+
+    if used < len(fresh):
+        _health.fail("practitioner", "classification_deferred")
 
     # 4) merge into week state (relevant items only), dedupe by link, deterministic
     merged = {it["link"]: it for it in week_state}
@@ -520,4 +541,5 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    import _health
+    sys.exit(_health.run("practitioner", main))

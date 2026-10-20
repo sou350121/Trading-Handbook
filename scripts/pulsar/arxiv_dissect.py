@@ -32,6 +32,7 @@ DIS = ROOT / "data" / "distill"
 QUEUE = ROOT / "data" / "radar_queue.json"
 OA_QUEUE = ROOT / "data" / "oa_queue.json"     # journal ⚡ papers with an Unpaywall OA pdf
 POS_BASE = 100000     # arXiv pos band, far above QuantML (~419) -> never collides with corpus pos
+INGEST_ERRORS = []
 OA_POS_BASE = 200000  # OA-journal band, disjoint from both
 UA = {"User-Agent": "Mozilla/5.0 (Trading-Handbook research bot)"}
 
@@ -160,16 +161,16 @@ def ingest(item, seq):
     tid = item["id"]
     msgid = f"arxiv_{tid}"
     out = RAW / f"{msgid}_1.json"
-    if out.exists() and len(json.loads(out.read_text()).get("body", "")) > 800:
+    if out.exists() and len(json.loads(out.read_text()).get("body", "")) > 800 and json.loads(out.read_text()).get("source_kind", "").startswith("fulltext"):
         return msgid, "cached"
     body, kind = fetch_fulltext(item)
-    if kind == "none" or len(body) < 400:
+    if not kind.startswith("fulltext") or len(body) < 400:
         return msgid, "fetch-fail"
     rec = {"pos": POS_BASE + seq, "msgid": msgid, "itemidx": "1",
            "title": item["title"], "wechat_title": item["title"],
            "date": item.get("date", ""),
            "url": item.get("abs_url") or f"https://arxiv.org/abs/{tid}",
-           "chars": len(body), "body": body}
+           "chars": len(body), "body": body, "source_kind": kind}
     RAW.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(rec, ensure_ascii=False, indent=2))
     return msgid, kind
@@ -201,7 +202,7 @@ def ingest_oa(entry, seq):
     doi = entry["doi"]
     msgid = f"oa_{oa_key(doi)}"
     out = RAW / f"{msgid}_1.json"
-    if out.exists() and len(json.loads(out.read_text()).get("body", "")) > 800:
+    if out.exists() and len(json.loads(out.read_text()).get("body", "")) > 800 and json.loads(out.read_text()).get("source_kind", "").startswith("fulltext"):
         return msgid, "cached"
     cands = entry.get("pdf_candidates") or ([entry["pdf"]] if entry.get("pdf") else [])
     data = b""
@@ -229,7 +230,7 @@ def ingest_oa(entry, seq):
     rec = {"pos": OA_POS_BASE + seq, "msgid": msgid, "itemidx": "1",
            "title": entry["title"], "wechat_title": entry["title"],
            "date": entry.get("date", ""), "url": f"https://doi.org/{doi}",
-           "chars": len(txt), "body": txt}
+           "chars": len(txt), "body": txt, "source_kind": "fulltext-pdf"}
     RAW.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(rec, ensure_ascii=False, indent=2))
     return msgid, "fulltext-pdf"
@@ -262,6 +263,7 @@ def run_oa(limit, workers):
         if (DIS / f"oa_{oa_key(e['doi'])}.json").exists():
             continue
         if e.get("attempts", 0) >= 3:
+            INGEST_ERRORS.append('oa_retry_exhausted')
             continue
         todo.append(e)
     todo.sort(key=lambda e: e.get("date", ""), reverse=True)
@@ -278,6 +280,7 @@ def run_oa(limit, workers):
         if st in ("fulltext-pdf", "cached"):
             ingested.append((e, msgid))
         else:
+            INGEST_ERRORS.append('oa_fulltext_unavailable')
             e["attempts"] = e.get("attempts", 0) + 1   # bounded retries across weeks
     OA_QUEUE.write_text(json.dumps(q, ensure_ascii=False, indent=1))
     if not ingested:
@@ -335,8 +338,10 @@ def main():
     for seq, it in enumerate(items):
         msgid, st = ingest(it, seq)
         print(f"  ingest {it['id']:>14} [{st}]  {it['title'][:52]}", flush=True)
-        if st.startswith("fulltext") or st in ("abstract-only", "cached"):
+        if st.startswith("fulltext") or st == "cached":
             ingested.append((it, msgid))
+        else:
+            INGEST_ERRORS.append('arxiv_fulltext_unavailable')
     if args.ingest_only or not ingested:
         print(f"ingested {len(ingested)} raw record(s); qwen skipped"); return
 
@@ -367,3 +372,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    sys.exit(1 if INGEST_ERRORS or PA._stats["fail"] or PB._n["fail"] else 0)

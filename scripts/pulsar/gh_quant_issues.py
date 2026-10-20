@@ -10,11 +10,13 @@ stored in the script or committed anywhere.
 
 Usage: python3.11 gh_quant_issues.py [--repo owner/name] [--dry] [--init]
 """
-import json, re, sys, time, signal, pathlib, argparse, subprocess, urllib.request, urllib.parse, datetime as dt
+import os, json, re, sys, time, signal, pathlib, argparse, subprocess, urllib.request, urllib.parse, datetime as dt
 
 HERE = pathlib.Path(__file__).parent
 sys.path.insert(0, str(HERE))
 from _qwen import ask
+
+import _health
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 PAGE = ROOT / "deployment" / "github_engineering_notes.md"
@@ -32,15 +34,17 @@ REPOS = [
     {"repo": "freqtrade/freqtrade",           "min": 30, "desc": "加密貨幣自動交易（最大社區）"},
     {"repo": "hummingbot/hummingbot",         "min": 15, "desc": "做市機器人（execution/microstructure）"},
     {"repo": "stefan-jansen/machine-learning-for-trading", "min": 6, "desc": "ML4T 書配套代碼（學習者踩坑集中地）"},
-    {"repo": "OpenBB-finance/OpenBB",         "min": 25, "desc": "開源投研終端（數據工程的坑）"},
+    {"repo": "openbq-org/OpenBB",         "min": 25, "desc": "開源投研終端（數據工程的坑）"},
 ]
 
 
 def gh_token():
+    if os.environ.get("GH_TOKEN"):
+        return os.environ["GH_TOKEN"]
     url = subprocess.check_output(["git", "config", "--get", "remote.origin.url"], cwd=ROOT).decode()
     m = re.search(r"(ghp_[A-Za-z0-9]+|github_pat_[A-Za-z0-9_]+)", url)
     if not m:
-        raise RuntimeError("no embedded token in remote url")
+        return None
     return m.group(1)
 
 
@@ -113,7 +117,7 @@ def distill_repo(repo, new_items, token):
 
 HEADER = """# GitHub 工程經驗筆記（quant 開源棧）
 
-> 論文不會告訴你的事：**11 個核心 quant 開源庫的高互動 issues**，自動掃描、qwen 蒸餾成
+> 論文不會告訴你的事：**11 個核心 quant 開源庫的高互動 issues**，自動掃描、DeepSeek 蒸餾成
 > 「坑 → 解法」，逐條帶原 issue 連結可追溯。每週增量追加（append-only），發現日期見各條。
 > 涵蓋：數據坑 / 回測失真 / 執行 / 性能 / 部署 / API 坑。
 
@@ -136,6 +140,7 @@ def main():
     a = ap.parse_args()
     token = gh_token()
     seen = json.loads(SEEN_F.read_text()) if SEEN_F.exists() else {}
+    seen["openbq-org/OpenBB"] = sorted(set(seen.get("openbq-org/OpenBB", [])) | set(seen.get("OpenBB-finance/OpenBB", [])))
     y, w, _ = dt.date.today().isocalendar()
     week = f"{y}-W{w:02d}"
 
@@ -150,6 +155,7 @@ def main():
             items = top_issues(repo, cfg["min"])
         except Exception as e:
             print(f"  REPO-FAIL {repo}: {repr(e)[:60]}", file=sys.stderr)
+            _health.fail(repo, "fetch_failed")
             continue
         old = set(seen.get(repo, []))
         new = [it for it in items if it["number"] not in old][:8]
@@ -160,6 +166,7 @@ def main():
             lessons = distill_repo(repo, new, token)
         except Exception as e:
             print(f"  DISTILL-FAIL {repo}: {repr(e)[:70]}", file=sys.stderr)
+            _health.fail(repo, "distill_failed")
             continue   # not marked seen -> retried next week
         by_num = {l.get("issue"): l for l in lessons if l.get("lesson")}
         lines = []
@@ -202,4 +209,5 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    import _health
+    sys.exit(_health.run("engineering", main))

@@ -8,6 +8,7 @@ import json, pathlib, sys, argparse, re, threading
 from concurrent.futures import ThreadPoolExecutor, as_completed
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
 from _qwen import ask
+from _content_gate import validate_page
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 RAW = ROOT/"data"/"raw"; DIS = ROOT/"data"/"distill"
@@ -35,7 +36,7 @@ TEMPLATE = """請依下面骨架，把這篇方法寫成一頁解構 markdown。
 
 # {name} 解構（{fw_en}）
 
-> **發布**：{date} · {venue}{arxiv_line}
+> **{date_label}**：{date} · {venue}{arxiv_line}
 > **{src_label}**：[{wechat_title}]({url}){prov}
 > **核心定位**：（1-2 句：五軸落點 + 解了什麼 prior gap）
 
@@ -63,7 +64,7 @@ TEMPLATE = """請依下面骨架，把這篇方法寫成一頁解構 markdown。
 （表：數據集/市場 | Metric(IR/Sharpe/AR/MDD) | 前SOTA | 本方法 | Δ；**前SOTA 欄只填導讀逐字給的單一基線值，若有多個基線就改成逐行列出、別合成區間，沒有就寫「未披露」**；解讀哪部分 Δ 是真 capability，哪部分可能是過擬合/前瞻偏差/成本未計。**解讀散文裡也不得出現導讀沒有的數字**）
 
 ## §6 · 失效與隱含假設
-（6.1 論文自述 limitations；6.2 推斷的隱含假設：regime 依賴/容量/成本/數據泄漏/survivorship）
+（6.1 論文自述 limitations（若僅讀導讀，須寫「未核原文，作者自述限制未驗證」，不得拿推斷冒充自述）；6.2 推斷的隱含假設（明標推斷，限制適用條件，禁止跨所有系統的必然斷言，輔助數據缺失不是生存者偏差）：regime 依賴/容量/成本/數據泄漏/survivorship）
 
 ## §7 · 對比 & 面試 Tip
 （表：同軸對手 | 關鍵差異軸 | Open? | Status；🎤 Interview Tip 正確答 vs 錯答；7.1 可證偽預測帶日期）
@@ -90,7 +91,10 @@ TEMPLATE = """請依下面骨架，把這篇方法寫成一頁解構 markdown。
 """
 
 def slugify(d):
-    if d.get("slug_override"): return d["slug_override"]
+    if d.get("slug_override"):
+        if not re.fullmatch(r"[a-z0-9][a-z0-9-]{0,239}", d["slug_override"]):
+            raise ValueError("slug_override_invalid")
+        return d["slug_override"]
     fw = (d.get("source",{}) or {}).get("framework")
     base = fw if fw and fw.lower() not in ("null","none","") else d["title"]
     s = re.sub(r'[^a-zA-Z0-9]+','-', (base or "")).strip('-').lower()
@@ -115,6 +119,7 @@ def build(d, raw):
         prov = ""; blen = 8000
     return TEMPLATE.format(
         name=fw, fw_en=fw, fw=fw, date=d.get("date",""), venue=venue,
+        date_label="導讀發布" if origin == "quantml" else "來源發布",
         arxiv=arxiv, arxiv_line=arxiv_line, wechat_title=d.get("title",""),
         url=d.get("url",""), tldr=d.get("tldr",""), trick=d.get("key_trick",""),
         axes_human=axes_human, body=raw["body"][:blen],
@@ -134,10 +139,24 @@ def do_one(d):
     if out.exists():
         with _lock:_n["skip"]+=1; return
     try:
-        md = ask(build(d, raw), system=SYSTEM, thinking=True, temperature=0.4,
-                 max_tokens=7000, timeout=400)
-        md = md.strip()
-        if md.startswith("```"): md = md.strip("`"); md = md[md.find("\n")+1:]
+        prompt = build(d, raw)
+        for attempt in range(2):
+            md = ask(prompt, system=SYSTEM, thinking=True, temperature=0.4,
+                     max_tokens=7000, timeout=400).strip()
+            if md.startswith("```"):
+                md = md.split("\n", 1)[1].rsplit("```", 1)[0].strip()
+            try:
+                validate_page(md, raw, d)
+                break
+            except ValueError as error:
+                # Private draft evidence only; published pages and the search index stay intact.
+                rejected = ROOT / "data/rejected"
+                rejected.mkdir(parents=True, exist_ok=True)
+                (rejected / (str(d["msgid"]) + f"-attempt{attempt+1}.md")).write_text(md)
+                (rejected / (str(d["msgid"]) + ".reason")).write_text(str(error))
+                if attempt == 1:
+                    raise
+                prompt = build(d, raw) + "\n上次草稿未通過機械品質檢查：" + str(error) + "。請依原始規則重寫，不可猜測或補造缺失值；無來源支持的實證數字寫未披露。"
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(md)
         with _lock:
@@ -170,3 +189,4 @@ def main():
 
 if __name__=="__main__":
     main()
+    sys.exit(1 if _n["fail"] else 0)

@@ -2,7 +2,7 @@
 
 > **本質衝突**：自動化因子研究把「一晚上跑一萬個候選」變成護城河，但每多測一個候選就多花掉一份統計顯著性——搜索吞吐買到的是廣度，付掉的是可信度。兩極不能靠「把校正加進迴圈」化解，因為反過擬合指標一旦成為搜索目標就失效（Goodhart）。唯一可行的形態是**分層**：搜索層自由跑，驗證層在迴圈之外、且迴圈不得對它優化。
 
-**Status:** v0.6 — Opus 手寫綜合。證據底盤來自 2026-07-22 的一次對抗式文獻審計（6 個檢索角度 / 25 個來源 / 119 條 claim 抽取 / 25 條進三票對抗驗證 → 17 條確認、8 條推翻），完整紀錄見 [審計報告](/reports/deep-research/2026-07-22-autoresearch-audit)；實戰對照組來自一份五案全結的預註冊研究計畫，見 [投資哲學量化](/use-cases/philosophy-quantification)。
+**Status:** v0.6 — Opus 手寫綜合。證據底盤來自 2026-07-22 的一次對抗式文獻審計（6 個檢索角度 / 25 個來源 / 119 條 claim 抽取 / 25 條進三票對抗驗證 → 17 條確認、8 條推翻），完整紀錄見 [審計報告](../../reports/deep-research/2026-07-22-autoresearch-audit.md)；實戰對照組來自一份五案全結的預註冊研究計畫，見 [投資哲學量化](../../use-cases/philosophy-quantification.md)。
 
 ## 中心張力
 
@@ -10,13 +10,13 @@
 
 這條張力的兩極不是兩種方法族，是兩種**對「發現」的記帳方式**。
 
-**搜索極**把研究產能當作第一性。GP / 符號回歸把公式當可搜索的符號樹，RL 把它寫成 MDP 序列決策，LLM agent 再把「想法→因子」的認知摩擦壓到近零——[AlphaForge](/foundations/factor-mining/alphaforge) 的 proxy optimizer、[Alpha2](/foundations/factor-mining/alpha2) 的 MCTS 指令流、[AlphaQCM](/foundations/factor-mining/alphaqcm) 的無偏方差探索獎勵、[AlphaAgent](/foundations/factor-mining/alphaagent) 的三智能體閉環，全都在同一個方向上加速：**單位時間內能評估多少個候選**。這一極的世界觀是工程的——搜索空間巨大、獎勵稀疏、探索效率就是一切。
+**搜索極**把研究產能當作第一性。GP / 符號回歸把公式當可搜索的符號樹，RL 把它寫成 MDP 序列決策，LLM agent 再把「想法→因子」的認知摩擦壓到近零——[AlphaForge](../../foundations/factor-mining/alphaforge.md) 的 proxy optimizer、[Alpha2](../../foundations/factor-mining/alpha2.md) 的 MCTS 指令流、[AlphaQCM](../../foundations/factor-mining/alphaqcm.md) 的無偏方差探索獎勵、[AlphaAgent](../../foundations/factor-mining/alphaagent.md) 的三智能體閉環，全都在同一個方向上加速：**單位時間內能評估多少個候選**。這一極的世界觀是工程的——搜索空間巨大、獎勵稀疏、探索效率就是一切。
 
-**驗證極**把「試了幾次」當作第一性。它的世界觀是統計的：一個回測的可信度不是它自己的性質，而是它與**所有沒被展示出來的候選**之間的關係。[經驗貝葉斯](/foundations/factor-mining/empirical-bayes) 的收縮、[3 萬因子 vs 同行審議](/foundations/factor-mining/factor-zoo-vs-peer-review) 的多重檢驗校正、[LLM Factor Lab](/foundations/factor-mining/llm-factor-lab) 把 280 個候選過完 FF5 / 異象賽馬只剩個位數——這一極做的全是同一件事：**把 trial count 還原到顯著性裡去**。
+**驗證極**把「試了幾次」當作第一性。它的世界觀是統計的：一個回測的可信度不是它自己的性質，而是它與**所有沒被展示出來的候選**之間的關係。[經驗貝葉斯](../../foundations/factor-mining/empirical-bayes.md) 的收縮、[3 萬因子 vs 同行審議](../../foundations/factor-mining/factor-zoo-vs-peer-review.md) 的多重檢驗校正、[LLM Factor Lab](../../foundations/factor-mining/llm-factor-lab.md) 把 280 個候選過完 FF5 / 異象賽馬只剩個位數——這一極做的全是同一件事：**把 trial count 還原到顯著性裡去**。
 
 兩極的衝突之所以是**結構性**的而非可調和的，靠三件已驗證的事實撐起來。
 
-**第一，搜索極在方法論上是空的。** 對 [AlphaGen](https://arxiv.org/abs/2306.12964)（KDD'23）、[AlphaQCM](/foundations/factor-mining/alphaqcm)（ICML'25）、[TLRS](https://arxiv.org/html/2507.20263)、[RiskMiner](https://arxiv.org/abs/2402.07080)、[AlphaEval](/foundations/evaluation-benchmarks/alphaeval) 做全文關鍵字檢索，`multiple testing` / `data snooping` / `deflated Sharpe` / `PBO` / `CSCV` / `White's Reality Check` / `false discovery` / `Bonferroni` 的出現次數**全部是 0**。唯一的防線是「用驗證集選模型」，而那個選擇動作本身就是一次未校正的選擇偏誤。這不是苛責個別論文——這是整個生成側次領域的共同缺口。（RiskMiner 更走反方向：它的 risk-**seeking** MCTS 明確優化最好情況而非平均情況，是多重性防護的反面。）
+**第一，搜索極在方法論上是空的。** 對 [AlphaGen](https://arxiv.org/abs/2306.12964)（KDD'23）、[AlphaQCM](../../foundations/factor-mining/alphaqcm.md)（ICML'25）、[TLRS](https://arxiv.org/html/2507.20263)、[RiskMiner](https://arxiv.org/abs/2402.07080)、[AlphaEval](../../foundations/evaluation-benchmarks/alphaeval.md) 做全文關鍵字檢索，`multiple testing` / `data snooping` / `deflated Sharpe` / `PBO` / `CSCV` / `White's Reality Check` / `false discovery` / `Bonferroni` 的出現次數**全部是 0**。唯一的防線是「用驗證集選模型」，而那個選擇動作本身就是一次未校正的選擇偏誤。這不是苛責個別論文——這是整個生成側次領域的共同缺口。（RiskMiner 更走反方向：它的 risk-**seeking** MCTS 明確優化最好情況而非平均情況，是多重性防護的反面。）
 
 **第二，這個缺口在數學上是致命的，不是學術潔癖。** Bailey / Borwein / López de Prado / Zhu 的示範實驗：純隨機漫步生成 1,000 天日價，4 參數月度規則掃 22×20×10×2 = **8,800 個組合**，勝出者樣本內年化 Sharpe **1.27**，PSR 統計量 2.83——按常規檢驗，「真 Sharpe 為負」的機率不到 1%。而 CSCV 給出的 PBO 是 **55%**，約 **53% 的樣本外 Sharpe 是負的**。原文一句話點破：「5% 偽陽性率只在你**恰好測一次**時成立。」自動化研究迴圈的定義就是「不只測一次」。
 
@@ -28,7 +28,7 @@
 
 所以：把 PBO 當 fitness 會毀掉 PBO；把 holdout 當唯一閘門則對 trial count 完全失明。兩極之間**沒有平滑滑塊**——這正是它有資格成為一張獨立張力圖的原因。可行解只有一種形態：**分層**。搜索層可以任意自由，但驗證層必須物理性地在迴圈之外，且迴圈**不得對它優化**，代價是驗證層的每一次使用都是不可再生資源。
 
-與[圖 6 人機協同 vs 全自動智能體](/crossing/human-in-loop-vs-autonomous-agent)的分工要說清楚：圖 6 判的是**決策權與問責在誰手上**，失效模式是同質化踩踏與問責真空；本圖判的是**發現的統計效力怎麼記帳**，失效模式是偽發現被常規檢驗蓋章放行。兩者壓在同一根軸（人機協作度）上，但一個看治理、一個看認識論——自治度上調一格，圖 6 要求護欄同步上調，本圖要求**trial count 的帳本同步上調**。
+與[圖 6 人機協同 vs 全自動智能體](../human-in-loop-vs-autonomous-agent/overview.md)的分工要說清楚：圖 6 判的是**決策權與問責在誰手上**，失效模式是同質化踩踏與問責真空；本圖判的是**發現的統計效力怎麼記帳**，失效模式是偽發現被常規檢驗蓋章放行。兩者壓在同一根軸（人機協作度）上，但一個看治理、一個看認識論——自治度上調一格，圖 6 要求護欄同步上調，本圖要求**trial count 的帳本同步上調**。
 
 ```mermaid
 flowchart TB
@@ -80,7 +80,7 @@ flowchart TB
 
 ## 三個坑，全部帶可查數字
 
-**坑一：延長 holdout，IC 腰斬。** 這是全域最強的一份不利證據，而且來自方法**自己的作者**。[AlphaQCM](/foundations/factor-mining/alphaqcm) 附錄 G.3 把測試窗從 2021/01–2022/12 延長到 2021/01–2024/12，訓練與驗證完全不動：
+**坑一：延長 holdout，IC 腰斬。** 這是全域最強的一份不利證據，而且來自方法**自己的作者**。[AlphaQCM](../../foundations/factor-mining/alphaqcm.md) 附錄 G.3 把測試窗從 2021/01–2022/12 延長到 2021/01–2024/12，訓練與驗證完全不動：
 
 | 方法 / 宇宙 | 2021-2022 IC | 2021-2024 IC |
 |---|--:|--:|
@@ -93,9 +93,9 @@ flowchart TB
 
 **坑二：單次運行的結果不可重現。** 同一份 ICML 論文的 10 種子表：GP + 互相關過濾在全市場宇宙是 **IC 0.84% ± 2.27%**；GP 無過濾 1.32% ± 2.01%；PPO + 過濾 2.15% ± 1.86%。而 AlphaQCM 在 CSI 300 上贏 AlphaGen 的幅度是 **0.36%**——**小於兩者各自的種子離散度**（1.03% / 0.94%）。要精確：以 10 個種子算，PPO + 過濾的均值標準誤是 0.59%（t ≈ 3.7），它並非「與零無異」；真正與零無異的是 GP + 過濾（t ≈ 1.17）。可辯護的說法是「**單次運行不可靠，且有實質機率落在負 IC**」，不是「全都是零」。另外那些 GP/PPO 基線是由競爭方法的作者自己實作調參的——經典的欠調基線設定，所以「GP 一無是處」是編輯性修飾，論文自己只說 suboptimal。
 
-**坑三：評估協定本身就是坑。** 頭條數字幾乎清一色是截面 IC/RankIC，沒有淨成本報酬、沒有風險調整、沒有多重性校正。TLRS 的頭條是「RankIC 相對提升 9.29%」，摘要裡沒有任何報酬 / Sharpe / 回撤 / 換手數字。AlphaQCM 明文「我們選擇 IC 作為評估樣本外表現最重要的指標」，四張結果表全是 IC，三張圖沒有一條淨值曲線。最露骨的是 [AlphaAgent](/foundations/factor-mining/alphaagent)——這一族裡數字最像組合的一個：CSI 500 年化超額 11.00% / IR 1.488 / MDD −9.36%，S&P 500 8.74% / IR 1.055 / MDD −9.10%，看起來可部署。但成本模型是 CSI 500 買 0.05% / 賣 0.15%，**S&P 500 只收賣出 0.05%，買入免費，無價差、無衝擊、無借券**；而那個 IR 1.055 建立在 **IC 0.0056** 上——接近零的截面預測力配 IR 破 1，是一個只有在成本近乎為零時才成立的組合。連這一極最好的數字，都撐在一個不會存在的成本假設上。
+**坑三：評估協定本身就是坑。** 頭條數字幾乎清一色是截面 IC/RankIC，沒有淨成本報酬、沒有風險調整、沒有多重性校正。TLRS 的頭條是「RankIC 相對提升 9.29%」，摘要裡沒有任何報酬 / Sharpe / 回撤 / 換手數字。AlphaQCM 明文「我們選擇 IC 作為評估樣本外表現最重要的指標」，四張結果表全是 IC，三張圖沒有一條淨值曲線。最露骨的是 [AlphaAgent](../../foundations/factor-mining/alphaagent.md)——這一族裡數字最像組合的一個：CSI 500 年化超額 11.00% / IR 1.488 / MDD −9.36%，S&P 500 8.74% / IR 1.055 / MDD −9.10%，看起來可部署。但成本模型是 CSI 500 買 0.05% / 賣 0.15%，**S&P 500 只收賣出 0.05%，買入免費，無價差、無衝擊、無借券**；而那個 IR 1.055 建立在 **IC 0.0056** 上——接近零的截面預測力配 IR 破 1，是一個只有在成本近乎為零時才成立的組合。連這一極最好的數字，都撐在一個不會存在的成本假設上。
 
-> 連 [AlphaEval](/foundations/evaluation-benchmarks/alphaeval) 這個以「修好評估」為賣點的工作也沒補上這個洞：它的五個維度（預測力、時序穩定、擾動保真、金融邏輯、多樣性）沒有任何一項含 trial 調整；全文檢索 `multiple testing` / `deflated Sharpe` / `PBO` / `CSCV` / `data snooping` / `false discovery` 在 v1 與 v2 皆為 0。它是把多重性問題**換題**，不是**解題**。
+> 連 [AlphaEval](../../foundations/evaluation-benchmarks/alphaeval.md) 這個以「修好評估」為賣點的工作也沒補上這個洞：它的五個維度（預測力、時序穩定、擾動保真、金融邏輯、多樣性）沒有任何一項含 trial 調整；全文檢索 `multiple testing` / `deflated Sharpe` / `PBO` / `CSCV` / `data snooping` / `false discovery` 在 v1 與 v2 皆為 0。它是把多重性問題**換題**，不是**解題**。
 
 ## 何時選哪邊 / 何時崩
 
@@ -128,9 +128,9 @@ flowchart TB
 
 ## 代表方法
 
-**搜索極（本手冊已解構）**：[AlphaForge](/foundations/factor-mining/alphaforge) · [Alpha2](/foundations/factor-mining/alpha2) · [AlphaEvolve](/foundations/factor-mining/alphaevolve) · [AlphaQCM](/foundations/factor-mining/alphaqcm) · [AlphaAgent](/foundations/factor-mining/alphaagent) · [AlphaAgentEvo](/foundations/factor-mining/alphaagentevo) · [Alpha-GPT](/foundations/factor-mining/alpha-gpt) · [Alpha-R1](/foundations/factor-mining/alpha-r1) · [AlphaSAGE](/foundations/factor-mining/alphasage) · [LLM+MCTS Alpha Mining](/foundations/factor-mining/llm-mcts-alpha-mining) · [Style Miner](/foundations/factor-mining/style-miner)
+**搜索極（本手冊已解構）**：[AlphaForge](../../foundations/factor-mining/alphaforge.md) · [Alpha2](../../foundations/factor-mining/alpha2.md) · [AlphaEvolve](../../foundations/factor-mining/alphaevolve.md) · [AlphaQCM](../../foundations/factor-mining/alphaqcm.md) · [AlphaAgent](../../foundations/factor-mining/alphaagent.md) · [AlphaAgentEvo](../../foundations/factor-mining/alphaagentevo.md) · [Alpha-GPT](../../foundations/factor-mining/alpha-gpt.md) · [Alpha-R1](../../foundations/factor-mining/alpha-r1.md) · [AlphaSAGE](../../foundations/factor-mining/alphasage.md) · [LLM+MCTS Alpha Mining](../../foundations/factor-mining/llm-mcts-alpha-mining.md) · [Style Miner](../../foundations/factor-mining/style-miner.md)
 
-**驗證極（本手冊已解構）**：[經驗貝葉斯](/foundations/factor-mining/empirical-bayes) · [3 萬因子 vs 同行審議](/foundations/factor-mining/factor-zoo-vs-peer-review) · [LLM Factor Lab](/foundations/factor-mining/llm-factor-lab) · [HF9 / Post-Adaptive-LASSO](/foundations/factor-mining/hf9-post-adaptive-lasso) · [Comprehensive Crowded Factor](/foundations/factor-mining/comprehensive-crowded-factor) · [AlphaEval](/foundations/evaluation-benchmarks/alphaeval) · [Base-Rate-Honest Benchmark](/foundations/evaluation-benchmarks/base-rate-honest-benchmark) · [Cost-Aware Execution Filter](/foundations/evaluation-benchmarks/cost-aware-execution-filter)
+**驗證極（本手冊已解構）**：[經驗貝葉斯](../../foundations/factor-mining/empirical-bayes.md) · [3 萬因子 vs 同行審議](../../foundations/factor-mining/factor-zoo-vs-peer-review.md) · [LLM Factor Lab](../../foundations/factor-mining/llm-factor-lab.md) · [HF9 / Post-Adaptive-LASSO](../../foundations/factor-mining/hf9-post-adaptive-lasso.md) · [Comprehensive Crowded Factor](../../foundations/factor-mining/comprehensive-crowded-factor.md) · [AlphaEval](../../foundations/evaluation-benchmarks/alphaeval.md) · [Base-Rate-Honest Benchmark](../../foundations/evaluation-benchmarks/base-rate-honest-benchmark.md) · [Cost-Aware Execution Filter](../../foundations/evaluation-benchmarks/cost-aware-execution-filter.md)
 
 **註冊行（尚無解構頁，但在本張力裡被反覆引用）**：
 - `AlphaGen`（KDD 2023, arXiv 2306.12964）——全族公共基線，**本手冊尚無獨立頁**，卻是幾乎每張 §7 對照表的參照點。建議優先補。
@@ -141,7 +141,7 @@ flowchart TB
 
 ## 一條與本手冊既有裁決的張力（不掩蓋）
 
-[因子挖掘全景](/guides/factor-mining) 的「張力四」裁決是：**「把研發預算從『造更多因子』轉到『更狠的多重檢驗校正 + 已知因子吸收』」**，並引 [3 萬因子 vs 同行審議](/foundations/factor-mining/factor-zoo-vs-peer-review) 支持「數據挖掘因子在嚴格校正下不遜於同行評審因子」。
+[因子挖掘全景](../../guides/factor-mining.md) 的「張力四」裁決是：**「把研發預算從『造更多因子』轉到『更狠的多重檢驗校正 + 已知因子吸收』」**，並引 [3 萬因子 vs 同行審議](../../foundations/factor-mining/factor-zoo-vs-peer-review.md) 支持「數據挖掘因子在嚴格校正下不遜於同行評審因子」。
 
 本張力圖的審計結果**支持這個裁決的方向，但收窄它的可實施性**，兩點修正：
 
@@ -168,4 +168,4 @@ flowchart TB
 
 ---
 
-**上一張** · [圖 6 人機協同 vs 全自動智能體](/crossing/human-in-loop-vs-autonomous-agent) ｜ **回** [Crossing 總覽](/crossing/overview) ｜ **證據底盤** [審計報告](/reports/deep-research/2026-07-22-autoresearch-audit) · [實戰對照組](/use-cases/philosophy-quantification) ｜ **落地** [自動化研究迴圈建造指南](/guides/autoresearch-loop)
+**上一張** · [圖 6 人機協同 vs 全自動智能體](../human-in-loop-vs-autonomous-agent/overview.md) ｜ **回** [Crossing 總覽](../overview.md) ｜ **證據底盤** [審計報告](../../reports/deep-research/2026-07-22-autoresearch-audit.md) · [實戰對照組](../../use-cases/philosophy-quantification.md) ｜ **落地** [自動化研究迴圈建造指南](../../guides/autoresearch-loop.md)

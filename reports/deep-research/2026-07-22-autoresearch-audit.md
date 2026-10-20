@@ -1,6 +1,6 @@
 # 審計報告 · 自動化因子研究系統的可驗證成效與公開失敗（2026-07-22）
 
-> **這是一份證據紀錄，不是綜述。** 它保留了完整的審計過程、通過的 17 條主張、**被殺掉的 8 條主張**、以及所有已知邊界。結論的解讀見 [Crossing · 自動化搜索 vs 預註冊驗證](/crossing/autoresearch-vs-preregistration)。
+> **這是一份證據紀錄，不是綜述。** 它保留了完整的審計過程、通過的 17 條主張、**被殺掉的 8 條主張**、以及所有已知邊界。結論的解讀見 [Crossing · 自動化搜索 vs 預註冊驗證](../../crossing/autoresearch-vs-preregistration/overview.md)。
 
 **Status:** v1.0 — 對抗式文獻審計，2026-07-22 執行。所有引文皆逐字核對原始 PDF/HTML。
 
@@ -166,7 +166,7 @@ AlphaAgent 摘要逐字：「遺傳規劃等傳統方法容易快速 alpha 衰�
 
 > **第 1、2 條特別值得警告**：「因子動物園有六成到八成五複現失敗」是中文量化討論裡最常被引用的一組數字之一。它**沒有以上述形式通過驗證**。要用請直接回 NBER 工作論文原文逐字核對。
 >
-> **第 7、8 條的性質不同**：那是利害關係方報告的競爭對手成績。本手冊的 [AlphaAgent 解構頁](/foundations/factor-mining/alphaagent) 目前引用了第 7 條的衰減對照作為「真實抗衰減能力體現」——該引用應降級為「論文自述、未經獨立驗證」。
+> **第 7、8 條的性質不同**：那是利害關係方報告的競爭對手成績。本手冊的 [AlphaAgent 解構頁](../../foundations/factor-mining/alphaagent.md) 目前引用了第 7 條的衰減對照作為「真實抗衰減能力體現」——該引用應降級為「論文自述、未經獨立驗證」。
 
 ## 已知邊界
 
@@ -211,4 +211,4 @@ AlphaAgent 摘要逐字：「遺傳規劃等傳統方法容易快速 alpha 衰�
 
 ---
 
-**解讀** → [Crossing · 自動化搜索 vs 預註冊驗證](/crossing/autoresearch-vs-preregistration) ｜ **落地** → [自動化研究迴圈建造指南](/guides/autoresearch-loop) ｜ **實戰對照組** → [投資哲學量化](/use-cases/philosophy-quantification)
+**解讀** → [Crossing · 自動化搜索 vs 預註冊驗證](../../crossing/autoresearch-vs-preregistration/overview.md) ｜ **落地** → [自動化研究迴圈建造指南](../../guides/autoresearch-loop.md) ｜ **實戰對照組** → [投資哲學量化](../../use-cases/philosophy-quantification.md)

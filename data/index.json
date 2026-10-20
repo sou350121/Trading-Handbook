@@ -3796,5 +3796,131 @@
     "itemidx": "1",
     "create_time": 1788341603,
     "date": "2026-09-02"
+  },
+  {
+    "pos": 423,
+    "title": "市场状态识别下的多轴交易信号",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247494492&idx=1&sn=857ecd9ccae0fc5f9538f39a93e38051&chksm=ce7d8c42f90a05548731192928b2c646cd8631abc53a4b4b6ee9aec8b400f91c349ce28aa5ac#rd",
+    "msgid": "2247494492",
+    "itemidx": "1",
+    "create_time": 1788499433,
+    "date": "2026-09-04"
+  },
+  {
+    "pos": 424,
+    "title": "因子—图投资组合分散化模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247494535&idx=1&sn=175ef22610a546fc63163fdd36442b0f&chksm=ce7d8c99f90a058fe0818e106520883eef52b349a952659bd484f53d1e252b95eb5ecb92d44a#rd",
+    "msgid": "2247494535",
+    "itemidx": "1",
+    "create_time": 1788864385,
+    "date": "2026-09-08"
+  },
+  {
+    "pos": 425,
+    "title": "谷歌 x 剑桥 | AutoScientist-Quant：面向量化的自动研究智能体",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247494550&idx=1&sn=85acfefc4bd17b871285b8b81c4fb7d0&chksm=ce7d8c88f90a059ebb5f6788337b7d8ec861f1d0cb68301e5e92db4f8eb016fc4634c6b1e2be#rd",
+    "msgid": "2247494550",
+    "itemidx": "1",
+    "create_time": 1789038213,
+    "date": "2026-09-10"
+  },
+  {
+    "pos": 426,
+    "title": "AI 对冲基金的Alpha为何消失？",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247494574&idx=1&sn=d3e2063e26041296ce0227e923ab0a38&chksm=ce7d8cb0f90a05a6c10be2aac49b4a6d19203274fe47bf60ee76c522312be6cf37f9502ed9db#rd",
+    "msgid": "2247494574",
+    "itemidx": "1",
+    "create_time": 1789391730,
+    "date": "2026-09-14"
+  },
+  {
+    "pos": 427,
+    "title": "英伟达 | 聚合订单簿下的微观区间识别与 FIFO 排队偏差",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247494580&idx=1&sn=05d0dd83d9863ba1d6bbbee5f3797378&chksm=ce7d8caaf90a05bcc9517a8d3cb492c7967f3c29644fe32239af28e34c125954d5f6c7531c19#rd",
+    "msgid": "2247494580",
+    "itemidx": "1",
+    "create_time": 1789545600,
+    "date": "2026-09-16"
+  },
+  {
+    "pos": 428,
+    "title": "黑翼资产｜告别固定窗口：自适应时序架构 RAVEN",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247494608&idx=1&sn=b7b597629812f2a7579d048d55ddcd7f&chksm=ce7d8ccef90a05d8538d0b47d9e9c428442362241d167b1e4f5d857de28fff40fddebf9f3f65#rd",
+    "msgid": "2247494608",
+    "itemidx": "1",
+    "create_time": 1790064000,
+    "date": "2026-09-22"
+  },
+  {
+    "pos": 429,
+    "title": "易方达｜预测次日收益，模型一定要用次日收益做标签吗？",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247494623&idx=1&sn=60bcccd99dbfcfe13fda6d35d3fb7e8a&chksm=ce7d8cc1f90a05d7a1954e2d8feaded835cc07a100fae37c6ca571c6b518b53b92b8ecea432f#rd",
+    "msgid": "2247494623",
+    "itemidx": "1",
+    "create_time": 1790640000,
+    "date": "2026-09-29"
+  },
+  {
+    "pos": 430,
+    "title": "华尔街顶级阵容联手：如何评测金融大模型",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247494631&idx=1&sn=152d44ad3cab96a2a66d7167c6500410&chksm=ce7d8cf9f90a05ef0d10de213cbd39fe540cabd5c4a7c17f6e367d0e17e12666ce50366253b6#rd",
+    "msgid": "2247494631",
+    "itemidx": "1",
+    "create_time": 1790812800,
+    "date": "2026-10-01"
+  },
+  {
+    "pos": 431,
+    "title": "情绪指标的非对称陷阱：来自百万新闻的证据",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247494643&idx=1&sn=c585db48ed59c02311e7fcbdcc81923e&chksm=ce7d8cedf90a05fb4cb06defa27c090f4e8807515e68fabd8ba50d64aa1192f6a87d89602511#rd",
+    "msgid": "2247494643",
+    "itemidx": "1",
+    "create_time": 1791284850,
+    "date": "2026-10-06"
+  },
+  {
+    "pos": 432,
+    "title": "AI 因子挖掘，为什么依然跑不赢十年前的 Alpha101？",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247494650&idx=1&sn=eb5a584ef8bc8f139cd9f64a83352627&chksm=ce7d8ce4f90a05f2977a6d755814938517199c61d596fb73e48b321f5153b2e342a68c6a418d#rd",
+    "msgid": "2247494650",
+    "itemidx": "1",
+    "create_time": 1791415800,
+    "date": "2026-10-07"
+  },
+  {
+    "pos": 433,
+    "title": "传统因子与深度学习如何结合？基于LeCun世界模型JEPA的预测框架",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247494688&idx=1&sn=c411c541ac401d77a55a8a198678f1b5&chksm=ce7d8b3ef90a022823955146b28737536eece8691b8719f170c7865bc4f59cad77ada861dafa#rd",
+    "msgid": "2247494688",
+    "itemidx": "1",
+    "create_time": 1791793781,
+    "date": "2026-10-12"
+  },
+  {
+    "pos": 434,
+    "title": "做了一个没人用的金融 Agent 之后",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247494689&idx=1&sn=18e658bb4c86eedbddeaa82fec60d9df&chksm=ce7d8b3ff90a0229469dda72a8f761305c00170be91a0cfe22701c6e9a5d0408c301ac067444#rd",
+    "msgid": "2247494689",
+    "itemidx": "1",
+    "create_time": 1791878400,
+    "date": "2026-10-13"
+  },
+  {
+    "pos": 435,
+    "title": "牛津大学｜因子有效却不赚钱？机器学习端到端链式归因与增强",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247494697&idx=1&sn=255e7eabd8f05c8b92bae8279ba12a9d&chksm=ce7d8b37f90a0221c359c5ea84c30ebb9341feda112c6b63259e949176432bfd2276abd29f22#rd",
+    "msgid": "2247494697",
+    "itemidx": "1",
+    "create_time": 1792020600,
+    "date": "2026-10-14"
+  },
+  {
+    "pos": 436,
+    "title": "比过拟合更隐蔽：一套日内系统逐单对账挖出的六类系统缺陷",
+    "url": "https://mp.weixin.qq.com/s?__biz=Mzg2MzAwNzM0NQ==&mid=2247494713&idx=1&sn=aaa94f4f654a4f791b8836d5e7ef87ff&chksm=ce7d8b27f90a0231b04d6a62fe4386091de49dc8a7597a42759557ff65577f4e5c562ba782f9#rd",
+    "msgid": "2247494713",
+    "itemidx": "1",
+    "create_time": 1792405501,
+    "date": "2026-10-19"
   }
 ]

@@ -47,15 +47,15 @@ mindmap
 
 | Zone | 名稱 | 收什麼 | 容量估計 |
 |---|---|---|---|
-| [`time-series-forecasting`](/foundations/time-series-forecasting/overview) | 时序预测基础 | 面向价格/收益率/波动率的序列建模，涵盖Transformer变体、RNN/LSTM、MLP/Mixer、状态空间模型及频率自适应架构 | ~60 |
-| [`graph-networks`](/foundations/graph-networks/overview) | 图网络与关系建模 | 利用股票间相关性、产业链、分析师覆盖或动态共现关系构建异构图/动态图，进行趋势预测、风格挖掘与组合构建 | ~35 |
-| [`reinforcement-learning`](/foundations/reinforcement-learning/overview) | 强化学习与策略搜索 | DRL/MARL在选股、调仓、做市、执行与对冲中的应用，涵盖PPO/SAC/分布RL、奖励函数设计与环境模拟 | ~55 |
-| [`llm-agentic`](/foundations/llm-agentic/overview) | 大模型与智能体 | LLM在因子挖掘、情绪分析、研报生成、RAG增强及多智能体交易工作流中的适配、微调与推理架构 | ~50 |
-| [`market-microstructure`](/foundations/market-microstructure/overview) | 微观结构与高频 | 限价订单簿(LOB)建模、订单流信号、做市策略、高频套利、微观流动性与价格形成机制 | ~40 |
-| [`factor-mining`](/foundations/factor-mining/overview) | 因子挖掘与特征工程 | 公式型Alpha生成、AutoML/遗传编程挖掘、特征选择、风格因子构造、信号衰减与拥挤度分析 | ~45 |
-| [`portfolio-optimization`](/foundations/portfolio-optimization/overview) | 组合优化与资产配置 | 均值方差/风险平价/Black-Litterman、稀疏优化、执行算法(VWAP/冲击成本)、多资产轮动与战术配置 | ~40 |
-| [`causal-structural`](/foundations/causal-structural/overview) | 因果推断与结构建模 | 因果发现、反事实推理、结构VAR、因果特征选择、新闻/公告对价格的因果路径建模 | ~25 |
-| [`evaluation-benchmarks`](/foundations/evaluation-benchmarks/overview) | 评测基准与失效分析 | 回测防穿越、样本外稳定性、过拟合检测、鲁棒性量化、公开基准(TFB/QuantBench)与模型衰减归因 | ~25 |
-| [`data-generation-augmentation`](/foundations/data-generation-augmentation/overview) | 数据生成与增强 | GAN/扩散模型合成金融时序、缺失值插补、数据增强、分布外泛化与对抗样本防御 | ~24 |
+| [`time-series-forecasting`](../foundations/time-series-forecasting/overview.md) | 时序预测基础 | 面向价格/收益率/波动率的序列建模，涵盖Transformer变体、RNN/LSTM、MLP/Mixer、状态空间模型及频率自适应架构 | ~60 |
+| [`graph-networks`](../foundations/graph-networks/overview.md) | 图网络与关系建模 | 利用股票间相关性、产业链、分析师覆盖或动态共现关系构建异构图/动态图，进行趋势预测、风格挖掘与组合构建 | ~35 |
+| [`reinforcement-learning`](../foundations/reinforcement-learning/overview.md) | 强化学习与策略搜索 | DRL/MARL在选股、调仓、做市、执行与对冲中的应用，涵盖PPO/SAC/分布RL、奖励函数设计与环境模拟 | ~55 |
+| [`llm-agentic`](../foundations/llm-agentic/overview.md) | 大模型与智能体 | LLM在因子挖掘、情绪分析、研报生成、RAG增强及多智能体交易工作流中的适配、微调与推理架构 | ~50 |
+| [`market-microstructure`](../foundations/market-microstructure/overview.md) | 微观结构与高频 | 限价订单簿(LOB)建模、订单流信号、做市策略、高频套利、微观流动性与价格形成机制 | ~40 |
+| [`factor-mining`](../foundations/factor-mining/overview.md) | 因子挖掘与特征工程 | 公式型Alpha生成、AutoML/遗传编程挖掘、特征选择、风格因子构造、信号衰减与拥挤度分析 | ~45 |
+| [`portfolio-optimization`](../foundations/portfolio-optimization/overview.md) | 组合优化与资产配置 | 均值方差/风险平价/Black-Litterman、稀疏优化、执行算法(VWAP/冲击成本)、多资产轮动与战术配置 | ~40 |
+| [`causal-structural`](../foundations/causal-structural/overview.md) | 因果推断与结构建模 | 因果发现、反事实推理、结构VAR、因果特征选择、新闻/公告对价格的因果路径建模 | ~25 |
+| [`evaluation-benchmarks`](../foundations/evaluation-benchmarks/overview.md) | 评测基准与失效分析 | 回测防穿越、样本外稳定性、过拟合检测、鲁棒性量化、公开基准(TFB/QuantBench)与模型衰减归因 | ~25 |
+| [`data-generation-augmentation`](../foundations/data-generation-augmentation/overview.md) | 数据生成与增强 | GAN/扩散模型合成金融时序、缺失值插补、数据增强、分布外泛化与对抗样本防御 | ~24 |
 
 > 容量估計是設計時的配額，不是實際數；實際歸類以 Pass A（`data/distill/`）為準。

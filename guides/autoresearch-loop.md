@@ -2,7 +2,7 @@
 
 > 這一族坐落在「研究流程」而非「方法族」的層級。它真正在賭的是一句話：**當你把因子/策略研究自動化，你買到的是搜索吞吐，付掉的是統計顯著性——而這筆帳如果不記，你會拿到一張漂亮的、通過所有檢驗的偽發現證書。**
 >
-> 這不是一篇綜述，是一份**建造指南**。它的每一條約束都能追溯到 [自動化搜索 vs 預註冊驗證](/crossing/autoresearch-vs-preregistration) 裡經對抗驗證的證據，或一份 [五案全結的實戰紀錄](/use-cases/philosophy-quantification)。
+> 這不是一篇綜述，是一份**建造指南**。它的每一條約束都能追溯到 [自動化搜索 vs 預註冊驗證](../crossing/autoresearch-vs-preregistration/overview.md) 裡經對抗驗證的證據，或一份 [五案全結的實戰紀錄](../use-cases/philosophy-quantification.md)。
 
 **Status:** v0.6 — Opus 手寫。標「**未驗證**」的部分是設計提案而非既成實踐；標「**已驗證**」的有原文出處。這份指南自己也還沒有樣本外紀錄——見文末「這份指南自己的 falsifiable 預測」。
 
@@ -107,7 +107,7 @@ Bailey / Borwein / López de Prado / Zhu 在提出 PBO/CSCV 的同一篇論文�
 
 **2. CPCV 優於單路徑與 walk-forward。**（**已驗證**）Arian, Norouzi & Seco (2024, Knowledge-Based Systems 305) 的結論：單路徑與 walk-forward 方法「在偽發現防護上有顯著缺陷」，而組合式淨化交叉驗證（CPCV）在 PBO 與 deflated Sharpe 兩項上支配它們。
 
-**3. 滾動起點是最便宜、最誠實的一關。**（**已驗證**於實戰側）[五案紀錄](/use-cases/philosophy-quantification) 裡有三案死在這一關（13F 1/6、Greenblatt 0/7、US 四引擎 4/7），而這三案在**單一固定窗**上都看起來不錯甚至很好。對照文獻側：AlphaGen 用 2020-2021 一個固定窗、AlphaQCM 用 2021-2022 一個固定窗——**兩者都不會照出這個東西**。而 AlphaQCM 自己的附錄 G.3 一旦把窗延長到 2024，IC 就從 8–9.5% 掉到 4–5.9%。
+**3. 滾動起點是最便宜、最誠實的一關。**（**已驗證**於實戰側）[五案紀錄](../use-cases/philosophy-quantification.md) 裡有三案死在這一關（13F 1/6、Greenblatt 0/7、US 四引擎 4/7），而這三案在**單一固定窗**上都看起來不錯甚至很好。對照文獻側：AlphaGen 用 2020-2021 一個固定窗、AlphaQCM 用 2021-2022 一個固定窗——**兩者都不會照出這個東西**。而 AlphaQCM 自己的附錄 G.3 一旦把窗延長到 2024，IC 就從 8–9.5% 掉到 4–5.9%。
 
 ## 五個 loop 原語 → 研究迴圈的哪一節
 
@@ -118,7 +118,7 @@ Bailey / Borwein / López de Prado / Zhu 在提出 PBO/CSCV 的同一篇論文�
 | **排程 / 自動化** | 候選生成的節奏 | 排程頻率直接決定 N 的增長率——**排程設定就是顯著性預算設定**，多數人沒意識到這一點 |
 | **Worktree 隔離** | 每個候選在乾淨副本裡評估 | 隔離解決的是檔案衝突，**不解決統計污染**；兩者容易被混為一談 |
 | **Skill / 持久知識** | 領域約束、成本模型、宇宙定義 | 把 gate 定義寫進 skill = 讓迴圈可以讀到門柱 → **門柱可被優化** → 破壞分層 |
-| **MCP / 連接器** | 資料源、回測引擎 | 資料的 point-in-time 正確性是前提，不是細節（見 [五案](/use-cases/philosophy-quantification) 的隱性現金與 QFQ 混基底事故） |
+| **MCP / 連接器** | 資料源、回測引擎 | 資料的 point-in-time 正確性是前提，不是細節（見 [五案](../use-cases/philosophy-quantification.md) 的隱性現金與 QFQ 混基底事故） |
 | **子 agent（maker/checker）** | 生成 vs 驗證分離 | **checker 若與 maker 同模型同 prompt 家族，它不是獨立驗證**，是同一個先驗投了兩票 |
 | **記憶 / 狀態** | Trial Ledger 的載體 | 狀態檔會被壓縮/輪替——**ledger 必須 append-only 且不可壓縮**，否則 N 會悄悄變小 |
 
@@ -165,4 +165,4 @@ Bailey / Borwein / López de Prado / Zhu 在提出 PBO/CSCV 的同一篇論文�
 
 ---
 
-回 [Guides 總覽](/guides/overview) ｜ 張力全圖 [自動化搜索 vs 預註冊驗證](/crossing/autoresearch-vs-preregistration) ｜ 實戰對照 [投資哲學量化](/use-cases/philosophy-quantification) ｜ 證據底盤 [審計報告](/reports/deep-research/2026-07-22-autoresearch-audit) ｜ 相關族 [因子挖掘全景](/guides/factor-mining)
+回 [Guides 總覽](overview.md) ｜ 張力全圖 [自動化搜索 vs 預註冊驗證](../crossing/autoresearch-vs-preregistration/overview.md) ｜ 實戰對照 [投資哲學量化](../use-cases/philosophy-quantification.md) ｜ 證據底盤 [審計報告](../reports/deep-research/2026-07-22-autoresearch-audit.md) ｜ 相關族 [因子挖掘全景](factor-mining.md)

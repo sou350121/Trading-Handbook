@@ -41,6 +41,8 @@ from datetime import datetime, timezone, timedelta
 # Paths
 # ---------------------------------------------------------------------------
 HERE = os.path.dirname(os.path.abspath(__file__))
+import _health
+
 ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))  # trading-handbook-work/
 DATA = os.path.join(ROOT, "data")
 RADAR_DIR = os.path.join(ROOT, "radar", "arxiv")
@@ -54,7 +56,7 @@ import _qwen  # noqa: E402
 # ---------------------------------------------------------------------------
 # arXiv API config
 # ---------------------------------------------------------------------------
-ARXIV_URL = "http://export.arxiv.org/api/query"
+ARXIV_URL = "https://export.arxiv.org/api/query"
 ATOM = "{http://www.w3.org/2005/Atom}"
 ARXIV_NS = "{http://arxiv.org/schemas/atom}"
 USER_AGENT = "trading-handbook-radar/1.0 (+https://github.com/; Pulsar q-fin radar)"
@@ -106,7 +108,7 @@ ZONE_TITLES = {
     "data-generation-augmentation": "Data Generation & Augmentation 數據生成與增強",
 }
 
-MAX_RESULTS = 100  # arXiv page size
+MAX_RESULTS = 500  # arXiv page size
 REQ_SPACING = 3.5  # seconds between requests (arXiv asks >=3s)
 BACKOFF_429 = [10, 30, 60, 60, 60]  # exponential-ish backoff, 5 tries
 _last_req_ts = [0.0]
@@ -195,11 +197,14 @@ def _parse_entries(xml_text):
         root = ET.fromstring(xml_text)
     except ET.ParseError as e:
         print(f"  XML parse error: {e}", flush=True)
-        return [], 0
+        raise ValueError("arxiv_invalid_xml")
+    if root.tag != ATOM + "feed" or root.find(f"{ATOM}entry/{ATOM}id") is not None and "api/errors" in root.findtext(f"{ATOM}entry/{ATOM}id", ""):
+        raise ValueError("arxiv_error_feed")
     total = 0
     tot_el = root.find("{http://a9.com/-/spec/opensearch/1.1/}totalResults")
-    if tot_el is not None and tot_el.text and tot_el.text.isdigit():
-        total = int(tot_el.text)
+    if tot_el is None or not tot_el.text or not tot_el.text.isdigit():
+        raise ValueError("arxiv_result_count_missing")
+    total = int(tot_el.text)
     out = []
     for entry in root.findall(f"{ATOM}entry"):
         rid = entry.findtext(f"{ATOM}id", "").strip()
@@ -245,9 +250,11 @@ def _fetch_search(search_query, since_dt):
     text API, so we sort by submittedDate desc and cut client-side)."""
     collected = []
     start = 0
+    until = datetime.now(timezone.utc).replace(hour=23, minute=59)
+    bounded = f"({search_query}) AND submittedDate:[{since_dt:%Y%m%d}0000 TO {until:%Y%m%d%H%M}]"
     while True:
         params = {
-            "search_query": search_query,
+            "search_query": bounded,
             "start": str(start),
             "max_results": str(MAX_RESULTS),
             "sortBy": "submittedDate",
@@ -257,6 +264,8 @@ def _fetch_search(search_query, since_dt):
         body = _http_get(url)
         entries, total = _parse_entries(body)
         if not entries:
+            if start < total:
+                raise ValueError("arxiv_incomplete_page")
             break
         stop = False
         for e in entries:
@@ -271,12 +280,11 @@ def _fetch_search(search_query, since_dt):
             collected.append(e)
         print(f"    page start={start}: {len(entries)} entries "
               f"(kept running total {len(collected)}, feed total~{total})", flush=True)
-        if stop or len(entries) < MAX_RESULTS:
+        if stop or start + len(entries) >= total:
             break
-        start += MAX_RESULTS
-        if start >= 2000:  # hard safety cap on pagination depth
-            print("    reached pagination safety cap (2000)", flush=True)
-            break
+        start += len(entries)
+        if start >= 10000:  # hard safety cap on pagination depth
+            raise ValueError("arxiv_pagination_cap")
     return collected
 
 
@@ -412,6 +420,8 @@ def classify_paper(paper):
     if not isinstance(obj, dict):
         print(f"    unparseable qwen reply for {paper['id']}: {str(raw)[:120]!r}", flush=True)
         return None
+    if type(obj.get("relevant")) is not bool or type(obj.get("hot")) is not bool or (obj.get("relevant") and obj.get("zone") not in ZONE_SET) or not isinstance(obj.get("one_liner_zh"), str) or not obj["one_liner_zh"].strip():
+        return None
     zone = str(obj.get("zone", "")).strip()
     if zone not in ZONE_SET:
         # qwen must not invent slugs; drop to evaluation bucket only if relevant
@@ -474,14 +484,14 @@ def render_week_page(week_id, items):
     lines = []
     lines.append(f"# arXiv Q-FIN Radar — {week_id}")
     lines.append("")
-    lines.append(f"**週期 Week:** {rng}  ")
+    lines.append(f"**掃描批次 Batch:** {week_id}（收錄批次；各列日期為論文首發日期）  ")
     lines.append(
-        f"**本週相關新論文 Relevant papers this week:** {len(relevant)} "
+        f"**本批相關論文 Relevant papers in this batch:** {len(relevant)} "
         f"（其中 ⚡ 候選深度解構 hot: {n_hot}）"
     )
     lines.append("")
     lines.append(
-        "> arXiv q-fin 每週掃描，qwen 依機制歸入手冊 10 個 zone。"
+        "> arXiv q-fin 每週掃描，DeepSeek 依機制歸入手冊 10 個 zone。"
         "⚡ = 候選深度解構（方法新穎且對讀者有可操作價值）。"
         "一句話為本手冊的分析，非摘要複述。"
     )
@@ -541,7 +551,7 @@ def render_overview(week_state):
     lines.append("")
     lines.append(
         "arXiv 的 q-fin（PM/TR/ST/CP/RM/GN）加上經關鍵詞過濾的 cs.LG / stat.ML "
-        "量化論文，每週掃描一次，由 qwen 依核心機制歸入本手冊的 10 個 zone。"
+        "量化論文，每週掃描一次，由 DeepSeek 依核心機制歸入本手冊的 10 個 zone。"
         "這讓手冊在 QuantML 語料之外多了一條前瞻性的 arXiv 進料。"
     )
     lines.append("")
@@ -601,6 +611,8 @@ def main():
 
     # cap classification budget
     to_classify = new_papers[:args.max_classify]
+    if len(to_classify) < len(new_papers):
+        _health.fail("arxiv", "classification_deferred")
     if len(new_papers) > args.max_classify:
         print(f"[classify] capping to {args.max_classify} (of {len(new_papers)} new)", flush=True)
 
@@ -614,6 +626,7 @@ def main():
         print(f"[classify] {i}/{len(to_classify)} {p['id']} :: {p['title'][:70]}", flush=True)
         cls = classify_paper(p)
         if cls is None:
+            _health.fail("arxiv", "classification_failed")
             # do NOT mark seen -> will retry next run
             continue
         processed_ids.append(p["id"])
@@ -718,4 +731,5 @@ def _print_summary(n_fetched, n_new, n_relevant, zone_counts, n_hot):
 
 
 if __name__ == "__main__":
-    main()
+    import _health
+    sys.exit(_health.run("arxiv", main))

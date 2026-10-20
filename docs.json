@@ -483,6 +483,7 @@
               "foundations/evaluation-benchmarks/art-33.md",
               "foundations/evaluation-benchmarks/art-337.md",
               "foundations/evaluation-benchmarks/art-408.md",
+              "foundations/evaluation-benchmarks/art-436.md",
               "foundations/evaluation-benchmarks/base-rate-honest-benchmark.md",
               "foundations/evaluation-benchmarks/bayes-stein-shrinkage.md",
               "foundations/evaluation-benchmarks/cost-aware-execution-filter.md",
@@ -548,7 +549,18 @@
             "group": "頂刊 Journals",
             "pages": [
               "radar/journals/overview.md",
-              "radar/journals/2026-W30.md"
+              "radar/journals/2026-W30.md",
+              "radar/journals/2026-W42.md",
+              "radar/journals/2026-W40.md",
+              "radar/journals/2026-W39.md",
+              "radar/journals/2026-W38.md",
+              "radar/journals/2026-W37.md",
+              "radar/journals/2026-W36.md",
+              "radar/journals/2026-W35.md",
+              "radar/journals/2026-W34.md",
+              "radar/journals/2026-W33.md",
+              "radar/journals/2026-W32.md",
+              "radar/journals/2026-W31.md"
             ]
           },
           {
@@ -562,7 +574,9 @@
             "group": "实践者 Practitioner",
             "pages": [
               "radar/practitioner/overview.md",
-              "radar/practitioner/2026-W29.md"
+              "radar/practitioner/2026-W29.md",
+              "radar/practitioner/2026-W42.md",
+              "radar/practitioner/2026-W34.md"
             ]
           }
         ]

@@ -38,7 +38,7 @@
 
 **張力四：因子生成能力 vs 過濾管線嚴苛度。** 這是第 4 代揭示的最反直覺的張力。[LLM Factor Lab](../foundations/factor-mining/llm-factor-lab.md) 與 [factor-zoo-vs-peer-review](../foundations/factor-mining/factor-zoo-vs-peer-review.md) 站在同一立場：生成不是瓶頸，過濾才是。前者用 FF5/q-factor/異象賽馬三重過濾把 280 個候選砍到個位數；後者證明 2.9 萬個數據挖掘因子在嚴格多重測試校正下，樣本外預測力不遜於同行評審因子。**裁決：這條張力的贏家明確——把研發預算從「造更多因子」轉到「更狠的多重檢驗校正 + 已知因子吸收」**。多重測試校正才是護城河，不是模型參數量。
 
-> **2026-07-22 補註（一次對抗式文獻審計的結果，17 條確認 / 8 條推翻，見 [審計報告](/reports/deep-research/2026-07-22-autoresearch-audit)）——上面這條裁決方向正確，但要加兩道限制：**
+> **2026-07-22 補註（一次對抗式文獻審計的結果，17 條確認 / 8 條推翻，見 [審計報告](../reports/deep-research/2026-07-22-autoresearch-audit.md)）——上面這條裁決方向正確，但要加兩道限制：**
 >
 > **一、它在生成側從未被實施。** 對 AlphaGen、[AlphaQCM](../foundations/factor-mining/alphaqcm.md)、TLRS、RiskMiner、[AlphaEval](../foundations/evaluation-benchmarks/alphaeval.md) 做全文檢索，`multiple testing` / `data snooping` / `deflated Sharpe` / `PBO` / `CSCV` / `White's Reality Check` / `false discovery` / `Bonferroni` **命中次數全部為 0**。唯一防線是驗證集選模型，而該選擇步驟本身即是未校正的選擇偏誤。所以「校正才是護城河」目前是**一塊空地**，不是既成事實。
 >

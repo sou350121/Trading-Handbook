@@ -4,13 +4,13 @@
 >
 > 手冊裡的其他頁面問「這篇 paper 的 claim 在真實市場會不會崩」。這一頁提供的是反方向的證據：**當一個人真的按預註冊紀律去測，那些最著名的投資哲學崩在哪裡、怎麼崩。**
 
-> **後繼（2026-08）**：這一頁記的是 2026-07 的**人手**預註冊五案。同一套紀律之後被自動化成一條 7×24 的迴圈（語料 15 位哲學家、四個測試模式、兩條管線有正對照與校準），它的逐期裁決在 [philab 帳本](/reports/philab-ledger/overview)。**那邊至今站得住的發現同樣是 0**，但每個負結果都帶偵測下限與覆蓋分母。
+> **後繼（2026-08）**：這一頁記的是 2026-07 的**人手**預註冊五案。同一套紀律之後被自動化成一條 7×24 的迴圈（語料 15 位哲學家、四個測試模式、兩條管線有正對照與校準），它的逐期裁決在 [philab 帳本](../reports/philab-ledger/overview.md)。**那邊至今站得住的發現同樣是 0**，但每個負結果都帶偵測下限與覆蓋分母。
 
-**Status:** v0.6 — 一手紀錄，Opus 綜合。所有數字逐字引自原始裁決文件；未計算過的一律標「未評估」。與 [自動化搜索 vs 預註冊驗證](/crossing/autoresearch-vs-preregistration) 是同一組證據的兩面：那一頁講文獻側沒有 trial 記帳，這一頁講實戰側**有**記帳時會發生什麼。
+**Status:** v0.6 — 一手紀錄，Opus 綜合。所有數字逐字引自原始裁決文件；未計算過的一律標「未評估」。與 [自動化搜索 vs 預註冊驗證](../crossing/autoresearch-vs-preregistration/overview.md) 是同一組證據的兩面：那一頁講文獻側沒有 trial 記帳，這一頁講實戰側**有**記帳時會發生什麼。
 
 ## 為什麼這頁值得存在
 
-在 [自動化搜索 vs 預註冊驗證](/crossing/autoresearch-vs-preregistration) 裡有一個經三票對抗驗證的結論：整條自動因子挖掘文獻（GP / RL / LLM agent）沒有任何一篇實施多重檢定校正，也沒有任何一套系統公開過「預註冊 + 明確 trial count + deflated Sharpe/PBO」齊備的樣本外紀錄。
+在 [自動化搜索 vs 預註冊驗證](../crossing/autoresearch-vs-preregistration/overview.md) 裡有一個經三票對抗驗證的結論：整條自動因子挖掘文獻（GP / RL / LLM agent）沒有任何一篇實施多重檢定校正，也沒有任何一套系統公開過「預註冊 + 明確 trial count + deflated Sharpe/PBO」齊備的樣本外紀錄。
 
 這一頁是那個空白的一個對照樣本。它的樣本數小（5 案、數十個變體）、宇宙窄（美股 ETF 為主 + A 股 / 13F 個股），**但它的門柱是在計算之前用 git commit 釘死的**，時間戳可查。這是文獻側普遍缺席的那一半。
 
@@ -27,7 +27,7 @@
 | **回測層** | 真實數據 + 仿真數據——它在歷史上做了什麼？ |
 | **Gap 層** | 預期 vs 實際——我事前說它會怎樣，它實際怎樣？ |
 
-> 組合層的三種相關性是這套框架最不直觀也最有用的部分：**統計相關性低不等於獨立**。兩個訊號可以月相關 0.2 但吃同一個資訊源、靠同一個邏輯賺錢——那它們在危機時會一起死。詳見 [Crossing · 自動化搜索 vs 預註冊驗證](/crossing/autoresearch-vs-preregistration) 的「效果相關性」討論。
+> 組合層的三種相關性是這套框架最不直觀也最有用的部分：**統計相關性低不等於獨立**。兩個訊號可以月相關 0.2 但吃同一個資訊源、靠同一個邏輯賺錢——那它們在危機時會一起死。詳見 [Crossing · 自動化搜索 vs 預註冊驗證](../crossing/autoresearch-vs-preregistration/overview.md) 的「效果相關性」討論。
 
 **流程紀律**（這是全部價值的來源）：
 
@@ -135,7 +135,7 @@ Dalio 式「加一個低相關資產進去」的主張，在四層框架下被�
 
 ## 對接自動化：為什麼這套紀律不能直接餵給 loop
 
-這是本頁與 [自動化搜索 vs 預註冊驗證](/crossing/autoresearch-vs-preregistration) 的接縫，也是把這套人工紀律自動化時**唯一真正危險**的地方。
+這是本頁與 [自動化搜索 vs 預註冊驗證](../crossing/autoresearch-vs-preregistration/overview.md) 的接縫，也是把這套人工紀律自動化時**唯一真正危險**的地方。
 
 上述五案的 trial count 是**手工量級**——數十個變體，人可以誠實地在心裡記帳。門柱釘死之所以有效，是因為 N 小到「通過六關」這件事本身還帶有真實資訊。
 
@@ -153,7 +153,7 @@ Dalio 式「加一個低相關資產進去」的主張，在四層框架下被�
 | 人決定何時停止 | 前置 pretest（vs 隨機搜索 null）+ 停止規則 |
 | 滾動起點 + 凍結 holdout | 同左，但 holdout 成為**不可再生資源**，每次使用都要記帳 |
 
-具體怎麼接，見 [自動化研究迴圈建造指南](/guides/autoresearch-loop)。
+具體怎麼接，見 [自動化研究迴圈建造指南](../guides/autoresearch-loop.md)。
 
 ## 誠實邊界
 
@@ -164,4 +164,4 @@ Dalio 式「加一個低相關資產進去」的主張，在四層框架下被�
 
 ---
 
-回 [Use Cases 總覽](/use-cases/overview) ｜ 方法論對照 [自動化搜索 vs 預註冊驗證](/crossing/autoresearch-vs-preregistration) ｜ 落地 [自動化研究迴圈建造指南](/guides/autoresearch-loop) ｜ 文獻證據 [審計報告](/reports/deep-research/2026-07-22-autoresearch-audit)
+回 [Use Cases 總覽](overview.md) ｜ 方法論對照 [自動化搜索 vs 預註冊驗證](../crossing/autoresearch-vs-preregistration/overview.md) ｜ 落地 [自動化研究迴圈建造指南](../guides/autoresearch-loop.md) ｜ 文獻證據 [審計報告](../reports/deep-research/2026-07-22-autoresearch-audit.md)

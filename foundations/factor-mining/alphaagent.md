@@ -86,7 +86,7 @@ ER(f) = (1 - max_{z∈Z} s(f,z)) + C(h,d,f) - δ*|features|
 
 **(d) 統計控制**：唯一的控制是對 RD-Agent 的兩兩 t 檢定，p = 0.031 / 0.011 / 0.038——這種邊際在天真的多重性校正下即失效。全文無 deflated Sharpe / PBO / data snooping 校正。搜尋批評或複現只找到論文本身、作者 GitHub 與把它當 baseline 的後續工作（Chain-of-Alpha、Alpha Jungle MCTS、EFS），**零獨立驗證**。
 
-> 仍然成立的部分：AST 相似度懲罰作為**反擁擠新穎性正則**的設計，以及論文對「LLM 生成缺乏同質化正則」的診斷。那是關於機制的論證，不是關於績效的證據。詳見 [審計報告](/reports/deep-research/2026-07-22-autoresearch-audit)。
+> 仍然成立的部分：AST 相似度懲罰作為**反擁擠新穎性正則**的設計，以及論文對「LLM 生成缺乏同質化正則」的診斷。那是關於機制的論證，不是關於績效的證據。詳見 [審計報告](../../reports/deep-research/2026-07-22-autoresearch-audit.md)。
 
 ## §6 · 失效與隱含假設
 **6.1 論文自述 limitations**

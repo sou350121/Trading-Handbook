@@ -9,6 +9,7 @@ import json, pathlib, sys, argparse, threading
 from concurrent.futures import ThreadPoolExecutor, as_completed
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
 from _qwen import ask
+from _content_gate import validate_metadata
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 RAW = ROOT/"data"/"raw"
@@ -67,8 +68,7 @@ def build_prompt(rec):
 def parse(raw):
     t = raw.strip()
     if t.startswith("```"):
-        t = t.split("```",2)[-1] if t.count("```")>=2 else t.strip("`")
-        if t.lstrip().startswith("json"): t = t.lstrip()[4:]
+        t = t.split("\n", 1)[1].rsplit("```", 1)[0].strip()
     i,j = t.find("{"), t.rfind("}")
     return json.loads(t[i:j+1])
 
@@ -83,11 +83,14 @@ def do_one(f):
     try:
         raw = ask(build_prompt(rec), system=SYSTEM, thinking=True,
                   temperature=0.1, max_tokens=2000, json_mode=True, timeout=180)
-        d = parse(raw)
-        if d.get("zone") not in ZONE_SLUGS: d["zone"]="unsorted"
-        for k,opts in AXES.items():
-            v=d.get("axes",{}).get(k)
-            if v not in opts: d.setdefault("axes",{})[k]= (v or "?")
+        result = parse(raw)
+        fields = {"zone", "axes", "rating", "tldr", "key_trick", "source", "tags", "page_worthy"}
+        d = {k: v for k, v in result.items() if k in fields}
+        if isinstance(d.get("source"), dict):
+            d["source"] = {k: v for k, v in d["source"].items() if k in {"venue", "arxiv", "framework", "confidence"}}
+        validate_metadata(d, AXES, ZONE_SLUGS)
+        if len(rec.get("body", "")) < 300:
+            raise ValueError("source_too_thin")
         d.update({"pos":rec["pos"],"msgid":rec["msgid"],"title":rec["title"],
                   "date":rec.get("date",""),"url":rec["url"],"chars":rec["chars"]})
         # First-hand raws (arXiv / OA-journal pdf) are papers, not QuantML digests: stamp
@@ -123,3 +126,4 @@ def main():
 
 if __name__=="__main__":
     main()
+    sys.exit(1 if _stats["fail"] else 0)

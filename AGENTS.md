@@ -2,7 +2,9 @@
 
 照見系列第四冊 · **Trading-Handbook（量化交易手冊）**。姊妹倉：VLA-Handbook · Spatial-Intelligence-Handbook · Physics-Generation-Handbook。四倉共用同一套寫作協定。
 
-**分工**：架構/裁決/綜合由 Opus 主導，399 篇的蒸餾/分類/套模板由 qwen 批量執行。完整契約見 [`scripts/pulsar/QWEN_USAGE.md`](scripts/pulsar/QWEN_USAGE.md)。
+**現役供應商（維護者 2026-10 指示）**：自動管線統一使用現有 DeepSeek；GitHub 為發布入口，不依賴 Mintlify。下述 Opus/qwen 為歷史名稱，現役執行與品質契約見 `scripts/pulsar/QWEN_USAGE.md`。
+
+**歷史分工**：架構/裁決/綜合由 Opus 主導，399 篇的蒸餾/分類/套模板由 qwen 批量執行。完整契約見 [`scripts/pulsar/QWEN_USAGE.md`](scripts/pulsar/QWEN_USAGE.md)。
 
 ## 寫作對象（Reader Persona）
 
@@ -86,4 +88,4 @@
 
 ## Pulsar pipeline 接口
 
-`reports/trading-daily/` 是 Pulsar Phase 1 自動產出區：arxiv **q-fin.* + cs.LG/cs.AI**（交易/因子/組合關鍵詞）→ qwen3.5-plus 評 ⚡/🔧/📖/❌ → git push（Mintlify rebuild）。歷史語料回填見 `scripts/pulsar/`（`enumerate_album` → `fetch_article` → `distill_pass_a` → Pass B）。
+`reports/trading-daily/` 是 Pulsar Phase 1 自動產出區：arxiv **q-fin.* + cs.LG/cs.AI**（交易/因子/組合關鍵詞）→ DeepSeek 評 ⚡/🔧/📖/❌ → 品質閘 → GitHub 推送與本地索引。歷史語料回填見 `scripts/pulsar/`（`enumerate_album` → `fetch_article` → `distill_pass_a` → Pass B）。

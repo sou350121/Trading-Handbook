@@ -10,13 +10,13 @@ Trading-Handbook 是照見（Pulsar）系列第四冊，視角是 **Decision / �
 
 ## 四條真正跨冊的暗線
 
-- **序貫決策（RL）**：`reinforcement-learning` + `market-microstructure` 的執行/做市策略 ↔ VLA 的動作策略。共同病灶：sim-to-real、非平穩、延遲反饋。見本冊 [预测驱动 vs 策略驱动](/crossing/supervised-vs-rl/overview) 與 [人机协同 vs 全自动智能体](/crossing/human-in-loop-vs-autonomous-agent/overview)。
+- **序貫決策（RL）**：`reinforcement-learning` + `market-microstructure` 的執行/做市策略 ↔ VLA 的動作策略。共同病灶：sim-to-real、非平穩、延遲反饋。見本冊 [预测驱动 vs 策略驱动](../crossing/supervised-vs-rl/overview.md) 與 [人机协同 vs 全自动智能体](../crossing/human-in-loop-vs-autonomous-agent/overview.md)。
 - **Agentic 工程**：`llm-agentic` 的多智能體交易框架 ↔ Agent-Playbook 的工具調用、規劃、護欄。本冊語料證實「智能體數量 ≠ 自主度」，這條教訓對所有 Agent 系統通用。
 - **世界模型 / 可控生成**：市場模擬與合成數據 ↔ 物理可控生成。共享「生成得像 ≠ 對下游有用」的評估陷阱（見本冊 `evaluation-benchmarks` 的打假線）。
 - **因果 / 結構**：`causal-structural` 的機制轉換定價、regime 識別，是四冊共同的底層語言——把關聯換成可干預的結構。
 
 ## 怎麼用這頁
 
-如果你從 VLA / Spatial / Physics 冊過來：先讀本冊 [五軸本體論](/cheat-sheet/ontology)，再按上表的共享技術線跳到對應 zone。五軸里的「學習範式」「人機協作度」兩軸，在四冊之間語義一致，是跨冊對照的錨點。
+如果你從 VLA / Spatial / Physics 冊過來：先讀本冊 [五軸本體論](../cheat-sheet/ontology.md)，再按上表的共享技術線跳到對應 zone。五軸里的「學習範式」「人機協作度」兩軸，在四冊之間語義一致，是跨冊對照的錨點。
 
 > 接線圖會隨四冊各自成熟持續加密；本頁標 `Status: v0.5`。

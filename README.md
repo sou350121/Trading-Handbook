@@ -9,17 +9,19 @@
 **這個方法跟另一個差在哪 · 哪些 claim 在真實市場會崩 · 誰在持續付錢**
 
 [![CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-![每日自動增長](https://img.shields.io/badge/內容-每日自動增長-2ea043)
+![每日排程更新](https://img.shields.io/badge/內容-每日排程更新-2ea043)
 ![方法地圖](https://img.shields.io/badge/10_方法族-6_深度綜述-1f6feb)
 ![一手解構](https://img.shields.io/badge/新-arXiv_一手全文解構-D4910A)
 [![照見 Pulsar](https://img.shields.io/badge/照見_Pulsar-自動驅動-8B5CF6)](https://github.com/sou350121/Pulsar-KenVersion)
 
-`367 頁解構` · `10 方法族` · `6 深度綜述` · `12 頂刊雷達` · `14 篇一手解構` · `11 庫工程筆記` · `每日自動增長`
+`2026-10-20 快照：378 頁解構` · `10 方法族` · `6 深度綜述` · `12 頂刊雷達` · `一手來源解構` · `11 庫工程筆記` · `每日排程更新`
 
 </div>
 
 > [!NOTE]
-> **2026-07 更新**：新增**一手 arXiv 全文解構管線**（⚡ 論文直接抓全文自主解構，不再只吃二手導讀）＋ **6 篇深度綜述**（一篇看懂一整族）。每日自動增長、每週掃前沿。
+> **2026-10 維護更新**：現役自動管線改用現有 **DeepSeek**，GitHub 為主要閱讀入口。本地索引採離線 BM25，不使用 OpenRouter。新增的完整收據、失敗回復與告警將區分完整成功、部分完成和失敗；索引抓回 14 筆漏收元資料不等於 14 篇解構均已完成。
+>
+> **2026-07 內容架構**：新增**一手 arXiv 全文解構管線**（⚡ 論文直接抓全文自主解構，不再只吃二手導讀）＋ **6 篇深度綜述**（一篇看懂一整族）。每日排程更新、每週掃前沿。
 
 ---
 
@@ -39,7 +41,7 @@
 
 1. **不只是摘要**：每頁把「架構怎麼改、Napkin 公式、§5 評測的 Δ 哪部分是真 capability 哪部分是過擬合」都寫出來——看懂和能用之間的坑，標出來。
 2. **只關心能落地的**：每頁 §6 拆「隱含假設 + 什麼時候崩」——regime 依賴、換手成本未計、前瞻偏差、容量天花板、因子擁擠。哪些 claim 在真實市場會碎，直接點破。
-3. **活的知識庫**：每日自動抓 QuantML 語料，每週掃 arXiv q-fin 把 ⚡ 論文抓全文一手解構——不是六個月沒人維護的靜態文檔。
+3. **活的知識庫**：每日自動抓 QuantML 語料，每週掃 arXiv q-fin，將 ⚡ 候選排入全文解構；來源抓取失敗與待處理積壓會保留狀態。
 
 ## 和這些方式相比
 
@@ -60,7 +62,7 @@
 | **一手 vs 二手** | ✅ 一手 | ❌ 二手摘要 | ⚠️ 混合 | ⚠️ 混雜 | ✅ 導讀 ＋ arXiv 一手全文解構 |
 | **更新頻率** | 實時但海量 | 不定期 | 月 / 季 | 實時但難搜 | 每日自動＋週度三路雷達＋工程層 |
 | **歷史可查 / grep** | ✅ arXiv | ❌ 90 天限流 | ❌ 難獲取 | ❌ 帖子易沉 | ✅ Git 永久 + 全文 grep |
-| **數字可信** | ✅ 原文 | ⚠️ 轉述易錯 | ✅ | ⚠️ 參差 | ✅ number_audit 逐字接地 |
+| **數字可信** | ✅ 原文 | ⚠️ 轉述易錯 | ✅ | ⚠️ 參差 | 機械數字檢查＋來源邊界標示，仍需語義複核 |
 
 ## 先看這幾篇（30 分鐘建立框架）
 
@@ -97,7 +99,7 @@
 
 ## 🧭 深度綜述（吃透一整族）
 
-單頁教你拆一個方法；**綜述教你看懂一整族在賭什麼**——演進主線、核心張力、什麼在持續有效 vs 什麼被擁擠掉、失效模式合集，最後給一條有序讀法。每篇讀過該族數十頁真實解構後寫成，論斷可追溯到頁面、數字逐字引原頁。
+單頁教你拆一個方法；**綜述教你看懂一整族在賭什麼**——演進主線、核心張力、什麼在持續有效 vs 什麼被擁擠掉、失效模式合集，最後給一條有序讀法。每篇基於該族既有解構寫成（下表為撰寫時底盤頁數），論斷可追溯到頁面、數字逐字引原頁。
 
 | 綜述 | 底盤 | 一句話 |
 |---|--:|---|
@@ -124,19 +126,19 @@
 
 詳見 [五軸速查](cheat-sheet/ontology.md) · 時間維度看 [兩年演進 timeline](cheat-sheet/timeline.md) · 溯源看 [祖先論文正典](cheat-sheet/seminal-canon.md)（本冊引文圖裡的開山之作：ARCH / EMH / LSTM / Fama-French / LOBSTER…，Crossref 機械統計）。
 
-## 📂 10 方法族地圖（366 頁）
+## 📂 10 方法族地圖（378 頁；2026-10-20 快照）
 
 | 方法族 Zone | 頁數 | 焦點 |
 |---|--:|---|
 | [時序預測](foundations/time-series-forecasting/overview.md) `time-series-forecasting` | 88 | 預測基座/基礎模型 |
 | [因子挖掘](foundations/factor-mining/overview.md) `factor-mining` | 62 | Alpha 因子/擁擠度 |
-| [LLM 智能體](foundations/llm-agentic/overview.md) `llm-agentic` | 49 | 大模型/多智能體交易 |
-| [強化學習](foundations/reinforcement-learning/overview.md) `reinforcement-learning` | 42 | 執行/做市/組合 RL |
-| [組合優化](foundations/portfolio-optimization/overview.md) `portfolio-optimization` | 36 | 配置/端到端優化 |
-| [市場微結構](foundations/market-microstructure/overview.md) `market-microstructure` | 28 | 訂單流/LOB/日內 |
+| [LLM 智能體](foundations/llm-agentic/overview.md) `llm-agentic` | 51 | 大模型/多智能體交易 |
+| [強化學習](foundations/reinforcement-learning/overview.md) `reinforcement-learning` | 43 | 執行/做市/組合 RL |
+| [組合優化](foundations/portfolio-optimization/overview.md) `portfolio-optimization` | 38 | 配置/端到端優化 |
+| [市場微結構](foundations/market-microstructure/overview.md) `market-microstructure` | 33 | 訂單流/LOB/日內 |
 | [圖網絡](foundations/graph-networks/overview.md) `graph-networks` | 25 | 關係圖/動態圖 |
-| [評測基準](foundations/evaluation-benchmarks/overview.md) `evaluation-benchmarks` | 20 | 基準/打假/穩健性 |
-| [因果結構](foundations/causal-structural/overview.md) `causal-structural` | 9 | 機制/regime/定價 |
+| [評測基準](foundations/evaluation-benchmarks/overview.md) `evaluation-benchmarks` | 21 | 基準/打假/穩健性 |
+| [因果結構](foundations/causal-structural/overview.md) `causal-structural` | 10 | 機制/regime/定價 |
 | [數據生成](foundations/data-generation-augmentation/overview.md) `data-generation-augmentation` | 7 | 合成/增強/模擬 |
 
 > zone 按**方法族**切；跨族的比較由五軸 + tags 承載，在上面的張力圖撈出。
@@ -161,28 +163,28 @@
 | 頂刊 ＋ arXiv ＋ 從業者/機構三路雷達 | 每週六 15:00 | [radar/](radar/overview.md) |
 | GitHub 工程經驗筆記（增量追加） | 每週六 15:00 | [deployment/](deployment/github_engineering_notes.md) |
 | ⚡ 命中 → 一手全文解構（arXiv＋頂刊 OA） | 隨週度雷達 | foundations/ |
-| 自愈 watchdog | 每日 09:00 | — |
+| 自愈 watchdog | 每日 09:00，另於每小時 15／30／45 分檢查；21:30 預留補跑 | — |
 
 ## ⚙️ 背後的系統：照見 Pulsar
 
 每日內容由 [照見 Pulsar](https://github.com/sou350121/Pulsar-KenVersion) 自動驅動——**機械保障先行，LLM 判斷斷後**：
 
-- **機械閘門**：`handbook_audit` 7 項硬檢查（0 斷鏈 / 0 孤頁 / **0 版權洩漏**）＋ `number_audit` 數字接地——每個基準數字必須逐字來自原文，否則不放。
-- **自愈**：cron 以「頁面是否存在」判斷工作，抓取/生成/推送任一步失敗，下輪自動重試，從不靜默丟數據。
-- **分工**：Opus 定架構 / 本體 / 裁決，qwen 跑蒸餾 / 分類 / 套模板；一手 arXiv 頁額外過**全頁數字接地審計**。
+- **機械閘門**：`handbook_audit` 檢查連結、導覽與私有原文是否誤入 Git；其中部分是硬閘、部分是警告。新文章另過結構、來源類型及百分比／小數支持檢查；機械檢查不能保證指標語義或全部論斷正確。
+- **自愈**：以輸入、產物、完整收據與推送回讀共同判斷工作；失敗保留待處理記錄，重試有上限，超限需查看 GitHub Issues。
+- **分工**：現役分類與寫作使用 **DeepSeek**；舊 Opus／qwen 是歷史建置分工。取得摘要不得標成已讀全文；新文不通過品質閘則留退稿。
 - 同一個 Pulsar 也驅動 [VLA](https://github.com/sou350121/VLA-Handbook) / [Spatial](https://github.com/sou350121/Spatial-Intelligence-Handbook) / [Physics](https://github.com/sou350121/Physics-Controllable-Generation-Handbook) 三本姊妹手冊。
 
 ## 狀態（誠實）
 
-**v0.5 · 每日自動增長。** 367 頁已生成、質量閘門全綠（0 斷鏈/孤頁/版權洩漏）。內容是對公開論文的**二階分析**（多數已回鏈原文、約 1/4 帶被引數），另有 14 篇由 arXiv／頂刊 OA 全文**一手解構**——是一張**強地圖**，不是逐頁核過原文的權威參考；未驗證細節標 `TBD`（設計特性，不假裝確定）。頂刊雷達／工程筆記層 2026-W30 剛上線（首週數據，長期價值看累積）。
+**v0.5 · 每日排程更新。** 2026-10-20 快照為 378 頁、結構稽核與來源／內容品質需分開查看；結構通過不代表所有來源正常或全文論斷均核實。內容是對公開論文的**二階分析**（多數已回鏈原文、約 1/4 帶被引數），另有由 arXiv／頂刊 OA 全文**一手解構**——是一張**強地圖**，不是逐頁核過原文的權威參考；未驗證細節標 `TBD`（設計特性，不假裝確定）。頂刊雷達／工程筆記層 2026-W30 剛上線（首週數據，長期價值看累積）。
 
 <details>
 <summary><b>怎麼建的 · 版權</b></summary>
 
 ```
-QuantML 語料：enumerate → fetch(allorigins) → Pass A(qwen 分類) → Pass B(qwen 寫頁)
+QuantML 語料：enumerate → fetch(allorigins) → Pass A(DeepSeek 分類) → Pass B(DeepSeek 寫頁)
 arXiv 一手：radar ⚡ → 抓全文(ar5iv/PDF) → 同一套 Pass A/B → 全頁數字接地審計
-→ Opus 綜合/audit → handbook_audit + number_audit 閘門 → 自愈 cron 推送
+→ 新文品質閘 + handbook_audit → GitHub 推送回讀 → 已提交內容本地索引
 ```
 
 - 抓來的原文正文（版權屬原作者 / QuantML）**不入庫**（`data/raw`、`data/distill` 已 gitignore）；庫內只有解構頁與公開元數據。
@@ -200,3 +202,9 @@ arXiv 一手：radar ⚡ → 抓全文(ar5iv/PDF) → 同一套 Pass A/B → 全
 ## 致謝 & License
 
 選題與發現源：[QuantML 公眾號](https://mp.weixin.qq.com/) 的策展。解構為對公開論文的二手分析（另含 arXiv 一手全文解構），CC-BY-4.0；版權歸原論文與 QuantML 所有。由 [照見 Pulsar](https://github.com/sou350121/Pulsar-KenVersion) 系統自動驅動。
+
+## 本地搜尋（主機端）
+
+`python3.11 scripts/pulsar/local_index.py --query "交易成本 前瞻偏差"`
+
+索引只讀取已提交 Markdown，草稿、原始正文與憑證不納入。`--check` 會檢查完整性、時效及對應 commit；安裝與故障排查見 [維護說明](MAINTAINER.md)。
