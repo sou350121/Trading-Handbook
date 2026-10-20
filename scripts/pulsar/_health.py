@@ -2,10 +2,15 @@
 import datetime as dt
 import json
 import os
+import signal
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 ERRORS = []
+
+
+class SourceCancelled(BaseException):
+    pass
 
 
 def fail(component, reason):
@@ -30,11 +35,23 @@ def run(component, main):
         return out
     before = {p: p.read_bytes() for p in paths()}
     verified_partial = False
+    cancelled = False
+    previous = signal.getsignal(signal.SIGTERM)
+    def terminate(*_):
+        raise SourceCancelled()
+    signal.signal(signal.SIGTERM, terminate)
     try:
-        result = main()
+        try:
+            result = main()
+        finally:
+            # Complete rollback/receipt without a second SIGTERM interrupting it.
+            signal.signal(signal.SIGTERM, signal.SIG_IGN)
         # Only an explicitly opted-in source collector may retain its independently
         # verified outputs. An exception never gets this completion marker.
         verified_partial = component == 'practitioner' and result == 'verified_partial_outputs'
+    except SourceCancelled:
+        cancelled = True
+        fail(component, 'cancelled')
     except Exception as exc:
         fail(component, 'exception_' + type(exc).__name__)
     if ERRORS and not verified_partial:
@@ -48,4 +65,7 @@ def run(component, main):
                'status': ('partial' if verified_partial else 'failed') if ERRORS else 'success', 'errors': list(ERRORS)}
     atomic(ROOT / 'data/health' / (component + '.json'), receipt)
     print(json.dumps(receipt, ensure_ascii=False))
+    signal.signal(signal.SIGTERM, previous)
+    if cancelled:
+        return 143
     return (2 if verified_partial else 1) if ERRORS else 0

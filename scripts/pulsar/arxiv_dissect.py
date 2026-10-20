@@ -17,7 +17,7 @@ raw existence skips re-fetch, distill existence skips Pass A, page existence ski
 Usage:
   python3.11 arxiv_dissect.py [--limit N] [--ids 2607.15195,2607.13929] [--ingest-only] [--workers W]
 """
-import json, re, sys, html, time, pathlib, argparse, urllib.request
+import json, re, sys, html, time, pathlib, argparse, urllib.request, urllib.parse, hashlib
 from html.parser import HTMLParser
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
@@ -40,23 +40,39 @@ UA = {"User-Agent": "Mozilla/5.0 (Trading-Handbook research bot)"}
 class _Text(HTMLParser):
     """Generic HTML -> readable text (arXiv/ar5iv have no js_content div, so we can't reuse
     fetch_article's WeChat extractor). Drops script/style/nav chrome, keeps paragraph breaks."""
-    SKIP = {"script", "style", "head", "nav", "footer", "noscript"}
+    SKIP = {"script", "style", "head", "nav", "footer", "noscript", "annotation"}
 
     def __init__(self):
-        super().__init__(); self.parts = []; self.skip = 0
+        super().__init__(); self.parts = []; self.skip = 0; self.math_alt_depth = 0
 
     def handle_starttag(self, t, a):
+        if self.math_alt_depth:
+            if t == 'math':
+                self.math_alt_depth += 1
+            return
+        if t == 'math' and not self.skip and dict(a).get('alttext') is not None:
+            # LaTeXML includes both rendered MathML and a TeX annotation. Taking
+            # both turns 1.0222 into 1.02221.0222. Use its exact accessible formula once.
+            self.parts.append(' ' + dict(a)['alttext'] + ' ')
+            self.math_alt_depth = 1
+            return
         if t in self.SKIP:
             self.skip += 1
+        elif t in ('td', 'th') and not self.skip:
+            self.parts.append('\t')
         elif t in ("p", "br", "div", "section", "li", "h1", "h2", "h3", "h4", "tr", "table"):
             self.parts.append("\n")
 
     def handle_endtag(self, t):
+        if self.math_alt_depth:
+            if t == 'math':
+                self.math_alt_depth -= 1
+            return
         if t in self.SKIP and self.skip > 0:
             self.skip -= 1
 
     def handle_data(self, d):
-        if not self.skip and d.strip():
+        if not self.skip and not self.math_alt_depth and d.strip():
             self.parts.append(d)
 
 
@@ -119,13 +135,17 @@ def fetch_fulltext(item):
     m = re.search(r"/(\d{4}\.\d{4,5}(?:v\d+)?)$", vurl)
     vid = m.group(1) if m else tid
     best = ""
-    for u in (f"https://ar5iv.org/html/{tid}", f"https://arxiv.org/html/{vid}",
-              f"https://arxiv.org/html/{tid}", f"https://ar5iv.labs.arxiv.org/html/{tid}"):
+    for u in (f"https://arxiv.org/html/{vid}", f"https://ar5iv.org/html/{vid}",
+              f"https://ar5iv.labs.arxiv.org/html/{vid}"):
         try:
             data, final = _fetch(u)
             if "/abs/" in final:        # ar5iv bounced to the abstract page -> no HTML render, skip
                 continue
+            if urllib.parse.urlsplit(final).hostname not in {'arxiv.org', 'ar5iv.org', 'ar5iv.labs.arxiv.org'}:
+                continue
             txt = html_to_text(data.decode("utf-8", "replace"))
+            if not re.search(r'arXiv:\s*' + re.escape(vid) + r'(?!\d)', txt):
+                continue
             if len(txt) > len(best):
                 best = txt
             if len(best) > 8000:
@@ -136,7 +156,7 @@ def fetch_fulltext(item):
         return best, "fulltext-html"
     # PDF fallback -- first-hand full text when no HTML exists (common for brand-new q-fin papers)
     try:
-        data, _ = _fetch(f"https://arxiv.org/pdf/{tid}", timeout=60)
+        data, _ = _fetch(f"https://arxiv.org/pdf/{vid}", timeout=60)
         if data[:5] == b"%PDF-":
             txt = _pdf_text(data)
             if len(txt) > 2500:
@@ -145,7 +165,7 @@ def fetch_fulltext(item):
         pass
     # abstract-only last resort
     try:
-        h, _ = _fetch(f"https://arxiv.org/abs/{tid}")
+        h, _ = _fetch(f"https://arxiv.org/abs/{vid}")
         h = h.decode("utf-8", "replace")
         m = re.search(r'<blockquote class="abstract[^"]*">(.*?)</blockquote>', h, re.S)
         ab = html_to_text(m.group(1)) if m else ""
@@ -161,8 +181,10 @@ def ingest(item, seq):
     tid = item["id"]
     msgid = f"arxiv_{tid}"
     out = RAW / f"{msgid}_1.json"
-    if out.exists() and len(json.loads(out.read_text()).get("body", "")) > 800 and json.loads(out.read_text()).get("source_kind", "").startswith("fulltext"):
-        return msgid, "cached"
+    old = json.loads(out.read_text()) if out.exists() else None
+    if old and len(old.get('body', '')) > 800 and old.get('source_kind', '').startswith('fulltext'):
+        if old['source_kind'] != 'fulltext-html' or old.get('extraction_version') == PB.HTML_TEXT_VERSION:
+            return msgid, 'cached'
     body, kind = fetch_fulltext(item)
     if not kind.startswith("fulltext") or len(body) < 400:
         return msgid, "fetch-fail"
@@ -170,9 +192,17 @@ def ingest(item, seq):
            "title": item["title"], "wechat_title": item["title"],
            "date": item.get("date", ""),
            "url": item.get("abs_url") or f"https://arxiv.org/abs/{tid}",
-           "chars": len(body), "body": body, "source_kind": kind}
+           "chars": len(body), "body": body, "source_kind": kind,
+           "extraction_version": PB.HTML_TEXT_VERSION,
+           "body_sha256": hashlib.sha256(body.encode('utf-8')).hexdigest()}
     RAW.mkdir(parents=True, exist_ok=True)
-    out.write_text(json.dumps(rec, ensure_ascii=False, indent=2))
+    if old:
+        backup = ROOT / 'data/source-cache-backups' / (out.name + '.' + hashlib.sha256(out.read_bytes()).hexdigest())
+        backup.parent.mkdir(parents=True, exist_ok=True)
+        if not backup.exists():
+            backup.write_bytes(out.read_bytes())
+    from _health import atomic
+    atomic(out, rec)
     return msgid, kind
 
 

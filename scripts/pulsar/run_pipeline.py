@@ -24,6 +24,10 @@ ALLOWED = ('foundations/', 'crossing/', 'cheat-sheet/', 'bridge-to-vla/', 'radar
 SINGLES = {'docs.json', 'data/index.json', 'data/corpus_meta.json'}
 
 
+class PipelineCancelled(BaseException):
+    """Cancellation must pass through partial-mode RuntimeError handlers."""
+
+
 def code_digest():
     digest = hashlib.sha256()
     paths = [p for p in (ROOT / 'scripts').rglob('*') if p.is_file() and p.suffix in ('.py', '.sh', '.json', '.md')]
@@ -206,7 +210,7 @@ def main():
     parser.add_argument('--allow-verified-partial', action='store_true', help='publish only passed outputs while retaining failed health status')
     args = parser.parse_args()
     def terminated(*_):
-        raise RuntimeError("runner_terminated")
+        raise PipelineCancelled()
     signal.signal(signal.SIGTERM, terminated)
     if not 1 <= args.days <= 90:
         parser.error('days must be 1..90')
@@ -215,6 +219,7 @@ def main():
     try:
         fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
     except BlockingIOError:
+        lock.close()
         return 75
     receipt = {'job': args.job, 'started_at': dt.datetime.now(dt.timezone.utc).isoformat(),
                'status': 'running', 'published': args.publish, 'sources_only': args.sources_only,
@@ -226,12 +231,16 @@ def main():
         receipt['status'] = ('partial' if incomplete else 'success') if args.publish else 'prepared'
         receipt['incomplete'] = incomplete
         code = 2 if incomplete else 0
+    except PipelineCancelled:
+        receipt.update(status='failed', reason='runner_terminated')
+        code = 143
     except Exception as exc:
         receipt.update(status='failed', reason=str(exc) if isinstance(exc, RuntimeError) else type(exc).__name__)
         code = 1
     receipt.update(finished_at=dt.datetime.now(dt.timezone.utc).isoformat(), head=git('rev-parse', 'HEAD').strip())
     atomic(path, receipt)
     print(json.dumps(receipt))
+    lock.close()
     return code
 
 

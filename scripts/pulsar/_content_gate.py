@@ -3,6 +3,7 @@ import re
 from decimal import Decimal
 
 NUMBER = re.compile(r'(?<![\w])[-−]?\d+(?:,\d{3})*(?:\.\d+)?%?')
+HTML_TEXT_VERSION = 3
 
 
 def validate_metadata(d, axes, zones):
@@ -25,6 +26,8 @@ def validate_page(text, raw, d):
     origin = (d.get('source') or {}).get('origin')
     if origin in ('arxiv', 'oa') and not raw.get('source_kind', '').startswith('fulltext'):
         raise ValueError('fulltext_provenance_missing')
+    if origin in ('arxiv', 'oa') and raw.get('source_kind') == 'fulltext-html' and raw.get('extraction_version') != HTML_TEXT_VERSION:
+        raise ValueError('source_extraction_requires_refresh')
     if len(text) < 1800 or not re.search(r'<!--\s*ontology-5axis\s', text[:600]):
         raise ValueError('page_structure_invalid')
     if d.get('axes'):

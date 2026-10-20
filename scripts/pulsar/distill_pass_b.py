@@ -8,7 +8,7 @@ import json, pathlib, sys, argparse, re, threading
 from concurrent.futures import ThreadPoolExecutor, as_completed
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
 from _qwen import ask
-from _content_gate import validate_page
+from _content_gate import validate_page, HTML_TEXT_VERSION
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 RAW = ROOT/"data"/"raw"; DIS = ROOT/"data"/"distill"
@@ -17,8 +17,13 @@ AXES_NAME = {"data":"數據模態","horizon":"時間尺度","paradigm":"學習�
 SYSTEM = ("你是『照見 Trading-Handbook』的資深解構作者。讀者是做過實盤/回測的量化研究員。"
           "你寫的不是論文摘要，而是【對比 + 失效模式 + 如何組合】的解構。中文輸出，繁體可，術語/框架名/指標保留英文。")
 
+MAX_SOURCE_BYTES = 600_000
+
 TEMPLATE = """請依下面骨架，把這篇方法寫成一頁解構 markdown。**不要寫成摘要**，要分析性論斷。
 未知的數字/細節標 `TBD` 或 `（未驗證）`，不要編造。直接輸出 markdown，不要代碼圍欄。**只輸出最終頁面內容;絕不輸出你的思考過程、對骨架/規則的旁白或「此處依骨架要求…」之類的元敘述。**
+【來源覆蓋】{source_scope}
+只能根據本次提供的可讀文本下結論；不可把未提取的圖片／附件、未核對的原論文，或模型沒看見的內容說成「論文未披露」。缺項寫「所讀文本未見，圖表／附件待核」。metadata的TL;DR、框架名是待核線索，正文優先。
+預訓練、tokenizer、適配、topic擬合各自的時間邊界須分列，不得把預訓練截止日套到適配後權重。不同模型、選模結果與集成結果不可互相代稱。單一樣本的相關排序或消融不得寫成所有模型／市場的必然因果結論；本頁研究假說須標示尚待驗證。
 【硬規則 · 數字紀律】（違反任何一條都算嚴重錯誤）
 1. 全頁任何數字（表格**與**解讀散文**都算**）必須是導讀正文的**逐字子字串**，或同一列 Δ 欄中兩個逐字數字的算術差。導讀沒有的一律寫「未披露」，**禁止臆造任何數值、百分比或區間**（絕不寫「~1.2-1.8」「+40%」這類猜測值）。寧可整列空白也不要編數字。
 2. **禁止合成「前SOTA」**：若導讀只給了幾個不同基線模型各自的數字，就逐一列出（「基線A 54.61% / 基線B 50.23% / 本法 56.87%，領先約 2-6pp」），**絕不**把它們 min/max 成一個假的 SOTA 區間再算假 Δ。
@@ -29,6 +34,7 @@ TEMPLATE = """請依下面骨架，把這篇方法寫成一頁解構 markdown。
 7. **空白/缺失值不得補預設**：若導讀提到某指標/超參/解析度/基線「名稱」但**數值缺失**（空括號「（）」、空白、或被剝掉的圖片/公式留白），一律寫「未披露」。**絕不**用慣例預設值（影像 224×224、RL 折扣 0.99、動量 0.9 之類）填補，也**不內插**空白的基線格。
 8. **禁止用日期反算時長**：別把起訖日期算成「X 年/月」當來源數字（且常算錯/重複），直接照抄日期區間。
 9. **§5 欄位語義固定**：前SOTA 欄填**基線本身的數值**（逐字），本方法欄填本法數值；**絕不**只放模型名而不放其數值，**絕不**把 Δ 塞進前SOTA/本方法格（Δ 只進 Δ 欄）；百分點差用 `pp`（如 30.5% − (−5.09%) = +35.59pp）。
+10. 數字以完整 token 逐字核對，包含正負號與小數精度，不是任意子字串。計算的 Δ 只能放在固定五欄表「數據集/市場 | Metric | 前SOTA | 本方法 | Δ」的末欄，且前SOTA、本方法各只含一個來源數值、單位相同；其他位置不要新增計算值。不符合此格式就省略 Δ，保留來源數值及語義說明。
 
 骨架（嚴格按此順序與標題）：
 
@@ -64,7 +70,7 @@ TEMPLATE = """請依下面骨架，把這篇方法寫成一頁解構 markdown。
 （表：數據集/市場 | Metric(IR/Sharpe/AR/MDD) | 前SOTA | 本方法 | Δ；**前SOTA 欄只填導讀逐字給的單一基線值，若有多個基線就改成逐行列出、別合成區間，沒有就寫「未披露」**；解讀哪部分 Δ 是真 capability，哪部分可能是過擬合/前瞻偏差/成本未計。**解讀散文裡也不得出現導讀沒有的數字**）
 
 ## §6 · 失效與隱含假設
-（6.1 論文自述 limitations（若僅讀導讀，須寫「未核原文，作者自述限制未驗證」，不得拿推斷冒充自述）；6.2 推斷的隱含假設（明標推斷，限制適用條件，禁止跨所有系統的必然斷言，輔助數據缺失不是生存者偏差）：regime 依賴/容量/成本/數據泄漏/survivorship）
+（6.1 論文自述 limitations：{limitations_rule}；6.2 推斷的隱含假設（明標推斷，限制適用條件，禁止跨所有系統的必然斷言，輔助數據缺失不是生存者偏差）：regime 依賴/容量/成本/數據泄漏/survivorship）
 
 ## §7 · 對比 & 面試 Tip
 （表：同軸對手 | 關鍵差異軸 | Open? | Status；🎤 Interview Tip 正確答 vs 錯答；7.1 可證偽預測帶日期）
@@ -108,24 +114,42 @@ def build(d, raw):
     fw = src.get("framework") or d["title"][:24]
     arxiv_line = f" · arXiv [{arxiv}](https://arxiv.org/abs/{arxiv})" if arxiv and arxiv not in ("null","None") else ""
     axes_human = " · ".join(f"{AXES_NAME[k]}={ax.get(k,'?')}" for k in AXES_NAME)
+    body = raw.get('body', '')
+    if not isinstance(body, str) or len(body) < 300:
+        raise ValueError('source_too_thin')
+    if len(body.encode('utf-8')) > MAX_SOURCE_BYTES:
+        raise ValueError('source_context_too_large_requires_review')
+    if origin in ('arxiv', 'oa') and not raw.get('source_kind', '').startswith('fulltext'):
+        raise ValueError('fulltext_provenance_missing')
+    if origin in ('arxiv', 'oa') and raw.get('source_kind') == 'fulltext-html' and raw.get('extraction_version') != HTML_TEXT_VERSION:
+        raise ValueError('source_extraction_requires_refresh')
     if origin == "arxiv":
-        src_label = "arXiv 原文"; body_label = "arXiv 原文（摘要＋正文，截斷）"
-        prov = "　·　_本頁由 arXiv 原文一手自主解構_"; blen = 11000
+        src_label = "arXiv 原文"; body_label = "arXiv 完整快取可讀文本（含文末，未提取圖片／附件另列待核）"
+        prov = "　·　_本頁依據已取得的 arXiv 可讀全文文本；圖片／附件未核_"
     elif origin == "oa":
-        src_label = "期刊原文（OA）"; body_label = "期刊論文原文（開放取用全文，截斷）"
-        prov = "　·　_本頁由開放取用期刊原文一手自主解構_"; blen = 11000
+        src_label = "期刊原文（OA）"; body_label = "OA 完整快取可讀文本（含文末，未提取圖片／附件另列待核）"
+        prov = "　·　_本頁依據已取得的 OA 可讀全文文本；圖片／附件未核_"
     else:
-        src_label = "QuantML 導讀"; body_label = "QuantML 導讀正文（截斷）"
-        prov = ""; blen = 8000
-    return TEMPLATE.format(
+        src_label = "QuantML 導讀"; body_label = "QuantML 導讀完整快取可讀文本（不代表已讀原論文）"
+        prov = ""
+    source_scope = (src_label + '，本次輸入完整快取文本，共' + str(len(body)) +
+                    '字元；未提取圖片／附件不在本次輸入。' +
+                    ('已提供原文可讀文本；§6.1僅列可定位的作者限制，不得套用「僅讀導讀」描述。' if origin in ('arxiv', 'oa')
+                     else '僅讀導讀；§6.1必須說原論文作者限制未核，不得把導讀未見當作論文沒有。'))
+    primary = origin in ('arxiv', 'oa')
+    template = TEMPLATE.replace('導讀', '所讀原文') if primary else TEMPLATE
+    prompt = template.format(
         name=fw, fw_en=fw, fw=fw, date=d.get("date",""), venue=venue,
         date_label="導讀發布" if origin == "quantml" else "來源發布",
         arxiv=arxiv, arxiv_line=arxiv_line, wechat_title=d.get("title",""),
         url=d.get("url",""), tldr=d.get("tldr",""), trick=d.get("key_trick",""),
-        axes_human=axes_human, body=raw["body"][:blen],
-        src_label=src_label, prov=prov, body_label=body_label,
+        axes_human=axes_human, body=body,
+        src_label=src_label, prov=prov, body_label=body_label, source_scope=source_scope,
+        limitations_rule=('僅列所提供完整可讀文本可定位的作者限制，標原文章節；其餘明標本頁推斷，圖表／附件待核'
+                          if primary else '僅讀導讀，必須明示「原論文作者限制未核」；不得把導讀未見當作論文沒有'),
         data=ax.get("data","?"),horizon=ax.get("horizon","?"),paradigm=ax.get("paradigm","?"),
         alpha=ax.get("alpha","?"),autonomy=ax.get("autonomy","?"))
+    return prompt
 
 _lock=threading.Lock(); _n={"ok":0,"skip":0,"fail":0}
 
@@ -142,7 +166,7 @@ def do_one(d):
         prompt = build(d, raw)
         for attempt in range(2):
             md = ask(prompt, system=SYSTEM, thinking=True, temperature=0.4,
-                     max_tokens=7000, timeout=400).strip()
+                     max_tokens=32768, timeout=600).strip()
             if md.startswith("```"):
                 md = md.split("\n", 1)[1].rsplit("```", 1)[0].strip()
             try:
