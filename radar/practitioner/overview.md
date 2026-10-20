@@ -1,6 +1,6 @@
 # 实践者雷达
 
-每週聚合一批量化從業者博客與機構研究的 RSS，DeepSeek（歷史管線使用 qwen） 按十大方法族 zone 分類，產出一頁分類週報。**只放標題、鏈接與我們的一句話解讀**，從不轉載正文（版權歸原作者）。數據源以 `scripts/pulsar/radar_feeds.json` 配置，可增減。
+每週聚合一批量化從業者博客與機構研究的 RSS／官方元資料，DeepSeek 按十大方法族 zone 分類，產出一頁分類週報。**只放標題、鏈接與我們的一句話解讀**，從不轉載正文（版權歸原作者）。數據源以 `scripts/pulsar/radar_feeds.json` 配置，可增減。
 
 ## 訂閱源
 
@@ -17,6 +17,7 @@
 | QuantInsti Blog | 扩展 | [https://blog.quantinsti.com/rss/](https://blog.quantinsti.com/rss/) |
 | Robot Wealth | 扩展 | [https://robotwealth.com/feed/](https://robotwealth.com/feed/) |
 | Validea Blog | 扩展 | [https://blog.validea.com/feed/](https://blog.validea.com/feed/) |
+| Validea / Excess Returns（官方訪談） | 扩展 | [https://anchor.fm/s/9a1dfac/podcast/rss](https://anchor.fm/s/9a1dfac/podcast/rss) · [官方入口](https://www.validea.com/excess-returns-podcast) |
 | Wilmott | 扩展 | [https://wilmott.com/feed/](https://wilmott.com/feed/) |
 | NBER 工作論文 | 機構/央行 | [https://back.nber.org/rss/new.xml](https://back.nber.org/rss/new.xml) |
 | Fed FEDS 工作論文 | 機構/央行 | [https://www.federalreserve.gov/feeds/feds.xml](https://www.federalreserve.gov/feeds/feds.xml) |
@@ -24,6 +25,7 @@
 
 ## 週報索引
 
+- [2026-W43](2026-W43.md) — 2026-10-19 ~ 2026-10-25
 - [2026-W42](2026-W42.md) — 2026-10-12 ~ 2026-10-18
 - [2026-W34](2026-W34.md) — 2026-08-17 ~ 2026-08-23
 - [2026-W29](2026-W29.md) — 2026-07-13 ~ 2026-07-19
