@@ -13,9 +13,9 @@
 | `微观盘口` | `高频日内` | `因果结构` | `组合执行优化` | `全自动黑盒` |
 
 **Status:** v0.5 — 基於 arXiv 原文（有原文則以原文為準）。細節待升 v1。
-**TL;DR:** 把每個合約的 payoff 寫成 binary vector，邏輯關係寫成線性約束 `Fz ≤ g`，則「報價是否可套利」等價於報價向量是否落在 coherent set（payoff vectors 的 convex hull）之外，且最大保證利潤恰為其 ℓ1 距離；用 cutting-plane（Master LP + integer Oracle）避開 2^|I| 枚舉，再把線性成本換成逐檔盤口階梯得可執行規模。關鍵工程是關係發現的三層 scale-out：venue-asserted（negRisk group）／venue-derived（sports typed fields 映射到共同比分狀態）／semantic-inferred（parser + 5 個 proposal LLM + 2 個 auditor 雙審），共 1,942,133 條關係壓到 573,024 條、603,242 列約束。對「因果結構」這條軸的意義：alpha 不在預測方向，而在**關係圖的覆蓋率**——同一份盤口，誰的 F 更完整，誰的 payable set 更小、保證利潤更高；但這也立刻畫出它的天花板：來源未給 Sharpe/IR，只有 2.2% 的保證 ROIC 與 $2.50 million 的絕對規模。
+**TL;DR:** 把每個合約的 payoff 寫成 binary vector，邏輯關係寫成線性約束 `Fz ≤ g`，則「報價是否可套利」等價於報價向量是否落在 coherent set（payoff vectors 的 convex hull）之外，且最大保證利潤恰為其 ℓ1 距離；用 cutting-plane（Master LP + integer Oracle）避開 2^|I| 枚舉，再把線性成本換成逐檔盤口階梯得可執行規模。關鍵工程是關係發現的三層 scale-out：venue-asserted（negRisk group）／venue-derived（sports typed fields 映射到共同比分狀態）／semantic-inferred（parser + 5 個 proposal LLM + 2 個 auditor 雙審），共 1,942,133 條關係壓到 573,024 條、603,242 列約束。對「因果結構」這條軸的意義：alpha 不在預測方向，而在**關係圖的覆蓋率**——同一份盤口，誰的 F 更完整，誰的 payable set 更小、保證利潤更高；但這也立刻畫出它的天花板：來源未給 Sharpe/IR，只有 2.2% 的保證 ROIC 與 \$2.50 million 的絕對規模。
 
-**X-Ray.** 這篇不是 trading-strategy paper，是 market-microstructure measurement paper，讀它要換一把尺。在五軸 Pareto 上它犧牲了「時間尺度」的一致性去換「結構正確性」：五軸標「高頻日內」，但實測持有期中位在 venue-derived 是約 3 小時、semantic-inferred 是 7 天，資金加權平均持有期 1.6 天（accumulated take）——所以它不是 HFT，而是「高頻偵測 + 中頻持有」的混合體，把它塞進日內 slot 會錯估資本效率。它解掉的舊工程坑有兩個：一是把「關係發現」從人工/單點 pair 升級成可規模化的三層管線並用 Type I/Type II 不對稱性做風控（Proposition 4：漏關係只會少賺，不會假賺）；二是把「幾何判定」升級成 MILP，讓 32/48/16 檔的 active block 在 3.6 billion 個 best-quote state 上可算。它打不開的 envelope 也很清楚：**資金需求**——capital outstanding 峰值 $11.1 million、first take 峰值 $3.5 million；**可複現性**——作者自建 full-depth collector，本頁未取得其歷史深度資料，無法獨立重放同一樣本；**執行**——leg risk 未解，1 秒延遲下 22.1% 的 settled orders 在到期時虧錢。對量化讀者最該記住的一句：這篇的真正 asset 是「約束系統 + 三層關係圖」，不是那 2.2%。
+**X-Ray.** 這篇不是 trading-strategy paper，是 market-microstructure measurement paper，讀它要換一把尺。在五軸 Pareto 上它犧牲了「時間尺度」的一致性去換「結構正確性」：五軸標「高頻日內」，但實測持有期中位在 venue-derived 是約 3 小時、semantic-inferred 是 7 天，資金加權平均持有期 1.6 天（accumulated take）——所以它不是 HFT，而是「高頻偵測 + 中頻持有」的混合體，把它塞進日內 slot 會錯估資本效率。它解掉的舊工程坑有兩個：一是把「關係發現」從人工/單點 pair 升級成可規模化的三層管線並用 Type I/Type II 不對稱性做風控（Proposition 4：漏關係只會少賺，不會假賺）；二是把「幾何判定」升級成 MILP，讓 32/48/16 檔的 active block 在 3.6 billion 個 best-quote state 上可算。它打不開的 envelope 也很清楚：**資金需求**——capital outstanding 峰值 \$11.1 million、first take 峰值 \$3.5 million；**可複現性**——作者自建 full-depth collector，本頁未取得其歷史深度資料，無法獨立重放同一樣本；**執行**——leg risk 未解，1 秒延遲下 22.1% 的 settled orders 在到期時虧錢。對量化讀者最該記住的一句：這篇的真正 asset 是「約束系統 + 三層關係圖」，不是那 2.2%。
 
 ## §1 · 架構 / Core Mechanism
 
@@ -104,11 +104,11 @@ $$
 | 期間 | 23 June 至 3 August 2026，42 天 |
 | Catalog | 約 745,000 個 binary contracts、178,000 個 event pages、20,866 個 negative-risk groups |
 | 盤口 | 73.22 billion order-book messages，縮到約 3.6 billion 個 valid two-sided quote states（偵測用）；pooled median spread 8.13 cents，median best bid depth 40.20 股 / best ask 29.46 股 |
-| 成交 | 227 million OrderFilled events → 143.53 million observed trades、$5.20 billion volume、677,000 個 distinct trader addresses |
+| 成交 | 227 million OrderFilled events → 143.53 million observed trades、\$5.20 billion volume、677,000 個 distinct trader addresses |
 | 頻率 | 事件驅動（每個 best-quote update 評估一次）；無抽樣，保留 exchange 與 receipt timestamps |
 | 取得方式 | catalog 走 Gamma API；**full-depth 必須自建 live collector**（Polymarket 無歷史深度 feed），最多 600 tokens / WebSocket，每 3 小時刷新合約清單 |
 | 樣本外 | **未披露**。單一 42 天窗口、無 holdout、無跨 venue 驗證 |
-| 容量假設 | capital outstanding 峰值 $11.1 million（accumulated）/ $3.5 million（first take）；同一美元跨 execution 重複計入 |
+| 容量假設 | capital outstanding 峰值 \$11.1 million（accumulated）/ \$3.5 million（first take）；同一美元跨 execution 重複計入 |
 
 **讀者要注意的數據層陷阱**：這份數據是**採集時的 catalog text**，不是 listing-time 規則。作者在 B.1.1 明說「We do not compare that text with the listing-time record」，所以關係是相對於檢索時的顯示規則稽核的——這是一個潛在的前瞻/事后偏誤入口，不是作者隱藏，而是資料本身如此。
 
@@ -159,14 +159,14 @@ $$
 - **層間比較不是因果隔離**（§5.3、§6）：三層在合約、流動性、conversion 機制上都不同，「the evidence is consistent with both discovery and execution costs limiting arbitrage」，但無法把 discovery cost 與 execution cost 分開。
 - **資本重複計入與上下界**（§5.1、Table 5 notes）：capital「can count the same dollar more than once」；first take 是下界（假設窗口內不再執行），accumulated take 是上界（假設後續報價維持觀察值）。
 - **只評 binary settlement**（§5.1）：void 合約付半美元、open leg 歸 unsettled；只有 filled legs 全部 resolve 0/1 的 window 才計 settled。
-- **事後更正**（Appendix B.3 "Corrective excision"）：2026-09-22 稽核發現 6 條 parser 生成的關係錯誤地施加了集體窮盡性，在 316 個受影響 window 中剔除 9,172 筆 execution，first take 減 $2,201、accumulated take 減 $17,404；其中 **82 個 window 在結算時是賺錢的**——作者據此指出「profitable settlement does not validate an ex-ante guarantee」。
+- **事後更正**（Appendix B.3 "Corrective excision"）：2026-09-22 稽核發現 6 條 parser 生成的關係錯誤地施加了集體窮盡性，在 316 個受影響 window 中剔除 9,172 筆 execution，first take 減 \$2,201、accumulated take 減 \$17,404；其中 **82 個 window 在結算時是賺錢的**——作者據此指出「profitable settlement does not validate an ex-ante guarantee」。
 - **關係稽核基準**（Appendix B.1.1）：用檢索時保存的 catalog text 稽核，未與鏈上 listing-time `QuestionInitialized` 對照。
 - **深度完整性未驗證**（Appendix B.4）：best-quote 對賬只能驗證最佳檔，作者明說「cannot establish the completeness of depth at other price levels」。
 
 ### 6.2 本頁推斷的隱含假設（明標推斷）
 
 - **regime 依賴（推斷）**：機會分布與賽程密度共變。sports 佔 listed contracts 67.5%、crypto 22.4%，兩者合計佔 reduced 關係 94.6%。換一個沒有大型賽事的 42 天窗口，樣本結構會顯著不同——這是適用條件，不是必然結論。
-- **容量（推斷）**：capital outstanding 峰值 $11.1 million 是回放中同時占用資金的觀察峰值，不是策略容量上限，也不是可擴張曲線。
+- **容量（推斷）**：capital outstanding 峰值 \$11.1 million 是回放中同時占用資金的觀察峰值，不是策略容量上限，也不是可擴張曲線。
 - **成本結構可變（推斷）**：sports taker fee 在樣本內由 0.03 升到 0.05；作者另查了 20,866 個 group 的 conversion fee 全為零。若 conversion 開始收費，Layer 1 的 3.8% 直接受壓——這是本文最脆弱的單點依賴（輔助數據缺失不構成生存者偏差，但構成本文結論的機制前提）。
 - **數據泄漏／前視（推斷）**：LLM 審計讀的是 retrieval-time 的 resolution text；若賽後文本被改寫，關係可能偏離 listing-time 規則。作者已聲明未對照，因此這是**已知未關閉**的風險口，不是我指控它作弊。
 - **執行假設（推斷）**：shared liquidity ledger 只防「同一檔位重複吃」，未建模排隊位置、maker 撤單反應、以及自己下单造成的價格移動。cancel-and-repost 檢查的結果（三檔 retention 下保證利潤仍在 baseline 的 100.0%–100.7%）應理解為「對這一類摩擦不敏感」，不是「無摩擦」。
@@ -204,7 +204,7 @@ $$
 
 - **因子研究員**：不要把 2.2% 當成 Sharpe 來比。這是扣 spread 與 taker fee、條件於已結算組合的投入資本回報，沒有 IR/MDD（未披露）。可借鏡的是**訊號構造**：coherent-set 的 ℓ1 距離是一個有理論保證的 cross-sectional 錯價度量，比「價格和減 1」穩健得多。
 - **高頻執行**：真正的戰場是 leg risk。作者的 1 秒延遲實驗（54.3% 全額成交、84.0% 數量、79.3% 利潤、22.1% 虧損單）就是你的 baseline。分腿成交會留下方向曝險；應以自己的成交與成本模型評估尾部風險，不能由本文推定所有多腿策略的 PnL 分佈。
-- **組合配置**：回放的同時占用資金峰值 $11.1 million、資金加權持有期 1.6 天、中位持有 3 小時到 7 天。這是 niche 中的 niche，配置前先問：這個 capacity 夠不夠覆蓋你的 infra 與 LLM API 成本（成本明細未披露）。
+- **組合配置**：回放的同時占用資金峰值 \$11.1 million、資金加權持有期 1.6 天、中位持有 3 小時到 7 天。這是 niche 中的 niche，配置前先問：這個 capacity 夠不夠覆蓋你的 infra 與 LLM API 成本（成本明細未披露）。
 - **LLM-agent 研究者**：三層架構是很好的 **proposal-aggregate + dual-audit** 範本——5 個 proposer 的 union set 提案 239,653 條、只有 102,288 條（42.7%）過雙審。pre-screen 把候選空間由 277 billion pairs 收斂至 704,450；全文沒有完整分項成本，不能據此判定主要成本來自哪一步。
 - **RL 策略**：cutting-plane + integer oracle 可以直接當 action space 的 **feasibility projector**：任何 policy 提出的組合，先以 oracle 評估最壞情況 payoff；如何把結果轉成 policy 約束，仍需額外設計與驗證。這是本頁提出的研究構想，本文未驗證其對 RL 的效果。
 - **研究學生**：理論骨幹只有三個 proposition（§3.1 的 1、2 與 §3.3 的 3），Appendix A.1 的證明完整且自足；先讀這三條再看 §5 的實證，理解成本最低。
