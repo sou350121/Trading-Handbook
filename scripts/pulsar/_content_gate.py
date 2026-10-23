@@ -40,9 +40,10 @@ def validate_page(text, raw, d):
     if not d.get('url') or d['url'] not in text:
         raise ValueError('source_link_missing')
     # Empirical claims outside the explicitly hypothetical worked example must be
-    # verbatim source tokens. Delta is allowed only in its own table column with
+    # verbatim source tokens, allowing only equivalent minus glyphs. Delta is
+    # allowed only in its own table column with
     # the two source-backed operands in the same row, at matching units.
-    source = set(NUMBER.findall(raw['body']))
+    source = {token.replace('−', '-') for token in NUMBER.findall(raw['body'])}
     known_arxiv = set(re.findall(r'\d{4}\.\d{4,5}(?:v\d+)?', raw['body'] + ' ' + raw.get('url', '')))
     verified = d.get('bibliographic_verification', {}).get('arxiv')
     if isinstance(verified, str):
@@ -54,24 +55,28 @@ def validate_page(text, raw, d):
             continue
         # URLs, math exponents, reference years and ordered heading markers are
         # not empirical measurements. Percentages and decimals remain checked.
-        line = re.sub(r'https?://[^\s)]+|\$[^$]+\$|\b(?:19|20)\d{2}(?:[-./]\d{1,2}){0,2}\b', '', line)
+        # Date removal must not consume part of a numeric token. A lone
+        # year.fraction is a decimal; a complete dotted date is still navigation.
+        line = re.sub(r'https?://[^\s)]+|\$[^$]+\$|(?<![\w.,+−-])(?!(?:19|20)\d{2}\.\d+\b(?![-./]\d))(?:19|20)\d{2}(?:[-./]\d{1,2}){0,2}(?![\w%]|[.,]\d)', '', line)
         # A reference phrase plus an explicit section marker is navigation, not a
         # measurement. Keep bare decimals, percentages and metric-like uses gated.
         line = re.sub(r'(?:參見|参见|詳見|详见|參照|参照|參考|参考|見|见|照|\bsee|\bcf\.?|\bsection)\s*§\s*[1-8](?:\.\d+)+(?![\d.%])', '', line, flags=re.I)
         # The frozen template's 7.1 subheading is also sometimes rendered bold.
         # Strip its section number only; any measurements later on stay checked.
         line = re.sub(r'^\s*\*\*7\.1(?=\s+可(?:證偽預測|证伪预测))', '**', line)
+        # Only the frozen bold Eureka label is a 1.2 subsection marker.
+        line = re.sub(r'^(\s*\*\*\s*)1\.2(?=\s+(?:⚡\s*)?Eureka\s*\*\*)', r'\1', line)
         for token in NUMBER.findall(line):
             if '.' not in token and '%' not in token:
                 continue
-            if token in source or token in known_arxiv and 'arxiv' in line.lower():
+            if token.replace('−', '-') in source or token in known_arxiv and 'arxiv' in line.lower():
                 continue
             cells = line.split('|')
             if len(cells) >= 7 and token in cells[-2]:
                 left = NUMBER.findall(cells[-4]); right = NUMBER.findall(cells[-3])
-                if len(left) == len(right) == 1 and left[0] in source and right[0] in source:
+                if len(left) == len(right) == 1 and left[0].replace('−', '-') in source and right[0].replace('−', '-') in source:
                     a, b = left[0], right[0]
-                    if a.endswith('%') == b.endswith('%'):
+                    if token.endswith('%') == a.endswith('%') == b.endswith('%'):
                         val = lambda n: Decimal(n.replace(',', '').replace('−', '-').rstrip('%'))
                         if val(token) == val(b) - val(a):
                             continue

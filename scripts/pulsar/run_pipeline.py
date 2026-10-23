@@ -112,6 +112,38 @@ def validate_outputs(paths):
         validate_page((ROOT / path).read_text(), json.loads(raws[0].read_text()), d)
 
 
+def album_status():
+    from _album import _index_digest, _validated_records
+    receipt = json.loads((ROOT / 'data/health/album.json').read_text(encoding='utf-8'))
+    if not isinstance(receipt, dict) or receipt.get('current_enumeration_complete') is not True:
+        raise RuntimeError('album_receipt_invalid')
+    current = receipt.get('current_count')
+    retained = receipt.get('retained_count')
+    missing = receipt.get('missing_ids')
+    if (type(current) is not int or current < 1 or type(retained) is not int or retained < 0
+            or not isinstance(missing, list) or len(missing) != retained):
+        raise RuntimeError('album_receipt_invalid')
+    missing_ids = []
+    for identity in missing:
+        if (not isinstance(identity, dict) or set(identity) != {'msgid', 'itemidx'}
+                or any(not isinstance(identity[k], str) or not identity[k].isascii()
+                       or not identity[k].isdigit() or int(identity[k]) < 1 for k in ('msgid', 'itemidx'))):
+            raise RuntimeError('album_receipt_invalid')
+        missing_ids.append((identity['msgid'], identity['itemidx']))
+    if missing_ids != sorted(set(missing_ids)):
+        raise RuntimeError('album_receipt_invalid')
+    index = json.loads((ROOT / 'data/index.json').read_text(encoding='utf-8'))
+    identities = _validated_records(index)
+    expected = 'partial' if retained else 'success'
+    # save_complete writes current records first, then unchanged history.
+    retained_ids = sorted((str(x['msgid']), str(x['itemidx'])) for x in index[current:])
+    if (receipt.get('status') != expected or current + retained != len(identities)
+            or missing_ids != retained_ids
+            or ('index_sha256' in receipt and receipt['index_sha256'] != _index_digest(index))):
+        raise RuntimeError('album_receipt_inconsistent')
+    return expected
+
+
 def process(job, publish=False, days=8, sources_only=False, allow_verified_partial=False):
     incomplete = []
     if publish:
@@ -125,7 +157,14 @@ def process(job, publish=False, days=8, sources_only=False, allow_verified_parti
     if job == 'daily':
         # Keep the normal 1200s cron envelope. Failed legacy sources must not
         # consume the whole run before writing/audit/publication can start.
+        # A successful child must create a receipt during this enumeration.
+        # Never accept a receipt left by an earlier run or a failed replacement.
+        (ROOT / 'data/health/album.json').unlink(missing_ok=True)
         step('enumerate_album.py', seconds=60)
+        if album_status() == 'partial':
+            if not allow_verified_partial:
+                raise RuntimeError('album_history_missing')
+            incomplete.append('album_history_missing')
         for name, args, seconds in [('fetch_article.py', ['--workers', '1', '--budget-seconds', '180'], 210),
                                     ('distill_pass_a.py', ['--workers', '1'], 120),
                                     ('fix_collisions.py', [], 30),
