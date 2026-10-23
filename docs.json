@@ -134,6 +134,7 @@
               "foundations/time-series-forecasting/msgnet.md",
               "foundations/time-series-forecasting/multirc.md",
               "foundations/time-series-forecasting/mwum.md",
+              "foundations/time-series-forecasting/neural-filter-estimator-nfe.md",
               "foundations/time-series-forecasting/neuralforecast-tft.md",
               "foundations/time-series-forecasting/ngboost.md",
               "foundations/time-series-forecasting/nlp-crypto-multimodal.md",
@@ -346,7 +347,8 @@
               "foundations/market-microstructure/stochastic-optimal-control-with-reputation-gates.md",
               "foundations/market-microstructure/tick-size.md",
               "foundations/market-microstructure/tlob.md",
-              "foundations/market-microstructure/vanishing-index-effect.md"
+              "foundations/market-microstructure/vanishing-index-effect.md",
+              "foundations/market-microstructure/wgan-eggroll.md"
             ]
           },
           {
