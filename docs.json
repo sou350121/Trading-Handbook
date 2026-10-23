@@ -81,6 +81,7 @@
             "pages": [
               "foundations/time-series-forecasting/overview.md",
               "foundations/time-series-forecasting/add.md",
+              "foundations/time-series-forecasting/addmart.md",
               "foundations/time-series-forecasting/allm4ts.md",
               "foundations/time-series-forecasting/arma-attention.md",
               "foundations/time-series-forecasting/armd.md",
