@@ -8400,6 +8400,86 @@
     }
   },
   {
+    "pos": 421,
+    "msgid": "2247494443",
+    "title": "AI时代的Alpha衰减",
+    "zone": "evaluation-benchmarks",
+    "rating": "📖",
+    "page_worthy": false,
+    "slug": "ai-alpha",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 422,
+    "msgid": "2247494457",
+    "title": "AQR白皮书：学术 Alpha 如何变成真实 Alpha",
+    "zone": "evaluation-benchmarks",
+    "rating": "📖",
+    "page_worthy": false,
+    "slug": "academic-alpha-aqr",
+    "dup_of": null,
+    "framework": "Academic Alpha 实现框架（AQR 白皮书）",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 432,
+    "msgid": "2247494650",
+    "title": "AI 因子挖掘，为什么依然跑不赢十年前的 Alpha101？",
+    "zone": "evaluation-benchmarks",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "factorbench",
+    "dup_of": null,
+    "framework": "FactorBench",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "元学习搜索",
+      "alpha": "因子挖掘",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 435,
+    "msgid": "2247494697",
+    "title": "牛津大学｜因子有效却不赚钱？机器学习端到端链式归因与增强",
+    "zone": "factor-mining",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "art-435",
+    "dup_of": null,
+    "framework": "局部一阶链式归因传导框架",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
     "pos": 436,
     "msgid": "2247494713",
     "title": "比过拟合更隐蔽：一套日内系统逐单对账挖出的六类系统缺陷",

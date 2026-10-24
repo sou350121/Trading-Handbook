@@ -2,12 +2,13 @@
 
 > **收錄**：回测防穿越、样本外稳定性、过拟合检测、鲁棒性量化、公开基准(TFB/QuantBench)与模型衰减归因
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：26 篇（22 篇成解構頁，其餘為 registry）
+> **本 zone 現有**：29 篇（23 篇成解構頁，其餘為 registry）
 
 ## 解構清單
 
 | 方法 | 評級 | 來源 | TL;DR |
 |---|---|---|---|
+| FactorBench | ⚡ | FactorBench | FactorBench 在五大市场统一评测九种自动因子挖掘方法共约五千个因子，检验风格剥离与交易 |
 | [Bayes-Stein Shrinkage](bayes-stein-shrinkage.md) | ⚡ | Bayes-Stein Shrinkage | 基于流动性过滤与贝叶斯收缩，验证2006年后经典学术Alpha在大盘股中收益趋零，揭示回测与实盘 |
 | [非对称可解释性原则](art-408.md) | ⚡ | 非对称可解释性原则 | 提出非对称可解释性原则，将透明度要求从特征层后移至决策与监控层，构建六层架构防过拟合与可审计。 |
 | [KTD-FIN](ktd-fin.md) | ⚡ | KTD-FIN | 提出KTD-FIN基准，通过数据掩码与Barra归因剥离记忆与风格，证明主流LLM交易收益实为风 |
@@ -30,6 +31,8 @@
 | [FinTSBridge](fintsbridge.md) | 🔧 | FinTSBridge | 提出FinTSBridge框架，构建三类金融时序数据集与msIC/msIR评估指标，系统评测十余 |
 | [LOB-Bench](lob-bench.md) | 🔧 | LOB-Bench | 提出LOB-Bench基准框架，通过分布差异、市场影响响应与对抗判别器，定量评估生成式模型在限价 |
 | [TFB](tfb.md) | 🔧 | TFB | 提出TFB基准测试，涵盖10领域8000+数据集，系统评估35种时序预测方法，提供统一流水线与公 |
+| Academic Alpha 实现框架（AQR 白皮书） | 📖 | Academic Alpha 实现框架（AQR 白皮书） | 解读AQR白皮书：学术Alpha变实盘Alpha要过数据时点、中性化、成本容量、持有期四道损耗。 |
+| AI时代的Alpha衰减 | 📖 | — | 解读纽大论文：AI普及使量化因子半衰期从五年压缩到18个月，算法同质化与反身性数据污染是主因。 |
 | ICML 2026 量化论文合集 | 📖 | ICML 2026 | 系统梳理ICML 2026量化核心论文，涵盖组合优化、LLM金融评估、市场模拟、强化学习与高频时 |
 | Prospectus-based AI identification | 📖 | HKMA Working Paper | 基于全球1.9万只AI基金披露文本与持仓数据，实证检验AI选股是否加剧策略拥挤与顺周期踩踏。 |
 | KDD 2026 量化论文合集 | 📖 | KDD 2026 | 系统梳理KDD 2026量化金融论文，覆盖LLM策略、组合管理、宏观预测、风控反欺诈与交易自动化 |

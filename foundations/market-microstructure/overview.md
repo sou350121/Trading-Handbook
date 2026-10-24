@@ -28,7 +28,7 @@
 | [OrderFlowDiT](orderflowdit.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.22727) | 用条件扩散Transformer生成未来五分钟买卖盘量价场，并加无偏非平衡最优传输辅助损失，配合 |
 | [Phase-diagram ABM with null/artefact discipline](phase-diagram-abm-with-null-artefact-discipline.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.08907) | 用相图法验证订单簿ABM中羊群行为引发的流动性枯竭是真实相变，并分解其反射机制。 |
 | [Detecting unusual trading patt](detecting-unusual-trading-patterns-on-cryptocurrency-exchanges-by-means-of-complexity-measures.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.13916) | 本文基于高频交易数据，利用多重分形、近似熵等复杂度指标构建诊断框架，有效识别中心化交易所的刷量与 |
-| SPIDE | 🔧 | [arXiv](https://arxiv.org/abs/2610.30539) | 用SPIDE对Uniswap V3流动性剖面建模，降维为低阶SDE并校准预测。 |
+| [SPIDE](spide.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.30539) | 用SPIDE对Uniswap V3流动性剖面建模，降维为低阶SDE并校准预测。 |
 | [L2 Liquidity-State Transition](l2-liquidity-state-transition.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.09230) | 在加密期货事件窗口内，预事件L2流动性状态是预测后事件流动性的首要信号，订单流仅具增量价值。 |
 | State-Dependent Hawkes Process (SDHP) | 🔧 | [arXiv](https://arxiv.org/abs/2610.23619) | 用状态依赖多元Hawkes建模日内电力市场季度与小时合约的跨产品订单流和流动性依赖。 |
 | Concave-impact / Hurst-scaled execution framework | 🔧 | [arXiv](https://arxiv.org/abs/2610.23749) | 以交易已实现盈亏的夏普比率内生决定执行时长，并在凹幂律冲击与Hurst缩放价格下用凸优化导出闭式 |
