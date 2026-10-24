@@ -2,7 +2,7 @@
 
 > **收錄**：均值方差/风险平价/Black-Litterman、稀疏优化、执行算法(VWAP/冲击成本)、多资产轮动与战术配置
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：41 篇（38 篇成解構頁，其餘為 registry）
+> **本 zone 現有**：43 篇（40 篇成解構頁，其餘為 registry）
 
 ## 解構清單
 
@@ -16,8 +16,10 @@
 | [BPQP](bpqp.md) | ⚡ | NeurIPS24 | 提出BPQP框架，将可微分凸优化的反向传播重构为二次规划问题，实现前后向分离，大幅提升端到端投资 |
 | [Scrambling Convex Network](a-new-input-convex-neural-network-with.md) | 🔧 | Quantitative Finance [arXiv](https://arxiv.org/abs/2411.12854) | 提出一种无需权重非负约束的输入凸神经网络，用于高效定价具有凸收益的期权。 |
 | [谱去噪相关性网络](art-100011.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.10297) | 基于随机矩阵理论对资产相关性矩阵进行谱去噪，提取核心-边缘网络结构，并据此构建外围资产组合以提升 |
+| [Convex Variational Theory of Worst-Case Risk (quantile/distribution representation principle)](convex-variational-theory-of-worst-case-risk-quantile-distribution-representation-principle.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.29652) | 以谱风险度量为统一底座，提出凸变分理论：按模糊集凸性选分位数或分布表示，给出最坏情况风险的闭式解 |
 | [AGCA](agca.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.13112) | 提出锚定测地线成分分析(AGCA)，将多元极值降维转化为特征分解，高效模拟组合尾部风险与VaR。 |
 | [SciPhyRL](sciphyrl.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.15195) | 提出基于SciPhyRL的连续时间组合优化框架，通过PINN离线求解路径HJB方程，结合微观结构 |
+| [Black–Litterman 框架](black-litterman.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.31074) | 证明方向正确的专家观点可单调提升夏普比率，并给出融入Markowitz与端到端组合模型的方法。 |
 | [偏度组合管理：如何系统性提升经典因子的收益？](art-409.md) | 🔧 | — | 提出基于预期偏度预测与顺序双重排序的偏度管理框架，系统性修复去极值对经典因子尾部收益的破坏。 |
 | [RIEnet](rienet.md) | 🔧 | RIEnet | 提出RIEnet神经网络，通过时滞变换、BiLSTM清洗特征值与MLP估计波动率，端到端最小化样 |
 | [拒绝先预测再优化：将 Sharpe/Omega/CVaR塞入](sharpe-omega-cvar.md) | 🔧 | — | 提出端到端可微组合优化框架，将Sharpe/Omega/CVaR平滑为损失函数，直接输出权重并优 |

@@ -2,12 +2,13 @@
 
 > **收錄**：LLM在因子挖掘、情绪分析、研报生成、RAG增强及多智能体交易工作流中的适配、微调与推理架构
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：65 篇（54 篇成解構頁，其餘為 registry）
+> **本 zone 現有**：67 篇（56 篇成解構頁，其餘為 registry）
 
 ## 解構清單
 
 | 方法 | 評級 | 來源 | TL;DR |
 |---|---|---|---|
+| Steward | ⚡ | [arXiv](https://arxiv.org/abs/2610.30557) | 多智能体LLM投资系统Steward：用不可变核心和确定性门控约束自我演进，实盘五个月回撤受控。 |
 | ACE-Trader | ⚡ | [arXiv](https://arxiv.org/abs/2610.25847) | 提出ACE-Trader：为交易员与红队各配一个可学习的上下文记忆选择器，并让两者通过共享交易记 |
 | [XALPHA](xalpha.md) | ⚡ | XALPHA | 提出记忆驱动的多脑闭环AI量化研究员XALPHA，实现从研报阅读、假说生成、代码实现到验证反思的 |
 | [Agentic SDLC](agentic-sdlc.md) | ⚡ | Agentic SDLC | 本文探讨Optiver与Jane Street如何将AI Agent引入量化开发全流程，构建闭环 |
@@ -28,6 +29,7 @@
 | [FINCON](fincon.md) | ⚡ | NeurIPS 2024 | 提出基于LLM的多智能体框架FINCON，通过经理-分析师层级架构与双层风控机制，实现单股交易与 |
 | [FinAgent](finagent.md) | ⚡ | KDD 2024 | 提出FinAgent多模态交易智能体，融合文本与K线图，通过记忆、反思与工具增强模块实现端到端自 |
 | [Grounded Event Extraction System](grounded-event-extraction-system.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.08346) | 提出两阶段LLM系统，从SEC 8-K文件中抽取细粒度事件标签，并通过引用验证与质量评分实现可审 |
+| When News Gets Old: Portfolio  | 🔧 | [arXiv](https://arxiv.org/abs/2610.30564) | 用固定LLM从SEC披露中抽取正负信号，比较RL与LLM组合策略对新闻时效信息的保留、显式注入或 |
 | [两阶段事件提取系统](art-416.md) | 🔧 | 两阶段事件提取系统 | 提出两阶段LLM事件提取系统，通过约束生成与独立评分机制，从8-K公告中抽取细粒度事件标签，提升 |
 | [SkillOpt](skillopt.md) | 🔧 | SkillOpt | 将Agent技能文档视为可训练参数，引入类深度学习优化器（学习率、验证集门控、慢更新）实现技能自 |
 | [OU-LLM配对交易框架](ou-llm.md) | 🔧 | JP Morgan | 用OU均值回归模型替代Z-score构建配对交易基线，融合NLP情绪过滤与LLM冲击分类，显著提 |

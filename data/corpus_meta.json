@@ -8520,6 +8520,46 @@
     }
   },
   {
+    "pos": 100000,
+    "msgid": "arxiv_2610.31074",
+    "title": "Directionally Correct Views in Portfolio Optimization",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "black-litterman",
+    "dup_of": null,
+    "framework": "Black–Litterman 框架",
+    "venue": null,
+    "arxiv": "2610.31074",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 100001,
+    "msgid": "arxiv_2610.30564",
+    "title": "When News Gets Old: Portfolio Allocation with Reinforcement Learning and Large Language Models",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "when-news-gets-old-portfolio-allocation-with-reinforcement-learning-and-large-language-models",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": "2610.30564",
+    "axes": {
+      "data": "文本另类",
+      "horizon": "日频波段",
+      "paradigm": "强化学习",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
     "pos": 100001,
     "msgid": "arxiv_2607.09230",
     "title": "When Does Order Flow Matter? State-Dependent L2 Liquidity-State Transitions in Crypto Futures",
@@ -8660,6 +8700,26 @@
     }
   },
   {
+    "pos": 100002,
+    "msgid": "arxiv_2610.30557",
+    "title": "Governed Self-Evolution for Autonomous Investing: A Multi-Agent LLM System with an Invariant Core",
+    "zone": "llm-agentic",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "steward",
+    "dup_of": null,
+    "framework": "Steward",
+    "venue": null,
+    "arxiv": "2610.30557",
+    "axes": {
+      "data": "文本另类",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "多智能体博弈",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
     "pos": 100003,
     "msgid": "arxiv_2607.08907",
     "title": "Herding and Liquidity in Order-Book Markets. I. A Robust Liquidity-Stress Crossover and its Reflexive Mechanism",
@@ -8740,6 +8800,46 @@
     }
   },
   {
+    "pos": 100003,
+    "msgid": "arxiv_2610.30539",
+    "title": "Dynamics of the Liquidity Profile in Concentrated Liquidity Provision: An SPIDE Approach",
+    "zone": "market-microstructure",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "spide",
+    "dup_of": null,
+    "framework": "SPIDE",
+    "venue": null,
+    "arxiv": "2610.30539",
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 100004,
+    "msgid": "arxiv_2610.29663",
+    "title": "Lineage-Aware Search Control for LLM-Based Evolutionary Factor Mining",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "lineageevo",
+    "dup_of": null,
+    "framework": "LineageEvo",
+    "venue": null,
+    "arxiv": "2610.29663",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "元学习搜索",
+      "alpha": "因子挖掘",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
     "pos": 100004,
     "msgid": "arxiv_2607.14174",
     "title": "How Much of a 10-K Matters? Aggregation-Dependent Value of Full-Text versus Risk-Factor Sentiment",
@@ -8817,6 +8917,26 @@
       "paradigm": "生成式大模型",
       "alpha": "端到端表征",
       "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 100005,
+    "msgid": "arxiv_2610.29652",
+    "title": "Distributions or Quantiles? A Convex Variational Theory of Worst-Case Risk",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "convex-variational-theory-of-worst-case-risk-quantile-distribution-representation-principle",
+    "dup_of": null,
+    "framework": "Convex Variational Theory of Worst-Case Risk (quantile/distribution representation principle)",
+    "venue": null,
+    "arxiv": "2610.29652",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "风险择时",
+      "autonomy": "人机协同可解释"
     }
   },
   {

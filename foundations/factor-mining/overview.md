@@ -2,7 +2,7 @@
 
 > **收錄**：公式型Alpha生成、AutoML/遗传编程挖掘、特征选择、风格因子构造、信号衰减与拥挤度分析
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：69 篇（63 篇成解構頁，其餘為 registry）
+> **本 zone 現有**：70 篇（64 篇成解構頁，其餘為 registry）
 
 ## 解構清單
 
@@ -26,6 +26,7 @@
 | [经验贝叶斯(EB)](empirical-bayes.md) | ⚡ | 经验贝叶斯(EB) | 美联储首席经济学家用经验贝叶斯法系统挖掘13.6万策略，校正数据挖掘偏差，发现会计因子与小盘股在 |
 | [AlphaSharpe](alphasharpe.md) | ⚡ | AlphaSharpe | 利用LLM结合进化策略迭代生成与优化风险调整指标，显著提升资产排名相关性与组合夏普比率。 |
 | [结构化深度排序因子模型](art-121.md) | ⚡ | JFQA | 提出结构化深度神经网络，将传统特征排序自动化为潜在因子生成框架，以最小化定价误差解释横截面收益。 |
+| LineageEvo | 🔧 | [arXiv](https://arxiv.org/abs/2610.29663) | 提出LineageEvo，用血缘（lineage）作为LLM进化因子挖掘的中间控制单元，通过血缘 |
 | [Supervised Lexicon Learning](supervised-lexicon-learning.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.14174) | 基于监督词表学习提取10-K全文与风险章节情绪，验证聚合层级对收益与波动率预测信号有效性的影响。 |
 | [Persistent Homology / Multipersistence Belief-State Features](persistent-homology-multipersistence-belief-state-features.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.25756) | 用PCA与持续同调压缩预测市场信念状态，拓扑特征提升线性与非线性模型的预测与校准精度。 |
 | [LLM Factor Lab](llm-factor-lab.md) | 🔧 | LLM Factor Lab | 用LLM在预设会计公式空间内自主演化因子，经严苛学术检验仅极少数存活。 |

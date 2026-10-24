@@ -6,7 +6,7 @@ arXiv 的 q-fin（PM/TR/ST/CP/RM/GN）加上經關鍵詞過濾的 cs.LG / stat.M
 
 ## 每週雷達 Weekly pages
 
-- [2026-W43](./2026-W43.md) — 2026-10-19 to 2026-10-25 · 68 papers, ⚡55
+- [2026-W43](./2026-W43.md) — 2026-10-19 to 2026-10-25 · 86 papers, ⚡69
 - [2026-W29](./2026-W29.md) — 2026-07-13 to 2026-07-19 · 34 papers, ⚡19
 
-_索引由 `scripts/pulsar/arxiv_radar.py` 維護 · 更新於 2026-10-20 02:27 UTC._
+_索引由 `scripts/pulsar/arxiv_radar.py` 維護 · 更新於 2026-10-24 07:03 UTC._
