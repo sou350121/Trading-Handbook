@@ -10,6 +10,11 @@ import urllib.request
 BIZ = 'Mzg2MzAwNzM0NQ=='
 ALBUM = '3485425931919884288'
 OUT = Path(__file__).resolve().parents[2] / 'data/index.json'
+PUBLISHER_TZ = dt.timezone(dt.timedelta(hours=8))
+
+
+def _publisher_date(timestamp):
+    return dt.datetime.fromtimestamp(_positive_integer(timestamp), PUBLISHER_TZ).date().isoformat()
 
 
 def _positive_integer(value):
@@ -100,7 +105,7 @@ def enumerate_all(fetcher=fetch, pause=time.sleep):
             timestamp = _positive_integer(item['create_time'])
             record = {'pos': _positive_integer(item['pos_num']), 'title': item['title'],
                 'url': _article_url(item['url'], allow_http=True), 'msgid': key[0], 'itemidx': key[1],
-                'create_time': timestamp, 'date': dt.datetime.fromtimestamp(timestamp, dt.timezone.utc).strftime('%Y-%m-%d')}
+                'create_time': timestamp, 'date': _publisher_date(timestamp)}
             _validated_records([record])
             if key in records:
                 raise ValueError('album_duplicate_identity')

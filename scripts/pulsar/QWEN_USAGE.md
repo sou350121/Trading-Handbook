@@ -106,3 +106,13 @@
 - **GitHub 工程蒸餾**（`gh_quant_issues.py`）：每庫一批高互動 issues → 「坑→解法」JSON；**只依據 issue 原文，數字須逐字在文本中**；thinking on、alarm(170)。
 - **正典一句話**（`build_seminal_canon.py`）：開山論文各 ≤40 字「開創了什麼」；引用計數一律 Crossref 機械統計，qwen 不碰數字。
 - **OA 一手解構**：復用 Pass A/B（同 §2-4 紀律），origin=oa 由管線機械蓋章，qwen 無權決定來源標籤。
+
+## Trading 專輯日期與有限 Fetch 備援契約（2026-10）
+
+- 專輯 `create_time` 統一轉成上海（UTC+8）日曆日，與原頁 `ct` 相同；不採本機日期、搜尋日期或模型提供日期。既有正式索引日期的遷移須另列逐筆身分、原始時間、舊日期及新日期，交維護者批准後才套用；本候選不修改索引或歷史快取。
+- 原公開 HTML 與既有代理均無可讀正文時，才可用現有 DeepSeek Fetch `POST /v1/tools/fetch`，只提交同一個微信官方 HTTPS 公開文章 URL。沿用 `_deepseek._key()`，不新增憑證、供應商或充值；Fetch 成功按次計費，不呼叫 Search、不拿摘要補正文、不生成 HTML 偽裝原頁。原 HTML 成功時保留既有正文、HTML SHA256、題名及日期核對；日期衝突直接 failed，不改用 Fetch。
+- Fetch 前核對 `data/health/album.json`：本次列舉完整、狀態與 current/retained 數量一致、`index_sha256` 與完整索引一致、`missing_ids` 與 retained 區段一致。只有索引前 `current_count` 筆可授權；請求條目的 msgid、itemidx、pos、URL、官方題名、原始 create_time、上海日期須逐一相符。retained history、缺收據、雜湊不符或日期不一致均不可解鎖。
+- Fetch 每篇每個 process 最多一次、process 總計最多20次，失敗也占嘗試額度；HTTP401/402/403 不重試。HTTP timeout 最多20秒，回應最多2,000,000 bytes；串流按剩餘時間讀取，日更 POSIX 單工路徑另有20秒整次硬牆，並保留較早到期的180秒批次硬牆及輪轉／deferred 保護，不延長既有日更期限。
+- 只接受 JSON 物件中的字串 `title`、`content`；若返回 `url`，必須與請求一致。實際返回題名須與官方題名一致，正文須達既有300字下限且含足夠可見文字；空、過大、非 JSON、驗證頁、HTML 頁殼、thin 正文或身分不符均維持 failed，不寫快取。存檔前重核專輯收據與雜湊。操作日誌只留受控錯誤碼，不記金鑰、完整請求 URL 或原始回應。
+- Markdown 快取保存來源 `url`、實際 `title`、官方 `wechat_title`、msgid/itemidx、原始 `create_time`、`official_album_index_sha256`、`body_sha256`，並明標 `date_source=official_album_create_time`、`source_format=markdown`、`fetch_provider=deepseek_fetch`。不填 `source_html_sha256`，不宣稱 Markdown 提供發布日期。Markdown 只代表公開文章正文抽取，不代表取得圖像、附件或原論文全文；下游品質、數字及語意標準保持不變，只準備未發布候選。
+- 原頁或代理已識別的題名／日期須在正文長度及驗證頁判定前核對；衝突直接 failed，不得由後續代理或 Fetch 蓋過。Markdown 的300字門檻只計可見文字，扣除圖片（含替代文字）、連結目的 URL、引用定義及 HTML 標記／非顯示內容；此計數不改寫儲存正文或正文 SHA256。

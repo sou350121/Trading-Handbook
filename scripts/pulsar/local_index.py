@@ -4,10 +4,12 @@ import argparse
 import datetime as dt
 import hashlib
 import json
+import os
 from pathlib import Path
 import re
 import subprocess
 import sys
+import tempfile
 
 sys.path.insert(0, '/home/admin/clawd/scripts')
 from _local_memory_search import make_index, load_index, search_index, MAX_INDEX_BYTES
@@ -22,8 +24,18 @@ def git(*args):
     return subprocess.check_output(['git', *args], cwd=ROOT).decode('utf-8')
 
 
+def published_head(expected=None):
+    head = git('rev-parse', '--verify', 'HEAD^{commit}').strip()
+    remote = git('rev-parse', '--verify', 'refs/remotes/origin/main^{commit}').strip()
+    if (head != remote or (expected is not None and head != expected)
+            or git('rev-parse', '--verify', 'HEAD^{commit}').strip() != head
+            or git('rev-parse', '--verify', 'refs/remotes/origin/main^{commit}').strip() != remote):
+        raise ValueError('index_head_unpublished_or_changed')
+    return head
+
+
 def build():
-    head = git('rev-parse', 'HEAD').strip()
+    head = published_head()
     day = git('show', '-s', '--format=%cI', head).strip()[:10]
     paths = sorted(p for p in git('ls-tree', '-r', '--name-only', head).splitlines()
                    if p.endswith('.md') and not p.startswith(('scripts/', 'data/')))
@@ -43,26 +55,51 @@ def build():
     index, reused = make_index(chunks)
     if len(json.dumps(index, ensure_ascii=False, indent=2).encode('utf-8')) > MAX_INDEX_BYTES:
         raise ValueError('index_too_large')
-    atomic(PATH, index)
-    loaded = load_index(str(PATH), fresh=True)
-    if len({c['source'] for c in loaded['chunks']}) != len(paths):
-        raise ValueError('index_document_missing')
-    if git('rev-parse', 'HEAD').strip() != head:
-        raise ValueError('index_head_changed')
-    atomic(MANIFEST, {'head': head, 'documents': len(paths), 'chunks': len(chunks),
-        'built_at': dt.datetime.now(dt.timezone.utc).isoformat(), 'engine': index['engine'],
-        'index_sha256': hashlib.sha256(PATH.read_bytes()).hexdigest(),
-        'date_semantics': 'repository snapshot commit date, not paper publication date'})
+    PATH.parent.mkdir(parents=True, exist_ok=True)
+    with tempfile.TemporaryDirectory(prefix='trading-index-', dir=PATH.parent) as staging:
+        staging = Path(staging)
+        candidate = staging / 'index.json'
+        atomic(candidate, index)
+        loaded = load_index(str(candidate), fresh=True)
+        if len({c['source'] for c in loaded['chunks']}) != len(paths):
+            raise ValueError('index_document_missing')
+        manifest = staging / 'manifest.json'
+        atomic(manifest, {'head': head, 'documents': len(paths), 'chunks': len(chunks),
+            'built_at': dt.datetime.now(dt.timezone.utc).isoformat(), 'engine': index['engine'],
+            'index_sha256': hashlib.sha256(candidate.read_bytes()).hexdigest(),
+            'date_semantics': 'repository snapshot commit date, not paper publication date'})
+        backups = {}
+        for target in (PATH, MANIFEST):
+            backup = staging / (target.name + '.previous')
+            if target.exists():
+                backup.write_bytes(target.read_bytes())
+            backups[target] = backup
+        published_head(head)
+        replaced = []
+        try:
+            for source, target in ((candidate, PATH), (manifest, MANIFEST)):
+                replaced.append(target)
+                os.replace(source, target)
+            published_head(head)
+        except BaseException:
+            for target in reversed(replaced):
+                if backups[target].exists():
+                    os.replace(backups[target], target)
+                else:
+                    target.unlink(missing_ok=True)
+            raise
     return {'documents': len(paths), 'chunks': len(chunks), 'reused': reused}
 
 
 def check():
+    head = published_head()
     manifest = json.loads(MANIFEST.read_text(encoding='utf-8'))
     index = load_index(str(PATH), fresh=True)
-    if manifest['head'] != git('rev-parse', 'HEAD').strip():
+    if manifest['head'] != head:
         raise ValueError('index_head_stale')
     if manifest['index_sha256'] != hashlib.sha256(PATH.read_bytes()).hexdigest():
         raise ValueError('index_hash_mismatch')
+    published_head(head)
     return index
 
 
@@ -72,7 +109,10 @@ def main():
     parser.add_argument('--query')
     args = parser.parse_args()
     if args.query:
-        print(json.dumps(search_index(check(), args.query, days=365, top=5), ensure_ascii=False))
+        head = published_head()
+        results = search_index(check(), args.query, days=365, top=5)
+        published_head(head)
+        print(json.dumps(results, ensure_ascii=False))
     elif args.check:
         print(json.dumps({'status': 'success', 'chunks': check()['chunk_count']}))
     else:
