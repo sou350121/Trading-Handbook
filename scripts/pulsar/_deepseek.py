@@ -5,6 +5,8 @@ from pathlib import Path
 import time
 import urllib.error
 import urllib.request
+from _deepseek_receipt import call_attempt, new_call_id, response_status
+from _deepseek_http import deepseek_opener
 
 MODEL = os.environ.get('TRADING_DEEPSEEK_MODEL', 'deepseek-flash')
 
@@ -39,30 +41,46 @@ def ask(prompt, system=None, thinking=True, temperature=0.3, max_tokens=8000,
     key = _key()
     deadline = time.monotonic() + timeout
     error = 'request_failed'
+    call_id = new_call_id()
     for attempt in range(max(1, retries)):
         remaining = deadline - time.monotonic()
         if remaining < 1:
             break
         request = urllib.request.Request('https://api.deepseek.com/chat/completions', data=encoded,
             headers={'Authorization': 'Bearer ' + key, 'Content-Type': 'application/json'})
-        try:
-            with urllib.request.urlopen(request, timeout=remaining) as response:
-                obj = json.load(response)
-            choice = obj['choices'][0]
-            content = choice['message'].get('content', '')
-            if choice.get('finish_reason') != 'stop':
-                raise RuntimeError('deepseek_incomplete_output')
-            if not isinstance(content, str) or not content.strip():
-                raise RuntimeError('deepseek_empty_output')
-            if json_mode:
-                json.loads(content)
-            return content
-        except urllib.error.HTTPError as exc:
-            error = 'http_' + str(exc.code)
-            if exc.code not in (429, 500, 502, 503, 504):
-                raise RuntimeError('deepseek_' + error) from None
-        except (urllib.error.URLError, TimeoutError, ConnectionError):
-            error = 'network_error'
+        with call_attempt(call_id, 'trading', selected, attempt + 1) as receipt:
+            try:
+                with deepseek_opener(remaining).open(request, timeout=remaining) as response:
+                    receipt['http_status'] = response_status(response)
+                    try:
+                        obj = json.load(response)
+                    except (ValueError, UnicodeError, RecursionError):
+                        receipt['status'] = 'invalid_json'
+                        raise
+                    receipt['response'] = obj
+                receipt['status'] = 'protocol_error'
+                choice = obj['choices'][0]
+                content = choice['message'].get('content', '')
+                if choice.get('finish_reason') != 'stop':
+                    receipt['status'] = 'incomplete'
+                    raise RuntimeError('deepseek_incomplete_output')
+                if not isinstance(content, str) or not content.strip():
+                    receipt['status'] = 'empty'
+                    raise RuntimeError('deepseek_empty_output')
+                if json_mode:
+                    receipt['status'] = 'invalid_json'
+                    json.loads(content)
+                receipt['status'] = 'ok'
+                return content
+            except urllib.error.HTTPError as exc:
+                receipt['status'] = 'http_error'
+                receipt['http_status'] = exc.code
+                error = 'http_' + str(exc.code)
+                if exc.code not in (429, 500, 502, 503, 504):
+                    raise RuntimeError('deepseek_' + error) from None
+            except (urllib.error.URLError, TimeoutError, ConnectionError):
+                receipt['status'] = 'network_error'
+                error = 'network_error'
         if attempt + 1 < retries:
             time.sleep(min(3 * (attempt + 1), max(0, deadline - time.monotonic())))
     raise RuntimeError('deepseek_' + error) from None
