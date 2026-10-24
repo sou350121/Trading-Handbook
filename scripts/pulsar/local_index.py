@@ -12,7 +12,7 @@ import sys
 import tempfile
 
 sys.path.insert(0, '/home/admin/clawd/scripts')
-from _local_memory_search import make_index, load_index, search_index, MAX_INDEX_BYTES
+from _local_memory_search import make_index, load_index, search_index, tokenize, MAX_INDEX_BYTES
 from _health import atomic
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -42,14 +42,25 @@ def build():
     chunks = []
     for path in paths:
         body = git('show', head + ':' + path)
+        if not tokenize(body):
+            raise IndexError('local_document_has_no_searchable_terms')
+        document_chunks = []
         for section_no, section in enumerate(re.split(r'\n(?=## )', body)):
             for offset in range(0, len(section), 2200):
                 text = section[offset:offset + 2200].strip()
                 if not text:
                     continue
-                chunks.append({'id': hashlib.sha256(f'{path}:{section_no}:{offset}'.encode()).hexdigest(),
-                    'text': text, 'date': day, 'source_type': 'trading_handbook',
-                    'source': path, 'section': section.splitlines()[0].lstrip('# ').strip()})
+                if document_chunks and not tokenize(text):
+                    document_chunks[-1]['text'] += '\n' + text
+                else:
+                    document_chunks.append({'id': hashlib.sha256(f'{path}:{section_no}:{offset}'.encode()).hexdigest(),
+                        'text': text, 'date': day, 'source_type': 'trading_handbook',
+                        'source': path, 'section': section.splitlines()[0].lstrip('# ').strip()})
+        # Attach a termless prefix to the first searchable chunk in this document.
+        if len(document_chunks) > 1 and not tokenize(document_chunks[0]['text']):
+            document_chunks[1]['text'] = document_chunks[0]['text'] + '\n' + document_chunks[1]['text']
+            document_chunks.pop(0)
+        chunks.extend(document_chunks)
     if not paths or not chunks:
         raise ValueError('published_content_empty')
     index, reused = make_index(chunks)
