@@ -4,7 +4,7 @@ Only for page_worthy ⚡/🔧 non-dup articles. Resumable. Writes foundations/<z
 
 Usage: python3 distill_pass_b.py [--only-pos N] [--limit N] [--workers W]
 """
-import json, pathlib, sys, argparse, re, threading
+import json, pathlib, sys, argparse, re, threading, hashlib, os, stat, tempfile, time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
 from _qwen import ask
@@ -157,19 +157,102 @@ def build(d, raw):
     return prompt
 
 _lock=threading.Lock(); _n={"ok":0,"skip":0,"fail":0}
+_attempt_lock = threading.Lock()
 
-def do_one(d):
-    cand = sorted(RAW.glob(f"{d['msgid']}_*.json"))
-    if not cand:
-        with _lock:_n["skip"]+=1; return
-    raw = json.loads(cand[0].read_text())
-    slug = slugify(d)
-    out = ROOT/"foundations"/d["zone"]/f"{slug}.md"
-    if out.exists():
-        with _lock:_n["skip"]+=1; return
+def output_path(d):
+    return ROOT/"foundations"/d["zone"]/f"{slugify(d)}.md"
+
+def input_fingerprint(metadata, source):
+    digest = hashlib.sha256()
+    for path, data in (metadata, source):
+        for part in (str(path).encode("utf-8"), data):
+            digest.update(len(part).to_bytes(8, "big"))
+            digest.update(part)
+    return digest.hexdigest()
+
+def unique_json_object(pairs):
+    result = {}
+    for key, value in pairs:
+        if key in result:
+            raise ValueError("attempt_ledger_duplicate_key")
+        result[key] = value
+    return result
+
+def load_attempts():
+    path = ROOT/"data/health/pass-b-attempts.json"
     try:
+        info = path.lstat()
+    except FileNotFoundError:
+        return {"version": 1, "items": {}}
+    if not stat.S_ISREG(info.st_mode):
+        raise ValueError("attempt_ledger_not_regular_file")
+    with os.fdopen(os.open(path, os.O_RDONLY | getattr(os, "O_NOFOLLOW", 0)),
+                   "r", encoding="utf-8") as stream:
+        opened = os.fstat(stream.fileno())
+        if (opened.st_dev, opened.st_ino) != (info.st_dev, info.st_ino):
+            raise ValueError("attempt_ledger_changed_during_read")
+        ledger = json.load(stream, object_pairs_hook=unique_json_object)
+    if (not isinstance(ledger, dict) or set(ledger) != {"version", "items"}
+            or type(ledger["version"]) is not int or ledger["version"] != 1
+            or not isinstance(ledger["items"], dict)):
+        raise ValueError("attempt_ledger_invalid_schema")
+    for msgid, entry in ledger["items"].items():
+        if (not msgid or not isinstance(entry, dict)
+                or set(entry) != {"fingerprint", "attempted_at_ns"}
+                or not isinstance(entry["fingerprint"], str)
+                or not re.fullmatch(r"[0-9a-f]{64}", entry["fingerprint"])
+                or type(entry["attempted_at_ns"]) is not int
+                or entry["attempted_at_ns"] <= 0):
+            raise ValueError("attempt_ledger_invalid_entry")
+    return ledger
+
+def record_attempt(d, fingerprint):
+    # Production invocations share the pipeline lock; this lock covers worker threads.
+    with _attempt_lock:
+        ledger = load_attempts()
+        ledger["items"][str(d["msgid"])] = {
+            "fingerprint": fingerprint, "attempted_at_ns": time.time_ns()}
+        path = ROOT/"data/health/pass-b-attempts.json"
+        path.parent.mkdir(parents=True, exist_ok=True)
+        fd, name = tempfile.mkstemp(prefix=".pass-b-attempts-", dir=path.parent)
+        temporary = pathlib.Path(name)
+        try:
+            with os.fdopen(fd, "w", encoding="utf-8") as stream:
+                os.chmod(temporary, 0o600)
+                json.dump(ledger, stream, ensure_ascii=False)
+                stream.flush()
+                os.fsync(stream.fileno())
+            os.replace(temporary, path)
+        finally:
+            temporary.unlink(missing_ok=True)
+
+def do_one(d, metadata=None, source=None):
+    try:
+        slug = slugify(d)
+        out = output_path(d)
+        if out.exists():
+            with _lock:_n["skip"]+=1; return
+        if source is None:
+            candidates = sorted(RAW.glob(f"{d['msgid']}_*.json"))
+            source = candidates[0] if candidates else None
+        if source is None:
+            with _lock:_n["skip"]+=1; return
+        if metadata is None:
+            for path in sorted(DIS.glob("*.json")):
+                candidate = (path, path.read_bytes())
+                if json.loads(candidate[1]) == d:
+                    metadata = candidate
+                    break
+            if metadata is None:
+                raise ValueError("metadata_not_found")
+        source = (source, source.read_bytes())
+        raw = json.loads(source[1])
         prompt = build(d, raw)
+        fingerprint = input_fingerprint(metadata, source)
         for attempt in range(2):
+            if out.exists():
+                with _lock:_n["skip"]+=1; return
+            record_attempt(d, fingerprint)
             md = ask(prompt, system=SYSTEM, thinking=True, temperature=0.4,
                      max_tokens=32768, timeout=600).strip()
             if md.startswith("```"):
@@ -187,7 +270,11 @@ def do_one(d):
                     raise
                 prompt = build(d, raw) + "\n上次草稿未通過機械品質檢查：" + str(error) + "。請依原始規則重寫，不可猜測或補造缺失值；無來源支持的實證數字寫未披露。"
         out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(md)
+        try:
+            with out.open("x") as stream:
+                stream.write(md)
+        except FileExistsError:
+            with _lock:_n["skip"]+=1; return
         with _lock:
             _n["ok"]+=1
             print(f"  PAGE {d['zone']}/{slug}.md  ({len(md)}c)  <- {d['title'][:28]}", flush=True)
@@ -203,16 +290,39 @@ def main():
     ap.add_argument("--shard",type=str,default="",help="i/m disjoint slice for parallel runs")
     ap.add_argument("--workers",type=int,default=2)
     args=ap.parse_args()
-    ds=[json.loads(f.read_text()) for f in DIS.glob("*.json")]
-    sel=[d for d in ds if d.get("page_worthy") and d.get("rating") in ("⚡","🔧") and not d.get("dup_of")]
-    if args.only_pos: sel=[d for d in ds if d["pos"]==args.only_pos]
-    sel.sort(key=lambda d:-d["pos"])
+    ds=[]
+    for f in DIS.glob("*.json"):
+        metadata = (f, f.read_bytes())
+        ds.append((json.loads(metadata[1]), metadata))
+    sel=[(d, meta) for d, meta in ds if d.get("page_worthy") and d.get("rating") in ("⚡","🔧") and not d.get("dup_of")]
+    if args.only_pos: sel=[(d, meta) for d, meta in ds if d["pos"]==args.only_pos]
+    sel.sort(key=lambda item:-item[0]["pos"])
     if args.shard:
         i,m=(int(x) for x in args.shard.split("/")); sel=sel[i::m]
-    if args.limit: sel=sel[:args.limit]
-    print(f"Pass B on {len(sel)} pages, workers={args.workers}",flush=True)
+    ledger = load_attempts()
+    pending = []
+    for d, metadata in sel:
+        try:
+            if output_path(d).exists():
+                continue
+            candidates = sorted(RAW.glob(f"{d['msgid']}_*.json"))
+            source = candidates[0] if candidates else None
+            fingerprint = input_fingerprint(metadata, (source, source.read_bytes())) if source else None
+        except Exception as e:
+            with _lock:
+                _n["fail"]+=1
+                print(f"  FAIL pos={d['pos']} :: {e}", file=sys.stderr, flush=True)
+            continue
+        previous = ledger["items"].get(str(d["msgid"]))
+        priority = (previous["attempted_at_ns"]
+                    if previous and previous["fingerprint"] == fingerprint else 0)
+        pending.append((priority, -d["pos"], d, metadata, source))
+    pending.sort(key=lambda item:item[:2])
+    if args.limit: pending=pending[:args.limit]
+    print(f"Pass B on {len(pending)} pages, workers={args.workers}",flush=True)
     with ThreadPoolExecutor(max_workers=args.workers) as ex:
-        for fut in as_completed([ex.submit(do_one,d) for d in sel]):
+        for fut in as_completed([ex.submit(do_one,d,metadata,source)
+                                 for _,_,d,metadata,source in pending]):
             fut.result()  # surface exceptions
     print(f"\nDONE ok={_n['ok']} skip={_n['skip']} fail={_n['fail']}",flush=True)
 
