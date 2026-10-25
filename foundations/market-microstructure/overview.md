@@ -32,7 +32,7 @@
 | [SPIDE](spide) | 🔧 | [arXiv](https://arxiv.org/abs/2610.30539) | 用SPIDE对Uniswap V3流动性剖面建模，降维为低阶SDE并校准预测。 |
 | [L2 Liquidity-State Transition](l2-liquidity-state-transition) | 🔧 | [arXiv](https://arxiv.org/abs/2607.09230) | 在加密期货事件窗口内，预事件L2流动性状态是预测后事件流动性的首要信号，订单流仅具增量价值。 |
 | [State-Dependent Hawkes Process (SDHP)](state-dependent-hawkes-process-sdhp) | 🔧 | [arXiv](https://arxiv.org/abs/2610.23619) | 用状态依赖多元Hawkes建模日内电力市场季度与小时合约的跨产品订单流和流动性依赖。 |
-| Concave-impact / Hurst-scaled execution framework | 🔧 | [arXiv](https://arxiv.org/abs/2610.23749) | 以交易已实现盈亏的夏普比率内生决定执行时长，并在凹幂律冲击与Hurst缩放价格下用凸优化导出闭式 |
+| [Concave-impact / Hurst-scaled execution framework](concave-impact-hurst-scaled-execution-framework) | 🔧 | [arXiv](https://arxiv.org/abs/2610.23749) | 以交易已实现盈亏的夏普比率内生决定执行时长，并在凹幂律冲击与Hurst缩放价格下用凸优化导出闭式 |
 | [Extra Trees](extra-trees) | 🔧 | Extra Trees | 利用专有高频标签训练Extra Trees，将公开TAQ指标映射为主动/被动HFT流向代理变量。 |
 | [解码动量溢出：日内-隔夜收益的非对称结构](art-333) | 🔧 | — | 将动量溢出拆解为日内与隔夜收益，揭示散户追涨与机构慢速套利驱动的非对称定价机制。 |
 | [谱交易量模型](art-332) | 🔧 | 谱交易量模型 | 本文提出基于傅里叶分析的谱交易量模型，揭示中美股市高频交易量的周期性规律，并应用于VWAP执行优 |
