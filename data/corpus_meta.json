@@ -8440,6 +8440,46 @@
     }
   },
   {
+    "pos": 430,
+    "msgid": "2247494631",
+    "title": "华尔街顶级阵容联手：如何评测金融大模型",
+    "zone": "evaluation-benchmarks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "finautorubric",
+    "dup_of": null,
+    "framework": "FinAutoRubric",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "跨周期",
+      "paradigm": "生成式大模型",
+      "alpha": "多智能体博弈",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 431,
+    "msgid": "2247494643",
+    "title": "情绪指标的非对称陷阱：来自百万新闻的证据",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "gpt-4-1-mini-finbert-local-projections",
+    "dup_of": null,
+    "framework": "GPT-4.1-mini + FinBERT + local projections",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "中长周期",
+      "paradigm": "因果结构",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
     "pos": 432,
     "msgid": "2247494650",
     "title": "AI 因子挖掘，为什么依然跑不赢十年前的 Alpha101？",
@@ -8456,6 +8496,26 @@
       "horizon": "中长周期",
       "paradigm": "元学习搜索",
       "alpha": "因子挖掘",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 433,
+    "msgid": "2247494688",
+    "title": "传统因子与深度学习如何结合？基于LeCun世界模型JEPA的预测框架",
+    "zone": "time-series-forecasting",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "stock-jepa",
+    "dup_of": null,
+    "framework": "STOCK-JEPA",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
       "autonomy": "全自动黑盒"
     }
   },
