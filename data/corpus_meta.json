@@ -8440,6 +8440,146 @@
     }
   },
   {
+    "pos": 423,
+    "msgid": "2247494492",
+    "title": "市场状态识别下的多轴交易信号",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "regime-aware-multiaxial-signal-meta-layer-signal-ev-ledger",
+    "dup_of": null,
+    "framework": "Regime-Aware Multiaxial Signal Meta-Layer / Signal EV Ledger",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "高频日内",
+      "paradigm": "元学习搜索",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 424,
+    "msgid": "2247494535",
+    "title": "因子—图投资组合分散化模型",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "mingle",
+    "dup_of": null,
+    "framework": "MINGLE",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "图关系",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 425,
+    "msgid": "2247494550",
+    "title": "谷歌 x 剑桥 | AutoScientist-Quant：面向量化的自动研究智能体",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "autoscientist-quant",
+    "dup_of": null,
+    "framework": "AutoScientist-Quant",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "元学习搜索",
+      "alpha": "因子挖掘",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 426,
+    "msgid": "2247494574",
+    "title": "AI 对冲基金的Alpha为何消失？",
+    "zone": "evaluation-benchmarks",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "ai-alpha",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 427,
+    "msgid": "2247494580",
+    "title": "英伟达 | 聚合订单簿下的微观区间识别与 FIFO 排队偏差",
+    "zone": "market-microstructure",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "jax-lob",
+    "dup_of": null,
+    "framework": "JAX-LOB",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "因果结构",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 428,
+    "msgid": "2247494608",
+    "title": "黑翼资产｜告别固定窗口：自适应时序架构 RAVEN",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "raven",
+    "dup_of": null,
+    "framework": "RAVEN",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 429,
+    "msgid": "2247494623",
+    "title": "易方达｜预测次日收益，模型一定要用次日收益做标签吗？",
+    "zone": "time-series-forecasting",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "art-429",
+    "dup_of": null,
+    "framework": "自适应标签期限双层优化",
+    "venue": "ICML 2026",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "元学习搜索",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
     "pos": 430,
     "msgid": "2247494631",
     "title": "华尔街顶级阵容联手：如何评测金融大模型",
@@ -8517,6 +8657,26 @@
       "paradigm": "监督回归",
       "alpha": "端到端表征",
       "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 434,
+    "msgid": "2247494689",
+    "title": "做了一个没人用的金融 Agent 之后",
+    "zone": "llm-agentic",
+    "rating": "❌",
+    "page_worthy": false,
+    "slug": "mota",
+    "dup_of": null,
+    "framework": "MoTA",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "跨周期",
+      "paradigm": "生成式大模型",
+      "alpha": "多智能体博弈",
+      "autonomy": "人机协同可解释"
     }
   },
   {

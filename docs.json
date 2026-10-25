@@ -258,6 +258,7 @@
             "pages": [
               "foundations/llm-agentic/overview.md",
               "foundations/llm-agentic/2-43-ai.md",
+              "foundations/llm-agentic/ace-trader.md",
               "foundations/llm-agentic/agent-trading-arena.md",
               "foundations/llm-agentic/agentic-sdlc.md",
               "foundations/llm-agentic/alpha-grail.md",
@@ -302,11 +303,13 @@
               "foundations/llm-agentic/rag-mcp.md",
               "foundations/llm-agentic/rd-agent-q.md",
               "foundations/llm-agentic/skillopt.md",
+              "foundations/llm-agentic/steward.md",
               "foundations/llm-agentic/stockagent.md",
               "foundations/llm-agentic/susgen-gpt.md",
               "foundations/llm-agentic/timi.md",
               "foundations/llm-agentic/tradingagents.md",
               "foundations/llm-agentic/trr.md",
+              "foundations/llm-agentic/when-news-gets-old-portfolio-allocation-with-reinforcement-learning-and-large-language-models.md",
               "foundations/llm-agentic/xalpha.md"
             ]
           },
@@ -346,6 +349,7 @@
               "foundations/market-microstructure/phase-diagram-abm-with-null-artefact-discipline.md",
               "foundations/market-microstructure/pvar.md",
               "foundations/market-microstructure/spide.md",
+              "foundations/market-microstructure/state-dependent-hawkes-process-sdhp.md",
               "foundations/market-microstructure/stochastic-optimal-control-with-reputation-gates.md",
               "foundations/market-microstructure/tick-size.md",
               "foundations/market-microstructure/tlob.md",
@@ -396,6 +400,7 @@
               "foundations/factor-mining/fund-manager-expectation-asymmetry.md",
               "foundations/factor-mining/hf9-post-adaptive-lasso.md",
               "foundations/factor-mining/hppo-to.md",
+              "foundations/factor-mining/lineageevo.md",
               "foundations/factor-mining/llm-factor-lab.md",
               "foundations/factor-mining/llm-mcts-alpha-mining.md",
               "foundations/factor-mining/miqubo.md",

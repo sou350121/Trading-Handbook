@@ -2,52 +2,53 @@
 
 > **收錄**：限价订单簿(LOB)建模、订单流信号、做市策略、高频套利、微观流动性与价格形成机制
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：43 篇（40 篇成解構頁，其餘為 registry）
+> **本 zone 現有**：44 篇（41 篇成解構頁，其餘為 registry）
 
 ## 解構清單
 
 | 方法 | 評級 | 來源 | TL;DR |
 |---|---|---|---|
-| [WGAN + EGGROLL](wgan-eggroll.md) | ⚡ | ICAIF26 [arXiv](https://arxiv.org/abs/2610.25604) | 用WGAN评论家与进化策略对LOB基础模型做对抗后训练，提升高频市场模拟真实度。 |
-| [Coherent-set convex hull + integer programming arbitrage](coherent-set-convex-hull-integer-programming-arbitrage.md) | ⚡ | [arXiv](https://arxiv.org/abs/2610.23517) | 用凸包+整数规划识别预测市场中逻辑相关合约的组合套利，并用Polymarket全深度盘口回放测量 |
-| [Autocorrelation Map](autocorrelation-map.md) | ⚡ | [arXiv](https://arxiv.org/abs/2607.09426) | 发现加密货币期货在整点/刻钟存在算法交易引发的量价脉冲，刻钟开盘订单失衡可预测4-12小时收益。 |
-| [M3](art-420.md) | ⚡ | M3 | 提出M3微观市场生成模型，用开盘价锚定与向量量化耦合订单流与盘口，实现长轨迹反事实推演。 |
-| [波动率归一化Tick Size](tick-size.md) | ⚡ | 波动率归一化Tick Size | 揭示2008年后短周期趋势策略失效源于HFT做市商在细Tick稀疏订单簿中的定向撤单，切断趋势自 |
-| [影响中性测度变换](art-395.md) | ⚡ | 影响中性测度变换 | 本文在Kyle-Back模型中引入动态合规风险，通过影响中性测度变换将随机博弈退化为确定性最优控 |
-| [MDS (Metric Dependence Screening)](mds-metric-dependence-screening.md) | ⚡ | MDS (Metric Dependence Screening) | 提出基于Fréchet变差的度量依赖筛选框架，利用日内波动曲线与日度收益构建非欧度量空间，实现高 |
-| [金融基础模型](art-363.md) | ⚡ | ICML25 | 梳理HRT在ICML的演讲，论证Scaling Laws在金融微观数据中的有效性，并探讨基础模型 |
-| [一个简单的调整，如何让订单流信号解释度暴增482%？](order-flow-explanatory-power.md) | ⚡ | — | 提出用市值替代交易量归一化订单流，基于匹配滤波器理论显著提升知情交易信号的信噪比与收益解释力。 |
-| [小数点后的Alpha：限价单堆积如何预测股价走势](alpha.md) | ⚡ | — | 揭示收盘价小数位（X.1/X.9）通过整数位限价单堆积产生的非对称流动性，显著预测短期股价走势。 |
-| [牛津大学 | 做市商的终极困境：如何破解“成交即亏损”的微观](art-330.md) | ⚡ | — | 基于实盘LOB数据揭示做市商成交概率与收益的负相关困境，提出利用微观特征识别“反转”信号过滤订单 |
-| [Hawkes LOB + PPO/SIL](hawkes-lob-ppo-sil.md) | ⚡ | Hawkes LOB + PPO/SIL | 在Hawkes订单簿模型中用RL训练做市商对抗TWAP执行，发现RL利润飙升但对手滑点反降，揭示 |
-| [基于事件的冲击剖面](art-311.md) | ⚡ | 基于事件的冲击剖面 | 借鉴粒子物理统计方法，构建微秒级事件冲击剖面，量化期货板块间引领-跟随关系与市场层级结构。 |
-| [FlowHFT](flowhft.md) | ⚡ | FlowHFT | 提出FlowHFT框架，结合流匹配模仿学习与网格搜索微调，在高频做市中自适应学习并超越多场景专家 |
-| [JF | 消失的指数效应](vanishing-index-effect.md) | ⚡ | JF | 本文实证发现S&P 500指数纳入/剔除的异常回报近十年趋零，主因是指数迁移抵消需求冲击及市场流 |
-| [EDGE](edge.md) | ⚡ | JFE | 提出基于日频OHLC的EDGE估计量，通过GMM动态组合矩条件，解决传统低频价差估计的偏差与高方 |
-| [Stochastic Optimal Control with Reputation Gates](stochastic-optimal-control-with-reputation-gates.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.11328) | 构建含声誉反馈的OTC做市随机控制模型，揭示报价策略在声誉积累与变现间的动态权衡及双稳态现象。 |
-| [OrderFlowDiT](orderflowdit.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.22727) | 用条件扩散Transformer生成未来五分钟买卖盘量价场，并加无偏非平衡最优传输辅助损失，配合 |
-| [Phase-diagram ABM with null/artefact discipline](phase-diagram-abm-with-null-artefact-discipline.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.08907) | 用相图法验证订单簿ABM中羊群行为引发的流动性枯竭是真实相变，并分解其反射机制。 |
-| [Detecting unusual trading patt](detecting-unusual-trading-patterns-on-cryptocurrency-exchanges-by-means-of-complexity-measures.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.13916) | 本文基于高频交易数据，利用多重分形、近似熵等复杂度指标构建诊断框架，有效识别中心化交易所的刷量与 |
-| [SPIDE](spide.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.30539) | 用SPIDE对Uniswap V3流动性剖面建模，降维为低阶SDE并校准预测。 |
-| [L2 Liquidity-State Transition](l2-liquidity-state-transition.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.09230) | 在加密期货事件窗口内，预事件L2流动性状态是预测后事件流动性的首要信号，订单流仅具增量价值。 |
-| State-Dependent Hawkes Process (SDHP) | 🔧 | [arXiv](https://arxiv.org/abs/2610.23619) | 用状态依赖多元Hawkes建模日内电力市场季度与小时合约的跨产品订单流和流动性依赖。 |
+| [WGAN + EGGROLL](wgan-eggroll) | ⚡ | ICAIF26 [arXiv](https://arxiv.org/abs/2610.25604) | 用WGAN评论家与进化策略对LOB基础模型做对抗后训练，提升高频市场模拟真实度。 |
+| [Coherent-set convex hull + integer programming arbitrage](coherent-set-convex-hull-integer-programming-arbitrage) | ⚡ | [arXiv](https://arxiv.org/abs/2610.23517) | 用凸包+整数规划识别预测市场中逻辑相关合约的组合套利，并用Polymarket全深度盘口回放测量 |
+| [Autocorrelation Map](autocorrelation-map) | ⚡ | [arXiv](https://arxiv.org/abs/2607.09426) | 发现加密货币期货在整点/刻钟存在算法交易引发的量价脉冲，刻钟开盘订单失衡可预测4-12小时收益。 |
+| JAX-LOB | ⚡ | JAX-LOB | 保持L2盘口与成交路径不变，仅改变撤单在FIFO队列中的分配方式，量化聚合订单簿下被动执行回测的 |
+| [M3](art-420) | ⚡ | M3 | 提出M3微观市场生成模型，用开盘价锚定与向量量化耦合订单流与盘口，实现长轨迹反事实推演。 |
+| [波动率归一化Tick Size](tick-size) | ⚡ | 波动率归一化Tick Size | 揭示2008年后短周期趋势策略失效源于HFT做市商在细Tick稀疏订单簿中的定向撤单，切断趋势自 |
+| [影响中性测度变换](art-395) | ⚡ | 影响中性测度变换 | 本文在Kyle-Back模型中引入动态合规风险，通过影响中性测度变换将随机博弈退化为确定性最优控 |
+| [MDS (Metric Dependence Screening)](mds-metric-dependence-screening) | ⚡ | MDS (Metric Dependence Screening) | 提出基于Fréchet变差的度量依赖筛选框架，利用日内波动曲线与日度收益构建非欧度量空间，实现高 |
+| [金融基础模型](art-363) | ⚡ | ICML25 | 梳理HRT在ICML的演讲，论证Scaling Laws在金融微观数据中的有效性，并探讨基础模型 |
+| [一个简单的调整，如何让订单流信号解释度暴增482%？](order-flow-explanatory-power) | ⚡ | — | 提出用市值替代交易量归一化订单流，基于匹配滤波器理论显著提升知情交易信号的信噪比与收益解释力。 |
+| [小数点后的Alpha：限价单堆积如何预测股价走势](alpha) | ⚡ | — | 揭示收盘价小数位（X.1/X.9）通过整数位限价单堆积产生的非对称流动性，显著预测短期股价走势。 |
+| [牛津大学 | 做市商的终极困境：如何破解“成交即亏损”的微观](art-330) | ⚡ | — | 基于实盘LOB数据揭示做市商成交概率与收益的负相关困境，提出利用微观特征识别“反转”信号过滤订单 |
+| [Hawkes LOB + PPO/SIL](hawkes-lob-ppo-sil) | ⚡ | Hawkes LOB + PPO/SIL | 在Hawkes订单簿模型中用RL训练做市商对抗TWAP执行，发现RL利润飙升但对手滑点反降，揭示 |
+| [基于事件的冲击剖面](art-311) | ⚡ | 基于事件的冲击剖面 | 借鉴粒子物理统计方法，构建微秒级事件冲击剖面，量化期货板块间引领-跟随关系与市场层级结构。 |
+| [FlowHFT](flowhft) | ⚡ | FlowHFT | 提出FlowHFT框架，结合流匹配模仿学习与网格搜索微调，在高频做市中自适应学习并超越多场景专家 |
+| [JF | 消失的指数效应](vanishing-index-effect) | ⚡ | JF | 本文实证发现S&P 500指数纳入/剔除的异常回报近十年趋零，主因是指数迁移抵消需求冲击及市场流 |
+| [EDGE](edge) | ⚡ | JFE | 提出基于日频OHLC的EDGE估计量，通过GMM动态组合矩条件，解决传统低频价差估计的偏差与高方 |
+| [Stochastic Optimal Control with Reputation Gates](stochastic-optimal-control-with-reputation-gates) | 🔧 | [arXiv](https://arxiv.org/abs/2607.11328) | 构建含声誉反馈的OTC做市随机控制模型，揭示报价策略在声誉积累与变现间的动态权衡及双稳态现象。 |
+| [OrderFlowDiT](orderflowdit) | 🔧 | [arXiv](https://arxiv.org/abs/2610.22727) | 用条件扩散Transformer生成未来五分钟买卖盘量价场，并加无偏非平衡最优传输辅助损失，配合 |
+| [Phase-diagram ABM with null/artefact discipline](phase-diagram-abm-with-null-artefact-discipline) | 🔧 | [arXiv](https://arxiv.org/abs/2607.08907) | 用相图法验证订单簿ABM中羊群行为引发的流动性枯竭是真实相变，并分解其反射机制。 |
+| [Detecting unusual trading patt](detecting-unusual-trading-patterns-on-cryptocurrency-exchanges-by-means-of-complexity-measures) | 🔧 | [arXiv](https://arxiv.org/abs/2607.13916) | 本文基于高频交易数据，利用多重分形、近似熵等复杂度指标构建诊断框架，有效识别中心化交易所的刷量与 |
+| [SPIDE](spide) | 🔧 | [arXiv](https://arxiv.org/abs/2610.30539) | 用SPIDE对Uniswap V3流动性剖面建模，降维为低阶SDE并校准预测。 |
+| [L2 Liquidity-State Transition](l2-liquidity-state-transition) | 🔧 | [arXiv](https://arxiv.org/abs/2607.09230) | 在加密期货事件窗口内，预事件L2流动性状态是预测后事件流动性的首要信号，订单流仅具增量价值。 |
+| [State-Dependent Hawkes Process (SDHP)](state-dependent-hawkes-process-sdhp) | 🔧 | [arXiv](https://arxiv.org/abs/2610.23619) | 用状态依赖多元Hawkes建模日内电力市场季度与小时合约的跨产品订单流和流动性依赖。 |
 | Concave-impact / Hurst-scaled execution framework | 🔧 | [arXiv](https://arxiv.org/abs/2610.23749) | 以交易已实现盈亏的夏普比率内生决定执行时长，并在凹幂律冲击与Hurst缩放价格下用凸优化导出闭式 |
-| [Extra Trees](extra-trees.md) | 🔧 | Extra Trees | 利用专有高频标签训练Extra Trees，将公开TAQ指标映射为主动/被动HFT流向代理变量。 |
-| [解码动量溢出：日内-隔夜收益的非对称结构](art-333.md) | 🔧 | — | 将动量溢出拆解为日内与隔夜收益，揭示散户追涨与机构慢速套利驱动的非对称定价机制。 |
-| [谱交易量模型](art-332.md) | 🔧 | 谱交易量模型 | 本文提出基于傅里叶分析的谱交易量模型，揭示中美股市高频交易量的周期性规律，并应用于VWAP执行优 |
-| [TLOB](tlob.md) | 🔧 | TLOB | 提出TLOB模型，利用时间与特征双重注意力机制及双线性归一化，直接端到端预测限价订单簿价格趋势， |
-| [ClusterLOB](clusterlob.md) | 🔧 | ClusterLOB | 提出ClusterLOB方法，对MBO数据做K-means++聚类，将订单流分为方向性/机会主义 |
-| [Attn-LOB](attn-lob.md) | 🔧 | Attn-LOB | 本文提出Attn-LOB模型自动提取盘口特征，结合PPO/DQN训练DRL做市智能体，实现价差捕 |
-| [高频交易中的标签不平衡问题研究](art-171.md) | 🔧 | — | 针对高频收益预测中的标签不平衡，结合欠采样与成本敏感学习，在期货盘口数据上验证深度学习模型的预测 |
-| [TLOB](tlob.md) | 🔧 | TLOB | 提出TLOB模型，利用时间与特征双重注意力Transformer及双线性归一化，直接对限价订单簿 |
-| [COI](coi.md) | 🔧 | Oxford-Man Institute | 基于1毫秒时间窗口的交易共现性分解订单流，构建条件订单失衡(COI)信号，有效预测未来收益并实现 |
-| [MDI-GD竞争聚类RBFNN框架](mdi-gd-rbfnn.md) | 🔧 | MDI-GD竞争聚类RBFNN框架 | 提出全自动HFT预测框架，通过MDI与GD竞争评估特征重要性，结合轮廓系数自动确定k-means |
-| [揭秘高频交易“军备竞赛”](art-118.md) | 🔧 | — | 利用交易所微秒级消息数据量化高频延迟套利事件，揭示其对市场流动性成本的显著影响及全球收益规模。 |
-| [PVAR](pvar.md) | 🔧 | JFE | 基于分钟级TAQ数据与PVAR模型，实证检验ETF套利与流动性对标的证券价格及波动的影响，发现传 |
-| [基于注意力机制的LOB理解、识别和预测](lob.md) | 🔧 | — | 提出复合多变量嵌入与结构正则化Seq2Seq模型，实现多级LOB价格与交易量的精准预测。 |
-| [OPTM-LSTM](optm-lstm.md) | 🔧 | OPTM-LSTM | 提出OPTM-LSTM单元，通过在线评估内部门/状态重要性动态选择输出，提升LOB中间价格高频预 |
-| [HLOB](hlob.md) | 🔧 | HLOB | 提出HLOB模型，结合TMFG图拓扑与同调卷积网络捕捉LOB空间依赖，LSTM建模时间动态，有效 |
-| [使用机器学习方法研究限价委托簿特征对短期价格预测的影响](art-11.md) | 🔧 | — | 基于LOB数据对比多种ML分类器，发现随机森林结合平滑处理与不平衡特征对短期价格方向预测效果最佳 |
+| [Extra Trees](extra-trees) | 🔧 | Extra Trees | 利用专有高频标签训练Extra Trees，将公开TAQ指标映射为主动/被动HFT流向代理变量。 |
+| [解码动量溢出：日内-隔夜收益的非对称结构](art-333) | 🔧 | — | 将动量溢出拆解为日内与隔夜收益，揭示散户追涨与机构慢速套利驱动的非对称定价机制。 |
+| [谱交易量模型](art-332) | 🔧 | 谱交易量模型 | 本文提出基于傅里叶分析的谱交易量模型，揭示中美股市高频交易量的周期性规律，并应用于VWAP执行优 |
+| [TLOB](tlob) | 🔧 | TLOB | 提出TLOB模型，利用时间与特征双重注意力机制及双线性归一化，直接端到端预测限价订单簿价格趋势， |
+| [ClusterLOB](clusterlob) | 🔧 | ClusterLOB | 提出ClusterLOB方法，对MBO数据做K-means++聚类，将订单流分为方向性/机会主义 |
+| [Attn-LOB](attn-lob) | 🔧 | Attn-LOB | 本文提出Attn-LOB模型自动提取盘口特征，结合PPO/DQN训练DRL做市智能体，实现价差捕 |
+| [高频交易中的标签不平衡问题研究](art-171) | 🔧 | — | 针对高频收益预测中的标签不平衡，结合欠采样与成本敏感学习，在期货盘口数据上验证深度学习模型的预测 |
+| [TLOB](tlob) | 🔧 | TLOB | 提出TLOB模型，利用时间与特征双重注意力Transformer及双线性归一化，直接对限价订单簿 |
+| [COI](coi) | 🔧 | Oxford-Man Institute | 基于1毫秒时间窗口的交易共现性分解订单流，构建条件订单失衡(COI)信号，有效预测未来收益并实现 |
+| [MDI-GD竞争聚类RBFNN框架](mdi-gd-rbfnn) | 🔧 | MDI-GD竞争聚类RBFNN框架 | 提出全自动HFT预测框架，通过MDI与GD竞争评估特征重要性，结合轮廓系数自动确定k-means |
+| [揭秘高频交易“军备竞赛”](art-118) | 🔧 | — | 利用交易所微秒级消息数据量化高频延迟套利事件，揭示其对市场流动性成本的显著影响及全球收益规模。 |
+| [PVAR](pvar) | 🔧 | JFE | 基于分钟级TAQ数据与PVAR模型，实证检验ETF套利与流动性对标的证券价格及波动的影响，发现传 |
+| [基于注意力机制的LOB理解、识别和预测](lob) | 🔧 | — | 提出复合多变量嵌入与结构正则化Seq2Seq模型，实现多级LOB价格与交易量的精准预测。 |
+| [OPTM-LSTM](optm-lstm) | 🔧 | OPTM-LSTM | 提出OPTM-LSTM单元，通过在线评估内部门/状态重要性动态选择输出，提升LOB中间价格高频预 |
+| [HLOB](hlob) | 🔧 | HLOB | 提出HLOB模型，结合TMFG图拓扑与同调卷积网络捕捉LOB空间依赖，LSTM建模时间动态，有效 |
+| [使用机器学习方法研究限价委托簿特征对短期价格预测的影响](art-11) | 🔧 | — | 基于LOB数据对比多种ML分类器，发现随机森林结合平滑处理与不平衡特征对短期价格方向预测效果最佳 |
 | 逆向选择与隔夜负收益：为何“T+1”导致开盘折价？ | 📖 | — | 本文揭示中国A股T+1制度加剧非知情买方逆向选择风险，导致开盘折价与负隔夜收益，开盘后信息释放促 |
 | 高频数据分析中的主要问题：解决方案综述 | 📖 | — | 系统综述高频金融数据分析中的非平稳性等核心挑战，归纳数据预处理与量化建模两类解决方案。 |
 | DeepLOB | 📖 | DeepLOB | 本文系统梳理了利用深度学习预测限价订单簿中间价变化的全流程，涵盖数据预处理、CNN-LSTM架构 |
