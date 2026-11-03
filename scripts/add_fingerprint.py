@@ -6,7 +6,7 @@ Skip rule keys on the fingerprint marker itself, so re-running never churns exis
 
 Run: python3 scripts/add_fingerprint.py [--dry-run]
 """
-import glob, re, sys, pathlib
+import argparse, glob, re, sys, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 AXES = [("data", "數據模態"), ("horizon", "時間尺度"), ("paradigm", "學習範式"),
@@ -35,9 +35,19 @@ def fix(text):
 
 
 def main():
-    dry = "--dry-run" in sys.argv
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--dry-run', action='store_true')
+    parser.add_argument('--paths', nargs='*', default=None)
+    args = parser.parse_args()
+    dry = args.dry_run
     done = skip = 0
-    for f in sorted(glob.glob(str(ROOT / "foundations/*/*.md"))):
+    files = glob.glob(str(ROOT / "foundations/*/*.md")) if args.paths is None else args.paths
+    for f in sorted(files):
+        path = pathlib.Path(f)
+        path = path if path.is_absolute() else ROOT / path
+        if path.is_symlink() or not path.resolve().is_relative_to(ROOT.resolve()):
+            raise ValueError('fingerprint_path_outside_repository')
+        f = str(path)
         if f.endswith("overview.md"):
             continue
         t = pathlib.Path(f).read_text(encoding="utf-8")

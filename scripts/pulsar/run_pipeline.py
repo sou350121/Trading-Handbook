@@ -364,6 +364,14 @@ def complete_publication(receipt, job):
     publication_path().unlink()
 
 
+def new_dissection_paths():
+    """Post-processing may never rewrite an already committed article."""
+    existing = set(git('ls-tree', '-r', '--name-only', '-z', 'HEAD').split('\0'))
+    return sorted(p for p in dirty_paths()
+                  if allowed(p) and p.startswith('foundations/') and p.endswith('.md')
+                  and not p.endswith('/overview.md') and p not in existing)
+
+
 def process(job, publish=False, days=8, sources_only=False, allow_verified_partial=False):
     incomplete = []
     if publish:
@@ -445,9 +453,12 @@ def process(job, publish=False, days=8, sources_only=False, allow_verified_parti
                 if not allow_verified_partial:
                     raise
     if not sources_only:
-        for name in ['add_fingerprint.py', 'gen_overviews.py', 'gen_nav.py', 'export_corpus_meta.py']:
+        new_pages = new_dissection_paths()
+        if new_pages:
+            execute([PYTHON, 'scripts/add_fingerprint.py', '--paths', *new_pages])
+            step('fix_github_render.py', *new_pages)
+        for name in ['gen_overviews.py', 'gen_nav.py', 'export_corpus_meta.py']:
             execute([PYTHON, 'scripts/' + name])
-        step('fix_github_render.py')
     markdown_outputs = [p for p in dirty_paths() if p.endswith('.md') and allowed(p)]
     if markdown_outputs:
         step('github_links.py', '--paths', *markdown_outputs)
