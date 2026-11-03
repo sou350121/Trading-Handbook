@@ -91,6 +91,7 @@
               "foundations/time-series-forecasting/art-319.md",
               "foundations/time-series-forecasting/art-36.md",
               "foundations/time-series-forecasting/art-370.md",
+              "foundations/time-series-forecasting/art-429.md",
               "foundations/time-series-forecasting/bloomberg-ohlc.md",
               "foundations/time-series-forecasting/co-cpc.md",
               "foundations/time-series-forecasting/cryptopulse.md",
@@ -142,6 +143,7 @@
               "foundations/time-series-forecasting/opds.md",
               "foundations/time-series-forecasting/portfoliomaster.md",
               "foundations/time-series-forecasting/quantformer.md",
+              "foundations/time-series-forecasting/raven.md",
               "foundations/time-series-forecasting/refocus.md",
               "foundations/time-series-forecasting/rff.md",
               "foundations/time-series-forecasting/rwkv-ts.md",
@@ -273,6 +275,7 @@
               "foundations/llm-agentic/deepfund.md",
               "foundations/llm-agentic/ecc-analyzer.md",
               "foundations/llm-agentic/finagent.md",
+              "foundations/llm-agentic/finbert-llm-gpt-5-4-mini-claude-sonnet-4-ridge.md",
               "foundations/llm-agentic/finbert-llm-prompting.md",
               "foundations/llm-agentic/finbloom.md",
               "foundations/llm-agentic/fincon.md",
@@ -338,8 +341,10 @@
               "foundations/market-microstructure/edge.md",
               "foundations/market-microstructure/extra-trees.md",
               "foundations/market-microstructure/flowhft.md",
+              "foundations/market-microstructure/hawkes-1ms.md",
               "foundations/market-microstructure/hawkes-lob-ppo-sil.md",
               "foundations/market-microstructure/hlob.md",
+              "foundations/market-microstructure/jax-lob.md",
               "foundations/market-microstructure/l2-liquidity-state-transition.md",
               "foundations/market-microstructure/lob.md",
               "foundations/market-microstructure/mdi-gd-rbfnn.md",
@@ -382,6 +387,7 @@
               "foundations/factor-mining/art-344.md",
               "foundations/factor-mining/art-351.md",
               "foundations/factor-mining/art-354.md",
+              "foundations/factor-mining/art-435.md",
               "foundations/factor-mining/attention-factor-model.md",
               "foundations/factor-mining/behavioral-factors-a-share.md",
               "foundations/factor-mining/brt-nn.md",
@@ -413,6 +419,7 @@
               "foundations/factor-mining/persistent-homology-multipersistence-belief-state-features.md",
               "foundations/factor-mining/proj-sue.md",
               "foundations/factor-mining/ptk.md",
+              "foundations/factor-mining/qbx.md",
               "foundations/factor-mining/qfr.md",
               "foundations/factor-mining/quantpedia-ceo.md",
               "foundations/factor-mining/realmlp.md",
@@ -494,6 +501,7 @@
             "group": "评测基准与失效分析",
             "pages": [
               "foundations/evaluation-benchmarks/overview.md",
+              "foundations/evaluation-benchmarks/ai-alpha.md",
               "foundations/evaluation-benchmarks/alphaeval.md",
               "foundations/evaluation-benchmarks/art-279.md",
               "foundations/evaluation-benchmarks/art-33.md",
@@ -511,6 +519,7 @@
               "foundations/evaluation-benchmarks/lightquant.md",
               "foundations/evaluation-benchmarks/lob-bench.md",
               "foundations/evaluation-benchmarks/lobcast.md",
+              "foundations/evaluation-benchmarks/modernfinbert-har-x.md",
               "foundations/evaluation-benchmarks/nolbert.md",
               "foundations/evaluation-benchmarks/quantbench.md",
               "foundations/evaluation-benchmarks/robustipy.md",
@@ -578,7 +587,8 @@
               "radar/journals/2026-W33.md",
               "radar/journals/2026-W32.md",
               "radar/journals/2026-W31.md",
-              "radar/journals/2026-W43.md"
+              "radar/journals/2026-W43.md",
+              "radar/journals/2026-W44.md"
             ]
           },
           {
@@ -586,7 +596,8 @@
             "pages": [
               "radar/arxiv/overview.md",
               "radar/arxiv/2026-W29.md",
-              "radar/arxiv/2026-W43.md"
+              "radar/arxiv/2026-W43.md",
+              "radar/arxiv/2026-W44.md"
             ]
           },
           {
@@ -596,7 +607,8 @@
               "radar/practitioner/2026-W29.md",
               "radar/practitioner/2026-W42.md",
               "radar/practitioner/2026-W34.md",
-              "radar/practitioner/2026-W43.md"
+              "radar/practitioner/2026-W43.md",
+              "radar/practitioner/2026-W44.md"
             ]
           }
         ]

@@ -8701,6 +8701,26 @@
   },
   {
     "pos": 436,
+    "msgid": "2247494759",
+    "title": "别迷信预测：高频自营靠什么赚钱？",
+    "zone": "market-microstructure",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "fifo",
+    "dup_of": null,
+    "framework": "FIFO头寸配对+多周期预测力归因回归",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 436,
     "msgid": "2247494713",
     "title": "比过拟合更隐蔽：一套日内系统逐单对账挖出的六类系统缺陷",
     "zone": "evaluation-benchmarks",
@@ -8717,6 +8737,26 @@
       "paradigm": "监督回归",
       "alpha": "组合执行优化",
       "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 437,
+    "msgid": "2247494792",
+    "title": "QBX：一个编译器，因子有效率从27%跃升至98%",
+    "zone": "factor-mining",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "qbx",
+    "dup_of": null,
+    "framework": "QBX",
+    "venue": "ICAIF'26",
+    "arxiv": null,
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "元学习搜索",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
     }
   },
   {
@@ -8777,6 +8817,26 @@
       "paradigm": "强化学习",
       "alpha": "组合执行优化",
       "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 100000,
+    "msgid": "arxiv_2610.39636",
+    "title": "Information Flow and Market Risk: Transformer-Based Evidence on Sentiment and Volatility Dynamics",
+    "zone": "evaluation-benchmarks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "modernfinbert-har-x",
+    "dup_of": null,
+    "framework": "ModernFinBERT + HAR-X",
+    "venue": null,
+    "arxiv": "2610.39636",
+    "axes": {
+      "data": "文本另类",
+      "horizon": "跨周期",
+      "paradigm": "监督回归",
+      "alpha": "风险择时",
+      "autonomy": "人机协同可解释"
     }
   },
   {
@@ -8901,6 +8961,26 @@
   },
   {
     "pos": 100001,
+    "msgid": "arxiv_2610.39458",
+    "title": "Early-Buyer Groups and Fast-Wallet Teams on a Bonding-Curve Launchpad: A Prospective Measurement Study of pump.fun on Solana",
+    "zone": "evaluation-benchmarks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "prospective-multi-channel-wallet-group-discovery",
+    "dup_of": null,
+    "framework": "Prospective multi-channel wallet-group discovery",
+    "venue": null,
+    "arxiv": "2610.39458",
+    "axes": {
+      "data": "图关系",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "多智能体博弈",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 100001,
     "msgid": "arxiv_2607.14361",
     "title": "NeuralChaos: Optimal Adapted Approximation of Square Integrable Predictable Processes",
     "zone": "reinforcement-learning",
@@ -8961,6 +9041,26 @@
   },
   {
     "pos": 100002,
+    "msgid": "arxiv_2610.39205",
+    "title": "Sparse Autoencoders as Implicit Diversification Regularisers for Cross-Sectional Cryptocurrency Returns",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "sparse-autoencoder-sae",
+    "dup_of": null,
+    "framework": "Sparse Autoencoder (SAE)",
+    "venue": "ICAIF26",
+    "arxiv": "2610.39205",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 100002,
     "msgid": "arxiv_2610.23517",
     "title": "Combinatorial Arbitrage in Prediction Markets",
     "zone": "market-microstructure",
@@ -9017,6 +9117,26 @@
       "paradigm": "生成式大模型",
       "alpha": "多智能体博弈",
       "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 100003,
+    "msgid": "arxiv_2610.38442",
+    "title": "Calibration of Passive Market Impact with a Queue-Sensitive Propagator Model",
+    "zone": "market-microstructure",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "queue-sensitive-propagator-model",
+    "dup_of": null,
+    "framework": "Queue-Sensitive Propagator Model",
+    "venue": null,
+    "arxiv": "2610.38442",
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "因果结构",
+      "alpha": "端到端表征",
+      "autonomy": "人机协同可解释"
     }
   },
   {
@@ -9201,6 +9321,26 @@
   },
   {
     "pos": 100004,
+    "msgid": "arxiv_2610.38056",
+    "title": "What Language Models Add to Healthcare-Equity Rankings, and What They Could Have Known",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "finbert-llm-gpt-5-4-mini-claude-sonnet-4-ridge",
+    "dup_of": null,
+    "framework": "FinBERT + 两级LLM评分链（GPT-5.4-mini摘要→Claude Sonnet 4评级）+ 随机森林/ridge混合排序",
+    "venue": null,
+    "arxiv": "2610.38056",
+    "axes": {
+      "data": "文本另类",
+      "horizon": "中长周期",
+      "paradigm": "生成式大模型",
+      "alpha": "端到端表征",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 100004,
     "msgid": "arxiv_2610.22727",
     "title": "OrderFlowDiT: Transport-Regularized Diffusion Transformer for Probabilistic Limit-Order Supply Forecasting",
     "zone": "market-microstructure",
@@ -9255,6 +9395,26 @@
       "data": "量价表格",
       "horizon": "日频波段",
       "paradigm": "监督回归",
+      "alpha": "风险择时",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 100005,
+    "msgid": "arxiv_2610.36317",
+    "title": "Event definition and the branching ratio: Hawkes estimates of price-change clustering in the consolidated quote feed",
+    "zone": "market-microstructure",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "hawkes-1ms",
+    "dup_of": null,
+    "framework": "Hawkes过程 + 1ms事件定义",
+    "venue": null,
+    "arxiv": "2610.36317",
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "因果结构",
       "alpha": "风险择时",
       "autonomy": "人机协同可解释"
     }
