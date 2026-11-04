@@ -12,7 +12,7 @@
 | [WGAN + EGGROLL](wgan-eggroll.md) | ⚡ | ICAIF26 [arXiv](https://arxiv.org/abs/2610.25604) | 用WGAN评论家与进化策略对LOB基础模型做对抗后训练，提升高频市场模拟真实度。 |
 | [Coherent-set convex hull + integer programming arbitrage](coherent-set-convex-hull-integer-programming-arbitrage.md) | ⚡ | [arXiv](https://arxiv.org/abs/2610.23517) | 用凸包+整数规划识别预测市场中逻辑相关合约的组合套利，并用Polymarket全深度盘口回放测量 |
 | [Autocorrelation Map](autocorrelation-map.md) | ⚡ | [arXiv](https://arxiv.org/abs/2607.09426) | 发现加密货币期货在整点/刻钟存在算法交易引发的量价脉冲，刻钟开盘订单失衡可预测4-12小时收益。 |
-| FIFO头寸配对+多周期预测力归因回归 | ⚡ | FIFO头寸配对+多周期预测力归因回归 | 用带账户标识的逐笔委托簿与FIFO配对，把机构自营单笔头寸盈亏归因到日内预测能力与被动挂单流动性 |
+| [FIFO头寸配对+多周期预测力归因回归](fifo.md) | ⚡ | FIFO头寸配对+多周期预测力归因回归 | 用带账户标识的逐笔委托簿与FIFO配对，把机构自营单笔头寸盈亏归因到日内预测能力与被动挂单流动性 |
 | [JAX-LOB](jax-lob.md) | ⚡ | JAX-LOB | 保持L2盘口与成交路径不变，仅改变撤单在FIFO队列中的分配方式，量化聚合订单簿下被动执行回测的 |
 | [M3](art-420.md) | ⚡ | M3 | 提出M3微观市场生成模型，用开盘价锚定与向量量化耦合订单流与盘口，实现长轨迹反事实推演。 |
 | [波动率归一化Tick Size](tick-size.md) | ⚡ | 波动率归一化Tick Size | 揭示2008年后短周期趋势策略失效源于HFT做市商在细Tick稀疏订单簿中的定向撤单，切断趋势自 |
