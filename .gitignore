@@ -12,3 +12,6 @@ __pycache__/
 # 不含任何第三方抓取內容，所以不受上面那條版權護欄約束。
 !data/philab/
 !data/philab/verdicts.jsonl
+
+# Pinned parser dependencies are installed locally; never publish packages/caches.
+.pulsar-deps/

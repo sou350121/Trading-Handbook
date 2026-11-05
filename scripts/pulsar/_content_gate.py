@@ -43,7 +43,9 @@ def validate_page(text, raw, d):
     # verbatim source tokens, allowing only equivalent minus glyphs. Delta is
     # allowed only in its own table column with
     # the two source-backed operands in the same row, at matching units.
-    source = {token.replace('−', '-') for token in NUMBER.findall(raw['body'])}
+    from _source_markdown import numeric_source_text
+    visible_source = numeric_source_text(raw)
+    source = {token.replace('−', '-') for token in NUMBER.findall(visible_source)}
     known_arxiv = set(re.findall(r'\d{4}\.\d{4,5}(?:v\d+)?', raw['body'] + ' ' + raw.get('url', '')))
     verified = d.get('bibliographic_verification', {}).get('arxiv')
     if isinstance(verified, str):
@@ -83,7 +85,13 @@ def validate_page(text, raw, d):
                 left = NUMBER.findall(cells[-4]); right = NUMBER.findall(cells[-3])
                 if len(left) == len(right) == 1 and left[0].replace('−', '-') in source and right[0].replace('−', '-') in source:
                     a, b = left[0], right[0]
-                    if token.endswith('%') == a.endswith('%') == b.endswith('%'):
+                    # A percentage-point delta is a difference of two percent values,
+                    # permitted only as the sole value in the existing delta column.
+                    pp = re.fullmatch(r'\s*([+−-]?\d+(?:,\d{3})*(?:\.\d+)?)\s*pp\s*', cells[-2], re.I)
+                    point_delta = (pp is not None and not token.endswith('%')
+                                   and a.endswith('%') and b.endswith('%')
+                                   and pp[1].lstrip('+').replace('−', '-') == token.replace('−', '-'))
+                    if token.endswith('%') == a.endswith('%') == b.endswith('%') or point_delta:
                         val = lambda n: Decimal(n.replace(',', '').replace('−', '-').rstrip('%'))
                         if val(token) == val(b) - val(a):
                             continue

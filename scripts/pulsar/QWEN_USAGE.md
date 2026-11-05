@@ -116,3 +116,9 @@
 - 只接受 JSON 物件中的字串 `title`、`content`；若返回 `url`，必須與請求一致。實際返回題名須與官方題名一致，正文須達既有300字下限且含足夠可見文字；空、過大、非 JSON、驗證頁、HTML 頁殼、thin 正文或身分不符均維持 failed，不寫快取。存檔前重核專輯收據與雜湊。操作日誌只留受控錯誤碼，不記金鑰、完整請求 URL 或原始回應。
 - Markdown 快取保存來源 `url`、實際 `title`、官方 `wechat_title`、msgid/itemidx、原始 `create_time`、`official_album_index_sha256`、`body_sha256`，並明標 `date_source=official_album_create_time`、`source_format=markdown`、`fetch_provider=deepseek_fetch`。不填 `source_html_sha256`，不宣稱 Markdown 提供發布日期。Markdown 只代表公開文章正文抽取，不代表取得圖像、附件或原論文全文；下游品質、數字及語意標準保持不變，只準備未發布候選。
 - 原頁或代理已識別的題名／日期須在正文長度及驗證頁判定前核對；衝突直接 failed，不得由後續代理或 Fetch 蓋過。Markdown 的300字門檻只計可見文字，扣除圖片（含替代文字）、連結目的 URL、引用定義及 HTML 標記／非顯示內容；此計數不改寫儲存正文或正文 SHA256。
+
+## Markdown 來源的數值核對（顯示等價修復）
+
+- 僅 `source_format=markdown` 的來源，先以固定版本 CommonMark 解析器取得可見文字，再作既有逐 token 數值核對。`17\.12` 與 `11\.22\%` 在普通段落顯示為 `17.12` 與 `11.22%`；程式碼中的反斜線仍是字面內容，不得重複解碼。圖片替代文字與連結目的 URL 不作數值證據；未審查的原始 HTML 拒收。原始快取、來源 SHA256、日期與身分鏈不改。
+- 既有固定五欄評測表末欄的百分點差允許 `pp`：兩個運算元都必須是原文支持的同單位百分比，差值必須精確等於本方法減基線。散文新增計算、錯誤符號、精度、單位或數值仍拒收，不能用註記「待核」保留無來源數值。
+- 解析器依賴鎖在 `scripts/pulsar/requirements-markdown.txt`。部署時在儲存庫根目錄執行該檔案註解的 `--target .pulsar-deps --require-hashes` 安裝；不改全域 Python。相關離線檢查為 `test_markdown_numeric.py`，連同原有來源、期限、取消、文章保護與書目測試執行。
