@@ -48,6 +48,9 @@ def validate_page(text, raw, d):
     verified = d.get('bibliographic_verification', {}).get('arxiv')
     if isinstance(verified, str):
         known_arxiv.add(verified)
+    # A version-pinned primary URL also verifies its unversioned citation ID.
+    # Keep explicit versions unchanged; never authorize a different version or ID.
+    known_arxiv.update(re.sub(r'v\d+$', '', value) for value in tuple(known_arxiv))
     empirical = re.sub(r'##\s*§2\.5[^\n]*\n.*?(?=\n##\s|\Z)', '', text, flags=re.S)
     empirical = re.sub(r'```.*?```', '', empirical, flags=re.S)
     for line in empirical.splitlines():
@@ -66,10 +69,14 @@ def validate_page(text, raw, d):
         line = re.sub(r'^\s*\*\*7\.1(?=\s+可(?:證偽預測|证伪预测))', '**', line)
         # Only the frozen bold Eureka label is a 1.2 subsection marker.
         line = re.sub(r'^(\s*\*\*\s*)1\.2(?=\s+(?:⚡\s*)?Eureka\s*\*\*)', r'\1', line)
+        # Only explicit, exact arXiv citations are bibliography, including the
+        # complete version suffix. A numeric metric on the same line is not.
+        line = re.sub(r'(?i)(\barxiv\s*:?\s*\[?)(\d{4}\.\d{4,5}(?:v\d+)?)(?![\w]|\.\d)',
+                      lambda match: match[1] if match[2] in known_arxiv else match[0], line)
         for token in NUMBER.findall(line):
             if '.' not in token and '%' not in token:
                 continue
-            if token.replace('−', '-') in source or token in known_arxiv and 'arxiv' in line.lower():
+            if token.replace('−', '-') in source:
                 continue
             cells = line.split('|')
             if len(cells) >= 7 and token in cells[-2]:
