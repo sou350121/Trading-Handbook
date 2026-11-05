@@ -9,6 +9,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
 from _qwen import ask
 from _content_gate import validate_page, HTML_TEXT_VERSION
+from _fact_review import review_page, save_review, FactReviewRejected
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 RAW = ROOT/"data"/"raw"; DIS = ROOT/"data"/"distill"
@@ -37,6 +38,7 @@ TEMPLATE = """請依下面骨架，把這篇方法寫成一頁解構 markdown。
 10. 數字以完整 token 逐字核對，包含正負號與小數精度，不是任意子字串。計算的 Δ 只能放在固定五欄表「數據集/市場 | Metric | 前SOTA | 本方法 | Δ」的末欄，且前SOTA、本方法各只含一個來源數值、單位相同；其他位置不要新增計算值。不符合此格式就省略 Δ，保留來源數值及語義說明。
 
 【計算與表述澄清】
+- 前SOTA 是模板欄名；來源若只稱經典或普通基線，必須在表格及解讀明說基線，不得改稱 SOTA。不同成本／市場／配置不得直接計算 Δ；結果水平不是改善量。
 - Δ 固定定義為「本方法 − 前SOTA」。誤差／loss 越小越好時仍使用此方向，不把反向的「改善量」當 Δ。計算欄不能通過原有來源／單位規則時，省略該計算值，保留兩個來源原值與正確語義；不得在散文另增來源沒有的計算差。
 - 1.1／1.2／1.3 等小節標記使用獨立 Markdown ### 標題，只寫小節名稱。實證數值放正文或表格，不得藏在標題以逃避核驗。
 - 有限實驗中的失敗不等於普遍不可能；尚未測試不等於已證明無效。比較同時改變多個矩或參數時，不得把全部差異歸因於其中一項；若要隔離單一項，必須固定其他項，並明示玩具例子的假設。
@@ -259,6 +261,13 @@ def do_one(d, metadata=None, source=None):
                 md = md.split("\n", 1)[1].rsplit("```", 1)[0].strip()
             try:
                 validate_page(md, raw, d)
+                review = review_page(md, raw, d)
+                save_review(ROOT / "data/health/pass-b-fact-reviews", str(d["msgid"]),
+                            fingerprint, md, review)
+                if not review["passed"]:
+                    raise FactReviewRejected(review["issues"])
+                if metadata[0].read_bytes() != metadata[1] or source[0].read_bytes() != source[1]:
+                    raise RuntimeError("fact_review_source_changed")
                 break
             except ValueError as error:
                 # Private draft evidence only; published pages and the search index stay intact.
@@ -268,7 +277,9 @@ def do_one(d, metadata=None, source=None):
                 (rejected / (str(d["msgid"]) + ".reason")).write_text(str(error))
                 if attempt == 1:
                     raise
-                prompt = build(d, raw) + "\n上次草稿未通過機械品質檢查：" + str(error) + "。請依原始規則重寫，不可猜測或補造缺失值；無來源支持的實證數字寫未披露。"
+                prompt = build(d, raw) + "\n上次草稿未通過品質檢查：" + str(error) + "。請依原始規則重寫，不可猜測或補造缺失值；無來源支持的實證數字寫所讀文本未見。"
+                if isinstance(error, FactReviewRejected):
+                    prompt += "\n下列為待核問題，不是來源事實：" + json.dumps(error.issues, ensure_ascii=False)
         out.parent.mkdir(parents=True, exist_ok=True)
         try:
             with out.open("x") as stream:
