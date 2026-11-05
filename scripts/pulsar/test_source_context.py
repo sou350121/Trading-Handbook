@@ -108,6 +108,7 @@ class CancellationRegression(unittest.TestCase):
             with patch.object(runner, 'ROOT', root), patch.object(runner, 'code_digest', return_value='digest'), \
                  patch.object(runner.signal, 'signal', side_effect=register), \
                  patch.object(runner, 'execute', side_effect=execute), patch.object(runner, 'git', side_effect=git), \
+                 patch.object(runner, 'publication_preflight', return_value=('verifiedhead', None)), patch.object(runner, 'album_status', return_value='complete'), \
                  patch.object(runner, 'dirty_paths', return_value=[]), patch.object(runner, 'pending'), \
                  patch.object(sys, 'argv', ['run_pipeline.py', '--job', 'daily', '--publish', '--allow-verified-partial']), \
                  contextlib.redirect_stdout(io.StringIO()):

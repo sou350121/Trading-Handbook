@@ -111,6 +111,7 @@ class DailyBudget(unittest.TestCase):
                 if any(str(arg).endswith('fetch_article.py') for arg in command):
                     raise RuntimeError('step_timeout')
             with patch.object(runner, 'ROOT', root), patch.object(runner, 'execute', side_effect=execute), \
+                 patch.object(runner, 'new_dissection_paths', return_value=[]), patch.object(runner, 'album_status', return_value='complete'), \
                  patch.object(runner, 'dirty_paths', return_value=[]), patch.object(runner, 'pending'):
                 incomplete = runner.process('daily', publish=False, allow_verified_partial=True)
             self.assertIn('fetch_article.py', incomplete)
