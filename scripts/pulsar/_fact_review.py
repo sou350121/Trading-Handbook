@@ -78,7 +78,7 @@ def review_page(md, raw, metadata, caller=None):
                         ensure_ascii=False)
     return parse_review(caller(prompt, system=SYSTEM, thinking=True,
                                temperature=0.1, max_tokens=32768,
-                               json_mode=True, retries=1, timeout=120))
+                               json_mode=True, retries=1, timeout=210))
 
 
 def save_review(directory, msgid, fingerprint, md, review):
