@@ -8921,6 +8921,26 @@
   },
   {
     "pos": 100001,
+    "msgid": "arxiv_2611.06495",
+    "title": "Constrained defined-contribution pension management: A reparameterized neural network approach",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "reparameterized-neural-network-dual-bounds-artificial-market",
+    "dup_of": null,
+    "framework": "Reparameterized Neural Network Dual Bounds (artificial market)",
+    "venue": null,
+    "arxiv": "2611.06495",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 100001,
     "msgid": "arxiv_2607.09230",
     "title": "When Does Order Flow Matter? State-Dependent L2 Liquidity-State Transitions in Crypto Futures",
     "zone": "market-microstructure",
@@ -9101,6 +9121,26 @@
   },
   {
     "pos": 100002,
+    "msgid": "arxiv_2611.05310",
+    "title": "Mitigating Return Drag and Regime Whipsaws in Sector Rotation: An Asymmetric Downside-Aware Nested Clustered Optimization Framework",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "asym-sticky-nco",
+    "dup_of": null,
+    "framework": "Asym-Sticky-NCO",
+    "venue": null,
+    "arxiv": "2611.05310",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 100002,
     "msgid": "arxiv_2610.30557",
     "title": "Governed Self-Evolution for Autonomous Investing: A Multi-Agent LLM System with an Invariant Core",
     "zone": "llm-agentic",
@@ -9157,6 +9197,26 @@
       "paradigm": "因果结构",
       "alpha": "风险择时",
       "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 100003,
+    "msgid": "arxiv_2611.05218",
+    "title": "Beyond Anonymous Order Flow: Wallet Identity as a Feature for Short-Horizon Return Prediction",
+    "zone": "market-microstructure",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "beyond-anonymous-order-flow-wallet-identity-as-a-feature-for-short-horizon-return-prediction",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": "2611.05218",
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "全自动黑盒"
     }
   },
   {
@@ -9341,6 +9401,26 @@
   },
   {
     "pos": 100004,
+    "msgid": "arxiv_2611.04826",
+    "title": "Safe Portfolio Learning from Untrusted Predictions: Signed Trust, Abstention, and Cross-Universe Polarity Failure",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "signed-trust-safe-follow-reverse-controller",
+    "dup_of": null,
+    "framework": "Signed Trust (Safe/Follow/Reverse) Controller",
+    "venue": null,
+    "arxiv": "2611.04826",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "强化学习",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 100004,
     "msgid": "arxiv_2610.22727",
     "title": "OrderFlowDiT: Transport-Regularized Diffusion Transformer for Probabilistic Limit-Order Supply Forecasting",
     "zone": "market-microstructure",
@@ -9377,6 +9457,26 @@
       "paradigm": "监督回归",
       "alpha": "风险择时",
       "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 100005,
+    "msgid": "arxiv_2611.04555",
+    "title": "CosmosAlpha: Multi-Relational Graph Search with Pareto-Guided Exploration for LLM-Driven Alpha Mining",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "cosmosalpha",
+    "dup_of": null,
+    "framework": "CosmosAlpha",
+    "venue": null,
+    "arxiv": "2611.04555",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "元学习搜索",
+      "alpha": "因子挖掘",
+      "autonomy": "Agent自主演进"
     }
   },
   {

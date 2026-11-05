@@ -2,7 +2,7 @@
 
 > **收錄**：限价订单簿(LOB)建模、订单流信号、做市策略、高频套利、微观流动性与价格形成机制
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：47 篇（44 篇成解構頁，其餘為 registry）
+> **本 zone 現有**：48 篇（45 篇成解構頁，其餘為 registry）
 
 ## 解構清單
 
@@ -31,6 +31,7 @@
 | [OrderFlowDiT](orderflowdit.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.22727) | 用条件扩散Transformer生成未来五分钟买卖盘量价场，并加无偏非平衡最优传输辅助损失，配合 |
 | Queue-Sensitive Propagator Model | 🔧 | [arXiv](https://arxiv.org/abs/2610.38442) | 用队列敏感的传播子模型校准被动市场冲击，把价格拆成传播子项与队列加权订单流失衡项。 |
 | [Phase-diagram ABM with null/artefact discipline](phase-diagram-abm-with-null-artefact-discipline.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.08907) | 用相图法验证订单簿ABM中羊群行为引发的流动性枯竭是真实相变，并分解其反射机制。 |
+| Beyond Anonymous Order Flow: W | 🔧 | [arXiv](https://arxiv.org/abs/2611.05218) | 利用Hyperliquid钱包身份与L4订单簿，检验钱包标记持久性并提升短周期收益预测。 |
 | [Detecting unusual trading patt](detecting-unusual-trading-patterns-on-cryptocurrency-exchanges-by-means-of-complexity-measures.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.13916) | 本文基于高频交易数据，利用多重分形、近似熵等复杂度指标构建诊断框架，有效识别中心化交易所的刷量与 |
 | [SPIDE](spide.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.30539) | 用SPIDE对Uniswap V3流动性剖面建模，降维为低阶SDE并校准预测。 |
 | [L2 Liquidity-State Transition](l2-liquidity-state-transition.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.09230) | 在加密期货事件窗口内，预事件L2流动性状态是预测后事件流动性的首要信号，订单流仅具增量价值。 |
