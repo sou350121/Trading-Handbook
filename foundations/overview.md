@@ -10,5 +10,5 @@
 - [因子挖掘与特征工程](factor-mining/overview.md) — 74 篇
 - [组合优化与资产配置](portfolio-optimization/overview.md) — 48 篇
 - [因果推断与结构建模](causal-structural/overview.md) — 12 篇
-- [评测基准与失效分析](evaluation-benchmarks/overview.md) — 33 篇
+- [评测基准与失效分析](evaluation-benchmarks/overview.md) — 34 篇
 - [数据生成与增强](data-generation-augmentation/overview.md) — 7 篇

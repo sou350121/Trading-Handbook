@@ -2,12 +2,13 @@
 
 > **收錄**：回测防穿越、样本外稳定性、过拟合检测、鲁棒性量化、公开基准(TFB/QuantBench)与模型衰减归因
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：33 篇（27 篇成解構頁，其餘為 registry）
+> **本 zone 現有**：34 篇（28 篇成解構頁，其餘為 registry）
 
 ## 解構清單
 
 | 方法 | 評級 | 來源 | TL;DR |
 |---|---|---|---|
+| Autonomous Quant Researcher | ⚡ | [arXiv](https://arxiv.org/abs/2611.06607) | 受限LLM自主量化研究闭环：假设只用JSON声明、一次性holdout加绝对门禁验收，公开全部c |
 | FactorBench | ⚡ | FactorBench | FactorBench 在五大市场统一评测九种自动因子挖掘方法共约五千个因子，检验风格剥离与交易 |
 | [AI 对冲基金的Alpha为何消失？](ai-alpha.md) | ⚡ | — | 基于SEC披露与HFR数据，实证发现AI对冲基金早期月超额约50bp，2018年后消失并持续衰减 |
 | [Bayes-Stein Shrinkage](bayes-stein-shrinkage.md) | ⚡ | Bayes-Stein Shrinkage | 基于流动性过滤与贝叶斯收缩，验证2006年后经典学术Alpha在大盘股中收益趋零，揭示回测与实盘 |
