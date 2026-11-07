@@ -2,7 +2,7 @@
 
 > **收錄**：回测防穿越、样本外稳定性、过拟合检测、鲁棒性量化、公开基准(TFB/QuantBench)与模型衰减归因
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：35 篇（29 篇成解構頁，其餘為 registry）
+> **本 zone 現有**：36 篇（30 篇成解構頁，其餘為 registry）
 
 ## 解構清單
 
@@ -20,6 +20,7 @@
 | [盈亏平衡夏普比率](art-279.md) | ⚡ | JFE | 揭示多因子模型高样本内夏普比率的陷阱，量化估计风险导致的样本外衰减，并提出考虑估计风险的盈亏平衡 |
 | [大语言模型在时间序列预测中真的有效吗？](art-33.md) | ⚡ | — | 通过系统消融证明LLM在时序预测中无性能优势且计算昂贵，简单注意力模型即可替代，呼吁转向LLM+ |
 | [Base-Rate-Honest Benchmark](base-rate-honest-benchmark.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.12248) | 本文指出股票方向预测中原始准确率易受牛市基线率误导，提出基于滚动验证与诚实基线的可复现评测协议， |
+| Rare replay / SMSCP | 🔧 | [arXiv](https://arxiv.org/abs/2611.04223) | 固定记忆预算下比较共形校准的残差保留策略，发现FIFO聚合覆盖近名义但压力态严重欠覆盖，提出状态 |
 | [NoLBERT](nolbert.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.22745) | 构建时点NoLBERT新闻主题，严格样本外比较文本因子；最佳验证实验亏钱，组合未胜价格基准。 |
 | Prospective multi-channel wallet-group discovery | 🔧 | [arXiv](https://arxiv.org/abs/2610.39458) | 用88小时pump.fun全量链上数据，前瞻性识别2.3万个钱包协同群组，验证其对价格路径与跟单 |
 | [ModernFinBERT + HAR-X](modernfinbert-har-x.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.39636) | 检验ModernFinBERT新闻变量能否提升11只美股HAR波动率预测，结果多数不敌VIX与朴 |

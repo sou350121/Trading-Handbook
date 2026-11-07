@@ -8841,6 +8841,26 @@
   },
   {
     "pos": 100000,
+    "msgid": "arxiv_2611.07750",
+    "title": "Foresee to Trade: Forecast-Augmented Policy Optimization for Portfolio Management",
+    "zone": "reinforcement-learning",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "frpo",
+    "dup_of": null,
+    "framework": "FRPO",
+    "venue": null,
+    "arxiv": "2611.07750",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "强化学习",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 100000,
     "msgid": "arxiv_2610.39636",
     "title": "Information Flow and Market Risk: Transformer-Based Evidence on Sentiment and Volatility Dynamics",
     "zone": "evaluation-benchmarks",
@@ -9095,6 +9115,26 @@
       "data": "微观盘口",
       "horizon": "高频日内",
       "paradigm": "因果结构",
+      "alpha": "风险择时",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 100002,
+    "msgid": "arxiv_2611.07287",
+    "title": "Neural Realized Measures: Forecast-Supervised Intraday Aggregation for Volatility Forecasting",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "nrm",
+    "dup_of": null,
+    "framework": "NRM",
+    "venue": "ICAIF 2026",
+    "arxiv": "2611.07287",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
       "alpha": "风险择时",
       "autonomy": "人机协同可解释"
     }
@@ -9441,6 +9481,26 @@
   },
   {
     "pos": 100004,
+    "msgid": "arxiv_2611.04223",
+    "title": "Aggregate Calibration Can Mask Stress-State Undercoverage: Bounded-Memory Forecast Intervals under Recurrent Financial Stress",
+    "zone": "evaluation-benchmarks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "rare-replay-smscp",
+    "dup_of": null,
+    "framework": "Rare replay / SMSCP",
+    "venue": null,
+    "arxiv": "2611.04223",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "风险择时",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 100004,
     "msgid": "arxiv_2607.08346",
     "title": "Grounded Event Extraction from SEC 8-K Filings with a Fine-Grained Taxonomy",
     "zone": "llm-agentic",
@@ -9517,6 +9577,26 @@
       "paradigm": "生成式大模型",
       "alpha": "端到端表征",
       "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 100005,
+    "msgid": "arxiv_2611.04217",
+    "title": "LENS: Reliability-Aware Stock Prediction via LLM-Extracted Priors and News-Driven Semantic Graphs",
+    "zone": "graph-networks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "lens",
+    "dup_of": null,
+    "framework": "LENS",
+    "venue": "CIKM26",
+    "arxiv": "2611.04217",
+    "axes": {
+      "data": "图关系",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "人机协同可解释"
     }
   },
   {
