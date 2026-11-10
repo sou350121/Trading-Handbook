@@ -8800,6 +8800,26 @@
     }
   },
   {
+    "pos": 440,
+    "msgid": "2247494870",
+    "title": "Jane Street 开源：竟然是一个“只提问”的 AI",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "agent-skills-socratic-tutor",
+    "dup_of": null,
+    "framework": "agent_skills/socratic-tutor",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "跨周期",
+      "paradigm": "生成式大模型",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
     "pos": 100000,
     "msgid": "arxiv_2607.14373",
     "title": "A Noise-Robust Elicit-to-Optimize Framework for Distortion Riskmetrics via Inverse Reinforcement Learning",

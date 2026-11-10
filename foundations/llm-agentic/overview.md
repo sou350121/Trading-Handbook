@@ -2,7 +2,7 @@
 
 > **收錄**：LLM在因子挖掘、情绪分析、研报生成、RAG增强及多智能体交易工作流中的适配、微调与推理架构
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：72 篇（60 篇成解構頁，其餘為 registry）
+> **本 zone 現有**：73 篇（61 篇成解構頁，其餘為 registry）
 
 ## 解構清單
 
@@ -31,6 +31,7 @@
 | [Grounded Event Extraction System](grounded-event-extraction-system.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.08346) | 提出两阶段LLM系统，从SEC 8-K文件中抽取细粒度事件标签，并通过引用验证与质量评分实现可审 |
 | [FinBERT + 两级LLM评分链（GPT-5.4-mini摘要→Claude Sonnet 4评级）+ 随机森林/ridge混合排序](finbert-llm-gpt-5-4-mini-claude-sonnet-4-ridge.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.38056) | 把LLM文本评分与财务面、关注度特征并入美医疗股月度排序，并用训练截断对照检验后视偏差。 |
 | [When News Gets Old: Portfolio ](when-news-gets-old-portfolio-allocation-with-reinforcement-learning-and-large-language-models.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.30564) | 用固定LLM从SEC披露中抽取正负信号，比较RL与LLM组合策略对新闻时效信息的保留、显式注入或 |
+| agent_skills/socratic-tutor | 🔧 | agent_skills/socratic-tutor | Jane Street开源苏格拉底式导师Agent，用连续提问和诊断题训练量化特征工程防泄漏与过 |
 | CosmosAlpha | 🔧 | CosmosAlpha | 提出CosmosAlpha，用多关系图组织LLM因子池并以帕累托搜索选母本，缓解因子近亲繁殖。 |
 | GPT-4.1-mini + FinBERT + local projections | 🔧 | GPT-4.1-mini + FinBERT + local projections | 用GPT+FinBERT拆解WSJ百万新闻，发现坏消息在12主题均更粘，总情绪指标有合成偏误 |
 | AutoScientist-Quant | 🔧 | AutoScientist-Quant | 谷歌联合剑桥提出 AutoScientist-Quant，隔离搜索反馈集与最终测试集，把因子筛选 |
