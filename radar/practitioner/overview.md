@@ -16,7 +16,7 @@
 | Falkenblog | 扩展 | [https://falkenblog.blogspot.com/feeds/posts/default](https://falkenblog.blogspot.com/feeds/posts/default) |
 | QuantInsti Blog | 扩展 | [https://blog.quantinsti.com/rss/](https://blog.quantinsti.com/rss/) |
 | Robot Wealth | 扩展 | [https://robotwealth.com/feed/](https://robotwealth.com/feed/) |
-| Validea Blog | 扩展 | [https://blog.validea.com/feed/](https://blog.validea.com/feed/) |
+| Finominal Research | 扩展 | [https://insights.finominal.com/sitemap.xml](https://insights.finominal.com/sitemap.xml) |
 | Validea / Excess Returns（官方訪談） | 扩展 | [https://anchor.fm/s/9a1dfac/podcast/rss](https://anchor.fm/s/9a1dfac/podcast/rss) · [官方入口](https://www.validea.com/excess-returns-podcast) |
 | Wilmott | 扩展 | [https://wilmott.com/feed/](https://wilmott.com/feed/) |
 | NBER 工作論文 | 機構/央行 | [https://back.nber.org/rss/new.xml](https://back.nber.org/rss/new.xml) |
@@ -25,6 +25,7 @@
 
 ## 週報索引
 
+- [2026-W46](2026-W46.md) — 2026-11-09 ~ 2026-11-15
 - [2026-W45](2026-W45.md) — 2026-11-02 ~ 2026-11-08
 - [2026-W44](2026-W44.md) — 2026-10-26 ~ 2026-11-01
 - [2026-W43](2026-W43.md) — 2026-10-19 ~ 2026-10-25
