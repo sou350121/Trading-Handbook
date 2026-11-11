@@ -46,7 +46,8 @@ class ReviewContract(unittest.TestCase):
         self.assertEqual(payload['source_provenance']['create_time'], raw['create_time'])
         self.assertEqual(payload['source_provenance']['date'], raw['date'])
         self.assertEqual(caller.call_args.kwargs['retries'], 1)
-        self.assertEqual(caller.call_args.kwargs['timeout'], 210)
+        self.assertEqual(caller.call_args.kwargs['timeout'], 300)
+        self.assertEqual(caller.call_args.kwargs['max_tokens'], 65536)
         self.assertTrue(caller.call_args.kwargs['thinking'])
 
     def test_oversize_source_is_rejected_before_api(self):

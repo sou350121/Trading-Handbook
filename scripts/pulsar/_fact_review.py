@@ -77,8 +77,8 @@ def review_page(md, raw, metadata, caller=None):
                          'editorial_axes': metadata.get('axes', {}), 'draft': md},
                         ensure_ascii=False)
     return parse_review(caller(prompt, system=SYSTEM, thinking=True,
-                               temperature=0.1, max_tokens=32768,
-                               json_mode=True, retries=1, timeout=210))
+                               temperature=0.1, max_tokens=65536,
+                               json_mode=True, retries=1, timeout=300))
 
 
 def save_review(directory, msgid, fingerprint, md, review):
