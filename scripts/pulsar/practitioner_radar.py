@@ -187,6 +187,15 @@ def fetch_feed(feed, days):
 
     Never raises: per-feed failures are caught and logged.
     """
+    if feed['id'] == 'finominal':
+        try:
+            import _finominal
+            items, proof = _finominal.fetch(feed, days)
+            _health.atomic(DATA / 'health/feed-finominal.json', proof)
+            return items, 'ok'
+        except (OSError, ValueError) as error:
+            print('  FINOMINAL-FAIL ' + type(error).__name__, file=sys.stderr)
+            return [], 'official-publication-verification-failed'
     if feed['id'] == 'nber':
         try:
             import _nber

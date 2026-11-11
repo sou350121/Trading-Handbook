@@ -60,6 +60,7 @@ def reconcile(ref_body, date_body, rss_body, days, today=None):
     dates = table(date_body, ['paper', 'issue_date'])
     if set(refs) != set(dates):
         raise ValueError('nber_metadata_identity_mismatch')
+    future_ids = set()
     for paper, row in refs.items():
         if not row['title'].strip() or row['issue_date'] != dates[paper]['issue_date']:
             raise ValueError('nber_title_or_date_mismatch')
@@ -68,7 +69,7 @@ def reconcile(ref_body, date_body, rss_body, days, today=None):
         except ValueError:
             raise ValueError('nber_publication_date_invalid') from None
         if day > today:
-            raise ValueError('nber_publication_date_future')
+            future_ids.add(paper)
     root = ET.fromstring(rss_body)
     if root.tag != 'rss':
         raise ValueError('nber_rss_invalid')
@@ -84,6 +85,8 @@ def reconcile(ref_body, date_body, rss_body, days, today=None):
         paper = match[1]
         if paper in rss_ids or paper not in refs:
             raise ValueError('nber_metadata_missing_current_rss_identity')
+        if paper in future_ids:
+            raise ValueError('nber_publication_date_future')
         rss_ids.add(paper)
         rss_title = entry.findtext('title', '')
         # NBER's RSS appends its author list using this explicit separator.
@@ -100,6 +103,7 @@ def reconcile(ref_body, date_body, rss_body, days, today=None):
              'date_sha256': hashlib.sha256(date_body).hexdigest(),
              'rss_sha256': hashlib.sha256(rss_body).hexdigest(),
              'working_papers': len(refs), 'rss_identities_verified': len(rss_ids),
+             'future_catalog_entries_excluded': len(future_ids),
              'window_start': cutoff.isoformat(), 'window_end': today.isoformat(),
              'recent': len(recent), 'scope': 'official w-series metadata, not full text'}
     return sorted(recent, key=lambda row: (row['issue_date'], row['paper'])), proof

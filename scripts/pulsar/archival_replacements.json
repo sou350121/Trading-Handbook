@@ -1,0 +1,10 @@
+{
+  "2247494713/1": {
+    "legacy_title": "比过拟合更隐蔽：一套日内系统逐单对账挖出的六类系统缺陷",
+    "article": "foundations/evaluation-benchmarks/art-436.md",
+    "article_sha256": "06d0c2de6d28af3f1b4cc1b242fd731f14c372bdd639c124d39b405dfff25362",
+    "primary_url": "https://arxiv.org/pdf/2610.21846v1",
+    "primary_pdf_sha256": "7ae526d9edccbf15f69e2ad3ef5db6272ccba2d9041171985fc875faea291f02",
+    "scope": "underlying primary paper covered; original commentary remains unavailable"
+  }
+}

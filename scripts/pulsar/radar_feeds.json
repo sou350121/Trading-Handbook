@@ -60,9 +60,9 @@
     "weight": "extra"
   },
   {
-    "id": "validea",
-    "name": "Validea Blog",
-    "url": "https://blog.validea.com/feed/",
+    "id": "finominal",
+    "name": "Finominal Research",
+    "url": "https://insights.finominal.com/sitemap.xml",
     "weight": "extra"
   },
   {
@@ -72,7 +72,7 @@
     "weight": "extra",
     "medium": "podcast",
     "publisher_page": "https://www.validea.com/excess-returns-podcast",
-    "relationship": "supplement; original Validea Blog remains monitored"
+    "relationship": "independent Validea interview source"
   },
   {
     "id": "wilmott",

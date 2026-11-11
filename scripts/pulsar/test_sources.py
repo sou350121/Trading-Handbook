@@ -51,6 +51,13 @@ class NberVerification(unittest.TestCase):
             self.run_case(ref=self.ref.replace(b'2026-10-15', b'0000-00-00'),
                           dates=self.dates.replace(b'2026-10-15', b'0000-00-00'))
 
+    def test_future_catalog_entry_outside_current_rss_is_excluded(self):
+        ref = self.ref.rstrip(b'\n') + b'\nw40000\tFuture Author\tUpcoming issue\t2027-01-01\t10.3386/w40000\n'
+        dates = self.dates.rstrip(b'\n') + b'\nw40000\t2027-01-01\n'
+        rows, proof = self.run_case(ref=ref, dates=dates)
+        self.assertNotIn('w40000', [row['paper'] for row in rows])
+        self.assertEqual(proof['future_catalog_entries_excluded'], 1)
+
     def test_future_date_fails(self):
         with self.assertRaisesRegex(ValueError, 'date_future'):
             self.run_case(ref=self.ref.replace(b'10-15', b'10-21'),

@@ -10,6 +10,7 @@ import fcntl
 import hashlib
 import json
 import os
+import re
 from pathlib import Path
 import signal
 from signal import getsignal, signal as set_signal
@@ -203,6 +204,27 @@ def validate_outputs(paths, base='HEAD'):
         validate_page((ROOT / path).read_text(), json.loads(raws[0].read_text()), d)
 
 
+def _archival_research_covered(rows):
+    # The live album still retains and reports missing entries. A vetted primary
+    # paper can cover the research without claiming the old commentary is readable.
+    try:
+        replacements = json.loads((ROOT / 'scripts/pulsar/archival_replacements.json').read_text())
+        for row in rows:
+            proof = replacements[f"{row['msgid']}/{row['itemidx']}"]
+            path, url = proof['article'], proof['primary_url']
+            if (row['title'] != proof['legacy_title'] or not allowed(path)
+                    or not path.startswith('foundations/') or not path.endswith('.md')
+                    or not re.fullmatch(r'https://arxiv[.]org/pdf/[0-9]{4}[.][0-9]{4,5}v[1-9][0-9]*', url)
+                    or not re.fullmatch(r'[a-f0-9]{64}', proof['primary_pdf_sha256'])):
+                return False
+            published = git('show', 'HEAD:' + path)
+            if url not in published or hashlib.sha256(published.encode()).hexdigest() != proof['article_sha256']:
+                return False
+    except (OSError, ValueError, KeyError, TypeError, AttributeError, subprocess.CalledProcessError):
+        return False
+    return bool(rows)
+
+
 def album_status():
     from _album import _index_digest, _validated_records
     receipt = json.loads((ROOT / 'data/health/album.json').read_text(encoding='utf-8'))
@@ -232,6 +254,9 @@ def album_status():
             or missing_ids != retained_ids
             or ('index_sha256' in receipt and receipt['index_sha256'] != _index_digest(index))):
         raise RuntimeError('album_receipt_inconsistent')
+    if expected == 'partial' and _archival_research_covered(index[current:]):
+        print('Archived commentary unavailable; committed primary-source replacement verified.', flush=True)
+        return 'covered_by_primary'
     return expected
 
 
