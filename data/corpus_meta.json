@@ -8787,7 +8787,7 @@
     "rating": "🔧",
     "page_worthy": true,
     "slug": "cosmosalpha",
-    "dup_of": null,
+    "dup_of": "arxiv_2611.04555",
     "framework": "CosmosAlpha",
     "venue": null,
     "arxiv": null,
@@ -8837,6 +8837,26 @@
       "paradigm": "强化学习",
       "alpha": "组合执行优化",
       "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 100000,
+    "msgid": "arxiv_2611.14325",
+    "title": "Point-in-Time Encoders for Earnings Calls",
+    "zone": "evaluation-benchmarks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "point-in-time-encoders",
+    "dup_of": null,
+    "framework": "Point-in-Time Encoders",
+    "venue": null,
+    "arxiv": "2611.14325",
+    "axes": {
+      "data": "文本另类",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
     }
   },
   {
@@ -9160,6 +9180,26 @@
     }
   },
   {
+    "pos": 100001,
+    "msgid": "arxiv_2611.14245",
+    "title": "Deep Learning for Operator Maps in Optimal Liquidation",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "rnn-operator-map",
+    "dup_of": null,
+    "framework": "RNN operator map",
+    "venue": null,
+    "arxiv": "2611.14245",
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "监督回归",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
     "pos": 100002,
     "msgid": "arxiv_2611.07287",
     "title": "Neural Realized Measures: Forecast-Supervised Intraday Aggregation for Volatility Forecasting",
@@ -9281,6 +9321,26 @@
   },
   {
     "pos": 100002,
+    "msgid": "arxiv_2611.14117",
+    "title": "Fine-Tuning an Order-Flow Foundation Model for Sub-Second Forecasting",
+    "zone": "market-microstructure",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "fine-tuning-an-order-flow-foundation-model-for-sub-second-forecasting",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": "2611.14117",
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "生成式大模型",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 100002,
     "msgid": "arxiv_2610.30557",
     "title": "Governed Self-Evolution for Autonomous Investing: A Multi-Agent LLM System with an Invariant Core",
     "zone": "llm-agentic",
@@ -9316,6 +9376,26 @@
       "horizon": "高频日内",
       "paradigm": "因果结构",
       "alpha": "端到端表征",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 100003,
+    "msgid": "arxiv_2611.13616",
+    "title": "Optimal Trading Speed on Blockchain",
+    "zone": "market-microstructure",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "optimal-trading-speed-on-blockchain",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": "2611.13616",
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "因果结构",
+      "alpha": "组合执行优化",
       "autonomy": "人机协同可解释"
     }
   },
@@ -9501,6 +9581,26 @@
   },
   {
     "pos": 100004,
+    "msgid": "arxiv_2611.13572",
+    "title": "Market-Conditioned JEPA: Learning from Unpredictable Market Shocks",
+    "zone": "time-series-forecasting",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "mc-jepa",
+    "dup_of": null,
+    "framework": "MC-JEPA",
+    "venue": null,
+    "arxiv": "2611.13572",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 100004,
     "msgid": "arxiv_2610.25671",
     "title": "Arbitrage-Free Implied Volatility Surface Reconstruction via Additive Martingales",
     "zone": "time-series-forecasting",
@@ -9657,6 +9757,26 @@
       "paradigm": "监督回归",
       "alpha": "风险择时",
       "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 100005,
+    "msgid": "arxiv_2611.13550",
+    "title": "Tabular Foundation Models in Financial Predictions",
+    "zone": "evaluation-benchmarks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "tabfm-google-research",
+    "dup_of": null,
+    "framework": "TabFM (Google Research)",
+    "venue": null,
+    "arxiv": "2611.13550",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "元学习搜索",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
     }
   },
   {

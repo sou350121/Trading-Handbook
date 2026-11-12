@@ -2,12 +2,13 @@
 
 > **收錄**：面向价格/收益率/波动率的序列建模，涵盖Transformer变体、RNN/LSTM、MLP/Mixer、状态空间模型及频率自适应架构
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：107 篇（98 篇成解構頁，其餘為 registry）
+> **本 zone 現有**：108 篇（99 篇成解構頁，其餘為 registry）
 
 ## 解構清單
 
 | 方法 | 評級 | 來源 | TL;DR |
 |---|---|---|---|
+| MC-JEPA | ⚡ | [arXiv](https://arxiv.org/abs/2611.13572) | 用其他资产未来目标嵌入构造留一市场因子作为训练期条件，把不可预测的市场冲击从噪声变成监督信号，学 |
 | [Neural Filter Estimator (NFE)](neural-filter-estimator-nfe.md) | ⚡ | ICAIF26 [arXiv](https://arxiv.org/abs/2610.25802) | 用摊销神经滤波一次前向输出横截面各残差价差的隐状态后验，并把校准后的不确定性直接用于统计套利下单 |
 | STOCK-JEPA | ⚡ | STOCK-JEPA | 用岭回归因子先验作潜空间锚点，JEPA只学增量修正，A股RankIC 11.2%、回撤最小。 |
 | [自适应标签期限双层优化](art-429.md) | ⚡ | ICML 2026 | 提出标签期限悖论，用双层优化自适应选择训练标签期限，提升多因子次日收益预测与选股表现。 |

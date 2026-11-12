@@ -2,7 +2,7 @@
 
 > **收錄**：限价订单簿(LOB)建模、订单流信号、做市策略、高频套利、微观流动性与价格形成机制
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：48 篇（45 篇成解構頁，其餘為 registry）
+> **本 zone 現有**：50 篇（47 篇成解構頁，其餘為 registry）
 
 ## 解構清單
 
@@ -10,6 +10,7 @@
 |---|---|---|---|
 | [Hawkes过程 + 1ms事件定义](hawkes-1ms.md) | ⚡ | [arXiv](https://arxiv.org/abs/2610.36317) | 重定义NBBO事件为持续1ms的中价水平，揭示Hawkes亚毫秒核与高分叉比多由锁盘/短暂报价伪 |
 | [WGAN + EGGROLL](wgan-eggroll.md) | ⚡ | ICAIF26 [arXiv](https://arxiv.org/abs/2610.25604) | 用WGAN评论家与进化策略对LOB基础模型做对抗后训练，提升高频市场模拟真实度。 |
+| Optimal Trading Speed on Block | ⚡ | [arXiv](https://arxiv.org/abs/2611.13616) | 模型+Base准实验：区块提速使优先费租金转向套利者，主动LP抢跑，池深下降、价差走阔。 |
 | [Coherent-set convex hull + integer programming arbitrage](coherent-set-convex-hull-integer-programming-arbitrage.md) | ⚡ | [arXiv](https://arxiv.org/abs/2610.23517) | 用凸包+整数规划识别预测市场中逻辑相关合约的组合套利，并用Polymarket全深度盘口回放测量 |
 | [Autocorrelation Map](autocorrelation-map.md) | ⚡ | [arXiv](https://arxiv.org/abs/2607.09426) | 发现加密货币期货在整点/刻钟存在算法交易引发的量价脉冲，刻钟开盘订单失衡可预测4-12小时收益。 |
 | [FIFO头寸配对+多周期预测力归因回归](fifo.md) | ⚡ | FIFO头寸配对+多周期预测力归因回归 | 用带账户标识的逐笔委托簿与FIFO配对，把机构自营单笔头寸盈亏归因到日内预测能力与被动挂单流动性 |
@@ -34,6 +35,7 @@
 | [Beyond Anonymous Order Flow: W](beyond-anonymous-order-flow-wallet-identity-as-a-feature-for-short-horizon-return-prediction.md) | 🔧 | [arXiv](https://arxiv.org/abs/2611.05218) | 利用Hyperliquid钱包身份与L4订单簿，检验钱包标记持久性并提升短周期收益预测。 |
 | [Detecting unusual trading patt](detecting-unusual-trading-patterns-on-cryptocurrency-exchanges-by-means-of-complexity-measures.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.13916) | 本文基于高频交易数据，利用多重分形、近似熵等复杂度指标构建诊断框架，有效识别中心化交易所的刷量与 |
 | [SPIDE](spide.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.30539) | 用SPIDE对Uniswap V3流动性剖面建模，降维为低阶SDE并校准预测。 |
+| Fine-Tuning an Order-Flow Foun | 🔧 | [arXiv](https://arxiv.org/abs/2611.14117) | 在两家交易所的L3订单流上预训练300M自回归Transformer，再用LoRA微调，预测20 |
 | [L2 Liquidity-State Transition](l2-liquidity-state-transition.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.09230) | 在加密期货事件窗口内，预事件L2流动性状态是预测后事件流动性的首要信号，订单流仅具增量价值。 |
 | [State-Dependent Hawkes Process (SDHP)](state-dependent-hawkes-process-sdhp.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.23619) | 用状态依赖多元Hawkes建模日内电力市场季度与小时合约的跨产品订单流和流动性依赖。 |
 | [Concave-impact / Hurst-scaled execution framework](concave-impact-hurst-scaled-execution-framework.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.23749) | 以交易已实现盈亏的夏普比率内生决定执行时长，并在凹幂律冲击与Hurst缩放价格下用凸优化导出闭式 |
