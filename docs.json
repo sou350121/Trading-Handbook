@@ -516,6 +516,7 @@
               "foundations/evaluation-benchmarks/base-rate-honest-benchmark.md",
               "foundations/evaluation-benchmarks/bayes-stein-shrinkage.md",
               "foundations/evaluation-benchmarks/cost-aware-execution-filter.md",
+              "foundations/evaluation-benchmarks/finautorubric.md",
               "foundations/evaluation-benchmarks/finsearchcomp.md",
               "foundations/evaluation-benchmarks/finstressts.md",
               "foundations/evaluation-benchmarks/fintsb.md",
