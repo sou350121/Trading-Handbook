@@ -314,32 +314,36 @@ def parse_json(raw):
 
 def classify(item):
     old = signal.signal(signal.SIGALRM, _alarm_raise)
-    signal.alarm(85)  # hard bound: abort a black-holed DashScope connection that timeout=60 misses
+    signal.alarm(85)
+    prompt = build_classify_prompt(item)
     try:
-        raw = ask(build_classify_prompt(item), system=CLASSIFY_SYSTEM, thinking=False,
-                  temperature=0.1, max_tokens=220, json_mode=True, timeout=55, retries=1)
+        for attempt in range(2):
+            raw = ask(prompt, system=CLASSIFY_SYSTEM, thinking=False,
+                      temperature=0.1, max_tokens=220, json_mode=True,
+                      timeout=55 if attempt == 0 else 25, retries=1)
+            result = parse_json(raw)
+            if type(result.get("relevant")) is not bool or type(result.get("must_read")) is not bool:
+                raise ValueError("classification_boolean_invalid")
+            zone = result.get("zone")
+            if zone in ZONE_SLUGS or zone == "meta":
+                break
+            if attempt:
+                raise ValueError("classification_zone_invalid")
+            prompt += "\nzone must be exactly one of: " + ", ".join([*sorted(ZONE_SLUGS), "meta"])
+        if not isinstance(result.get("one_liner_zh"), str) or not result["one_liner_zh"].strip():
+            raise ValueError("classification_summary_missing")
+        summary = result["one_liner_zh"].strip()
+        if len(summary) > 60:
+            summary = summary[:58] + "\u2026"
+        return {
+            "relevant": result["relevant"],
+            "zone": zone,
+            "one_liner_zh": summary,
+            "must_read": result["must_read"],
+        }
     finally:
         signal.alarm(0)
         signal.signal(signal.SIGALRM, old)
-    d = parse_json(raw)
-    if type(d.get("relevant")) is not bool or type(d.get("must_read")) is not bool:
-        raise ValueError("classification_boolean_invalid")
-    if d.get("zone") not in ZONE_SLUGS and d.get("zone") != "meta":
-        raise ValueError("classification_zone_invalid")
-    if not isinstance(d.get("one_liner_zh"), str) or not d["one_liner_zh"].strip():
-        raise ValueError("classification_summary_missing")
-    zone = d.get("zone", "meta")
-    if zone not in ZONE_SLUGS and zone != "meta":
-        zone = "meta"
-    ol = (d.get("one_liner_zh") or "").strip()
-    if len(ol) > 60:
-        ol = ol[:58] + "…"
-    return {
-        "relevant": bool(d.get("relevant", False)),
-        "zone": zone,
-        "one_liner_zh": ol,
-        "must_read": bool(d.get("must_read", False)),
-    }
 
 
 # ---------- ISO week helpers ----------
