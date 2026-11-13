@@ -9040,6 +9040,26 @@
     }
   },
   {
+    "pos": 100000,
+    "msgid": "arxiv_2611.17329",
+    "title": "Internalizing Investment Mandates: A Neurosymbolic RL Approach to Portfolio Allocation",
+    "zone": "reinforcement-learning",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "plpg-mc-ppo-hmm",
+    "dup_of": null,
+    "framework": "PLPG-MC / PPO+HMM",
+    "venue": "ICAIF26",
+    "arxiv": "2611.17329",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "强化学习",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
     "pos": 100001,
     "msgid": "arxiv_2610.30564",
     "title": "When News Gets Old: Portfolio Allocation with Reinforcement Learning and Large Language Models",
@@ -9094,6 +9114,26 @@
     "axes": {
       "data": "量价表格",
       "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 100001,
+    "msgid": "arxiv_2611.17170",
+    "title": "Improving Algorithmic Trading for BESS on Intraday Electricity Markets through Distributional Price Forecasts",
+    "zone": "market-microstructure",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "rolling-intrinsic-distributional-forecasts",
+    "dup_of": null,
+    "framework": "Rolling intrinsic + distributional forecasts",
+    "venue": null,
+    "arxiv": "2611.17170",
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
       "paradigm": "监督回归",
       "alpha": "组合执行优化",
       "autonomy": "全自动黑盒"
@@ -9301,6 +9341,26 @@
   },
   {
     "pos": 100002,
+    "msgid": "arxiv_2611.16484",
+    "title": "TAPES: Terminal Adjoint-Propagated Error Scheduling for Financial Diffusion Samplers",
+    "zone": "data-generation-augmentation",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "tapes",
+    "dup_of": null,
+    "framework": "TAPES",
+    "venue": "ICAIF26",
+    "arxiv": "2611.16484",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "风险择时",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 100002,
     "msgid": "arxiv_2610.23517",
     "title": "Combinatorial Arbitrage in Prediction Markets",
     "zone": "market-microstructure",
@@ -9417,6 +9477,26 @@
       "paradigm": "生成式大模型",
       "alpha": "多智能体博弈",
       "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 100003,
+    "msgid": "arxiv_2611.15657",
+    "title": "Global Seasonality Factor Investing",
+    "zone": "factor-mining",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "global-seasonality-factor",
+    "dup_of": null,
+    "framework": "Global Seasonality Factor",
+    "venue": "arXiv",
+    "arxiv": "2611.15657",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "因子挖掘",
+      "autonomy": "人机协同可解释"
     }
   },
   {
@@ -9721,6 +9801,26 @@
   },
   {
     "pos": 100004,
+    "msgid": "arxiv_2611.11436",
+    "title": "Retrospective Analysis of Team-Following Trading Profitability in Pumpfun Meme Coins Using Funding Networks",
+    "zone": "evaluation-benchmarks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "retrospective-analysis-of-team-following-trading-profitability-in-pumpfun-meme-coins-using-funding-networks",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": "2611.11436",
+    "axes": {
+      "data": "图关系",
+      "horizon": "高频日内",
+      "paradigm": "元学习搜索",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 100004,
     "msgid": "arxiv_2607.08346",
     "title": "Grounded Event Extraction from SEC 8-K Filings with a Fine-Grained Taxonomy",
     "zone": "llm-agentic",
@@ -9837,6 +9937,26 @@
       "paradigm": "监督回归",
       "alpha": "端到端表征",
       "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 100005,
+    "msgid": "arxiv_2611.11373",
+    "title": "Optimal execution in a fractional setting with reinforcement learning",
+    "zone": "reinforcement-learning",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "optimal-execution-in-a-fractional-setting-with-reinforcement-learning",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": "2611.11373",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "高频日内",
+      "paradigm": "强化学习",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
     }
   },
   {

@@ -2,13 +2,14 @@
 
 > **收錄**：DRL/MARL在选股、调仓、做市、执行与对冲中的应用，涵盖PPO/SAC/分布RL、奖励函数设计与环境模拟
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：49 篇（46 篇成解構頁，其餘為 registry）
+> **本 zone 現有**：51 篇（48 篇成解構頁，其餘為 registry）
 
 ## 解構清單
 
 | 方法 | 評級 | 來源 | TL;DR |
 |---|---|---|---|
 | [Sinkhorn-based Robust RL for Market Making](sinkhorn-based-robust-rl-for-market-making.md) | ⚡ | [arXiv](https://arxiv.org/abs/2607.08291) | 提出基于Sinkhorn模糊集的高频做市鲁棒RL框架，解耦不确定性容忍与动作鲁棒性两维度，揭示流 |
+| PLPG-MC / PPO+HMM | ⚡ | ICAIF26 [arXiv](https://arxiv.org/abs/2611.17329) | 提出PLPG-MC，用重参数化蒙特卡洛将制度约束内化到连续动作PPO组合配置中，违规率降至4.8 |
 | [ReCAP](recap.md) | ⚡ | KDD26 | 提出ReCAP持续学习框架，通过CUSUM自适应切分市场制度、存储策略差异向量与动态网关融合，解 |
 | [OPHR](ophr.md) | ⚡ | OPHR | 提出OPHR多智能体强化学习框架，通过OP-Agent择时与HR-Agent路由对冲，在加密货币 |
 | [JaxMARL-HFT](jaxmarl-hft.md) | ⚡ | JaxMARL-HFT | 提出首个GPU加速的HFT多智能体强化学习框架JaxMARL-HFT，基于JAX实现异构智能体并 |
@@ -16,6 +17,7 @@
 | [MetaTrader](metatrader.md) | ⚡ | MetaTrader | 提出MetaTrader双层强化学习框架，通过数据变换与保守TD目标解决金融非平稳性下的OOD泛 |
 | [MacroHFT](macrohft.md) | ⚡ | KDD'24 | 提出MacroHFT框架，通过市场分解训练子代理，并用记忆增强超代理混合决策，提升加密货币高频交 |
 | [Reinforcement Learning for Exe](reinforcement-learning-for-execution-under-dynamic-fees-in-a-closed-loop-dex-simulator.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.10960) | 构建闭环DEX模拟器，用DQN在动态费率环境下优化交易执行，相比调优启发式策略显著降低实现缺口。 |
+| Optimal execution in a fractio | 🔧 | [arXiv](https://arxiv.org/abs/2611.11373) | 在分数布朗运动下用策略梯度强化学习求解线性冲击最优清算，直接最大化CARA效用，超越确定性Alm |
 | [Agentic RL 三原型框架（DQN+REINFORCE+SHAP）](agentic-rl-dqn-reinforce-shap.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.22522) | 用DQN与REINFORCE训练套利者、操纵者、跟风者三类交易者原型，在加密小时数据上比较其对压 |
 | [NeuralChaos](neuralchaos.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.14361) | 提出NeuralChaos神经算子，用有限布朗运动采样逼近可预测平方可积过程，理论证明最优逼近率 |
 | [Elicit-to-Optimize Framework](elicit-to-optimize-framework.md) | 🔧 | IJOC [arXiv](https://arxiv.org/abs/2607.14373) | 提出噪声鲁棒的偏好推断与策略优化框架，用贝叶斯IRL从噪声决策中提取风险偏好，结合分位数PPO优 |

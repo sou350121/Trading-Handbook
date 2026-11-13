@@ -2,7 +2,7 @@
 
 > **收錄**：GAN/扩散模型合成金融时序、缺失值插补、数据增强、分布外泛化与对抗样本防御
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：8 篇（8 篇成解構頁，其餘為 registry）
+> **本 zone 現有**：9 篇（9 篇成解構頁，其餘為 registry）
 
 ## 解構清單
 
@@ -11,6 +11,7 @@
 | [扩散因子模型](art-245.md) | ⚡ | 扩散因子模型 | 提出扩散因子模型，将潜在因子结构嵌入扩散过程，解决高维小数据下的金融情景模拟与组合优化问题。 |
 | [DSI](dsi.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.10810) | 提出测试时检查点集成框架DSI，通过轨迹样本混合降低生成模型尾部风险估计误差。 |
 | Multimodal latent diffusion (per-modality VAE + class-conditional DDPM) | 🔧 | [arXiv](https://arxiv.org/abs/2611.07282) | 用三模态VAE加类别条件潜扩散合成CVaR定义的稀有权重市场窗口，增强后XGBoost的AUC达 |
+| TAPES | 🔧 | ICAIF26 [arXiv](https://arxiv.org/abs/2611.16484) | 针对低NFE金融扩散采样器，把时间网格构造视作目标导向误差问题，用Richardson加终值伴随 |
 | [自适应数据流系统](art-364.md) | 🔧 | 自适应数据流系统 | 提出双层优化的自适应数据流系统，通过规划器-调度器动态调整金融时序数据增强策略，有效缓解概念漂移 |
 | [DiffsFormer](diffsformer.md) | 🔧 | DiffsFormer | 提出DiffsFormer扩散模型框架，通过源域知识迁移与条件编辑增强股票因子数据，显著提升下游 |
 | [改进局部搜索攻击采样/GAF-CNN](gaf-cnn.md) | 🔧 | 改进局部搜索攻击采样/GAF-CNN | 提出改进局部搜索攻击采样法，对GAF编码的K线图进行可控扰动生成增强数据，经人工评估显著优于CV |
