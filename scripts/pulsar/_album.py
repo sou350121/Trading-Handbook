@@ -92,6 +92,9 @@ def enumerate_all(fetcher=fetch, pause=time.sleep):
             raise ValueError('album_response_invalid')
         articles = response.get('article_list')
         flag = str(response.get('continue_flag'))
+        # WeChat serializes a single item as an object on the terminal page.
+        if flag == '0' and isinstance(articles, dict):
+            articles = [articles]
         if not isinstance(articles, list) or flag not in ('0', '1'):
             raise ValueError('album_page_invalid')
         if not articles and flag == '1':
