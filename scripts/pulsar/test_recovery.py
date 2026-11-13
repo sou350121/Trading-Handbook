@@ -44,22 +44,25 @@ class AlbumTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             _album.enumerate_all(lambda *_: {'article_list': [], 'continue_flag': 0}, lambda _: None)
 
-    def test_same_count_different_history_cannot_replace(self):
+    def test_same_count_different_history_retains_previous_entry(self):
         with tempfile.TemporaryDirectory(dir=TEST_TMP) as directory:
             path = Path(directory) / 'index.json'
-            path.write_text(json.dumps([{'msgid': '1', 'itemidx': '1'}]))
-            before = path.read_bytes()
-            with self.assertRaisesRegex(ValueError, 'history_missing'):
-                _album.save_complete([{'msgid': '2', 'itemidx': '1'}], path)
-            self.assertEqual(before, path.read_bytes())
+            first = _album.enumerate_all(lambda *_: {'article_list': [self.item(1)], 'continue_flag': 0})
+            second = _album.enumerate_all(lambda *_: {'article_list': [self.item(2)], 'continue_flag': 0})
+            path.write_text(json.dumps(first))
+            _album.save_complete(second, path)
+            self.assertEqual(json.loads(path.read_text()), second + first)
+            receipt = json.loads((path.parent / 'health/album.json').read_text())
+            self.assertEqual(receipt['status'], 'partial')
+            self.assertEqual(receipt['missing_ids'], [{'msgid': '1', 'itemidx': '1'}])
 
-    def test_repeated_cursor_fails(self):
-        with self.assertRaisesRegex(ValueError, 'pagination_stalled'):
+    def test_repeated_page_fails(self):
+        with self.assertRaisesRegex(ValueError, 'album_duplicate_identity'):
             _album.enumerate_all(lambda *_: {'article_list': [self.item(1)], 'continue_flag': 1}, lambda _: None)
 
     def test_album_path_identity_is_rejected(self):
         item = self.item(1); item['msgid'] = '../../escape'
-        with self.assertRaisesRegex(ValueError, 'identity_invalid'):
+        with self.assertRaisesRegex(ValueError, 'album_integer_invalid'):
             _album.enumerate_all(lambda *_: {'article_list': [item], 'continue_flag': 0}, lambda _: None)
 
 
@@ -69,7 +72,7 @@ class ProviderTests(unittest.TestCase):
         return io.BytesIO(json.dumps({'choices': [{'finish_reason': reason, 'message': {'content': content}}]}).encode())
 
     def test_deepseek_only_json_and_thinking_switch(self):
-        with patch.object(_deepseek, '_key', return_value='SECRET_SENTINEL'), patch.object(_deepseek.urllib.request, 'urlopen', return_value=self.response()) as opened:
+        with patch.object(_deepseek, '_key', return_value='SECRET_SENTINEL'), patch('urllib.request.OpenerDirector.open', return_value=self.response()) as opened:
             self.assertEqual(json.loads(_deepseek.ask('JSON', thinking=False, json_mode=True))['ok'], True)
             request = opened.call_args.args[0]
             self.assertEqual(request.full_url, 'https://api.deepseek.com/chat/completions')
@@ -77,23 +80,23 @@ class ProviderTests(unittest.TestCase):
 
     def test_401_not_retried_or_logged(self):
         error = urllib.error.HTTPError('https://example.invalid', 401, 'SECRET_SENTINEL', {}, io.BytesIO(b'SECRET_SENTINEL'))
-        with patch.object(_deepseek, '_key', return_value='SECRET_SENTINEL'), patch.object(_deepseek.urllib.request, 'urlopen', side_effect=error) as opened:
+        with patch.object(_deepseek, '_key', return_value='SECRET_SENTINEL'), patch('urllib.request.OpenerDirector.open', side_effect=error) as opened:
             with self.assertRaisesRegex(RuntimeError, '^deepseek_http_401$'):
                 _deepseek.ask('JSON')
             self.assertEqual(opened.call_count, 1)
 
     def test_truncation_rejected(self):
-        with patch.object(_deepseek, '_key', return_value='fake'), patch.object(_deepseek.urllib.request, 'urlopen', return_value=self.response(reason='length')):
+        with patch.object(_deepseek, '_key', return_value='fake'), patch('urllib.request.OpenerDirector.open', return_value=self.response(reason='length')):
             with self.assertRaisesRegex(RuntimeError, 'incomplete_output'):
                 _deepseek.ask('JSON')
 
     def test_empty_rejected(self):
-        with patch.object(_deepseek, '_key', return_value='fake'), patch.object(_deepseek.urllib.request, 'urlopen', return_value=self.response(content='')):
+        with patch.object(_deepseek, '_key', return_value='fake'), patch('urllib.request.OpenerDirector.open', return_value=self.response(content='')):
             with self.assertRaisesRegex(RuntimeError, 'empty_output'):
                 _deepseek.ask('JSON')
 
     def test_invalid_json_rejected(self):
-        with patch.object(_deepseek, '_key', return_value='fake'), patch.object(_deepseek.urllib.request, 'urlopen', return_value=self.response(content='not json')):
+        with patch.object(_deepseek, '_key', return_value='fake'), patch('urllib.request.OpenerDirector.open', return_value=self.response(content='not json')):
             with self.assertRaises(ValueError):
                 _deepseek.ask('JSON', json_mode=True)
 
