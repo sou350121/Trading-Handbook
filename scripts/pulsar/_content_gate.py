@@ -3,7 +3,7 @@ import re
 from decimal import Decimal
 
 NUMBER = re.compile(r'(?<![\w])[-−]?\d+(?:,\d{3})*(?:\.\d+)?%?')
-HTML_TEXT_VERSION = 4
+HTML_TEXT_VERSION = 5
 
 
 def validate_metadata(d, axes, zones):

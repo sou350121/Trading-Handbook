@@ -60,10 +60,13 @@ class _Text(HTMLParser):
             return
         if t in self.SKIP:
             self.skip += 1
-        elif t in ('td', 'th') and not self.skip:
-            self.parts.append('\t')
-        elif t in ("p", "br", "div", "section", "li", "h1", "h2", "h3", "h4", "tr", "table"):
-            self.parts.append("\n")
+        elif not self.skip:
+            # LaTeXML uses both semantic tables and span/div tables for layout.
+            classes = set((dict(a).get('class') or '').split()) if t in ('span', 'div') else set()
+            if t in ('td', 'th') or classes.intersection({'ltx_td', 'ltx_th'}):
+                self.parts.append('\t')
+            elif 'ltx_tr' in classes or t in ("p", "br", "div", "section", "li", "h1", "h2", "h3", "h4", "tr", "table"):
+                self.parts.append("\n")
 
     def handle_endtag(self, t):
         if self.math_alt_depth:
