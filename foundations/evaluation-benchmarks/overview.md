@@ -2,13 +2,15 @@
 
 > **收錄**：回测防穿越、样本外稳定性、过拟合检测、鲁棒性量化、公开基准(TFB/QuantBench)与模型衰减归因
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：38 篇（32 篇成解構頁，其餘為 registry）
+> **本 zone 現有**：40 篇（34 篇成解構頁，其餘為 registry）
 
 ## 解構清單
 
 | 方法 | 評級 | 來源 | TL;DR |
 |---|---|---|---|
+| Do Time-Series Foundation Mode | ⚡ | [arXiv](https://arxiv.org/abs/2611.12141) | 预注册盲测六类时序基础模型对NQ/ES期货5-120分钟收益的零样本预测，160格无一胜过不变化 |
 | FinCosmos | ⚡ | [arXiv](https://arxiv.org/abs/2611.07464) | 提出FinCosmos开放世界金融智能体评测，隐藏意图+Web取数+时点回测，150会话无一通过 |
+| One Fabrication Is Enough: A F | ⚡ | [arXiv](https://arxiv.org/abs/2611.15102) | 单篇伪造新闻即可让检索增强式LLM预测系统在74%–82%的反向预测上翻转，检索是攻击入口。 |
 | Autonomous Quant Researcher | ⚡ | [arXiv](https://arxiv.org/abs/2611.06607) | 受限LLM自主量化研究闭环：假设只用JSON声明、一次性holdout加绝对门禁验收，公开全部c |
 | FactorBench | ⚡ | FactorBench | FactorBench 在五大市场统一评测九种自动因子挖掘方法共约五千个因子，检验风格剥离与交易 |
 | [AI 对冲基金的Alpha为何消失？](ai-alpha.md) | ⚡ | — | 基于SEC披露与HFR数据，实证发现AI对冲基金早期月超额约50bp，2018年后消失并持续衰减 |

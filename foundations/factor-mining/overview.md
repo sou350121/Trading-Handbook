@@ -2,7 +2,7 @@
 
 > **收錄**：公式型Alpha生成、AutoML/遗传编程挖掘、特征选择、风格因子构造、信号衰减与拥挤度分析
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：74 篇（68 篇成解構頁，其餘為 registry）
+> **本 zone 現有**：75 篇（69 篇成解構頁，其餘為 registry）
 
 ## 解構清單
 
@@ -31,6 +31,7 @@
 | [CosmosAlpha](cosmosalpha.md) | 🔧 | [arXiv](https://arxiv.org/abs/2611.04555) | 把已挖掘因子组织成多关系图（血缘+表达式结构+截面暴露相关性），用图流传播搜索效用，并以质量/繁 |
 | [LineageEvo](lineageevo.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.29663) | 提出LineageEvo，用血缘（lineage）作为LLM进化因子挖掘的中间控制单元，通过血缘 |
 | [Supervised Lexicon Learning](supervised-lexicon-learning.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.14174) | 基于监督词表学习提取10-K全文与风险章节情绪，验证聚合层级对收益与波动率预测信号有效性的影响。 |
+| Diversified Expert Ensemble (DEE) | 🔧 | ICAIF26 [arXiv](https://arxiv.org/abs/2611.12389) | 把组合分散化原理搬到预测层：线性+非线性异质专家各自自助采样训练，IC过滤后等权平均，CSI30 |
 | [Persistent Homology / Multipersistence Belief-State Features](persistent-homology-multipersistence-belief-state-features.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.25756) | 用PCA与持续同调压缩预测市场信念状态，拓扑特征提升线性与非线性模型的预测与校准精度。 |
 | Sparse Autoencoder (SAE) | 🔧 | ICAIF26 [arXiv](https://arxiv.org/abs/2610.39205) | 用L1稀疏自编码器从加密横截面收益学稀疏因子，组合波动率稳定低于PCA，但无alpha、因子身份 |
 | [LLM Factor Lab](llm-factor-lab.md) | 🔧 | LLM Factor Lab | 用LLM在预设会计公式空间内自主演化因子，经严苛学术检验仅极少数存活。 |

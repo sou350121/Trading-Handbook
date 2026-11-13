@@ -2,7 +2,7 @@
 
 > **收錄**：面向价格/收益率/波动率的序列建模，涵盖Transformer变体、RNN/LSTM、MLP/Mixer、状态空间模型及频率自适应架构
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：108 篇（99 篇成解構頁，其餘為 registry）
+> **本 zone 現有**：109 篇（100 篇成解構頁，其餘為 registry）
 
 ## 解構清單
 
@@ -29,6 +29,7 @@
 | [aLLM4TS](allm4ts.md) | ⚡ | ICML24 | 提出aLLM4TS框架，通过自监督多补丁预测与两阶段训练，将LLM适配至时间序列表示学习，显著提 |
 | [AddMart](addmart.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.25671) | 用可加鞅把少量期权报价映射为非负增量密度，重建结构上无静态套利的隐含波动率曲面。 |
 | NRM | 🔧 | ICAIF 2026 [arXiv](https://arxiv.org/abs/2611.07287) | 提出NRM，用下游预测目标学习日内已实现测度的正权重聚合，保留经典测度结构并提升波动率预测。 |
+| GARCH-LSTM + forward bootstrap | 🔧 | [arXiv](https://arxiv.org/abs/2611.13212) | 为GARCH-LSTM混合波动率模型引入ARMA均值与前向bootstrap预测区间，并用共形预 |
 | [VAIOM](vaiom.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.13929) | 提出VAIOM架构，解耦连续输入与离散分桶输出，用Decoder-Only Transforme |
 | [RAVEN](raven.md) | 🔧 | RAVEN | 提出RAVEN自适应变长上下文混合专家网络，用逆时序累积重要性切分嵌套前缀，解决固定回看窗口在金 |
 | [CSM](csm.md) | 🔧 | JBF | 提出CSM框架，将收益符号条件化于波动率幅度，避开Copula建模，实现低成本高稳定的指数择时预 |

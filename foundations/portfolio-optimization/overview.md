@@ -2,13 +2,14 @@
 
 > **收錄**：均值方差/风险平价/Black-Litterman、稀疏优化、执行算法(VWAP/冲击成本)、多资产轮动与战术配置
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：49 篇（46 篇成解構頁，其餘為 registry）
+> **本 zone 現有**：51 篇（48 篇成解構頁，其餘為 registry）
 
 ## 解構清單
 
 | 方法 | 評級 | 來源 | TL;DR |
 |---|---|---|---|
 | [LPAS](lpas.md) | ⚡ | [arXiv](https://arxiv.org/abs/2607.09820) | 提出学习预测模糊集(LPAS)，用深度模型输出场景分布与状态依赖Wasserstein半径，实现 |
+| [Gated Conformal Semantic Risk Control (Gated-CSRC)](gated-conformal-semantic-risk-control-gated-csrc.md) | ⚡ | [arXiv](https://arxiv.org/abs/2611.14699) | 用LLM把公告映射为语义风险态，经共形校准得到因子冲击不确定集，再用二阶锥门控PPO组合提案，实 |
 | [异质性信念均衡模型](art-399.md) | ⚡ | 异质性信念均衡模型 | 重构70年机构预期数据，验证异质性信念模型，证明机构逆周期预期对中长期市场回报与波动率具强预测力 |
 | [STABLE](stable.md) | ⚡ | ICLR26 | 用条件扩散模型生成多路径收益率作为BL主观观点，结合卡尔曼动态敏感度与历史先验贝叶斯融合，实现稳 |
 | [DeePM](deepm.md) | ⚡ | DeePM | 提出DeePM框架，通过定向延迟、宏观图谱先验与SoftMin-EVaR目标，实现端到端宏观资产 |
@@ -18,6 +19,7 @@
 | [谱去噪相关性网络](art-100011.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.10297) | 基于随机矩阵理论对资产相关性矩阵进行谱去噪，提取核心-边缘网络结构，并据此构建外围资产组合以提升 |
 | [Convex Variational Theory of Worst-Case Risk (quantile/distribution representation principle)](convex-variational-theory-of-worst-case-risk-quantile-distribution-representation-principle.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.29652) | 以谱风险度量为统一底座，提出凸变分理论：按模糊集凸性选分位数或分布表示，给出最坏情况风险的闭式解 |
 | [AGCA](agca.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.13112) | 提出锚定测地线成分分析(AGCA)，将多元极值降维转化为特征分解，高效模拟组合尾部风险与VaR。 |
+| DRP-ES (Diversified-Risk-Perception Expected Shortfall) | 🔧 | [arXiv](https://arxiv.org/abs/2611.11803) | 提出融合资产分散与风险模型分散的DRP风险度量框架，给出DRP-ES并用于组合选择。 |
 | Signed Trust (Safe/Follow/Reverse) Controller | 🔧 | [arXiv](https://arxiv.org/abs/2611.04826) | 用 Safe/Follow/Reverse 三动作在线学习控制器安全使用不可信预测，配双重证书， |
 | Asym-Sticky-NCO | 🔧 | [arXiv](https://arxiv.org/abs/2611.05310) | 提出非对称下行风险NCO+粘性HMM的行业轮动框架，降低回撤与换手。 |
 | Reparameterized Neural Network Dual Bounds (artificial market) | 🔧 | [arXiv](https://arxiv.org/abs/2611.06495) | 在两因子市场下求解含一般凸交易约束的DC养老最优投资与寿险需求，用重参数化神经网络求原始值函数上 |
