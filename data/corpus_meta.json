@@ -8840,6 +8840,26 @@
     }
   },
   {
+    "pos": 442,
+    "msgid": "2247494887",
+    "title": "Alpha的容量",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "art-442",
+    "dup_of": null,
+    "framework": "微观执行模型 + 部分调整",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
     "pos": 100000,
     "msgid": "arxiv_2607.14373",
     "title": "A Noise-Robust Elicit-to-Optimize Framework for Distortion Riskmetrics via Inverse Reinforcement Learning",

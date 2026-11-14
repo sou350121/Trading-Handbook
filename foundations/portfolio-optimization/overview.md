@@ -2,7 +2,7 @@
 
 > **收錄**：均值方差/风险平价/Black-Litterman、稀疏优化、执行算法(VWAP/冲击成本)、多资产轮动与战术配置
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：52 篇（49 篇成解構頁，其餘為 registry）
+> **本 zone 現有**：53 篇（50 篇成解構頁，其餘為 registry）
 
 ## 解構清單
 
@@ -27,6 +27,7 @@
 | RNN operator map | 🔧 | [arXiv](https://arxiv.org/abs/2611.14245) | 用RNN学习带瞬态价格冲击的最优清算策略对核参数的解映射，并量化核误设成本。 |
 | [SciPhyRL](sciphyrl.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.15195) | 提出基于SciPhyRL的连续时间组合优化框架，通过PINN离线求解路径HJB方程，结合微观结构 |
 | [Black–Litterman 框架](black-litterman.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.31074) | 证明方向正确的专家观点可单调提升夏普比率，并给出融入Markowitz与端到端组合模型的方法。 |
+| 微观执行模型 + 部分调整 | 🔧 | 微观执行模型 + 部分调整 | 用纽交所逐笔数据估计非线性冲击成本，测算35种异象的真实资金容量，并发现部分调整可大幅扩容。 |
 | MINGLE | 🔧 | MINGLE | 提出MINGLE联合估计因子暴露与暴露相似图，用于组合分散化与谱聚类配置。 |
 | Regime-Aware Multiaxial Signal Meta-Layer / Signal EV Ledger | 🔧 | Regime-Aware Multiaxial Signal Meta-Layer / Signal EV Ledger | 在多轴市场状态的软后验下，按Wasserstein距离对信号结果分布做聚类并维护EV账簿，再据此 |
 | [偏度组合管理：如何系统性提升经典因子的收益？](art-409.md) | 🔧 | — | 提出基于预期偏度预测与顺序双重排序的偏度管理框架，系统性修复去极值对经典因子尾部收益的破坏。 |
