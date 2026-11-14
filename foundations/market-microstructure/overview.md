@@ -2,7 +2,7 @@
 
 > **收錄**：限价订单簿(LOB)建模、订单流信号、做市策略、高频套利、微观流动性与价格形成机制
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：51 篇（48 篇成解構頁，其餘為 registry）
+> **本 zone 現有**：52 篇（49 篇成解構頁，其餘為 registry）
 
 ## 解構清單
 
@@ -12,6 +12,7 @@
 | [WGAN + EGGROLL](wgan-eggroll.md) | ⚡ | ICAIF26 [arXiv](https://arxiv.org/abs/2610.25604) | 用WGAN评论家与进化策略对LOB基础模型做对抗后训练，提升高频市场模拟真实度。 |
 | Optimal Trading Speed on Block | ⚡ | [arXiv](https://arxiv.org/abs/2611.13616) | 模型+Base准实验：区块提速使优先费租金转向套利者，主动LP抢跑，池深下降、价差走阔。 |
 | [Coherent-set convex hull + integer programming arbitrage](coherent-set-convex-hull-integer-programming-arbitrage.md) | ⚡ | [arXiv](https://arxiv.org/abs/2610.23517) | 用凸包+整数规划识别预测市场中逻辑相关合约的组合套利，并用Polymarket全深度盘口回放测量 |
+| Propagator model / Wiener–Hopf deconvolution | ⚡ | [arXiv](https://arxiv.org/abs/2611.10574) | 证明扩散价格下传播子估计无法识别瞬态冲击衰减，推断衰减可能是反卷积假象。 |
 | [Autocorrelation Map](autocorrelation-map.md) | ⚡ | [arXiv](https://arxiv.org/abs/2607.09426) | 发现加密货币期货在整点/刻钟存在算法交易引发的量价脉冲，刻钟开盘订单失衡可预测4-12小时收益。 |
 | [FIFO头寸配对+多周期预测力归因回归](fifo.md) | ⚡ | FIFO头寸配对+多周期预测力归因回归 | 用带账户标识的逐笔委托簿与FIFO配对，把机构自营单笔头寸盈亏归因到日内预测能力与被动挂单流动性 |
 | [JAX-LOB](jax-lob.md) | ⚡ | JAX-LOB | 保持L2盘口与成交路径不变，仅改变撤单在FIFO队列中的分配方式，量化聚合订单簿下被动执行回测的 |

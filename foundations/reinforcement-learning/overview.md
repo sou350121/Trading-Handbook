@@ -2,13 +2,14 @@
 
 > **收錄**：DRL/MARL在选股、调仓、做市、执行与对冲中的应用，涵盖PPO/SAC/分布RL、奖励函数设计与环境模拟
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：51 篇（48 篇成解構頁，其餘為 registry）
+> **本 zone 現有**：52 篇（49 篇成解構頁，其餘為 registry）
 
 ## 解構清單
 
 | 方法 | 評級 | 來源 | TL;DR |
 |---|---|---|---|
 | [Sinkhorn-based Robust RL for Market Making](sinkhorn-based-robust-rl-for-market-making.md) | ⚡ | [arXiv](https://arxiv.org/abs/2607.08291) | 提出基于Sinkhorn模糊集的高频做市鲁棒RL框架，解耦不确定性容忍与动作鲁棒性两维度，揭示流 |
+| [Distributional TD3 (quantile critics) + empirical replay environment](distributional-td3-quantile-critics-empirical-replay-environment.md) | ⚡ | [arXiv](https://arxiv.org/abs/2611.10956) | 用1996–2017标普500期权数据搭建历史回放环境，训练分布式TD3做市对冲代理，2018– |
 | PLPG-MC / PPO+HMM | ⚡ | ICAIF26 [arXiv](https://arxiv.org/abs/2611.17329) | 提出PLPG-MC，用重参数化蒙特卡洛将制度约束内化到连续动作PPO组合配置中，违规率降至4.8 |
 | [ReCAP](recap.md) | ⚡ | KDD26 | 提出ReCAP持续学习框架，通过CUSUM自适应切分市场制度、存储策略差异向量与动态网关融合，解 |
 | [OPHR](ophr.md) | ⚡ | OPHR | 提出OPHR多智能体强化学习框架，通过OP-Agent择时与HR-Agent路由对冲，在加密货币 |

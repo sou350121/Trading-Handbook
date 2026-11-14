@@ -2,12 +2,13 @@
 
 > **收錄**：LLM在因子挖掘、情绪分析、研报生成、RAG增强及多智能体交易工作流中的适配、微调与推理架构
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：73 篇（61 篇成解構頁，其餘為 registry）
+> **本 zone 現有**：74 篇（62 篇成解構頁，其餘為 registry）
 
 ## 解構清單
 
 | 方法 | 評級 | 來源 | TL;DR |
 |---|---|---|---|
+| Jev / emu | ⚡ | [arXiv](https://arxiv.org/abs/2611.10414) | 构建兼容Jev的多智能体LLM新闻交易系统，用哈希承诺协议检验LLM读新闻是跟踪还是跟随市场反应 |
 | [Steward](steward.md) | ⚡ | [arXiv](https://arxiv.org/abs/2610.30557) | 多智能体LLM投资系统Steward：用不可变核心和确定性门控约束自我演进，实盘五个月回撤受控。 |
 | [ACE-Trader](ace-trader.md) | ⚡ | [arXiv](https://arxiv.org/abs/2610.25847) | 提出ACE-Trader：为交易员与红队各配一个可学习的上下文记忆选择器，并让两者通过共享交易记 |
 | [XALPHA](xalpha.md) | ⚡ | XALPHA | 提出记忆驱动的多脑闭环AI量化研究员XALPHA，实现从研报阅读、假说生成、代码实现到验证反思的 |

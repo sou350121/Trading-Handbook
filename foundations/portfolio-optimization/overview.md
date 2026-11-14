@@ -2,7 +2,7 @@
 
 > **收錄**：均值方差/风险平价/Black-Litterman、稀疏优化、执行算法(VWAP/冲击成本)、多资产轮动与战术配置
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：51 篇（48 篇成解構頁，其餘為 registry）
+> **本 zone 現有**：52 篇（49 篇成解構頁，其餘為 registry）
 
 ## 解構清單
 
@@ -20,6 +20,7 @@
 | [Convex Variational Theory of Worst-Case Risk (quantile/distribution representation principle)](convex-variational-theory-of-worst-case-risk-quantile-distribution-representation-principle.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.29652) | 以谱风险度量为统一底座，提出凸变分理论：按模糊集凸性选分位数或分布表示，给出最坏情况风险的闭式解 |
 | [AGCA](agca.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.13112) | 提出锚定测地线成分分析(AGCA)，将多元极值降维转化为特征分解，高效模拟组合尾部风险与VaR。 |
 | DRP-ES (Diversified-Risk-Perception Expected Shortfall) | 🔧 | [arXiv](https://arxiv.org/abs/2611.11803) | 提出融合资产分散与风险模型分散的DRP风险度量框架，给出DRP-ES并用于组合选择。 |
+| [Objective Diversification + ExtraTrees 排序组合](objective-diversification-extratrees.md) | 🔧 | [arXiv](https://arxiv.org/abs/2611.10333) | 用最小方差、LAD、下行半方差、分位数与ES五种目标各自的滚动对冲比率作为候选，再用多输出Ext |
 | Signed Trust (Safe/Follow/Reverse) Controller | 🔧 | [arXiv](https://arxiv.org/abs/2611.04826) | 用 Safe/Follow/Reverse 三动作在线学习控制器安全使用不可信预测，配双重证书， |
 | Asym-Sticky-NCO | 🔧 | [arXiv](https://arxiv.org/abs/2611.05310) | 提出非对称下行风险NCO+粘性HMM的行业轮动框架，降低回撤与换手。 |
 | Reparameterized Neural Network Dual Bounds (artificial market) | 🔧 | [arXiv](https://arxiv.org/abs/2611.06495) | 在两因子市场下求解含一般凸交易约束的DC养老最优投资与寿险需求，用重参数化神经网络求原始值函数上 |
