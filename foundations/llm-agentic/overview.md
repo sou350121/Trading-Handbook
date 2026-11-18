@@ -34,7 +34,7 @@
 | [When News Gets Old: Portfolio ](when-news-gets-old-portfolio-allocation-with-reinforcement-learning-and-large-language-models.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.30564) | 用固定LLM从SEC披露中抽取正负信号，比较RL与LLM组合策略对新闻时效信息的保留、显式注入或 |
 | [agent_skills/socratic-tutor](agent-skills-socratic-tutor.md) | 🔧 | agent_skills/socratic-tutor | Jane Street开源苏格拉底式导师Agent，用连续提问和诊断题训练量化特征工程防泄漏与过 |
 | CosmosAlpha | 🔧 | CosmosAlpha | 提出CosmosAlpha，用多关系图组织LLM因子池并以帕累托搜索选母本，缓解因子近亲繁殖。 |
-| GPT-4.1-mini + FinBERT + local projections | 🔧 | GPT-4.1-mini + FinBERT + local projections | 用GPT+FinBERT拆解WSJ百万新闻，发现坏消息在12主题均更粘，总情绪指标有合成偏误 |
+| [GPT-4.1-mini + FinBERT + local projections](gpt-4-1-mini-finbert-local-projections.md) | 🔧 | GPT-4.1-mini + FinBERT + local projections | 用GPT+FinBERT拆解WSJ百万新闻，发现坏消息在12主题均更粘，总情绪指标有合成偏误 |
 | [AutoScientist-Quant](autoscientist-quant.md) | 🔧 | AutoScientist-Quant | 谷歌联合剑桥提出 AutoScientist-Quant，隔离搜索反馈集与最终测试集，把因子筛选 |
 | [两阶段事件提取系统](art-416.md) | 🔧 | 两阶段事件提取系统 | 提出两阶段LLM事件提取系统，通过约束生成与独立评分机制，从8-K公告中抽取细粒度事件标签，提升 |
 | [SkillOpt](skillopt.md) | 🔧 | SkillOpt | 将Agent技能文档视为可训练参数，引入类深度学习优化器（学习率、验证集门控、慢更新）实现技能自 |

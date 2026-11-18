@@ -8880,6 +8880,26 @@
     }
   },
   {
+    "pos": 444,
+    "msgid": "2247494912",
+    "title": "为什么大模型量化论文难复现",
+    "zone": "evaluation-benchmarks",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "art-444",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "跨周期",
+      "paradigm": "生成式大模型",
+      "alpha": "风险择时",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
     "pos": 100000,
     "msgid": "arxiv_2607.14373",
     "title": "A Noise-Robust Elicit-to-Optimize Framework for Distortion Riskmetrics via Inverse Reinforcement Learning",
