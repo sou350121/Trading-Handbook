@@ -28,7 +28,7 @@
 | [SciPhyRL](sciphyrl.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.15195) | 提出基于SciPhyRL的连续时间组合优化框架，通过PINN离线求解路径HJB方程，结合微观结构 |
 | [Black–Litterman 框架](black-litterman.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.31074) | 证明方向正确的专家观点可单调提升夏普比率，并给出融入Markowitz与端到端组合模型的方法。 |
 | 微观执行模型 + 部分调整 | 🔧 | 微观执行模型 + 部分调整 | 用纽交所逐笔数据估计非线性冲击成本，测算35种异象的真实资金容量，并发现部分调整可大幅扩容。 |
-| MINGLE | 🔧 | MINGLE | 提出MINGLE联合估计因子暴露与暴露相似图，用于组合分散化与谱聚类配置。 |
+| [MINGLE](mingle.md) | 🔧 | MINGLE | 提出MINGLE联合估计因子暴露与暴露相似图，用于组合分散化与谱聚类配置。 |
 | Regime-Aware Multiaxial Signal Meta-Layer / Signal EV Ledger | 🔧 | Regime-Aware Multiaxial Signal Meta-Layer / Signal EV Ledger | 在多轴市场状态的软后验下，按Wasserstein距离对信号结果分布做聚类并维护EV账簿，再据此 |
 | [偏度组合管理：如何系统性提升经典因子的收益？](art-409.md) | 🔧 | — | 提出基于预期偏度预测与顺序双重排序的偏度管理框架，系统性修复去极值对经典因子尾部收益的破坏。 |
 | [RIEnet](rienet.md) | 🔧 | RIEnet | 提出RIEnet神经网络，通过时滞变换、BiLSTM清洗特征值与MLP估计波动率，端到端最小化样 |
