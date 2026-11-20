@@ -8900,6 +8900,26 @@
     }
   },
   {
+    "pos": 445,
+    "msgid": "2247494919",
+    "title": "3.8 万 Star 背后：为什么 Vibe Trading 远比 Vibe Coding 更难",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "vibe-trading",
+    "dup_of": null,
+    "framework": "Vibe-Trading",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "多模态",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "多智能体博弈",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
     "pos": 100000,
     "msgid": "arxiv_2607.14373",
     "title": "A Noise-Robust Elicit-to-Optimize Framework for Distortion Riskmetrics via Inverse Reinforcement Learning",
