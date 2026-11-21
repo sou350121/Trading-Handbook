@@ -9041,6 +9041,26 @@
   },
   {
     "pos": 100000,
+    "msgid": "arxiv_2611.26623",
+    "title": "Path-Independent Deleveraging Rules",
+    "zone": "market-microstructure",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "path-independent-adl-rules",
+    "dup_of": null,
+    "framework": "扩展对数指数族（path-independent ADL rules）",
+    "venue": null,
+    "arxiv": "2611.26623",
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "因果结构",
+      "alpha": "风险择时",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 100000,
     "msgid": "arxiv_2611.10956",
     "title": "Risk-Sensitive Reinforcement Learning for an Options Market Maker: An Empirical Study with Real S&P 500 Options",
     "zone": "reinforcement-learning",
@@ -9257,6 +9277,26 @@
       "paradigm": "监督回归",
       "alpha": "组合执行优化",
       "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 100001,
+    "msgid": "arxiv_2611.25860",
+    "title": "Neckpinches in a Positively Curved Market: Ricci Flow with Surgery on the Nikkei-225",
+    "zone": "graph-networks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "arcus",
+    "dup_of": null,
+    "framework": "ARCUS",
+    "venue": null,
+    "arxiv": "2611.25860",
+    "axes": {
+      "data": "图关系",
+      "horizon": "中长周期",
+      "paradigm": "因果结构",
+      "alpha": "风险择时",
+      "autonomy": "人机协同可解释"
     }
   },
   {
@@ -9541,6 +9581,26 @@
   },
   {
     "pos": 100002,
+    "msgid": "arxiv_2611.25762",
+    "title": "Trading Before a Committed Rebalance",
+    "zone": "market-microstructure",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "bayesian-execution-game-with-optional-activation",
+    "dup_of": null,
+    "framework": "Bayesian execution game with optional activation",
+    "venue": null,
+    "arxiv": "2611.25762",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "高频日内",
+      "paradigm": "因果结构",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 100002,
     "msgid": "arxiv_2611.05310",
     "title": "Mitigating Return Drag and Regime Whipsaws in Sector Rotation: An Asymmetric Downside-Aware Nested Clustered Optimization Framework",
     "zone": "portfolio-optimization",
@@ -9777,6 +9837,26 @@
       "paradigm": "监督回归",
       "alpha": "因子挖掘",
       "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 100003,
+    "msgid": "arxiv_2611.25732",
+    "title": "Auto-Alpha: A Framework for Autonomous Factor Research",
+    "zone": "llm-agentic",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "auto-alpha",
+    "dup_of": null,
+    "framework": "Auto-Alpha",
+    "venue": null,
+    "arxiv": "2611.25732",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "因子挖掘",
+      "autonomy": "Agent自主演进"
     }
   },
   {
@@ -10021,6 +10101,26 @@
   },
   {
     "pos": 100004,
+    "msgid": "arxiv_2611.24845",
+    "title": "Vibe-Trading: Towards Agent-Native Trading",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "vibe-trading",
+    "dup_of": null,
+    "framework": "Vibe-Trading",
+    "venue": null,
+    "arxiv": "2611.24845",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "跨周期",
+      "paradigm": "生成式大模型",
+      "alpha": "组合执行优化",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
+    "pos": 100004,
     "msgid": "arxiv_2607.08346",
     "title": "Grounded Event Extraction from SEC 8-K Filings with a Fine-Grained Taxonomy",
     "zone": "llm-agentic",
@@ -10197,6 +10297,26 @@
       "paradigm": "监督回归",
       "alpha": "风险择时",
       "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 100005,
+    "msgid": "arxiv_2611.24028",
+    "title": "Algorithmic Market Making Can Lead to Rough Volatility Through the Order Book",
+    "zone": "market-microstructure",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "sgd-dean-kawasaki-spde",
+    "dup_of": null,
+    "framework": "SGD市场做市 / Dean-Kawasaki SPDE 模型",
+    "venue": null,
+    "arxiv": "2611.24028",
+    "axes": {
+      "data": "微观盘口",
+      "horizon": "高频日内",
+      "paradigm": "因果结构",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
     }
   },
   {

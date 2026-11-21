@@ -2,13 +2,14 @@
 
 > **收錄**：LLM在因子挖掘、情绪分析、研报生成、RAG增强及多智能体交易工作流中的适配、微调与推理架构
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：75 篇（63 篇成解構頁，其餘為 registry）
+> **本 zone 現有**：77 篇（65 篇成解構頁，其餘為 registry）
 
 ## 解構清單
 
 | 方法 | 評級 | 來源 | TL;DR |
 |---|---|---|---|
 | Jev / emu | ⚡ | [arXiv](https://arxiv.org/abs/2611.10414) | 构建兼容Jev的多智能体LLM新闻交易系统，用哈希承诺协议检验LLM读新闻是跟踪还是跟随市场反应 |
+| [Auto-Alpha](auto-alpha.md) | ⚡ | [arXiv](https://arxiv.org/abs/2611.25732) | LLM 智能体把研报初始化、回测反馈与语义审计串成闭环，自主提出假设并实现因子，产出 105 因 |
 | [Steward](steward.md) | ⚡ | [arXiv](https://arxiv.org/abs/2610.30557) | 多智能体LLM投资系统Steward：用不可变核心和确定性门控约束自我演进，实盘五个月回撤受控。 |
 | [ACE-Trader](ace-trader.md) | ⚡ | [arXiv](https://arxiv.org/abs/2610.25847) | 提出ACE-Trader：为交易员与红队各配一个可学习的上下文记忆选择器，并让两者通过共享交易记 |
 | [XALPHA](xalpha.md) | ⚡ | XALPHA | 提出记忆驱动的多脑闭环AI量化研究员XALPHA，实现从研报阅读、假说生成、代码实现到验证反思的 |
@@ -29,10 +30,11 @@
 | [QuantAgent](quantagent.md) | ⚡ | QuantAgent | 提出QuantAgent双层循环框架，通过LLM自主迭代与实盘反馈自我完善，实现金融Alpha信 |
 | [FINCON](fincon.md) | ⚡ | NeurIPS 2024 | 提出基于LLM的多智能体框架FINCON，通过经理-分析师层级架构与双层风控机制，实现单股交易与 |
 | [FinAgent](finagent.md) | ⚡ | KDD 2024 | 提出FinAgent多模态交易智能体，融合文本与K线图，通过记忆、反思与工具增强模块实现端到端自 |
+| [Vibe-Trading](vibe-trading.md) | 🔧 | [arXiv](https://arxiv.org/abs/2611.24845) | 提出 Vibe-Trading 这个 agent-native 交易框架，把研究、回测、组合分析 |
 | [Grounded Event Extraction System](grounded-event-extraction-system.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.08346) | 提出两阶段LLM系统，从SEC 8-K文件中抽取细粒度事件标签，并通过引用验证与质量评分实现可审 |
 | [FinBERT + 两级LLM评分链（GPT-5.4-mini摘要→Claude Sonnet 4评级）+ 随机森林/ridge混合排序](finbert-llm-gpt-5-4-mini-claude-sonnet-4-ridge.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.38056) | 把LLM文本评分与财务面、关注度特征并入美医疗股月度排序，并用训练截断对照检验后视偏差。 |
 | [When News Gets Old: Portfolio ](when-news-gets-old-portfolio-allocation-with-reinforcement-learning-and-large-language-models.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.30564) | 用固定LLM从SEC披露中抽取正负信号，比较RL与LLM组合策略对新闻时效信息的保留、显式注入或 |
-| Vibe-Trading | 🔧 | Vibe-Trading | 港大团队发布 Vibe-Trading 技术报告：用工作区和控制框架这两层外围基础设施，为 LL |
+| [Vibe-Trading](vibe-trading.md) | 🔧 | Vibe-Trading | 港大团队发布 Vibe-Trading 技术报告：用工作区和控制框架这两层外围基础设施，为 LL |
 | [agent_skills/socratic-tutor](agent-skills-socratic-tutor.md) | 🔧 | agent_skills/socratic-tutor | Jane Street开源苏格拉底式导师Agent，用连续提问和诊断题训练量化特征工程防泄漏与过 |
 | CosmosAlpha | 🔧 | CosmosAlpha | 提出CosmosAlpha，用多关系图组织LLM因子池并以帕累托搜索选母本，缓解因子近亲繁殖。 |
 | [GPT-4.1-mini + FinBERT + local projections](gpt-4-1-mini-finbert-local-projections.md) | 🔧 | GPT-4.1-mini + FinBERT + local projections | 用GPT+FinBERT拆解WSJ百万新闻，发现坏消息在12主题均更粘，总情绪指标有合成偏误 |

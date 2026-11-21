@@ -178,6 +178,7 @@
             "group": "图网络与关系建模",
             "pages": [
               "foundations/graph-networks/overview.md",
+              "foundations/graph-networks/arcus.md",
               "foundations/graph-networks/art-214.md",
               "foundations/graph-networks/cograsp.md",
               "foundations/graph-networks/deltalag.md",
@@ -271,6 +272,7 @@
               "foundations/llm-agentic/art-34.md",
               "foundations/llm-agentic/art-416.md",
               "foundations/llm-agentic/asi-arch.md",
+              "foundations/llm-agentic/auto-alpha.md",
               "foundations/llm-agentic/autoscientist-quant.md",
               "foundations/llm-agentic/contesttrade.md",
               "foundations/llm-agentic/copbert-copgpt.md",
@@ -316,6 +318,7 @@
               "foundations/llm-agentic/timi.md",
               "foundations/llm-agentic/tradingagents.md",
               "foundations/llm-agentic/trr.md",
+              "foundations/llm-agentic/vibe-trading.md",
               "foundations/llm-agentic/when-news-gets-old-portfolio-allocation-with-reinforcement-learning-and-large-language-models.md",
               "foundations/llm-agentic/xalpha.md"
             ]
@@ -604,7 +607,8 @@
               "radar/journals/2026-W43.md",
               "radar/journals/2026-W44.md",
               "radar/journals/2026-W45.md",
-              "radar/journals/2026-W46.md"
+              "radar/journals/2026-W46.md",
+              "radar/journals/2026-W47.md"
             ]
           },
           {
@@ -615,7 +619,8 @@
               "radar/arxiv/2026-W43.md",
               "radar/arxiv/2026-W44.md",
               "radar/arxiv/2026-W45.md",
-              "radar/arxiv/2026-W46.md"
+              "radar/arxiv/2026-W46.md",
+              "radar/arxiv/2026-W47.md"
             ]
           },
           {
@@ -628,7 +633,8 @@
               "radar/practitioner/2026-W43.md",
               "radar/practitioner/2026-W44.md",
               "radar/practitioner/2026-W45.md",
-              "radar/practitioner/2026-W46.md"
+              "radar/practitioner/2026-W46.md",
+              "radar/practitioner/2026-W47.md"
             ]
           }
         ]
