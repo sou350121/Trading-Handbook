@@ -8920,6 +8920,26 @@
     }
   },
   {
+    "pos": 446,
+    "msgid": "2247494924",
+    "title": "对话Operon 创始人 | 卖方分析师如何用 AI 重建投研机构",
+    "zone": "llm-agentic",
+    "rating": "🔧",
+    "page_worthy": false,
+    "slug": "operon-research-beacon-operon-knowledge-hive-mind-operon-mcp",
+    "dup_of": null,
+    "framework": "Operon Research（Beacon / Operon Knowledge Hive Mind / Operon MCP）",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "端到端表征",
+      "autonomy": "Agent自主演进"
+    }
+  },
+  {
     "pos": 100000,
     "msgid": "arxiv_2607.14373",
     "title": "A Noise-Robust Elicit-to-Optimize Framework for Distortion Riskmetrics via Inverse Reinforcement Learning",
