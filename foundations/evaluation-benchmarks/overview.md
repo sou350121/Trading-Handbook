@@ -31,7 +31,7 @@
 | Hybrid Quantum TCN | 🔧 | [arXiv](https://arxiv.org/abs/2611.10801) | 用六条件消融与等价检验审计混合量子TCN，发现量子层对日频选股无增益。 |
 | Point-in-Time Encoders | 🔧 | [arXiv](https://arxiv.org/abs/2611.14325) | 构建财报电话会的时点编码器，按年截断训练并对比学习，消除回测中检索端前视偏差。 |
 | [ModernFinBERT + HAR-X](modernfinbert-har-x.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.39636) | 检验ModernFinBERT新闻变量能否提升11只美股HAR波动率预测，结果多数不敌VIX与朴 |
-| LiveOption / QFinZero | 🔧 | NeurIPS26 | 提出 LiveOption 基准，基于 QFinZero 交易模拟器评测 8 个大模型在组合覆盖 |
+| [LiveOption / QFinZero](liveoption-qfinzero.md) | 🔧 | NeurIPS26 | 提出 LiveOption 基准，基于 QFinZero 交易模拟器评测 8 个大模型在组合覆盖 |
 | [比过拟合更隐蔽：一套日内系统逐单对账挖出的六类系统缺陷](art-436.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.21846) | 作者把实盘成交与离线重放逐笔核对一致，定位出数据源默认参数、复权、时区、配置链路等六类隐蔽工程缺 |
 | [FinAutoRubric](finautorubric.md) | 🔧 | FinAutoRubric | 提出FinAutoRubric，用专家原则库＋异构双模型沙盒交叉验算，自动生成带数值锚定的金融研 |
 | [Cost-Aware Execution Filter](cost-aware-execution-filter.md) | 🔧 | Cost-Aware Execution Filter | 揭示高频交易中预测精度与实盘收益的割裂，提出交易成本感知过滤器，证明执行端纪律比复杂模型更关键。 |
