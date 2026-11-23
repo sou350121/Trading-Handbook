@@ -6,6 +6,7 @@ from pathlib import Path
 import subprocess
 import sys
 import tempfile
+from types import ModuleType
 import unittest
 from unittest.mock import patch
 import urllib.error
@@ -250,17 +251,54 @@ class RunnerTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'slug_override_invalid'):
             distill_pass_b.slugify({'slug_override': '../../README'})
 
+
+class WatchdogReceiptTests(unittest.TestCase):
     def test_prepared_or_partial_receipt_is_never_healthy(self):
-        from watch_pipeline import valid_receipt, code_digest
+        if os.name == 'nt':
+            # Receipt validation is portable. The watchdog lock is Linux-only.
+            with patch.dict(sys.modules, {'fcntl': ModuleType('fcntl')}):
+                import watch_pipeline
+        else:
+            import watch_pipeline
         from datetime import datetime, timezone, timedelta
         now = datetime.now(timezone.utc); expected = now - timedelta(hours=2)
-        receipt = {'status': 'prepared', 'published': False, 'sources_only': False, 'code_sha256': code_digest(),
+        receipt = {'status': 'prepared', 'published': False, 'sources_only': False,
+                   'code_sha256': watch_pipeline.code_digest(),
                    'started_at': (now - timedelta(hours=1)).isoformat(), 'finished_at': now.isoformat()}
-        self.assertFalse(valid_receipt(receipt, expected, now))
-        receipt.update(status='success', published=True, sources_only=True)
-        self.assertFalse(valid_receipt(receipt, expected, now))
-        receipt['sources_only'] = False
-        self.assertTrue(valid_receipt(receipt, expected, now))
+        with tempfile.TemporaryDirectory(dir=TEST_TMP) as directory, patch.object(watch_pipeline, 'ROOT', Path(directory)):
+            def git(*args, input=None):
+                return subprocess.check_output(['git', '-c', 'user.name=Fixture',
+                                                '-c', 'user.email=fixture@example.test',
+                                                '-c', 'tag.gpgSign=false', *args],
+                                               cwd=directory, input=input, encoding='ascii', timeout=10).strip()
+
+            git('init', '-q')
+            tree = git('mktree', input='')
+            head = git('commit-tree', tree, '-m', 'Published fixture')
+            tip = git('commit-tree', tree, '-p', head, '-m', 'Later publication')
+            tracking_ref = 'refs/remotes/origin/main'
+            git('update-ref', tracking_ref, tip)
+            receipt['head'] = head
+
+            def valid(**fields):
+                return watch_pipeline.valid_receipt(receipt | fields, expected, now, job='daily')
+
+            self.assertFalse(valid())
+            receipt.update(status='success', published=True, sources_only=True)
+            self.assertFalse(valid())
+            receipt['sources_only'] = False
+            self.assertFalse(valid(status='partial'))
+            self.assertTrue(valid())
+            self.assertTrue(valid(job='daily'))
+            self.assertFalse(valid(job='weekly'))
+            self.assertFalse(valid(head=tree))
+
+            git('tag', '-a', 'receipt-tag', head, '-m', 'Annotated fixture tag')
+            self.assertFalse(valid(head=git('rev-parse', 'refs/tags/receipt-tag')))
+
+            git('update-ref', '-d', tracking_ref)
+            git('update-ref', 'refs/tags/' + tracking_ref, tip)
+            self.assertFalse(valid())
 
 
 if __name__ == '__main__':

@@ -10,6 +10,7 @@ import hashlib
 import json
 import os
 from pathlib import Path
+import re
 import subprocess
 import sys
 import urllib.error
@@ -42,13 +43,43 @@ def due(now, weekly=False):
     return value
 
 
-def valid_receipt(receipt, expected, now):
+def published_commit(head):
+    if (not isinstance(head, str) or not re.fullmatch(r'(?:[0-9a-f]{40}|[0-9a-f]{64})', head)
+            or not head.strip('0')):
+        return False
+
+    # A missing object must stay missing, even in a partial clone.
+    env = dict(os.environ, GIT_NO_LAZY_FETCH='1', GIT_ALLOW_PROTOCOL='', GIT_GRAFT_FILE=os.devnull)
+
+    def git(*args, input=None):
+        return subprocess.check_output(['git', '--no-replace-objects', *args], cwd=ROOT,
+                                       env=env, input=input, encoding='ascii',
+                                       stderr=subprocess.DEVNULL, timeout=5)
+
+    tracking_ref = 'refs/remotes/origin/main'
+    try:
+        ref, tip, symbolic_target = git('for-each-ref', '--format=%(refname) %(objectname) %(symref)',
+                                        tracking_ref).rstrip('\n').split(' ')
+        if ref != tracking_ref or symbolic_target or len(tip) != len(head):
+            return False
+        types = git('cat-file', '--batch-check=%(objecttype)', input=f'{head}\n{tip}\n')
+        if types.splitlines() != ['commit', 'commit']:
+            return False
+        git('merge-base', '--is-ancestor', head, tip)
+        return True
+    except (OSError, subprocess.SubprocessError, ValueError):
+        return False
+
+
+def valid_receipt(receipt, expected, now, *, job=None):
     try:
         start = dt.datetime.fromisoformat(receipt['started_at'])
         end = dt.datetime.fromisoformat(receipt['finished_at'])
         return (receipt.get('status') == 'success' and receipt.get('published') is True
                 and receipt.get('sources_only') is False and receipt.get('code_sha256') == code_digest()
-                and expected <= start <= end <= now + dt.timedelta(minutes=5))
+                and (job is None or receipt.get('job', job) == job)
+                and expected <= start <= end <= now + dt.timedelta(minutes=5)
+                and published_commit(receipt.get('head')))
     except (KeyError, TypeError, ValueError):
         return False
 
@@ -59,7 +90,7 @@ def checks(now):
         expected = due(now, job == 'weekly')
         receipt = read(STATE / ('pipeline-' + job + '.json'))
         grace = 150 if job == 'weekly' else 25
-        status = 'healthy' if valid_receipt(receipt, expected, now) else 'grace' if now < expected + dt.timedelta(minutes=grace) else 'needs_recovery'
+        status = 'healthy' if valid_receipt(receipt, expected, now, job=job) else 'grace' if now < expected + dt.timedelta(minutes=grace) else 'needs_recovery'
         rows.append({'component': job, 'status': status, 'due': expected.isoformat()})
     try:
         from local_index import check
