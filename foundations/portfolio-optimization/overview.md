@@ -2,7 +2,7 @@
 
 > **收錄**：均值方差/风险平价/Black-Litterman、稀疏优化、执行算法(VWAP/冲击成本)、多资产轮动与战术配置
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：54 篇（50 篇成解構頁，其餘為 registry）
+> **本 zone 現有**：55 篇（50 篇成解構頁，其餘為 registry）
 
 ## 解構清單
 
@@ -15,6 +15,7 @@
 | [DeePM](deepm.md) | ⚡ | DeePM | 提出DeePM框架，通过定向延迟、宏观图谱先验与SoftMin-EVaR目标，实现端到端宏观资产 |
 | [RTS-PnO](rts-pno.md) | ⚡ | KDD25 | 提出RTS-PnO框架，通过端到端PnO范式与自适应不确定性约束对齐预测与决策目标，实盘降低8. |
 | [BPQP](bpqp.md) | ⚡ | NeurIPS24 | 提出BPQP框架，将可微分凸优化的反向传播重构为二次规划问题，实现前后向分离，大幅提升端到端投资 |
+| CAST | 🔧 | ICDM 2026 [arXiv](https://arxiv.org/abs/2609.14205) | 用多阶卡尔曼滤波在线预测价格路径，MPC把不确定性转为风险惩罚，控制回撤。 |
 | [Scrambling Convex Network](a-new-input-convex-neural-network-with.md) | 🔧 | Quantitative Finance [arXiv](https://arxiv.org/abs/2411.12854) | 提出一种无需权重非负约束的输入凸神经网络，用于高效定价具有凸收益的期权。 |
 | [谱去噪相关性网络](art-100011.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.10297) | 基于随机矩阵理论对资产相关性矩阵进行谱去噪，提取核心-边缘网络结构，并据此构建外围资产组合以提升 |
 | [Convex Variational Theory of Worst-Case Risk (quantile/distribution representation principle)](convex-variational-theory-of-worst-case-risk-quantile-distribution-representation-principle.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.29652) | 以谱风险度量为统一底座，提出凸变分理论：按模糊集凸性选分位数或分布表示，给出最坏情况风险的闭式解 |
