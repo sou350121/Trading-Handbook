@@ -13,7 +13,7 @@
 | One Fabrication Is Enough: A F | ⚡ | [arXiv](https://arxiv.org/abs/2611.15102) | 单篇伪造新闻即可让检索增强式LLM预测系统在74%–82%的反向预测上翻转，检索是攻击入口。 |
 | Autonomous Quant Researcher | ⚡ | [arXiv](https://arxiv.org/abs/2611.06607) | 受限LLM自主量化研究闭环：假设只用JSON声明、一次性holdout加绝对门禁验收，公开全部c |
 | 为什么大模型量化论文难复现 | ⚡ | — | 预注册审计91篇大模型交易论文，75篇含交易测试中仅7%同时扣成本、控泄漏并报告试验次数 |
-| FactorBench | ⚡ | FactorBench | FactorBench 在五大市场统一评测九种自动因子挖掘方法共约五千个因子，检验风格剥离与交易 |
+| [FactorBench](factorbench.md) | ⚡ | FactorBench | FactorBench 在五大市场统一评测九种自动因子挖掘方法共约五千个因子，检验风格剥离与交易 |
 | [AI 对冲基金的Alpha为何消失？](ai-alpha.md) | ⚡ | — | 基于SEC披露与HFR数据，实证发现AI对冲基金早期月超额约50bp，2018年后消失并持续衰减 |
 | [Bayes-Stein Shrinkage](bayes-stein-shrinkage.md) | ⚡ | Bayes-Stein Shrinkage | 基于流动性过滤与贝叶斯收缩，验证2006年后经典学术Alpha在大盘股中收益趋零，揭示回测与实盘 |
 | [非对称可解释性原则](art-408.md) | ⚡ | 非对称可解释性原则 | 提出非对称可解释性原则，将透明度要求从特征层后移至决策与监控层，构建六层架构防过拟合与可审计。 |
