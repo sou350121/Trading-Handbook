@@ -2,7 +2,7 @@
 
 > **收錄**：均值方差/风险平价/Black-Litterman、稀疏优化、执行算法(VWAP/冲击成本)、多资产轮动与战术配置
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：55 篇（50 篇成解構頁，其餘為 registry）
+> **本 zone 現有**：55 篇（51 篇成解構頁，其餘為 registry）
 
 ## 解構清單
 
@@ -15,7 +15,6 @@
 | [DeePM](deepm.md) | ⚡ | DeePM | 提出DeePM框架，通过定向延迟、宏观图谱先验与SoftMin-EVaR目标，实现端到端宏观资产 |
 | [RTS-PnO](rts-pno.md) | ⚡ | KDD25 | 提出RTS-PnO框架，通过端到端PnO范式与自适应不确定性约束对齐预测与决策目标，实盘降低8. |
 | [BPQP](bpqp.md) | ⚡ | NeurIPS24 | 提出BPQP框架，将可微分凸优化的反向传播重构为二次规划问题，实现前后向分离，大幅提升端到端投资 |
-| CAST | 🔧 | ICDM 2026 [arXiv](https://arxiv.org/abs/2609.14205) | 用多阶卡尔曼滤波在线预测价格路径，MPC把不确定性转为风险惩罚，控制回撤。 |
 | [Scrambling Convex Network](a-new-input-convex-neural-network-with.md) | 🔧 | Quantitative Finance [arXiv](https://arxiv.org/abs/2411.12854) | 提出一种无需权重非负约束的输入凸神经网络，用于高效定价具有凸收益的期权。 |
 | [谱去噪相关性网络](art-100011.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.10297) | 基于随机矩阵理论对资产相关性矩阵进行谱去噪，提取核心-边缘网络结构，并据此构建外围资产组合以提升 |
 | [Convex Variational Theory of Worst-Case Risk (quantile/distribution representation principle)](convex-variational-theory-of-worst-case-risk-quantile-distribution-representation-principle.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.29652) | 以谱风险度量为统一底座，提出凸变分理论：按模糊集凸性选分位数或分布表示，给出最坏情况风险的闭式解 |
@@ -28,6 +27,7 @@
 | RNN operator map | 🔧 | [arXiv](https://arxiv.org/abs/2611.14245) | 用RNN学习带瞬态价格冲击的最优清算策略对核参数的解映射，并量化核误设成本。 |
 | [SciPhyRL](sciphyrl.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.15195) | 提出基于SciPhyRL的连续时间组合优化框架，通过PINN离线求解路径HJB方程，结合微观结构 |
 | [Black–Litterman 框架](black-litterman.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.31074) | 证明方向正确的专家观点可单调提升夏普比率，并给出融入Markowitz与端到端组合模型的方法。 |
+| CAST | 🔧 | ICDM 2026 [arXiv](https://arxiv.org/abs/2609.14205) | 用多阶卡尔曼滤波在线预测价格路径，MPC把不确定性转为风险惩罚，控制回撤。 |
 | [微观执行模型 + 部分调整](art-442.md) | 🔧 | 微观执行模型 + 部分调整 | 用纽交所逐笔数据估计非线性冲击成本，测算35种异象的真实资金容量，并发现部分调整可大幅扩容。 |
 | [MINGLE](mingle.md) | 🔧 | MINGLE | 提出MINGLE联合估计因子暴露与暴露相似图，用于组合分散化与谱聚类配置。 |
 | [Regime-Aware Multiaxial Signal Meta-Layer / Signal EV Ledger](regime-aware-multiaxial-signal-meta-layer-signal-ev-ledger.md) | 🔧 | Regime-Aware Multiaxial Signal Meta-Layer / Signal EV Ledger | 在多轴市场状态的软后验下，按Wasserstein距离对信号结果分布做聚类并维护EV账簿，再据此 |
