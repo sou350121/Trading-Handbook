@@ -2,7 +2,7 @@
 
 > **收錄**：面向价格/收益率/波动率的序列建模，涵盖Transformer变体、RNN/LSTM、MLP/Mixer、状态空间模型及频率自适应架构
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：111 篇（93 篇成解構頁）
+> **本 zone 現有**：111 篇（94 篇成解構頁）
 
 ## 解構清單
 
@@ -28,7 +28,7 @@
 | [TEMPO](tempo.md) | ⚡ | ICLR 2024 | 提出TEMPO框架，利用趋势-季节性分解与半软提示词，基于GPT实现零样本时间序列预测，在多模态 |
 | [aLLM4TS](allm4ts.md) | ⚡ | ICML24 | 提出aLLM4TS框架，通过自监督多补丁预测与两阶段训练，将LLM适配至时间序列表示学习，显著提 |
 | [AddMart](addmart.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.25671) | 用可加鞅把少量期权报价映射为非负增量密度，重建结构上无静态套利的隐含波动率曲面。 |
-| TBPF (Twisted Block Particle Filter) | 🔧 | [arXiv](https://arxiv.org/abs/2611.28848) | 提出扭转块粒子滤波TBPF：在块重采样处引入预测引导的精确测度变换，传播核不变，证明归一化期望精 |
+| [TBPF (Twisted Block Particle Filter)](tbpf-twisted-block-particle-filter.md) | 🔧 | [arXiv](https://arxiv.org/abs/2611.28848) | 提出扭转块粒子滤波TBPF：在块重采样处引入预测引导的精确测度变换，传播核不变，证明归一化期望精 |
 | NRM | 🔧 | ICAIF 2026 [arXiv](https://arxiv.org/abs/2611.07287) | 提出NRM，用下游预测目标学习日内已实现测度的正权重聚合，保留经典测度结构并提升波动率预测。 |
 | GARCH-LSTM + forward bootstrap | 🔧 | [arXiv](https://arxiv.org/abs/2611.13212) | 为GARCH-LSTM混合波动率模型引入ARMA均值与前向bootstrap预测区间，并用共形预 |
 | [FToken](ftoken.md) | 🔧 | [arXiv](https://arxiv.org/abs/2611.30112) | 把每个因子列编码成一个 token 做因子轴自注意力，再用股票对齐解码器映射回个股收益，与股票轴 |

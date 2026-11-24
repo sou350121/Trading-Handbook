@@ -2,13 +2,13 @@
 
 > **收錄**：限价订单簿(LOB)建模、订单流信号、做市策略、高频套利、微观流动性与价格形成机制
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：55 篇（43 篇成解構頁）
+> **本 zone 現有**：55 篇（45 篇成解構頁）
 
 ## 解構清單
 
 | 方法 | 評級 | 來源 | TL;DR |
 |---|---|---|---|
-| SGD市场做市 / Dean-Kawasaki SPDE 模型 | ⚡ | [arXiv](https://arxiv.org/abs/2611.24028) | 将做市商建模为异步SGD更新，证明订单簿体积服从Dean-Kawasaki方程，产生幂律记忆与粗 |
+| [SGD市场做市 / Dean-Kawasaki SPDE 模型](sgd-dean-kawasaki-spde.md) | ⚡ | [arXiv](https://arxiv.org/abs/2611.24028) | 将做市商建模为异步SGD更新，证明订单簿体积服从Dean-Kawasaki方程，产生幂律记忆与粗 |
 | [Hawkes过程 + 1ms事件定义](hawkes-1ms.md) | ⚡ | [arXiv](https://arxiv.org/abs/2610.36317) | 重定义NBBO事件为持续1ms的中价水平，揭示Hawkes亚毫秒核与高分叉比多由锁盘/短暂报价伪 |
 | [WGAN + EGGROLL](wgan-eggroll.md) | ⚡ | ICAIF26 [arXiv](https://arxiv.org/abs/2610.25604) | 用WGAN评论家与进化策略对LOB基础模型做对抗后训练，提升高频市场模拟真实度。 |
 | Optimal Trading Speed on Block | ⚡ | [arXiv](https://arxiv.org/abs/2611.13616) | 模型+Base准实验：区块提速使优先费租金转向套利者，主动LP抢跑，池深下降、价差走阔。 |
@@ -42,7 +42,7 @@
 | Rolling intrinsic + distributional forecasts | 🔧 | [arXiv](https://arxiv.org/abs/2611.17170) | 将订单簿衍生的分布价格预测嵌入BESS日内滚动内在优化，高频模拟提升利润最高42%。 |
 | [L2 Liquidity-State Transition](l2-liquidity-state-transition.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.09230) | 在加密期货事件窗口内，预事件L2流动性状态是预测后事件流动性的首要信号，订单流仅具增量价值。 |
 | [State-Dependent Hawkes Process (SDHP)](state-dependent-hawkes-process-sdhp.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.23619) | 用状态依赖多元Hawkes建模日内电力市场季度与小时合约的跨产品订单流和流动性依赖。 |
-| 扩展对数指数族（path-independent ADL rules） | 🔧 | [arXiv](https://arxiv.org/abs/2611.26623) | 用公理化方法刻画自动减仓(ADL)规则，证明路径无关性导出扩展对数指数族，并在 Hyperliq |
+| [扩展对数指数族（path-independent ADL rules）](path-independent-adl-rules.md) | 🔧 | [arXiv](https://arxiv.org/abs/2611.26623) | 用公理化方法刻画自动减仓(ADL)规则，证明路径无关性导出扩展对数指数族，并在 Hyperliq |
 | [Concave-impact / Hurst-scaled execution framework](concave-impact-hurst-scaled-execution-framework.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.23749) | 以交易已实现盈亏的夏普比率内生决定执行时长，并在凹幂律冲击与Hurst缩放价格下用凸优化导出闭式 |
 | [Extra Trees](extra-trees.md) | 🔧 | Extra Trees | 利用专有高频标签训练Extra Trees，将公开TAQ指标映射为主动/被动HFT流向代理变量。 |
 | [解码动量溢出：日内-隔夜收益的非对称结构](art-333.md) | 🔧 | — | 将动量溢出拆解为日内与隔夜收益，揭示散户追涨与机构慢速套利驱动的非对称定价机制。 |

@@ -157,6 +157,7 @@
               "foundations/time-series-forecasting/stockmixer.md",
               "foundations/time-series-forecasting/tabpfn-ts.md",
               "foundations/time-series-forecasting/tabpfn.md",
+              "foundations/time-series-forecasting/tbpf-twisted-block-particle-filter.md",
               "foundations/time-series-forecasting/tempo.md",
               "foundations/time-series-forecasting/tft.md",
               "foundations/time-series-forecasting/time-moe.md",
@@ -363,8 +364,10 @@
               "foundations/market-microstructure/optm-lstm.md",
               "foundations/market-microstructure/order-flow-explanatory-power.md",
               "foundations/market-microstructure/orderflowdit.md",
+              "foundations/market-microstructure/path-independent-adl-rules.md",
               "foundations/market-microstructure/phase-diagram-abm-with-null-artefact-discipline.md",
               "foundations/market-microstructure/pvar.md",
+              "foundations/market-microstructure/sgd-dean-kawasaki-spde.md",
               "foundations/market-microstructure/spide.md",
               "foundations/market-microstructure/state-dependent-hawkes-process-sdhp.md",
               "foundations/market-microstructure/stochastic-optimal-control-with-reputation-gates.md",
@@ -474,6 +477,7 @@
               "foundations/portfolio-optimization/dit-lstm-svar.md",
               "foundations/portfolio-optimization/dsl.md",
               "foundations/portfolio-optimization/dspo.md",
+              "foundations/portfolio-optimization/g-pwnpm.md",
               "foundations/portfolio-optimization/gat.md",
               "foundations/portfolio-optimization/gated-conformal-semantic-risk-control-gated-csrc.md",
               "foundations/portfolio-optimization/grid-fw.md",
@@ -496,6 +500,7 @@
               "foundations/portfolio-optimization/stable.md",
               "foundations/portfolio-optimization/strapsim.md",
               "foundations/portfolio-optimization/tln-vwap.md",
+              "foundations/portfolio-optimization/wasserstein-dro-penalised-mean-variance.md",
               "foundations/portfolio-optimization/yand.md"
             ]
           },
@@ -519,6 +524,7 @@
             "group": "评测基准与失效分析",
             "pages": [
               "foundations/evaluation-benchmarks/overview.md",
+              "foundations/evaluation-benchmarks/a-methodologically-rigorous-benchmark-of-linear-regression-rnn-and-lstm-for-s-p-500-forecasting-identifying-sources-of-performance-inflation-in-financial-deeplearning.md",
               "foundations/evaluation-benchmarks/ai-alpha.md",
               "foundations/evaluation-benchmarks/alphaeval.md",
               "foundations/evaluation-benchmarks/art-279.md",
