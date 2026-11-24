@@ -2,7 +2,7 @@
 
 > **收錄**：限价订单簿(LOB)建模、订单流信号、做市策略、高频套利、微观流动性与价格形成机制
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：55 篇（46 篇成解構頁）
+> **本 zone 現有**：55 篇（47 篇成解構頁）
 
 ## 解構清單
 
@@ -32,7 +32,7 @@
 | [EDGE](edge.md) | ⚡ | JFE | 提出基于日频OHLC的EDGE估计量，通过GMM动态组合矩条件，解决传统低频价差估计的偏差与高方 |
 | [Stochastic Optimal Control with Reputation Gates](stochastic-optimal-control-with-reputation-gates.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.11328) | 构建含声誉反馈的OTC做市随机控制模型，揭示报价策略在声誉积累与变现间的动态权衡及双稳态现象。 |
 | [OrderFlowDiT](orderflowdit.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.22727) | 用条件扩散Transformer生成未来五分钟买卖盘量价场，并加无偏非平衡最优传输辅助损失，配合 |
-| Queue-Sensitive Propagator Model | 🔧 | [arXiv](https://arxiv.org/abs/2610.38442) | 用队列敏感的传播子模型校准被动市场冲击，把价格拆成传播子项与队列加权订单流失衡项。 |
+| [Queue-Sensitive Propagator Model](queue-sensitive-propagator-model.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.38442) | 用队列敏感的传播子模型校准被动市场冲击，把价格拆成传播子项与队列加权订单流失衡项。 |
 | [Phase-diagram ABM with null/artefact discipline](phase-diagram-abm-with-null-artefact-discipline.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.08907) | 用相图法验证订单簿ABM中羊群行为引发的流动性枯竭是真实相变，并分解其反射机制。 |
 | [Beyond Anonymous Order Flow: W](beyond-anonymous-order-flow-wallet-identity-as-a-feature-for-short-horizon-return-prediction.md) | 🔧 | [arXiv](https://arxiv.org/abs/2611.05218) | 利用Hyperliquid钱包身份与L4订单簿，检验钱包标记持久性并提升短周期收益预测。 |
 | [Detecting unusual trading patt](detecting-unusual-trading-patterns-on-cryptocurrency-exchanges-by-means-of-complexity-measures.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.13916) | 本文基于高频交易数据，利用多重分形、近似熵等复杂度指标构建诊断框架，有效识别中心化交易所的刷量与 |
