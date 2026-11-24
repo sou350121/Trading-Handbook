@@ -9221,6 +9221,26 @@
   },
   {
     "pos": 100000,
+    "msgid": "arxiv_2611.30843",
+    "title": "Cleaning correlation matrices with external information: the Maximum Variance estimat",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "maximum-variance-estimator-maxvar",
+    "dup_of": null,
+    "framework": "Maximum Variance estimator (MaxVar)",
+    "venue": null,
+    "arxiv": "2611.30843",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 100000,
     "msgid": "arxiv_2611.17329",
     "title": "Internalizing Investment Mandates: A Neurosymbolic RL Approach to Portfolio Allocation",
     "zone": "reinforcement-learning",
@@ -9316,6 +9336,26 @@
       "horizon": "高频日内",
       "paradigm": "监督回归",
       "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 100001,
+    "msgid": "arxiv_2611.30112",
+    "title": "FToken: Factors as Tokens for Dual-Axis Cross-Sectional Return Prediction",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "ftoken",
+    "dup_of": null,
+    "framework": "FToken",
+    "venue": null,
+    "arxiv": "2611.30112",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
       "autonomy": "全自动黑盒"
     }
   },
@@ -9681,6 +9721,26 @@
   },
   {
     "pos": 100002,
+    "msgid": "arxiv_2611.30046",
+    "title": "Wasserstein Penalisation as an Endogenous Breadth Constraint in Penalised Mean-Variance Portfolio Selection",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "wasserstein-dro-penalised-mean-variance",
+    "dup_of": null,
+    "framework": "Wasserstein DRO penalised mean–variance",
+    "venue": null,
+    "arxiv": "2611.30046",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 100002,
     "msgid": "arxiv_2611.10574",
     "title": "Is price-impact decay statistically identifiable by propagator estimation? Diffusive prices force the inferred kernel to be transient and fine-tuned",
     "zone": "market-microstructure",
@@ -9817,6 +9877,26 @@
       "paradigm": "因果结构",
       "alpha": "风险择时",
       "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 100003,
+    "msgid": "arxiv_2611.29552",
+    "title": "Gated Payoff-Weighted Net Profit Maximization For Online Portfolio Selection With Transaction Costs",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "g-pwnpm",
+    "dup_of": null,
+    "framework": "G-PWNPM",
+    "venue": null,
+    "arxiv": "2611.29552",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
     }
   },
   {
@@ -10201,6 +10281,26 @@
   },
   {
     "pos": 100004,
+    "msgid": "arxiv_2611.28848",
+    "title": "Twisted Block Particle Filters: A Local Particle-System Change of Measure for High-Dimensional State-Space Models",
+    "zone": "time-series-forecasting",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "tbpf-twisted-block-particle-filter",
+    "dup_of": null,
+    "framework": "TBPF (Twisted Block Particle Filter)",
+    "venue": null,
+    "arxiv": "2611.28848",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "风险择时",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 100004,
     "msgid": "arxiv_2611.04826",
     "title": "Safe Portfolio Learning from Untrusted Predictions: Signed Trust, Abstention, and Cross-Universe Polarity Failure",
     "zone": "portfolio-optimization",
@@ -10297,6 +10397,26 @@
       "paradigm": "监督回归",
       "alpha": "端到端表征",
       "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 100005,
+    "msgid": "arxiv_2611.27978",
+    "title": "A Methodologically Rigorous Benchmark of Linear Regression,RNN, and LSTM for S&P 500 Forecasting:Identifying Sources of Performance Inflation in Financial DeepLearning",
+    "zone": "evaluation-benchmarks",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "a-methodologically-rigorous-benchmark-of-linear-regression-rnn-and-lstm-for-s-p-500-forecasting-identifying-sources-of-performance-inflation-in-financial-deeplearning",
+    "dup_of": null,
+    "framework": null,
+    "venue": null,
+    "arxiv": "2611.27978",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "全自动黑盒"
     }
   },
   {

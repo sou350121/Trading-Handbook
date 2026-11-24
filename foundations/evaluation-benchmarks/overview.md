@@ -2,7 +2,7 @@
 
 > **收錄**：回测防穿越、样本外稳定性、过拟合检测、鲁棒性量化、公开基准(TFB/QuantBench)与模型衰减归因
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：44 篇（28 篇成解構頁）
+> **本 zone 現有**：45 篇（28 篇成解構頁）
 
 ## 解構清單
 
@@ -23,6 +23,7 @@
 | [盈亏平衡夏普比率](art-279.md) | ⚡ | JFE | 揭示多因子模型高样本内夏普比率的陷阱，量化估计风险导致的样本外衰减，并提出考虑估计风险的盈亏平衡 |
 | [大语言模型在时间序列预测中真的有效吗？](art-33.md) | ⚡ | — | 通过系统消融证明LLM在时序预测中无性能优势且计算昂贵，简单注意力模型即可替代，呼吁转向LLM+ |
 | [Base-Rate-Honest Benchmark](base-rate-honest-benchmark.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.12248) | 本文指出股票方向预测中原始准确率易受牛市基线率误导，提出基于滚动验证与诚实基线的可复现评测协议， |
+| A Methodologically Rigorous Be | 🔧 | [arXiv](https://arxiv.org/abs/2611.27978) | 在统一预处理与时间序评估下,对比线性回归、RNN、LSTM 预测标普500次日收盘,并审计文献中 |
 | TabFM (Google Research) | 🔧 | [arXiv](https://arxiv.org/abs/2611.13550) | 把表格基础模型TabFM引入会计盈余方向预测，免训练免调参的上下文学习，AUC超过微调Llama |
 | Rare replay / SMSCP | 🔧 | [arXiv](https://arxiv.org/abs/2611.04223) | 固定记忆预算下比较共形校准的残差保留策略，发现FIFO聚合覆盖近名义但压力态严重欠覆盖，提出状态 |
 | [Retrospective Analysis of Team](retrospective-analysis-of-team-following-trading-profitability-in-pumpfun-meme-coins-using-funding-networks.md) | 🔧 | [arXiv](https://arxiv.org/abs/2611.11436) | 用有向资金网络聚类出 Pump.fun 发币“团队”，在有限资金账户中复算事后跟随交易收益，并逐 |
