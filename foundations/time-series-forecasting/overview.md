@@ -2,7 +2,7 @@
 
 > **收錄**：面向价格/收益率/波动率的序列建模，涵盖Transformer变体、RNN/LSTM、MLP/Mixer、状态空间模型及频率自适应架构
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：111 篇（92 篇成解構頁）
+> **本 zone 現有**：111 篇（93 篇成解構頁）
 
 ## 解構清單
 
@@ -31,7 +31,7 @@
 | TBPF (Twisted Block Particle Filter) | 🔧 | [arXiv](https://arxiv.org/abs/2611.28848) | 提出扭转块粒子滤波TBPF：在块重采样处引入预测引导的精确测度变换，传播核不变，证明归一化期望精 |
 | NRM | 🔧 | ICAIF 2026 [arXiv](https://arxiv.org/abs/2611.07287) | 提出NRM，用下游预测目标学习日内已实现测度的正权重聚合，保留经典测度结构并提升波动率预测。 |
 | GARCH-LSTM + forward bootstrap | 🔧 | [arXiv](https://arxiv.org/abs/2611.13212) | 为GARCH-LSTM混合波动率模型引入ARMA均值与前向bootstrap预测区间，并用共形预 |
-| FToken | 🔧 | [arXiv](https://arxiv.org/abs/2611.30112) | 把每个因子列编码成一个 token 做因子轴自注意力，再用股票对齐解码器映射回个股收益，与股票轴 |
+| [FToken](ftoken.md) | 🔧 | [arXiv](https://arxiv.org/abs/2611.30112) | 把每个因子列编码成一个 token 做因子轴自注意力，再用股票对齐解码器映射回个股收益，与股票轴 |
 | [VAIOM](vaiom.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.13929) | 提出VAIOM架构，解耦连续输入与离散分桶输出，用Decoder-Only Transforme |
 | [RAVEN](raven.md) | 🔧 | RAVEN | 提出RAVEN自适应变长上下文混合专家网络，用逆时序累积重要性切分嵌套前缀，解决固定回看窗口在金 |
 | [CSM](csm.md) | 🔧 | JBF | 提出CSM框架，将收益符号条件化于波动率幅度，避开Copula建模，实现低成本高稳定的指数择时预 |
