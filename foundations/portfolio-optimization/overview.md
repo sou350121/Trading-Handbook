@@ -2,7 +2,7 @@
 
 > **收錄**：均值方差/风险平价/Black-Litterman、稀疏优化、执行算法(VWAP/冲击成本)、多资产轮动与战术配置
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：58 篇（48 篇成解構頁）
+> **本 zone 現有**：58 篇（49 篇成解構頁）
 
 ## 解構清單
 
@@ -30,7 +30,7 @@
 | [SciPhyRL](sciphyrl.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.15195) | 提出基于SciPhyRL的连续时间组合优化框架，通过PINN离线求解路径HJB方程，结合微观结构 |
 | [Black–Litterman 框架](black-litterman.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.31074) | 证明方向正确的专家观点可单调提升夏普比率，并给出融入Markowitz与端到端组合模型的方法。 |
 | [Maximum Variance estimator (MaxVar)](maximum-variance-estimator-maxvar.md) | 🔧 | [arXiv](https://arxiv.org/abs/2611.30843) | 用资产类别/地区等外部分组构造最大方差组合作为约束特征向量，提出 MaxVar 相关矩阵清洗法， |
-| CAST | 🔧 | ICDM 2026 [arXiv](https://arxiv.org/abs/2609.14205) | 用多阶卡尔曼滤波在线预测价格路径，MPC把不确定性转为风险惩罚，控制回撤。 |
+| [CAST](cast.md) | 🔧 | ICDM 2026 [arXiv](https://arxiv.org/abs/2609.14205) | 用多阶卡尔曼滤波在线预测价格路径，MPC把不确定性转为风险惩罚，控制回撤。 |
 | [微观执行模型 + 部分调整](art-442.md) | 🔧 | 微观执行模型 + 部分调整 | 用纽交所逐笔数据估计非线性冲击成本，测算35种异象的真实资金容量，并发现部分调整可大幅扩容。 |
 | [MINGLE](mingle.md) | 🔧 | MINGLE | 提出MINGLE联合估计因子暴露与暴露相似图，用于组合分散化与谱聚类配置。 |
 | [Regime-Aware Multiaxial Signal Meta-Layer / Signal EV Ledger](regime-aware-multiaxial-signal-meta-layer-signal-ev-ledger.md) | 🔧 | Regime-Aware Multiaxial Signal Meta-Layer / Signal EV Ledger | 在多轴市场状态的软后验下，按Wasserstein距离对信号结果分布做聚类并维护EV账簿，再据此 |
