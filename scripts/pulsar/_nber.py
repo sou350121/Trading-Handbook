@@ -8,6 +8,8 @@ import datetime as dt
 import hashlib
 import html
 import re
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -22,10 +24,27 @@ ID = re.compile(r'w\d{4,5}')
 
 def get(url, limit):
     request = urllib.request.Request(url, headers={'User-Agent': 'Trading-Handbook source verifier'})
-    with urllib.request.urlopen(request, timeout=45) as response:
-        if response.geturl() != url:
-            raise ValueError('nber_unexpected_redirect')
-        body = response.read(limit + 1)
+    deadline = time.monotonic() + 45
+    for attempt in range(2):
+        try:
+            with urllib.request.urlopen(request, timeout=min(22, deadline - time.monotonic())) as response:
+                if response.geturl() != url:
+                    raise ValueError('nber_unexpected_redirect')
+                body = response.read(limit + 1)
+            break
+        except urllib.error.HTTPError as error:
+            if attempt or error.code not in (408, 429, 500, 502, 503, 504):
+                raise
+            if error.code in (429, 503):
+                wait = error.headers.get('Retry-After', '') if error.headers else ''
+                if wait and (not wait.isascii() or not wait.isdecimal() or len(wait) > 2 or int(wait) > 1):
+                    raise
+        except (urllib.error.URLError, TimeoutError, ConnectionError):
+            if attempt:
+                raise
+        if deadline - time.monotonic() <= 2:
+            raise TimeoutError('nber_retry_deadline')
+        time.sleep(1)
     if len(body) > limit:
         raise ValueError('nber_response_too_large')
     return body

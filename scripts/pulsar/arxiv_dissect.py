@@ -16,6 +16,7 @@ raw existence skips re-fetch, distill existence skips Pass A, page existence ski
 
 Usage:
   python3.11 arxiv_dissect.py [--limit N] [--ids 2607.15195,2607.13929] [--ingest-only] [--workers W]
+  python3.11 arxiv_dissect.py --refresh-stale --limit N
 """
 import json, re, sys, html, time, pathlib, argparse, urllib.request, urllib.parse, hashlib
 from html.parser import HTMLParser
@@ -211,6 +212,53 @@ def ingest(item, seq):
     return msgid, kind
 
 
+def refresh_stale(limit):
+    """Refetch classified, unpublished arXiv HTML using the stored paper URL."""
+    ledger = PB.load_attempts()["items"]
+    candidates = []
+    for metadata in sorted(DIS.glob('arxiv_*.json')):
+        metadata_bytes = metadata.read_bytes()
+        row = json.loads(metadata_bytes)
+        msgid = metadata.stem
+        match = re.fullmatch(r'arxiv_(\d{4}\.\d{4,5})', msgid)
+        if (not match or row.get('msgid') != msgid or (row.get('source') or {}).get('origin') != 'arxiv'
+                or not row.get('page_worthy') or row.get('rating') not in ('⚡', '🔧')
+                or row.get('dup_of') or PB.output_path(row).exists()):
+            continue
+        path = RAW / (msgid + '_1.json')
+        if not path.is_file():
+            continue
+        source_bytes = path.read_bytes()
+        source = json.loads(source_bytes)
+        if source.get('source_kind') != 'fulltext-html' or source.get('extraction_version') == PB.HTML_TEXT_VERSION:
+            continue
+        fingerprint = PB.input_fingerprint((metadata, metadata_bytes), (path, source_bytes))
+        last = ledger.get(msgid)
+        time_ns = last['attempted_at_ns'] if last and last['fingerprint'] == fingerprint else 0
+        candidates.append((time_ns, source.get('date', ''), msgid, match[1], source, row, fingerprint))
+    candidates.sort(key=lambda c: (c[1], c[2]), reverse=True)
+    candidates.sort(key=lambda c: c[0])
+    refreshed = 0
+    for _, _, msgid, paper, source, row, fingerprint in candidates[:limit]:
+        PB.record_attempt(row, fingerprint)
+        url = source.get('url', '')
+        if (not isinstance(url, str)
+                or not re.fullmatch(r'https://arxiv\.org/abs/' + re.escape(paper) + r'(?:v[1-9][0-9]*)?', url)
+                or row.get('url') != url or source.get('msgid') != msgid or source.get('itemidx') != '1'):
+            INGEST_ERRORS.append('arxiv_refresh_identity_mismatch')
+            print('ARXIV_REFRESH', msgid, 'identity_mismatch', flush=True)
+            continue
+        _, kind = ingest({'id': paper, 'abs_url': url, 'title': source['title'], 'date': source['date']},
+                         source['pos'] - POS_BASE)
+        if kind not in ('fulltext-html', 'fulltext-pdf', 'cached'):
+            INGEST_ERRORS.append('arxiv_refresh_unavailable')
+        else:
+            refreshed += 1
+        print('ARXIV_REFRESH', msgid, kind, flush=True)
+    print(f'ARXIV_REFRESH eligible={len(candidates)} refreshed={refreshed} deferred={max(0, len(candidates) - limit)}',
+          flush=True)
+
+
 def patch_origin(msgid, tid):
     """Pass A rewrites `source` from qwen output (no origin) -> stamp it back so Pass B renders the
     arXiv-origin header/body-length. Returns the distill dict, or None if Pass A produced none."""
@@ -344,9 +392,16 @@ def main():
     ap.add_argument("--limit", type=int, default=8, help="max papers per run (0 = all queued)")
     ap.add_argument("--ids", type=str, default="", help="comma arXiv ids; overrides queue")
     ap.add_argument("--ingest-only", action="store_true", help="fetch+raw only, skip qwen")
+    ap.add_argument("--refresh-stale", action="store_true", help="refetch stale HTML for unpublished classified arXiv papers")
     ap.add_argument("--oa", action="store_true", help="process the OA-journal queue instead of arXiv")
     ap.add_argument("--workers", type=int, default=2)
     args = ap.parse_args()
+
+    if args.refresh_stale:
+        if args.oa or args.ids or args.ingest_only or not 1 <= args.limit <= 30:
+            ap.error("--refresh-stale requires a limit from 1 to 30 and no other intake mode")
+        refresh_stale(args.limit)
+        return
 
     if args.oa:
         run_oa(args.limit, args.workers)

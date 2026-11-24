@@ -121,6 +121,42 @@ class CancellationRegression(unittest.TestCase):
 
 
 class ArxivSourceIntegrity(unittest.TestCase):
+    def test_refresh_stale_uses_original_version_and_preserves_published_pages(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            raw, distill = root / 'data/raw', root / 'data/distill'
+            raw.mkdir(parents=True)
+            distill.mkdir()
+            for i in ('01', '02', '03'):
+                paper = '2611.210' + i
+                key = 'arxiv_' + paper
+                url = 'https://arxiv.org/abs/' + paper + 'v2'
+                row = {'pos': 100000, 'msgid': key, 'title': 'Example ' + i, 'url': url,
+                       'source': {'origin': 'arxiv'}, 'zone': 'test', 'rating': '⚡', 'page_worthy': True}
+                source = {'pos': row['pos'], 'msgid': key, 'itemidx': '1', 'title': row['title'],
+                          'source_kind': 'fulltext-html', 'extraction_version': 4, 'date': '2026-11-21',
+                          'url': url if i != '03' else url[:-1] + '1', 'body': 'Old text. ' * 100}
+                (distill / (key + '.json')).write_text(json.dumps(row), encoding='utf-8')
+                (raw / (key + '_1.json')).write_text(json.dumps(source), encoding='utf-8')
+                if i == '02':
+                    page = root / 'foundations/test/example-02.md'
+                    page.parent.mkdir(parents=True)
+                    page.write_text('Published page', encoding='utf-8')
+            with patch.object(arxiv, 'ROOT', root), patch.object(arxiv, 'RAW', raw), \
+                 patch.object(arxiv, 'DIS', distill), patch.object(arxiv, 'INGEST_ERRORS', []) as errors, \
+                 patch.object(writer, 'ROOT', root), patch.object(arxiv, 'fetch_fulltext',
+                     return_value=('Current source text. ' * 100, 'fulltext-html')) as fetch, \
+                 contextlib.redirect_stdout(io.StringIO()):
+                arxiv.refresh_stale(3)
+                self.assertEqual(errors, ['arxiv_refresh_identity_mismatch'])
+                self.assertEqual(fetch.call_count, 1)
+                self.assertEqual(fetch.call_args.args[0]['abs_url'], 'https://arxiv.org/abs/2611.21001v2')
+            versions = [json.loads((raw / ('arxiv_2611.210' + i + '_1.json')).read_bytes())['extraction_version']
+                        for i in ('01', '02', '03')]
+            self.assertEqual(versions, [writer.HTML_TEXT_VERSION, 4, 4])
+            self.assertEqual(page.read_text(encoding='utf-8'), 'Published page')
+            self.assertEqual(len(list((root / 'data/source-cache-backups').glob('*'))), 1)
+
     def test_tex_percent_matches_visible_mathml_without_accepting_other_values(self):
         body = arxiv.html_to_text('<p>' + 'Source analysis ' * 50 + '</p><math alttext="17.6\\%"><semantics><mrow><mn>17.6</mn><mo>%</mo></mrow><annotation encoding="application/x-tex">17.6\\%</annotation></semantics></math>')
         page = ('<!-- ontology-5axis data=test -->\n# Study\nhttps://source.invalid/paper\n' +

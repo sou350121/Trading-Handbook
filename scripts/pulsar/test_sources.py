@@ -6,7 +6,8 @@ from pathlib import Path
 import sys
 import tempfile
 import unittest
-from unittest.mock import patch
+from urllib.error import HTTPError
+from unittest.mock import MagicMock, patch
 
 import _health
 import _nber
@@ -22,6 +23,24 @@ class NberVerification(unittest.TestCase):
     def run_case(self, ref=None, dates=None, rss=None):
         return _nber.reconcile(ref or self.ref, dates or self.dates, rss or self.rss,
                                14, dt.date(2026, 10, 20))
+
+    def test_transient_server_error_retries_once_with_same_official_url(self):
+        source = MagicMock()
+        source.__enter__.return_value.geturl.return_value = _nber.REF
+        source.__enter__.return_value.read.return_value = self.ref
+        with patch.object(_nber.urllib.request, 'urlopen', side_effect=[
+                HTTPError(_nber.REF, 503, 'transient', {}, None), source]) as request, \
+             patch.object(_nber.time, 'sleep'):
+            self.assertEqual(_nber.get(_nber.REF, 900), self.ref)
+            self.assertEqual([c.args[0].full_url for c in request.call_args_list], [_nber.REF] * 2)
+
+    def test_forbidden_and_long_retry_after_are_not_retried(self):
+        for code, headers in ((403, {}), (429, {'Retry-After': '50'})):
+            with patch.object(_nber.urllib.request, 'urlopen', side_effect=HTTPError(
+                    _nber.REF, code, 'unavailable', headers, None)) as request:
+                with self.assertRaises(HTTPError):
+                    _nber.get(_nber.REF, 900)
+                request.assert_called_once()
 
     def test_real_tsv_literal_quotes_do_not_consume_later_records(self):
         ref = self.ref + b'w35899\tB Author\tSecond title\t2026-10-08\tNULL\n'

@@ -434,6 +434,7 @@ def process(job, publish=False, days=8, sources_only=False, allow_verified_parti
         for name, args, seconds in [('fetch_article.py', ['--workers', '1', '--budget-seconds', '180'], 210),
                                     ('distill_pass_a.py', ['--workers', '1'], 120),
                                     ('fix_collisions.py', [], 30),
+                                    ('arxiv_dissect.py', ['--refresh-stale', '--limit', '2'], 90),
                                     ('distill_pass_b.py', ['--workers', '1'], 600)]:
             try:
                 step(name, *args, seconds=seconds)
@@ -464,6 +465,12 @@ def process(job, publish=False, days=8, sources_only=False, allow_verified_parti
         if failures and not allow_verified_partial:
             raise RuntimeError('source_scan_incomplete')
         if not sources_only:
+            try:
+                step('arxiv_dissect.py', '--refresh-stale', '--limit', '6', seconds=330)
+            except RuntimeError:
+                incomplete.append('arxiv_refresh_incomplete')
+                if not allow_verified_partial:
+                    raise
             for args in [[], ['--oa']]:
                 try:
                     step('arxiv_dissect.py', *args, '--limit', '6', '--workers', '1', seconds=2400)

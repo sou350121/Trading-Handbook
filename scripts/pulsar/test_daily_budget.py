@@ -120,7 +120,9 @@ class DailyBudget(unittest.TestCase):
             self.assertEqual(fetch[1], 210)
             self.assertTrue(any('scripts/handbook_audit.py' in cmd for cmd, _ in calls))
             phases = [(cmd, seconds) for cmd, seconds in calls if any(str(v).endswith(name) for name in
-                       ['enumerate_album.py', 'fetch_article.py', 'distill_pass_a.py', 'fix_collisions.py', 'distill_pass_b.py'] for v in cmd)]
+                       ['enumerate_album.py', 'fetch_article.py', 'distill_pass_a.py', 'fix_collisions.py',
+                        'arxiv_dissect.py', 'distill_pass_b.py'] for v in cmd)]
+            self.assertIn('--refresh-stale', phases[-2][0])
             self.assertLess(sum(seconds for _, seconds in phases), 1200)
 
 

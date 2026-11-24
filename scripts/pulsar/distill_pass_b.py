@@ -37,6 +37,7 @@ TEMPLATE = """請依下面骨架，把這篇方法寫成一頁解構 markdown。
 9. **§5 欄位語義固定**：前SOTA 欄填**基線本身的數值**（逐字），本方法欄填本法數值；**絕不**只放模型名而不放其數值，**絕不**把 Δ 塞進前SOTA/本方法格（Δ 只進 Δ 欄）；百分點差用 `pp`（如 30.5% − (−5.09%) = +35.59pp）。
 10. 數字以完整 token 逐字核對，包含正負號與小數精度，不是任意子字串。計算的 Δ 只能放在固定五欄表「數據集/市場 | Metric | 前SOTA | 本方法 | Δ」的末欄，且前SOTA、本方法各只含一個來源數值、單位相同；其他位置不要新增計算值。不符合此格式就省略 Δ，保留來源數值及語義說明。
    若原表只在欄名標示單位（例如 R² (%)），在 Metric 保留該單位並逐字照抄數值欄，不要自行在數字後補 %、pp 或其他單位。若原表未提供差值且無法按原規則驗算，Δ 留空。
+11. 起草前先從可讀文本定位實證數值所在的表列或句子，保留指標、對象、樣本、單位及限定條件。正文只提到圖表編號或文字擷取拆散了數值時，保留定性結論並標示圖表待核。下文骨架內舉的數字只是格式示例，不能當成文獻證據。
 
 【計算與表述澄清】
 - 前SOTA 是模板欄名；來源若只稱經典或普通基線，必須在表格及解讀明說基線，不得改稱 SOTA。不同成本／市場／配置不得直接計算 Δ；結果水平不是改善量。
@@ -250,12 +251,12 @@ def do_one(d, metadata=None, source=None):
                 raise ValueError("metadata_not_found")
         source = (source, source.read_bytes())
         raw = json.loads(source[1])
-        prompt = build(d, raw)
         fingerprint = input_fingerprint(metadata, source)
+        record_attempt(d, fingerprint)
+        prompt = build(d, raw)
         for attempt in range(2):
             if out.exists():
                 with _lock:_n["skip"]+=1; return
-            record_attempt(d, fingerprint)
             md = ask(prompt, system=SYSTEM, thinking=True, temperature=0.4,
                      max_tokens=32768, timeout=600).strip()
             if md.startswith("```"):
