@@ -2,7 +2,7 @@
 
 > **收錄**：LLM在因子挖掘、情绪分析、研报生成、RAG增强及多智能体交易工作流中的适配、微调与推理架构
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：78 篇（60 篇成解構頁）
+> **本 zone 現有**：78 篇（61 篇成解構頁）
 
 ## 解構清單
 
@@ -30,7 +30,7 @@
 | [QuantAgent](quantagent.md) | ⚡ | QuantAgent | 提出QuantAgent双层循环框架，通过LLM自主迭代与实盘反馈自我完善，实现金融Alpha信 |
 | [FINCON](fincon.md) | ⚡ | NeurIPS 2024 | 提出基于LLM的多智能体框架FINCON，通过经理-分析师层级架构与双层风控机制，实现单股交易与 |
 | [FinAgent](finagent.md) | ⚡ | KDD 2024 | 提出FinAgent多模态交易智能体，融合文本与K线图，通过记忆、反思与工具增强模块实现端到端自 |
-| Vibe-Trading | 🔧 | [arXiv](https://arxiv.org/abs/2611.24845) | 提出 Vibe-Trading 这个 agent-native 交易框架，把研究、回测、组合分析 |
+| [Vibe-Trading](vibe-trading-100004.md) | 🔧 | [arXiv](https://arxiv.org/abs/2611.24845) | 提出 Vibe-Trading 这个 agent-native 交易框架，把研究、回测、组合分析 |
 | [Grounded Event Extraction System](grounded-event-extraction-system.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.08346) | 提出两阶段LLM系统，从SEC 8-K文件中抽取细粒度事件标签，并通过引用验证与质量评分实现可审 |
 | [FinBERT + 两级LLM评分链（GPT-5.4-mini摘要→Claude Sonnet 4评级）+ 随机森林/ridge混合排序](finbert-llm-gpt-5-4-mini-claude-sonnet-4-ridge.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.38056) | 把LLM文本评分与财务面、关注度特征并入美医疗股月度排序，并用训练截断对照检验后视偏差。 |
 | [When News Gets Old: Portfolio ](when-news-gets-old-portfolio-allocation-with-reinforcement-learning-and-large-language-models.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.30564) | 用固定LLM从SEC披露中抽取正负信号，比较RL与LLM组合策略对新闻时效信息的保留、显式注入或 |

@@ -126,6 +126,7 @@
               "foundations/time-series-forecasting/lstm-gbm.md",
               "foundations/time-series-forecasting/mana-net.md",
               "foundations/time-series-forecasting/masser.md",
+              "foundations/time-series-forecasting/mc-jepa.md",
               "foundations/time-series-forecasting/mci-gru.md",
               "foundations/time-series-forecasting/mera.md",
               "foundations/time-series-forecasting/miga.md",
@@ -243,6 +244,7 @@
               "foundations/reinforcement-learning/neuralchaos.md",
               "foundations/reinforcement-learning/ophr.md",
               "foundations/reinforcement-learning/optimal-execution-in-a-fractional-setting-with-reinforcement-learning.md",
+              "foundations/reinforcement-learning/plpg-mc-ppo-hmm.md",
               "foundations/reinforcement-learning/ppo-hedge-fund-strategy-selection.md",
               "foundations/reinforcement-learning/protohedge.md",
               "foundations/reinforcement-learning/qtmrl.md",
@@ -321,6 +323,7 @@
               "foundations/llm-agentic/timi.md",
               "foundations/llm-agentic/tradingagents.md",
               "foundations/llm-agentic/trr.md",
+              "foundations/llm-agentic/vibe-trading-100004.md",
               "foundations/llm-agentic/vibe-trading.md",
               "foundations/llm-agentic/when-news-gets-old-portfolio-allocation-with-reinforcement-learning-and-large-language-models.md",
               "foundations/llm-agentic/xalpha.md"
@@ -366,6 +369,7 @@
               "foundations/market-microstructure/orderflowdit.md",
               "foundations/market-microstructure/path-independent-adl-rules.md",
               "foundations/market-microstructure/phase-diagram-abm-with-null-artefact-discipline.md",
+              "foundations/market-microstructure/propagator-model-wiener-hopf-deconvolution.md",
               "foundations/market-microstructure/pvar.md",
               "foundations/market-microstructure/sgd-dean-kawasaki-spde.md",
               "foundations/market-microstructure/spide.md",
@@ -420,6 +424,7 @@
               "foundations/factor-mining/finbert-xgboost-shap.md",
               "foundations/factor-mining/fra.md",
               "foundations/factor-mining/fund-manager-expectation-asymmetry.md",
+              "foundations/factor-mining/global-seasonality-factor.md",
               "foundations/factor-mining/hf9-post-adaptive-lasso.md",
               "foundations/factor-mining/hppo-to.md",
               "foundations/factor-mining/lineageevo.md",
@@ -565,7 +570,8 @@
               "foundations/data-generation-augmentation/dsi.md",
               "foundations/data-generation-augmentation/gaf-cnn.md",
               "foundations/data-generation-augmentation/market-gan.md",
-              "foundations/data-generation-augmentation/saits.md"
+              "foundations/data-generation-augmentation/saits.md",
+              "foundations/data-generation-augmentation/tapes.md"
             ]
           }
         ]
