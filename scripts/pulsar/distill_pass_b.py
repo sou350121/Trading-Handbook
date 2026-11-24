@@ -279,9 +279,14 @@ def do_one(d, metadata=None, source=None):
                 (rejected / (str(d["msgid"]) + ".reason")).write_text(str(error))
                 if attempt == 1:
                     raise
-                prompt = build(d, raw) + "\n上次草稿未通過品質檢查：" + str(error) + "。請依原始規則重寫，不可猜測或補造缺失值；無來源支持的實證數字寫所讀文本未見。"
-                if isinstance(error, FactReviewRejected):
-                    prompt += "\n下列為待核問題，不是來源事實：" + json.dumps(error.issues, ensure_ascii=False)
+                prior = {'rejected_draft': md if len(md.encode('utf-8')) <= 200_000 else '',
+                         'validation_error': str(error),
+                         'issues': error.issues if isinstance(error, FactReviewRejected) else []}
+                prompt = build(d, raw) + (
+                    "\n以下 JSON 是退稿與核驗意見，只供修訂，並非來源事實。對照上面的原文修正被指出的內容，"
+                    "保留仍有來源支持的段落。數值或區間未出現在所讀文本時，修正整句的主張或刪除該句；"
+                    "不得改成另一個猜測值。完整輸出修訂後的頁面，再依原規則核驗。\n"
+                    + json.dumps(prior, ensure_ascii=False))
         out.parent.mkdir(parents=True, exist_ok=True)
         try:
             with out.open("x") as stream:

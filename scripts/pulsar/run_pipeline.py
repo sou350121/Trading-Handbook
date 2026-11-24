@@ -398,6 +398,7 @@ def new_dissection_paths():
 
 
 def process(job, publish=False, days=8, sources_only=False, allow_verified_partial=False):
+    started = time.monotonic()
     incomplete = []
     if publish:
         base, receipt = publication_preflight(job)
@@ -476,6 +477,16 @@ def process(job, publish=False, days=8, sources_only=False, allow_verified_parti
                     step('arxiv_dissect.py', *args, '--limit', '6', '--workers', '1', seconds=2400)
                 except RuntimeError:
                     incomplete.append('dissection_incomplete')
+                    if not allow_verified_partial:
+                        raise
+            # The weekly wrapper caps the whole run at 9000s. Keep time for
+            # post-processing, the audit, the GitHub readback and the local index.
+            available = min(720, 8700 - int(time.monotonic() - started))
+            if available >= 60:
+                try:
+                    step('distill_pass_b.py', '--limit', '6', '--workers', '1', seconds=available)
+                except RuntimeError:
+                    incomplete.append('dissection_backlog_incomplete')
                     if not allow_verified_partial:
                         raise
             try:

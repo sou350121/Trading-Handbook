@@ -17,6 +17,15 @@ class SectionReferences(unittest.TestCase):
         self.validate('參見§2.5 的演算步驟。')
         self.validate('See §2.5 for the worked example.')
 
+    def test_navigation_to_the_named_worked_example(self):
+        example = '\n## §2.5 · 帶數字走一遍\n示意算例。\n## References\n'
+        pointer = '- **研究學生**：先讀 §2 命題與 §2.5 玩具例，再做 Monte Carlo。'
+        self.validate(example + pointer)
+        with self.assertRaisesRegex(ValueError, 'unverified_empirical_number:2.5%'):
+            self.validate(example + pointer + ' 觀察到 2.5%。')
+        with self.assertRaisesRegex(ValueError, 'unverified_empirical_number:2.5'):
+            self.validate(pointer)
+
     def test_unsupported_measurement_remains_rejected(self):
         with self.assertRaisesRegex(ValueError, 'unverified_empirical_number:2.5%'):
             self.validate('參見 §2.5。Sharpe improved by 2.5%.')

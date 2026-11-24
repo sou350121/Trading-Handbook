@@ -102,6 +102,10 @@ class DraftPublicationBoundary(unittest.TestCase):
         self.assertEqual(self.pb._n['fail'], 1)
         self.assertEqual(audit.call_count, 2)
         self.assertIn('wrong cost regime', self.ask.call_args.args[0])
+        retry = json.loads(self.ask.call_args.args[0].rsplit('\n', 1)[-1])
+        self.assertEqual(retry['rejected_draft'], '# Unpublished draft')
+        self.assertEqual(retry['issues'], ['wrong cost regime'])
+        self.assertEqual(retry['validation_error'], 'fact_review_rejected')
 
     def test_pass_writes_page_and_bound_private_evidence(self):
         self.execute(Mock(return_value={'passed': True, 'issues': []}))

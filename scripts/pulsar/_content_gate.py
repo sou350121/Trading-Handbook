@@ -53,6 +53,7 @@ def validate_page(text, raw, d):
     # A version-pinned primary URL also verifies its unversioned citation ID.
     # Keep explicit versions unchanged; never authorize a different version or ID.
     known_arxiv.update(re.sub(r'v\d+$', '', value) for value in tuple(known_arxiv))
+    worked_example = re.search(r'^##[ \t]+§2\.5(?=[ \t·]|$)', text, flags=re.M)
     empirical = re.sub(r'##\s*§2\.5[^\n]*\n.*?(?=\n##\s|\Z)', '', text, flags=re.S)
     empirical = re.sub(r'```.*?```', '', empirical, flags=re.S)
     for line in empirical.splitlines():
@@ -66,6 +67,8 @@ def validate_page(text, raw, d):
         # A reference phrase plus an explicit section marker is navigation, not a
         # measurement. Keep bare decimals, percentages and metric-like uses gated.
         line = re.sub(r'(?:參見|参见|詳見|详见|參照|参照|參考|参考|見|见|照|\bsee|\bcf\.?|\bsection)\s*§\s*[1-8](?:\.\d+)+(?![\d.%])', '', line, flags=re.I)
+        if worked_example:
+            line = re.sub(r'§[ \t]*2\.5(?=[ \t]+(?:玩具例|示意算例))', '', line)
         # The frozen template's 7.1 subheading is also sometimes rendered bold.
         # Strip its section number only; any measurements later on stay checked.
         line = re.sub(r'^\s*\*\*7\.1(?=\s+可(?:證偽預測|证伪预测))', '**', line)

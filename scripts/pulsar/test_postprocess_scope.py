@@ -3,6 +3,7 @@ import importlib.util
 from pathlib import Path
 import sys
 import tempfile
+from types import SimpleNamespace
 import unittest
 from unittest.mock import patch
 
@@ -10,7 +11,7 @@ BASE = Path(__file__).resolve().parents[2]
 SOURCE = BASE / 'scripts/pulsar/run_pipeline.py'
 
 
-def scope_namespace(paths, tracked):
+def scope_namespace(paths, tracked, times=(0, 0)):
     tree = ast.parse(SOURCE.read_text(encoding='utf-8'))
     nodes = [n for n in tree.body if isinstance(n, ast.FunctionDef)
              and n.name in {'allowed', 'new_dissection_paths', 'process'}]
@@ -18,7 +19,8 @@ def scope_namespace(paths, tracked):
     ns = {'ALLOWED': ('foundations/', 'guides/', 'radar/'), 'SINGLES': set(),
           'git': lambda *a: '\0'.join(tracked), 'dirty_paths': lambda: paths,
           'execute': lambda command, *a, **kw: calls.append(command),
-          'pending': lambda: None, 'PYTHON': 'python'}
+          'pending': lambda: None, 'PYTHON': 'python',
+          'time': SimpleNamespace(monotonic=iter(times).__next__)}
     exec(compile(ast.Module(body=nodes, type_ignores=[]), str(SOURCE), 'exec'), ns)
     return ns, calls
 
@@ -45,7 +47,14 @@ class ScopeTests(unittest.TestCase):
     def test_no_paths_still_generates_summaries_and_index(self):
         ns, calls = scope_namespace([], [])
         ns['process']('weekly')
+        self.assertIn(['python', 'scripts/pulsar/distill_pass_b.py', '--limit', '6', '--workers', '1'], calls)
         self.assertIn(['python', 'scripts/gen_overviews.py'], calls)
+        self.assertIn(['python', 'scripts/pulsar/local_index.py', '--check'], calls)
+
+    def test_weekly_backlog_respects_remaining_publication_time(self):
+        ns, calls = scope_namespace([], [], times=(0, 8670))
+        ns['process']('weekly')
+        self.assertFalse(any('scripts/pulsar/distill_pass_b.py' in call for call in calls))
         self.assertIn(['python', 'scripts/pulsar/local_index.py', '--check'], calls)
 
     def test_unmanaged_and_traversal_excluded(self):
