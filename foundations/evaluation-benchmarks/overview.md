@@ -2,7 +2,7 @@
 
 > **收錄**：回测防穿越、样本外稳定性、过拟合检测、鲁棒性量化、公开基准(TFB/QuantBench)与模型衰减归因
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：46 篇（30 篇成解構頁）
+> **本 zone 現有**：46 篇（31 篇成解構頁）
 
 ## 解構清單
 
@@ -26,7 +26,7 @@
 | [Base-Rate-Honest Benchmark](base-rate-honest-benchmark.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.12248) | 本文指出股票方向预测中原始准确率易受牛市基线率误导，提出基于滚动验证与诚实基线的可复现评测协议， |
 | [A Methodologically Rigorous Be](a-methodologically-rigorous-benchmark-of-linear-regression-rnn-and-lstm-for-s-p-500-forecasting-identifying-sources-of-performance-inflation-in-financial-deeplearning.md) | 🔧 | [arXiv](https://arxiv.org/abs/2611.27978) | 在统一预处理与时间序评估下,对比线性回归、RNN、LSTM 预测标普500次日收盘,并审计文献中 |
 | [TabFM (Google Research)](tabfm-google-research.md) | 🔧 | [arXiv](https://arxiv.org/abs/2611.13550) | 把表格基础模型TabFM引入会计盈余方向预测，免训练免调参的上下文学习，AUC超过微调Llama |
-| Rare replay / SMSCP | 🔧 | [arXiv](https://arxiv.org/abs/2611.04223) | 固定记忆预算下比较共形校准的残差保留策略，发现FIFO聚合覆盖近名义但压力态严重欠覆盖，提出状态 |
+| [Rare replay / SMSCP](rare-replay-smscp.md) | 🔧 | [arXiv](https://arxiv.org/abs/2611.04223) | 固定记忆预算下比较共形校准的残差保留策略，发现FIFO聚合覆盖近名义但压力态严重欠覆盖，提出状态 |
 | [Retrospective Analysis of Team](retrospective-analysis-of-team-following-trading-profitability-in-pumpfun-meme-coins-using-funding-networks.md) | 🔧 | [arXiv](https://arxiv.org/abs/2611.11436) | 用有向资金网络聚类出 Pump.fun 发币“团队”，在有限资金账户中复算事后跟随交易收益，并逐 |
 | [NoLBERT](nolbert.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.22745) | 构建时点NoLBERT新闻主题，严格样本外比较文本因子；最佳验证实验亏钱，组合未胜价格基准。 |
 | Prospective multi-channel wallet-group discovery | 🔧 | [arXiv](https://arxiv.org/abs/2610.39458) | 用88小时pump.fun全量链上数据，前瞻性识别2.3万个钱包协同群组，验证其对价格路径与跟单 |
