@@ -9241,6 +9241,26 @@
   },
   {
     "pos": 100000,
+    "msgid": "arxiv_2611.34495",
+    "title": "Efficient Data Fusion in Distributionally Robust Optimization",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "fusion-dro-with-affine-decision-rules",
+    "dup_of": null,
+    "framework": "Fusion DRO with affine decision rules",
+    "venue": null,
+    "arxiv": "2611.34495",
+    "axes": {
+      "data": "多模态",
+      "horizon": "跨周期",
+      "paradigm": "监督回归",
+      "alpha": "组合执行优化",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 100000,
     "msgid": "arxiv_2611.30843",
     "title": "Cleaning correlation matrices with external information: the Maximum Variance estimat",
     "zone": "portfolio-optimization",
