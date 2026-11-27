@@ -155,6 +155,7 @@
               "foundations/time-series-forecasting/sampled-rnn.md",
               "foundations/time-series-forecasting/simstock.md",
               "foundations/time-series-forecasting/sspt.md",
+              "foundations/time-series-forecasting/stock-jepa.md",
               "foundations/time-series-forecasting/stockaicloud.md",
               "foundations/time-series-forecasting/stockformer.md",
               "foundations/time-series-forecasting/stockmixer.md",
@@ -357,6 +358,7 @@
               "foundations/market-microstructure/edge.md",
               "foundations/market-microstructure/extra-trees.md",
               "foundations/market-microstructure/fifo.md",
+              "foundations/market-microstructure/fine-tuning-an-order-flow-foundation-model-for-sub-second-forecasting.md",
               "foundations/market-microstructure/flowhft.md",
               "foundations/market-microstructure/hawkes-1ms.md",
               "foundations/market-microstructure/hawkes-lob-ppo-sil.md",
@@ -487,6 +489,7 @@
               "foundations/portfolio-optimization/deepunifiedmom.md",
               "foundations/portfolio-optimization/dgt.md",
               "foundations/portfolio-optimization/dit-lstm-svar.md",
+              "foundations/portfolio-optimization/drp-es-diversified-risk-perception-expected-shortfall.md",
               "foundations/portfolio-optimization/dsl.md",
               "foundations/portfolio-optimization/dspo.md",
               "foundations/portfolio-optimization/g-pwnpm.md",
@@ -563,6 +566,7 @@
               "foundations/evaluation-benchmarks/quantbench.md",
               "foundations/evaluation-benchmarks/retrospective-analysis-of-team-following-trading-profitability-in-pumpfun-meme-coins-using-funding-networks.md",
               "foundations/evaluation-benchmarks/robustipy.md",
+              "foundations/evaluation-benchmarks/tabfm-google-research.md",
               "foundations/evaluation-benchmarks/tfb.md",
               "foundations/evaluation-benchmarks/walk-forward-analysis.md"
             ]
