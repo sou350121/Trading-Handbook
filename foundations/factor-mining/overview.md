@@ -2,7 +2,7 @@
 
 > **收錄**：公式型Alpha生成、AutoML/遗传编程挖掘、特征选择、风格因子构造、信号衰减与拥挤度分析
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：77 篇（68 篇成解構頁）
+> **本 zone 現有**：77 篇（70 篇成解構頁）
 
 ## 解構清單
 
@@ -28,12 +28,12 @@
 | [经验贝叶斯(EB)](empirical-bayes.md) | ⚡ | 经验贝叶斯(EB) | 美联储首席经济学家用经验贝叶斯法系统挖掘13.6万策略，校正数据挖掘偏差，发现会计因子与小盘股在 |
 | [AlphaSharpe](alphasharpe.md) | ⚡ | AlphaSharpe | 利用LLM结合进化策略迭代生成与优化风险调整指标，显著提升资产排名相关性与组合夏普比率。 |
 | [结构化深度排序因子模型](art-121.md) | ⚡ | JFQA | 提出结构化深度神经网络，将传统特征排序自动化为潜在因子生成框架，以最小化定价误差解释横截面收益。 |
-| Boolean/Walsh decomposition | 🔧 | [arXiv](https://arxiv.org/abs/2611.09834) | 用布尔函数与Walsh分解统一刻画因子组合规则的信号暴露、交互项与换手，并实证交易成本。 |
+| [Boolean/Walsh decomposition](boolean-walsh-decomposition.md) | 🔧 | [arXiv](https://arxiv.org/abs/2611.09834) | 用布尔函数与Walsh分解统一刻画因子组合规则的信号暴露、交互项与换手，并实证交易成本。 |
 | [CosmosAlpha](cosmosalpha.md) | 🔧 | [arXiv](https://arxiv.org/abs/2611.04555) | 把已挖掘因子组织成多关系图（血缘+表达式结构+截面暴露相关性），用图流传播搜索效用，并以质量/繁 |
 | [LineageEvo](lineageevo.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.29663) | 提出LineageEvo，用血缘（lineage）作为LLM进化因子挖掘的中间控制单元，通过血缘 |
 | [Supervised Lexicon Learning](supervised-lexicon-learning.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.14174) | 基于监督词表学习提取10-K全文与风险章节情绪，验证聚合层级对收益与波动率预测信号有效性的影响。 |
 | [Global Seasonality Factor](global-seasonality-factor.md) | 🔧 | arXiv [arXiv](https://arxiv.org/abs/2611.15657) | 将五种日历季节性构建为全球期货因子，用非线性模型逐市场拟合并样本外验证。 |
-| Diversified Expert Ensemble (DEE) | 🔧 | ICAIF26 [arXiv](https://arxiv.org/abs/2611.12389) | 把组合分散化原理搬到预测层：线性+非线性异质专家各自自助采样训练，IC过滤后等权平均，CSI30 |
+| [Diversified Expert Ensemble (DEE)](diversified-expert-ensemble-dee.md) | 🔧 | ICAIF26 [arXiv](https://arxiv.org/abs/2611.12389) | 把组合分散化原理搬到预测层：线性+非线性异质专家各自自助采样训练，IC过滤后等权平均，CSI30 |
 | [Persistent Homology / Multipersistence Belief-State Features](persistent-homology-multipersistence-belief-state-features.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.25756) | 用PCA与持续同调压缩预测市场信念状态，拓扑特征提升线性与非线性模型的预测与校准精度。 |
 | Sparse Autoencoder (SAE) | 🔧 | ICAIF26 [arXiv](https://arxiv.org/abs/2610.39205) | 用L1稀疏自编码器从加密横截面收益学稀疏因子，组合波动率稳定低于PCA，但无alpha、因子身份 |
 | [LLM Factor Lab](llm-factor-lab.md) | 🔧 | LLM Factor Lab | 用LLM在预设会计公式空间内自主演化因子，经严苛学术检验仅极少数存活。 |
