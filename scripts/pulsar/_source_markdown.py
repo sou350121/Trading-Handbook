@@ -2,6 +2,7 @@
 from functools import lru_cache
 from pathlib import Path
 import sys
+import re
 
 
 @lru_cache(maxsize=4)
@@ -40,4 +41,14 @@ def _visible(body):
 
 def numeric_source_text(raw):
     body = raw['body']
-    return _visible(body) if raw.get('source_format') == 'markdown' else body
+    if raw.get('source_format') == 'markdown':
+        return _visible(body)
+    if raw.get('source_kind') == 'fulltext-html' and raw.get('extraction_version') == 5:
+        # arXiv MathML alt text retains presentation macros around a literal %.
+        # Recognize only numerical values, thin-space presentation, and the exact
+        # roman-percent wrapper. Do not add units to plain numbers or decode text.
+        return re.sub(
+            r'(?<![\w.])([-−]?\d+(?:,\d{3})*(?:\.\d+)?)'
+            r'(?:\\text\{\\,\}|\\,|[ \t\u2009])*\\mathrm\{\\?%\}',
+            r'\1%', body)
+    return body
