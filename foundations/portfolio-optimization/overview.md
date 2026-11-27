@@ -2,7 +2,7 @@
 
 > **收錄**：均值方差/风险平价/Black-Litterman、稀疏优化、执行算法(VWAP/冲击成本)、多资产轮动与战术配置
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：60 篇（51 篇成解構頁）
+> **本 zone 現有**：60 篇（54 篇成解構頁）
 
 ## 解構清單
 
@@ -18,14 +18,14 @@
 | [Scrambling Convex Network](a-new-input-convex-neural-network-with.md) | 🔧 | Quantitative Finance [arXiv](https://arxiv.org/abs/2411.12854) | 提出一种无需权重非负约束的输入凸神经网络，用于高效定价具有凸收益的期权。 |
 | [谱去噪相关性网络](art-100011.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.10297) | 基于随机矩阵理论对资产相关性矩阵进行谱去噪，提取核心-边缘网络结构，并据此构建外围资产组合以提升 |
 | [Convex Variational Theory of Worst-Case Risk (quantile/distribution representation principle)](convex-variational-theory-of-worst-case-risk-quantile-distribution-representation-principle.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.29652) | 以谱风险度量为统一底座，提出凸变分理论：按模糊集凸性选分位数或分布表示，给出最坏情况风险的闭式解 |
-| Semivariance/Semivolatility Unified Downside-Risk Framework | 🔧 | [arXiv](https://arxiv.org/abs/2611.32638) | 按风险度分类下行风险组合，统一风险平价、最大分散与Sortino并做样本外实证。 |
+| [Semivariance/Semivolatility Unified Downside-Risk Framework](semivariance-semivolatility-unified-downside-risk-framework.md) | 🔧 | [arXiv](https://arxiv.org/abs/2611.32638) | 按风险度分类下行风险组合，统一风险平价、最大分散与Sortino并做样本外实证。 |
 | [AGCA](agca.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.13112) | 提出锚定测地线成分分析(AGCA)，将多元极值降维转化为特征分解，高效模拟组合尾部风险与VaR。 |
 | [DRP-ES (Diversified-Risk-Perception Expected Shortfall)](drp-es-diversified-risk-perception-expected-shortfall.md) | 🔧 | [arXiv](https://arxiv.org/abs/2611.11803) | 提出融合资产分散与风险模型分散的DRP风险度量框架，给出DRP-ES并用于组合选择。 |
-| Pauli Correlation Encoding (PCE / dPCE) | 🔧 | [arXiv](https://arxiv.org/abs/2611.32769) | 把Pauli关联编码(PCE)图割选股从单次静态快照推进到滚动重估的流式调仓，并在数千资产上对比 |
+| [Pauli Correlation Encoding (PCE / dPCE)](pauli-correlation-encoding-pce-dpce.md) | 🔧 | [arXiv](https://arxiv.org/abs/2611.32769) | 把Pauli关联编码(PCE)图割选股从单次静态快照推进到滚动重估的流式调仓，并在数千资产上对比 |
 | [Objective Diversification + ExtraTrees 排序组合](objective-diversification-extratrees.md) | 🔧 | [arXiv](https://arxiv.org/abs/2611.10333) | 用最小方差、LAD、下行半方差、分位数与ES五种目标各自的滚动对冲比率作为候选，再用多输出Ext |
 | [Signed Trust (Safe/Follow/Reverse) Controller](signed-trust-safe-follow-reverse-controller.md) | 🔧 | [arXiv](https://arxiv.org/abs/2611.04826) | 用 Safe/Follow/Reverse 三动作在线学习控制器安全使用不可信预测，配双重证书， |
 | [G-PWNPM](g-pwnpm.md) | 🔧 | [arXiv](https://arxiv.org/abs/2611.29552) | 提出门控收益加权净收益最大化，在线组合选择中按预测可靠性调仓并集成专家，降低交易成本。 |
-| Asym-Sticky-NCO | 🔧 | [arXiv](https://arxiv.org/abs/2611.05310) | 提出非对称下行风险NCO+粘性HMM的行业轮动框架，降低回撤与换手。 |
+| [Asym-Sticky-NCO](asym-sticky-nco.md) | 🔧 | [arXiv](https://arxiv.org/abs/2611.05310) | 提出非对称下行风险NCO+粘性HMM的行业轮动框架，降低回撤与换手。 |
 | [Wasserstein DRO penalised mean–variance](wasserstein-dro-penalised-mean-variance.md) | 🔧 | [arXiv](https://arxiv.org/abs/2611.30046) | 证明长仓惩罚型Wasserstein稳健均值方差中，半径在单纯形上只等价于有效持仓数（宽度），并 |
 | Reparameterized Neural Network Dual Bounds (artificial market) | 🔧 | [arXiv](https://arxiv.org/abs/2611.06495) | 在两因子市场下求解含一般凸交易约束的DC养老最优投资与寿险需求，用重参数化神经网络求原始值函数上 |
 | RNN operator map | 🔧 | [arXiv](https://arxiv.org/abs/2611.14245) | 用RNN学习带瞬态价格冲击的最优清算策略对核参数的解映射，并量化核误设成本。 |
