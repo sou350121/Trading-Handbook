@@ -2,7 +2,7 @@
 
 > **收錄**：DRL/MARL在选股、调仓、做市、执行与对冲中的应用，涵盖PPO/SAC/分布RL、奖励函数设计与环境模拟
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：54 篇（49 篇成解構頁）
+> **本 zone 現有**：54 篇（50 篇成解構頁）
 
 ## 解構清單
 
@@ -21,7 +21,7 @@
 | [Optimal execution in a fractio](optimal-execution-in-a-fractional-setting-with-reinforcement-learning.md) | 🔧 | [arXiv](https://arxiv.org/abs/2611.11373) | 在分数布朗运动下用策略梯度强化学习求解线性冲击最优清算，直接最大化CARA效用，超越确定性Alm |
 | [Agentic RL 三原型框架（DQN+REINFORCE+SHAP）](agentic-rl-dqn-reinforce-shap.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.22522) | 用DQN与REINFORCE训练套利者、操纵者、跟风者三类交易者原型，在加密小时数据上比较其对压 |
 | [PPO + Heston](ppo-heston.md) | 🔧 | [arXiv](https://arxiv.org/abs/2611.32790) | 用PPO同时交易标的与长期期权，在Heston仿真中训练、在真实S&P500期权数据上做Delt |
-| SCP | 🔧 | [arXiv](https://arxiv.org/abs/2611.33652) | 提出SCP框架，用自监督裁剪目标强化学习融合日内微观与日频宏观特征做风险感知组合配置。 |
+| [SCP](scp.md) | 🔧 | [arXiv](https://arxiv.org/abs/2611.33652) | 提出SCP框架，用自监督裁剪目标强化学习融合日内微观与日频宏观特征做风险感知组合配置。 |
 | [NeuralChaos](neuralchaos.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.14361) | 提出NeuralChaos神经算子，用有限布朗运动采样逼近可预测平方可积过程，理论证明最优逼近率 |
 | [Elicit-to-Optimize Framework](elicit-to-optimize-framework.md) | 🔧 | IJOC [arXiv](https://arxiv.org/abs/2607.14373) | 提出噪声鲁棒的偏好推断与策略优化框架，用贝叶斯IRL从噪声决策中提取风险偏好，结合分位数PPO优 |
 | [FRPO](frpo.md) | 🔧 | [arXiv](https://arxiv.org/abs/2611.07750) | 用未来相对收益预测做辅助监督头，配合同路径组相对策略优化，联合训练组合管理策略。 |

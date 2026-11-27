@@ -2,7 +2,7 @@
 
 > **收錄**：限价订单簿(LOB)建模、订单流信号、做市策略、高频套利、微观流动性与价格形成机制
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：55 篇（50 篇成解構頁）
+> **本 zone 現有**：55 篇（51 篇成解構頁）
 
 ## 解構清單
 
@@ -11,7 +11,7 @@
 | [SGD市场做市 / Dean-Kawasaki SPDE 模型](sgd-dean-kawasaki-spde.md) | ⚡ | [arXiv](https://arxiv.org/abs/2611.24028) | 将做市商建模为异步SGD更新，证明订单簿体积服从Dean-Kawasaki方程，产生幂律记忆与粗 |
 | [Hawkes过程 + 1ms事件定义](hawkes-1ms.md) | ⚡ | [arXiv](https://arxiv.org/abs/2610.36317) | 重定义NBBO事件为持续1ms的中价水平，揭示Hawkes亚毫秒核与高分叉比多由锁盘/短暂报价伪 |
 | [WGAN + EGGROLL](wgan-eggroll.md) | ⚡ | ICAIF26 [arXiv](https://arxiv.org/abs/2610.25604) | 用WGAN评论家与进化策略对LOB基础模型做对抗后训练，提升高频市场模拟真实度。 |
-| Optimal Trading Speed on Block | ⚡ | [arXiv](https://arxiv.org/abs/2611.13616) | 模型+Base准实验：区块提速使优先费租金转向套利者，主动LP抢跑，池深下降、价差走阔。 |
+| [Optimal Trading Speed on Block](optimal-trading-speed-on-blockchain.md) | ⚡ | [arXiv](https://arxiv.org/abs/2611.13616) | 模型+Base准实验：区块提速使优先费租金转向套利者，主动LP抢跑，池深下降、价差走阔。 |
 | [Coherent-set convex hull + integer programming arbitrage](coherent-set-convex-hull-integer-programming-arbitrage.md) | ⚡ | [arXiv](https://arxiv.org/abs/2610.23517) | 用凸包+整数规划识别预测市场中逻辑相关合约的组合套利，并用Polymarket全深度盘口回放测量 |
 | [Propagator model / Wiener–Hopf deconvolution](propagator-model-wiener-hopf-deconvolution.md) | ⚡ | [arXiv](https://arxiv.org/abs/2611.10574) | 证明扩散价格下传播子估计无法识别瞬态冲击衰减，推断衰减可能是反卷积假象。 |
 | [Autocorrelation Map](autocorrelation-map.md) | ⚡ | [arXiv](https://arxiv.org/abs/2607.09426) | 发现加密货币期货在整点/刻钟存在算法交易引发的量价脉冲，刻钟开盘订单失衡可预测4-12小时收益。 |

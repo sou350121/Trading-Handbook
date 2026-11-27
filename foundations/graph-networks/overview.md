@@ -2,7 +2,7 @@
 
 > **收錄**：利用股票间相关性、产业链、分析师覆盖或动态共现关系构建异构图/动态图，进行趋势预测、风格挖掘与组合构建
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：30 篇（27 篇成解構頁）
+> **本 zone 現有**：30 篇（28 篇成解構頁）
 
 ## 解構清單
 
@@ -10,7 +10,7 @@
 |---|---|---|---|
 | [FNIRVAR](fnirvar.md) | ⚡ | FNIRVAR | 提出FNIRVAR模型，结合静态因子与SBM网络VAR，通过谱聚类挖掘高维收益中的隐含群组结构， |
 | [NAVIS](navis.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.12067) | 基于SEC 13F构建动态二分图，提出NAVIS模型预测机构持仓权重，建立时序图学习基准。 |
-| LENS | 🔧 | CIKM26 [arXiv](https://arxiv.org/abs/2611.04217) | 用LLM多次抽取公司关系并按置信度加权建静态图，叠加新闻语义动态图，门控融合预测股票收益与排序。 |
+| [LENS](lens.md) | 🔧 | CIKM26 [arXiv](https://arxiv.org/abs/2611.04217) | 用LLM多次抽取公司关系并按置信度加权建静态图，叠加新闻语义动态图，门控融合预测股票收益与排序。 |
 | [ARCUS](arcus.md) | 🔧 | [arXiv](https://arxiv.org/abs/2611.25860) | 用Ollivier-Ricci曲率与Ricci flow手术对日经225相关性图递归聚类，得29 |
 | [GIDF (FADE + signed-edge graph attention)](gidf-fade-signed-edge-graph-attention.md) | 🔧 | [arXiv](https://arxiv.org/abs/2611.34209) | 用FADE从剥离主因子后的残差相关结构构建带符号动态图，并以图注意力生成个股因子载荷，做日频统计 |
 | [DGNSDE](dgnsde.md) | 🔧 | WWW26 | 融合DTW时滞图与几何SDE，在连续时间轴上显式建模股票领先-滞后效应与随机波动，提升截面选股收 |
