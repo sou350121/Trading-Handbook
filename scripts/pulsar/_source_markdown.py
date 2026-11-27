@@ -47,8 +47,12 @@ def numeric_source_text(raw):
         # arXiv MathML alt text retains presentation macros around a literal %.
         # Recognize only numerical values, thin-space presentation, and the exact
         # roman-percent wrapper. Do not add units to plain numbers or decode text.
-        return re.sub(
+        body = re.sub(
             r'(?<![\w.])([-−]?\d+(?:,\d{3})*(?:\.\d+)?)'
             r'(?:\\text\{\\,\}|\\,|[ \t\u2009])*\\mathrm\{\\?%\}',
             r'\1%', body)
+        # Nonbreaking/thin Unicode spacing keeps a literal percent unit with
+        # its number. Never join ordinary spaces, tabs, newlines, or cells.
+        return re.sub(r'(?<![\w.])([-−]?\d+(?:,\d{3})*(?:\.\d+)?)[\u00a0\u2009\u202f]+%',
+                      r'\1%', body)
     return body
