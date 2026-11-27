@@ -2,7 +2,7 @@
 
 > **收錄**：DRL/MARL在选股、调仓、做市、执行与对冲中的应用，涵盖PPO/SAC/分布RL、奖励函数设计与环境模拟
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：54 篇（48 篇成解構頁）
+> **本 zone 現有**：54 篇（49 篇成解構頁）
 
 ## 解構清單
 
@@ -24,7 +24,7 @@
 | SCP | 🔧 | [arXiv](https://arxiv.org/abs/2611.33652) | 提出SCP框架，用自监督裁剪目标强化学习融合日内微观与日频宏观特征做风险感知组合配置。 |
 | [NeuralChaos](neuralchaos.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.14361) | 提出NeuralChaos神经算子，用有限布朗运动采样逼近可预测平方可积过程，理论证明最优逼近率 |
 | [Elicit-to-Optimize Framework](elicit-to-optimize-framework.md) | 🔧 | IJOC [arXiv](https://arxiv.org/abs/2607.14373) | 提出噪声鲁棒的偏好推断与策略优化框架，用贝叶斯IRL从噪声决策中提取风险偏好，结合分位数PPO优 |
-| FRPO | 🔧 | [arXiv](https://arxiv.org/abs/2611.07750) | 用未来相对收益预测做辅助监督头，配合同路径组相对策略优化，联合训练组合管理策略。 |
+| [FRPO](frpo.md) | 🔧 | [arXiv](https://arxiv.org/abs/2611.07750) | 用未来相对收益预测做辅助监督头，配合同路径组相对策略优化，联合训练组合管理策略。 |
 | [HRT](hrt.md) | 🔧 | HRT | 提出HRT双层强化学习框架，上层PPO做离散方向决策，下层TD3结合硬约束层做连续仓位微调，解决 |
 | [PPO策略自适应选择框架](ppo-hedge-fund-strategy-selection.md) | 🔧 | PPO策略自适应选择框架 | 提出基于PPO的强化学习框架，动态切换动量与均值回归策略，以夏普比率为奖励优化对冲基金风险调整后 |
 | [FNN+DRL组合框架](fnn-drl.md) | 🔧 | FNN+DRL组合框架 | 结合FNN基本面选股与PPO-CTCN周度调仓，引入相对收益奖励与湍流风控，实现稳健跑赢基准的组 |

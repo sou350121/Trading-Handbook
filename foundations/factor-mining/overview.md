@@ -2,7 +2,7 @@
 
 > **收錄**：公式型Alpha生成、AutoML/遗传编程挖掘、特征选择、风格因子构造、信号衰减与拥挤度分析
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：77 篇（70 篇成解構頁）
+> **本 zone 現有**：77 篇（71 篇成解構頁）
 
 ## 解構清單
 
@@ -35,7 +35,7 @@
 | [Global Seasonality Factor](global-seasonality-factor.md) | 🔧 | arXiv [arXiv](https://arxiv.org/abs/2611.15657) | 将五种日历季节性构建为全球期货因子，用非线性模型逐市场拟合并样本外验证。 |
 | [Diversified Expert Ensemble (DEE)](diversified-expert-ensemble-dee.md) | 🔧 | ICAIF26 [arXiv](https://arxiv.org/abs/2611.12389) | 把组合分散化原理搬到预测层：线性+非线性异质专家各自自助采样训练，IC过滤后等权平均，CSI30 |
 | [Persistent Homology / Multipersistence Belief-State Features](persistent-homology-multipersistence-belief-state-features.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.25756) | 用PCA与持续同调压缩预测市场信念状态，拓扑特征提升线性与非线性模型的预测与校准精度。 |
-| Sparse Autoencoder (SAE) | 🔧 | ICAIF26 [arXiv](https://arxiv.org/abs/2610.39205) | 用L1稀疏自编码器从加密横截面收益学稀疏因子，组合波动率稳定低于PCA，但无alpha、因子身份 |
+| [Sparse Autoencoder (SAE)](sparse-autoencoder-sae.md) | 🔧 | ICAIF26 [arXiv](https://arxiv.org/abs/2610.39205) | 用L1稀疏自编码器从加密横截面收益学稀疏因子，组合波动率稳定低于PCA，但无alpha、因子身份 |
 | [LLM Factor Lab](llm-factor-lab.md) | 🔧 | LLM Factor Lab | 用LLM在预设会计公式空间内自主演化因子，经严苛学术检验仅极少数存活。 |
 | [FactorMoE](factormoe.md) | 🔧 | Complex & Intelligent Systems | 提出FactorMoE框架，用链式MoE与注意力机制动态组合公式化Alpha因子，提升非平稳市场 |
 | [周五潜伏？知情交易周内择时的非线性 Alpha](alpha.md) | 🔧 | — | 揭示内部人交易Alpha高度依赖市场关注度，周五买入/周一卖出仅在异常放量时产生显著短期超额收益 |

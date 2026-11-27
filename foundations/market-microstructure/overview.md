@@ -2,7 +2,7 @@
 
 > **收錄**：限价订单簿(LOB)建模、订单流信号、做市策略、高频套利、微观流动性与价格形成机制
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：55 篇（49 篇成解構頁）
+> **本 zone 現有**：55 篇（50 篇成解構頁）
 
 ## 解構清單
 
@@ -37,7 +37,7 @@
 | [Beyond Anonymous Order Flow: W](beyond-anonymous-order-flow-wallet-identity-as-a-feature-for-short-horizon-return-prediction.md) | 🔧 | [arXiv](https://arxiv.org/abs/2611.05218) | 利用Hyperliquid钱包身份与L4订单簿，检验钱包标记持久性并提升短周期收益预测。 |
 | [Detecting unusual trading patt](detecting-unusual-trading-patterns-on-cryptocurrency-exchanges-by-means-of-complexity-measures.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.13916) | 本文基于高频交易数据，利用多重分形、近似熵等复杂度指标构建诊断框架，有效识别中心化交易所的刷量与 |
 | [SPIDE](spide.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.30539) | 用SPIDE对Uniswap V3流动性剖面建模，降维为低阶SDE并校准预测。 |
-| Bayesian execution game with optional activation | 🔧 | [arXiv](https://arxiv.org/abs/2611.25762) | 构建带可选参与的贝叶斯执行博弈，分析公共预测对机构调仓成本的影响，并用ETF日内数据刻画目标不确 |
+| [Bayesian execution game with optional activation](bayesian-execution-game-with-optional-activation.md) | 🔧 | [arXiv](https://arxiv.org/abs/2611.25762) | 构建带可选参与的贝叶斯执行博弈，分析公共预测对机构调仓成本的影响，并用ETF日内数据刻画目标不确 |
 | [Fine-Tuning an Order-Flow Foun](fine-tuning-an-order-flow-foundation-model-for-sub-second-forecasting.md) | 🔧 | [arXiv](https://arxiv.org/abs/2611.14117) | 在两家交易所的L3订单流上预训练300M自回归Transformer，再用LoRA微调，预测20 |
 | [Rolling intrinsic + distributional forecasts](rolling-intrinsic-distributional-forecasts.md) | 🔧 | [arXiv](https://arxiv.org/abs/2611.17170) | 将订单簿衍生的分布价格预测嵌入BESS日内滚动内在优化，高频模拟提升利润最高42%。 |
 | [L2 Liquidity-State Transition](l2-liquidity-state-transition.md) | 🔧 | [arXiv](https://arxiv.org/abs/2607.09230) | 在加密期货事件窗口内，预事件L2流动性状态是预测后事件流动性的首要信号，订单流仅具增量价值。 |
