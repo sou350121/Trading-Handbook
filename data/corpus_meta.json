@@ -8960,6 +8960,26 @@
     }
   },
   {
+    "pos": 448,
+    "msgid": "2247494949",
+    "title": "新闻因子，收益来自预期差吗",
+    "zone": "evaluation-benchmarks",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "the-information-content-of-news-embeddings",
+    "dup_of": null,
+    "framework": "The Information Content of News Embeddings（内容/时间正交分解 + 截止日切片）",
+    "venue": null,
+    "arxiv": null,
+    "axes": {
+      "data": "文本另类",
+      "horizon": "跨周期",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
     "pos": 100000,
     "msgid": "arxiv_2607.14373",
     "title": "A Noise-Robust Elicit-to-Optimize Framework for Distortion Riskmetrics via Inverse Reinforcement Learning",
