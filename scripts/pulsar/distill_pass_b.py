@@ -4,6 +4,7 @@ Only for page_worthy ⚡/🔧 non-dup articles. Resumable. Writes foundations/<z
 
 Usage: python3 distill_pass_b.py [--only-pos N] [--limit N] [--workers W]
 """
+import functools
 import json, pathlib, sys, argparse, re, threading, hashlib, os, stat, tempfile, time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
@@ -312,17 +313,23 @@ def do_one(d, metadata=None, source=None):
         raw = json.loads(source[1])
         fingerprint = input_fingerprint(metadata, source)
         record_attempt(d, fingerprint)
+        repair_model = os.environ.get("TRADING_DEEPSEEK_REPAIR_MODEL", "").strip()
+        if repair_model not in ("", "deepseek-v4-pro"):
+            raise ValueError("unsupported_repair_model")
         prompt = build(d, raw)
         checkpoint = draft_checkpoint(str(d["msgid"]))
         draft = load_draft_checkpoint(checkpoint, fingerprint)
         for attempt in range(2):
+            repairing = bool(repair_model and attempt)
+            selected_ask = functools.partial(ask, model=repair_model) if repairing else ask
+
             if out.exists():
                 with _lock:_n["skip"]+=1; return
             resumed = attempt == 0 and draft is not None
             if resumed:
                 md = draft
             else:
-                md = ask(prompt, system=SYSTEM, thinking=True, temperature=0.4,
+                md = selected_ask(prompt, system=SYSTEM, thinking=True, temperature=0.4,
                          max_tokens=32768, timeout=600).strip()
                 if md.startswith("```"):
                     md = md.split("\n", 1)[1].rsplit("```", 1)[0].strip()
@@ -330,7 +337,8 @@ def do_one(d, metadata=None, source=None):
                 validate_page(md, raw, d)
                 if not resumed:
                     save_draft_checkpoint(checkpoint, fingerprint, md)
-                review = review_page(md, raw, d)
+                review_options = {"caller": selected_ask} if repairing else {}
+                review = review_page(md, raw, d, **review_options)
                 save_review(ROOT / "data/health/pass-b-fact-reviews", str(d["msgid"]),
                             fingerprint, md, review)
                 if not review["passed"]:
