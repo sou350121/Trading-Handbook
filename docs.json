@@ -199,6 +199,7 @@
               "foundations/graph-networks/galstm.md",
               "foundations/graph-networks/gat-cnnpred.md",
               "foundations/graph-networks/gatanalysts.md",
+              "foundations/graph-networks/gidf-fade-signed-edge-graph-attention.md",
               "foundations/graph-networks/grafin-gen.md",
               "foundations/graph-networks/hats.md",
               "foundations/graph-networks/kgtransformer.md",
