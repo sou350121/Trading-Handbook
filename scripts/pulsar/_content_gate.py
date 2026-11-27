@@ -53,6 +53,11 @@ def validate_page(text, raw, d):
     # A version-pinned primary URL also verifies its unversioned citation ID.
     # Keep explicit versions unchanged; never authorize a different version or ID.
     known_arxiv.update(re.sub(r'v\d+$', '', value) for value in tuple(known_arxiv))
+    # Only references to subsection headings declared in this document qualify.
+    # The suffix must identify navigation, and measurement suffixes remain gated.
+    subsection_ids = set(re.findall(
+        r'^#{2,6}[ \t]+(?:§[ \t]*)?([1-8](?:\.\d+)+)(?=[ \t·])',
+        text, re.M))
     worked_example = re.search(r'^##[ \t]+§2\.5(?=[ \t·]|$)', text, flags=re.M)
     empirical = re.sub(r'##\s*§2\.5[^\n]*\n.*?(?=\n##\s|\Z)', '', text, flags=re.S)
     empirical = re.sub(r'```.*?```', '', empirical, flags=re.S)
@@ -67,6 +72,9 @@ def validate_page(text, raw, d):
         # A reference phrase plus an explicit section marker is navigation, not a
         # measurement. Keep bare decimals, percentages and metric-like uses gated.
         line = re.sub(r'(?:參見|参见|詳見|详见|參照|参照|參考|参考|見|见|照|\bsee|\bcf\.?|\bsection)\s*§\s*[1-8](?:\.\d+)+(?![\d.%])', '', line, flags=re.I)
+        line = re.sub(
+            r'§[ \t]*([1-8](?:\.\d+)+)(?![\d.%])(?=[ \t]*(?:的|所述|中(?:提到|描述)|所列))',
+            lambda m: '' if m[1] in subsection_ids else m[0], line)
         if worked_example:
             line = re.sub(r'§[ \t]*2\.5(?=[ \t]+(?:玩具例|示意算例))', '', line)
         # The frozen template's 7.1 subheading is also sometimes rendered bold.
