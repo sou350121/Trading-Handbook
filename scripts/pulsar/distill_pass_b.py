@@ -230,6 +230,65 @@ def record_attempt(d, fingerprint):
         finally:
             temporary.unlink(missing_ok=True)
 
+DRAFT_CONTENT_LIMIT = 200_000
+DRAFT_RECEIPT_LIMIT = 402_048
+
+
+def draft_checkpoint(msgid):
+    if not re.fullmatch(r"[a-zA-Z0-9][a-zA-Z0-9_.-]{0,79}", msgid):
+        raise ValueError("pass_b_checkpoint_invalid_id")
+    return ROOT / "data/health/pass-b-pending" / (msgid + ".json")
+
+
+def load_draft_checkpoint(path, fingerprint):
+    try:
+        info = path.lstat()
+        if not stat.S_ISREG(info.st_mode) or info.st_size > DRAFT_RECEIPT_LIMIT:
+            return None
+        with os.fdopen(os.open(path, os.O_RDONLY | getattr(os, "O_NOFOLLOW", 0)), "rb") as f:
+            opened = os.fstat(f.fileno())
+            if (opened.st_dev, opened.st_ino) != (info.st_dev, info.st_ino):
+                return None
+            encoded = f.read(DRAFT_RECEIPT_LIMIT + 1)
+        if len(encoded) > DRAFT_RECEIPT_LIMIT:
+            return None
+        record = json.loads(encoded, object_pairs_hook=unique_json_object)
+    except (OSError, ValueError):
+        return None
+    if (not isinstance(record, dict) or set(record) != {"source", "sha256", "draft"}
+            or record["source"] != fingerprint or not isinstance(record["draft"], str)):
+        return None
+    try:
+        draft = record["draft"].encode("utf-8")
+    except UnicodeError:
+        return None
+    if not 0 < len(draft) <= DRAFT_CONTENT_LIMIT:
+        return None
+    return record["draft"] if hashlib.sha256(draft).hexdigest() == record["sha256"] else None
+
+
+def save_draft_checkpoint(path, fingerprint, draft):
+    content = draft.encode("utf-8")
+    if not 0 < len(content) <= DRAFT_CONTENT_LIMIT:
+        return
+    encoded = json.dumps({"source": fingerprint, "sha256": hashlib.sha256(content).hexdigest(),
+                          "draft": draft}, ensure_ascii=False).encode("utf-8")
+    if len(encoded) > DRAFT_RECEIPT_LIMIT:
+        return
+    path.parent.mkdir(parents=True, exist_ok=True)
+    fd, name = tempfile.mkstemp(prefix=".pass-b-draft-", dir=path.parent)
+    pending = pathlib.Path(name)
+    try:
+        with os.fdopen(fd, "wb") as f:
+            os.chmod(pending, 0o600)
+            f.write(encoded)
+            f.flush()
+            os.fsync(f.fileno())
+        os.replace(pending, path)
+    finally:
+        pending.unlink(missing_ok=True)
+
+
 def do_one(d, metadata=None, source=None):
     try:
         slug = slugify(d)
@@ -254,15 +313,23 @@ def do_one(d, metadata=None, source=None):
         fingerprint = input_fingerprint(metadata, source)
         record_attempt(d, fingerprint)
         prompt = build(d, raw)
+        checkpoint = draft_checkpoint(str(d["msgid"]))
+        draft = load_draft_checkpoint(checkpoint, fingerprint)
         for attempt in range(2):
             if out.exists():
                 with _lock:_n["skip"]+=1; return
-            md = ask(prompt, system=SYSTEM, thinking=True, temperature=0.4,
-                     max_tokens=32768, timeout=600).strip()
-            if md.startswith("```"):
-                md = md.split("\n", 1)[1].rsplit("```", 1)[0].strip()
+            resumed = attempt == 0 and draft is not None
+            if resumed:
+                md = draft
+            else:
+                md = ask(prompt, system=SYSTEM, thinking=True, temperature=0.4,
+                         max_tokens=32768, timeout=600).strip()
+                if md.startswith("```"):
+                    md = md.split("\n", 1)[1].rsplit("```", 1)[0].strip()
             try:
                 validate_page(md, raw, d)
+                if not resumed:
+                    save_draft_checkpoint(checkpoint, fingerprint, md)
                 review = review_page(md, raw, d)
                 save_review(ROOT / "data/health/pass-b-fact-reviews", str(d["msgid"]),
                             fingerprint, md, review)
@@ -272,6 +339,7 @@ def do_one(d, metadata=None, source=None):
                     raise RuntimeError("fact_review_source_changed")
                 break
             except ValueError as error:
+                checkpoint.unlink(missing_ok=True)
                 # Private draft evidence only; published pages and the search index stay intact.
                 rejected = ROOT / "data/rejected"
                 rejected.mkdir(parents=True, exist_ok=True)
@@ -293,6 +361,7 @@ def do_one(d, metadata=None, source=None):
                 stream.write(md)
         except FileExistsError:
             with _lock:_n["skip"]+=1; return
+        checkpoint.unlink(missing_ok=True)
         with _lock:
             _n["ok"]+=1
             print(f"  PAGE {d['zone']}/{slug}.md  ({len(md)}c)  <- {d['title'][:28]}", flush=True)
