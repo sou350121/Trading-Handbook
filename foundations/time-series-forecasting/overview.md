@@ -2,7 +2,7 @@
 
 > **收錄**：面向价格/收益率/波动率的序列建模，涵盖Transformer变体、RNN/LSTM、MLP/Mixer、状态空间模型及频率自适应架构
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：112 篇（98 篇成解構頁）
+> **本 zone 現有**：112 篇（99 篇成解構頁）
 
 ## 解構清單
 
@@ -10,7 +10,7 @@
 |---|---|---|---|
 | [MC-JEPA](mc-jepa.md) | ⚡ | [arXiv](https://arxiv.org/abs/2611.13572) | 用其他资产未来目标嵌入构造留一市场因子作为训练期条件，把不可预测的市场冲击从噪声变成监督信号，学 |
 | [Neural Filter Estimator (NFE)](neural-filter-estimator-nfe.md) | ⚡ | ICAIF26 [arXiv](https://arxiv.org/abs/2610.25802) | 用摊销神经滤波一次前向输出横截面各残差价差的隐状态后验，并把校准后的不确定性直接用于统计套利下单 |
-| Historical Visual Retrieval (DINOv2-S + fine-tuned encoder) | ⚡ | [arXiv](https://arxiv.org/abs/2611.23723) | 用预训练视觉编码器检索历史相似K线图，以近邻已实现收益预测未来5日横截面收益，微调后Sharpe |
+| [Historical Visual Retrieval (DINOv2-S + fine-tuned encoder)](historical-visual-retrieval-dinov2-s-fine-tuned-encoder.md) | ⚡ | [arXiv](https://arxiv.org/abs/2611.23723) | 用预训练视觉编码器检索历史相似K线图，以近邻已实现收益预测未来5日横截面收益，微调后Sharpe |
 | [STOCK-JEPA](stock-jepa.md) | ⚡ | STOCK-JEPA | 用岭回归因子先验作潜空间锚点，JEPA只学增量修正，A股RankIC 11.2%、回撤最小。 |
 | [自适应标签期限双层优化](art-429.md) | ⚡ | ICML 2026 | 提出标签期限悖论，用双层优化自适应选择训练标签期限，提升多因子次日收益预测与选股表现。 |
 | [FinPFN](finpfn.md) | ⚡ | Journal of Financial Markets | 提出FinPFN框架，利用真实金融数据训练Transformer元学习模型，动态适应市场风格切换 |

@@ -8981,6 +8981,26 @@
   },
   {
     "pos": 100000,
+    "msgid": "arxiv_2611.22604",
+    "title": "Beyond Strike Remapping: Conditional-Gamma Pricing of Leveraged ETF Options under Local Volatility",
+    "zone": "unsorted",
+    "rating": "🔧",
+    "page_worthy": false,
+    "slug": "conditional-gamma-pricing",
+    "dup_of": null,
+    "framework": "Conditional-Gamma Pricing",
+    "venue": null,
+    "arxiv": "2611.22604",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "风险择时",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 100000,
     "msgid": "arxiv_2607.14373",
     "title": "A Noise-Robust Elicit-to-Optimize Framework for Distortion Riskmetrics via Inverse Reinforcement Learning",
     "zone": "reinforcement-learning",
@@ -9614,7 +9634,7 @@
     "axes": {
       "data": "微观盘口",
       "horizon": "高频日内",
-      "paradigm": "监督回归",
+      "paradigm": "强化学习",
       "alpha": "组合执行优化",
       "autonomy": "全自动黑盒"
     }
