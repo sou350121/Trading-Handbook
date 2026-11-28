@@ -357,13 +357,15 @@ def run_oa(limit, workers):
             continue
         if e.get("attempts", 0) >= 3:
             INGEST_ERRORS.append('oa_retry_exhausted')
+            print('OA_SOURCE_BLOCKED', e['doi'], 'retry_exhausted', flush=True)
             continue
         todo.append(e)
     todo.sort(key=lambda e: e.get("date", ""), reverse=True)
     if limit:
         todo = todo[:limit]
     if not todo:
-        print("oa_dissect: nothing to do")
+        print("oa_dissect: no runnable items; exhausted sources remain failed"
+              if INGEST_ERRORS else "oa_dissect: nothing to do")
         return
     print(f"oa_dissect: {len(todo)} paper(s)", flush=True)
     ingested = []
