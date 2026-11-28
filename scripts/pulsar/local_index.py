@@ -64,13 +64,16 @@ def build():
     if not paths or not chunks:
         raise ValueError('published_content_empty')
     index, reused = make_index(chunks)
-    if len(json.dumps(index, ensure_ascii=False, indent=2).encode('utf-8')) > MAX_INDEX_BYTES:
+    # JSON whitespace is not searchable data. Keep the existing size ceiling
+    # while storing the same complete BM25 object without indentation overhead.
+    encoded = json.dumps(index, ensure_ascii=False, separators=(',', ':')).encode('utf-8')
+    if len(encoded) > MAX_INDEX_BYTES:
         raise ValueError('index_too_large')
     PATH.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(prefix='trading-index-', dir=PATH.parent) as staging:
         staging = Path(staging)
         candidate = staging / 'index.json'
-        atomic(candidate, index)
+        candidate.write_bytes(encoded)
         loaded = load_index(str(candidate), fresh=True)
         if len({c['source'] for c in loaded['chunks']}) != len(paths):
             raise ValueError('index_document_missing')
