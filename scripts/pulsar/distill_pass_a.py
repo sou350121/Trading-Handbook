@@ -58,6 +58,7 @@ def build_prompt(rec):
 
 可选 zone：
 {zlist}
+  - unsorted（上述方法分区均不适用）：此时 page_worthy 必须为 false，保留雷达／索引而不创建分区解构页；不得为通过分类而强套不符合原文的方法族。
 
 五轴（每轴恰好选一个给定值）：
 {alist}

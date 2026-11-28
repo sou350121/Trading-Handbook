@@ -32,3 +32,11 @@ class ClassificationRepair(unittest.TestCase):
   calls,out=self.run_case(['{}'],configured='');self.assertEqual(len(calls),1);self.assertIsNone(out)
  def test_repair_does_not_force_page_worthy(self):
   good=dict(self.valid(),page_worthy=False,rating='📖');calls,out=self.run_case(['{}',json.dumps(good)]);self.assertEqual(len(calls),2);self.assertFalse(out['page_worthy'])
+
+ def test_prompt_exposes_existing_unsorted_and_page_worthy_constraint(self):
+  text=a.build_prompt({'title':'Option pricing paper','body':'source '*60})
+  self.assertIn('unsorted（上述方法分区均不适用）',text);self.assertIn('page_worthy 必须为 false',text)
+ def test_unsorted_true_remains_invalid(self):
+  bad=dict(self.valid(),zone='unsorted');calls,out=self.run_case([json.dumps(bad),json.dumps(bad)]);self.assertEqual(len(calls),2);self.assertIsNone(out)
+ def test_genuine_out_of_scope_paper_retains_metadata_without_dissection(self):
+  scoped=dict(self.valid(),zone='unsorted',page_worthy=False);calls,out=self.run_case([json.dumps(scoped)]);self.assertEqual(len(calls),1);self.assertFalse(out['page_worthy']);self.assertEqual(out['zone'],'unsorted')
