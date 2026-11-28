@@ -142,6 +142,21 @@ def build(d, raw):
     else:
         src_label = "QuantML 導讀"; body_label = "QuantML 導讀完整快取可讀文本（不代表已讀原論文）"
         prov = ""
+    author_version = origin == 'oa' and raw.get('source_variant') == 'arxiv_author_version'
+    if author_version:
+        version = raw.get('source_version', '')
+        version_date = raw.get('source_version_date', '')
+        if (not isinstance(version, str) or not re.fullmatch(r'\d{4}\.\d{4,5}v[1-9]\d*', version)
+                or raw.get('fulltext_url') != 'https://arxiv.org/pdf/' + version
+                or not isinstance(version_date, str) or not re.fullmatch(r'\d{4}-\d{2}-\d{2}', version_date)
+                or raw.get('date') != version_date):
+            raise ValueError('author_version_provenance_invalid')
+        src_label = '作者公開原文（arXiv 版本）'
+        body_label = '指定作者版本完整可讀文本；圖片／附件未核'
+        venue = 'arXiv 作者版本'
+        arxiv_line = f' · arXiv [{version}](https://arxiv.org/abs/{version})'
+        prov = (f"　·　_僅依 {version}（{version_date}）作者版本；期刊條目 DOI "
+                + str(raw.get('bibliographic_doi', '')) + '，出版社正式全文未取得；不推定兩版相同，圖片／附件未核_')
     source_scope = (src_label + '，本次輸入完整快取文本，共' + str(len(body)) +
                     '字元；未提取圖片／附件不在本次輸入。' +
                     ('已提供原文可讀文本；§6.1僅列可定位的作者限制，不得套用「僅讀導讀」描述。' if origin in ('arxiv', 'oa')
@@ -150,7 +165,7 @@ def build(d, raw):
     template = TEMPLATE.replace('導讀', '所讀原文') if primary else TEMPLATE
     prompt = template.format(
         name=fw, fw_en=fw, fw=fw, date=d.get("date",""), venue=venue,
-        date_label="導讀發布" if origin == "quantml" else "來源發布",
+        date_label="作者版本發布" if author_version else "導讀發布" if origin == "quantml" else "來源發布",
         arxiv=arxiv, arxiv_line=arxiv_line, wechat_title=d.get("title",""),
         url=d.get("url",""), tldr=d.get("tldr",""), trick=d.get("key_trick",""),
         axes_human=axes_human, body=body,

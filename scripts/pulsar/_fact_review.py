@@ -72,6 +72,8 @@ def review_page(md, raw, metadata, caller=None):
     provenance = {k: raw.get(k) for k in [
         'title', 'wechat_title', 'url', 'date', 'date_source', 'create_time',
         'source_kind', 'source_format', 'body_sha256', 'official_album_index_sha256',
+        'source_variant', 'source_version', 'source_version_date', 'fulltext_url',
+        'bibliographic_doi', 'journal_publication_date', 'publisher_fulltext_obtained',
     ] if k in raw}
     prompt = json.dumps({'source_text': body, 'source_provenance': provenance,
                          'editorial_axes': metadata.get('axes', {}), 'draft': md},
