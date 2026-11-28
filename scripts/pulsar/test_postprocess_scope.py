@@ -20,6 +20,7 @@ def scope_namespace(paths, tracked, times=(0, 0)):
           'git': lambda *a: '\0'.join(tracked), 'dirty_paths': lambda: paths,
           'execute': lambda command, *a, **kw: calls.append(command),
           'pending': lambda: None, 'PYTHON': 'python',
+          'weekly_arxiv_batch': lambda: ['2611.12345'],
           'time': SimpleNamespace(monotonic=iter(times).__next__)}
     exec(compile(ast.Module(body=nodes, type_ignores=[]), str(SOURCE), 'exec'), ns)
     return ns, calls

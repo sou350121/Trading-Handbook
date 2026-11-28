@@ -19,6 +19,7 @@ import sys
 import time
 
 from _health import atomic
+from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[2]
 PYTHON = sys.executable
@@ -165,6 +166,51 @@ def dirty_paths():
     if any(x and any(c in x[:2] for c in 'RC') for x in rows):
         raise RuntimeError('rename_requires_review')
     return [x[3:] for x in rows if x]
+
+
+def weekly_arxiv_batch(now=None):
+    """Reserve at most six papers per calendar week; retries keep the same intake."""
+    now = now or dt.datetime.now(ZoneInfo('Asia/Shanghai'))
+    year, week, _ = now.isocalendar()
+    slot = f'{year}-W{week:02d}'
+    path = ROOT / 'data/health' / ('weekly-arxiv-batch-' + slot + '.json')
+    if path.exists():
+        try:
+            state = json.loads(path.read_bytes())
+        except (OSError, ValueError):
+            raise RuntimeError('weekly_arxiv_batch_invalid') from None
+        if (not isinstance(state, dict) or state.get('version') != 1 or state.get('week') != slot
+                or not isinstance(state.get('ids'), list) or len(state['ids']) > 6
+                or not all(isinstance(x, str) and re.fullmatch(r'\d{4}\.\d{4,5}', x) for x in state['ids'])
+                or len(set(state['ids'])) != len(state['ids'])):
+            raise RuntimeError('weekly_arxiv_batch_invalid')
+        ids = list(state['ids'])
+    else:
+        state = {'version': 1, 'week': slot, 'ids': [], 'created_at': now.isoformat()}
+        ids = []
+    queue_path = ROOT / 'data/radar_queue.json'
+    queue = json.loads(queue_path.read_bytes()) if queue_path.exists() else []
+    if not isinstance(queue, list):
+        raise RuntimeError('weekly_arxiv_queue_invalid')
+    choices = []
+    for row in queue:
+        key = row.get('id') if isinstance(row, dict) else None
+        if not isinstance(key, str) or not re.fullmatch(r'\d{4}\.\d{4,5}', key):
+            raise RuntimeError('weekly_arxiv_queue_invalid')
+        if key not in ids and not (ROOT / 'data/distill' / ('arxiv_' + key + '.json')).exists():
+            choices.append(row)
+    choices.sort(key=lambda x: x.get('date', ''), reverse=True)
+    for row in choices:
+        if len(ids) == 6:
+            break
+        if row['id'] not in ids:
+            ids.append(row['id'])
+    if not path.exists() or ids != state['ids']:
+        state['ids'] = ids
+        atomic(path, state)
+    # Classified rejections remain in pending()/Pass B; do not admit a replacement
+    # merely because an earlier paper failed writing or was judged non-page-worthy.
+    return [key for key in ids if not (ROOT / 'data/distill' / ('arxiv_' + key + '.json')).exists()]
 
 
 def pending():
@@ -474,6 +520,11 @@ def process(job, publish=False, days=8, sources_only=False, allow_verified_parti
                     raise
             for args in [[], ['--oa']]:
                 try:
+                    if not args:
+                        batch_ids = weekly_arxiv_batch()
+                        if not batch_ids:
+                            continue
+                        args = ['--ids', ','.join(batch_ids)]
                     step('arxiv_dissect.py', *args, '--limit', '6', '--workers', '1', seconds=2400)
                 except RuntimeError:
                     incomplete.append('dissection_incomplete')
