@@ -2,7 +2,7 @@
 
 > **收錄**：回测防穿越、样本外稳定性、过拟合检测、鲁棒性量化、公开基准(TFB/QuantBench)与模型衰减归因
 > **五軸**：数据模态 · 时间尺度 · 学习范式 · Alpha生成机制 · 人机协作度
-> **本 zone 現有**：46 篇（39 篇成解構頁）
+> **本 zone 現有**：46 篇（40 篇成解構頁）
 
 ## 解構清單
 
@@ -31,7 +31,7 @@
 | [NoLBERT](nolbert.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.22745) | 构建时点NoLBERT新闻主题，严格样本外比较文本因子；最佳验证实验亏钱，组合未胜价格基准。 |
 | [Prospective multi-channel wallet-group discovery](prospective-multi-channel-wallet-group-discovery.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.39458) | 用88小时pump.fun全量链上数据，前瞻性识别2.3万个钱包协同群组，验证其对价格路径与跟单 |
 | [Hybrid Quantum TCN](hybrid-quantum-tcn.md) | 🔧 | [arXiv](https://arxiv.org/abs/2611.10801) | 用六条件消融与等价检验审计混合量子TCN，发现量子层对日频选股无增益。 |
-| Point-in-Time Encoders | 🔧 | [arXiv](https://arxiv.org/abs/2611.14325) | 构建财报电话会的时点编码器，按年截断训练并对比学习，消除回测中检索端前视偏差。 |
+| [Point-in-Time Encoders](point-in-time-encoders.md) | 🔧 | [arXiv](https://arxiv.org/abs/2611.14325) | 构建财报电话会的时点编码器，按年截断训练并对比学习，消除回测中检索端前视偏差。 |
 | [ModernFinBERT + HAR-X](modernfinbert-har-x.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.39636) | 检验ModernFinBERT新闻变量能否提升11只美股HAR波动率预测，结果多数不敌VIX与朴 |
 | [LiveOption / QFinZero](liveoption-qfinzero.md) | 🔧 | NeurIPS26 | 提出 LiveOption 基准，基于 QFinZero 交易模拟器评测 8 个大模型在组合覆盖 |
 | [比过拟合更隐蔽：一套日内系统逐单对账挖出的六类系统缺陷](art-436.md) | 🔧 | [arXiv](https://arxiv.org/abs/2610.21846) | 作者把实盘成交与离线重放逐笔核对一致，定位出数据源默认参数、复权、时区、配置链路等六类隐蔽工程缺 |
