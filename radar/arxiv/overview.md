@@ -14,4 +14,4 @@ arXiv 的 q-fin（PM/TR/ST/CP/RM/GN）加上經關鍵詞過濾的 cs.LG / stat.M
 - [2026-W43](./2026-W43.md) — 2026-10-19 to 2026-10-25 · 86 papers, ⚡69
 - [2026-W29](./2026-W29.md) — 2026-07-13 to 2026-07-19 · 34 papers, ⚡19
 
-_索引由 `scripts/pulsar/arxiv_radar.py` 維護 · 更新於 2026-11-28 03:24 UTC._
+_索引由 `scripts/pulsar/arxiv_radar.py` 維護 · 更新於 2026-11-28 03:45 UTC._
