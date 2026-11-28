@@ -25,4 +25,4 @@
 - [2026-W31](./2026-W31.md)
 - [2026-W30](./2026-W30.md)
 
-_索引由 `scripts/pulsar/journal_radar.py` 維護 · 更新於 2026-11-27 07:31 UTC._
+_索引由 `scripts/pulsar/journal_radar.py` 維護 · 更新於 2026-11-28 00:19 UTC._

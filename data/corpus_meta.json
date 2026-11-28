@@ -9281,6 +9281,26 @@
   },
   {
     "pos": 100000,
+    "msgid": "arxiv_2611.27274",
+    "title": "Nonlinear Shrinkage for Higher Moments Estimation in Large Portfolios",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "higher-order-average-oracle-tensor-nonlinear-shrinkage",
+    "dup_of": null,
+    "framework": "Higher-Order Average Oracle / Tensor Nonlinear Shrinkage",
+    "venue": null,
+    "arxiv": "2611.27274",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "风险择时",
+      "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 100000,
     "msgid": "arxiv_2611.17329",
     "title": "Internalizing Investment Mandates: A Neurosymbolic RL Approach to Portfolio Allocation",
     "zone": "reinforcement-learning",
@@ -9517,6 +9537,26 @@
       "paradigm": "监督回归",
       "alpha": "因子挖掘",
       "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 100001,
+    "msgid": "arxiv_2611.26716",
+    "title": "Are Calibrated Decision Models Calibrated on Markets? Geolocated News, Markov Switching and a System One Model for Nasdaq-100 Allocation",
+    "zone": "portfolio-optimization",
+    "rating": "🔧",
+    "page_worthy": true,
+    "slug": "jev-markov-switching-postgis-gdelt",
+    "dup_of": null,
+    "framework": "Jev + Markov-switching + PostGIS/GDELT",
+    "venue": null,
+    "arxiv": "2611.26716",
+    "axes": {
+      "data": "文本另类",
+      "horizon": "中长周期",
+      "paradigm": "监督回归",
+      "alpha": "风险择时",
+      "autonomy": "人机协同可解释"
     }
   },
   {
@@ -9797,6 +9837,26 @@
       "paradigm": "生成式大模型",
       "alpha": "端到端表征",
       "autonomy": "全自动黑盒"
+    }
+  },
+  {
+    "pos": 100002,
+    "msgid": "arxiv_2611.23723",
+    "title": "When Price Charts Rhyme: Historical Visual Retrieval for Stock Return Prediction",
+    "zone": "time-series-forecasting",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "historical-visual-retrieval-dinov2-s-fine-tuned-encoder",
+    "dup_of": null,
+    "framework": "Historical Visual Retrieval (DINOv2-S + fine-tuned encoder)",
+    "venue": null,
+    "arxiv": "2611.23723",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "监督回归",
+      "alpha": "端到端表征",
+      "autonomy": "人机协同可解释"
     }
   },
   {
@@ -10461,6 +10521,26 @@
   },
   {
     "pos": 100004,
+    "msgid": "arxiv_2611.22277",
+    "title": "Explaining Realized Returns: Roll's $R^2$ 40 Years Later",
+    "zone": "llm-agentic",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "llm-r",
+    "dup_of": null,
+    "framework": "LLM零样本理由抽取+样本外R²评估",
+    "venue": null,
+    "arxiv": "2611.22277",
+    "axes": {
+      "data": "文本另类",
+      "horizon": "日频波段",
+      "paradigm": "生成式大模型",
+      "alpha": "端到端表征",
+      "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 100004,
     "msgid": "arxiv_2611.12141",
     "title": "Do Time-Series Foundation Models Forecast Index-Futures Returns? A Preregistered Evaluation of Models, Metrics, and Input Representations",
     "zone": "evaluation-benchmarks",
@@ -10497,6 +10577,26 @@
       "paradigm": "监督回归",
       "alpha": "因子挖掘",
       "autonomy": "人机协同可解释"
+    }
+  },
+  {
+    "pos": 100005,
+    "msgid": "arxiv_2611.26652",
+    "title": "Distributional Deep Hedging",
+    "zone": "reinforcement-learning",
+    "rating": "⚡",
+    "page_worthy": true,
+    "slug": "distributional-deep-hedging",
+    "dup_of": null,
+    "framework": "Distributional Deep Hedging",
+    "venue": null,
+    "arxiv": "2611.26652",
+    "axes": {
+      "data": "量价表格",
+      "horizon": "日频波段",
+      "paradigm": "强化学习",
+      "alpha": "组合执行优化",
+      "autonomy": "全自动黑盒"
     }
   },
   {
