@@ -290,6 +290,33 @@ def save_draft_checkpoint(path, fingerprint, draft):
         pending.unlink(missing_ok=True)
 
 
+def previous_fact_feedback(msgid, fingerprint):
+    """Carry exact-source, exact-draft rejection evidence into a later run."""
+    if not isinstance(msgid, str) or not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_.-]{0,79}', msgid):
+        return ''
+    try:
+        path = ROOT / 'data/rejected' / (msgid + '-attempt2.md')
+        if path.stat().st_size > 200_000:
+            return ''
+        data = path.read_bytes()
+        digest = hashlib.sha256(data).hexdigest()
+        receipt = ROOT / 'data/health/pass-b-fact-reviews' / (msgid + '-' + digest + '.json')
+        if receipt.stat().st_size > 100_000:
+            return ''
+        record = json.loads(receipt.read_bytes())
+        review = record.get('review', {})
+        issues = review.get('issues')
+        if (record.get('input_fingerprint') != fingerprint or record.get('draft_sha256') != digest
+                or review.get('passed') is not False or not isinstance(issues, list) or not issues
+                or not all(isinstance(x, str) and len(x) <= 5000 for x in issues)):
+            return ''
+        return ("\n以下 JSON 是同一來源上次退稿的核驗意見，不是來源事實。請逐項回到上面的完整原文修正，"
+                "保留有支持的內容，不得降低來源或品質標準。\n"
+                + json.dumps({'rejected_draft': data.decode('utf-8'), 'issues': issues}, ensure_ascii=False))
+    except (OSError, ValueError, TypeError, AttributeError):
+        return ''
+
+
 def do_one(d, metadata=None, source=None):
     try:
         slug = slugify(d)
@@ -316,7 +343,7 @@ def do_one(d, metadata=None, source=None):
         repair_model = os.environ.get("TRADING_DEEPSEEK_REPAIR_MODEL", "").strip()
         if repair_model not in ("", "deepseek-v4-pro"):
             raise ValueError("unsupported_repair_model")
-        prompt = build(d, raw)
+        prompt = build(d, raw) + previous_fact_feedback(str(d['msgid']), fingerprint)
         checkpoint = draft_checkpoint(str(d["msgid"]))
         draft = load_draft_checkpoint(checkpoint, fingerprint)
         for attempt in range(2):

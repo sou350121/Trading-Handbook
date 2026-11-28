@@ -5,7 +5,7 @@ from decimal import Decimal
 # Han prose may attach a measurement directly to a character. Preserve the
 # existing identifier boundary for other word characters, including ASCII IDs.
 NUMBER = re.compile(r'(?:(?<![\w])|(?<=[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]))[-−]?\d+(?:,\d{3})*(?:\.\d+)?%?')
-HTML_TEXT_VERSION = 5
+HTML_TEXT_VERSION = 6
 
 
 def validate_metadata(d, axes, zones):

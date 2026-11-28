@@ -4,7 +4,7 @@ from _content_gate import validate_page
 def page(value):
  return '<!-- ontology-5axis data=x -->\nhttps://arxiv.org/abs/2611.10801v1\n'+''.join('## §%s · Part\n%s\n'%(i,'來源與限制。'*80) for i in range(1,9))+value
 def source(body):
- return {'url':'https://arxiv.org/abs/2611.10801v1','body':body+' public context '*100,'source_kind':'fulltext-html','extraction_version':5}
+ return {'url':'https://arxiv.org/abs/2611.10801v1','body':body+' public context '*100,'source_kind':'fulltext-html','extraction_version':6}
 def validate(claim,raw):
  return validate_page(page(claim),raw,{'url':raw['url'],'source':{'origin':'arxiv'}})
 class MathPercent(unittest.TestCase):

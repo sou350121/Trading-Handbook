@@ -5,7 +5,7 @@ Resumable: writes data/distill/<msgid>.json, skips done.
 
 Usage: python3 distill_pass_a.py [--sample N] [--limit N] [--workers W]
 """
-import json, pathlib, sys, argparse, threading
+import json, pathlib, sys, argparse, threading, os, time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
 from _qwen import ask
@@ -81,16 +81,35 @@ def do_one(f):
         with _lock: _stats["skip"]+=1
         return
     try:
-        raw = ask(build_prompt(rec), system=SYSTEM, thinking=True,
-                  temperature=0.1, max_tokens=2000, json_mode=True, timeout=180)
-        result = parse(raw)
-        fields = {"zone", "axes", "rating", "tldr", "key_trick", "source", "tags", "page_worthy"}
-        d = {k: v for k, v in result.items() if k in fields}
-        if isinstance(d.get("source"), dict):
-            d["source"] = {k: v for k, v in d["source"].items() if k in {"venue", "arxiv", "framework", "confidence"}}
-        validate_metadata(d, AXES, ZONE_SLUGS)
         if len(rec.get("body", "")) < 300:
             raise ValueError("source_too_thin")
+        repair_model = os.environ.get("TRADING_DEEPSEEK_REPAIR_MODEL", "").strip()
+        if repair_model not in ("", "deepseek-v4-pro"):
+            raise ValueError("unsupported_repair_model")
+        deadline = time.monotonic() + 180
+        prompt = build_prompt(rec)
+        fields = {"zone", "axes", "rating", "tldr", "key_trick", "source", "tags", "page_worthy"}
+        for attempt in range(2 if repair_model else 1):
+            remaining = deadline - time.monotonic()
+            if remaining < 1:
+                raise ValueError("classification_deadline_exhausted")
+            # Transport/authentication failures are not schema failures and are not retried here.
+            raw = ask(prompt, system=SYSTEM, thinking=True, temperature=0.1,
+                      max_tokens=2000, json_mode=True, timeout=remaining,
+                      model=repair_model if attempt else None)
+            try:
+                result = parse(raw)
+                if not isinstance(result, dict):
+                    raise ValueError("classification_object_required")
+                d = {k: v for k, v in result.items() if k in fields}
+                if isinstance(d.get("source"), dict):
+                    d["source"] = {k: v for k, v in d["source"].items() if k in {"venue", "arxiv", "framework", "confidence"}}
+                validate_metadata(d, AXES, ZONE_SLUGS)
+                break
+            except (ValueError, TypeError):
+                if attempt or not repair_model:
+                    raise
+                prompt += "\n上次分類格式或枚舉無效。請重新依原文分類；zone 與五軸只能用上列完整列舉，原品質及 page_worthy 判定不變。"
         d.update({"pos":rec["pos"],"msgid":rec["msgid"],"title":rec["title"],
                   "date":rec.get("date",""),"url":rec["url"],"chars":rec["chars"]})
         # First-hand raws (arXiv / OA-journal pdf) are papers, not QuantML digests: stamp

@@ -24,14 +24,14 @@ class SourceContext(unittest.TestCase):
 
     def test_primary_source_end_is_supplied_without_prefix_clipping(self):
         body = 'Source introduction ' * 1000 + '\nCAPACITY_ANALYSIS_AT_THE_END\n'
-        prompt = writer.build(self.metadata(), {'body': body, 'source_kind': 'fulltext-html', 'extraction_version': 5})
+        prompt = writer.build(self.metadata(), {'body': body, 'source_kind': 'fulltext-html', 'extraction_version': writer.HTML_TEXT_VERSION})
         self.assertIn(body, prompt)
         self.assertIn('CAPACITY_ANALYSIS_AT_THE_END', prompt)
         self.assertNotIn('截斷', prompt)
 
     def test_primary_source_text_is_not_rewritten_by_template_labels(self):
         body = 'Source text 導讀 is an exact quote. ' * 100
-        prompt = writer.build(self.metadata(), {'body': body, 'source_kind': 'fulltext-html', 'extraction_version': 5})
+        prompt = writer.build(self.metadata(), {'body': body, 'source_kind': 'fulltext-html', 'extraction_version': writer.HTML_TEXT_VERSION})
         self.assertIn(body, prompt)
 
     def test_quantml_complete_cache_is_not_confused_with_original_paper(self):
@@ -162,7 +162,7 @@ class ArxivSourceIntegrity(unittest.TestCase):
         page = ('<!-- ontology-5axis data=test -->\n# Study\nhttps://source.invalid/paper\n' +
                 ''.join('\n## §' + str(i) + ' · Section\n' + 'Source-bound analysis ' * 18 for i in range(1, 9)) +
                 '\nResult: 17.6%')
-        raw = {'body': body, 'source_kind': 'fulltext-html', 'extraction_version': 5}
+        raw = {'body': body, 'source_kind': 'fulltext-html', 'extraction_version': writer.HTML_TEXT_VERSION}
         metadata = {'url': 'https://source.invalid/paper', 'source': {'origin': 'arxiv'}}
         validate_page(page, raw, metadata)
         for unsupported in ['17.7%', '0.176']:
@@ -185,7 +185,7 @@ class ArxivSourceIntegrity(unittest.TestCase):
         page = ('<!-- ontology-5axis data=test -->\n# Study\nhttps://source.invalid/paper\n' +
                 ''.join('\n## §' + str(i) + ' · Section\n' + 'Source-bound analysis ' * 18 for i in range(1, 9)) +
                 '\nResult: 56.5%')
-        validate_page(page, {'body': body, 'source_kind': 'fulltext-html', 'extraction_version': 5},
+        validate_page(page, {'body': body, 'source_kind': 'fulltext-html', 'extraction_version': writer.HTML_TEXT_VERSION},
                       {'url': 'https://source.invalid/paper', 'source': {'origin': 'arxiv'}})
 
     def test_latexml_span_cells_preserve_numeric_boundaries(self):
@@ -217,12 +217,19 @@ class ArxivSourceIntegrity(unittest.TestCase):
     def test_legacy_cache_is_backed_up_and_refetched(self):
         status, record, calls, backups, before = self.cache_case()
         self.assertEqual(status, 'fulltext-html')
-        self.assertEqual(record['extraction_version'], 5)
+        self.assertEqual(record['extraction_version'], writer.HTML_TEXT_VERSION)
+        self.assertEqual(calls, 1)
+        self.assertEqual(backups, [before])
+
+    def test_previous_version_cache_is_backed_up_and_refetched(self):
+        status, record, calls, backups, before = self.cache_case(5)
+        self.assertEqual(status, 'fulltext-html')
+        self.assertEqual(record['extraction_version'], writer.HTML_TEXT_VERSION)
         self.assertEqual(calls, 1)
         self.assertEqual(backups, [before])
 
     def test_current_cache_is_reused_without_network(self):
-        status, _, calls, backups, _ = self.cache_case(5)
+        status, _, calls, backups, _ = self.cache_case(writer.HTML_TEXT_VERSION)
         self.assertEqual(status, 'cached')
         self.assertEqual(calls, 0)
         self.assertEqual(backups, [])

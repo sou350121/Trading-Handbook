@@ -176,7 +176,7 @@ def main():
             item['count'] += 1; attempts[slot] = item
             atomic(STATE / 'attempts.json', attempts)
             try:
-                execute([sys.executable, 'scripts/pulsar/run_pipeline.py', '--job', 'daily', '--publish', '--allow-verified-partial'], 1200)
+                execute(['/bin/bash', 'scripts/pulsar/daily_update.sh'], 1200)
             except RuntimeError as error:
                 if str(error) == 'step_failed_75':
                     item['count'] -= 1

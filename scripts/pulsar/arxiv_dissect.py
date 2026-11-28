@@ -56,7 +56,17 @@ class _Text(HTMLParser):
             # both turns 1.0222 into 1.02221.0222. Use its exact accessible formula once.
             # TeX escapes a literal percent as \%; MathML renders the same %.
             # Preserve that visible unit so strict source-token checks can match it.
-            self.parts.append(' ' + dict(a)['alttext'].replace(r'\%', '%') + ' ')
+            formula = dict(a)['alttext'].replace(r'\%', '%')
+            # Only math-node content is normalized. Plain text, lists, and
+            # table-cell separators cannot become signed numerical evidence.
+            signed_number = re.fullmatch(
+                r'([-−])[ \t\u00a0\u2009\u202f]+(\d+(?:,\d{3})*(?:\.\d+)?%?)', formula)
+            if signed_number:
+                formula = ''.join(signed_number.groups())
+            # LaTeXML may put only the minus in MathML and the digits in the
+            # same cell's following text. Do not insert a new trailing space.
+            # A following td/ltx_td still inserts its existing cell delimiter.
+            self.parts.append(' ' + formula + ('' if formula in ('-', '−') else ' '))
             self.math_alt_depth = 1
             return
         if t in self.SKIP:

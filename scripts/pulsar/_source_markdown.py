@@ -43,7 +43,7 @@ def numeric_source_text(raw):
     body = raw['body']
     if raw.get('source_format') == 'markdown':
         return _visible(body)
-    if raw.get('source_kind') == 'fulltext-html' and raw.get('extraction_version') == 5:
+    if raw.get('source_kind') == 'fulltext-html' and raw.get('extraction_version') in (5, 6):
         # arXiv MathML alt text retains presentation macros around a literal %.
         # Recognize only numerical values, thin-space presentation, and the exact
         # roman-percent wrapper. Do not add units to plain numbers or decode text.
